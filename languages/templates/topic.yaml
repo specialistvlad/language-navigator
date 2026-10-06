@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=../../../schema/topic.schema.json
+# Copy to languages/{lang}/{NN-section}/{topic}/topic.yaml and replace every {placeholder}.
+id: "{lang}.{section}.{topic}"
+lang: "{en|es}"
+kind: grammar
+levels: ["{A1}"]
+tags: []
+concepts: []
+related: []
+status: { en: draft, es: draft }
+
+title: { en: "{Title}", es: "{Título}" }
+summary:
+  en: "{One line: what this topic covers.}"
+  es: "{Una línea: qué cubre este tema.}"
+
+sections:
+  - title: { en: Overview, es: Resumen }
+    level: "{A1}"
+    content:
+      - type: table
+        columns:
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { form: { en: "{form}", es: "{forma}" }, example: "{example with **target** in bold}", tr: { es: "{traducción}" } }
+      - type: bullets
+        items:
+          - { en: "{Rule.}", es: "{Regla.}" }
+          - { for: [es], text: { es: "{Note only for Spanish speakers.}" } }
+
+  - title: { en: Use, es: Uso }
+    level: "{A1-A2}"
+    content:
+      - type: table
+        columns:
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { level: "{A1}", use: { en: "{use}", es: "{uso}" }, example: "{example}", tr: { es: "{traducción}" } }
+
+  - title: { en: Typical errors, es: Errores típicos }
+    level: "{A1}"
+    content:
+      - type: errors
+        audience: true
+        rows:
+          - { wrong: "{wrong}", right: "{right with **fix** in bold}", rule: { en: "{rule}", es: "{regla}" } }
+
+essentials:
+  - level: "{A1}"
+    parts:
+      - title: { en: Form, es: Forma }
+        content:
+          - type: table
+            columns:
+              - { key: form, label: { en: Form, es: Forma } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { form: "{form}", example: "{example}" }
+      - title: { en: Key rules, es: Reglas clave }
+        content:
+          - type: bullets
+            items:
+              - { en: "{Rule.}", es: "{Regla.}" }
+      - title: { en: Use, es: Uso }
+        content:
+          - type: table
+            columns:
+              - { key: use, label: { en: Use, es: Uso } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { use: { en: "{use}", es: "{uso}" }, example: "{example}" }
+      - title: { en: Top errors, es: Errores principales }
+        content:
+          - type: errors
+            rows:
+              - { wrong: "{wrong}", right: "{right}" }
+
+reminders:
+  - level: "{A1}"
+    items:
+      - { en: "{Trap that still catches learners at higher levels.}", es: "{Trampa que sigue presente en niveles superiores.}" }

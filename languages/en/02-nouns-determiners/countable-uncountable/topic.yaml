@@ -1,0 +1,153 @@
+# yaml-language-server: $schema=../../../schema/topic.schema.json
+id: en.nouns-determiners.countable-uncountable
+lang: en
+kind: grammar
+levels: [A1, A2]
+tags: [nouns, countable, uncountable]
+concepts: [countability]
+related: [en.nouns-determiners.plurals, en.nouns-determiners.articles-a-an-the, en.nouns-determiners.quantifiers-some-any-much-many]
+status: { en: draft, es: draft }
+
+title: { en: "Countable and Uncountable Nouns", es: "Sustantivos contables e incontables (countable and uncountable nouns)" }
+summary:
+  en: Which nouns you can count, which you cannot, and what changes.
+  es: Qué sustantivos se pueden contar, cuáles no y qué cambia.
+
+sections:
+  - title: { en: Overview, es: Resumen }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: point, label: { en: Point, es: Punto } }
+          - { key: countable, label: { en: Countable, es: Contable } }
+          - { key: uncountable, label: { en: Uncountable, es: Incontable } }
+        rows:
+          - { point: { en: Meaning, es: Significado }, countable: { en: "things you count one by one", es: "cosas que se cuentan una a una" }, uncountable: { en: "masses, materials, ideas", es: "masas, materiales, ideas" } }
+          - { point: a / an, countable: "**a** book", uncountable: { en: "no a / an: water", es: "sin a / an: water" } }
+          - { point: Plural, countable: "book**s**", uncountable: { en: "no plural", es: "sin plural" } }
+          - { point: { en: Verb, es: Verbo }, countable: "The book **is** new. / The books **are** new.", uncountable: "The water **is** cold." }
+      - type: bullets
+        items:
+          - en: "A singular countable noun needs a word before it: **a** book, **the** book, **my** book."
+            es: "Un sustantivo contable en singular necesita una palabra delante: **a** book, **the** book, **my** book."
+          - en: "Articles: [Articles: a, an, the](id:en.nouns-determiners.articles-a-an-the). How much / how many: [Quantifiers](id:en.nouns-determiners.quantifiers-some-any-much-many)."
+            es: "Artículos: [Artículos: a, an, the](id:en.nouns-determiners.articles-a-an-the). Cuánto / cuántos: [Cuantificadores](id:en.nouns-determiners.quantifiers-some-any-much-many)."
+
+  - title: { en: Common uncountable nouns, es: Sustantivos incontables frecuentes }
+    level: A1-A2
+    content:
+      - type: table
+        columns:
+          - { key: group, label: { en: Group, es: Grupo } }
+          - { key: nouns, label: { en: Nouns, es: Sustantivos } }
+        rows:
+          - { level: A1, group: { en: Food and drink, es: Comida y bebida }, nouns: "water, milk, coffee, tea, bread, rice, cheese, meat, sugar", tr: { es: "agua, leche, café, té, pan, arroz, queso, carne, azúcar" } }
+          - { level: A1, group: { en: Materials, es: Materiales }, nouns: "wood, glass, paper, plastic, gold", tr: { es: "madera, vidrio, papel, plástico, oro" } }
+          - { level: A1, group: { en: Ideas and information, es: Ideas e información }, nouns: "advice, information, news, help, music", tr: { es: "consejos, información, noticias, ayuda, música" } }
+          - { level: A1, group: { en: Others, es: Otros }, nouns: "money, weather, work", tr: { es: "dinero, tiempo (clima), trabajo" } }
+          - { level: A2, group: { en: Groups of things, es: Conjuntos de cosas }, nouns: "furniture, luggage (US: baggage), equipment, homework, traffic", tr: { es: "muebles, equipaje, equipo, deberes, tráfico" } }
+      - type: bullets
+        items:
+          - en: "**news** ends in -s but is uncountable: The news **is** good."
+            es: "**news** acaba en -s pero es incontable: The news **is** good."
+          - { for: [es], text: { es: "Muchos son contables en español: *muebles, consejos, noticias, deberes* → furniture, advice, news, homework." } }
+
+  - title: { en: Counting uncountable nouns, es: Contar sustantivos incontables }
+    level: A1-A2
+    content:
+      - type: table
+        columns:
+          - { key: unit, label: { en: Unit, es: Unidad } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { level: A1, unit: a glass of, example: "a **glass of** water", tr: { es: un vaso de agua } }
+          - { level: A1, unit: a cup of, example: "a **cup of** tea", tr: { es: una taza de té } }
+          - { level: A1, unit: a bottle of, example: "two **bottles of** milk", tr: { es: dos botellas de leche } }
+          - { level: A1, unit: a slice of, example: "a **slice of** cheese", tr: { es: una loncha de queso } }
+          - { level: A1, unit: a kilo of, example: "a **kilo of** rice", tr: { es: un kilo de arroz } }
+          - { level: A1, unit: a piece of, example: "a **piece of** cake / advice / furniture", tr: { es: un trozo de tarta / un consejo / un mueble } }
+          - { level: A2, unit: a loaf of, example: "a **loaf of** bread", tr: { es: una barra de pan } }
+      - type: bullets
+        items:
+          - en: "The unit is countable and takes the plural: two **cups** of coffee."
+            es: "La unidad es contable y lleva plural: two **cups** of coffee."
+
+  - title: { en: Countable and uncountable meanings, es: Significado contable e incontable }
+    level: A2
+    content:
+      - type: text
+        text:
+          en: "Some nouns are both. The meaning changes."
+          es: "Algunos sustantivos son las dos cosas. El significado cambia."
+      - type: table
+        columns:
+          - { key: uncountable, label: { en: Uncountable, es: Incontable } }
+          - { key: countable, label: { en: Countable, es: Contable } }
+        rows:
+          - { uncountable: { ex: "I like **coffee**.", tr: { es: Me gusta el café. } }, countable: { ex: "Two **coffees**, please.", tr: { es: "Dos cafés, por favor." } } }
+          - { uncountable: { ex: "She has long **hair**.", tr: { es: Tiene el pelo largo. } }, countable: { ex: "There's **a hair** in my soup.", tr: { es: Hay un pelo en mi sopa. } } }
+          - { uncountable: { ex: "a sheet of **paper**", tr: { es: una hoja de papel } }, countable: { ex: "I buy **a paper** every day.", tr: { es: Compro un periódico cada día. } } }
+          - { uncountable: { ex: "There's no **room** in the car.", tr: { es: No hay sitio en el coche. } }, countable: { ex: "The flat has three **rooms**.", tr: { es: El piso tiene tres habitaciones. } } }
+
+  - title: { en: Typical errors, es: Errores típicos }
+    level: A1-A2
+    content:
+      - type: errors
+        audience: true
+        rows:
+          - { for: [es], wrong: informations, right: "**information**", rule: { es: "incontable: sin -s" } }
+          - { wrong: an advice, right: "**a piece of advice** / **some advice**", rule: { en: "uncountable: no a / an", es: "incontable: sin a / an" } }
+          - { wrong: The news are good., right: "The news **is** good.", rule: { en: "news + singular verb", es: "news + verbo en singular" } }
+          - { wrong: a bread, right: "**a loaf of bread** / **some bread**", rule: { en: "count it with a unit", es: "se cuenta con una unidad" } }
+          - { wrong: She has a good work., right: "She has a good **job**.", rule: { en: "work is uncountable; a job is countable", es: "*un trabajo* = a job; work es incontable" } }
+          - { for: [es], wrong: furnitures, right: "**furniture**", rule: { es: "incontable: sin -s" } }
+          - { for: [es], wrong: I have many homeworks., right: "I have **a lot of homework**.", rule: { es: "homework es incontable" } }
+          - { wrong: What a terrible weather!, right: "What **terrible weather**!", rule: { en: "weather: no a / an", es: "weather: sin a / an" } }
+
+essentials:
+  - level: A1
+    parts:
+      - title: { en: Form, es: Forma }
+        content:
+          - type: table
+            columns:
+              - { key: point, label: { en: Point, es: Punto } }
+              - { key: countable, label: { en: Countable, es: Contable } }
+              - { key: uncountable, label: { en: Uncountable, es: Incontable } }
+            rows:
+              - { point: a / an, countable: "**a** book", uncountable: "water" }
+              - { point: Plural, countable: "book**s**", uncountable: "—" }
+              - { point: { en: Verb, es: Verbo }, countable: "is / are", uncountable: "is" }
+      - title: { en: Key rules, es: Reglas clave }
+        content:
+          - type: bullets
+            items:
+              - { en: "Uncountable nouns: no a / an, no plural, singular verb.", es: "Incontables: sin a / an, sin plural, verbo en singular." }
+              - { en: "advice, information, news, money, bread, weather are uncountable.", es: "advice, information, news, money, bread, weather son incontables." }
+              - { en: "Count them with a unit: a glass of water, a piece of advice.", es: "Se cuentan con una unidad: a glass of water, a piece of advice." }
+      - title: { en: Top errors, es: Errores principales }
+        content:
+          - type: errors
+            rows:
+              - { for: [es], wrong: informations, right: "**information**" }
+              - { wrong: an advice, right: "**a piece of advice**" }
+              - { wrong: The news are good., right: "The news **is** good." }
+  - level: A2
+    content:
+      - type: table
+        columns:
+          - { key: point, label: { en: Point, es: Punto } }
+          - { key: rule, label: { en: Rule, es: Regla } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { point: { en: Groups of things, es: Conjuntos de cosas }, rule: { en: "furniture, luggage, equipment, homework, traffic: uncountable", es: "furniture, luggage, equipment, homework, traffic: incontables" }, example: "a **piece of** furniture" }
+          - { point: { en: Two meanings, es: Dos significados }, rule: { en: "coffee, hair, paper, room: countable or uncountable", es: "coffee, hair, paper, room: contables o incontables" }, example: "I like coffee. / Two **coffees**, please." }
+
+reminders:
+  - level: A1
+    items:
+      - { en: "advice, information, news: no a / an, no -s. The news **is** good.", es: "advice, information, news: sin a / an, sin -s. The news **is** good." }
+  - level: A2
+    items:
+      - { en: "furniture, luggage, homework: uncountable → a **piece of** furniture.", es: "furniture, luggage, homework: incontables → a **piece of** furniture." }

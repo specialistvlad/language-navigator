@@ -1,0 +1,19 @@
+{
+  "name": "language-navigator",
+  "private": true,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/specialistvlad/language-navigator"
+  },
+  "scripts": {
+    "start": "bun --watch apps/web/server.ts",
+    "build": "bun run apps/web/build.ts",
+    "check": "bun run scripts/check.ts",
+    "md": "bun run scripts/export-md.ts"
+  },
+  "dependencies": {
+    "ajv": "8",
+    "markdown-it": "14.1.0"
+  }
+}

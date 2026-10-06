@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "concepts.schema.json",
+  "title": "Language Navigator concepts",
+  "description": "Language-neutral keys that pair topics across languages.",
+  "type": "object",
+  "propertyNames": { "pattern": "^[a-z0-9-]+$" },
+  "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["title", "description"],
+    "properties": {
+      "title": { "$ref": "#/definitions/localized" },
+      "description": { "$ref": "#/definitions/localized" }
+    }
+  },
+  "definitions": {
+    "localized": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "es"],
+      "properties": { "en": { "type": "string" }, "es": { "type": "string" } }
+    }
+  }
+}

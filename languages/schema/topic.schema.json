@@ -1,0 +1,537 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "topic.schema.json",
+  "title": "Language Navigator topic",
+  "description": "One topic of one language being learned, explained in every explanation language.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "lang",
+    "kind",
+    "levels",
+    "tags",
+    "concepts",
+    "related",
+    "status",
+    "title",
+    "summary",
+    "sections",
+    "essentials"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(en|es)\\.[a-z0-9-]+\\.[a-z0-9-]+$"
+    },
+    "lang": {
+      "$ref": "#/definitions/explain"
+    },
+    "kind": {
+      "enum": [
+        "grammar",
+        "foundations",
+        "reference"
+      ]
+    },
+    "levels": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/level"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "concepts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+      }
+    },
+    "related": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/topicId"
+      }
+    },
+    "status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "en",
+        "es"
+      ],
+      "properties": {
+        "en": {
+          "$ref": "#/definitions/status"
+        },
+        "es": {
+          "$ref": "#/definitions/status"
+        }
+      }
+    },
+    "title": {
+      "$ref": "#/definitions/localized"
+    },
+    "summary": {
+      "$ref": "#/definitions/localized"
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/section"
+      },
+      "minItems": 1
+    },
+    "essentials": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/essentials"
+      },
+      "minItems": 1
+    },
+    "reminders": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/reminder"
+      }
+    }
+  },
+  "definitions": {
+    "level": {
+      "enum": [
+        "A0",
+        "A1",
+        "A2",
+        "B1"
+      ]
+    },
+    "levelRange": {
+      "type": "string",
+      "pattern": "^(A0|A1|A2|B1)(-(A0|A1|A2|B1))?$"
+    },
+    "explain": {
+      "enum": [
+        "en",
+        "es"
+      ]
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "approved"
+      ]
+    },
+    "topicId": {
+      "type": "string",
+      "pattern": "^(en|es)\\.[a-z0-9-]+\\.[a-z0-9-]+$"
+    },
+    "for": {
+      "description": "Explanation languages that render this element; all when absent.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/explain"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "localized": {
+      "description": "Explanation text, one string per explanation language.",
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "en": {
+          "type": "string"
+        },
+        "es": {
+          "type": "string"
+        }
+      }
+    },
+    "text": {
+      "description": "A plain string (identical in every explanation language) or localized text.",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/definitions/localized"
+        }
+      ]
+    },
+    "example": {
+      "description": "An example in the language being learned, with translations into explanation languages.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ex"
+      ],
+      "properties": {
+        "ex": {
+          "type": "string"
+        },
+        "tr": {
+          "$ref": "#/definitions/localized"
+        }
+      }
+    },
+    "cell": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/definitions/localized"
+        },
+        {
+          "$ref": "#/definitions/example"
+        }
+      ]
+    },
+    "item": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "#/definitions/localized"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "anyOf": [
+            {
+              "required": [
+                "text"
+              ]
+            },
+            {
+              "required": [
+                "ex"
+              ]
+            }
+          ],
+          "properties": {
+            "text": {
+              "$ref": "#/definitions/text"
+            },
+            "ex": {
+              "type": "string"
+            },
+            "tr": {
+              "$ref": "#/definitions/localized"
+            },
+            "level": {
+              "$ref": "#/definitions/level"
+            },
+            "for": {
+              "$ref": "#/definitions/for"
+            }
+          }
+        }
+      ]
+    },
+    "textBlock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
+      "anyOf": [
+        {
+          "required": [
+            "text"
+          ]
+        },
+        {
+          "required": [
+            "ex"
+          ]
+        }
+      ],
+      "properties": {
+        "type": {
+          "const": "text"
+        },
+        "text": {
+          "$ref": "#/definitions/text"
+        },
+        "ex": {
+          "type": "string"
+        },
+        "tr": {
+          "$ref": "#/definitions/localized"
+        },
+        "for": {
+          "$ref": "#/definitions/for"
+        }
+      }
+    },
+    "bulletsBlock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "items"
+      ],
+      "properties": {
+        "type": {
+          "const": "bullets"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/item"
+          },
+          "minItems": 1
+        },
+        "for": {
+          "$ref": "#/definitions/for"
+        }
+      }
+    },
+    "column": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "key",
+        "label"
+      ],
+      "properties": {
+        "key": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "label": {
+          "$ref": "#/definitions/text"
+        },
+        "for": {
+          "$ref": "#/definitions/for"
+        }
+      }
+    },
+    "row": {
+      "description": "Cells by column key, plus optional level, translation and explanation-language filter.",
+      "type": "object",
+      "properties": {
+        "level": {
+          "$ref": "#/definitions/level"
+        },
+        "tr": {
+          "$ref": "#/definitions/localized"
+        },
+        "for": {
+          "$ref": "#/definitions/for"
+        }
+      },
+      "additionalProperties": {
+        "$ref": "#/definitions/cell"
+      }
+    },
+    "tableBlock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "columns",
+        "rows"
+      ],
+      "properties": {
+        "type": {
+          "const": "table"
+        },
+        "columns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/column"
+          },
+          "minItems": 1,
+          "maxItems": 4
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/row"
+          },
+          "minItems": 1
+        },
+        "for": {
+          "$ref": "#/definitions/for"
+        }
+      }
+    },
+    "errorRow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "wrong",
+        "right"
+      ],
+      "properties": {
+        "wrong": {
+          "type": "string"
+        },
+        "right": {
+          "type": "string"
+        },
+        "rule": {
+          "$ref": "#/definitions/text"
+        },
+        "for": {
+          "$ref": "#/definitions/for"
+        }
+      }
+    },
+    "errorsBlock": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "rows"
+      ],
+      "properties": {
+        "type": {
+          "const": "errors"
+        },
+        "audience": {
+          "description": "Print the audience line when the explanation language differs from the language being learned.",
+          "type": "boolean"
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/errorRow"
+          },
+          "minItems": 1
+        },
+        "for": {
+          "$ref": "#/definitions/for"
+        }
+      }
+    },
+    "block": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/textBlock"
+        },
+        {
+          "$ref": "#/definitions/bulletsBlock"
+        },
+        {
+          "$ref": "#/definitions/tableBlock"
+        },
+        {
+          "$ref": "#/definitions/errorsBlock"
+        }
+      ]
+    },
+    "content": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/block"
+      },
+      "minItems": 1
+    },
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "level",
+        "content"
+      ],
+      "properties": {
+        "title": {
+          "$ref": "#/definitions/localized"
+        },
+        "level": {
+          "$ref": "#/definitions/levelRange"
+        },
+        "content": {
+          "$ref": "#/definitions/content"
+        },
+        "for": {
+          "$ref": "#/definitions/for"
+        }
+      }
+    },
+    "part": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "content"
+      ],
+      "properties": {
+        "title": {
+          "$ref": "#/definitions/localized"
+        },
+        "content": {
+          "$ref": "#/definitions/content"
+        }
+      }
+    },
+    "essentials": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level"
+      ],
+      "oneOf": [
+        {
+          "required": [
+            "parts"
+          ]
+        },
+        {
+          "required": [
+            "content"
+          ]
+        }
+      ],
+      "properties": {
+        "level": {
+          "$ref": "#/definitions/level"
+        },
+        "parts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/part"
+          },
+          "minItems": 1
+        },
+        "content": {
+          "$ref": "#/definitions/content"
+        }
+      }
+    },
+    "reminder": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "items"
+      ],
+      "properties": {
+        "level": {
+          "$ref": "#/definitions/level"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/item"
+          },
+          "minItems": 1
+        }
+      }
+    }
+  }
+}

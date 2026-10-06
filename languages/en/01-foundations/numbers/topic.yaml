@@ -1,0 +1,188 @@
+# yaml-language-server: $schema=../../../schema/topic.schema.json
+id: en.foundations.numbers
+lang: en
+kind: foundations
+levels: [A0]
+tags: [numbers, counting, ordinals]
+concepts: [numbers]
+related: [en.foundations.pronunciation-ipa, en.foundations.days-months-dates, en.foundations.telling-time]
+status: { en: draft, es: draft }
+
+title: { en: Numbers, es: Los números (numbers) }
+summary:
+  en: Numbers from 0 to a million, and ordinal numbers.
+  es: Los números del 0 al millón y los números ordinales.
+
+sections:
+  - title: { en: 0 to 12, es: Del 0 al 12 }
+    level: A0
+    content:
+      - type: table
+        columns:
+          - { key: number, label: { en: Number, es: Número } }
+          - { key: word, label: { en: Word, es: Palabra } }
+          - { key: ipa, label: { en: Pronunciation, es: Pronunciación } }
+        rows:
+          - { number: "0", word: zero, ipa: /ˈzɪərəʊ/ }
+          - { number: "1", word: one, ipa: /wʌn/ }
+          - { number: "2", word: two, ipa: /tuː/ }
+          - { number: "3", word: three, ipa: /θriː/ }
+          - { number: "4", word: four, ipa: /fɔː/ }
+          - { number: "5", word: five, ipa: /faɪv/ }
+          - { number: "6", word: six, ipa: /sɪks/ }
+          - { number: "7", word: seven, ipa: /ˈsevn/ }
+          - { number: "8", word: eight, ipa: /eɪt/ }
+          - { number: "9", word: nine, ipa: /naɪn/ }
+          - { number: "10", word: ten, ipa: /ten/ }
+          - { number: "11", word: eleven, ipa: /ɪˈlevn/ }
+          - { number: "12", word: twelve, ipa: /twelv/ }
+      - type: bullets
+        items:
+          - en: "In phone numbers, say each digit. 0 is *oh* /əʊ/; two equal digits are *double*: 077 → *oh double seven*."
+            es: "En los números de teléfono se dice cada cifra. El 0 es *oh* /əʊ/; dos cifras iguales son *double*: 077 → *oh double seven*."
+
+  - title: { en: 13 to 19, es: Del 13 al 19 }
+    level: A0
+    content:
+      - type: table
+        columns:
+          - { key: number, label: { en: Number, es: Número } }
+          - { key: word, label: { en: Word, es: Palabra } }
+          - { key: ipa, label: { en: Pronunciation, es: Pronunciación } }
+        rows:
+          - { number: "13", word: "**thir**teen", ipa: /θɜːˈtiːn/ }
+          - { number: "14", word: fourteen, ipa: /fɔːˈtiːn/ }
+          - { number: "15", word: "**fif**teen", ipa: /fɪfˈtiːn/ }
+          - { number: "16", word: sixteen, ipa: /sɪksˈtiːn/ }
+          - { number: "17", word: seventeen, ipa: /sevnˈtiːn/ }
+          - { number: "18", word: "**eigh**teen", ipa: /eɪˈtiːn/ }
+          - { number: "19", word: nineteen, ipa: /naɪnˈtiːn/ }
+      - type: bullets
+        items:
+          - en: "13–19 add **-teen**; 13, 15 and 18 change their first part: **thir**teen, **fif**teen, **eigh**teen."
+            es: "Del 13 al 19 se añade **-teen**; 13, 15 y 18 cambian la primera parte: **thir**teen, **fif**teen, **eigh**teen."
+
+  - title: { en: 20 to 90, es: Del 20 al 90 }
+    level: A0
+    content:
+      - type: table
+        columns:
+          - { key: number, label: { en: Number, es: Número } }
+          - { key: word, label: { en: Word, es: Palabra } }
+          - { key: ipa, label: { en: Pronunciation, es: Pronunciación } }
+        rows:
+          - { number: "20", word: twenty, ipa: /ˈtwenti/ }
+          - { number: "30", word: "**thir**ty", ipa: /ˈθɜːti/ }
+          - { number: "40", word: "**for**ty", ipa: /ˈfɔːti/ }
+          - { number: "50", word: "**fif**ty", ipa: /ˈfɪfti/ }
+          - { number: "60", word: sixty, ipa: /ˈsɪksti/ }
+          - { number: "70", word: seventy, ipa: /ˈsevnti/ }
+          - { number: "80", word: "**eigh**ty", ipa: /ˈeɪti/ }
+          - { number: "90", word: ninety, ipa: /ˈnaɪnti/ }
+      - type: bullets
+        items:
+          - en: "Tens end in **-ty**. Ten + hyphen + unit: twenty-one, forty-five, ninety-nine."
+            es: "Las decenas acaban en **-ty**. Decena + guion + unidad: twenty-one, forty-five, ninety-nine."
+          - en: "-teen is stressed; -ty is not: thir**teen** /θɜːˈtiːn/ ≠ **thir**ty /ˈθɜːti/."
+            es: "-teen lleva el acento; -ty no: thir**teen** /θɜːˈtiːn/ ≠ **thir**ty /ˈθɜːti/."
+
+  - title: { en: "Hundreds, thousands, millions", es: "Cientos, miles y millones" }
+    level: A0
+    content:
+      - type: table
+        columns:
+          - { key: number, label: { en: Number, es: Número } }
+          - { key: words, label: { en: Words, es: Palabras } }
+        rows:
+          - { number: "100", words: "a / one **hundred**" }
+          - { number: "105", words: "a hundred **and** five" }
+          - { number: "250", words: "two hundred **and** fifty" }
+          - { number: "1,000", words: "a / one **thousand**" }
+          - { number: "1,250", words: "one thousand two hundred **and** fifty" }
+          - { number: "10,000", words: "ten thousand" }
+          - { number: "1,000,000", words: "a / one **million**" }
+          - { number: "2.5", words: "two **point** five" }
+      - type: bullets
+        items:
+          - en: "**and** comes after hundred: three hundred **and** five (US: three hundred five)."
+            es: "**and** va detrás de hundred: three hundred **and** five (US: three hundred five)."
+          - en: "After a number, hundred, thousand and million stay singular: two **hundred**, five **million**."
+            es: "Detrás de un número, hundred, thousand y million van en singular: two **hundred**, five **million**."
+          - en: "A comma separates thousands; a point separates decimals: 1,500 · 2.5."
+            es: "La coma separa los miles y el punto los decimales, al revés que en español: 1,500 · 2.5."
+
+  - title: { en: Ordinal numbers, es: Números ordinales }
+    level: A0
+    content:
+      - type: table
+        columns:
+          - { key: number, label: { en: Number, es: Número } }
+          - { key: word, label: { en: Ordinal, es: Ordinal } }
+          - { key: ipa, label: { en: Pronunciation, es: Pronunciación } }
+        rows:
+          - { number: 1st, word: "fir**st**", ipa: /fɜːst/ }
+          - { number: 2nd, word: "seco**nd**", ipa: /ˈsekənd/ }
+          - { number: 3rd, word: "thi**rd**", ipa: /θɜːd/ }
+          - { number: 4th, word: "four**th**", ipa: /fɔːθ/ }
+          - { number: 5th, word: "fif**th**", ipa: /fɪfθ/ }
+          - { number: 6th, word: "six**th**", ipa: /sɪksθ/ }
+          - { number: 7th, word: "seven**th**", ipa: /ˈsevnθ/ }
+          - { number: 8th, word: "eigh**th**", ipa: /eɪtθ/ }
+          - { number: 9th, word: "nin**th**", ipa: /naɪnθ/ }
+          - { number: 10th, word: "ten**th**", ipa: /tenθ/ }
+          - { number: 12th, word: "twelf**th**", ipa: /twelfθ/ }
+          - { number: 20th, word: "twentie**th**", ipa: /ˈtwentiəθ/ }
+          - { number: 100th, word: "hundred**th**", ipa: /ˈhʌndrədθ/ }
+      - type: bullets
+        items:
+          - en: "1, 2 and 3 have their own words. From 4, add **-th**."
+            es: "1, 2 y 3 tienen palabras propias. A partir del 4, se añade **-th**."
+          - en: "Spelling changes: five → fi**f**th, nine → nin**th**, twelve → twel**f**th, twenty → twent**ie**th."
+            es: "Cambios de ortografía: five → fi**f**th, nine → nin**th**, twelve → twel**f**th, twenty → twent**ie**th."
+          - en: "Written short: number + the last two letters of the word: 1**st**, 2**nd**, 3**rd**, 4**th**."
+            es: "Forma corta: número + las dos últimas letras de la palabra: 1**st**, 2**nd**, 3**rd**, 4**th**."
+          - en: "In compound numbers, only the last word changes: twenty-**first**, a hundred and **second**."
+            es: "En los números compuestos, solo cambia la última palabra: twenty-**first**, a hundred and **second**."
+          - text: { en: "Ordinals give the order of things: floors, places, dates.", es: "Los ordinales indican el orden: pisos, puestos, fechas." }
+            ex: "My flat is on the **second** floor."
+            tr: { es: Mi piso está en la segunda planta. }
+
+  - title: { en: Typical errors, es: Errores típicos }
+    level: A0
+    content:
+      - type: errors
+        audience: true
+        rows:
+          - { wrong: thirteen /ˈθɜːtiːn/, right: "thirteen **/θɜːˈtiːn/**", rule: { en: "-teen is stressed", es: "-teen lleva el acento" } }
+          - { for: [es], wrong: two hundreds, right: "two **hundred**", rule: { es: "sin -s detrás de un número" } }
+          - { wrong: fourty, right: "**forty**", rule: { en: "forty has no u", es: "forty no lleva u" } }
+          - { wrong: 1th · 2th · 3th, right: "1**st** · 2**nd** · 3**rd**", rule: { en: "last two letters of the word", es: "las dos últimas letras de la palabra" } }
+          - { wrong: nineth · twelveth, right: "**ninth** · **twelfth**", rule: { en: "the spelling changes", es: "cambia la ortografía" } }
+          - { for: [es], wrong: "2,5 = two comma five", right: "**2.5** = two **point** five", rule: { es: "punto decimal" } }
+
+essentials:
+  - level: A0
+    parts:
+      - title: { en: Key rules, es: Reglas clave }
+        content:
+          - type: bullets
+            items:
+              - { en: "-teen is stressed, -ty is not: thir**teen** ≠ **thir**ty.", es: "-teen lleva el acento, -ty no: thir**teen** ≠ **thir**ty." }
+              - { en: "21–99 take a hyphen: twenty-one, forty-five.", es: "Del 21 al 99 con guion: twenty-one, forty-five." }
+              - { en: "two **hundred** **and** five: no -s, and after hundred.", es: "two **hundred** **and** five: sin -s, and detrás de hundred." }
+              - { en: "first, second, third; then -th: fourth, fifth. Written: 1st, 2nd, 3rd, 4th.", es: "first, second, third; después -th: fourth, fifth. Abreviado: 1st, 2nd, 3rd, 4th." }
+              - { for: [es], text: { es: "Coma para los miles, punto para los decimales: 1,500 · 2.5." } }
+      - title: { en: Top errors, es: Errores principales }
+        content:
+          - type: errors
+            rows:
+              - { for: [es], wrong: two hundreds, right: "two **hundred**" }
+              - { wrong: fourty, right: "**forty**" }
+              - { wrong: 3th, right: "3**rd**" }
+
+reminders:
+  - level: A0
+    items:
+      - { en: "thir**teen** /θɜːˈtiːn/ ≠ **thir**ty /ˈθɜːti/.", es: "thir**teen** /θɜːˈtiːn/ ≠ **thir**ty /ˈθɜːti/." }
+      - { en: "two **hundred**, five **million**: no -s.", es: "two **hundred**, five **million**: sin -s." }
+      - { for: [es], text: { es: "Decimales con punto: 2.5 = *two point five*." } }

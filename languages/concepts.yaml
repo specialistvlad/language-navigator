@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=schema/concepts.schema.json
+# Language-neutral keys that pair topics across languages. Topics list them in `concepts`.
+
+alphabet:
+  title: { en: Alphabet, es: Alfabeto }
+  description:
+    en: The letters and their names.
+    es: Las letras y sus nombres.
+
+conjugation:
+  title: { en: Conjugation, es: Conjugación }
+  description:
+    en: How verb forms change for person and tense.
+    es: Cómo cambian las formas del verbo según la persona y el tiempo.
+
+pronunciation:
+  title: { en: Pronunciation, es: Pronunciación }
+  description:
+    en: The sounds of a language, how to write them in IPA, and word stress.
+    es: Los sonidos de una lengua, cómo escribirlos en el AFI y el acento de las palabras.
+
+present-tense:
+  title: { en: Present tense, es: Presente }
+  description:
+    en: "Present-time verb forms: habits, facts, states."
+    es: "Formas verbales de presente: hábitos, hechos, estados."
+
+numbers:
+  title: { en: Numbers, es: Números }
+  description:
+    en: Cardinal and ordinal numbers, how to say and write them.
+    es: Los números cardinales y ordinales, cómo se dicen y se escriben.
+
+dates:
+  title: { en: Dates, es: Fechas }
+  description:
+    en: Days of the week, months, and how to say and write dates and years.
+    es: Los días de la semana, los meses y cómo decir y escribir fechas y años.
+
+telling-time:
+  title: { en: Telling the time, es: La hora }
+  description:
+    en: How to ask for and say the time.
+    es: Cómo preguntar y decir la hora.
+
+number:
+  title: { en: Singular and plural, es: Singular y plural }
+  description:
+    en: How nouns change from singular to plural.
+    es: Cómo cambian los sustantivos del singular al plural.
+
+articles:
+  title: { en: Articles, es: Artículos }
+  description:
+    en: Definite and indefinite articles and when to use them.
+    es: Los artículos determinados e indeterminados y cuándo se usan.
+
+countability:
+  title: { en: Countable and uncountable nouns, es: Sustantivos contables e incontables }
+  description:
+    en: Nouns that can be counted and nouns that cannot.
+    es: Los sustantivos que se pueden contar y los que no.
+
+quantifiers:
+  title: { en: Quantifiers, es: Cuantificadores }
+  description:
+    en: Words that say how much or how many.
+    es: Palabras que indican cuánto o cuántos.
+
+demonstratives:
+  title: { en: Demonstratives, es: Demostrativos }
+  description:
+    en: Words that point to things near or far.
+    es: Palabras que señalan cosas cercanas o lejanas.
+
+possession:
+  title: { en: Possession, es: Posesión }
+  description:
+    en: How to say who something belongs to.
+    es: Cómo decir a quién pertenece algo.
+
+pronouns:
+  title: { en: Personal pronouns, es: Pronombres personales }
+  description:
+    en: "Words for people and things: subject, object and possessive forms."
+    es: "Palabras para personas y cosas: formas de sujeto, de objeto y posesivas."
+
+indefinite-pronouns:
+  title: { en: Indefinite pronouns, es: Pronombres indefinidos }
+  description:
+    en: "Words for a person, thing or place that is unknown or general: somebody, nothing."
+    es: "Palabras para una persona, cosa o lugar sin concretar o en general: alguien, nada."
