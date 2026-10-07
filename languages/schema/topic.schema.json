@@ -208,16 +208,8 @@
           "type": "object",
           "additionalProperties": false,
           "anyOf": [
-            {
-              "required": [
-                "text"
-              ]
-            },
-            {
-              "required": [
-                "ex"
-              ]
-            }
+            { "properties": { "text": true }, "required": ["text"] },
+            { "properties": { "ex": true }, "required": ["ex"] }
           ],
           "properties": {
             "text": {
@@ -246,16 +238,8 @@
         "type"
       ],
       "anyOf": [
-        {
-          "required": [
-            "text"
-          ]
-        },
-        {
-          "required": [
-            "ex"
-          ]
-        }
+        { "properties": { "text": true }, "required": ["text"] },
+        { "properties": { "ex": true }, "required": ["ex"] }
       ],
       "properties": {
         "type": {
@@ -489,16 +473,8 @@
         "level"
       ],
       "oneOf": [
-        {
-          "required": [
-            "parts"
-          ]
-        },
-        {
-          "required": [
-            "content"
-          ]
-        }
+        { "properties": { "parts": true }, "required": ["parts"] },
+        { "properties": { "content": true }, "required": ["content"] }
       ],
       "properties": {
         "level": {

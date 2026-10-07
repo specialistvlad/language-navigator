@@ -24,7 +24,7 @@ import {
 } from "./lib.ts";
 import { isLocalized, tableShape } from "./markdown.ts";
 
-const ajv = new Ajv({ allErrors: true, strict: false });
+const ajv = new Ajv({ allErrors: true, strict: true });
 const schema = async (name: string): Promise<ValidateFunction> =>
   ajv.compile(await readYaml<object>(join(CONTENT, "schema", `${name}.schema.json`)));
 const ALL: Explain[] = Object.keys(EXPLAIN);
