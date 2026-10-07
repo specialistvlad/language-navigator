@@ -90,3 +90,201 @@ indefinite-pronouns:
   description:
     en: "Words for a person, thing or place that is unknown or general: somebody, nothing."
     es: "Palabras para una persona, cosa o lugar sin concretar o en general: alguien, nada."
+
+be:
+  title: { en: The verb to be, es: El verbo to be }
+  description:
+    en: "The verb that links a subject to a description, a place or an identity: ser and estar."
+    es: "El verbo que une el sujeto con una descripción, un lugar o una identidad: ser y estar."
+
+have:
+  title: { en: The verb have, es: El verbo have }
+  description:
+    en: "Possession, family, features and fixed expressions with have."
+    es: "Posesión, familia, rasgos y expresiones fijas con have."
+
+existence:
+  title: { en: Existence, es: Existencia }
+  description:
+    en: "How to say that something exists or is in a place: there is, hay."
+    es: "Cómo decir que algo existe o está en un lugar: there is, hay."
+
+imperative:
+  title: { en: Imperative, es: Imperativo }
+  description:
+    en: Orders, instructions, invitations and warnings.
+    es: Órdenes, instrucciones, invitaciones y avisos.
+
+irregular-verbs:
+  title: { en: Irregular verbs, es: Verbos irregulares }
+  description:
+    en: Verbs whose forms do not follow the regular pattern.
+    es: Verbos cuyas formas siguen un modelo propio.
+
+continuous:
+  title: { en: Continuous aspect, es: Aspecto continuo }
+  description:
+    en: "Actions in progress at a moment: be + -ing, estar + gerundio."
+    es: "Acciones en curso en un momento: be + -ing, estar + gerundio."
+
+past-tense:
+  title: { en: Past tense, es: Pasado }
+  description:
+    en: Verb forms for finished actions and past situations.
+    es: Formas verbales para acciones terminadas y situaciones pasadas.
+
+present-perfect:
+  title: { en: Present perfect, es: Pretérito perfecto }
+  description:
+    en: "have + past participle: past actions connected to the present."
+    es: "haber + participio: acciones pasadas conectadas con el presente."
+
+past-perfect:
+  title: { en: Past perfect, es: Pluscuamperfecto }
+  description:
+    en: An action before another past action.
+    es: Una acción anterior a otra acción pasada.
+
+past-habits:
+  title: { en: Past habits, es: Hábitos en el pasado }
+  description:
+    en: Repeated actions and states in the past that are over now.
+    es: Acciones repetidas y estados del pasado que ya terminaron.
+
+future:
+  title: { en: Future, es: Futuro }
+  description:
+    en: Plans, predictions, decisions and arrangements.
+    es: Planes, predicciones, decisiones y citas acordadas.
+
+tenses:
+  title: { en: Tense system, es: Sistema de tiempos }
+  description:
+    en: All tenses side by side, with their main uses.
+    es: Todos los tiempos juntos, con sus usos principales.
+
+ability:
+  title: { en: Ability and permission, es: Capacidad y permiso }
+  description:
+    en: "Saying what someone can do and asking for permission."
+    es: "Decir lo que alguien sabe o puede hacer y pedir permiso."
+
+obligation:
+  title: { en: Obligation, es: Obligación }
+  description:
+    en: Rules, necessity and what is not necessary.
+    es: Normas, necesidad y lo que no hace falta.
+
+advice:
+  title: { en: Advice, es: Consejo }
+  description:
+    en: Giving and asking for advice and opinions.
+    es: Dar y pedir consejo y opinión.
+
+possibility:
+  title: { en: Possibility, es: Posibilidad }
+  description:
+    en: How sure we are that something is true or will happen.
+    es: Qué seguridad tenemos de que algo es verdad o va a pasar.
+
+conditional-mood:
+  title: { en: Conditional mood, es: Condicional }
+  description:
+    en: "Imagined situations, polite requests and offers: would, -ría."
+    es: "Situaciones imaginadas, peticiones y ofrecimientos corteses: would, -ría."
+
+word-order:
+  title: { en: Word order, es: Orden de la frase }
+  description:
+    en: The order of subject, verb, object and other parts of the sentence.
+    es: El orden del sujeto, el verbo, el objeto y las demás partes de la frase.
+
+questions-negatives:
+  title: { en: Questions and negatives, es: Preguntas y negativas }
+  description:
+    en: How to make questions and negative sentences.
+    es: Cómo se forman las preguntas y las frases negativas.
+
+linkers:
+  title: { en: Linkers, es: Conectores }
+  description:
+    en: "Words that join ideas: and, but, because, so, although."
+    es: "Palabras que unen ideas: y, pero, porque, así que, aunque."
+
+conditionals:
+  title: { en: Conditional sentences, es: Oraciones condicionales }
+  description:
+    en: "if-sentences: real, possible and imagined conditions."
+    es: "Frases con si: condiciones reales, posibles e imaginadas."
+
+relative-clauses:
+  title: { en: Relative clauses, es: Oraciones de relativo }
+  description:
+    en: "Clauses that describe a noun: who, which, that, where."
+    es: "Oraciones que describen un sustantivo: que, quien, donde."
+
+passive:
+  title: { en: Passive voice, es: Voz pasiva }
+  description:
+    en: Sentences that focus on the action or the thing affected, not the doer.
+    es: Frases que se centran en la acción o en lo afectado por ella.
+
+reported-speech:
+  title: { en: Reported speech, es: Estilo indirecto }
+  description:
+    en: How to report what someone said or asked.
+    es: Cómo contar lo que alguien dijo o preguntó.
+
+verb-patterns:
+  title: { en: Verb patterns, es: Construcciones verbales }
+  description:
+    en: "The form of a verb after another verb: -ing or to + infinitive."
+    es: "La forma de un verbo detrás de otro verbo: -ing o to + infinitivo."
+
+question-tags:
+  title: { en: Question tags, es: Coletillas interrogativas }
+  description:
+    en: "Short questions at the end of a sentence: isn't it?, ¿verdad?"
+    es: "Preguntas cortas al final de la frase: isn't it?, ¿verdad?"
+
+adjectives:
+  title: { en: Adjectives, es: Adjetivos }
+  description:
+    en: The form and position of adjectives.
+    es: La forma y la posición de los adjetivos.
+
+comparison:
+  title: { en: Comparison, es: Comparación }
+  description:
+    en: Comparatives and superlatives.
+    es: Comparativos y superlativos.
+
+adverbs:
+  title: { en: Adverbs, es: Adverbios }
+  description:
+    en: Words that say how, how often, when and where.
+    es: Palabras que indican cómo, con qué frecuencia, cuándo y dónde.
+
+degree:
+  title: { en: Degree, es: Grado }
+  description:
+    en: "How much of a quality: too, enough, so, such, very."
+    es: "Cuánto de una cualidad: demasiado, suficiente, tan, tanto, muy."
+
+prepositions-time:
+  title: { en: Prepositions of time, es: Preposiciones de tiempo }
+  description:
+    en: Prepositions before times, days, dates and periods.
+    es: Preposiciones delante de horas, días, fechas y periodos.
+
+prepositions-place:
+  title: { en: Prepositions of place and movement, es: Preposiciones de lugar y movimiento }
+  description:
+    en: Where something is and where it goes.
+    es: Dónde está algo y adónde va.
+
+phrasal-verbs:
+  title: { en: Phrasal verbs, es: Verbos frasales }
+  description:
+    en: "Verb + particle with its own meaning: get up, look for."
+    es: "Verbo + partícula con un significado propio: get up, look for."
