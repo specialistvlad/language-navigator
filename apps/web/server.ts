@@ -15,7 +15,8 @@ const LAN = Object.values(networkInterfaces())
   .filter((i) => i && i.family === "IPv4" && !i.internal)
   .map((i) => i!.address);
 const SITE = `http://${HOST === "0.0.0.0" ? (LAN[0] ?? "127.0.0.1") : HOST}:${PORT}`;
-const OUT = join(ROOT, "build/web");
+// Its own output folder: `npm run build` writes build/web/ without the live-reload hook.
+const OUT = join(ROOT, "build/dev");
 const NO_STORE = { "Cache-Control": "no-store" };
 const encoder = new TextEncoder();
 const clients = new Set<ReadableStreamDefaultController<Uint8Array>>();

@@ -56,7 +56,7 @@ language-navigator/
 | Command | What it does |
 |---|---|
 | `bun install` | installs dependencies (Bun runs every script) |
-| `npm start` | builds the site, serves it on port 47380 on every interface (open the printed network address on a phone), rebuilds and reloads on every change |
+| `npm start` | builds the site into `build/dev/`, serves it on port 47380 on every interface (open the printed network address on a phone), rebuilds and reloads on every change |
 | `npm run build` | builds the static site into `build/web/`; `SITE_URL=https://… npm run build` sets the public URL; its path prefixes every link |
 | `npm run check` | validates all data against the schemas and conventions |
 | `npm run md` | writes every guide as Markdown to `build/md/` |
