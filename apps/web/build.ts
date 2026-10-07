@@ -5,6 +5,7 @@ import { join } from "node:path";
 import {
   type CurriculumLanguage,
   type CurriculumSection,
+  ENABLED_EXPLAIN,
   EXPLAIN,
   type Explain,
   LEVEL_INFO,
@@ -43,7 +44,7 @@ export interface BuildOptions {
 }
 
 const APP = import.meta.dir;
-const EXPLAINS = Object.keys(EXPLAIN) as Explain[];
+const EXPLAINS = ENABLED_EXPLAIN;
 const md = createRenderer();
 
 // Opens the file in GitHub's editor (a fork for anyone without write access).
@@ -125,7 +126,9 @@ export async function build(o: BuildOptions): Promise<number> {
   const refs = await loadTopics(curriculum);
   const langs = new Map(curriculum.languages.map((l) => [l.code, l]));
   const langOf = (ref: TopicRef) => langs.get(ref.lang)!;
-  const link: LinkFn = (target, explain) => (target?.topic ? topicUrl(explain, langOf(target), target) : null);
+  // Readers see enabled languages only; links into a disabled one stay plain text.
+  const link: LinkFn = (target, explain) => (target?.topic && langOf(target).enabled ? topicUrl(explain, langOf(target), target) : null);
+  const shownLanguages = curriculum.languages.filter((l) => l.enabled);
   const pages: { path: string; html: string; sitemap: boolean }[] = [];
   const add = (path: string, html: string, sitemap = true) => pages.push({ path, html, sitemap });
 
@@ -163,12 +166,12 @@ export async function build(o: BuildOptions): Promise<number> {
   const home = EXPLAINS[0];
   const homeValues = {
     site: SITE.name,
-    languages: listOf(curriculum.languages.map((l) => l.name[home]), home),
+    languages: listOf(shownLanguages.map((l) => l.name[home]), home),
     from: LEVELS[0],
     to: LEVELS.at(-1)!,
-    explain: listOf(SITE.explain.map((e) => say("explainedIn", home, { name: e.name[home] })), home),
+    explain: listOf(SITE.explain.filter((e) => e.enabled).map((e) => say("explainedIn", home, { name: e.name[home] })), home),
   };
-  const cards = curriculum.languages
+  const cards = shownLanguages
     .map((lang) => {
       const total = refs.filter((r) => r.lang === lang.code).length;
       const written = refs.filter((r) => r.lang === lang.code && r.topic).length;
@@ -193,7 +196,7 @@ export async function build(o: BuildOptions): Promise<number> {
     }),
   );
 
-  for (const lang of curriculum.languages) {
+  for (const lang of shownLanguages) {
     const langRefs = refs.filter((r) => r.lang === lang.code);
     const written = langRefs.filter((r) => r.topic);
 

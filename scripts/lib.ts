@@ -15,7 +15,7 @@ export interface Site {
   name: string;
   url: string;
   repository: string;
-  explain: { code: Explain; name: Record<Explain, string> }[];
+  explain: { code: Explain; enabled: boolean; name: Record<Explain, string> }[];
 }
 export interface LevelInfo {
   code: Level;
@@ -29,6 +29,9 @@ export const LEVEL_INFO = (levelsFile as { levels: LevelInfo[] }).levels;
 export const LEVELS: readonly Level[] = LEVEL_INFO.map((l) => l.code);
 // Explanation languages, each under its own name: { en: "English", es: "Español" }.
 export const EXPLAIN: Record<Explain, string> = Object.fromEntries(SITE.explain.map((e) => [e.code, e.name[e.code]]));
+
+// Explanation languages readers see (enabled in site.yaml).
+export const ENABLED_EXPLAIN: Explain[] = SITE.explain.filter((e) => e.enabled).map((e) => e.code);
 
 export const lv = (level: string | null) => LEVELS.indexOf(level ?? "");
 // Every level in a range such as "A0-A2".
@@ -157,6 +160,7 @@ export interface CurriculumSection {
 }
 export interface CurriculumLanguage {
   code: Explain;
+  enabled: boolean;
   slug: string;
   name: Record<Explain, string>;
   sections: CurriculumSection[];

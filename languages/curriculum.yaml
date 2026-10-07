@@ -3,6 +3,7 @@
 
 languages:
   - code: en
+    enabled: true
     slug: english
     name: { en: English, es: Inglés }
     sections:
@@ -86,6 +87,7 @@ languages:
           - { slug: time-in-on-at, levels: A1 }
           - { slug: place-movement, levels: A1-A2 }
   - code: es
+    enabled: false
     slug: spanish
     name: { en: Spanish, es: Español }
     sections:

@@ -47,6 +47,7 @@ schemaErrors(await schema("levels"), { levels: LEVEL_INFO }, "levels.yaml");
 schemaErrors(await schema("interface"), INTERFACE, "interface.yaml");
 for (const l of LEVEL_INFO) for (const e of ALL) if (!l.name[e] || !l.description[e]) fail("levels.yaml", `${l.code} has no "${e}" name or description`);
 for (const s of SITE.explain) for (const e of ALL) if (!s.name[e]) fail("site.yaml", `${s.code} has no "${e}" name`);
+if (!SITE.explain.some((e) => e.enabled)) fail("site.yaml", "no explanation language is enabled");
 for (const [key, text] of Object.entries(INTERFACE.text)) for (const e of ALL) if (!text[e]) fail("interface.yaml", `${key} has no "${e}" text`);
 const codes = ALL.join("|");
 const levelCodes = LEVELS.join("|");
@@ -68,6 +69,7 @@ for (const name of ["curriculum", "concepts", "topic"]) {
 }
 
 const curriculum = await loadCurriculum();
+if (!curriculum.languages.some((l) => l.enabled)) fail("curriculum.yaml", "no language is enabled");
 const concepts = await loadConcepts();
 console.log("curriculum.yaml, concepts.yaml");
 schemaErrors(await schema("curriculum"), curriculum, "curriculum.yaml");

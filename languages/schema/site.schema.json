@@ -15,9 +15,10 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["code", "name"],
+        "required": ["code", "enabled", "name"],
         "properties": {
           "code": { "type": "string", "pattern": "^[a-z]{2}$" },
+          "enabled": { "description": "false keeps the language from readers; its data stays and is still checked.", "type": "boolean" },
           "name": {
             "description": "The language's name in every explanation language; name[code] is its own name.",
             "type": "object",

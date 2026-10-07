@@ -6,8 +6,12 @@ name: Language Navigator
 url: https://specialistvlad.github.io/language-navigator
 repository: https://github.com/specialistvlad/language-navigator
 
+# enabled: false keeps a language from readers for now; its data stays and npm run check still
+# validates it. Languages being learned carry the same switch in curriculum.yaml.
 explain:
   - code: en
+    enabled: true
     name: { en: English, es: Inglés }
   - code: es
+    enabled: true
     name: { en: Spanish, es: Español }

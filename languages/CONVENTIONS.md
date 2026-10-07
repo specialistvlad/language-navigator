@@ -34,10 +34,13 @@ languages/
 
 | File | Schema | Holds |
 |---|---|---|
-| `site.yaml` | `schema/site.schema.json` | product name, URLs, explanation languages and their names |
+| `site.yaml` | `schema/site.schema.json` | product name, URLs, explanation languages with their names and `enabled` switch |
 | `levels.yaml` | `schema/levels.schema.json` | the level scale: code, name, description, colour per level |
 | `interface.yaml` | `schema/interface.schema.json` | interface wording by key, per explanation language; block headings and column titles the generator writes |
-| `curriculum.yaml` | `schema/curriculum.schema.json` | languages → sections → topics (slug, levels, optional title) |
+| `curriculum.yaml` | `schema/curriculum.schema.json` | languages (with an `enabled` switch) → sections → topics (slug, levels, optional title) |
+
+`enabled: false` on a language being learned (`curriculum.yaml`) or an explanation language
+(`site.yaml`) keeps it from readers in every app; its data stays and `npm run check` still validates it.
 | `concepts.yaml` | `schema/concepts.schema.json` | concept key → title, description |
 | `{lang}/{NN-section}/{topic}/topic.yaml` | `schema/topic.schema.json` | one topic, all explanation languages |
 

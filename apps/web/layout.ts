@@ -44,7 +44,8 @@ export interface ControlsOptions {
 
 export function controls(o: ControlsOptions): string {
   const t = UI[o.explain];
-  const parts = [linkSeg(t.read, o.read)];
+  // One explanation language leaves nothing to switch.
+  const parts = o.read.length > 1 ? [linkSeg(t.read, o.read)] : [];
   if (o.level) parts.push(seg(t.level, LEVELS.map((l) => `<button type="button" data-set-level="${l}">${l}</button>`).join("")));
   if (o.view) {
     parts.push(
