@@ -5,7 +5,7 @@ kind: grammar
 levels: [A2]
 tags: [pronouns, reflexive, myself, each other]
 concepts: [reflexive, pronouns]
-related: [en.pronouns.personal-pronouns, en.pronouns.indefinite-pronouns, en.verbs.phrasal-verbs-core, en.tenses.present-simple]
+related: [en.pronouns.personal-pronouns, en.pronouns.indefinite-pronouns, en.verbs.phrasal-verbs-core, en.tenses.simple-tenses]
 status: { en: draft, es: draft }
 
 title: { en: Reflexive Pronouns, es: Pronombres reflexivos }

@@ -18,7 +18,7 @@ progressive sheet reaches, the more material it covers and the more concentrated
 - Every page is rendered to static HTML, so search engines index all content.
 - Every page has a dynamic layout: below 860 px the sidebar becomes a slide-out menu and the
   controls stack; wide tables scroll inside their box, never the page.
-- Every page has a clean, stable, named URL, for example `/es/english/tenses/present-simple/`
+- Every page has a clean, stable, named URL, for example `/es/english/tenses/simple-tenses/`
   (rules in [languages/CONVENTIONS.md](languages/CONVENTIONS.md) §10).
 - `npm start` rebuilds on every change and reloads the browser.
 

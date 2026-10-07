@@ -5,7 +5,7 @@ kind: grammar
 levels: [B1]
 tags: [reported-speech, backshift, say, tell]
 concepts: [reported-speech]
-related: [en.sentence-building.questions-negatives, en.sentence-building.word-order, en.tenses.past-perfect, en.verbs.gerund-vs-infinitive]
+related: [en.sentence-building.questions-negatives, en.sentence-building.word-order, en.tenses.perfect-tenses, en.verbs.gerund-vs-infinitive]
 status: { en: draft, es: draft }
 
 title: { en: Reported Speech, es: Estilo indirecto }

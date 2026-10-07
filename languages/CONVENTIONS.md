@@ -28,7 +28,7 @@ languages/
 ├── concepts.yaml                   concept keys that pair topics across languages
 ├── schema/                         JSON Schemas for every file type
 ├── templates/topic.yaml            skeleton for a new topic
-├── en/05-tenses/present-simple/topic.yaml
+├── en/05-tenses/simple-tenses/topic.yaml
 └── es/02-conjugation/presente-regular/topic.yaml
 ```
 
@@ -50,7 +50,7 @@ languages/
   within the language; the order of `topics` in `curriculum.yaml` sets the order inside a section.
 - `topic`: kebab-case ASCII, meaning lowercase letters, digits and hyphens. Spanish slugs drop
   accents and ñ: `preterito-indefinido`.
-- **ID**: `{lang}.{section slug without number}.{topic}`, for example `en.tenses.present-simple`.
+- **ID**: `{lang}.{section slug without number}.{topic}`, for example `en.tenses.simple-tenses`.
 - A topic file starts with `# yaml-language-server: $schema=../../../schema/topic.schema.json`,
   which gives editors validation and completion.
 
@@ -229,7 +229,7 @@ Every page has a clean, stable, named URL. This is a requirement for every app a
 | `{explain}` | explanation language code | `en`, `es` |
 | `{language}` | `slug` of the learned language in `curriculum.yaml` | `english`, `spanish` |
 | `{section}` | section slug, without its number | `tenses`, `conjugation` |
-| `{topic}` | topic slug | `present-simple` |
+| `{topic}` | topic slug | `simple-tenses` |
 | `{sheet}` | `a0`…`b1` (level), `a0-a1` / `a0-a2` / `a0-b1` (progressive), `{section}`, `{section}/{topic}` | `a0-b1` |
 
 - URLs use lowercase ASCII letters, digits, hyphens and slashes, and end with `/`.

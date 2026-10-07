@@ -5,7 +5,7 @@ kind: grammar
 levels: [A2, B1]
 tags: [conditionals, if, unless]
 concepts: [conditionals]
-related: [en.sentence-building.conjunctions-linkers, en.tenses.present-simple, en.tenses.future-forms, en.tenses.past-simple, en.modals.would]
+related: [en.sentence-building.conjunctions-linkers, en.tenses.simple-tenses, en.tenses.future-forms, en.modals.would]
 status: { en: draft, es: draft }
 
 title: { en: "Conditionals: Zero, First and Second", es: "Condicionales 0, 1 y 2" }

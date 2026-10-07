@@ -5,7 +5,7 @@ kind: reference
 levels: [A1, A2, B1]
 tags: [verbs, irregular, reference]
 concepts: [irregular-verbs]
-related: [en.tenses.past-simple, en.tenses.present-perfect, en.tenses.past-perfect, en.verbs.to-be, en.verbs.have-have-got, en.sentence-building.passive-voice]
+related: [en.tenses.simple-tenses, en.tenses.perfect-tenses, en.verbs.to-be, en.verbs.have-have-got, en.sentence-building.passive-voice]
 status: { en: draft, es: draft }
 
 title: { en: Irregular Verbs Table, es: Tabla de verbos irregulares }
@@ -36,10 +36,10 @@ sections:
           - { pattern: { en: "participle in -n / -ne", es: "participio en -n / -ne" }, example: "go – went – gone" }
       - type: bullets
         items:
-          - en: "The **past simple** is used for finished actions. See [Past Simple](id:en.tenses.past-simple)."
-            es: "El **pasado simple** se usa para acciones terminadas. Ver [Pasado simple](id:en.tenses.past-simple)."
-          - en: "The **past participle** is used after have in the present perfect. See [Present Perfect](id:en.tenses.present-perfect)."
-            es: "El **participio** se usa después de have en el present perfect. Ver [Presente perfecto](id:en.tenses.present-perfect)."
+          - en: "The **past simple** is used for finished actions. See [Past Simple](id:en.tenses.simple-tenses)."
+            es: "El **pasado simple** se usa para acciones terminadas. Ver [Pasado simple](id:en.tenses.simple-tenses)."
+          - en: "The **past participle** is used after have in the present perfect. See [Present Perfect](id:en.tenses.perfect-tenses)."
+            es: "El **participio** se usa después de have en el present perfect. Ver [Presente perfecto](id:en.tenses.perfect-tenses)."
           - en: "Regular verbs add **-ed** to both forms: work – worked – worked."
             es: "Los verbos regulares añaden **-ed** a las dos formas: work – worked – worked."
           - { for: [es], text: { es: "El participio inglés equivale a *-ado / -ido*, pero no siempre termina en **-ed**: *he comido* = I have **eaten**." } }

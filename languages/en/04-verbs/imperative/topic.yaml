@@ -5,7 +5,7 @@ kind: grammar
 levels: [A1]
 tags: [verbs, imperative, instructions]
 concepts: [imperative]
-related: [en.verbs.to-be, en.tenses.present-simple, en.modals.can-could, en.sentence-building.questions-negatives, en.prepositions.place-movement]
+related: [en.verbs.to-be, en.tenses.simple-tenses, en.modals.can-could, en.sentence-building.questions-negatives, en.prepositions.place-movement]
 status: { en: draft, es: draft }
 
 title: { en: Imperative, es: Imperativo }

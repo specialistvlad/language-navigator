@@ -5,7 +5,7 @@ kind: grammar
 levels: [A2]
 tags: [verbs, tenses, past, habits]
 concepts: [past-habits, past-tense]
-related: [en.tenses.past-simple, en.tenses.past-continuous, en.sentence-building.questions-negatives, en.tenses.tense-map]
+related: [en.tenses.simple-tenses, en.tenses.continuous-tenses, en.sentence-building.questions-negatives, en.tenses.tense-map]
 status: { en: draft, es: draft }
 
 title: { en: Used to, es: Used to }
@@ -151,8 +151,8 @@ sections:
             es: "Un hecho único va en past simple: I **visited** Rome in May."
           - en: "A habit with a time expression takes either form: I **played** football every Saturday."
             es: "Un hábito con expresión de tiempo admite las dos formas: I **played** football every Saturday."
-          - en: "See [Past simple](id:en.tenses.past-simple)."
-            es: "Ver [Pasado simple](id:en.tenses.past-simple)."
+          - en: "See [Past simple](id:en.tenses.simple-tenses)."
+            es: "Ver [Pasado simple](id:en.tenses.simple-tenses)."
 
   - title: { en: Typical errors, es: Errores típicos }
     level: A2

@@ -5,7 +5,7 @@ kind: reference
 levels: [A1, A2, B1]
 tags: [verbs, tenses, overview]
 concepts: [tenses]
-related: [en.tenses.present-simple, en.tenses.present-continuous, en.tenses.past-simple, en.tenses.past-continuous, en.tenses.present-perfect, en.tenses.future-forms, en.tenses.used-to, en.tenses.past-perfect]
+related: [en.tenses.simple-tenses, en.tenses.continuous-tenses, en.tenses.perfect-tenses, en.tenses.future-forms, en.tenses.used-to]
 status: { en: draft, es: draft }
 
 title: { en: Tense map, es: Mapa de tiempos verbales }
@@ -24,9 +24,9 @@ sections:
           - { key: present, label: { en: Present, es: Presente } }
           - { key: future, label: { en: Future, es: Futuro } }
         rows:
-          - { aspect: { en: Simple, es: Simple }, past: { en: "[Past simple](id:en.tenses.past-simple)", es: "[Pasado simple](id:en.tenses.past-simple)" }, present: { en: "[Present simple](id:en.tenses.present-simple)", es: "[Presente simple](id:en.tenses.present-simple)" }, future: { en: "[Future forms](id:en.tenses.future-forms)", es: "[Formas de futuro](id:en.tenses.future-forms)" } }
-          - { aspect: { en: In progress, es: En curso }, past: { en: "[Past continuous](id:en.tenses.past-continuous)", es: "[Pasado continuo](id:en.tenses.past-continuous)" }, present: { en: "[Present continuous](id:en.tenses.present-continuous)", es: "[Presente continuo](id:en.tenses.present-continuous)" }, future: { en: "[Present continuous](id:en.tenses.present-continuous) (arrangements)", es: "[Presente continuo](id:en.tenses.present-continuous) (citas)" } }
-          - { aspect: { en: Perfect, es: Perfecto }, past: { en: "[Past perfect](id:en.tenses.past-perfect)", es: "[Pluscuamperfecto](id:en.tenses.past-perfect)" }, present: { en: "[Present perfect](id:en.tenses.present-perfect)", es: "[Presente perfecto](id:en.tenses.present-perfect)" }, future: "-" }
+          - { aspect: { en: Simple, es: Simple }, past: { en: "[Past simple](id:en.tenses.simple-tenses)", es: "[Pasado simple](id:en.tenses.simple-tenses)" }, present: { en: "[Present simple](id:en.tenses.simple-tenses)", es: "[Presente simple](id:en.tenses.simple-tenses)" }, future: { en: "[Future forms](id:en.tenses.future-forms)", es: "[Formas de futuro](id:en.tenses.future-forms)" } }
+          - { aspect: { en: In progress, es: En curso }, past: { en: "[Past continuous](id:en.tenses.continuous-tenses)", es: "[Pasado continuo](id:en.tenses.continuous-tenses)" }, present: { en: "[Present continuous](id:en.tenses.continuous-tenses)", es: "[Presente continuo](id:en.tenses.continuous-tenses)" }, future: { en: "[Present continuous](id:en.tenses.continuous-tenses) (arrangements)", es: "[Presente continuo](id:en.tenses.continuous-tenses) (citas)" } }
+          - { aspect: { en: Perfect, es: Perfecto }, past: { en: "[Past perfect](id:en.tenses.perfect-tenses)", es: "[Pluscuamperfecto](id:en.tenses.perfect-tenses)" }, present: { en: "[Present perfect](id:en.tenses.perfect-tenses)", es: "[Presente perfecto](id:en.tenses.perfect-tenses)" }, future: "-" }
           - { aspect: { en: Past habits, es: Hábitos pasados }, past: { en: "[Used to](id:en.tenses.used-to)", es: "[Used to](id:en.tenses.used-to)" }, present: "-", future: "-" }
       - type: bullets
         items:
@@ -44,9 +44,9 @@ sections:
           - { key: form, label: { en: Form, es: Forma } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { tense: { en: "[Present simple](id:en.tenses.present-simple): habits, facts, permanent states", es: "[Presente simple](id:en.tenses.present-simple): hábitos, hechos, estados permanentes" }, form: "V / V-s", example: { ex: "I **work** here.", tr: { es: "Trabajo aquí." } } }
-          - { tense: { en: "[Present continuous](id:en.tenses.present-continuous): now, temporary situations", es: "[Presente continuo](id:en.tenses.present-continuous): ahora, situaciones temporales" }, form: "am / is / are + V-ing", example: { ex: "I'**m working** now.", tr: { es: "Ahora estoy trabajando." } } }
-          - { level: A2, tense: { en: "[Present perfect](id:en.tenses.present-perfect): past events that matter now", es: "[Presente perfecto](id:en.tenses.present-perfect): hechos pasados que importan ahora" }, form: "have / has + V-ed", example: { ex: "I'**ve lost** my keys.", tr: { es: "He perdido las llaves." } } }
+          - { tense: { en: "[Present simple](id:en.tenses.simple-tenses): habits, facts, permanent states", es: "[Presente simple](id:en.tenses.simple-tenses): hábitos, hechos, estados permanentes" }, form: "V / V-s", example: { ex: "I **work** here.", tr: { es: "Trabajo aquí." } } }
+          - { tense: { en: "[Present continuous](id:en.tenses.continuous-tenses): now, temporary situations", es: "[Presente continuo](id:en.tenses.continuous-tenses): ahora, situaciones temporales" }, form: "am / is / are + V-ing", example: { ex: "I'**m working** now.", tr: { es: "Ahora estoy trabajando." } } }
+          - { level: A2, tense: { en: "[Present perfect](id:en.tenses.perfect-tenses): past events that matter now", es: "[Presente perfecto](id:en.tenses.perfect-tenses): hechos pasados que importan ahora" }, form: "have / has + V-ed", example: { ex: "I'**ve lost** my keys.", tr: { es: "He perdido las llaves." } } }
 
   - title: { en: Past, es: Pasado }
     level: A1-B1
@@ -57,10 +57,10 @@ sections:
           - { key: form, label: { en: Form, es: Forma } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { tense: { en: "[Past simple](id:en.tenses.past-simple): finished events", es: "[Pasado simple](id:en.tenses.past-simple): hechos terminados" }, form: "V-ed / irregular", example: { ex: "I **worked** yesterday.", tr: { es: "Ayer trabajé." } } }
-          - { level: A2, tense: { en: "[Past continuous](id:en.tenses.past-continuous): in progress at a past moment", es: "[Pasado continuo](id:en.tenses.past-continuous): en curso en un momento del pasado" }, form: "was / were + V-ing", example: { ex: "I **was working** at eight.", tr: { es: "A las ocho estaba trabajando." } } }
+          - { tense: { en: "[Past simple](id:en.tenses.simple-tenses): finished events", es: "[Pasado simple](id:en.tenses.simple-tenses): hechos terminados" }, form: "V-ed / irregular", example: { ex: "I **worked** yesterday.", tr: { es: "Ayer trabajé." } } }
+          - { level: A2, tense: { en: "[Past continuous](id:en.tenses.continuous-tenses): in progress at a past moment", es: "[Pasado continuo](id:en.tenses.continuous-tenses): en curso en un momento del pasado" }, form: "was / were + V-ing", example: { ex: "I **was working** at eight.", tr: { es: "A las ocho estaba trabajando." } } }
           - { level: A2, tense: { en: "[Used to](id:en.tenses.used-to): past habits and states, over now", es: "[Used to](id:en.tenses.used-to): hábitos y estados pasados que ya acabaron" }, form: "used to + V", example: { ex: "I **used to smoke**.", tr: { es: "Antes fumaba." } } }
-          - { level: B1, tense: { en: "[Past perfect](id:en.tenses.past-perfect): before another past event", es: "[Pluscuamperfecto](id:en.tenses.past-perfect): antes de otro hecho pasado" }, form: "had + V-ed", example: { ex: "She **had left** before I arrived.", tr: { es: "Se había ido antes de que yo llegara." } } }
+          - { level: B1, tense: { en: "[Past perfect](id:en.tenses.perfect-tenses): before another past event", es: "[Pluscuamperfecto](id:en.tenses.perfect-tenses): antes de otro hecho pasado" }, form: "had + V-ed", example: { ex: "She **had left** before I arrived.", tr: { es: "Se había ido antes de que yo llegara." } } }
 
   - title: { en: Future, es: Futuro }
     level: A1-A2
@@ -72,9 +72,9 @@ sections:
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
           - { tense: { en: "[Future forms](id:en.tenses.future-forms): going to: plans, predictions with evidence", es: "[Formas de futuro](id:en.tenses.future-forms): going to: planes, predicciones con pruebas" }, form: "am / is / are going to + V", example: { ex: "I'**m going to** buy a car.", tr: { es: "Voy a comprar un coche." } } }
-          - { tense: { en: "[Present continuous](id:en.tenses.present-continuous): arrangements", es: "[Presente continuo](id:en.tenses.present-continuous): citas acordadas" }, form: "am / is / are + V-ing", example: { ex: "I'**m meeting** Ana at six.", tr: { es: "He quedado con Ana a las seis." } } }
+          - { tense: { en: "[Present continuous](id:en.tenses.continuous-tenses): arrangements", es: "[Presente continuo](id:en.tenses.continuous-tenses): citas acordadas" }, form: "am / is / are + V-ing", example: { ex: "I'**m meeting** Ana at six.", tr: { es: "He quedado con Ana a las seis." } } }
           - { level: A2, tense: { en: "[Future forms](id:en.tenses.future-forms): will: decisions, offers, promises, opinions", es: "[Formas de futuro](id:en.tenses.future-forms): will: decisiones, ofrecimientos, promesas, opiniones" }, form: "will + V", example: { ex: "I'**ll help** you.", tr: { es: "Te ayudo." } } }
-          - { level: A2, tense: { en: "[Present simple](id:en.tenses.present-simple): timetables", es: "[Presente simple](id:en.tenses.present-simple): horarios" }, form: "V / V-s", example: { ex: "The train **leaves** at six.", tr: { es: "El tren sale a las seis." } } }
+          - { level: A2, tense: { en: "[Present simple](id:en.tenses.simple-tenses): timetables", es: "[Presente simple](id:en.tenses.simple-tenses): horarios" }, form: "V / V-s", example: { ex: "The train **leaves** at six.", tr: { es: "El tren sale a las seis." } } }
       - type: bullets
         items:
           - for: [es]
@@ -90,30 +90,30 @@ sections:
           - { key: tense, label: { en: Tense, es: Tiempo } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { marker: { en: "always, every day, usually", es: "always, every day, usually" }, tense: { en: "[Present simple](id:en.tenses.present-simple)", es: "[Presente simple](id:en.tenses.present-simple)" }, example: { ex: "I **always** walk to work.", tr: { es: "Siempre voy andando al trabajo." } } }
-          - { marker: { en: "now, at the moment, this week", es: "now, at the moment, this week" }, tense: { en: "[Present continuous](id:en.tenses.present-continuous)", es: "[Presente continuo](id:en.tenses.present-continuous)" }, example: { ex: "She's cooking **now**.", tr: { es: "Ahora está cocinando." } } }
-          - { marker: { en: "yesterday, last week, ago, in 2020", es: "yesterday, last week, ago, in 2020" }, tense: { en: "[Past simple](id:en.tenses.past-simple)", es: "[Pasado simple](id:en.tenses.past-simple)" }, example: { ex: "We met **last week**.", tr: { es: "Nos conocimos la semana pasada." } } }
+          - { marker: { en: "always, every day, usually", es: "always, every day, usually" }, tense: { en: "[Present simple](id:en.tenses.simple-tenses)", es: "[Presente simple](id:en.tenses.simple-tenses)" }, example: { ex: "I **always** walk to work.", tr: { es: "Siempre voy andando al trabajo." } } }
+          - { marker: { en: "now, at the moment, this week", es: "now, at the moment, this week" }, tense: { en: "[Present continuous](id:en.tenses.continuous-tenses)", es: "[Presente continuo](id:en.tenses.continuous-tenses)" }, example: { ex: "She's cooking **now**.", tr: { es: "Ahora está cocinando." } } }
+          - { marker: { en: "yesterday, last week, ago, in 2020", es: "yesterday, last week, ago, in 2020" }, tense: { en: "[Past simple](id:en.tenses.simple-tenses)", es: "[Pasado simple](id:en.tenses.simple-tenses)" }, example: { ex: "We met **last week**.", tr: { es: "Nos conocimos la semana pasada." } } }
           - { marker: { en: "tomorrow, next week, tonight", es: "tomorrow, next week, tonight" }, tense: { en: "[Future forms](id:en.tenses.future-forms)", es: "[Formas de futuro](id:en.tenses.future-forms)" }, example: { ex: "I'm leaving **tomorrow**.", tr: { es: "Me voy mañana." } } }
-          - { level: A2, marker: { en: "while, at 8 last night", es: "while, at 8 last night" }, tense: { en: "[Past continuous](id:en.tenses.past-continuous)", es: "[Pasado continuo](id:en.tenses.past-continuous)" }, example: { ex: "I was reading **at 8 last night**.", tr: { es: "Anoche a las 8 estaba leyendo." } } }
+          - { level: A2, marker: { en: "while, at 8 last night", es: "while, at 8 last night" }, tense: { en: "[Past continuous](id:en.tenses.continuous-tenses)", es: "[Pasado continuo](id:en.tenses.continuous-tenses)" }, example: { ex: "I was reading **at 8 last night**.", tr: { es: "Anoche a las 8 estaba leyendo." } } }
           - { level: A2, marker: { en: "when I was a child, years ago", es: "when I was a child, years ago" }, tense: { en: "[Used to](id:en.tenses.used-to)", es: "[Used to](id:en.tenses.used-to)" }, example: { ex: "I **used to** swim **when I was a child**.", tr: { es: "Nadaba cuando era pequeño." } } }
-          - { level: A2, marker: { en: "ever, never, just, already, yet", es: "ever, never, just, already, yet" }, tense: { en: "[Present perfect](id:en.tenses.present-perfect)", es: "[Presente perfecto](id:en.tenses.present-perfect)" }, example: { ex: "I've **never** been to Rome.", tr: { es: "Nunca he estado en Roma." } } }
+          - { level: A2, marker: { en: "ever, never, just, already, yet", es: "ever, never, just, already, yet" }, tense: { en: "[Present perfect](id:en.tenses.perfect-tenses)", es: "[Presente perfecto](id:en.tenses.perfect-tenses)" }, example: { ex: "I've **never** been to Rome.", tr: { es: "Nunca he estado en Roma." } } }
           - { level: A2, marker: { en: "I think, probably", es: "I think, probably" }, tense: { en: "[Future forms](id:en.tenses.future-forms)", es: "[Formas de futuro](id:en.tenses.future-forms)" }, example: { ex: "I **think** it'll rain.", tr: { es: "Creo que lloverá." } } }
-          - { level: B1, marker: { en: "for, since", es: "for, since" }, tense: { en: "[Present perfect](id:en.tenses.present-perfect)", es: "[Presente perfecto](id:en.tenses.present-perfect)" }, example: { ex: "I've lived here **since** 2019.", tr: { es: "Vivo aquí desde 2019." } } }
-          - { level: B1, marker: { en: "by the time, after, before (earlier action)", es: "by the time, after, before (acción anterior)" }, tense: { en: "[Past perfect](id:en.tenses.past-perfect)", es: "[Pluscuamperfecto](id:en.tenses.past-perfect)" }, example: { ex: "**By the time** I arrived, it **had closed**.", tr: { es: "Para cuando llegué, ya había cerrado." } } }
+          - { level: B1, marker: { en: "for, since", es: "for, since" }, tense: { en: "[Present perfect](id:en.tenses.perfect-tenses)", es: "[Presente perfecto](id:en.tenses.perfect-tenses)" }, example: { ex: "I've lived here **since** 2019.", tr: { es: "Vivo aquí desde 2019." } } }
+          - { level: B1, marker: { en: "by the time, after, before (earlier action)", es: "by the time, after, before (acción anterior)" }, tense: { en: "[Past perfect](id:en.tenses.perfect-tenses)", es: "[Pluscuamperfecto](id:en.tenses.perfect-tenses)" }, example: { ex: "**By the time** I arrived, it **had closed**.", tr: { es: "Para cuando llegué, ya había cerrado." } } }
   - title: { en: Typical errors, es: Errores típicos }
     level: A1-B1
     content:
       - type: errors
         audience: true
         rows:
-          - { wrong: Please be quiet. I study., right: "Please be quiet. I'**m studying**.", rule: { en: "now → present continuous ([Present continuous](id:en.tenses.present-continuous))", es: "ahora → presente continuo ([Presente continuo](id:en.tenses.present-continuous))" } }
-          - { for: [en], wrong: I am wanting a coffee., right: "I **want** a coffee.", rule: { en: "verbs of state → present simple ([Present simple](id:en.tenses.present-simple))" } }
-          - { wrong: I have seen him yesterday., right: "I **saw** him yesterday.", rule: { en: "finished time → past simple ([Past simple](id:en.tenses.past-simple))", es: "tiempo terminado → past simple ([Pasado simple](id:en.tenses.past-simple))" } }
-          - { wrong: I live here since 2019., right: "I **have lived** here since 2019.", rule: { en: "since / for + state up to now → present perfect ([Present perfect](id:en.tenses.present-perfect))", es: "since / for + estado hasta ahora → present perfect ([Presente perfecto](id:en.tenses.present-perfect))" } }
+          - { wrong: Please be quiet. I study., right: "Please be quiet. I'**m studying**.", rule: { en: "now → present continuous ([Present continuous](id:en.tenses.continuous-tenses))", es: "ahora → presente continuo ([Presente continuo](id:en.tenses.continuous-tenses))" } }
+          - { for: [en], wrong: I am wanting a coffee., right: "I **want** a coffee.", rule: { en: "verbs of state → present simple ([Present simple](id:en.tenses.simple-tenses))" } }
+          - { wrong: I have seen him yesterday., right: "I **saw** him yesterday.", rule: { en: "finished time → past simple ([Past simple](id:en.tenses.simple-tenses))", es: "tiempo terminado → past simple ([Pasado simple](id:en.tenses.simple-tenses))" } }
+          - { wrong: I live here since 2019., right: "I **have lived** here since 2019.", rule: { en: "since / for + state up to now → present perfect ([Present perfect](id:en.tenses.perfect-tenses))", es: "since / for + estado hasta ahora → present perfect ([Presente perfecto](id:en.tenses.perfect-tenses))" } }
           - { for: [es], wrong: Tomorrow I go to the cinema., right: "Tomorrow I'**m going** to the cinema.", rule: { es: "plan futuro → going to o presente continuo ([Formas de futuro](id:en.tenses.future-forms))" } }
           - { for: [es], wrong: I think it rains tomorrow., right: "I think it **will rain** tomorrow.", rule: { es: "predicción con *creo que* → will ([Formas de futuro](id:en.tenses.future-forms))" } }
           - { for: [en], wrong: I use to play football., right: "I **used to** play football.", rule: { en: "past habit → used to + base verb ([Used to](id:en.tenses.used-to))" } }
-          - { wrong: "When I arrived, the film has already started.", right: "When I arrived, the film **had** already **started**.", rule: { en: "earlier past action → past perfect ([Past perfect](id:en.tenses.past-perfect))", es: "acción pasada anterior → past perfect ([Pluscuamperfecto](id:en.tenses.past-perfect))" } }
+          - { wrong: "When I arrived, the film has already started.", right: "When I arrived, the film **had** already **started**.", rule: { en: "earlier past action → past perfect ([Past perfect](id:en.tenses.perfect-tenses))", es: "acción pasada anterior → past perfect ([Pluscuamperfecto](id:en.tenses.perfect-tenses))" } }
 
 essentials:
   - level: A1

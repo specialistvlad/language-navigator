@@ -5,7 +5,7 @@ kind: grammar
 levels: [A1]
 tags: [verbs, have, possession]
 concepts: [have]
-related: [en.verbs.to-be, en.tenses.present-simple, en.verbs.there-is-are, en.nouns-determiners.possessive-s, en.sentence-building.questions-negatives]
+related: [en.verbs.to-be, en.tenses.simple-tenses, en.verbs.there-is-are, en.nouns-determiners.possessive-s, en.sentence-building.questions-negatives]
 status: { en: draft, es: draft }
 
 title: { en: Have and Have Got, es: Have y have got }

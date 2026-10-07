@@ -5,7 +5,7 @@ kind: grammar
 levels: [A0]
 tags: [verbs, be, present]
 concepts: [be]
-related: [en.pronouns.personal-pronouns, en.tenses.present-simple, en.tenses.past-simple, en.verbs.there-is-are, en.verbs.have-have-got]
+related: [en.pronouns.personal-pronouns, en.tenses.simple-tenses, en.verbs.there-is-are, en.verbs.have-have-got]
 status: { en: draft, es: draft }
 
 title: { en: "To be", es: "To be (ser / estar)" }
@@ -34,8 +34,8 @@ sections:
           - en: "**be** takes the place of the main verb: no do / does in questions and negatives."
             es: "**be** es el verbo principal: no lleva do / does en preguntas ni negativas."
           - { for: [es], text: { es: "**be** = *ser* y *estar*. El contexto decide cuál de los dos significa." } }
-          - en: "The past forms **was / were** belong to [Past simple](id:en.tenses.past-simple)."
-            es: "Las formas de pasado **was / were** pertenecen a [Pasado simple](id:en.tenses.past-simple)."
+          - en: "The past forms **was / were** belong to [Past simple](id:en.tenses.simple-tenses)."
+            es: "Las formas de pasado **was / were** pertenecen a [Pasado simple](id:en.tenses.simple-tenses)."
 
   - title: { en: "Form: affirmative", es: "Forma: afirmativa" }
     level: A0

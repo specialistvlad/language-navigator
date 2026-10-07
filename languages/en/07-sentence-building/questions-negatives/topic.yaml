@@ -5,7 +5,7 @@ kind: grammar
 levels: [A1]
 tags: [questions, negatives, wh-questions, auxiliaries]
 concepts: [questions-negatives]
-related: [en.sentence-building.word-order, en.tenses.present-simple, en.tenses.past-simple, en.verbs.to-be, en.modals.can-could, en.sentence-building.question-tags]
+related: [en.sentence-building.word-order, en.tenses.simple-tenses, en.verbs.to-be, en.modals.can-could, en.sentence-building.question-tags]
 status: { en: draft, es: draft }
 
 title: { en: "Questions and negatives", es: "Preguntas y negativas" }
@@ -84,8 +84,8 @@ sections:
             es: "Después de **do / does / did** el verbo va en forma base: Did you **call**?"
           - en: "The auxiliary carries the tense and the person; the main verb stays unchanged."
             es: "El auxiliar lleva el tiempo y la persona; el verbo principal no cambia."
-          - en: "Present tables: [Present Simple](id:en.tenses.present-simple). Past: [Past simple](id:en.tenses.past-simple)."
-            es: "Tablas del presente: [Presente simple](id:en.tenses.present-simple). Pasado: [Pasado simple](id:en.tenses.past-simple)."
+          - en: "Present tables: [Present Simple](id:en.tenses.simple-tenses). Past: [Past simple](id:en.tenses.simple-tenses)."
+            es: "Tablas del presente: [Presente simple](id:en.tenses.simple-tenses). Pasado: [Pasado simple](id:en.tenses.simple-tenses)."
           - for: [es]
             text: { es: "El *no* español pasa a **don't / doesn't / didn't** delante del verbo: *No lo sé.* → I **don't** know." }
           - en: "A negative sentence takes one negative word: I **don't** know **anything**. / I know **nothing**."
@@ -186,8 +186,8 @@ sections:
             es: "La respuesta corta repite el verbo be, el modal o el auxiliar de la pregunta."
           - en: "A positive short answer keeps the full form: Yes, I **am**."
             es: "La respuesta corta afirmativa conserva la forma completa: Yes, I **am**."
-          - en: "For **do / does** see [Present Simple](id:en.tenses.present-simple)."
-            es: "Para **do / does** ver [Presente simple](id:en.tenses.present-simple)."
+          - en: "For **do / does** see [Present Simple](id:en.tenses.simple-tenses)."
+            es: "Para **do / does** ver [Presente simple](id:en.tenses.simple-tenses)."
 
   - title: { en: "Pronunciation: question intonation", es: "Pronunciación: entonación de las preguntas" }
     level: A1

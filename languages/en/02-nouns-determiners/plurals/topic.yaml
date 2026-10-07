@@ -5,7 +5,7 @@ kind: grammar
 levels: [A0, A1]
 tags: [nouns, plural, spelling]
 concepts: [number]
-related: [en.nouns-determiners.countable-uncountable, en.nouns-determiners.articles-a-an-the, en.nouns-determiners.possessive-s, en.tenses.present-simple]
+related: [en.nouns-determiners.countable-uncountable, en.nouns-determiners.articles-a-an-the, en.nouns-determiners.possessive-s, en.tenses.simple-tenses]
 status: { en: draft, es: draft }
 
 title: { en: Plurals, es: "El plural" }
@@ -80,8 +80,8 @@ sections:
           - { for: [es], text: { es: "/z/ es una s sonora: vibra en la garganta, como el zumbido de una abeja." } }
           - en: "In **houses** /ˈhaʊzɪz/, the s of house becomes /z/."
             es: "En **houses** /ˈhaʊzɪz/, la s de house pasa a /z/."
-          - en: "The same rule gives the sound of the verb ending: see [Present simple](id:en.tenses.present-simple)."
-            es: "La misma regla da el sonido de la terminación verbal: ver [Presente simple](id:en.tenses.present-simple)."
+          - en: "The same rule gives the sound of the verb ending: see [Present simple](id:en.tenses.simple-tenses)."
+            es: "La misma regla da el sonido de la terminación verbal: ver [Presente simple](id:en.tenses.simple-tenses)."
 
   - title: { en: Irregular plurals, es: Plurales irregulares }
     level: A0-A1

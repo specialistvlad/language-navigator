@@ -5,7 +5,7 @@ kind: grammar
 levels: [A0, A1]
 tags: [word-order, sentences, syntax]
 concepts: [word-order]
-related: [en.sentence-building.questions-negatives, en.adjectives-adverbs.adjective-order, en.adjectives-adverbs.adverbs-frequency-manner, en.tenses.present-simple]
+related: [en.sentence-building.questions-negatives, en.adjectives-adverbs.adjective-order, en.adjectives-adverbs.adverbs-frequency-manner, en.tenses.simple-tenses]
 status: { en: draft, es: draft }
 
 title: { en: Word Order, es: Orden de las palabras }

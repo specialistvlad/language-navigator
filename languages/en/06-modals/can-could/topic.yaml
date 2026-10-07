@@ -5,7 +5,7 @@ kind: grammar
 levels: [A1, A2]
 tags: [verbs, modals, ability, permission, requests]
 concepts: [ability]
-related: [en.modals.must-have-to, en.modals.should, en.modals.may-might, en.modals.would, en.sentence-building.questions-negatives, en.tenses.past-simple]
+related: [en.modals.must-have-to, en.modals.should, en.modals.may-might, en.modals.would, en.sentence-building.questions-negatives, en.tenses.simple-tenses]
 status: { en: draft, es: draft }
 
 title: { en: Can and Could, es: Can y could }

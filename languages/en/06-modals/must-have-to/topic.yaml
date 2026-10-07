@@ -5,7 +5,7 @@ kind: grammar
 levels: [A2]
 tags: [verbs, modals, obligation]
 concepts: [obligation]
-related: [en.modals.should, en.modals.can-could, en.modals.may-might, en.tenses.past-simple, en.sentence-building.questions-negatives]
+related: [en.modals.should, en.modals.can-could, en.modals.may-might, en.tenses.simple-tenses, en.sentence-building.questions-negatives]
 status: { en: draft, es: draft }
 
 title: { en: Must and Have To, es: Must y have to }

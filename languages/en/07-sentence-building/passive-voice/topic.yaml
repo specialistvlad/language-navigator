@@ -5,7 +5,7 @@ kind: grammar
 levels: [B1]
 tags: [passive, verbs, participle]
 concepts: [passive]
-related: [en.sentence-building.relative-clauses, en.sentence-building.reported-speech, en.tenses.present-perfect, en.tenses.past-simple, en.tenses.future-forms]
+related: [en.sentence-building.relative-clauses, en.sentence-building.reported-speech, en.tenses.perfect-tenses, en.tenses.simple-tenses, en.tenses.future-forms]
 status: { en: draft, es: draft }
 
 title: { en: Passive Voice, es: Voz pasiva }

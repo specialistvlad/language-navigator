@@ -5,7 +5,7 @@ kind: grammar
 levels: [B1]
 tags: [verbs, modals, politeness, conditionals]
 concepts: [conditional-mood, past-habits]
-related: [en.sentence-building.conditionals-0-1-2, en.tenses.used-to, en.modals.can-could, en.modals.should, en.tenses.past-perfect]
+related: [en.sentence-building.conditionals-0-1-2, en.tenses.used-to, en.modals.can-could, en.modals.should, en.tenses.perfect-tenses]
 status: { en: draft, es: draft }
 
 title: { en: Would, es: Would }
@@ -71,8 +71,8 @@ sections:
               es: "**'d** + forma base = **would**. **'d** + participio pasado = **had**:"
             ex: "I'**d** go. (= I would go) / I'**d** gone. (= I had gone)"
             tr: { es: Iría. / Había ido. }
-          - en: "See [Past perfect](id:en.tenses.past-perfect)."
-            es: "Ver [Pluscuamperfecto](id:en.tenses.past-perfect)."
+          - en: "See [Past perfect](id:en.tenses.perfect-tenses)."
+            es: "Ver [Pluscuamperfecto](id:en.tenses.perfect-tenses)."
 
   - title: { en: "Pronunciation: would and 'd", es: "Pronunciación: would y 'd" }
     level: B1

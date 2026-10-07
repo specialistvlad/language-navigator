@@ -5,7 +5,7 @@ kind: grammar
 levels: [B1]
 tags: [questions, tags, intonation]
 concepts: [question-tags]
-related: [en.sentence-building.questions-negatives, en.tenses.present-simple, en.tenses.past-simple, en.tenses.present-perfect]
+related: [en.sentence-building.questions-negatives, en.tenses.simple-tenses, en.tenses.perfect-tenses]
 status: { en: draft, es: draft }
 
 title: { en: Question Tags, es: Coletillas interrogativas }
