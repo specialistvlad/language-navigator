@@ -1,0 +1,235 @@
+# yaml-language-server: $schema=../../../schema/topic.schema.json
+id: en.verbs-core.there-is-are
+lang: en
+kind: grammar
+levels: [A1]
+tags: [verbs, there-is, existence]
+concepts: [existence]
+related: [en.verbs-core.to-be, en.nouns-determiners.countable-uncountable, en.nouns-determiners.quantifiers-some-any-much-many, en.prepositions.place-movement, en.sentence-building.questions-negatives]
+status: { en: draft, es: draft }
+
+title: { en: There Is and There Are, es: There is y there are (there is and there are) }
+summary:
+  en: "Saying that something exists or is in a place: there is, there are, with a / some / any / numbers."
+  es: "Cómo decir que algo existe o está en un lugar: there is, there are, con a / some / any / números."
+
+sections:
+  - title: { en: Overview, es: Resumen }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: singular, label: { en: Singular, es: Singular } }
+          - { key: plural, label: { en: Plural, es: Plural } }
+        rows:
+          - { form: { en: Affirmative, es: Afirmativa }, singular: "There **is** a park.", plural: "There **are** two parks." }
+          - { form: { en: Negative, es: Negativa }, singular: "There **isn't** a park.", plural: "There **aren't** any parks." }
+          - { form: { en: Question, es: Pregunta }, singular: "**Is there** a park?", plural: "**Are there** any parks?" }
+          - { form: { en: Short answer, es: Respuesta corta }, singular: "Yes, there **is**. / No, there **isn't**.", plural: "Yes, there **are**. / No, there **aren't**." }
+      - type: bullets
+        items:
+          - en: "**there** is the subject. The verb **be** agrees with the noun that follows."
+            es: "**there** es el sujeto. El verbo **be** concuerda con el sustantivo que sigue."
+          - { for: [es], text: { es: "*hay* = **there is** (singular) y **there are** (plural). El inglés distingue número; *hay* no." } }
+
+  - title: { en: "Form: affirmative", es: "Forma: afirmativa" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: noun, label: { en: Noun, es: Sustantivo } }
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { noun: { en: singular countable, es: contable singular }, form: there is / there's + a / an, example: "There**'s** a cat in the garden.", tr: { es: Hay un gato en el jardín. } }
+          - { noun: { en: plural, es: plural }, form: there are + some / number, example: "There **are** three chairs.", tr: { es: Hay tres sillas. } }
+          - { noun: { en: uncountable, es: incontable }, form: there is + some, example: "There **is** some milk.", tr: { es: Hay algo de leche. } }
+      - type: bullets
+        items:
+          - en: "Speech and messages use the short form **there's**. **there are** has no short form."
+            es: "En la conversación y en los mensajes se usa la forma corta **there's**. **there are** no tiene forma corta."
+          - en: "A list takes the verb of the first noun: There **is** a bed and two chairs."
+            es: "Una lista toma el verbo del primer sustantivo: There **is** a bed and two chairs."
+          - { for: [es], text: { es: "**there** aparece siempre: *Hay un parque.* → **There** is a park." } }
+
+  - title: { en: "Form: negative", es: "Forma: negativa" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: noun, label: { en: Noun, es: Sustantivo } }
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { noun: { en: singular countable, es: contable singular }, form: there isn't + a / an, example: "There **isn't** a bank here.", tr: { es: No hay ningún banco aquí. } }
+          - { noun: { en: plural, es: plural }, form: there aren't + any, example: "There **aren't any** shops.", tr: { es: No hay tiendas. } }
+          - { noun: { en: uncountable, es: incontable }, form: there isn't + any, example: "There **isn't any** water.", tr: { es: No hay agua. } }
+      - type: bullets
+        items:
+          - en: "A negative sentence takes **any**, not some."
+            es: "La negativa lleva **any**, no some."
+
+  - title: { en: "Form: questions", es: "Forma: preguntas" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { form: "Is there + a / any", example: "**Is there** a bank near here?", tr: { es: ¿Hay un banco cerca de aquí? } }
+          - { form: "Are there + any", example: "**Are there any** shops?", tr: { es: ¿Hay tiendas? } }
+          - { form: "How many … are there?", example: "How many people **are there**?", tr: { es: ¿Cuánta gente hay? } }
+          - { form: "How much … is there?", example: "How much milk **is there**?", tr: { es: ¿Cuánta leche hay? } }
+          - { form: "What is there …?", example: "What**'s there** in the fridge?", tr: { es: ¿Qué hay en la nevera? } }
+      - type: bullets
+        items:
+          - en: "A question puts **be** before **there**: There is → **Is there**…?"
+            es: "En la pregunta **be** va delante de **there**: There is → **Is there**…?"
+          - en: "**How many** goes with plural nouns, **how much** with uncountable nouns."
+            es: "**How many** va con sustantivos plurales, **how much** con incontables."
+          - en: "The question ends with **there**: How many people are **there**?"
+            es: "La pregunta termina en **there**: How many people are **there**?"
+
+  - title: { en: "Form: short answers", es: "Forma: respuestas cortas" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: question, label: { en: Question, es: Pregunta } }
+          - { key: "yes", label: { en: "Yes", es: Sí } }
+          - { key: "no", label: { en: "No", es: "No" } }
+        rows:
+          - { question: Is there a bank here?, "yes": "Yes, there **is**.", "no": "No, there **isn't**.", tr: { es: ¿Hay un banco aquí? } }
+          - { question: Are there any shops?, "yes": "Yes, there **are**.", "no": "No, there **aren't**.", tr: { es: ¿Hay tiendas? } }
+      - type: bullets
+        items:
+          - en: "A positive short answer has the full form: Yes, there **is**."
+            es: "La respuesta corta afirmativa lleva la forma completa: Yes, there **is**."
+          - { for: [es], text: { es: "*¿Hay un banco? — Sí, hay.* → Yes, there **is**. La respuesta lleva **there** y **is**." } }
+
+  - title: { en: Use, es: Uso }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { use: { en: "Say that something exists", es: "Decir que algo existe" }, example: "There **is** a cinema in my town.", tr: { es: Hay un cine en mi ciudad. } }
+          - { use: { en: "Say what is in a place", es: "Decir qué hay en un lugar" }, example: "There **are** two beds in the room.", tr: { es: Hay dos camas en la habitación. } }
+          - { use: { en: "Describe a room or a town", es: "Describir una habitación o una ciudad" }, example: "There **is** a big park near the station.", tr: { es: Hay un parque grande cerca de la estación. } }
+          - { use: { en: "Ask about places and things", es: "Preguntar por lugares y cosas" }, example: "**Is there** a toilet here?", tr: { es: ¿Hay un baño aquí? } }
+      - type: bullets
+        items:
+          - en: "A place phrase follows, or opens, the sentence: There is a cat **on the sofa**."
+            es: "Una expresión de lugar sigue a la frase o la abre: There is a cat **on the sofa**."
+          - en: "For place words see [Prepositions of place](id:en.prepositions.place-movement)."
+            es: "Para las palabras de lugar, ver [Preposiciones de lugar](id:en.prepositions.place-movement)."
+
+  - title: { en: "With a, some, any and numbers", es: "Con a, some, any y números" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: word, label: { en: Word, es: Palabra } }
+          - { key: rule, label: { en: Rule, es: Regla } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { word: a / an, rule: { en: "singular countable, + and ?", es: "contable singular, + y ?" }, example: "There**'s a** bus stop.", tr: { es: Hay una parada de autobús. } }
+          - { word: some, rule: { en: "plural or uncountable, +", es: "plural o incontable, +" }, example: "There are **some** apples.", tr: { es: Hay unas manzanas. } }
+          - { word: any, rule: { en: "plural or uncountable, − and ?", es: "plural o incontable, − y ?" }, example: "Are there **any** apples?", tr: { es: ¿Hay manzanas? } }
+          - { word: { en: number, es: número }, rule: { en: "plural, + − ?", es: "plural, + − ?" }, example: "There are **four** apples.", tr: { es: Hay cuatro manzanas. } }
+      - type: bullets
+        items:
+          - en: "See [Some, any, much, many](id:en.nouns-determiners.quantifiers-some-any-much-many) and [Countable and uncountable](id:en.nouns-determiners.countable-uncountable)."
+            es: "Ver [Some, any, much, many](id:en.nouns-determiners.quantifiers-some-any-much-many) y [Contables e incontables](id:en.nouns-determiners.countable-uncountable)."
+
+  - title: { en: "Compare: there is and it is", es: "Comparación: there is y it is" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: point, label: { en: Point, es: Punto } }
+          - { key: there, label: there is / are }
+          - { key: it, label: it is }
+        rows:
+          - { point: { en: Job, es: Función }, there: { en: "introduces something new", es: "presenta algo nuevo" }, it: { en: "talks about something known", es: "habla de algo ya conocido" } }
+          - { point: { en: Example, es: Ejemplo }, there: { ex: "**There is** a dog in the garden.", tr: { es: Hay un perro en el jardín. } }, it: { ex: "**It is** a big dog.", tr: { es: Es un perro grande. } } }
+          - { point: { en: Question, es: Pregunta }, there: { ex: "**Is there** a shop near here?", tr: { es: ¿Hay una tienda cerca? } }, it: { ex: "**Is it** open?", tr: { es: ¿Está abierta? } } }
+      - type: bullets
+        items:
+          - en: "**there is** gives the existence of a thing. **it is** describes a thing already in the conversation."
+            es: "**there is** da la existencia de algo. **it is** describe algo que ya está en la conversación."
+          - en: "See [To be](id:en.verbs-core.to-be)."
+            es: "Ver [To be](id:en.verbs-core.to-be)."
+
+  - title: { en: Typical errors, es: Errores típicos }
+    level: A1
+    content:
+      - type: errors
+        audience: true
+        rows:
+          - { for: [es], wrong: Have a park near my house., right: "**There is** a park near my house.", rule: { es: "*hay* = there is / there are, no have" } }
+          - { for: [es], wrong: Is a park near here., right: "**There is** a park near here.", rule: { es: "**there** aparece siempre" } }
+          - { for: [es], wrong: It is a park near here., right: "**There is** a park near here.", rule: { es: "existencia = there is; it is describe algo conocido" } }
+          - { wrong: There is two cats., right: "There **are** two cats.", rule: { en: "plural noun → there are", es: "sustantivo plural → there are" } }
+          - { for: [en], wrong: There are a cat., right: "There **is** a cat.", rule: { en: "singular noun → there is" } }
+          - { wrong: There isn't some milk., right: "There isn't **any** milk.", rule: { en: "negatives take any", es: "la negativa lleva any" } }
+          - { for: [es], wrong: How many people there are?, right: "How many people **are there**?", rule: { es: "pregunta: be + there" } }
+          - { for: [es], wrong: "Is there a bank? — Yes, there's.", right: "Yes, there **is**.", rule: { es: "la respuesta corta afirmativa no se contrae" } }
+          - { for: [es], wrong: "Is there a bank? — Yes, is.", right: "Yes, there **is**.", rule: { es: "la respuesta corta lleva there + be" } }
+
+essentials:
+  - level: A1
+    parts:
+      - title: { en: Form, es: Forma }
+        content:
+          - type: table
+            columns:
+              - { key: form, label: { en: Form, es: Forma } }
+              - { key: singular, label: { en: Singular, es: Singular } }
+              - { key: plural, label: { en: Plural, es: Plural } }
+            rows:
+              - { form: +, singular: "There **is** a park.", plural: "There **are** two parks." }
+              - { form: −, singular: "There **isn't** a park.", plural: "There **aren't any** parks." }
+              - { form: "?", singular: "**Is there** a park?", plural: "**Are there any** parks?" }
+              - { form: { en: Short answer, es: Respuesta corta }, singular: "Yes, there **is**.", plural: "No, there **aren't**." }
+      - title: { en: Key rules, es: Reglas clave }
+        content:
+          - type: bullets
+            items:
+              - en: "**is** with singular and uncountable nouns, **are** with plural nouns."
+                es: "**is** con singulares e incontables, **are** con plurales."
+              - en: "**a / an** with singular nouns, **some** in +, **any** in − and ?, numbers with plural nouns."
+                es: "**a / an** con singulares, **some** en +, **any** en − y ?, números con plurales."
+              - en: "How many + plural noun + are there? / How much + uncountable noun + is there?"
+                es: "How many + plural + are there? / How much + incontable + is there?"
+      - title: { en: Use, es: Uso }
+        content:
+          - type: table
+            columns:
+              - { key: use, label: { en: Use, es: Uso } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { use: { en: "something exists", es: "algo existe" }, example: "There **is** a cinema in my town." }
+              - { use: { en: "what is in a place", es: "qué hay en un lugar" }, example: "There **are** two beds in the room." }
+      - title: { en: Top errors, es: Errores principales }
+        content:
+          - type: errors
+            rows:
+              - { for: [es], wrong: Have a park near my house., right: "**There is** a park near my house." }
+              - { for: [es], wrong: Is a park near here., right: "**There is** a park near here." }
+              - { wrong: There is two cats., right: "There **are** two cats." }
+              - { wrong: There isn't some milk., right: "There isn't **any** milk." }
+              - { for: [es], wrong: "Is there a bank? — Yes, there's.", right: "Yes, there **is**." }
+
+reminders:
+  - level: A1
+    items:
+      - en: "Existence = **there is / there are**: There **is** a park."
+        es: "Existencia = **there is / there are**: There **is** a park."
+      - en: "Plural noun → **there are**; negatives and questions take **any**."
+        es: "Sustantivo plural → **there are**; negativas y preguntas llevan **any**."
+      - { for: [es], text: { es: "Siempre con there: **There** is a park. Respuesta corta: Yes, there **is**." } }

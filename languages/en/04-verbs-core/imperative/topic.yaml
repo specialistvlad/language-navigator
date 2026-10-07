@@ -1,0 +1,203 @@
+# yaml-language-server: $schema=../../../schema/topic.schema.json
+id: en.verbs-core.imperative
+lang: en
+kind: grammar
+levels: [A1]
+tags: [verbs, imperative, instructions]
+concepts: [imperative]
+related: [en.verbs-core.to-be, en.tenses.present-simple, en.modals.can-could, en.sentence-building.questions-negatives, en.prepositions.place-movement]
+status: { en: draft, es: draft }
+
+title: { en: Imperative, es: Imperativo (imperative) }
+summary:
+  en: Instructions, directions, invitations and warnings with the base verb, Don't and Let's.
+  es: Instrucciones, direcciones, invitaciones y avisos con el verbo en forma base, Don't y Let's.
+
+sections:
+  - title: { en: Overview, es: Resumen }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: pattern, label: { en: Pattern, es: Estructura } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { form: { en: Affirmative, es: Afirmativa }, pattern: V, example: "**Open** the door.", tr: { es: Abre la puerta. } }
+          - { form: { en: Negative, es: Negativa }, pattern: Don't + V, example: "**Don't open** the door.", tr: { es: No abras la puerta. } }
+          - { form: { en: Suggestion, es: Propuesta }, pattern: Let's + V, example: "**Let's open** the door.", tr: { es: Abramos la puerta. } }
+          - { form: { en: Negative suggestion, es: Propuesta negativa }, pattern: Let's not + V, example: "**Let's not open** the door.", tr: { es: No abramos la puerta. } }
+      - type: bullets
+        items:
+          - en: "The imperative has no subject and no tense. The verb is in the base form."
+            es: "El imperativo no lleva sujeto ni tiempo. El verbo va en forma base."
+          - { for: [es], text: { es: "Una sola forma sirve para *tú*, *usted*, *vosotros* y *ustedes*: **Wait** here = *espera / espere / esperad / esperen aquí*." } }
+
+  - title: { en: "Form: affirmative", es: "Forma: afirmativa" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: verb, label: { en: Verb, es: Verbo } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { verb: { en: action verb, es: verbo de acción }, example: "**Sit** down. / **Close** your books.", tr: { es: Siéntate. / Cerrad los libros. } }
+          - { verb: be, example: "**Be** quiet. / **Be** careful.", tr: { es: Cállate. / Ten cuidado. } }
+          - { verb: { en: with a name, es: con un nombre }, example: "**Tom, come** here.", tr: { es: "Tom, ven aquí." } }
+      - type: bullets
+        items:
+          - en: "The imperative is the base verb: **Come** in. The verb has no **-s**."
+            es: "El imperativo es el verbo en forma base: **Come** in. El verbo no lleva **-s**."
+          - en: "A name or **everybody** opens the sentence to say who is spoken to."
+            es: "Un nombre o **everybody** abre la frase para indicar a quién se habla."
+          - { for: [es], text: { es: "El imperativo inglés no cambia con la persona ni con el trato: *abre / abra / abrid* = **open**." } }
+
+  - title: { en: "Form: negative", es: "Forma: negativa" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: pattern, label: { en: Pattern, es: Estructura } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { pattern: Don't + V, example: "**Don't touch** it.", tr: { es: No lo toques. } }
+          - { pattern: Don't be + adjective, example: "**Don't be** late.", tr: { es: No llegues tarde. } }
+          - { pattern: Do not + V, example: "**Do not enter.**", tr: { es: Prohibido el paso. } }
+      - type: bullets
+        items:
+          - en: "**Don't** goes before the base verb, also before **be**."
+            es: "**Don't** va delante del verbo en forma base, también delante de **be**."
+          - en: "**Do not** is the full form. Signs and notices use it."
+            es: "**Do not** es la forma completa. Los carteles y avisos la usan."
+          - { for: [es], text: { es: "La negativa también tiene una sola forma: *no abras / no abra / no abráis* = **don't open**." } }
+
+  - title: { en: "Form: Let's", es: "Forma: Let's" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: pattern, label: { en: Pattern, es: Estructura } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { pattern: Let's + V, example: "**Let's go** to the beach.", tr: { es: Vamos a la playa. } }
+          - { pattern: Let's not + V, example: "**Let's not wait.**", tr: { es: No esperemos. } }
+          - { pattern: "Shall we + V?", example: "**Shall we eat** now?", tr: { es: ¿Comemos ya? } }
+      - type: table
+        columns:
+          - { key: answer, label: { en: Answer, es: Respuesta } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { answer: { en: agree, es: aceptar }, example: "Yes, **let's**. / Good idea.", tr: { es: "Sí, vamos. / Buena idea." } }
+          - { answer: { en: refuse, es: rechazar }, example: "No, **let's not**. / Sorry, I can't.", tr: { es: "No, mejor no. / Lo siento, no puedo." } }
+      - type: bullets
+        items:
+          - en: "**Let's** = *let us*. It includes the speaker and invites others to join."
+            es: "**Let's** = *let us*. Incluye al hablante e invita a otros a unirse."
+          - { for: [es], text: { es: "**Let's** = *vamos a… / …emos*: **Let's eat** = *comamos / vamos a comer*." } }
+
+  - title: { en: Use, es: Uso }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { use: { en: Instructions, es: Instrucciones }, example: "**Add** two eggs and **mix** well.", tr: { es: Añade dos huevos y mezcla bien. } }
+          - { use: { en: Directions, es: Direcciones }, example: "**Turn** left and **go straight on**. (US: **go straight**)", tr: { es: Gira a la izquierda y sigue recto. } }
+          - { use: { en: Invitations and offers, es: Invitaciones y ofrecimientos }, example: "**Come** in. **Have** a seat.", tr: { es: Pasa. Siéntate. } }
+          - { use: { en: Warnings, es: Avisos y advertencias }, example: "**Look out!** / **Be** careful!", tr: { es: ¡Cuidado! / Ten cuidado. } }
+          - { use: { en: Orders, es: Órdenes }, example: "**Stop!** / **Listen**, please.", tr: { es: "¡Para! / Escucha, por favor." } }
+          - { use: { en: "Signs, notices", es: "Carteles y avisos" }, example: "**Keep** off the grass.", tr: { es: No pisar el césped. } }
+      - type: bullets
+        items:
+          - en: "For directions with place words see [Prepositions of place and movement](id:en.prepositions.place-movement)."
+            es: "Para las direcciones con palabras de lugar, ver [Preposiciones de lugar y movimiento](id:en.prepositions.place-movement)."
+
+  - title: { en: Politeness, es: Cortesía }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: way, label: { en: Way, es: Modo } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { way: { en: please at the start, es: please al principio }, example: "**Please** sit down.", tr: { es: "Siéntese, por favor." } }
+          - { way: { en: please at the end, es: please al final }, example: "Sit down, **please**.", tr: { es: "Siéntate, por favor." } }
+          - { way: { en: "a question with Could you…", es: "una pregunta con Could you…" }, example: "**Could you** open the window, **please**?", tr: { es: "¿Podrías abrir la ventana, por favor?" } }
+      - type: bullets
+        items:
+          - en: "A bare imperative sounds direct. **please** makes a request friendly."
+            es: "Un imperativo solo suena directo. **please** hace amable una petición."
+          - en: "Requests to people you do not know use **Could you…?** See [Can and Could](id:en.modals.can-could)."
+            es: "Las peticiones a personas que no conoces usan **Could you…?** Ver [Can y could](id:en.modals.can-could)."
+          - { for: [es], text: { es: "*Usted* no tiene forma propia en inglés: la cortesía viene de **please** y de **Could you…?**." } }
+
+  - title: { en: Typical errors, es: Errores típicos }
+    level: A1
+    content:
+      - type: errors
+        audience: true
+        rows:
+          - { wrong: Not open the door., right: "**Don't open** the door.", rule: { en: "negative imperative → Don't + V", es: "imperativo negativo → Don't + V" } }
+          - { for: [es], wrong: No touch it., right: "**Don't touch** it.", rule: { es: "*no* + verbo → Don't + V" } }
+          - { wrong: Don't to open the door., right: "Don't **open** the door.", rule: { en: "Don't + base verb, no to", es: "Don't + forma base, sin to" } }
+          - { wrong: Opens the door., right: "**Open** the door.", rule: { en: "the imperative has no -s", es: "el imperativo no lleva -s" } }
+          - { for: [es], wrong: Don't late., right: "Don't **be** late.", rule: { es: "*no llegues tarde* = Don't be late" } }
+          - { for: [es], wrong: Open you the door., right: "**Open** the door.", rule: { es: "el imperativo no lleva pronombre" } }
+          - { wrong: Let's to go., right: "Let's **go**.", rule: { en: "Let's + base verb, no to", es: "Let's + forma base, sin to" } }
+          - { wrong: Let's don't go., right: "Let's **not** go.", rule: { en: "negative suggestion → Let's not + V", es: "propuesta negativa → Let's not + V" } }
+          - { for: [es], wrong: Please to sit down., right: "Please sit down.", rule: { es: "please + verbo en forma base" } }
+
+essentials:
+  - level: A1
+    parts:
+      - title: { en: Form, es: Forma }
+        content:
+          - type: table
+            columns:
+              - { key: form, label: { en: Form, es: Forma } }
+              - { key: pattern, label: { en: Pattern, es: Estructura } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { form: +, pattern: V, example: "**Open** the door." }
+              - { form: −, pattern: Don't + V, example: "**Don't open** the door." }
+              - { form: Let's, pattern: Let's + V, example: "**Let's go.**" }
+              - { form: Let's not, pattern: Let's not + V, example: "**Let's not wait.**" }
+      - title: { en: Key rules, es: Reglas clave }
+        content:
+          - type: bullets
+            items:
+              - en: "The verb is in the base form and has no subject."
+                es: "El verbo va en forma base y sin sujeto."
+              - en: "**Don't** and **Let's** are followed by the base verb, without **to**."
+                es: "Tras **Don't** y **Let's** va el verbo en forma base, sin **to**."
+              - { for: [es], text: { es: "Una sola forma para tú, usted, vosotros y ustedes." } }
+      - title: { en: Use, es: Uso }
+        content:
+          - type: table
+            columns:
+              - { key: use, label: { en: Use, es: Uso } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { use: { en: "instructions, directions", es: "instrucciones, direcciones" }, example: "**Turn** left. **Add** two eggs." }
+              - { use: { en: "invitations", es: "invitaciones" }, example: "**Come** in. **Let's** go." }
+              - { use: { en: "warnings", es: "avisos" }, example: "**Be** careful! **Don't** touch it." }
+              - { use: { en: "polite request", es: "petición amable" }, example: "**Please** sit down." }
+      - title: { en: Top errors, es: Errores principales }
+        content:
+          - type: errors
+            rows:
+              - { wrong: Not open the door., right: "**Don't open** the door." }
+              - { wrong: Don't to open the door., right: "Don't **open** the door." }
+              - { for: [es], wrong: Don't late., right: "Don't **be** late." }
+              - { wrong: Let's don't go., right: "Let's **not** go." }
+
+reminders:
+  - level: A1
+    items:
+      - en: "Negative: **Don't** + base verb: **Don't open** it."
+        es: "Negativa: **Don't** + forma base: **Don't open** it."
+      - en: "**Let's** and **Let's not** + base verb, without **to**."
+        es: "**Let's** y **Let's not** + forma base, sin **to**."
+      - { for: [es], text: { es: "Con adjetivo, **be**: Don't **be** late." } }
