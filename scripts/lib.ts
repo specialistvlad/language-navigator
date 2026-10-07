@@ -145,6 +145,3 @@ export function topicTitle(ref: TopicRef, explain: Explain): string {
   const fromSlug = ref.entry.slug.replace(/-/g, " ").replace(/^./, (c) => c.toUpperCase());
   return ref.topic?.title[explain] ?? ref.entry.title?.[explain] ?? fromSlug;
 }
-
-export const guidePath = (lang: string, dir: string, slug: string, explain: Explain): string =>
-  `languages/${lang}/${dir}/${slug}/guide.${explain}.md`;

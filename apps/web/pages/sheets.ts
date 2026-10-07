@@ -6,7 +6,7 @@ import { navHome } from "../nav.ts";
 import { rangeBadge } from "../parts.ts";
 import { escapeHtml } from "../render.ts";
 import { sheetsUrl, sheetUrl, trackUrl } from "../urls.ts";
-import { type Sheet, sheetHtml, sheetsOf } from "./sheet-content.ts";
+import { type Sheet, sheetsOf } from "./sheet-content.ts";
 
 export function sheetPages(track: Track): void {
   const { ctx, lang, explain, t, title: trackTitle } = track;
@@ -71,7 +71,7 @@ export function sheetPages(track: Track): void {
         alternates: alternates((e) => sheetUrl(e, lang, s.id)),
         controls: sheetControls((e) => sheetUrl(e, lang, s.id)),
         nav: sheetNav(s),
-        main: `<article class="doc sheet">${sheetHtml(s.markdown)}</article>`,
+        main: `<article class="doc sheet">${s.html}</article>`,
         dev: o.dev,
         siteUrl: o.siteUrl,
       }),

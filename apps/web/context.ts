@@ -1,8 +1,7 @@
 // What every page builder shares: build options, curriculum data, links and the page list.
 import { type CurriculumLanguage, ENABLED_EXPLAIN, type Explain, explainName, type TopicRef } from "../../scripts/lib.ts";
-import type { LinkFn } from "../../scripts/markdown.ts";
 import type { Choice, Ui } from "./layout.ts";
-import { createRenderer } from "./render.ts";
+import type { LinkFn } from "./render.ts";
 
 export interface BuildOptions {
   outDir: string;
@@ -37,7 +36,6 @@ export interface Track {
 }
 
 export const EXPLAINS = ENABLED_EXPLAIN;
-export const md = createRenderer();
 
 // The home page and the missing page speak the first enabled explanation language.
 export function homeLanguage(): Explain {

@@ -1,16 +1,16 @@
 // Topic pages: the guide in numbered sections, the Key points view, and the rail beside them.
-import { filled, levelRange, topicTitle, type TopicRef } from "../../../scripts/lib.ts";
-import { renderGuide } from "../../../scripts/guide.ts";
-import { alternates, md, readChoices, type Track } from "../context.ts";
+import { levelRange, topicTitle, type TopicRef } from "../../../scripts/lib.ts";
+import { alternates, readChoices, type Track } from "../context.ts";
+import { type GuideSection, guideSections } from "../guide.ts";
 import { GITHUB_ICON, PRINT_ICON } from "../icons.ts";
 import { controls, page } from "../layout.ts";
 import { trackNav } from "../nav.ts";
 import { chips, editUrl, lead, rangeBadge, slugify } from "../parts.ts";
-import { type DocSection, escapeHtml, splitDoc } from "../render.ts";
+import { escapeHtml, inline, levelBadge } from "../render.ts";
 import { topicUrl } from "../urls.ts";
 
 // Anchor ids for the guide sections, unique within the page.
-function anchors(parts: DocSection[]): Map<DocSection, string> {
+function anchors(parts: GuideSection[]): Map<GuideSection, string> {
   const ids = new Set<string>();
   return new Map(
     parts.map((s) => {
@@ -29,23 +29,23 @@ export function topicPages(track: Track): void {
   for (const [index, ref] of written.entries()) {
     const topic = ref.topic;
     if (topic === null) continue;
-    const doc = splitDoc(renderGuide(ref, explain, ctx.refs, ctx.link));
-    const parts = doc.sections.filter((s) => s.kind === "body");
+    const rctx = { ref, explain, refs: ctx.refs, link: ctx.link };
+    const all = guideSections(rctx);
+    const parts = all.filter((s) => s.kind === "body");
     const idOf = anchors(parts);
-    const sections = doc.sections
+    const sections = all
       .map((s) => {
         const cls = s.kind === "body" ? "part" : `block ${s.kind}`;
-        const level = filled(s.from) ? ` data-level="${s.from}"` : "";
         const anchor = idOf.get(s);
         const id = anchor === undefined ? "" : ` id="${anchor}"`;
-        return `<section class="${cls}"${id}${level}>${md.render(`## ${s.heading}\n${s.lines.join("\n")}`)}</section>`;
+        return `<section class="${cls}"${id} data-level="${s.from}"><h2>${inline(s.title, rctx)}${levelBadge(s.from, s.to)}</h2>${s.html}</section>`;
       })
       .join("\n");
 
     // Rail: the guide sections with their levels, the Essentials view, and the next topic.
     const tocItems = parts.map((s) => {
-      const levels = filled(s.from) ? chips(levelRange(`${s.from}-${s.to ?? s.from}`)) : "";
-      return `<li${filled(s.from) ? ` data-level="${s.from}"` : ""}><a href="#${idOf.get(s) ?? ""}" data-view="guide"><span class="name">${escapeHtml(s.title)}</span>${levels}</a></li>`;
+      const levels = chips(levelRange(`${s.from}-${s.to}`));
+      return `<li data-level="${s.from}"><a href="#${idOf.get(s) ?? ""}" data-view="guide"><span class="name">${escapeHtml(s.title)}</span>${levels}</a></li>`;
     });
     tocItems.push(
       `<li><button type="button" data-view="essentials"><span class="name">${escapeHtml(t.keyPoints)}</span>${chips(topic.levels)}</button></li>`,
@@ -57,12 +57,7 @@ export function topicPages(track: Track): void {
     ].join("");
     const title = topic.title[explain] ?? ref.entry.slug;
     const head = `<header class="doc-head"><h1>${escapeHtml(title)}${rangeBadge(ref.entry.levels)}</h1><div class="actions">${actions}</div></header>`;
-    const intro = md.render(
-      doc.head
-        .split("\n")
-        .filter((line) => !line.startsWith("# "))
-        .join("\n"),
-    );
+    const intro = `<blockquote><p>${inline(topic.summary[explain] ?? "", rctx)}</p></blockquote>`;
     ctx.add(
       topicUrl(explain, lang, ref),
       page({

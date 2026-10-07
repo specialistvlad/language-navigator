@@ -17,7 +17,7 @@ scripts and for the web app. `npm run check` enforces them.
 
 ## 2. Data files
 
-Structured YAML is the source; Markdown and HTML are generated from it.
+Structured YAML is the source; the web pages are rendered from it.
 
 ```
 languages/
@@ -87,8 +87,6 @@ it, and the schemas list exactly its codes (`npm run check` compares them).
 | item | `{ text, ex, tr, level, for }` | a bullet or paragraph combining explanation and example |
 
 - Inline formatting inside strings: `**bold**` marks the target form, `*italic*` marks a gloss.
-- Bold opens at the start of a word or right after an apostrophe, and closes at the end of a word or
-  after punctuation: `I'**m**`, `work**s**`, `**If it rains,** we'll…`.
 - Links point to topic IDs: `[To be](id:en.verbs.to-be)`. The renderers turn them into
   page or file links in the reader's explanation language.
 - `for: [es]` limits an element to the listed explanation languages. Use it for notes,

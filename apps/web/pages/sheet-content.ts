@@ -1,8 +1,9 @@
-// Cheatsheet content: which sheets a track has and the Markdown each one holds.
+// Cheatsheet content: which sheets a track has and the HTML each one holds.
 import { type CurriculumSection, filled, LEVELS, levelName, localize, lv, say, topicTitle, type TopicRef } from "../../../scripts/lib.ts";
-import { essentialsMarkdown, reminderMarkdown } from "../../../scripts/guide.ts";
-import { md, type Track } from "../context.ts";
+import type { Track } from "../context.ts";
+import { essentialsHtml, reminderHtml } from "../guide.ts";
 import { firstLevel, sectionRange } from "../parts.ts";
+import { escapeHtml, levelBadge } from "../render.ts";
 import { levelSheet, progressiveSheet, sectionSheet, topicSheet, topicUrl } from "../urls.ts";
 
 export interface Sheet {
@@ -11,7 +12,7 @@ export interface Sheet {
   group: "levels" | "progressive" | "sections" | "topics";
   label: string;
   range: string;
-  markdown: string;
+  html: string;
 }
 
 interface Pick {
@@ -19,31 +20,41 @@ interface Pick {
   level: string;
 }
 
-// The essentials and reminders the picked levels give for each topic, under section and topic headings.
+interface Card {
+  ref: TopicRef;
+  blocks: string[];
+}
+
+// The essentials and reminders the picked levels give for each topic. Each section heading spans
+// the page and its topics flow into lanes; a section with a single topic flows that topic's level
+// blocks instead.
 function compose(track: Track, title: string, topics: TopicRef[], pick: (ref: TopicRef) => Pick[]): string | null {
   const { ctx, lang, explain } = track;
-  let out = `# ${title}\n\n`;
-  let section: CurriculumSection | null = null;
-  let blocks = 0;
+  const groups: { section: CurriculumSection; cards: Card[] }[] = [];
   for (const ref of topics) {
-    const parts = pick(ref)
+    const rctx = { ref, explain, refs: ctx.refs, link: ctx.link };
+    const blocks = pick(ref)
       .map((p) => {
-        const body =
-          p.kind === "essentials"
-            ? essentialsMarkdown(ref, explain, ctx.refs, p.level, 5, ctx.link)
-            : reminderMarkdown(ref, explain, ctx.refs, p.level, ctx.link);
-        return filled(body) ? `#### ${say(p.kind, explain)} [${p.level}]\n\n${body}` : null;
+        const body = p.kind === "essentials" ? essentialsHtml(rctx, p.level, 5) : reminderHtml(rctx, p.level);
+        return filled(body) ? `<h4>${escapeHtml(say(p.kind, explain))}${levelBadge(p.level)}</h4>${body}` : null;
       })
       .filter(filled);
-    if (parts.length === 0) continue;
-    if (ref.section !== section) {
-      section = ref.section;
-      out += `## ${localize(section.title, explain)}\n\n`;
-    }
-    out += `### [${topicTitle(ref, explain)}](${topicUrl(explain, lang, ref)})\n\n${parts.join("\n\n")}\n\n`;
-    blocks += parts.length;
+    if (blocks.length === 0) continue;
+    const last = groups.at(-1);
+    if (last?.section === ref.section) last.cards.push({ ref, blocks });
+    else groups.push({ section: ref.section, cards: [{ ref, blocks }] });
   }
-  return blocks > 0 ? out : null;
+  if (groups.length === 0) return null;
+  const topicHead = (ref: TopicRef): string =>
+    `<h3><a href="${topicUrl(explain, lang, ref)}">${escapeHtml(topicTitle(ref, explain))}</a></h3>`;
+  const lanes = (items: string[]): string => `<div class="lanes">${items.map((i) => `<section>${i}</section>`).join("")}</div>`;
+  const body = groups.map(({ section, cards }) => {
+    const h2 = `<h2>${escapeHtml(localize(section.title, explain))}</h2>`;
+    const [only] = cards;
+    if (cards.length === 1 && only) return h2 + topicHead(only.ref) + lanes(only.blocks);
+    return h2 + lanes(cards.map((c) => topicHead(c.ref) + c.blocks.join("")));
+  });
+  return `<h1>${escapeHtml(title)}</h1>${body.join("")}`;
 }
 
 // Every sheet of a track: one per level, progressive ones, one per section, one per topic.
@@ -51,8 +62,8 @@ export function sheetsOf(track: Track): Sheet[] {
   const { lang, explain, t, written } = track;
   const allLevels = (): Pick[] => LEVELS.map((level) => ({ kind: "essentials" as const, level }));
   const sheets: Sheet[] = [];
-  const push = (s: Omit<Sheet, "markdown">, markdown: string | null): void => {
-    if (filled(markdown)) sheets.push({ ...s, markdown });
+  const push = (s: Omit<Sheet, "html">, html: string | null): void => {
+    if (filled(html)) sheets.push({ ...s, html });
   };
 
   for (const level of LEVELS) {
@@ -109,21 +120,4 @@ export function sheetsOf(track: Track): Sheet[] {
     push(s, compose(track, s.title, [ref], allLevels));
   }
   return sheets;
-}
-
-// Cheatsheet body: each ## section heading spans the page and its ### topic blocks flow into lanes;
-// a section with a single topic flows that topic's #### level blocks instead.
-export function sheetHtml(markdown: string): string {
-  const [head = "", ...sections] = markdown.split(/\n(?=## )/);
-  const body = sections.map((section) => {
-    let [top = "", ...cards] = section.split(/\n(?=### )/);
-    const only = cards[0];
-    if (cards.length === 1 && only !== undefined) {
-      const [topic = "", ...blocks] = only.split(/\n(?=#### )/);
-      top = `${top}\n${topic}`;
-      cards = blocks;
-    }
-    return `${md.render(top)}<div class="lanes">${cards.map((card) => `<section>${md.render(card)}</section>`).join("")}</div>`;
-  });
-  return md.render(head) + body.join("");
 }

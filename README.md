@@ -7,8 +7,8 @@ Every topic is explained in English and in Spanish.
 
 The source is structured data: one `topic.yaml` per topic holds the full reference (tables,
 rules, examples, typical errors) in both explanation languages, plus an **Essentials** block and
-a **Reminder** block for each level. JSON Schemas define and validate every file. Markdown guides,
-web pages and cheatsheets are generated from the data.
+a **Reminder** block for each level. JSON Schemas define and validate every file. The web pages and
+cheatsheets are rendered straight from the data.
 
 Cheatsheets come per topic, per section, per level and progressive across levels. The higher a
 progressive sheet reaches, the more material it covers and the more concentrated it is.
@@ -52,7 +52,7 @@ language-navigator/
 │   └── es/                    Spanish topics
 ├── apps/
 │   └── web/                   web app
-├── scripts/                   shared tooling: data loading, Markdown rendering, checks
+├── scripts/                   shared tooling: data loading, schema types, checks
 └── build/                     generated output
 ```
 
@@ -68,7 +68,6 @@ language-navigator/
 | `npm run lint` | lints the code with typescript-eslint's strict and stylistic type-checked rules (`eslint.config.js`) |
 | `npm run format` | formats the code with Prettier; `npm run format:check` only reports |
 | `npm run verify` | typecheck, lint, format check and data check together; CI runs it on every push and before publishing |
-| `npm run md` | writes every guide as Markdown to `build/md/` |
 
 ## Publishing
 

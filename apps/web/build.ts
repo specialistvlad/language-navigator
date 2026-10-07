@@ -2,13 +2,13 @@
 // Run: npm run build   (SITE_URL sets the public URL for canonical links, the sitemap and, by its path, the base of every link)
 import { join } from "node:path";
 import { type CurriculumLanguage, loadCurriculum, loadTopics, localize, ROOT, type TopicRef } from "../../scripts/lib.ts";
-import type { LinkFn } from "../../scripts/markdown.ts";
 import { type BuildOptions, type Context, EXPLAINS, type Page } from "./context.ts";
 import { ui } from "./layout.ts";
 import { writeSite } from "./output.ts";
 import { homePage, notFoundPage } from "./pages/home.ts";
 import { sheetPages } from "./pages/sheets.ts";
 import { topicPages } from "./pages/topic.ts";
+import type { LinkFn } from "./render.ts";
 import { trackIndex } from "./pages/track.ts";
 import { topicUrl } from "./urls.ts";
 
