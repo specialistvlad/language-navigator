@@ -1,5 +1,5 @@
 // Static site build: every page of every track rendered to HTML, plus sitemap and robots.txt.
-// Run: npm run build   (SITE_URL sets the public origin for canonical links and the sitemap)
+// Run: npm run build   (SITE_URL sets the public URL for canonical links, the sitemap and, by its path, the base of every link)
 import { cp, mkdir, rename, rm } from "node:fs/promises";
 import { join } from "node:path";
 import {
@@ -402,6 +402,10 @@ ${pages
 `;
   const robots = `User-agent: *\nAllow: /\nSitemap: ${o.siteUrl}/sitemap.xml\n`;
 
+  // A site served below the domain root (a GitHub Pages project site) prefixes every root-relative link.
+  const base = new URL(o.siteUrl).pathname.replace(/\/$/, "");
+  const rebase = (html: string) => (base ? html.replace(/\b(href|src)="\/(?!\/)/g, `$1="${base}/`) : html);
+
   // Write into a fresh folder, then swap it in place.
   const tmp = `${o.outDir}.tmp`;
   const old = `${o.outDir}.old`;
@@ -409,7 +413,7 @@ ${pages
   await mkdir(tmp, { recursive: true });
   for (const p of pages) {
     const file = p.path.endsWith("/") ? join(tmp, p.path, "index.html") : join(tmp, p.path);
-    await Bun.write(file, p.html);
+    await Bun.write(file, rebase(p.html));
   }
   await Bun.write(join(tmp, "sitemap.xml"), sitemap);
   await Bun.write(join(tmp, "robots.txt"), robots);
