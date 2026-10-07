@@ -30,8 +30,8 @@ sections:
             es: "El objeto de la frase activa pasa a ser el sujeto de la pasiva."
           - en: "The verb is **be** in the tense of the active verb, plus the past participle."
             es: "El verbo es **be** en el tiempo del verbo activo, más el participio."
-          - en: "Only verbs with an object have a passive. Verbs like happen, arrive, die and sleep have none."
-            es: "Solo los verbos con objeto tienen pasiva. Verbos como happen, arrive, die y sleep no la tienen."
+          - en: "Verbs with an object have a passive. happen, arrive, die and sleep have an active form only."
+            es: "Los verbos con objeto tienen pasiva. happen, arrive, die y sleep solo existen en activa."
 
   - title: { en: "Form: tenses", es: "Forma: tiempos" }
     level: B1
@@ -76,17 +76,18 @@ sections:
     content:
       - type: table
         columns:
-          - { key: agent, label: { en: Agent, es: Agente } }
+          - { key: word, label: { en: Word, es: Palabra } }
+          - { key: introduces, label: { en: Introduces, es: Introduce } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { agent: { en: "new or important information", es: "información nueva o importante" }, example: "The song **was written by** Adele.", tr: { es: La canción fue escrita por Adele. } }
-          - { agent: { en: "unknown, obvious or unimportant", es: "desconocido, obvio o sin importancia" }, example: "My bike **was stolen**.", tr: { es: Me robaron la bici. } }
+          - { word: by, introduces: { en: "the doer", es: "quien hace la acción" }, example: "The song **was written by** Adele.", tr: { es: La canción fue escrita por Adele. } }
+          - { word: with, introduces: { en: "a tool or material", es: "un instrumento o material" }, example: "The door **was opened with** a key.", tr: { es: La puerta se abrió con una llave. } }
       - type: bullets
         items:
           - en: "**by** + agent goes at the end of the clause."
             es: "**by** + agente va al final de la oración."
-          - en: "The agent is added only when the listener needs it."
-            es: "El agente se añade solo cuando el oyente lo necesita."
+          - en: "The agent is added when it is new or important information."
+            es: "El agente se añade cuando es información nueva o importante."
 
   - title: { en: Use, es: Uso }
     level: B1
@@ -97,7 +98,7 @@ sections:
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
           - { use: { en: "The doer is unknown", es: "Se desconoce quién lo hace" }, example: "My phone **was stolen** on the train.", tr: { es: Me robaron el móvil en el tren. } }
-          - { use: { en: "The doer is obvious or unimportant", es: "Quién lo hace es obvio o no importa" }, example: "The shop **is closed** on Sundays.", tr: { es: La tienda cierra los domingos. } }
+          - { use: { en: "The doer is obvious or unimportant", es: "Quién lo hace es obvio o no importa" }, example: "The room **is cleaned** every day.", tr: { es: La habitación se limpia todos los días. } }
           - { use: { en: "Processes and how things are made", es: "Procesos y cómo se hacen las cosas" }, example: "Wine **is made** from grapes.", tr: { es: El vino se hace con uvas. } }
           - { use: { en: "News, notices and formal writing", es: "Noticias, avisos y textos formales" }, example: "Two people **were arrested** last night.", tr: { es: Anoche detuvieron a dos personas. } }
           - { use: { en: "The receiver is the topic", es: "Lo que importa es quien recibe la acción" }, example: "Our teacher **was given** a prize.", tr: { es: A nuestro profesor le dieron un premio. } }
@@ -116,7 +117,7 @@ sections:
           - { spanish: Me robaron la bici., english: "My bike **was stolen**." }
       - type: bullets
         items:
-          - { for: [es], text: { es: "*se* + verbo suele ser **be** + participio. El verbo concuerda con el sujeto: *se venden pisos* → flats **are** sold." } }
+          - { for: [es], text: { es: "La pasiva refleja (*se venden pisos*) = **be** + participio, con concordancia: flats **are** sold." } }
           - { for: [es], text: { es: "Una tercera persona del plural sin sujeto (*me robaron*) también se traduce con la pasiva." } }
 
   - title: { en: Typical errors, es: Errores típicos }
@@ -127,9 +128,9 @@ sections:
         rows:
           - { wrong: English speaks here., right: "English **is spoken** here.", rule: { en: "the subject receives the action → be + V-ed", es: "el sujeto recibe la acción → be + participio" } }
           - { for: [es], wrong: Here speaks English., right: "English **is spoken** here.", rule: { es: "*se habla inglés* → be + participio, con sujeto delante" } }
-          - { for: [es], wrong: Flats sell here., right: "Flats **are sold** here.", rule: { es: "*se venden* no es reflexivo en inglés: be + participio" } }
+          - { for: [es], wrong: Flats sell here., right: "Flats **are sold** here.", rule: { es: "*se venden* → be + participio" } }
           - { wrong: The bridge built in 1990., right: "The bridge **was built** in 1990.", rule: { en: "the passive needs be", es: "la pasiva necesita be" } }
-          - { wrong: The window was broke., right: "The window was **broken**.", rule: { en: "use the past participle, not the past simple", es: "se usa el participio, no el pasado simple" } }
+          - { wrong: The window was broke., right: "The window was **broken**.", rule: { en: "use the past participle", es: "se usa el participio" } }
           - { wrong: The accident was happened yesterday., right: "The accident **happened** yesterday.", rule: { en: "happen, arrive and die have no passive", es: "happen, arrive y die no tienen pasiva" } }
           - { wrong: The book was written from Orwell., right: "The book was written **by** Orwell.", rule: { en: "agent → by", es: "agente → by" } }
           - { for: [es], wrong: My bike was stolen by someone., right: "My bike **was stolen**.", rule: { es: "un agente desconocido no se menciona (*me robaron la bici*)" } }

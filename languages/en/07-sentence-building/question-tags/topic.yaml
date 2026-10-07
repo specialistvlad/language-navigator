@@ -33,7 +33,7 @@ sections:
             es: "El pronombre sustituye al sujeto: Tom is late, isn't **he**?"
           - en: "The negative tag uses the short form: isn't, doesn't, can't."
             es: "La coletilla negativa usa la forma corta: isn't, doesn't, can't."
-          - { for: [es], text: { es: "*¿verdad?* y *¿no?* sirven para todas las frases. En inglés la coletilla cambia con el verbo y con el sujeto." } }
+          - { for: [es], text: { es: "En inglés la coletilla concuerda con el verbo y con el sujeto: *Hace frío, ¿verdad?* → It's cold, **isn't it**?" } }
 
   - title: { en: "Form: the auxiliary matches the verb", es: "Forma: el auxiliar según el verbo" }
     level: B1
@@ -92,8 +92,8 @@ sections:
           - { tone: { en: "rising ↗", es: "ascendente ↗" }, meaning: { en: "you are not sure and ask a real question", es: "no estás seguro y haces una pregunta de verdad" }, example: "You haven't seen my keys, **have you**? ↗", tr: { es: "No has visto mis llaves, ¿verdad?" } }
       - type: bullets
         items:
-          - en: "The voice falls or rises on the tag. The rest of the sentence stays level."
-            es: "La voz baja o sube en la coletilla. El resto de la frase se mantiene estable."
+          - en: "The voice falls or rises on the tag."
+            es: "La voz baja o sube en la coletilla."
           - en: "A rising tag expects the answer **yes** or **no**."
             es: "Una coletilla ascendente espera la respuesta **yes** o **no**."
 
@@ -107,7 +107,7 @@ sections:
         rows:
           - { use: { en: "Checking something you think is true", es: "Comprobar algo que crees cierto" }, example: "You're from Madrid, **aren't you**?", tr: { es: "Eres de Madrid, ¿verdad?" } }
           - { use: { en: "Making conversation", es: "Charlar" }, example: "Lovely weather, **isn't it**?", tr: { es: "Hace un tiempo estupendo, ¿verdad?" } }
-          - { use: { en: "Asking politely for help", es: "Pedir ayuda con educación" }, example: "You couldn't lend me a pen, **could you**?", tr: { es: "No podrías prestarme un bolígrafo, ¿verdad?" } }
+          - { use: { en: "Asking politely for help", es: "Pedir ayuda con educación" }, example: "You couldn't lend me a pen, **could you**?", tr: { es: "¿Me podrías prestar un bolígrafo?" } }
 
   - title: { en: Typical errors, es: Errores típicos }
     level: B1
@@ -119,12 +119,11 @@ sections:
           - { wrong: "She works here, isn't she?", right: "She works here, **doesn't she**?", rule: { en: "present simple, he / she / it → doesn't", es: "presente simple, he / she / it → doesn't" } }
           - { for: [es], wrong: "It's cold, no?", right: "It's cold, **isn't it**?", rule: { es: "*¿no?* y *¿verdad?* → auxiliar + pronombre" } }
           - { wrong: "He doesn't like it, doesn't he?", right: "He doesn't like it, **does he**?", rule: { en: "negative statement → positive tag", es: "frase negativa → coletilla afirmativa" } }
-          - { wrong: "I'm late, amn't I?", right: "I'm late, **aren't I**?", rule: { en: "I am → aren't I", es: "I am → aren't I" } }
           - { wrong: "Let's go, will we?", right: "Let's go, **shall we**?", rule: { en: "Let's → shall we", es: "Let's → shall we" } }
           - { wrong: "Open the door, don't you?", right: "Open the door, **will you**?", rule: { en: "command → will you", es: "orden → will you" } }
           - { for: [en], wrong: "Tom is late, isn't Tom?", right: "Tom is late, isn't **he**?", rule: { en: "the tag uses a pronoun" } }
           - { wrong: "Nobody called, didn't they?", right: "Nobody called, **did they**?", rule: { en: "nobody is negative → positive tag", es: "nobody es negativo → coletilla afirmativa" } }
-          - { for: [es], wrong: "She works here, true?", right: "She works here, **doesn't she**?", rule: { es: "*¿verdad?* no se traduce por true" } }
+          - { for: [es], wrong: "She works here, true?", right: "She works here, **doesn't she**?", rule: { es: "*¿verdad?* → auxiliar + pronombre" } }
 
 essentials:
   - level: B1
@@ -158,7 +157,7 @@ essentials:
             rows:
               - { wrong: "You like tea, aren't you?", right: "You like tea, **don't you**?" }
               - { for: [es], wrong: "It's cold, no?", right: "It's cold, **isn't it**?" }
-              - { wrong: "I'm late, amn't I?", right: "I'm late, **aren't I**?" }
+              - { wrong: "Open the door, don't you?", right: "Open the door, **will you**?" }
               - { wrong: "Let's go, will we?", right: "Let's go, **shall we**?" }
 
 reminders:

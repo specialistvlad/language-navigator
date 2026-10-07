@@ -30,7 +30,7 @@ sections:
           - en: "Zero and first conditionals talk about real situations. The second talks about imagined ones."
             es: "El condicional cero y el primero hablan de situaciones reales. El segundo habla de situaciones imaginadas."
           - for: [es]
-            text: { es: "*Si* + presente → **if** + present simple. Tras if nunca va will." }
+            text: { es: "*Si* + presente → **if** + present simple. Tras **if** va el presente simple, también para el futuro." }
 
   - title: { en: "Form: zero and first", es: "Forma: cero y primero" }
     level: A2
@@ -67,10 +67,10 @@ sections:
           - { type: { en: "Second with be", es: "Segundo con be" }, pattern: "if + were, would + V", example: "If it **were** sunny, we'**d go** out.", tr: { es: "Si hiciera sol, saldríamos." } }
       - type: bullets
         items:
-          - en: "The past simple in the if-clause refers to the present or the future, not the past."
-            es: "El pasado simple de la oración con if se refiere al presente o al futuro, no al pasado."
-          - en: "**were** is the form for every person in formal English: If he **were** here, he'd help."
-            es: "**were** es la forma para todas las personas en inglés formal: If he **were** here, he'd help."
+          - en: "The past simple in the if-clause refers to the present or the future."
+            es: "El pasado simple de la oración con if se refiere al presente o al futuro."
+          - en: "**were** works for every person: If he **were** here, he'd help. **was** is common in informal speech."
+            es: "**were** sirve para todas las personas: If he **were** here, he'd help. **was** es frecuente en el habla informal."
           - en: "The main clause can also use could or might: If I had time, I **could** help."
             es: "La oración principal también puede llevar could o might: If I had time, I **could** help."
           - for: [es]
@@ -126,8 +126,8 @@ sections:
           - { first: { ex: "If we **have** time, we'**ll visit** you.", tr: { es: "Si tenemos tiempo, os visitaremos." } }, second: { ex: "If we **had** time, we'**d visit** you.", tr: { es: "Si tuviéramos tiempo, os visitaríamos." } } }
       - type: bullets
         items:
-          - en: "The speaker chooses by how likely the situation seems, not by the time."
-            es: "El hablante elige según lo probable que le parece la situación, no según el tiempo."
+          - en: "The speaker chooses by how likely the situation seems."
+            es: "El hablante elige según lo probable que le parece la situación."
 
   - title: { en: Typical errors, es: Errores típicos }
     level: A2-B1
@@ -135,12 +135,12 @@ sections:
       - type: errors
         audience: true
         rows:
-          - { for: [es], wrong: "If it will rain, we'll stay in.", right: "If it **rains**, we'll stay in.", rule: { es: "tras if va presente simple, nunca will" } }
-          - { for: [es], wrong: "If I would have time, I would help.", right: "If I **had** time, I'd help.", rule: { es: "tras if va pasado simple, nunca would" } }
+          - { for: [es], wrong: "If it will rain, we'll stay in.", right: "If it **rains**, we'll stay in.", rule: { es: "tras if va presente simple" } }
+          - { for: [es], wrong: "If I would have time, I would help.", right: "If I **had** time, I'd help.", rule: { es: "tras if va pasado simple" } }
           - { wrong: "If I am you, I would go.", right: "If I **were** you, I'd go.", rule: { en: advice uses If I were you, es: el consejo usa If I were you } }
           - { wrong: "If I win the lottery, I would buy a house.", right: "If I **won** the lottery, I **would** buy a house.", rule: { en: "match the pair: present + will or past + would", es: "empareja bien: presente + will o pasado + would" } }
           - { wrong: If it rains we'll stay in., right: "If it rains**,** we'll stay in.", rule: { en: comma after an if-clause at the start, es: coma tras la oración con if al principio } }
-          - { wrong: "Unless it doesn't rain, we'll go.", right: "**Unless** it rains, we'll stay in.", rule: { en: unless already means if … not, es: unless ya significa if … not } }
+          - { wrong: "Unless you don't hurry, you'll miss the bus.", right: "**Unless** you hurry, you'll miss the bus.", rule: { en: unless already means if … not, es: unless ya significa if … not } }
           - { for: [en], wrong: "If she come, I'll call you.", right: "If she **comes**, I'll call you.", rule: { en: she / he / it → V-s in the if-clause } }
 
 essentials:
@@ -194,11 +194,11 @@ essentials:
 reminders:
   - level: A2
     items:
-      - en: "No **will** after **if**: If it **rains**, we'll stay in."
-        es: "Tras **if** nunca va **will**: If it **rains**, we'll stay in."
+      - en: "After **if** the present simple stands for the future: If it **rains**, we'll stay in."
+        es: "Tras **if** el presente simple expresa el futuro: If it **rains**, we'll stay in."
   - level: B1
     items:
-      - en: "No **would** after **if**: If I **had** time, I'd help."
-        es: "Tras **if** nunca va **would**: If I **had** time, I'd help."
+      - en: "After **if** the past simple stands for the imagined present: If I **had** time, I'd help."
+        es: "Tras **if** el pasado simple expresa el presente imaginado: If I **had** time, I'd help."
       - en: "**unless** = if … not: **Unless** it rains."
         es: "**unless** = if … not: **Unless** it rains."

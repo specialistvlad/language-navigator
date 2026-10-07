@@ -91,7 +91,7 @@ sections:
           - en: "A negative sentence takes one negative word: I **don't** know **anything**. / I know **nothing**."
             es: "Una negativa lleva una sola palabra negativa: I **don't** know **anything**. / I know **nothing**."
           - for: [es]
-            text: { es: "*No sé nada* → I don't know **anything**. En inglés *nada* y *nunca* no se suman a don't." }
+            text: { es: "*No sé nada* → I don't know **anything**. Con **don't** se usan **anything** y **ever**; **nothing** y **never** van sin don't." }
 
   - title: { en: "Form: negative contractions", es: "Forma: contracciones negativas" }
     level: A1
@@ -142,8 +142,10 @@ sections:
             es: "El orden es wh-word + auxiliar + sujeto + verbo base: **Where do** you **live**?"
           - en: "With **be** the order is wh-word + be + subject: **Where are** you from?"
             es: "Con **be** el orden es wh-word + be + sujeto: **Where are** you from?"
-          - en: "**which**, **whose**, **how much** and **how many** are followed by a noun: Which colour do you like?"
-            es: "**which**, **whose**, **how much** y **how many** van seguidos de un sustantivo: Which colour do you like?"
+          - en: "**which** and **whose** can take a noun: **Which colour** do you like?"
+            es: "**which** y **whose** pueden ir con un sustantivo: **Which colour** do you like?"
+          - en: "**how many** takes a plural noun, **how much** an uncountable noun: How many eggs? / How much milk?"
+            es: "**how many** lleva un sustantivo plural y **how much** uno incontable: How many eggs? / How much milk?"
           - for: [es]
             text: { es: "En español el sujeto puede ir después del verbo: *¿Qué significa esto?* En inglés va delante: What does this **mean**?" }
 
@@ -175,7 +177,7 @@ sections:
           - { key: "yes", label: { en: "Yes", es: Sí } }
           - { key: "no", label: { en: "No", es: "No" } }
         rows:
-          - { question: Are you tired?, "yes": "Yes, I **am**.", "no": "No, I'**m not**." }
+          - { question: Are you tired?, "yes": "Yes, I **am**.", "no": "No, I**'m not**." }
           - { question: Can she swim?, "yes": "Yes, she **can**.", "no": "No, she **can't**." }
           - { question: Did he call?, "yes": "Yes, he **did**.", "no": "No, he **didn't**." }
       - type: bullets
@@ -215,7 +217,6 @@ sections:
           - { wrong: Did you went?, right: "Did you **go**?", rule: { en: after did the verb is in the base form, es: después de did el verbo va en forma base } }
           - { wrong: Who did call you?, right: "**Who called** you?", rule: { en: a subject question has no did, es: la pregunta de sujeto no lleva did } }
           - { for: [en], wrong: Do she like tea?, right: "**Does** she like tea?", rule: { en: he / she / it → does } }
-          - { for: [en], wrong: I amn't ready., right: "I'**m not** ready.", rule: { en: "am not → I'm not" } }
 
 essentials:
   - level: A1

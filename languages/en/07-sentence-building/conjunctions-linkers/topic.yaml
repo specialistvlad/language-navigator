@@ -43,16 +43,16 @@ sections:
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
           - { linker: and, use: { en: adds an idea, es: añade una idea }, example: "I like tea **and** coffee.", tr: { es: Me gustan el té y el café. } }
-          - { linker: but, use: { en: shows a contrast, es: muestra un contraste }, example: "I like tea **but** I don't like coffee.", tr: { es: Me gusta el té pero no el café. } }
+          - { linker: but, use: { en: shows a contrast, es: muestra un contraste }, example: "I like tea, **but** I don't like coffee.", tr: { es: Me gusta el té pero no el café. } }
           - { linker: or, use: { en: gives a choice, es: ofrece una elección }, example: "Do you want tea **or** coffee?", tr: { es: "¿Quieres té o café?" } }
           - { linker: because, use: { en: gives the reason, es: da la causa }, example: "I'm tired **because** I work late.", tr: { es: Estoy cansado porque trabajo hasta tarde. } }
           - { linker: so, use: { en: gives the result, es: da el resultado }, example: "I'm tired, **so** I go to bed.", tr: { es: "Estoy cansado, así que me voy a la cama." } }
       - type: bullets
         items:
-          - en: "A linker between two full clauses takes a comma before **but** and **so**: I was tired, **so** I left."
-            es: "Entre dos oraciones completas, **but** y **so** llevan coma delante: I was tired, **so** I left."
-          - en: "**and**, **or** and **because** take no comma before them."
-            es: "**and**, **or** y **because** no llevan coma delante."
+          - en: "Between two full clauses, **but** and **so** usually take a comma before them: I was tired, **so** I left."
+            es: "Entre dos oraciones completas, **but** y **so** suelen llevar coma delante: I was tired, **so** I left."
+          - en: "**and**, **or** and **because** usually have no comma before them."
+            es: "**and**, **or** y **because** suelen ir sin coma delante."
           - en: "**because** is followed by a clause: a subject and a verb."
             es: "**because** va seguido de una oración: sujeto y verbo."
           - level: A2
@@ -64,7 +64,7 @@ sections:
           - for: [es]
             text: { es: "*Porque* + verbo = **because** + sujeto + verbo. *Por / a causa de* + sustantivo = **because of**." }
           - for: [es]
-            text: { es: "*Así que* = **so**. *Porque* = **because**: no se intercambian." }
+            text: { es: "*Así que* = **so** (resultado). *Porque* = **because** (causa)." }
 
   - title: { en: "Time linkers: when, before, after, then", es: "Conectores de tiempo: when, before, after, then" }
     level: A2
@@ -77,7 +77,7 @@ sections:
         rows:
           - { linker: when, pattern: "when + clause", example: "**When** I get home, I cook.", tr: { es: "Cuando llego a casa, cocino." } }
           - { linker: before, pattern: "before + clause", example: "I wash my hands **before** I eat.", tr: { es: Me lavo las manos antes de comer. } }
-          - { linker: after, pattern: "after + clause", example: "We go home **after** the film ends.", tr: { es: Nos vamos a casa cuando termina la película. } }
+          - { linker: after, pattern: "after + clause", example: "We go home **after** the film ends.", tr: { es: Nos vamos a casa después de que acabe la película. } }
           - { linker: then, pattern: "clause, then + clause", example: "I had lunch, **then** I went home.", tr: { es: Comí y luego me fui a casa. } }
       - type: bullets
         items:
@@ -86,7 +86,7 @@ sections:
           - en: "After **when**, **before** and **after** the present simple talks about the future: **When** I arrive, I'll call you."
             es: "Tras **when**, **before** y **after** el presente simple habla del futuro: **When** I arrive, I'll call you."
           - for: [es]
-            text: { es: "*Cuando llegue* (subjuntivo) = when I **arrive** (presente simple). Nunca will tras when." }
+            text: { es: "*Cuando llegue* (subjuntivo) = when I **arrive** (presente simple). Tras when va el presente simple." }
 
   - title: { en: "Adding: also, too, as well as, in addition", es: "Adición: also, too, as well as, in addition" }
     level: A2-B1
@@ -129,12 +129,12 @@ sections:
           - { linker: while, pattern: "while + clause, clause", example: "**While** I like tea, my wife prefers coffee.", tr: { es: "Mientras que a mí me gusta el té, mi mujer prefiere el café." } }
       - type: bullets
         items:
-          - en: "**although** joins two clauses in one sentence and has no **but** after it."
-            es: "**although** une dos oraciones en una sola frase y no lleva **but** después."
+          - en: "**although** joins two clauses in one sentence and replaces **but**."
+            es: "**although** une dos oraciones en una sola frase y sustituye a **but**."
           - en: "**even though** is a stronger **although**: **Even though** I was tired, I went out."
             es: "**even though** es un **although** más fuerte: **Even though** I was tired, I went out."
-          - en: "**however** starts a new sentence and is followed by a comma."
-            es: "**however** empieza una frase nueva y va seguido de coma."
+          - en: "**however** usually starts a new sentence and is followed by a comma."
+            es: "**however** suele empezar una frase nueva y va seguido de coma."
           - en: "**while** also means *at the same time*: I read **while** I eat."
             es: "**while** también significa *al mismo tiempo*: I read **while** I eat."
           - for: [es]
@@ -164,14 +164,14 @@ sections:
       - type: errors
         audience: true
         rows:
-          - { wrong: "Although it was raining, but we went out.", right: "Although it was raining, we went out.", rule: { en: although and but never appear together, es: although y but no aparecen juntos } }
+          - { wrong: "Although it was raining, but we went out.", right: "Although it was raining, we went out.", rule: { en: although replaces but, es: although sustituye a but } }
           - { wrong: We stayed in because the rain., right: "We stayed in **because of** the rain.", rule: { en: "because + clause, because of + noun", es: "because + oración, because of + sustantivo" } }
           - { wrong: We stayed in because of it was raining., right: "We stayed in **because** it was raining.", rule: { en: because of + noun only, es: because of solo lleva sustantivo } }
           - { wrong: "It was cold, however we went out.", right: "It was cold. **However**, we went out.", rule: { en: however starts a new sentence and takes a comma, es: however empieza frase nueva y lleva coma } }
           - { wrong: I speak French also., right: "I **also** speak French. / I speak French **too**.", rule: { en: "also goes before the main verb, too at the end", es: "also va antes del verbo principal, too al final" } }
           - { for: [es], wrong: "When I will arrive, I'll call you.", right: "**When** I arrive, I'll call you.", rule: { es: tras when el presente simple habla del futuro } }
-          - { for: [es], wrong: I left early for that I catch the bus., right: "I left early **so that** I could catch the bus.", rule: { es: "*para que* = so that" } }
-          - { for: [es], wrong: We stay in unless it doesn't rain., right: "We stay in **unless** it rains.", rule: { es: unless ya significa if … not } }
+          - { for: [es], wrong: I left early so that I catch the bus., right: "I left early so that I **could** catch the bus.", rule: { es: "*para que* = so that; en pasado, could / would" } }
+          - { for: [es], wrong: We'll go out unless it doesn't rain., right: "We'll go out **unless** it rains.", rule: { es: unless ya significa if … not } }
 
 essentials:
   - level: A1
@@ -236,6 +236,6 @@ reminders:
       - { for: [es], text: { es: "Tras when el presente simple habla del futuro: **When** I arrive, I'll call." } }
   - level: B1
     items:
-      - en: "**although** and **but** never share a sentence. **however** takes a comma."
-        es: "**although** y **but** no comparten frase. **however** lleva coma."
+      - en: "**although** replaces **but**: Although it rained, we went out. **however** takes a comma."
+        es: "**although** sustituye a **but**: Although it rained, we went out. **however** lleva coma."
       - { for: [es], text: { es: "unless ya es negativo: **unless** it rains." } }

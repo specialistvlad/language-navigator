@@ -67,10 +67,10 @@ sections:
           - { rule: { en: "A time word can also start the sentence.", es: "Una expresión de tiempo también puede ir al principio." }, example: "**Last year** I went to London.", tr: { es: El año pasado fui a Londres. } }
       - type: bullets
         items:
-          - en: "A long time phrase at the start takes a comma: **Last summer**, we went to Italy."
-            es: "Una expresión de tiempo larga al principio lleva coma: **Last summer**, we went to Italy."
-          - en: "A place or time word never comes between the verb and its object."
-            es: "Un complemento de lugar o de tiempo nunca va entre el verbo y su objeto."
+          - en: "A time phrase at the start often takes a comma: **Last summer**, we went to Italy."
+            es: "Una expresión de tiempo al principio suele llevar coma: **Last summer**, we went to Italy."
+          - en: "A place or time word follows the object: I met **Ana** in the park."
+            es: "Un complemento de lugar o de tiempo va después del objeto: I met **Ana** in the park."
 
   - title: { en: Adverbs, es: Adverbios }
     level: A1
@@ -89,7 +89,7 @@ sections:
           - en: "More on frequency adverbs: [Adverbs of frequency and manner](id:en.adjectives-adverbs.adverbs-frequency-manner)."
             es: "Más sobre los adverbios de frecuencia: [Adverbios de frecuencia y modo](id:en.adjectives-adverbs.adverbs-frequency-manner)."
           - for: [es]
-            text: { es: "*Mucho* va antes o después del verbo en español. **very much** va siempre al final: I like coffee very much." }
+            text: { es: "*Me gusta mucho el café.* → I like coffee **very much**, con very much al final." }
 
   - title: { en: Typical errors, es: Errores típicos }
     level: A0-A1
@@ -101,8 +101,7 @@ sections:
           - { for: [es], wrong: Lives in Madrid., right: "**She** lives in Madrid.", rule: { es: el sujeto siempre aparece } }
           - { for: [es], wrong: I have a car red., right: "I have a **red car**.", rule: { es: el adjetivo va antes del sustantivo } }
           - { for: [es], wrong: Arrived my friend., right: "**My friend** arrived.", rule: { es: el sujeto va antes del verbo } }
-          - { for: [es], wrong: Very much I like coffee., right: "I like coffee **very much**.", rule: { es: very much va al final } }
-          - { for: [es], wrong: I like very much coffee., right: "I like coffee **very much**.", rule: { es: el objeto va justo después del verbo } }
+          - { for: [es], wrong: I like very much coffee., right: "I like coffee **very much**.", rule: { es: "very much va al final, después del objeto" } }
           - { wrong: I went yesterday to London., right: "I went **to London yesterday**.", rule: { en: place before time, es: lugar antes del tiempo } }
           - { wrong: I eat always breakfast., right: "I **always eat** breakfast.", rule: { en: frequency adverbs go before the main verb, es: el adverbio de frecuencia va antes del verbo principal } }
           - { wrong: She always is late., right: "She **is always** late.", rule: { en: frequency adverbs go after be, es: el adverbio de frecuencia va después de be } }

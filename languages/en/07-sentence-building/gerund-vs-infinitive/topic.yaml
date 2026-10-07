@@ -31,8 +31,8 @@ sections:
           - { verb: "practise, consider, can't stand", example: "I **can't stand waiting**.", tr: { es: No soporto esperar. } }
       - type: bullets
         items:
-          - en: "These verbs are followed by **-ing**, never by to + infinitive."
-            es: "Estos verbos van seguidos de **-ing**, nunca de to + infinitivo."
+          - en: "These verbs are followed by **-ing**: I enjoy **cooking**."
+            es: "Estos verbos van seguidos de **-ing**: I enjoy **cooking**."
           - { for: [es], text: { es: "Muchos verbos que en español llevan infinitivo llevan -ing en inglés: *disfruto cocinando*, *evito conducir*." } }
 
   - title: { en: "Form: verb + to + infinitive", es: "Forma: verbo + to + infinitivo" }
@@ -48,7 +48,7 @@ sections:
           - { verb: hope, example: "We **hope to see** you soon.", tr: { es: Esperamos verte pronto. } }
           - { verb: plan, example: "He **plans to study** abroad.", tr: { es: Piensa estudiar en el extranjero. } }
           - { verb: need, example: "You **need to rest**.", tr: { es: Necesitas descansar. } }
-          - { verb: would like, example: "I'**d like to book** a table.", tr: { es: Quisiera reservar una mesa. } }
+          - { verb: would like / would love, example: "I'**d like to book** a table.", tr: { es: Quisiera reservar una mesa. } }
           - { verb: "learn, agree, promise, manage", example: "She **learned to swim**.", tr: { es: Aprendió a nadar. } }
       - type: bullets
         items:
@@ -59,7 +59,7 @@ sections:
               es: "Con **want**, **need** y **would like**, puede ir una persona antes de **to**:"
             ex: "I **want you to come**."
             tr: { es: Quiero que vengas. }
-          - { for: [es], text: { es: "*quiero que vengas* (subjuntivo) → want + persona + to + infinitivo; no hay oración con that." } }
+          - { for: [es], text: { es: "*quiero que vengas* (subjuntivo) → want + persona + to + infinitivo." } }
 
   - title: { en: "Form: after prepositions and as subject", es: "Forma: tras preposiciones y como sujeto" }
     level: B1
@@ -76,8 +76,8 @@ sections:
           - { use: { en: "after look forward to", es: "tras look forward to" }, example: "I look forward to **seeing** you.", tr: { es: Tengo ganas de verte. } }
       - type: bullets
         items:
-          - en: "A verb after a preposition is always **-ing**."
-            es: "Un verbo detrás de una preposición siempre lleva **-ing**."
+          - en: "A verb after a preposition takes **-ing**."
+            es: "Un verbo detrás de una preposición lleva **-ing**."
           - en: "In **look forward to**, **to** is a preposition, so **-ing** follows."
             es: "En **look forward to**, **to** es una preposición, así que sigue **-ing**."
           - en: "The -ing form works as a noun and can be the subject."
@@ -101,8 +101,6 @@ sections:
           - en: "**like**, **love**, **hate** and **prefer** take either form, with almost the same meaning."
             es: "**like**, **love**, **hate** y **prefer** admiten las dos formas, con casi el mismo significado."
           - { en: "I **like** swimming. / I **like** to swim.", es: "I **like** swimming. / I **like** to swim. (*me gusta nadar*)" }
-          - en: "**would like** and **would love** take **to** only."
-            es: "**would like** y **would love** solo llevan **to**."
 
   - title: { en: Typical errors, es: Errores típicos }
     level: B1
@@ -139,7 +137,7 @@ essentials:
         content:
           - type: bullets
             items:
-              - { en: "After a preposition the verb is always **-ing**: look forward to **seeing**.", es: "Tras una preposición el verbo siempre lleva **-ing**: look forward to **seeing**." }
+              - { en: "After a preposition the verb takes **-ing**: look forward to **seeing**.", es: "Tras una preposición el verbo lleva **-ing**: look forward to **seeing**." }
               - { en: "want / need / would like + person + to + V: I want **you to come**.", es: "want / need / would like + persona + to + V: I want **you to come**." }
               - { en: "stop, remember and try change meaning: stop smoking (quit) / stop to smoke (pause).", es: "stop, remember y try cambian de significado: stop smoking (dejar de) / stop to smoke (pararse a)." }
       - title: { en: Top errors, es: Errores principales }
