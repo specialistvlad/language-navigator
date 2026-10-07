@@ -25,17 +25,7 @@ import {
 import { essentialsMarkdown, type LinkFn, reminderMarkdown, renderGuide } from "../../scripts/markdown.ts";
 import { type Choice, controls, page, UI } from "./layout.ts";
 import { createRenderer, escapeHtml, levelBadge, splitDoc } from "./render.ts";
-import {
-  homeUrl,
-  levelSheet,
-  progressiveSheet,
-  sectionSheet,
-  sheetsUrl,
-  sheetUrl,
-  topicSheet,
-  topicUrl,
-  trackUrl,
-} from "./urls.ts";
+import { homeUrl, levelSheet, progressiveSheet, sectionSheet, sheetsUrl, sheetUrl, topicSheet, topicUrl, trackUrl } from "./urls.ts";
 
 export interface BuildOptions {
   outDir: string;
@@ -75,10 +65,16 @@ function sheetHtml(markdown: string): string {
 
 // Anchor id from a heading: lowercase ASCII words joined by hyphens.
 const slugify = (text: string) =>
-  text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 
 // Level chips: one soft chip per level, joined into a group.
-const chips = (levels: readonly string[]) => `<span class="chips">${levels.map((l) => `<span class="chip c-${l}">${l}</span>`).join("")}</span>`;
+const chips = (levels: readonly string[]) =>
+  `<span class="chips">${levels.map((l) => `<span class="chip c-${l}">${l}</span>`).join("")}</span>`;
 
 // Level colours from languages/levels.yaml in both themes, with each level's badge and chip.
 function levelsCss(): string {
@@ -87,12 +83,14 @@ function levelsCss(): string {
     ({ code }) =>
       `.lvl-${code} { background: var(--lvl-${code}); }\n.c-${code} { background: color-mix(in srgb, var(--lvl-${code}) 16%, transparent); color: var(--lvl-${code}); }`,
   );
-  return [
-    `:root { ${vars("light")} }`,
-    `@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { ${vars("dark")} } }`,
-    `:root[data-theme="dark"] { ${vars("dark")} }`,
-    ...rules,
-  ].join("\n") + "\n";
+  return (
+    [
+      `:root { ${vars("light")} }`,
+      `@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { ${vars("dark")} } }`,
+      `:root[data-theme="dark"] { ${vars("dark")} }`,
+      ...rules,
+    ].join("\n") + "\n"
+  );
 }
 
 // Level range covered by a section's topics, e.g. "A0-A1".
@@ -166,10 +164,16 @@ export async function build(o: BuildOptions): Promise<number> {
   const home = EXPLAINS[0];
   const homeValues = {
     site: SITE.name,
-    languages: listOf(shownLanguages.map((l) => l.name[home]), home),
+    languages: listOf(
+      shownLanguages.map((l) => l.name[home]),
+      home,
+    ),
     from: LEVELS[0],
     to: LEVELS.at(-1)!,
-    explain: listOf(SITE.explain.filter((e) => e.enabled).map((e) => say("explainedIn", home, { name: e.name[home] })), home),
+    explain: listOf(
+      SITE.explain.filter((e) => e.enabled).map((e) => say("explainedIn", home, { name: e.name[home] })),
+      home,
+    ),
   };
   const cards = shownLanguages
     .map((lang) => {
@@ -291,7 +295,12 @@ export async function build(o: BuildOptions): Promise<number> {
         ].join("");
         const title = topic.title[explain] ?? ref.entry.slug;
         const head = `<header class="doc-head"><h1>${escapeHtml(title)}${rangeBadge(ref.entry.levels)}</h1><div class="actions">${actions}</div></header>`;
-        const intro = md.render(doc.head.split("\n").filter((line) => !line.startsWith("# ")).join("\n"));
+        const intro = md.render(
+          doc.head
+            .split("\n")
+            .filter((line) => !line.startsWith("# "))
+            .join("\n"),
+        );
         add(
           topicUrl(explain, lang, ref),
           page({
@@ -349,11 +358,26 @@ export async function build(o: BuildOptions): Promise<number> {
       const push = (s: Omit<Sheet, "markdown">, markdown: string | null) => markdown && sheets.push({ ...s, markdown });
 
       for (const level of LEVELS) {
-        const s = { id: levelSheet(level), group: "levels" as const, label: levelName(level, explain), range: level, title: `${t.sheet} ${level}` };
-        push(s, compose(s.title, written, () => [{ kind: "essentials", level }]));
+        const s = {
+          id: levelSheet(level),
+          group: "levels" as const,
+          label: levelName(level, explain),
+          range: level,
+          title: `${t.sheet} ${level}`,
+        };
+        push(
+          s,
+          compose(s.title, written, () => [{ kind: "essentials", level }]),
+        );
       }
       for (const level of LEVELS.slice(1)) {
-        const s = { id: progressiveSheet(level), group: "progressive" as const, label: `${t.upTo} ${levelName(level, explain)}`, range: `${LEVELS[0]}-${level}`, title: `${t.sheet} ${LEVELS[0]}–${level}` };
+        const s = {
+          id: progressiveSheet(level),
+          group: "progressive" as const,
+          label: `${t.upTo} ${levelName(level, explain)}`,
+          range: `${LEVELS[0]}-${level}`,
+          title: `${t.sheet} ${LEVELS[0]}–${level}`,
+        };
         const below = LEVELS.filter((l) => lv(l) < lv(level));
         push(
           s,
@@ -363,12 +387,24 @@ export async function build(o: BuildOptions): Promise<number> {
       for (const section of lang.sections) {
         const inSection = written.filter((r) => r.section === section);
         if (!inSection.length) continue;
-        const s = { id: sectionSheet({ section }), group: "sections" as const, label: section.title[explain], range: sectionRange(section), title: `${t.sheet}: ${section.title[explain]}` };
+        const s = {
+          id: sectionSheet({ section }),
+          group: "sections" as const,
+          label: section.title[explain],
+          range: sectionRange(section),
+          title: `${t.sheet}: ${section.title[explain]}`,
+        };
         push(s, compose(s.title, inSection, allLevels));
       }
       for (const ref of written) {
         const name = topicTitle(ref, explain);
-        const s = { id: topicSheet(ref), group: "topics" as const, label: name, range: ref.entry.levels.split("-")[0], title: `${t.sheet}: ${name}` };
+        const s = {
+          id: topicSheet(ref),
+          group: "topics" as const,
+          label: name,
+          range: ref.entry.levels.split("-")[0],
+          title: `${t.sheet}: ${name}`,
+        };
         push(s, compose(s.title, [ref], allLevels));
       }
 
@@ -390,8 +426,7 @@ export async function build(o: BuildOptions): Promise<number> {
           }),
         ].join("\n");
 
-      const sheetControls = (pathFor: (e: Explain) => string) =>
-        controls({ explain, read: readChoices(explain, pathFor) });
+      const sheetControls = (pathFor: (e: Explain) => string) => controls({ explain, read: readChoices(explain, pathFor) });
 
       const indexHtml = (Object.keys(groups) as (keyof typeof groups)[])
         .map((g) => {

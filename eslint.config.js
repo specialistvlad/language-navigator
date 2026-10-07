@@ -1,0 +1,30 @@
+// Lint: typescript-eslint's strict and stylistic type-checked rules for every script and the browser client.
+import js from "@eslint/js";
+import { defineConfig } from "eslint/config";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+
+export default defineConfig(
+  { ignores: ["build/", "node_modules/"] },
+  js.configs.recommended,
+  tseslint.configs.strictTypeChecked,
+  tseslint.configs.stylisticTypeChecked,
+  {
+    languageOptions: { parserOptions: { projectService: true, tsconfigRootDir: import.meta.dirname } },
+    rules: {
+      "@typescript-eslint/consistent-type-imports": "error",
+      "@typescript-eslint/explicit-module-boundary-types": "error",
+      "@typescript-eslint/switch-exhaustiveness-check": "error",
+      "@typescript-eslint/strict-boolean-expressions": "error",
+      "@typescript-eslint/prefer-readonly": "error",
+      "@typescript-eslint/no-shadow": "error",
+      "@typescript-eslint/restrict-template-expressions": ["error", { allowNumber: true }],
+      eqeqeq: "error",
+      curly: ["error", "multi-line"],
+      "no-param-reassign": "error",
+      "prefer-const": "error",
+      "object-shorthand": "error",
+    },
+  },
+  { files: ["apps/web/client.js"], languageOptions: { globals: globals.browser } },
+);

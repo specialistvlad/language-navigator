@@ -45,10 +45,12 @@ console.log("site.yaml, levels.yaml, interface.yaml");
 schemaErrors(await schema("site"), SITE, "site.yaml");
 schemaErrors(await schema("levels"), { levels: LEVEL_INFO }, "levels.yaml");
 schemaErrors(await schema("interface"), INTERFACE, "interface.yaml");
-for (const l of LEVEL_INFO) for (const e of ALL) if (!l.name[e] || !l.description[e]) fail("levels.yaml", `${l.code} has no "${e}" name or description`);
+for (const l of LEVEL_INFO)
+  for (const e of ALL) if (!l.name[e] || !l.description[e]) fail("levels.yaml", `${l.code} has no "${e}" name or description`);
 for (const s of SITE.explain) for (const e of ALL) if (!s.name[e]) fail("site.yaml", `${s.code} has no "${e}" name`);
 if (!SITE.explain.some((e) => e.enabled)) fail("site.yaml", "no explanation language is enabled");
-for (const [key, text] of Object.entries(INTERFACE.text)) for (const e of ALL) if (!text[e]) fail("interface.yaml", `${key} has no "${e}" text`);
+for (const [key, text] of Object.entries(INTERFACE.text))
+  for (const e of ALL) if (!text[e]) fail("interface.yaml", `${key} has no "${e}" text`);
 const codes = ALL.join("|");
 const levelCodes = LEVELS.join("|");
 for (const name of ["curriculum", "concepts", "topic"]) {
@@ -108,7 +110,8 @@ for (const ref of refs) {
   }
   for (const section of topic.sections) {
     for (const level of range(section.level)) {
-      if (!topic.levels.includes(level)) fail(where, `section "${Object.values(section.title)[0]}" level ${section.level} outside topic levels`);
+      if (!topic.levels.includes(level))
+        fail(where, `section "${Object.values(section.title)[0]}" level ${section.level} outside topic levels`);
     }
   }
   for (const c of topic.concepts) if (!(c in concepts)) fail(where, `concept "${c}" missing from concepts.yaml`);

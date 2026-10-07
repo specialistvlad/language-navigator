@@ -1,0 +1,5 @@
+# Content and generated files keep their own layout; Prettier formats code only.
+languages/
+build/
+*.md
+bun.lock

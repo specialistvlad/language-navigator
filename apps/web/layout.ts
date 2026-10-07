@@ -23,7 +23,10 @@ export const UI = Object.fromEntries(
       },
     ];
   }),
-) as Record<Explain, Record<string, string> & (typeof WEB)[Explain] & { track: (name: string) => string; written: (n: number, total: number) => string }>;
+) as Record<
+  Explain,
+  Record<string, string> & (typeof WEB)[Explain] & { track: (name: string) => string; written: (n: number, total: number) => string }
+>;
 
 export interface Choice {
   label: string;
@@ -82,9 +85,7 @@ const NAV_SCROLL = `(function(){var n=document.getElementById("sidebar"),k=n.que
 
 export function page(o: PageOptions): string {
   const url = (path: string) => `${o.siteUrl}${path}`;
-  const alternates = (o.alternates ?? [])
-    .map((a) => `<link rel="alternate" hreflang="${a.lang}" href="${url(a.path)}">`)
-    .join("\n  ");
+  const alternates = (o.alternates ?? []).map((a) => `<link rel="alternate" hreflang="${a.lang}" href="${url(a.path)}">`).join("\n  ");
   return `<!doctype html>
 <html lang="${o.lang}" data-page="${o.kind}" data-dev="${o.dev ? 1 : 0}">
 <head>

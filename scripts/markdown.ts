@@ -44,7 +44,13 @@ const cellEscape = (value: string) => value.replace(/\|/g, "\\|");
 
 // "#missing" marks a link whose target has no page yet; renderers show it as plain text.
 function linkTarget(id: string, ctx: Ctx): string {
-  return ctx.link(ctx.refs.find((r) => r.id === id), ctx.explain, ctx.ref) ?? "#missing";
+  return (
+    ctx.link(
+      ctx.refs.find((r) => r.id === id),
+      ctx.explain,
+      ctx.ref,
+    ) ?? "#missing"
+  );
 }
 
 const resolveLinks = (value: string, ctx: Ctx) => value.replace(/\]\(id:([^)]+)\)/g, (_, id) => `](${linkTarget(id, ctx)})`);
@@ -132,7 +138,14 @@ const renderContent = (blocks: Block[], ctx: Ctx) =>
     .join("\n\n");
 
 // Essentials of one level as Markdown; parts get headings of the given depth.
-export function essentialsMarkdown(ref: TopicRef, explain: Explain, refs: TopicRef[], level: string, depth = 3, link: LinkFn = markdownLinks): string | null {
+export function essentialsMarkdown(
+  ref: TopicRef,
+  explain: Explain,
+  refs: TopicRef[],
+  level: string,
+  depth = 3,
+  link: LinkFn = markdownLinks,
+): string | null {
   const essentials = ref.topic?.essentials.find((e) => e.level === level);
   if (!essentials) return null;
   const ctx: Ctx = { ref, explain, refs, link };
@@ -144,7 +157,13 @@ export function essentialsMarkdown(ref: TopicRef, explain: Explain, refs: TopicR
 }
 
 // Reminder of one level as a Markdown bullet list.
-export function reminderMarkdown(ref: TopicRef, explain: Explain, refs: TopicRef[], level: string, link: LinkFn = markdownLinks): string | null {
+export function reminderMarkdown(
+  ref: TopicRef,
+  explain: Explain,
+  refs: TopicRef[],
+  level: string,
+  link: LinkFn = markdownLinks,
+): string | null {
   const reminder = ref.topic?.reminders?.find((r) => r.level === level);
   if (!reminder) return null;
   const ctx: Ctx = { ref, explain, refs, link };

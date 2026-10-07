@@ -54,7 +54,11 @@ export function splitDoc(text: string): Doc {
     } else if (current) current.lines.push(line);
     else head.push(line);
   }
-  const summary = head.find((line) => line.startsWith("> "))?.slice(2).trim() ?? "";
+  const summary =
+    head
+      .find((line) => line.startsWith("> "))
+      ?.slice(2)
+      .trim() ?? "";
   return { head: head.join("\n"), summary, sections };
 }
 
