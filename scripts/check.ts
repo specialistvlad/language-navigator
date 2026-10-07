@@ -106,7 +106,7 @@ for (const ref of refs) {
   }
   for (const section of topic.sections) {
     for (const level of range(section.level)) {
-      if (!topic.levels.includes(level)) fail(where, `section "${section.title.en ?? section.title.es}" level ${section.level} outside topic levels`);
+      if (!topic.levels.includes(level)) fail(where, `section "${Object.values(section.title)[0]}" level ${section.level} outside topic levels`);
     }
   }
   for (const c of topic.concepts) if (!(c in concepts)) fail(where, `concept "${c}" missing from concepts.yaml`);

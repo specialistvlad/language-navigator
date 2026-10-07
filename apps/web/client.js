@@ -18,7 +18,7 @@
   };
 
   function mark() {
-    const level = root.dataset.level || "B1";
+    const level = root.dataset.level || document.querySelector("[data-set-level]:last-child")?.dataset.setLevel;
     const view = root.dataset.view || "guide";
     document.querySelectorAll("[data-set-level]").forEach((b) => b.classList.toggle("on", b.dataset.setLevel === level));
     document.querySelectorAll("[data-set-view]").forEach((b) => b.classList.toggle("on", b.dataset.setView === view));

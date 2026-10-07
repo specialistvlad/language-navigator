@@ -36,7 +36,7 @@ export const markdownLinks: LinkFn = (target, explain, from) => {
   return relative(dirname(a), b);
 };
 
-export const isLocalized = (value: object): value is Localized => Object.keys(value).every((k) => k === "en" || k === "es");
+export const isLocalized = (value: object): value is Localized => Object.keys(value).every((k) => k in EXPLAIN);
 const shows = (el: { for?: Explain[] }, explain: Explain) => !el.for || el.for.includes(explain);
 const needsTranslation = (ctx: Ctx) => ctx.explain !== ctx.ref.lang;
 const text = (value: Text | undefined, ctx: Ctx) => (typeof value === "string" ? value : (value?.[ctx.explain] ?? ""));
