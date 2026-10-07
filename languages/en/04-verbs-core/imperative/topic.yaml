@@ -43,14 +43,16 @@ sections:
         rows:
           - { verb: { en: action verb, es: verbo de acción }, example: "**Sit** down. / **Close** your books.", tr: { es: Siéntate. / Cerrad los libros. } }
           - { verb: be, example: "**Be** quiet. / **Be** careful.", tr: { es: Cállate. / Ten cuidado. } }
-          - { verb: { en: with a name, es: con un nombre }, example: "**Tom, come** here.", tr: { es: "Tom, ven aquí." } }
       - type: bullets
         items:
-          - en: "The imperative is the base verb: **Come** in. The verb has no **-s**."
-            es: "El imperativo es el verbo en forma base: **Come** in. El verbo no lleva **-s**."
-          - en: "A name or **everybody** opens the sentence to say who is spoken to."
-            es: "Un nombre o **everybody** abre la frase para indicar a quién se habla."
-          - { for: [es], text: { es: "El imperativo inglés no cambia con la persona ni con el trato: *abre / abra / abrid* = **open**." } }
+          - en: "The imperative is the base verb for every person: **Come** in. / **Be** quiet."
+            es: "El imperativo es el verbo en forma base para todas las personas: **Come** in. / **Be** quiet."
+          - text:
+              en: "A name or **everybody** opens the sentence to say who is spoken to:"
+              es: "Un nombre o **everybody** abre la frase para indicar a quién se habla:"
+            ex: "**Tom, come** here. / **Everybody, listen.**"
+            tr: { es: "Tom, ven aquí. / Escuchad todos." }
+          - { for: [es], text: { es: "El imperativo inglés no cambia con la persona ni con el trato: *abre / abra / abrid / abran* = **open**." } }
 
   - title: { en: "Form: negative", es: "Forma: negativa" }
     level: A1
@@ -69,7 +71,7 @@ sections:
             es: "**Don't** va delante del verbo en forma base, también delante de **be**."
           - en: "**Do not** is the full form. Signs and notices use it."
             es: "**Do not** es la forma completa. Los carteles y avisos la usan."
-          - { for: [es], text: { es: "La negativa también tiene una sola forma: *no abras / no abra / no abráis* = **don't open**." } }
+          - { for: [es], text: { es: "La negativa también tiene una sola forma: *no abras / no abra / no abráis / no abran* = **don't open**." } }
 
   - title: { en: "Form: Let's", es: "Forma: Let's" }
     level: A1
@@ -111,8 +113,8 @@ sections:
           - { use: { en: "Signs, notices", es: "Carteles y avisos" }, example: "**Keep** off the grass.", tr: { es: No pisar el césped. } }
       - type: bullets
         items:
-          - en: "For directions with place words see [Prepositions of place and movement](id:en.prepositions.place-movement)."
-            es: "Para las direcciones con palabras de lugar, ver [Preposiciones de lugar y movimiento](id:en.prepositions.place-movement)."
+          - en: "For directions with place words see [Place and Movement](id:en.prepositions.place-movement)."
+            es: "Para las direcciones con palabras de lugar, ver [Lugar y movimiento](id:en.prepositions.place-movement)."
 
   - title: { en: Politeness, es: Cortesía }
     level: A1
@@ -129,9 +131,9 @@ sections:
         items:
           - en: "A bare imperative sounds direct. **please** makes a request friendly."
             es: "Un imperativo solo suena directo. **please** hace amable una petición."
-          - en: "Requests to people you do not know use **Could you…?** See [Can and Could](id:en.modals.can-could)."
-            es: "Las peticiones a personas que no conoces usan **Could you…?** Ver [Can y could](id:en.modals.can-could)."
-          - { for: [es], text: { es: "*Usted* no tiene forma propia en inglés: la cortesía viene de **please** y de **Could you…?**." } }
+          - en: "Requests to strangers and in formal situations use **Could you…?** See [Can and Could](id:en.modals.can-could)."
+            es: "Las peticiones a desconocidos y en situaciones formales usan **Could you…?** Ver [Can y could](id:en.modals.can-could)."
+          - { for: [es], text: { es: "La cortesía de *usted* se expresa con **please** y con **Could you…?**." } }
 
   - title: { en: Typical errors, es: Errores típicos }
     level: A1
@@ -144,10 +146,7 @@ sections:
           - { wrong: Don't to open the door., right: "Don't **open** the door.", rule: { en: "Don't + base verb, no to", es: "Don't + forma base, sin to" } }
           - { wrong: Opens the door., right: "**Open** the door.", rule: { en: "the imperative has no -s", es: "el imperativo no lleva -s" } }
           - { for: [es], wrong: Don't late., right: "Don't **be** late.", rule: { es: "*no llegues tarde* = Don't be late" } }
-          - { for: [es], wrong: Open you the door., right: "**Open** the door.", rule: { es: "el imperativo no lleva pronombre" } }
           - { wrong: Let's to go., right: "Let's **go**.", rule: { en: "Let's + base verb, no to", es: "Let's + forma base, sin to" } }
-          - { wrong: Let's don't go., right: "Let's **not** go.", rule: { en: "negative suggestion → Let's not + V", es: "propuesta negativa → Let's not + V" } }
-          - { for: [es], wrong: Please to sit down., right: "Please sit down.", rule: { es: "please + verbo en forma base" } }
 
 essentials:
   - level: A1
@@ -191,7 +190,6 @@ essentials:
               - { wrong: Not open the door., right: "**Don't open** the door." }
               - { wrong: Don't to open the door., right: "Don't **open** the door." }
               - { for: [es], wrong: Don't late., right: "Don't **be** late." }
-              - { wrong: Let's don't go., right: "Let's **not** go." }
 
 reminders:
   - level: A1

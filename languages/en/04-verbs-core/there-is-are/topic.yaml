@@ -31,7 +31,7 @@ sections:
         items:
           - en: "**there** is the subject. The verb **be** agrees with the noun that follows."
             es: "**there** es el sujeto. El verbo **be** concuerda con el sustantivo que sigue."
-          - { for: [es], text: { es: "*hay* = **there is** (singular) y **there are** (plural). El inglés distingue número; *hay* no." } }
+          - { for: [es], text: { es: "*hay* = **there is** (singular) y **there are** (plural): el verbo concuerda en número con el sustantivo." } }
 
   - title: { en: "Form: affirmative", es: "Forma: afirmativa" }
     level: A1
@@ -65,10 +65,6 @@ sections:
           - { noun: { en: singular countable, es: contable singular }, form: there isn't + a / an, example: "There **isn't** a bank here.", tr: { es: No hay ningún banco aquí. } }
           - { noun: { en: plural, es: plural }, form: there aren't + any, example: "There **aren't any** shops.", tr: { es: No hay tiendas. } }
           - { noun: { en: uncountable, es: incontable }, form: there isn't + any, example: "There **isn't any** water.", tr: { es: No hay agua. } }
-      - type: bullets
-        items:
-          - en: "A negative sentence takes **any**, not some."
-            es: "La negativa lleva **any**, no some."
 
   - title: { en: "Form: questions", es: "Forma: preguntas" }
     level: A1
@@ -89,8 +85,8 @@ sections:
             es: "En la pregunta **be** va delante de **there**: There is → **Is there**…?"
           - en: "**How many** goes with plural nouns, **how much** with uncountable nouns."
             es: "**How many** va con sustantivos plurales, **how much** con incontables."
-          - en: "The question ends with **there**: How many people are **there**?"
-            es: "La pregunta termina en **there**: How many people are **there**?"
+          - en: "A how many / how much question ends with **there**: How many people are **there**?"
+            es: "Una pregunta con how many / how much termina en **there**: How many people are **there**?"
 
   - title: { en: "Form: short answers", es: "Forma: respuestas cortas" }
     level: A1
@@ -125,8 +121,8 @@ sections:
         items:
           - en: "A place phrase follows, or opens, the sentence: There is a cat **on the sofa**."
             es: "Una expresión de lugar sigue a la frase o la abre: There is a cat **on the sofa**."
-          - en: "For place words see [Prepositions of place](id:en.prepositions.place-movement)."
-            es: "Para las palabras de lugar, ver [Preposiciones de lugar](id:en.prepositions.place-movement)."
+          - en: "For place words see [Place and Movement](id:en.prepositions.place-movement)."
+            es: "Para las palabras de lugar, ver [Lugar y movimiento](id:en.prepositions.place-movement)."
 
   - title: { en: "With a, some, any and numbers", es: "Con a, some, any y números" }
     level: A1
@@ -143,8 +139,8 @@ sections:
           - { word: { en: number, es: número }, rule: { en: "plural, + − ?", es: "plural, + − ?" }, example: "There are **four** apples.", tr: { es: Hay cuatro manzanas. } }
       - type: bullets
         items:
-          - en: "See [Some, any, much, many](id:en.nouns-determiners.quantifiers-some-any-much-many) and [Countable and uncountable](id:en.nouns-determiners.countable-uncountable)."
-            es: "Ver [Cuantificadores](id:en.nouns-determiners.quantifiers-some-any-much-many) y [Contables e incontables](id:en.nouns-determiners.countable-uncountable)."
+          - en: "See [Quantifiers: some, any, much, many](id:en.nouns-determiners.quantifiers-some-any-much-many) and [Countable and Uncountable Nouns](id:en.nouns-determiners.countable-uncountable)."
+            es: "Ver [Cuantificadores: some, any, much, many](id:en.nouns-determiners.quantifiers-some-any-much-many) y [Sustantivos contables e incontables](id:en.nouns-determiners.countable-uncountable)."
 
   - title: { en: "Compare: there is and it is", es: "Comparación: there is y it is" }
     level: A1
@@ -160,8 +156,6 @@ sections:
           - { point: { en: Question, es: Pregunta }, there: { ex: "**Is there** a shop near here?", tr: { es: ¿Hay una tienda cerca? } }, it: { ex: "**Is it** open?", tr: { es: ¿Está abierta? } } }
       - type: bullets
         items:
-          - en: "**there is** gives the existence of a thing. **it is** describes a thing already in the conversation."
-            es: "**there is** da la existencia de algo. **it is** describe algo que ya está en la conversación."
           - en: "See [To be](id:en.verbs-core.to-be)."
             es: "Ver [To be](id:en.verbs-core.to-be)."
 

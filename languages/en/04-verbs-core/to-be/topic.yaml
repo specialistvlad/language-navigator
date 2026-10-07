@@ -143,7 +143,7 @@ sections:
       - type: bullets
         items:
           - { for: [es], text: { es: "**be** cubre *ser* y *estar*: She is tall (*es alta*) y She is at home (*está en casa*)." } }
-          - { for: [es], text: { es: "La edad lleva **be**, no *tener*: I am 20 (*tengo 20 años*)." } }
+          - { for: [es], text: { es: "La edad lleva **be** (en español, *tener*): I am 20 (*tengo 20 años*)." } }
           - { for: [es], text: { es: "Hambre, sed, frío, calor y sueño llevan **be** + adjetivo: I'm hungry / thirsty / cold / hot / sleepy." } }
           - en: "A job takes **a / an**: He is **a** teacher. See [Articles](id:en.nouns-determiners.articles-a-an-the)."
             es: "Una profesión lleva **a / an**: He is **a** teacher. Ver [Artículos](id:en.nouns-determiners.articles-a-an-the)."

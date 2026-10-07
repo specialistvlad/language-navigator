@@ -29,8 +29,8 @@ sections:
       - type: bullets
         items:
           - en: "The period gets longer from at, to on, to in."
-            es: "El periodo es más largo de at, a on, a in."
-          - { for: [es], text: { es: "El español usa *a*, *en* o ningún artículo según el caso; el inglés elige entre at, on e in." } }
+            es: "El periodo se alarga de at a on y a in."
+          - { for: [es], text: { es: "El español dice *a las 7*, *el lunes*, *en julio*; el inglés usa at, on o in según el tiempo." } }
 
   - title: { en: Use, es: Uso }
     level: A1
@@ -52,7 +52,6 @@ sections:
           - { use: "in + month", example: "It's cold **in January**.", tr: { es: Hace frío en enero. } }
           - { use: "in + season", example: "We go to the beach **in summer**.", tr: { es: Vamos a la playa en verano. } }
           - { use: "in + year", example: "She was born **in 1998**.", tr: { es: Nació en 1998. } }
-          - { use: "in + century", example: "Trains began **in the 19th century**.", tr: { es: Los trenes empezaron en el siglo XIX. } }
       - type: bullets
         items:
           - { for: [es], text: { es: "*El lunes* y *los lunes* → **on Monday** / **on Mondays**, sin artículo." } }
@@ -73,7 +72,7 @@ sections:
       - type: bullets
         items:
           - en: "Before this, next, last, every, today and tomorrow, the time word stands alone."
-            es: "Delante de this, next, last, every, today y tomorrow no va preposición."
+            es: "Con this, next, last, every, today y tomorrow la expresión de tiempo va sola."
 
   - title: { en: Typical errors, es: Errores típicos }
     level: A1
@@ -86,7 +85,7 @@ sections:
           - { for: [es], wrong: I work the Mondays., right: "I work **on** Mondays.", rule: { es: "*los lunes* = on Mondays, sin the" } }
           - { wrong: My birthday is in 5 May., right: "My birthday is **on** 5 May.", rule: { en: dates → on, es: "las fechas → on" } }
           - { for: [es], wrong: I study at the morning., right: "I study **in** the morning.", rule: { es: "*por la mañana* = in the morning" } }
-          - { wrong: I sleep badly in the night., right: "I sleep badly **at** night.", rule: { en: "night → at, no the", es: "night → at, sin the" } }
+          - { for: [es], wrong: See you in Monday morning., right: "See you **on** Monday morning.", rule: { es: "*el lunes por la mañana* = on Monday morning" } }
           - { wrong: We relax in the weekend., right: "We relax **at** the weekend.", rule: { en: "at the weekend (US: on the weekend)", es: "at the weekend (US: on the weekend)" } }
           - { for: [en], wrong: It's cold on January., right: "It's cold **in** January.", rule: { en: months → in } }
           - { for: [es], wrong: I'll see you in next Friday., right: "I'll see you **next** Friday.", rule: { es: "next + día, sin preposición" } }
@@ -101,7 +100,7 @@ essentials:
             items:
               - { en: "at: clock times, night, the weekend, Christmas.", es: "at: horas, night, the weekend, Christmas." }
               - { en: "on: days and dates, and Monday morning.", es: "on: días y fechas, y Monday morning." }
-              - { en: "in: months, seasons, years, centuries, the morning.", es: "in: meses, estaciones, años, siglos, the morning." }
+              - { en: "in: months, seasons, years, the morning.", es: "in: meses, estaciones, años, the morning." }
               - { en: "No preposition before this, next, last, every, today, tomorrow.", es: "Sin preposición delante de this, next, last, every, today, tomorrow." }
       - title: { en: Use, es: Uso }
         content:
@@ -122,7 +121,7 @@ essentials:
               - { wrong: on 8 o'clock, right: "**at** 8 o'clock" }
               - { for: [es], wrong: in Mondays, right: "**on** Mondays" }
               - { wrong: in 5 May, right: "**on** 5 May" }
-              - { wrong: in the night, right: "**at** night" }
+              - { for: [es], wrong: in Monday morning, right: "**on** Monday morning" }
               - { for: [es], wrong: in next Friday, right: "**next** Friday" }
 
 reminders:

@@ -103,10 +103,8 @@ sections:
           - { question: Has she got a bike?, "yes": "Yes, she **has**.", "no": "No, she **hasn't**.", tr: { es: ¿Tiene bici? } }
       - type: bullets
         items:
-          - en: "A short answer repeats the auxiliary from the question: do / does or have / has."
-            es: "La respuesta corta repite el auxiliar de la pregunta: do / does o have / has."
-          - en: "**got** stays out of the short answer: Yes, I **have**."
-            es: "**got** no aparece en la respuesta corta: Yes, I **have**."
+          - en: "A short answer ends with the auxiliary from the question: do / does or have / has."
+            es: "La respuesta corta termina con el auxiliar de la pregunta: do / does o have / has."
 
   - title: { en: Use, es: Uso }
     level: A1
@@ -120,11 +118,11 @@ sections:
           - { use: { en: Family and friends, es: Familia y amigos }, example: "She**'s got** two sisters.", tr: { es: Tiene dos hermanas. } }
           - { use: { en: "Features, appearance", es: "Rasgos, aspecto" }, example: "He **has** blue eyes. / My flat **has** a balcony.", tr: { es: Tiene los ojos azules. / Mi piso tiene balcón. } }
           - { use: { en: "Illness, pain", es: "Enfermedad, dolor" }, example: "I**'ve got** a headache.", tr: { es: Tengo dolor de cabeza. } }
-          - { use: { en: "Free time, plans", es: "Tiempo libre, planes" }, example: "We **have** a lot of work today.", tr: { es: Hoy tenemos mucho trabajo. } }
+          - { use: { en: "Work, appointments", es: "Trabajo, citas" }, example: "I**'ve got** a meeting at 3.", tr: { es: Tengo una reunión a las 3. } }
       - type: bullets
         items:
-          - { for: [es], text: { es: "Edad, hambre, sed, frío y calor llevan **be**, no **have**: I am 20 / hungry. Ver [To be](id:en.verbs-core.to-be)." } }
-          - { for: [es], text: { es: "*Hay* no es **have**: *Hay un parque.* → There is a park. Ver [There is / there are](id:en.verbs-core.there-is-are)." } }
+          - { for: [es], text: { es: "Edad, hambre, sed, frío y calor llevan **be**: I am 20 / hungry. Ver [To be](id:en.verbs-core.to-be)." } }
+          - { for: [es], text: { es: "*Hay* = there is / there are: *Hay un parque.* → There is a park. Ver [There is / there are](id:en.verbs-core.there-is-are)." } }
 
   - title: { en: "Have for actions", es: "Have para acciones" }
     level: A1
@@ -140,11 +138,9 @@ sections:
           - { group: { en: Talking, es: Conversación }, example: "I **have** a chat with Tom.", tr: { es: Charlo con Tom. } }
       - type: bullets
         items:
-          - en: "In this use **have** is a main verb: the negative and questions take **do / does**."
-            es: "En este uso **have** es verbo principal: la negativa y las preguntas llevan **do / does**."
           - text:
-              en: "**have got** does not exist in this use. Questions and negatives use **do**:"
-              es: "**have got** no existe en este uso. Las preguntas y negativas llevan **do**:"
+              en: "In this use **have** is a main verb, so questions and negatives take **do / does**:"
+              es: "En este uso **have** es verbo principal, así que las preguntas y negativas llevan **do / does**:"
             ex: "What time **do** you **have** lunch? / I **don't have** breakfast."
             tr: { es: ¿A qué hora comes? / No desayuno. }
           - { for: [es], text: { es: "Una ducha, un café o una comida se *toman* o se *hacen*; en inglés es siempre **have**." } }
@@ -174,7 +170,7 @@ sections:
           - { wrong: Do you have got a car?, right: "**Do** you **have** a car? / **Have** you **got** a car?", rule: { en: "do goes with have, not with have got", es: "do va con have, no con have got" } }
           - { wrong: I don't have got a car., right: "I **haven't got** a car. / I **don't have** a car.", rule: { en: "choose one pattern: have or have got", es: "un solo modelo: have o have got" } }
           - { for: [en], wrong: Does she has a car?, right: "Does she **have** a car?", rule: { en: does + base verb } }
-          - { wrong: "Has she got a car? — Yes, she has got.", right: "Yes, she **has**.", rule: { en: "short answers leave out got", es: "la respuesta corta no lleva got" } }
+          - { wrong: She don't have a car., right: "She **doesn't have** a car.", rule: { en: he / she / it → doesn't, es: he / she / it → doesn't } }
           - { for: [es], wrong: I have 20 years., right: "I **am** 20.", rule: { es: la edad se dice con be } }
           - { for: [es], wrong: I take a shower. / I make a shower., right: "I **have** a shower.", rule: { es: "*tomar / hacer una ducha* = have a shower" } }
           - { wrong: I have got breakfast at 8., right: "I **have** breakfast at 8.", rule: { en: "actions take have only", es: "las acciones llevan solo have" } }
@@ -200,10 +196,10 @@ essentials:
             items:
               - en: "he / she / it → **has**: She **has** a dog."
                 es: "he / she / it → **has**: She **has** a dog."
-              - en: "**have** takes do / does; **have got** takes have / has. Keep the two patterns apart."
-                es: "**have** lleva do / does; **have got** lleva have / has. Los dos modelos no se mezclan."
-              - en: "Short answers leave out **got**: Yes, I **have**."
-                es: "La respuesta corta no lleva **got**: Yes, I **have**."
+              - en: "**have** takes do / does; **have got** takes have / has. Each pattern keeps its own auxiliary."
+                es: "**have** lleva do / does; **have got** lleva have / has. Cada modelo mantiene su auxiliar."
+              - en: "A short answer ends with the auxiliary: Yes, I **have**. / Yes, I **do**."
+                es: "La respuesta corta termina con el auxiliar: Yes, I **have**. / Yes, I **do**."
               - en: "Actions take only **have**: I **have** breakfast. / I **don't have** lunch."
                 es: "Las acciones llevan solo **have**: I **have** breakfast. / I **don't have** lunch."
       - title: { en: Use, es: Uso }
@@ -222,7 +218,7 @@ essentials:
             rows:
               - { wrong: She have a dog., right: "She **has** a dog." }
               - { wrong: Do you have got a car?, right: "**Have** you **got** a car?" }
-              - { wrong: "Has she got a car? — Yes, she has got.", right: "Yes, she **has**." }
+              - { wrong: She don't have a car., right: "She **doesn't have** a car." }
               - { for: [es], wrong: I have 20 years., right: "I **am** 20." }
               - { wrong: I have got breakfast at 8., right: "I **have** breakfast at 8." }
 
@@ -231,6 +227,6 @@ reminders:
     items:
       - en: "he / she / it → **has**: She **has** a dog."
         es: "he / she / it → **has**: She **has** a dog."
-      - en: "Do not mix patterns: **Do** you **have**…? / **Have** you **got**…?"
-        es: "Sin mezclar modelos: **Do** you **have**…? / **Have** you **got**…?"
+      - en: "Each pattern keeps its auxiliary: **Do** you **have**…? / **Have** you **got**…?"
+        es: "Cada modelo con su auxiliar: **Do** you **have**…? / **Have** you **got**…?"
       - { for: [es], text: { es: "Edad con be: I **am** 20." } }
