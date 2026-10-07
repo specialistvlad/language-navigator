@@ -44,6 +44,8 @@ languages:
         topics:
           - { slug: tense-map, levels: A1-B1, title: { en: "Tense map", es: "Mapa de tiempos verbales" } }
           - { slug: simple-tenses, levels: A1-A2, title: { en: "Simple Tenses", es: "Tiempos simples" } }
+          - { slug: continuous-tenses, levels: A1-B1, title: { en: "Continuous Tenses", es: "Tiempos continuos" } }
+          - { slug: perfect-tenses, levels: A2-B1, title: { en: "Perfect Tenses", es: "Tiempos perfectos" } }
           - { slug: present-simple, levels: A1-A2, title: { en: "Present Simple", es: "Presente simple" } }
           - { slug: present-continuous, levels: A1, title: { en: "Present Continuous", es: "Presente continuo" } }
           - { slug: past-simple, levels: A1-A2 }

@@ -1,0 +1,295 @@
+# yaml-language-server: $schema=../../../schema/topic.schema.json
+id: en.tenses.continuous-tenses
+lang: en
+kind: grammar
+levels: [A1, A2, B1]
+tags: [verbs, tenses, continuous, present, past, future]
+concepts: [continuous, present-tense, past-tense, future]
+related: [en.tenses.tense-map, en.tenses.simple-tenses, en.tenses.perfect-tenses, en.verbs.to-be, en.tenses.future-forms, en.sentence-building.questions-negatives]
+status: { en: draft, es: draft }
+
+title: { en: Continuous Tenses, es: Tiempos continuos }
+summary:
+  en: "The past, present and future continuous: actions in progress at a moment. Each continuous tense is a form of be plus the verb with -ing: will be for the future, am, is or are for the present, was or were for the past. Be goes before the subject in questions and takes not in negatives, and the main verb always ends in -ing. The page opens with one grid that shows every form for every person, then covers the -ing spelling, each tense one by one, stative verbs and the contrast with the simple tenses. At A1 it covers the present continuous; A2 adds the past continuous and B1 the future continuous. The thing to get right is be: every continuous form needs it, and it carries the tense."
+  es: "El pasado, el presente y el futuro continuo: acciones en curso en un momento. Cada tiempo continuo es una forma de be más el verbo con -ing: will be para el futuro, am, is o are para el presente y was o were para el pasado. Be va delante del sujeto en las preguntas y lleva not en las negativas, y el verbo principal siempre termina en -ing. La página empieza con una tabla que muestra todas las formas para todas las personas y después trata la ortografía de -ing, cada tiempo por separado, los verbos de estado y el contraste con los tiempos simples. En A1 trata el presente continuo; A2 añade el pasado continuo y B1 el futuro continuo. Lo más importante es be: toda forma continua lo necesita y es be quien lleva el tiempo. Corresponde a estar + gerundio, pero el español usa más el presente y el imperfecto simples (¿Qué haces?, llovía)."
+
+sections:
+  - title: { en: Overview, es: Resumen }
+    level: A1-B1
+    content:
+      - type: text
+        text:
+          en: "Each continuous tense is **be** + verb + **-ing**: **will be** for the future, **am / is / are** for the present, **was / were** for the past."
+          es: "Cada tiempo continuo es **be** + verbo + **-ing**: **will be** para el futuro, **am / is / are** para el presente y **was / were** para el pasado."
+      - type: table
+        columns:
+          - { key: tense, label: { en: Tense, es: Tiempo } }
+          - { key: question, label: { en: Question, es: Pregunta } }
+          - { key: statement, label: { en: Statement, es: Afirmación } }
+          - { key: negative, label: { en: Negative, es: Negativa } }
+        rows:
+          - tense: { en: "**Future**\nwill be", es: "**Futuro**\nwill be" }
+            question: "**Will** I **be** work**ing**?\n**Will** you **be** work**ing**?\n**Will** he **be** work**ing**?\n**Will** she **be** work**ing**?\n**Will** it **be** work**ing**?\n**Will** we **be** work**ing**?\n**Will** they **be** work**ing**?"
+            statement: "I **will be** work**ing**.\nYou **will be** work**ing**.\nHe **will be** work**ing**.\nShe **will be** work**ing**.\nIt **will be** work**ing**.\nWe **will be** work**ing**.\nThey **will be** work**ing**."
+            negative: "I **won't be** work**ing**.\nYou **won't be** work**ing**.\nHe **won't be** work**ing**.\nShe **won't be** work**ing**.\nIt **won't be** work**ing**.\nWe **won't be** work**ing**.\nThey **won't be** work**ing**."
+          - tense: { en: "**Present**\nam / is / are", es: "**Presente**\nam / is / are" }
+            question: "**Am** I work**ing**?\n**Are** you work**ing**?\n**Is** he work**ing**?\n**Is** she work**ing**?\n**Is** it work**ing**?\n**Are** we work**ing**?\n**Are** they work**ing**?"
+            statement: "I **am** work**ing**.\nYou **are** work**ing**.\nHe **is** work**ing**.\nShe **is** work**ing**.\nIt **is** work**ing**.\nWe **are** work**ing**.\nThey **are** work**ing**."
+            negative: "I'**m not** work**ing**.\nYou **aren't** work**ing**.\nHe **isn't** work**ing**.\nShe **isn't** work**ing**.\nIt **isn't** work**ing**.\nWe **aren't** work**ing**.\nThey **aren't** work**ing**."
+          - tense: { en: "**Past**\nwas / were", es: "**Pasado**\nwas / were" }
+            question: "**Was** I work**ing**?\n**Were** you work**ing**?\n**Was** he work**ing**?\n**Was** she work**ing**?\n**Was** it work**ing**?\n**Were** we work**ing**?\n**Were** they work**ing**?"
+            statement: "I **was** work**ing**.\nYou **were** work**ing**.\nHe **was** work**ing**.\nShe **was** work**ing**.\nIt **was** work**ing**.\nWe **were** work**ing**.\nThey **were** work**ing**."
+            negative: "I **wasn't** work**ing**.\nYou **weren't** work**ing**.\nHe **wasn't** work**ing**.\nShe **wasn't** work**ing**.\nIt **wasn't** work**ing**.\nWe **weren't** work**ing**.\nThey **weren't** work**ing**."
+      - type: bullets
+        items:
+          - en: "In questions be goes before the subject; in negatives it takes **not**: isn't, wasn't, won't be."
+            es: "En las preguntas be va delante del sujeto; en las negativas lleva **not**: isn't, wasn't, won't be."
+          - en: "The main verb always ends in **-ing**, in every tense and for every person."
+            es: "El verbo principal siempre termina en **-ing**, en todos los tiempos y para todas las personas."
+          - en: "Be changes with the person in the present and past; **will be** is the same for everyone."
+            es: "Be cambia con la persona en presente y pasado; **will be** es igual para todos."
+          - en: "Speech and messages use short forms: I'm, she's, they're, won't be."
+            es: "En la conversación y en los mensajes se usan formas cortas: I'm, she's, they're, won't be."
+          - { for: [es], text: { es: "*Estoy trabajando* → I'**m** working: el sujeto y be siempre aparecen." } }
+
+  - title: { en: "The -ing form", es: "La forma en -ing" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: ending, label: { en: Verb ending, es: Terminación } }
+          - { key: rule, label: { en: Spelling, es: Ortografía } }
+          - { key: examples, label: { en: Examples, es: Ejemplos } }
+        rows:
+          - { ending: { en: most verbs, es: la mayoría de los verbos }, rule: + ing, examples: work → working / play → playing / go → going }
+          - { ending: "-e", rule: { en: drop e + ing, es: quita la e + ing }, examples: make → making / write → writing / come → coming }
+          - { ending: "-ee", rule: + ing, examples: see → seeing / agree → agreeing }
+          - { ending: "-ie", rule: ie → ying, examples: lie → lying / die → dying }
+          - { ending: { en: "1 vowel + 1 consonant, one syllable", es: "1 vocal + 1 consonante, una sílaba" }, rule: { en: double the consonant + ing, es: dobla la consonante + ing }, examples: run → running / sit → sitting / swim → swimming }
+          - { ending: "-w, -x, -y", rule: { en: "+ ing, single consonant", es: "+ ing, consonante simple" }, examples: show → showing / fix → fixing / stay → staying }
+
+  - title: { en: "Present continuous: form", es: "Presente continuo: forma" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: subject, label: { en: Subject, es: Sujeto } }
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { subject: I, form: am / 'm + V-ing, example: "I'**m reading**.", tr: { es: "Estoy leyendo." } }
+          - { subject: he / she / it, form: is / 's + V-ing, example: "He'**s reading**.", tr: { es: "Está leyendo." } }
+          - { subject: you / we / they, form: are / 're + V-ing, example: "They'**re reading**.", tr: { es: "Están leyendo." } }
+          - { subject: { en: singular noun, es: sustantivo singular }, form: is + V-ing, example: "My sister **is reading**.", tr: { es: "Mi hermana está leyendo." } }
+      - type: bullets
+        items:
+          - text:
+              en: "A short answer repeats be; the positive answer takes the full form:"
+              es: "La respuesta corta repite be; la afirmativa va con la forma completa:"
+            ex: "Are you working? — Yes, I **am**. / No, I'**m not**."
+            tr: { es: "¿Estás trabajando? — Sí. / No." }
+          - text:
+              en: "A wh-word goes first: wh-word + am / is / are + subject + V-ing."
+              es: "La palabra interrogativa va primero: wh-word + am / is / are + sujeto + V-ing."
+            ex: "What **are** you **doing**?"
+            tr: { es: "¿Qué estás haciendo?" }
+
+  - title: { en: "Present continuous: use", es: "Presente continuo: uso" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { use: { en: Actions happening now, es: Acciones que ocurren ahora }, example: "I'**m cooking** dinner.", tr: { es: "Estoy preparando la cena." } }
+          - { use: { en: Temporary situations, es: Situaciones temporales }, example: "I'**m staying** with my sister this week.", tr: { es: "Esta semana me alojo en casa de mi hermana." } }
+          - { use: { en: "Changes and trends around now", es: "Cambios y tendencias actuales" }, example: "Prices **are going** up.", tr: { es: "Los precios están subiendo." } }
+      - type: bullets
+        items:
+          - text:
+              en: "Time words: now, right now, at the moment, today, this week, Look!"
+              es: "Expresiones de tiempo: now, right now, at the moment, today, this week, Look!"
+            ex: "**Look!** It's snow**ing**."
+            tr: { es: "¡Mira! Está nevando." }
+          - en: "Plans and arrangements for the future: see [Future forms](id:en.tenses.future-forms)."
+            es: "Planes y citas acordadas para el futuro: ver [Formas de futuro](id:en.tenses.future-forms)."
+          - { for: [es], text: { es: "El español usa el presente más que el gerundio: *Llueve* = It's raining. *¿Qué haces?* (ahora) = What are you doing?" } }
+
+  - title: { en: "Past continuous: form", es: "Pasado continuo: forma" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: subject, label: { en: Subject, es: Sujeto } }
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { subject: I / he / she / it, form: was + V-ing, example: "She **was reading**.", tr: { es: "Estaba leyendo." } }
+          - { subject: you / we / they, form: were + V-ing, example: "We **were reading**.", tr: { es: "Estábamos leyendo." } }
+      - type: bullets
+        items:
+          - text:
+              en: "A short answer repeats was / were:"
+              es: "La respuesta corta repite was / were:"
+            ex: "Were you sleeping? — Yes, I **was**. / No, I **wasn't**."
+            tr: { es: "¿Dormías? — Sí. / No." }
+          - text:
+              en: "A wh-word goes first: wh-word + was / were + subject + V-ing."
+              es: "La palabra interrogativa va primero: wh-word + was / were + sujeto + V-ing."
+            ex: "What **were** you **doing** at 8?"
+            tr: { es: "¿Qué estabas haciendo a las 8?" }
+
+  - title: { en: "Past continuous: use", es: "Pasado continuo: uso" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { use: { en: In progress at a past moment, es: En curso en un momento del pasado }, example: "At 8 o'clock I **was having** dinner.", tr: { es: "A las 8 estaba cenando." } }
+          - { use: { en: Background to a story, es: Escenario de una historia }, example: "The sun **was shining** and children **were playing**.", tr: { es: "Brillaba el sol y los niños jugaban." } }
+          - { use: { en: "Interrupted action (when + past simple)", es: "Acción interrumpida (when + past simple)" }, example: "I **was cooking** when the phone **rang**.", tr: { es: "Estaba cocinando cuando sonó el teléfono." } }
+          - { use: { en: "Two actions at the same time (while)", es: "Dos acciones a la vez (while)" }, example: "While I **was cooking**, he **was watching** TV.", tr: { es: "Mientras yo cocinaba, él veía la tele." } }
+      - type: bullets
+        items:
+          - en: "**while** comes before the long action; **when** comes before the short action that interrupts it."
+            es: "**while** va delante de la acción larga; **when**, delante de la acción corta que la interrumpe."
+          - { for: [es], text: { es: "*Llovía cuando salí* = imperfecto + indefinido → It **was raining** when I **left**." } }
+
+  - title: { en: "Future continuous: form and use", es: "Futuro continuo: forma y uso" }
+    level: B1
+    content:
+      - type: table
+        columns:
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { use: { en: "In progress at a future moment", es: "En curso en un momento del futuro" }, example: "This time tomorrow I'**ll be flying** to Rome.", tr: { es: "Mañana a estas horas estaré volando a Roma." } }
+          - { use: { en: "Polite questions about plans", es: "Preguntas corteses sobre planes" }, example: "**Will** you **be using** the car tonight?", tr: { es: "¿Vas a usar el coche esta noche?" } }
+      - type: bullets
+        items:
+          - en: "Time words: this time tomorrow, at 8 tonight, all day tomorrow."
+            es: "Expresiones de tiempo: this time tomorrow, at 8 tonight, all day tomorrow."
+          - { for: [es], text: { es: "*Estaré volando* = I'**ll be flying**: will be + -ing." } }
+
+  - title: { en: Stative verbs, es: Verbos de estado }
+    level: A1-A2
+    content:
+      - type: text
+        text:
+          en: "Verbs for states take the simple tenses, also for what is true right now."
+          es: "Los verbos de estado van en los tiempos simples, también para lo que es verdad en este momento."
+      - type: table
+        columns:
+          - { key: group, label: { en: Group, es: Grupo } }
+          - { key: verbs, label: { en: Verbs, es: Verbos } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { group: { en: Feelings, es: Sentimientos }, verbs: "like, love, hate, want, need, prefer", example: { ex: "I **want** a coffee.", tr: { es: "Quiero un café." } } }
+          - { group: { en: Thinking, es: Pensamiento }, verbs: { en: "know, think (= believe), understand, remember, mean", es: "know, think (= creer), understand, remember, mean" }, example: { ex: "I **understand** you.", tr: { es: "Te entiendo." } } }
+          - { level: A2, group: { en: Possession, es: Posesión }, verbs: { en: "have (= own), own, belong", es: "have (= tener), own, belong" }, example: { ex: "This bag **belongs** to me.", tr: { es: "Este bolso es mío." } } }
+          - { level: A2, group: { en: "Senses, being", es: "Sentidos, estado" }, verbs: "see, hear, seem, cost", example: { ex: "It **costs** £10.", tr: { es: "Cuesta 10 libras." } } }
+
+  - title: { en: "Compare: continuous and simple", es: "Comparación: continuo y simple" }
+    level: A1-A2
+    content:
+      - type: table
+        columns:
+          - { key: continuous, label: { en: Continuous, es: Continuo } }
+          - { key: simple, label: { en: Simple, es: Simple } }
+        rows:
+          - { continuous: { en: "in progress, temporary", es: "en curso, temporal" }, simple: { en: "habit, fact, finished event", es: "hábito, hecho, acción terminada" } }
+          - { continuous: { ex: "I'**m drinking** tea now.", tr: { es: "Ahora estoy tomando té." } }, simple: { ex: "I **drink** tea every day.", tr: { es: "Tomo té todos los días." } } }
+          - { continuous: { ex: "What **are** you **doing**? (= now)", tr: { es: "¿Qué estás haciendo?" } }, simple: { ex: "What **do** you **do**? (= your job)", tr: { es: "¿A qué te dedicas?" } } }
+          - { level: A2, continuous: { ex: "I **was walking** home…", tr: { es: "Iba andando a casa…" } }, simple: { ex: "…when I **saw** Tom.", tr: { es: "…cuando vi a Tom." } } }
+      - type: bullets
+        items:
+          - { for: [es], text: { es: "El presente español cubre los dos: *trabajo* = I work / I'm working." } }
+          - en: "Simple forms: [Simple Tenses](id:en.tenses.simple-tenses)."
+            es: "Formas simples: [Tiempos simples](id:en.tenses.simple-tenses)."
+
+  - title: { en: Typical errors, es: Errores típicos }
+    level: A1-B1
+    content:
+      - type: errors
+        audience: true
+        rows:
+          - { wrong: She working now., right: "She **is working** now.", rule: { en: "be is required", es: "be es obligatorio" } }
+          - { wrong: I am work now., right: "I'm **working** now.", rule: { en: "be + V-ing", es: "be + V-ing" } }
+          - { for: [es], wrong: I no am working., right: "I'**m not** working.", rule: { es: "negativa: be + not + V-ing" } }
+          - { wrong: What you are doing?, right: "What **are you** doing?", rule: { en: "be goes before the subject", es: "be va delante del sujeto" } }
+          - { for: [en], wrong: Does she working?, right: "**Is** she working?", rule: { en: "questions start with be" } }
+          - { for: [en], wrong: He is runing., right: "He is **running**.", rule: { en: "one vowel + one consonant → double it" } }
+          - { for: [es], wrong: Be quiet! The baby sleeps., right: "Be quiet! The baby **is sleeping**.", rule: { es: "acción en curso ahora → be + -ing" } }
+          - { wrong: I am knowing the answer., right: "I **know** the answer.", rule: { en: "stative verbs → simple tenses", es: "verbos de estado → tiempos simples" } }
+          - { wrong: "When I was walking home, I was seeing an accident.", right: "…I **saw** an accident.", rule: { en: "short interrupting action → past simple", es: "acción corta que interrumpe → past simple" } }
+          - { for: [es], wrong: "When I was a child, I was playing outside every day.", right: "…I **played** outside every day.", rule: { es: "hábito pasado → past simple o used to" } }
+          - { for: [en], wrong: We was playing., right: "We **were** playing.", rule: { en: "you / we / they → were" } }
+          - { for: [en], wrong: I will flying tomorrow., right: "I **will be flying** tomorrow.", rule: { en: "will be + V-ing" } }
+
+essentials:
+  - level: A1
+    parts:
+      - title: { en: Form, es: Forma }
+        content:
+          - type: table
+            columns:
+              - { key: form, label: { en: Form, es: Forma } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { form: +, example: "I'**m working**. / She **is working**. / They **are working**." }
+              - { form: −, example: "I'**m not working**. / She **isn't working**." }
+              - { form: "?", example: "**Is** she **working**? / What **are** you **doing**?" }
+      - title: { en: Key rules, es: Reglas clave }
+        content:
+          - type: bullets
+            items:
+              - { en: "am / is / are + **V-ing**. Be always appears.", es: "am / is / are + **V-ing**. Be siempre aparece." }
+              - { en: "Spelling: make → making, run → running, lie → lying.", es: "Ortografía: make → making, run → running, lie → lying." }
+              - { en: "Stative verbs take the simple tenses: I **know**. / I **want** a coffee.", es: "Los verbos de estado van en tiempos simples: I **know**. / I **want** a coffee." }
+      - title: { en: Use, es: Uso }
+        content:
+          - type: table
+            columns:
+              - { key: use, label: { en: Use, es: Uso } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { use: { en: "now", es: "ahora" }, example: "I'**m cooking** dinner.", tr: { es: "Estoy preparando la cena." } }
+              - { use: { en: "temporary", es: "temporal" }, example: "I'**m staying** with my sister.", tr: { es: "Me alojo en casa de mi hermana." } }
+      - title: { en: Top errors, es: Errores principales }
+        content:
+          - type: errors
+            rows:
+              - { wrong: She working now., right: "She **is working** now." }
+              - { wrong: What you are doing?, right: "What **are you** doing?" }
+              - { wrong: I am knowing the answer., right: "I **know** the answer." }
+  - level: A2
+    content:
+      - type: table
+        columns:
+          - { key: point, label: { en: Point, es: Punto } }
+          - { key: rule, label: { en: Rule, es: Regla } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { point: { en: Past continuous, es: Pasado continuo }, rule: { en: "was / were + V-ing", es: "was / were + V-ing" }, example: "I **was cooking**." }
+          - { point: when / while, rule: { en: "long action → past continuous; short action → past simple", es: "acción larga → past continuous; acción corta → past simple" }, example: "I **was cooking** when the phone **rang**." }
+  - level: B1
+    content:
+      - type: table
+        columns:
+          - { key: point, label: { en: Point, es: Punto } }
+          - { key: rule, label: { en: Rule, es: Regla } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { point: { en: Future continuous, es: Futuro continuo }, rule: { en: "will be + V-ing: in progress at a future moment", es: "will be + V-ing: en curso en un momento futuro" }, example: "This time tomorrow I'**ll be flying**." }
+
+reminders:
+  - level: A1
+    items:
+      - { en: "be + V-ing: She **is working**.", es: "be + V-ing: She **is working**." }
+      - { en: "Stative verbs take the simple tenses: I **know**.", es: "Los verbos de estado van en tiempos simples: I **know**." }
+  - level: A2
+    items:
+      - { en: "Long action **was / were + -ing**, short action past simple: I **was cooking** when he **called**.", es: "Acción larga **was / were + -ing**, corta en past simple: I **was cooking** when he **called**." }
