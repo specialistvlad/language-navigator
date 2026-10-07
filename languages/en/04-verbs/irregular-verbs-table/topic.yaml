@@ -1,11 +1,11 @@
 # yaml-language-server: $schema=../../../schema/topic.schema.json
-id: en.verbs-core.irregular-verbs-table
+id: en.verbs.irregular-verbs-table
 lang: en
 kind: reference
 levels: [A1, A2, B1]
 tags: [verbs, irregular, reference]
 concepts: [irregular-verbs]
-related: [en.tenses.past-simple, en.tenses.present-perfect, en.tenses.past-perfect, en.verbs-core.to-be, en.verbs-core.have-have-got, en.sentence-building.passive-voice]
+related: [en.tenses.past-simple, en.tenses.present-perfect, en.tenses.past-perfect, en.verbs.to-be, en.verbs.have-have-got, en.sentence-building.passive-voice]
 status: { en: draft, es: draft }
 
 title: { en: Irregular Verbs Table, es: Tabla de verbos irregulares (irregular verbs table) }

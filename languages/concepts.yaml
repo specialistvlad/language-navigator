@@ -288,3 +288,9 @@ phrasal-verbs:
   description:
     en: "Verb + particle with its own meaning: get up, look for."
     es: "Verbo + partícula con un significado propio: get up, look for."
+
+reflexive:
+  title: { en: Reflexive forms, es: Formas reflexivas }
+  description:
+    en: "Actions that return to the subject: myself, me lavo."
+    es: "Acciones que vuelven al sujeto: myself, me lavo."

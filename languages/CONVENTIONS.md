@@ -71,7 +71,7 @@ languages/
 | item | `{ text, ex, tr, level, for }` | a bullet or paragraph combining explanation and example |
 
 - Inline formatting inside strings: `**bold**` marks the target form, `*italic*` marks a gloss.
-- Links point to topic IDs: `[To be](id:en.verbs-core.to-be)`. The renderers turn them into
+- Links point to topic IDs: `[To be](id:en.verbs.to-be)`. The renderers turn them into
   page or file links in the reader's explanation language.
 - `for: [es]` limits an element to the listed explanation languages. Use it for notes,
   sections or error rows that serve one group of readers.

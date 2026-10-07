@@ -5,7 +5,7 @@ kind: grammar
 levels: [A1]
 tags: [verbs, tenses, present, continuous]
 concepts: [present-tense, continuous]
-related: [en.tenses.present-simple, en.verbs-core.to-be, en.tenses.future-forms, en.sentence-building.questions-negatives, en.tenses.tense-map]
+related: [en.tenses.present-simple, en.verbs.to-be, en.tenses.future-forms, en.sentence-building.questions-negatives, en.tenses.tense-map]
 status: { en: draft, es: draft }
 
 title: { en: Present Continuous, es: Presente continuo (present continuous) }

@@ -5,7 +5,7 @@ kind: grammar
 levels: [A1, A2]
 tags: [prepositions, place, movement, transport]
 concepts: [prepositions-place]
-related: [en.prepositions.time-in-on-at, en.prepositions.phrasal-verbs-core, en.verbs-core.there-is-are]
+related: [en.prepositions.time-in-on-at, en.verbs.phrasal-verbs-core, en.verbs.there-is-are]
 status: { en: draft, es: draft }
 
 title: { en: "Place and Movement", es: "Lugar y movimiento (place and movement)" }

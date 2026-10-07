@@ -1,11 +1,11 @@
 # yaml-language-server: $schema=../../../schema/topic.schema.json
-id: en.verbs-core.have-have-got
+id: en.verbs.have-have-got
 lang: en
 kind: grammar
 levels: [A1]
 tags: [verbs, have, possession]
 concepts: [have]
-related: [en.verbs-core.to-be, en.tenses.present-simple, en.verbs-core.there-is-are, en.nouns-determiners.possessive-s, en.sentence-building.questions-negatives]
+related: [en.verbs.to-be, en.tenses.present-simple, en.verbs.there-is-are, en.nouns-determiners.possessive-s, en.sentence-building.questions-negatives]
 status: { en: draft, es: draft }
 
 title: { en: Have and Have Got, es: Have y have got (have and have got) }
@@ -121,8 +121,8 @@ sections:
           - { use: { en: "Work, appointments", es: "Trabajo, citas" }, example: "I**'ve got** a meeting at 3.", tr: { es: Tengo una reunión a las 3. } }
       - type: bullets
         items:
-          - { for: [es], text: { es: "Edad, hambre, sed, frío y calor llevan **be**: I am 20 / hungry. Ver [To be](id:en.verbs-core.to-be)." } }
-          - { for: [es], text: { es: "*Hay* = there is / there are: *Hay un parque.* → There is a park. Ver [There is / there are](id:en.verbs-core.there-is-are)." } }
+          - { for: [es], text: { es: "Edad, hambre, sed, frío y calor llevan **be**: I am 20 / hungry. Ver [To be](id:en.verbs.to-be)." } }
+          - { for: [es], text: { es: "*Hay* = there is / there are: *Hay un parque.* → There is a park. Ver [There is / there are](id:en.verbs.there-is-are)." } }
 
   - title: { en: "Have for actions", es: "Have para acciones" }
     level: A1

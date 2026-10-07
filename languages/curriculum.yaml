@@ -28,14 +28,17 @@ languages:
         topics:
           - { slug: personal-pronouns, levels: A0-A1 }
           - { slug: indefinite-pronouns, levels: A2 }
-      - dir: 04-verbs-core
-        title: { en: Core verbs, es: Verbos básicos }
+          - { slug: reflexive-pronouns, levels: A2 }
+      - dir: 04-verbs
+        title: { en: Verbs, es: Verbos }
         topics:
           - { slug: to-be, levels: A0, title: { en: "To be", es: "To be (ser / estar)" } }
           - { slug: have-have-got, levels: A1 }
           - { slug: there-is-are, levels: A1 }
           - { slug: imperative, levels: A1 }
           - { slug: irregular-verbs-table, levels: A1-B1 }
+          - { slug: phrasal-verbs-core, levels: A2-B1 }
+          - { slug: gerund-vs-infinitive, levels: B1 }
       - dir: 05-tenses
         title: { en: Tenses, es: Tiempos verbales }
         topics:
@@ -66,7 +69,6 @@ languages:
           - { slug: relative-clauses, levels: B1 }
           - { slug: passive-voice, levels: B1 }
           - { slug: reported-speech, levels: B1 }
-          - { slug: gerund-vs-infinitive, levels: B1 }
           - { slug: question-tags, levels: B1 }
       - dir: 08-adjectives-adverbs
         title: { en: Adjectives and adverbs, es: Adjetivos y adverbios }
@@ -80,7 +82,6 @@ languages:
         topics:
           - { slug: time-in-on-at, levels: A1 }
           - { slug: place-movement, levels: A1-A2 }
-          - { slug: phrasal-verbs-core, levels: A2-B1 }
   - code: es
     slug: spanish
     name: { en: Spanish, es: Español }

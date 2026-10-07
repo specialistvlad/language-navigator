@@ -5,7 +5,7 @@ kind: grammar
 levels: [A0, A1]
 tags: [pronouns, subject, object, possessives]
 concepts: [pronouns, possession]
-related: [en.verbs-core.to-be, en.nouns-determiners.possessive-s, en.nouns-determiners.demonstratives-this-that, en.pronouns.indefinite-pronouns]
+related: [en.verbs.to-be, en.nouns-determiners.possessive-s, en.nouns-determiners.demonstratives-this-that, en.pronouns.indefinite-pronouns]
 status: { en: draft, es: draft }
 
 title: { en: Personal Pronouns, es: Pronombres personales (personal pronouns) }

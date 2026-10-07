@@ -5,7 +5,7 @@ kind: grammar
 levels: [A1, A2]
 tags: [verbs, tenses, past]
 concepts: [past-tense]
-related: [en.tenses.past-continuous, en.tenses.used-to, en.tenses.present-perfect, en.verbs-core.to-be, en.verbs-core.irregular-verbs-table, en.sentence-building.questions-negatives, en.tenses.tense-map]
+related: [en.tenses.past-continuous, en.tenses.used-to, en.tenses.present-perfect, en.verbs.to-be, en.verbs.irregular-verbs-table, en.sentence-building.questions-negatives, en.tenses.tense-map]
 status: { en: draft, es: draft }
 
 title: { en: Past Simple, es: Pasado simple (past simple) }
@@ -89,8 +89,8 @@ sections:
           - { base: write, past: wrote, example: "I **wrote** an email.", tr: { es: "Escribí un correo." } }
       - type: bullets
         items:
-          - en: "More verbs are in the [Irregular verbs table](id:en.verbs-core.irregular-verbs-table)."
-            es: "Más verbos en la [Tabla de verbos irregulares (irregular verbs table)](id:en.verbs-core.irregular-verbs-table)."
+          - en: "More verbs are in the [Irregular verbs table](id:en.verbs.irregular-verbs-table)."
+            es: "Más verbos en la [Tabla de verbos irregulares (irregular verbs table)](id:en.verbs.irregular-verbs-table)."
 
   - title: { en: "Form: negative", es: "Forma: negativa" }
     level: A1

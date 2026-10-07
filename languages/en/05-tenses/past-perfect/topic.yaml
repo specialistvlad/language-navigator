@@ -5,7 +5,7 @@ kind: grammar
 levels: [B1]
 tags: [verbs, tenses, past, perfect]
 concepts: [past-perfect]
-related: [en.tenses.past-simple, en.tenses.present-perfect, en.tenses.past-continuous, en.tenses.tense-map, en.verbs-core.irregular-verbs-table]
+related: [en.tenses.past-simple, en.tenses.present-perfect, en.tenses.past-continuous, en.tenses.tense-map, en.verbs.irregular-verbs-table]
 status: { en: draft, es: draft }
 
 title: { en: Past Perfect, es: Pluscuamperfecto (past perfect) }
@@ -48,8 +48,8 @@ sections:
         items:
           - en: "Contraction: I**'d**, she**'d**, they**'d**. Speech and messages use it."
             es: "Contracción: I**'d**, she**'d**, they**'d**. Se usa en conversación y mensajes."
-          - en: "Regular verbs take -ed; irregular participles are in the [Irregular verbs table](id:en.verbs-core.irregular-verbs-table)."
-            es: "Los regulares llevan -ed; los participios irregulares están en la [Tabla de verbos irregulares (irregular verbs table)](id:en.verbs-core.irregular-verbs-table)."
+          - en: "Regular verbs take -ed; irregular participles are in the [Irregular verbs table](id:en.verbs.irregular-verbs-table)."
+            es: "Los regulares llevan -ed; los participios irregulares están en la [Tabla de verbos irregulares (irregular verbs table)](id:en.verbs.irregular-verbs-table)."
 
   - title: { en: "Form: negative", es: "Forma: negativa" }
     level: B1

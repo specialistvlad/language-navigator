@@ -5,7 +5,7 @@ kind: grammar
 levels: [A1, A2]
 tags: [adverbs, frequency, manner]
 concepts: [adverbs]
-related: [en.tenses.present-simple, en.adjectives-adverbs.adjective-order, en.verbs-core.to-be, en.sentence-building.word-order]
+related: [en.tenses.present-simple, en.adjectives-adverbs.adjective-order, en.verbs.to-be, en.sentence-building.word-order]
 status: { en: draft, es: draft }
 
 title: { en: "Adverbs of frequency and manner", es: "Adverbios de frecuencia y modo" }

@@ -5,7 +5,7 @@ kind: grammar
 levels: [A2]
 tags: [verbs, tenses, past, continuous]
 concepts: [past-tense, continuous]
-related: [en.tenses.past-simple, en.tenses.present-continuous, en.tenses.used-to, en.verbs-core.to-be, en.tenses.tense-map]
+related: [en.tenses.past-simple, en.tenses.present-continuous, en.tenses.used-to, en.verbs.to-be, en.tenses.tense-map]
 status: { en: draft, es: draft }
 
 title: { en: Past Continuous, es: Pasado continuo (past continuous) }

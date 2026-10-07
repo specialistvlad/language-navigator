@@ -5,7 +5,7 @@ kind: grammar
 levels: [A2, B1]
 tags: [verbs, tenses, present, perfect]
 concepts: [present-perfect]
-related: [en.tenses.past-simple, en.tenses.present-simple, en.tenses.present-continuous, en.tenses.past-perfect, en.verbs-core.irregular-verbs-table, en.tenses.tense-map]
+related: [en.tenses.past-simple, en.tenses.present-simple, en.tenses.present-continuous, en.tenses.past-perfect, en.verbs.irregular-verbs-table, en.tenses.tense-map]
 status: { en: draft, es: draft }
 
 title: { en: Present Perfect, es: Presente perfecto (present perfect) }
@@ -70,8 +70,8 @@ sections:
         items:
           - en: "The -ed spelling rules are the same as in [Past Simple](id:en.tenses.past-simple)."
             es: "Las reglas de ortografía de -ed son las de [Pasado simple (past simple)](id:en.tenses.past-simple)."
-          - en: "All irregular forms are in the [Irregular verbs table](id:en.verbs-core.irregular-verbs-table)."
-            es: "Todas las formas irregulares están en la [Tabla de verbos irregulares (irregular verbs table)](id:en.verbs-core.irregular-verbs-table)."
+          - en: "All irregular forms are in the [Irregular verbs table](id:en.verbs.irregular-verbs-table)."
+            es: "Todas las formas irregulares están en la [Tabla de verbos irregulares (irregular verbs table)](id:en.verbs.irregular-verbs-table)."
 
   - title: { en: "Form: negative", es: "Forma: negativa" }
     level: A2

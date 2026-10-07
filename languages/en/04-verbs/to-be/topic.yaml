@@ -1,11 +1,11 @@
 # yaml-language-server: $schema=../../../schema/topic.schema.json
-id: en.verbs-core.to-be
+id: en.verbs.to-be
 lang: en
 kind: grammar
 levels: [A0]
 tags: [verbs, be, present]
 concepts: [be]
-related: [en.pronouns.personal-pronouns, en.tenses.present-simple, en.tenses.past-simple, en.verbs-core.there-is-are, en.verbs-core.have-have-got]
+related: [en.pronouns.personal-pronouns, en.tenses.present-simple, en.tenses.past-simple, en.verbs.there-is-are, en.verbs.have-have-got]
 status: { en: draft, es: draft }
 
 title: { en: "To be", es: "To be (ser / estar)" }
@@ -147,8 +147,8 @@ sections:
           - { for: [es], text: { es: "Hambre, sed, frío, calor y sueño llevan **be** + adjetivo: I'm hungry / thirsty / cold / hot / sleepy." } }
           - en: "A job takes **a / an**: He is **a** teacher. See [Articles](id:en.nouns-determiners.articles-a-an-the)."
             es: "Una profesión lleva **a / an**: He is **a** teacher. Ver [Artículos](id:en.nouns-determiners.articles-a-an-the)."
-          - en: "Weather and time use the subject **it**: **It** is cold. For *there is*, see [There is / there are](id:en.verbs-core.there-is-are)."
-            es: "El tiempo y la hora llevan el sujeto **it**: **It** is cold. Para *hay*, ver [There is / there are](id:en.verbs-core.there-is-are)."
+          - en: "Weather and time use the subject **it**: **It** is cold. For *there is*, see [There is / there are](id:en.verbs.there-is-are)."
+            es: "El tiempo y la hora llevan el sujeto **it**: **It** is cold. Para *hay*, ver [There is / there are](id:en.verbs.there-is-are)."
 
   - title: { en: Typical errors, es: Errores típicos }
     level: A0

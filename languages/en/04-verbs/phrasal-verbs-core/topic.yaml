@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=../../../schema/topic.schema.json
-id: en.prepositions.phrasal-verbs-core
+id: en.verbs.phrasal-verbs-core
 lang: en
 kind: grammar
 levels: [A2, B1]

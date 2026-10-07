@@ -5,7 +5,7 @@ kind: grammar
 levels: [A1, A2]
 tags: [verbs, tenses, present]
 concepts: [present-tense]
-related: [en.tenses.present-continuous, en.verbs-core.to-be, en.sentence-building.questions-negatives, en.adjectives-adverbs.adverbs-frequency-manner, en.tenses.tense-map]
+related: [en.tenses.present-continuous, en.verbs.to-be, en.sentence-building.questions-negatives, en.adjectives-adverbs.adverbs-frequency-manner, en.tenses.tense-map]
 status: { en: draft, es: draft }
 
 title: { en: Present Simple, es: Presente simple (present simple) }
@@ -30,8 +30,8 @@ sections:
       - type: bullets
         items:
           - { for: [es], text: { es: "I work = *trabajo*. She works = *trabaja*." } }
-          - en: "**be** has its own present forms (am / is / are). See [To be](id:en.verbs-core.to-be)."
-            es: "**be** tiene sus propias formas de presente (am / is / are). Ver [To be](id:en.verbs-core.to-be)."
+          - en: "**be** has its own present forms (am / is / are). See [To be](id:en.verbs.to-be)."
+            es: "**be** tiene sus propias formas de presente (am / is / are). Ver [To be](id:en.verbs.to-be)."
 
   - title: { en: "Form: affirmative", es: "Forma: afirmativa" }
     level: A1

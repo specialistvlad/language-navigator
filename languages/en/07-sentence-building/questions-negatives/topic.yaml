@@ -5,7 +5,7 @@ kind: grammar
 levels: [A1]
 tags: [questions, negatives, wh-questions, auxiliaries]
 concepts: [questions-negatives]
-related: [en.sentence-building.word-order, en.tenses.present-simple, en.tenses.past-simple, en.verbs-core.to-be, en.modals.can-could, en.sentence-building.question-tags]
+related: [en.sentence-building.word-order, en.tenses.present-simple, en.tenses.past-simple, en.verbs.to-be, en.modals.can-could, en.sentence-building.question-tags]
 status: { en: draft, es: draft }
 
 title: { en: "Questions and negatives", es: "Preguntas y negativas" }

@@ -5,7 +5,7 @@ kind: grammar
 levels: [A2]
 tags: [adjectives, comparison]
 concepts: [comparison]
-related: [en.adjectives-adverbs.adjective-order, en.adjectives-adverbs.too-enough-so-such, en.verbs-core.to-be]
+related: [en.adjectives-adverbs.adjective-order, en.adjectives-adverbs.too-enough-so-such, en.verbs.to-be]
 status: { en: draft, es: draft }
 
 title: { en: Comparatives and Superlatives, es: Comparativos y superlativos (comparatives and superlatives) }

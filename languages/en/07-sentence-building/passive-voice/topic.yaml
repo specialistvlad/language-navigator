@@ -51,8 +51,8 @@ sections:
         items:
           - en: "V-ed = past participle: made, written, sold, taken, built."
             es: "V-ed = participio: made, written, sold, taken, built."
-          - en: "Irregular participles are in the [irregular verbs table](id:en.verbs-core.irregular-verbs-table)."
-            es: "Los participios irregulares están en la [tabla de verbos irregulares](id:en.verbs-core.irregular-verbs-table)."
+          - en: "Irregular participles are in the [irregular verbs table](id:en.verbs.irregular-verbs-table)."
+            es: "Los participios irregulares están en la [tabla de verbos irregulares](id:en.verbs.irregular-verbs-table)."
 
   - title: { en: "Form: negatives and questions", es: "Forma: negativas y preguntas" }
     level: B1

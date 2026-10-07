@@ -5,7 +5,7 @@ kind: grammar
 levels: [A0, A1]
 tags: [demonstratives, determiners, pronouns]
 concepts: [demonstratives]
-related: [en.nouns-determiners.plurals, en.nouns-determiners.articles-a-an-the, en.verbs-core.to-be, en.pronouns.personal-pronouns]
+related: [en.nouns-determiners.plurals, en.nouns-determiners.articles-a-an-the, en.verbs.to-be, en.pronouns.personal-pronouns]
 status: { en: draft, es: draft }
 
 title: { en: "This, That, These, Those", es: "Demostrativos: this, that, these, those (demonstratives)" }

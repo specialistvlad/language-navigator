@@ -5,7 +5,7 @@ kind: grammar
 levels: [A1, A2]
 tags: [adjectives, word order]
 concepts: [adjectives]
-related: [en.verbs-core.to-be, en.nouns-determiners.plurals, en.sentence-building.word-order, en.adjectives-adverbs.comparatives-superlatives]
+related: [en.verbs.to-be, en.nouns-determiners.plurals, en.sentence-building.word-order, en.adjectives-adverbs.comparatives-superlatives]
 status: { en: draft, es: draft }
 
 title: { en: Adjectives and Adjective Order, es: Adjetivos y orden de los adjetivos (adjectives and adjective order) }

@@ -1,11 +1,11 @@
 # yaml-language-server: $schema=../../../schema/topic.schema.json
-id: en.verbs-core.there-is-are
+id: en.verbs.there-is-are
 lang: en
 kind: grammar
 levels: [A1]
 tags: [verbs, there-is, existence]
 concepts: [existence]
-related: [en.verbs-core.to-be, en.nouns-determiners.countable-uncountable, en.nouns-determiners.quantifiers-some-any-much-many, en.prepositions.place-movement, en.sentence-building.questions-negatives]
+related: [en.verbs.to-be, en.nouns-determiners.countable-uncountable, en.nouns-determiners.quantifiers-some-any-much-many, en.prepositions.place-movement, en.sentence-building.questions-negatives]
 status: { en: draft, es: draft }
 
 title: { en: There Is and There Are, es: There is y there are (there is and there are) }
@@ -156,8 +156,8 @@ sections:
           - { point: { en: Question, es: Pregunta }, there: { ex: "**Is there** a shop near here?", tr: { es: ¿Hay una tienda cerca? } }, it: { ex: "**Is it** open?", tr: { es: ¿Está abierta? } } }
       - type: bullets
         items:
-          - en: "See [To be](id:en.verbs-core.to-be)."
-            es: "Ver [To be](id:en.verbs-core.to-be)."
+          - en: "See [To be](id:en.verbs.to-be)."
+            es: "Ver [To be](id:en.verbs.to-be)."
 
   - title: { en: Typical errors, es: Errores típicos }
     level: A1
