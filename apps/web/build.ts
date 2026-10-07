@@ -87,6 +87,8 @@ const rangeBadge = (levels: string) => {
 };
 // Topic entries in lists show one badge: the level where the topic starts.
 const startBadge = (levels: string) => levelBadge(levels.split("-")[0]);
+// The first sentence of a summary stands alone: cards and the meta description show only it.
+const lead = (text: string) => text.match(/^.*?[.!?](?=\s+[A-ZÁÉÍÓÚÑ¿¡]|$)/)?.[0] ?? text;
 
 interface Sheet {
   id: string;
@@ -247,7 +249,7 @@ export async function build(o: BuildOptions): Promise<number> {
         const next = written.slice(index + 1).find((r) => r.lang === ref.lang);
         const upNext = next
           ? `<h4>${escapeHtml(t.upNext)}</h4><a class="next" href="${topicUrl(explain, lang, next)}"><strong>${escapeHtml(topicTitle(next, explain))}</strong>` +
-            `<span class="summary">${escapeHtml(next.topic!.summary[explain] ?? "")}</span>${chips(next.topic!.levels)}</a>`
+            `<span class="summary">${escapeHtml(lead(next.topic!.summary[explain] ?? ""))}</span>${chips(next.topic!.levels)}</a>`
           : "";
         const rail = `<h4>${escapeHtml(t.onThisPage)}</h4><ol class="toc">${tocItems.join("")}</ol>${upNext}`;
         const actions = [
@@ -263,7 +265,7 @@ export async function build(o: BuildOptions): Promise<number> {
             kind: "topic",
             lang: explain,
             title: `${title} — ${trackTitle}`,
-            description: topic.summary[explain] ?? "",
+            description: lead(topic.summary[explain] ?? ""),
             path: topicUrl(explain, lang, ref),
             alternates: alternates((e) => topicUrl(e, lang, ref)),
             controls: controls({

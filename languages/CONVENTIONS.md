@@ -83,7 +83,7 @@ languages/
 |---|---|
 | `id`, `lang`, `kind`, `levels`, `tags`, `concepts`, `related` | identity and links |
 | `status` | `draft` or `approved`, per explanation language |
-| `title`, `summary` | localized; the summary is one line |
+| `title`, `summary` | localized; the summary is 3–10 sentences, and its first sentence is a one-line description that stands alone |
 | `sections` | the full guide, in order |
 | `essentials` | one entry per level: the cheatsheet source (§8) |
 | `reminders` | per level: the traps that persist at higher levels (§8) |
