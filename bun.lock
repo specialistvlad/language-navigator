@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "language-navigator",
+      "name": "langs123",
       "dependencies": {
         "ajv": "8",
       },

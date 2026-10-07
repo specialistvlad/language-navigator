@@ -48,8 +48,17 @@
   .topbar,
   .sidebar,
   .rail,
-  .doc-head .actions {
+  .doc-head .actions,
+  .site-foot .action {
     display: none;
+  }
+  /* A printed page carries its credit: authors, address and licence. */
+  .site-foot {
+    margin-top: 24px;
+    font-size: 8.5pt;
+  }
+  .site-foot .source {
+    display: inline;
   }
   .layout {
     display: block;

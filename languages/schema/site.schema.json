@@ -1,12 +1,14 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Site identity and explanation languages",
+  "title": "Site identity, licences and explanation languages",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "name",
     "url",
     "repository",
+    "credit",
+    "licences",
     "explain"
   ],
   "properties": {
@@ -21,6 +23,28 @@
     "repository": {
       "type": "string",
       "pattern": "^https://[^ ]+[^/]$"
+    },
+    "credit": {
+      "description": "How every reuse of the content names its authors.",
+      "type": "string",
+      "minLength": 1
+    },
+    "licences": {
+      "description": "The content licence covers languages/; the code licence covers everything else.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "content",
+        "code"
+      ],
+      "properties": {
+        "content": {
+          "$ref": "#/definitions/licence"
+        },
+        "code": {
+          "$ref": "#/definitions/licence"
+        }
+      }
     },
     "explain": {
       "description": "Explanation languages, in display order.",
@@ -66,6 +90,24 @@
         "en": {
           "type": "string",
           "minLength": 1
+        }
+      }
+    },
+    "licence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "url"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https://[^ ]+$"
         }
       }
     }

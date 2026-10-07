@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "topic.schema.json",
-  "title": "Language Navigator topic",
+  "title": "langs123 topic",
   "description": "One topic of one language being learned, explained in every explanation language.",
   "type": "object",
   "additionalProperties": false,

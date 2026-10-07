@@ -1,0 +1,24 @@
+# The form behind "Report a mistake" in every page's footer; the link fills in the page.
+name: Report a mistake
+description: A wrong form, rule, example, translation or level on a page.
+title: "Mistake: "
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The address of the page with the mistake.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: Quote the text and say what is wrong with it.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: The correct version
+      description: The correct form, rule or example, with a source if you have one.

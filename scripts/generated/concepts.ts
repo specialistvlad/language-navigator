@@ -3,7 +3,7 @@
 /**
  * Language-neutral keys that pair topics across languages.
  */
-export interface LanguageNavigatorConcepts {
+export interface Langs123Concepts {
   [k: string]: {
     title: Localized;
     description: Localized;

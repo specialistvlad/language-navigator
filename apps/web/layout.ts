@@ -25,14 +25,26 @@ const TEXT_KEYS = [
   "backHome",
 ] as const;
 
-// Web-only wording: actions this app offers.
+// Web-only wording: actions this app offers and its footer.
 interface WebText {
   print: string;
   editOn: string;
   editTitle: string;
+  content: string;
+  code: string;
+  howToCredit: string;
+  reportMistake: string;
 }
 const WEB: Partial<Record<Explain, WebText>> = {
-  en: { print: "Print", editOn: "Edit on", editTitle: "Edit this topic on GitHub" },
+  en: {
+    print: "Print",
+    editOn: "Edit on",
+    editTitle: "Edit this topic on GitHub",
+    content: "Content",
+    code: "Code",
+    howToCredit: "How to credit",
+    reportMistake: "Report a mistake",
+  },
 };
 
 export type Ui = Record<(typeof TEXT_KEYS)[number], string> &
@@ -121,6 +133,20 @@ const PREFS = `try{var d=document.documentElement,p=new URLSearchParams(location
 // the previous page (client.ts saves it on leaving), then brings the current page's entry into view.
 const NAV_SCROLL = `(function(){var n=document.getElementById("sidebar"),k=n.querySelector(".nav-track").getAttribute("href")+"#"+n.childElementCount;n.dataset.key=k;try{var v=JSON.parse(sessionStorage.getItem("ln-nav"));if(v&&v.k===k)n.scrollTop=v.t}catch(e){}var c=n.querySelector("[aria-current=page]");if(c){var r=c.getBoundingClientRect(),b=n.getBoundingClientRect();if(r.top<b.top||r.bottom>b.bottom)n.scrollTop+=r.top-b.top-(b.height-r.height)/2}})()`;
 
+// The footer of every page: the credit and both licences, which make a printed page a complete credit
+// with its address (media.css prints it), then how to credit and a mistake report filled in with the page.
+function footer(o: PageOptions, pageUrl: string): string {
+  const t = ui(o.lang);
+  const { content, code } = SITE.licences;
+  const link = (href: string, text: string, attrs = ""): string => `<a href="${escapeHtml(href)}"${attrs}>${escapeHtml(text)}</a>`;
+  const report = `${SITE.repository}/issues/new?${new URLSearchParams({ template: "report-a-mistake.yml", title: `Mistake: ${o.title}`, page: pageUrl })}`;
+  const credit = link(`${SITE.repository}/graphs/contributors`, SITE.credit);
+  const source = `<span class="source"> · ${escapeHtml(pageUrl)}</span>`;
+  const licences = ` · ${escapeHtml(t.content)} ${link(content.url, content.name, ' rel="license"')} · ${escapeHtml(t.code)} ${link(code.url, code.name)}`;
+  const actions = `<span class="action"> · ${link(`${SITE.repository}#licence`, t.howToCredit)} · ${link(report, t.reportMistake)}</span>`;
+  return `<footer class="site-foot"><p>${credit}${source}${licences}${actions}</p></footer>`;
+}
+
 export function page(o: PageOptions): string {
   const url = (path: string): string => `${o.siteUrl}${path}`;
   const alternates = (o.alternates ?? []).map((a) => `<link rel="alternate" hreflang="${a.lang}" href="${url(a.path)}">`).join("\n  ");
@@ -152,7 +178,7 @@ export function page(o: PageOptions): string {
   </header>
   <div class="layout${filled(o.nav) ? "" : " no-nav"}${filled(o.rail) ? " has-rail" : ""}">
     ${filled(o.nav) ? `<nav class="sidebar" id="sidebar">${o.nav}</nav><script>${NAV_SCROLL}</script>` : ""}
-    <main class="content">${o.main}</main>
+    <main class="content">${o.main}${footer(o, url(o.path))}</main>
     ${filled(o.rail) ? `<aside class="rail">${o.rail}</aside>` : ""}
   </div>
   <script src="/client.js" defer></script>

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "concepts.schema.json",
-  "title": "Language Navigator concepts",
+  "title": "langs123 concepts",
   "description": "Language-neutral keys that pair topics across languages.",
   "type": "object",
   "propertyNames": { "pattern": "^[a-z0-9-]+$" },

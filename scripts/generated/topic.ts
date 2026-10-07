@@ -59,7 +59,7 @@ export type Content = Block[];
 /**
  * One topic of one language being learned, explained in every explanation language.
  */
-export interface LanguageNavigatorTopic {
+export interface Langs123Topic {
   id: string;
   lang: Explain;
   kind: "grammar" | "foundations" | "reference";

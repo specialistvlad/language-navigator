@@ -23,7 +23,8 @@ Structured YAML is the source; the web pages are rendered from it.
 
 ```
 languages/
-├── site.yaml                       product name, URLs, explanation languages
+├── LICENSE                         CC BY 4.0, the licence of everything in languages/
+├── site.yaml                       product name, URLs, credit and licences, explanation languages
 ├── levels.yaml                     level scale: names, descriptions, colours
 ├── interface.yaml                  interface wording of the site
 ├── curriculum.yaml                 every planned topic, in study order
@@ -35,7 +36,7 @@ languages/
 
 | File | Schema | Holds |
 |---|---|---|
-| `site.yaml` | `schema/site.schema.json` | product name, URLs, explanation languages with their names and `enabled` switch |
+| `site.yaml` | `schema/site.schema.json` | product name, URLs, the credit and licences every page shows, explanation languages with their names and `enabled` switch |
 | `levels.yaml` | `schema/levels.schema.json` | the level scale: code, name, description, hue per level |
 | `interface.yaml` | `schema/interface.schema.json` | interface wording by key, per explanation language; block headings and column titles the generator writes |
 | `curriculum.yaml` | `schema/curriculum.schema.json` | languages (with an `enabled` switch) → sections → topics (slug, optional title, levels of a planned topic) |

@@ -3,6 +3,16 @@ import { mkdir, rename, rm } from "node:fs/promises";
 import { join } from "node:path";
 import { clientJs, levelsCss, styleCss } from "./assets.ts";
 import type { BuildOptions, Page } from "./context.ts";
+import { escapeHtml } from "./render.ts";
+
+// A build that names an Umami website puts its script in every page's head. The script counts visits
+// on the site's own host (data-domains), so a copy of the built pages served elsewhere reports nothing.
+export function withAnalytics(html: string, o: BuildOptions): string {
+  if (o.umami === undefined) return html;
+  const host = new URL(o.siteUrl).hostname;
+  const script = `<script defer src="${escapeHtml(o.umami.src)}" data-website-id="${escapeHtml(o.umami.websiteId)}" data-domains="${escapeHtml(host)}"></script>`;
+  return html.replace("</head>", `  ${script}\n</head>`);
+}
 
 export async function writeSite(pages: Page[], o: BuildOptions): Promise<void> {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -26,7 +36,7 @@ ${pages
   await mkdir(tmp, { recursive: true });
   for (const p of pages) {
     const file = p.path.endsWith("/") ? join(tmp, p.path, "index.html") : join(tmp, p.path);
-    await Bun.write(file, rebase(p.html));
+    await Bun.write(file, rebase(withAnalytics(p.html, o)));
   }
   await Bun.write(join(tmp, "sitemap.xml"), sitemap);
   await Bun.write(join(tmp, "robots.txt"), robots);

@@ -1,9 +1,9 @@
-# Language Navigator
+# langs123
 
 A reference library for learners of **English** from level **A0 to B1**.
 Every topic is explained in English.
 
-**Live site:** https://specialistvlad.github.io/language-navigator/
+**Live site:** https://specialistvlad.github.io/language-navigator/, moving to https://langs123.com
 
 The source is structured data: one `topic.yaml` per topic holds a **cheatsheet** (the whole topic
 in one table) and the full reference (tables, rules, examples, typical errors). JSON Schemas define and validate every file. The web pages and cheatsheets are rendered
@@ -53,9 +53,13 @@ level ([languages/CONVENTIONS.md](languages/CONVENTIONS.md) §3).
 language-navigator/
 ├── README.md
 ├── ROADMAP.md                 project phases
+├── CONTRIBUTING.md            how to report a mistake or change a topic
+├── CODE_OF_CONDUCT.md         rules for the community
+├── LICENSE                    MIT, for the code
 ├── languages/                 all language data
+│   ├── LICENSE                CC BY 4.0, for the content
 │   ├── CONVENTIONS.md         rules for the data
-│   ├── site.yaml              product name, URLs, explanation languages
+│   ├── site.yaml              product name, URLs, credit and licences, explanation languages
 │   ├── levels.yaml            level scale: names, descriptions, colours
 │   ├── interface.yaml         interface wording of the site
 │   ├── curriculum.yaml        every planned topic, in study order
@@ -93,3 +97,41 @@ deploys it. Run workflow on the Actions tab redeploys the same tag.
 ```
 git tag v0.2.0 && git push origin v0.2.0
 ```
+
+Analytics runs on the published site alone. The repository variable `UMAMI_WEBSITE_ID` (Settings →
+Secrets and variables → Actions → Variables) puts the Umami script on every page, counting visits on
+the site's own host; `UMAMI_SCRIPT_URL` points it at a self-hosted or proxied script. Local builds,
+forks and copies of the pages carry no analytics.
+
+## Contributing
+
+Teachers, learners and native speakers keep the library correct and growing.
+
+- **Report a mistake**: the link at the foot of every page opens a short form, filled in with the
+  page.
+- **Change a topic**: *Edit on GitHub* at the top of a topic opens its `topic.yaml` in GitHub's
+  editor, which proposes the change as a pull request; CI checks it.
+
+[CONTRIBUTING.md](CONTRIBUTING.md) holds the rules for content and code;
+[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) holds the rules for the community.
+
+## Licence
+
+| Part | Licence | Text |
+|---|---|---|
+| Content: everything in `languages/` | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [languages/LICENSE](languages/LICENSE) |
+| Code: everything else | MIT | [LICENSE](LICENSE) |
+
+Anyone may copy, adapt and sell the content, in print, on the web and in apps, with this credit:
+
+> langs123 contributors, https://langs123.com — CC BY 4.0
+
+A changed version names its changes, for example "adapted from langs123". Every page prints with
+this credit and its own address.
+
+The reference stays free: every page rendered from this data stays open on langs123.com, and the
+data stays open here. Paid langs123 services build on the same data: accounts, progress, practice
+and the mobile apps.
+
+The name langs123 and its logo stay with the project, outside both licences: a copy published
+elsewhere carries its own name and the credit above.

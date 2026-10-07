@@ -3,7 +3,7 @@
 /**
  * Every planned topic of every language being learned, in study order.
  */
-export interface LanguageNavigatorCurriculum {
+export interface Langs123Curriculum {
   /**
    * @minItems 1
    */

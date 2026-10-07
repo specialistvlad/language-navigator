@@ -1,7 +1,7 @@
 // Static site build: every page of every track rendered to HTML, plus sitemap and robots.txt.
 // Run: npm run build   (SITE_URL sets the public URL for canonical links, the sitemap and, by its path, the base of every link)
 import { join } from "node:path";
-import { type CurriculumLanguage, loadCurriculum, loadTopics, localize, ROOT, type TopicRef } from "../../scripts/lib.ts";
+import { type CurriculumLanguage, filled, loadCurriculum, loadTopics, localize, ROOT, type TopicRef } from "../../scripts/lib.ts";
 import { type BuildOptions, type Context, EXPLAINS, type Page } from "./context.ts";
 import { ui } from "./layout.ts";
 import { writeSite } from "./output.ts";
@@ -56,6 +56,10 @@ export async function build(o: BuildOptions): Promise<number> {
 
 if (import.meta.main) {
   const siteUrl = (process.env["SITE_URL"] ?? "http://127.0.0.1:47380").replace(/\/$/, "");
-  const count = await build({ outDir: join(ROOT, "build/web"), dev: false, siteUrl });
-  console.log(`built ${count} pages into build/web/ for ${siteUrl}`);
+  // UMAMI_WEBSITE_ID turns analytics on; UMAMI_SCRIPT_URL points at a self-hosted or proxied script.
+  const websiteId = process.env["UMAMI_WEBSITE_ID"];
+  const src = process.env["UMAMI_SCRIPT_URL"];
+  const umami = filled(websiteId) ? { websiteId, src: filled(src) ? src : "https://cloud.umami.is/script.js" } : undefined;
+  const count = await build({ outDir: join(ROOT, "build/web"), dev: false, siteUrl, ...(umami && { umami }) });
+  console.log(`built ${count} pages into build/web/ for ${siteUrl}${umami ? `, with Umami website ${umami.websiteId}` : ""}`);
 }

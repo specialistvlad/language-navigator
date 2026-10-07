@@ -3,12 +3,12 @@ import { join } from "node:path";
 import interfaceFile from "../languages/interface.yaml";
 import levelsFile from "../languages/levels.yaml";
 import siteFile from "../languages/site.yaml";
-import type { LanguageNavigatorConcepts as ConceptsFile } from "./generated/concepts.ts";
-import type { LanguageNavigatorCurriculum as CurriculumFile } from "./generated/curriculum.ts";
+import type { Langs123Concepts as ConceptsFile } from "./generated/concepts.ts";
+import type { Langs123Curriculum as CurriculumFile } from "./generated/curriculum.ts";
 import type { InterfaceWording as InterfaceFile } from "./generated/interface.ts";
 import type { LevelScale as LevelsFile } from "./generated/levels.ts";
-import type { SiteIdentityAndExplanationLanguages as SiteFile } from "./generated/site.ts";
-import type { Explain, Item, Level, Localized, LanguageNavigatorTopic as TopicFile } from "./generated/topic.ts";
+import type { SiteIdentityLicencesAndExplanationLanguages as SiteFile } from "./generated/site.ts";
+import type { Explain, Item, Level, Localized, Langs123Topic as TopicFile } from "./generated/topic.ts";
 
 export const ROOT = join(import.meta.dir, "..");
 export const CONTENT = join(ROOT, "languages");

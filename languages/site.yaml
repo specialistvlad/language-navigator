@@ -1,10 +1,17 @@
 # yaml-language-server: $schema=schema/site.schema.json
-# Product identity and the explanation languages: the languages every guide is written in.
+# Product identity, licences and the explanation languages: the languages every guide is written in.
 # Each explanation language names itself and the others.
 
-name: Language Navigator
-url: https://specialistvlad.github.io/language-navigator
+name: langs123
+url: https://langs123.com
 repository: https://github.com/specialistvlad/language-navigator
+
+# The content in languages/ carries the content licence and credits its authors as `credit`; the code
+# carries the code licence. Every page shows both, and every reuse of the content names the credit.
+credit: langs123 contributors
+licences:
+  content: { name: CC BY 4.0, url: https://creativecommons.org/licenses/by/4.0/ }
+  code: { name: MIT, url: https://github.com/specialistvlad/language-navigator/blob/main/LICENSE }
 
 # enabled: false keeps a language from readers for now; its data stays and npm run check still
 # validates it. Languages being learned carry the same switch in curriculum.yaml.

@@ -7,6 +7,8 @@ export interface BuildOptions {
   outDir: string;
   dev: boolean;
   siteUrl: string;
+  // Umami analytics: the website to report to and the script that reports.
+  umami?: { websiteId: string; src: string };
 }
 
 export interface Page {
