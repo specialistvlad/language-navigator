@@ -42,6 +42,7 @@ languages:
       - dir: 05-tenses
         title: { en: Tenses, es: Tiempos verbales }
         topics:
+          - { slug: tense-map, levels: A1-B1, title: { en: "Tense map", es: "Mapa de tiempos verbales" } }
           - { slug: present-simple, levels: A1-A2, title: { en: "Present Simple", es: "Presente simple" } }
           - { slug: present-continuous, levels: A1, title: { en: "Present Continuous", es: "Presente continuo" } }
           - { slug: past-simple, levels: A1-A2 }
@@ -50,7 +51,6 @@ languages:
           - { slug: future-forms, levels: A1-B1 }
           - { slug: used-to, levels: A2 }
           - { slug: past-perfect, levels: B1 }
-          - { slug: tense-map, levels: A1-B1, title: { en: "Tense map", es: "Mapa de tiempos verbales" } }
       - dir: 06-modals
         title: { en: Modal verbs, es: Verbos modales }
         topics:
