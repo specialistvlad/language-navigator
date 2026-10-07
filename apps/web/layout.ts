@@ -7,10 +7,9 @@ export const UI = {
     read: "Read in",
     level: "Level",
     view: "View",
-    guide: "Guide",
-    essentials: "Essentials",
+    full: "Full",
+    keyPoints: "Key points",
     onThisPage: "On this page",
-    essentialsAndReminders: "Essentials and reminders",
     upNext: "Up next",
     sheets: "Cheatsheets",
     sheet: "Cheatsheet",
@@ -36,10 +35,9 @@ export const UI = {
     read: "Leer en",
     level: "Nivel",
     view: "Vista",
-    guide: "Guía",
-    essentials: "Lo esencial",
+    full: "Completo",
+    keyPoints: "Puntos clave",
     onThisPage: "En esta página",
-    essentialsAndReminders: "Lo esencial y recordatorios",
     upNext: "A continuación",
     sheets: "Chuletas",
     sheet: "Chuleta",
@@ -88,7 +86,7 @@ export function controls(o: ControlsOptions): string {
     parts.push(
       seg(
         t.view,
-        `<button type="button" data-set-view="guide">${t.guide}</button><button type="button" data-set-view="essentials">${t.essentials}</button>`,
+        `<button type="button" data-set-view="guide">${t.full}</button><button type="button" data-set-view="essentials">${t.keyPoints}</button>`,
       ),
     );
   }

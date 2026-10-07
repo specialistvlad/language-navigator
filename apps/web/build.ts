@@ -242,7 +242,7 @@ export async function build(o: BuildOptions): Promise<number> {
           return `<li${s.from ? ` data-level="${s.from}"` : ""}><a href="#${idOf.get(s)}" data-view="guide"><span class="name">${escapeHtml(s.title)}</span>${levels}</a></li>`;
         });
         tocItems.push(
-          `<li><button type="button" data-view="essentials"><span class="name">${escapeHtml(t.essentialsAndReminders)}</span>${chips(topic.levels)}</button></li>`,
+          `<li><button type="button" data-view="essentials"><span class="name">${escapeHtml(t.keyPoints)}</span>${chips(topic.levels)}</button></li>`,
         );
         const next = written.slice(index + 1).find((r) => r.lang === ref.lang);
         const upNext = next
