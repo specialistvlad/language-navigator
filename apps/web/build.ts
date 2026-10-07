@@ -175,7 +175,7 @@ export async function build(o: BuildOptions): Promise<number> {
                 : `<li data-level="${from}" class="todo"><span class="row">${row}</span></li>`;
             })
             .join("");
-          const count = `${sectionRefs.filter((r) => r.topic).length}/${sectionRefs.length}`;
+          const count = String(sectionRefs.length);
           const head = `<header><span class="num">${section.dir.slice(0, 2)}</span><h2>${escapeHtml(section.title[explain])}</h2><span class="count">${count}</span></header>`;
           return `<section class="index-card" data-level="${sectionRange(section).split("-")[0]}">${head}<ol class="index-list">${items}</ol></section>`;
         })
