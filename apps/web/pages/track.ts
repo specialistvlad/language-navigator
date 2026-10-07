@@ -4,7 +4,7 @@ import { alternates, readChoices, type Track } from "../context.ts";
 import { controls, page } from "../layout.ts";
 import { trackNav } from "../nav.ts";
 import { refRange } from "../../../scripts/levels.ts";
-import { badge, levelAttrs, refsRange } from "../parts.ts";
+import { levelAttrs, listBadge, refsRange } from "../parts.ts";
 import { escapeHtml } from "../render.ts";
 import { topicUrl, trackUrl } from "../urls.ts";
 
@@ -17,7 +17,7 @@ export function trackIndex(track: Track): void {
       const items = sectionRefs
         .map((ref) => {
           const range = refRange(ref, explain);
-          const row = `<span class="name">${escapeHtml(topicTitle(ref, explain))}</span>${badge(range)}`;
+          const row = `<span class="name">${escapeHtml(topicTitle(ref, explain))}</span>${listBadge(range)}`;
           return ref.topic
             ? `<li${levelAttrs(range)}><a href="${topicUrl(explain, lang, ref)}">${row}</a></li>`
             : `<li${levelAttrs(range)} class="todo"><span class="row">${row}</span></li>`;

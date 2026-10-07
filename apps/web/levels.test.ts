@@ -101,6 +101,7 @@ describe.each(topicPages)("%s", (path) => {
       const target = doc.getElementById(li.querySelector("a")?.getAttribute("href")?.slice(1) ?? "");
       expect(target === null ? "missing" : label(from(li), to(li))).toBe(target === null ? "missing" : label(from(target), to(target)));
       expect(li.querySelector(".lvl")?.textContent).toBe(label(from(li), to(li)));
+      expect(li.querySelector(".lvl.pair")).not.toBeNull();
     }
     const current = doc.querySelector(".sidebar a.on");
     expect(current === null ? "" : label(from(current), to(current))).toBe(rangeOf(sections));

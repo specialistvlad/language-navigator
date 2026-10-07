@@ -7,7 +7,7 @@ import { GITHUB_ICON, PRINT_ICON } from "../icons.ts";
 import { controls, page } from "../layout.ts";
 import { trackNav } from "../nav.ts";
 import { lead } from "../../../scripts/content.ts";
-import { badge, editUrl, levelAttrs, slugify } from "../parts.ts";
+import { badge, editUrl, levelAttrs, listBadge, slugify } from "../parts.ts";
 import { escapeHtml, inline } from "../render.ts";
 import { topicUrl } from "../urls.ts";
 
@@ -59,7 +59,7 @@ export function topicPages(track: Track): void {
     // lists, and the next topic.
     const tocItems = all.map((s) => {
       const guide = s.kind === "cheatsheet" ? "" : ' class="guide"';
-      return `<li${guide}${levelAttrs(s.range)}><a href="#${idOf.get(s) ?? ""}"><span class="name">${escapeHtml(s.title)}</span>${badge(s.range)}</a></li>`;
+      return `<li${guide}${levelAttrs(s.range)}><a href="#${idOf.get(s) ?? ""}"><span class="name">${escapeHtml(s.title)}</span>${listBadge(s.range)}</a></li>`;
     });
     const rail = `<h4>${escapeHtml(t.onThisPage)}</h4><ol class="toc">${tocItems.join("")}</ol>${upNext(track, written.slice(index + 1), ref)}`;
     const actions = [
@@ -102,6 +102,6 @@ function upNext(track: Track, after: TopicRef[], ref: TopicRef): string {
   const nextRange = next ? refRange(next, explain) : null;
   return next && nextTopic
     ? `<h4>${escapeHtml(t.upNext)}</h4><a class="next" href="${topicUrl(explain, lang, next)}"><strong>${escapeHtml(topicTitle(next, explain))}</strong>` +
-        `<span class="summary">${escapeHtml(lead(nextTopic.summary[explain] ?? ""))}</span>${badge(nextRange)}</a>`
+        `<span class="summary">${escapeHtml(lead(nextTopic.summary[explain] ?? ""))}</span>${listBadge(nextRange)}</a>`
     : "";
 }

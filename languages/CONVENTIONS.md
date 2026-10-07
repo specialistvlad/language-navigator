@@ -88,6 +88,9 @@ section in the menu.
   contrast of at least 4.5:1 in both themes (`npm run e2e` measures it).
 - A badge for one level is one pill, (A1). A badge for a range joins two halves, (A1][B1): the
   lowest level on the left, the highest on the right, each in its own level's colour.
+- In a list (the menu, the rail, the track index, Up next) the halves share one width and the badges
+  line up in two columns: lowest levels in the first, highest in the second. A single level sits in
+  the first column and leaves the second empty.
 - The level switcher writes each code in its level's colour and tints the levels from the lowest up
   to the chosen one: the levels the page shows.
 - The topic title, section headings, the rail and the menu show their range. A block shows its

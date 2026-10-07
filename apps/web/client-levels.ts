@@ -1,6 +1,6 @@
 // Level badges read lowest–highest; under the level filter the highest level shown is the filter's,
 // so a section running (A1][B1) reads (A1][A2) while the filter is at A2, and (A1) at A1. The level
-// buttons give the order; the halves match badge() in parts.ts.
+// buttons give the order; the halves match badge() and listBadge() in parts.ts.
 const half = (level: string): string => `<span class="half lvl-${level}">${level}</span>`;
 
 export function trimBadges(root: HTMLElement): void {

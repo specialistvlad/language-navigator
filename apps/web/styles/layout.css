@@ -96,6 +96,17 @@
   background: var(--level-tint);
   color: var(--lvl);
 }
+/* A list badge's halves share one width and a single level keeps the second column free, so the
+   badges of a list line up: lowest levels in one column, highest in the next */
+.lvl.pair > .half {
+  box-sizing: border-box;
+  width: 2.6em;
+  padding-inline: 0;
+  text-align: center;
+}
+.lvl.pair:has(> .half:only-child) {
+  margin-right: 2.6em;
+}
 .blk-level {
   margin: 0 0 6px;
 }

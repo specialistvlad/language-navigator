@@ -3,7 +3,7 @@
 import { type CurriculumLanguage, type Explain, localize, topicTitle, type TopicRef } from "../../scripts/lib.ts";
 import { refRange } from "../../scripts/levels.ts";
 import { ui } from "./layout.ts";
-import { badge, levelAttrs, refsRange } from "./parts.ts";
+import { levelAttrs, listBadge, refsRange } from "./parts.ts";
 import { escapeHtml } from "./render.ts";
 import { homeUrl, topicUrl, trackUrl } from "./urls.ts";
 
@@ -17,10 +17,10 @@ export function trackNav(refs: TopicRef[], explain: Explain, lang: CurriculumLan
   for (const section of lang.sections) {
     const inSection = refs.filter((r) => r.lang === lang.code && r.section === section);
     const range = refsRange(inSection, explain);
-    out.push(`<h4${levelAttrs(range)}><span class="name">${escapeHtml(localize(section.title, explain))}</span>${badge(range)}</h4>`);
+    out.push(`<h4${levelAttrs(range)}><span class="name">${escapeHtml(localize(section.title, explain))}</span>${listBadge(range)}</h4>`);
     for (const ref of inSection) {
       const own = refRange(ref, explain);
-      const name = `<span class="name">${escapeHtml(topicTitle(ref, explain))}</span>${badge(own)}`;
+      const name = `<span class="name">${escapeHtml(topicTitle(ref, explain))}</span>${listBadge(own)}`;
       if (ref.topic) {
         const on = current === ref ? ' class="on" aria-current="page"' : "";
         out.push(`<a href="${topicUrl(explain, lang, ref)}"${levelAttrs(own)}${on}>${name}</a>`);

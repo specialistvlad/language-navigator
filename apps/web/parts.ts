@@ -25,6 +25,12 @@ export const badgeHalves = (r: Range): string =>
 export const badge = (r: Range | null): string =>
   r === null ? "" : `<span class="badge lvl" data-from="${r.from}" data-to="${r.to}">${badgeHalves(r)}</span>`;
 
+// A badge in a list (the menu, the rail, the track index, Up next) has halves of one width and room
+// for two, so the badges of a list line up in columns: the lowest levels in one, the highest in the
+// next; one level takes the first column and leaves the second empty (layout.css).
+export const listBadge = (r: Range | null): string =>
+  r === null ? "" : `<span class="badge lvl pair" data-from="${r.from}" data-to="${r.to}">${badgeHalves(r)}</span>`;
+
 // What the level filter reads: an element hides while the filter sits below its lowest level.
 export const levelAttrs = (r: Range | null): string => (r === null ? "" : ` data-level="${r.from}" data-to="${r.to}"`);
 
