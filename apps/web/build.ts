@@ -160,7 +160,6 @@ export async function build(o: BuildOptions): Promise<number> {
     for (const explain of EXPLAINS) {
       const t = UI[explain];
       const trackTitle = t.track(lang.name[explain]);
-      const sheetsChoice = (on: boolean): Choice => ({ label: t.sheets, href: sheetsUrl(explain, lang), on });
 
       // ---------- Track home ----------
 
@@ -197,7 +196,6 @@ export async function build(o: BuildOptions): Promise<number> {
             explain,
             read: readChoices(explain, (e) => trackUrl(e, lang)),
             level: true,
-            sheets: sheetsChoice(false),
           }),
           nav: trackNav(explain, lang),
           main: `<article class="doc index">${indexHead}<div class="index-grid lanes">${sectionsHtml}</div></article>`,
@@ -239,7 +237,6 @@ export async function build(o: BuildOptions): Promise<number> {
               read: readChoices(explain, (e) => topicUrl(e, lang, ref)),
               level: true,
               view: true,
-              sheets: sheetsChoice(false),
             }),
             nav: trackNav(explain, lang, ref),
             main: `<article class="doc${topic.levels.length === 1 ? " one-level" : ""}">${head}${intro}<div class="sections lanes">${sections}</div></article>`,
@@ -324,7 +321,7 @@ export async function build(o: BuildOptions): Promise<number> {
         ].join("\n");
 
       const sheetControls = (pathFor: (e: Explain) => string) =>
-        controls({ explain, read: readChoices(explain, pathFor), sheets: sheetsChoice(true) });
+        controls({ explain, read: readChoices(explain, pathFor) });
 
       const indexHtml = (Object.keys(groups) as (keyof typeof groups)[])
         .map((g) => {

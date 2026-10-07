@@ -72,7 +72,6 @@ export interface ControlsOptions {
   read: Choice[];
   level?: boolean;
   view?: boolean;
-  sheets?: Choice;
 }
 
 export function controls(o: ControlsOptions): string {
@@ -87,7 +86,6 @@ export function controls(o: ControlsOptions): string {
       ),
     );
   }
-  if (o.sheets) parts.push(`<a class="pill${o.sheets.on ? " on" : ""}" href="${o.sheets.href}">${escapeHtml(o.sheets.label)}</a>`);
   return parts.join("");
 }
 
