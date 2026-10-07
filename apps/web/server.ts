@@ -5,6 +5,7 @@ import { stat } from "node:fs/promises";
 import { networkInterfaces } from "node:os";
 import { join, normalize } from "node:path";
 import { ROOT, SITE } from "../../scripts/lib.ts";
+import { validate } from "../../scripts/validate/index.ts";
 import { build } from "./build.ts";
 
 const HOST = process.env["HOST"] ?? "0.0.0.0";
@@ -42,6 +43,10 @@ function rebuild(reason: string): Promise<void> {
     } catch (error) {
       console.error(`build failed (${reason}):`, error instanceof Error ? error.message : error);
     }
+    // The same validation as npm run check; problems are listed, the preview still updates.
+    const problems = await validate().catch((error: unknown) => [{ where: "validation", message: String(error) }]);
+    for (const p of problems) console.log(`  ✗ ${p.where}: ${p.message}`);
+    if (problems.length > 0) console.log(`${problems.length} problem${problems.length === 1 ? "" : "s"}: npm run check lists the same`);
   });
   return queue;
 }
