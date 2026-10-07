@@ -65,6 +65,14 @@ function sheetHtml(markdown: string): string {
   return md.render(head) + body.join("");
 }
 
+// Anchor id from a heading: lowercase ASCII words joined by hyphens.
+const slugify = (text: string) =>
+  text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+// Level chips: one soft chip per level, joined into a group.
+const levelSpan = (from: string, to: string) => LEVELS.filter((l) => lv(l) >= lv(from) && lv(l) <= lv(to));
+const chips = (levels: readonly string[]) => `<span class="chips">${levels.map((l) => `<span class="chip c-${l}">${l}</span>`).join("")}</span>`;
+
 // Level range covered by a section's topics, e.g. "A0-A1".
 function sectionRange(section: CurriculumSection): string {
   const froms = section.topics.map((t) => t.levels.split("-")[0]);
@@ -206,16 +214,42 @@ export async function build(o: BuildOptions): Promise<number> {
 
       // ---------- Topic pages ----------
 
-      for (const ref of written) {
+      for (const [index, ref] of written.entries()) {
         const topic = ref.topic!;
         const doc = splitDoc(renderGuide(ref, explain, refs, link));
+        const ids = new Set<string>();
+        const parts = doc.sections.filter((s) => s.kind === "body");
+        const idOf = new Map(
+          parts.map((s) => {
+            let id = slugify(s.title) || "section";
+            while (ids.has(id)) id += "-";
+            ids.add(id);
+            return [s, id];
+          }),
+        );
         const sections = doc.sections
           .map((s) => {
             const cls = s.kind === "essentials" || s.kind === "reminder" ? `block ${s.kind}` : s.kind === "links" ? "links" : "part";
             const level = s.from ? ` data-level="${s.from}"` : "";
-            return `<section class="${cls}"${level}>${md.render(`## ${s.heading}\n${s.lines.join("\n")}`)}</section>`;
+            const id = idOf.has(s) ? ` id="${idOf.get(s)}"` : "";
+            return `<section class="${cls}"${id}${level}>${md.render(`## ${s.heading}\n${s.lines.join("\n")}`)}</section>`;
           })
           .join("\n");
+
+        // Rail: the guide sections with their levels, the Essentials view, and the next topic.
+        const tocItems = parts.map((s) => {
+          const levels = s.from ? chips(levelSpan(s.from, s.to ?? s.from)) : "";
+          return `<li${s.from ? ` data-level="${s.from}"` : ""}><a href="#${idOf.get(s)}" data-view="guide"><span class="name">${escapeHtml(s.title)}</span>${levels}</a></li>`;
+        });
+        tocItems.push(
+          `<li><button type="button" data-view="essentials"><span class="name">${escapeHtml(t.essentialsAndReminders)}</span>${chips(topic.levels)}</button></li>`,
+        );
+        const next = written.slice(index + 1).find((r) => r.lang === ref.lang);
+        const upNext = next
+          ? `<h4>${escapeHtml(t.upNext)}</h4><a class="next" href="${topicUrl(explain, lang, next)}"><strong>${escapeHtml(topicTitle(next, explain))}</strong>` +
+            `<span class="summary">${escapeHtml(next.topic!.summary[explain] ?? "")}</span>${chips(next.topic!.levels)}</a>`
+          : "";
+        const rail = `<h4>${escapeHtml(t.onThisPage)}</h4><ol class="toc">${tocItems.join("")}</ol>${upNext}`;
         const actions = [
           `<a class="tool" href="${githubUrl(ref.path)}" rel="noopener" title="${escapeHtml(t.github)}" aria-label="${escapeHtml(t.github)}">${GITHUB_ICON}</a>`,
           `<button class="tool" id="print" type="button" title="${escapeHtml(t.print)}" aria-label="${escapeHtml(t.print)}">${PRINT_ICON}</button>`,
@@ -239,6 +273,7 @@ export async function build(o: BuildOptions): Promise<number> {
               view: true,
             }),
             nav: trackNav(explain, lang, ref),
+            rail,
             main: `<article class="doc${topic.levels.length === 1 ? " one-level" : ""}">${head}${intro}<div class="sections lanes">${sections}</div></article>`,
             dev: o.dev,
             siteUrl: o.siteUrl,

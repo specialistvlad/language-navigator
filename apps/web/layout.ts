@@ -9,6 +9,9 @@ export const UI = {
     view: "View",
     guide: "Guide",
     essentials: "Essentials",
+    onThisPage: "On this page",
+    essentialsAndReminders: "Essentials and reminders",
+    upNext: "Up next",
     sheets: "Cheatsheets",
     sheet: "Cheatsheet",
     levels: "Levels",
@@ -35,6 +38,9 @@ export const UI = {
     view: "Vista",
     guide: "Guía",
     essentials: "Lo esencial",
+    onThisPage: "En esta página",
+    essentialsAndReminders: "Lo esencial y recordatorios",
+    upNext: "A continuación",
     sheets: "Chuletas",
     sheet: "Chuleta",
     levels: "Niveles",
@@ -98,6 +104,7 @@ export interface PageOptions {
   alternates?: { lang: Explain; path: string }[];
   controls?: string;
   nav?: string;
+  rail?: string;
   main: string;
   dev: boolean;
   siteUrl: string;
@@ -140,9 +147,10 @@ export function page(o: PageOptions): string {
       <button class="tool" id="theme" type="button" title="Theme">◐</button>
     </div>
   </header>
-  <div class="layout${o.nav ? "" : " no-nav"}">
+  <div class="layout${o.nav ? "" : " no-nav"}${o.rail ? " has-rail" : ""}">
     ${o.nav ? `<nav class="sidebar" id="sidebar">${o.nav}</nav><script>${NAV_SCROLL}</script>` : ""}
     <main class="content">${o.main}</main>
+    ${o.rail ? `<aside class="rail">${o.rail}</aside>` : ""}
   </div>
   <script src="/client.js" defer></script>
 </body>

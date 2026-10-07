@@ -14,6 +14,7 @@ export interface DocSection {
   heading: string;
   title: string;
   from: string | null;
+  to: string | null;
   kind: SectionKind;
   lines: string[];
 }
@@ -50,7 +51,7 @@ export function splitDoc(text: string): Doc {
           : /^(See also|Ver también)$/.test(title)
             ? "links"
             : "body";
-      current = { heading, title, from: m ? m[1] : null, kind, lines: [] };
+      current = { heading, title, from: m ? m[1] : null, to: m ? (m[2] ?? m[1]) : null, kind, lines: [] };
       sections.push(current);
     } else if (current) current.lines.push(line);
     else head.push(line);

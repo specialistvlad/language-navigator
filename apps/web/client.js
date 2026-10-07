@@ -1,4 +1,4 @@
-// Progressive enhancement for the static pages: level filter, view, theme, menu, sidebar scroll, lanes, live reload.
+// Progressive enhancement for the static pages: level filter, view, theme, menu, sidebar scroll, on-this-page highlight, lanes, live reload.
 (() => {
   "use strict";
   const root = document.documentElement;
@@ -39,15 +39,15 @@
     if (level) {
       root.dataset.level = level.dataset.setLevel;
       store.set("ln-level", level.dataset.setLevel);
-      mark();
-      lanes();
+      refresh();
     }
     const view = event.target.closest("[data-set-view]");
-    if (view) {
-      root.dataset.view = view.dataset.setView;
-      store.set("ln-view", view.dataset.setView);
-      mark();
-      lanes();
+    if (view) setView(view.dataset.setView);
+    // On this page: a section link opens the Guide view, the Essentials entry opens its view at the top.
+    const entry = event.target.closest(".toc [data-view]");
+    if (entry) {
+      setView(entry.dataset.view);
+      if (entry.dataset.view === "essentials") scrollTo({ top: 0 });
     }
     if (event.target.closest("#print")) window.print();
     if (event.target.closest("#menu")) document.body.classList.toggle("nav-open");
@@ -58,7 +58,46 @@
     }
   });
 
+  function setView(view) {
+    root.dataset.view = view;
+    store.set("ln-view", view);
+    refresh();
+  }
+
+  function refresh() {
+    mark();
+    lanes();
+    spy();
+  }
+
   mark();
+
+  // On this page: highlights the section being read, the lowest section top above 30% of the window
+  // (or the first section on screen before any reaches that line).
+  const tocLinks = [...document.querySelectorAll(".toc a[href^='#']")];
+  const tocParts = tocLinks.map((a) => document.getElementById(decodeURIComponent(a.hash.slice(1))));
+  let spyFrame = 0;
+  function spy() {
+    spyFrame = 0;
+    const line = innerHeight * 0.3;
+    let current = -1;
+    let currentTop = -Infinity;
+    let first = -1;
+    let firstTop = Infinity;
+    tocParts.forEach((part, i) => {
+      if (!part || !part.offsetHeight) return;
+      const top = part.getBoundingClientRect().top;
+      if (top <= line && top > currentTop) [current, currentTop] = [i, top];
+      if (top < firstTop) [first, firstTop] = [i, top];
+    });
+    if (current < 0) current = first;
+    tocLinks.forEach((a, i) => a.classList.toggle("on", i === current));
+  }
+  if (tocLinks.length) {
+    addEventListener("scroll", () => (spyFrame ||= requestAnimationFrame(spy)), { passive: true });
+    addEventListener("resize", () => (spyFrame ||= requestAnimationFrame(spy)));
+    spy();
+  }
 
   // Sidebar scroll position for the next page; the page shell restores it.
   const sidebar = document.getElementById("sidebar");
