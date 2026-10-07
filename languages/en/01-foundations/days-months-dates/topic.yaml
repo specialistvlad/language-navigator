@@ -5,83 +5,86 @@ kind: foundations
 tags: [days, months, dates, years]
 concepts: [dates]
 related: [en.foundations.numbers, en.foundations.telling-time, en.prepositions.time-in-on-at]
-status: { en: draft }
+status: { en: draft, es: draft }
 
-title: { en: "Days, Months and Dates" }
+title: { en: "Days, Months and Dates", es: "Días, meses y fechas" }
 summary:
   en: "The days of the week, the months, and how to say and write dates and years. Days and months always start with a capital letter, and dates are said with ordinals: on **Monday**, the **third** of **July**."
+  es: "Los días de la semana, los meses y cómo decir y escribir fechas y años. Los días y los meses se escriben con mayúscula, y el día de la fecha se dice con ordinal: **Monday**, the **third** of **July** (*3 de julio*)."
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: point, label: { en: Point } }
-        - { key: rule, label: { en: Rule } }
-        - { key: example, label: { en: Example } }
+        - { key: point, label: { en: Point, es: Punto } }
+        - { key: rule, label: { en: Rule, es: Regla } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
       rows:
-        - { level: A0, point: { en: Capitals }, rule: { en: "days and months start with a capital letter" }, example: "**M**onday, **J**une" }
-        - { level: A0, point: Wednesday, rule: { en: "the first d is silent: /ˈwenzdeɪ/" }, example: "Wednesday" }
-        - { level: A0, point: { en: Weekend }, rule: { en: "Saturday and Sunday are the weekend; the other days are weekdays" }, example: "**the weekend**" }
-        - { level: A0, point: { en: Day of the month }, rule: { en: "say the day as an ordinal: 5 May" }, example: "the **fifth** of May" }
-        - { level: A0, point: { en: Date order }, rule: { en: "British: day, month, year, so 04/07/2026 is 4 July; US: month, day, year, so April 7" }, example: "04/07/2026" }
-        - { level: A0, point: { en: Asking the date }, rule: { en: "ask What's the date today? and answer with the ordinal" }, example: "It's the **tenth** of October." }
-        - { level: A0, point: { en: Years }, rule: { en: "most years in two pairs of digits: 1999; 1900 and 1905 as shown" }, example: "**nineteen** ninety-nine / nineteen **hundred** / nineteen **oh** five" }
-        - { level: A0, point: { en: After 2000 }, rule: { en: "2000–2009: two thousand (and) + unit; from 2010 both forms are common" }, example: "two thousand **and** eight / **twenty** twenty-six" }
+        - { level: A0, point: { en: Capitals, es: Mayúsculas }, rule: { en: "days and months start with a capital letter", es: "los días y los meses empiezan con mayúscula" }, example: "**M**onday, **J**une" }
+        - { level: A0, point: Wednesday, rule: { en: "the first d is silent: /ˈwenzdeɪ/", es: "la primera d no suena: /ˈwenzdeɪ/" }, example: "Wednesday" }
+        - { level: A0, point: { en: Weekend, es: Fin de semana }, rule: { en: "Saturday and Sunday are the weekend; the other days are weekdays", es: "Saturday y Sunday son the weekend; los demás días son weekdays" }, example: "**the weekend**" }
+        - { level: A0, point: { en: Day of the month, es: Día del mes }, rule: { en: "say the day as an ordinal: 5 May", es: "el día se dice con ordinal: 5 May" }, example: "the **fifth** of May", tr: { es: el 5 de mayo } }
+        - { level: A0, point: { en: Date order, es: Orden de la fecha }, rule: { en: "British: day, month, year, so 04/07/2026 is 4 July; US: month, day, year, so April 7", es: "británico: día, mes, año, así 04/07/2026 es el 4 de julio; US: mes, día, año, así el 7 de abril" }, example: "04/07/2026" }
+        - { level: A0, point: { en: Asking the date, es: Preguntar la fecha }, rule: { en: "ask What's the date today? and answer with the ordinal", es: "se pregunta What's the date today? y se responde con el ordinal" }, example: "It's the **tenth** of October.", tr: { es: Es 10 de octubre. } }
+        - { level: A0, point: { en: Years, es: Años }, rule: { en: "most years in two pairs of digits: 1999; 1900 and 1905 as shown", es: "la mayoría de los años en dos pares de cifras: 1999; 1900 y 1905 como se ve" }, example: "**nineteen** ninety-nine / nineteen **hundred** / nineteen **oh** five" }
+        - { level: A0, point: { en: After 2000, es: Desde 2000 }, rule: { en: "2000–2009: two thousand (and) + unit; from 2010 both forms are common", es: "2000–2009: two thousand (and) + unidad; desde 2010 las dos formas son habituales" }, example: "two thousand **and** eight / **twenty** twenty-six" }
 
 sections:
-  - title: { en: Days of the week }
+  - title: { en: Days of the week, es: Los días de la semana }
     content:
       - type: table
         columns:
-          - { key: day, label: { en: Day } }
-          - { key: ipa, label: { en: Pronunciation } }
-          - { key: short, label: { en: Short } }
+          - { key: day, label: { en: Day, es: Día } }
+          - { key: ipa, label: { en: Pronunciation, es: Pronunciación } }
+          - { key: short, label: { en: Short, es: Abreviatura } }
         rows:
-          - { level: A0, day: { ex: Monday }, ipa: /ˈmʌndeɪ/, short: Mon }
-          - { level: A0, day: { ex: Tuesday }, ipa: /ˈtjuːzdeɪ/, short: Tue }
-          - { level: A0, day: { ex: Wednesday }, ipa: /ˈwenzdeɪ/, short: Wed }
-          - { level: A0, day: { ex: Thursday }, ipa: /ˈθɜːzdeɪ/, short: Thu }
-          - { level: A0, day: { ex: Friday }, ipa: /ˈfraɪdeɪ/, short: Fri }
-          - { level: A0, day: { ex: Saturday }, ipa: /ˈsætədeɪ/, short: Sat }
-          - { level: A0, day: { ex: Sunday }, ipa: /ˈsʌndeɪ/, short: Sun }
+          - { level: A0, day: { ex: Monday, tr: { es: lunes } }, ipa: /ˈmʌndeɪ/, short: Mon }
+          - { level: A0, day: { ex: Tuesday, tr: { es: martes } }, ipa: /ˈtjuːzdeɪ/, short: Tue }
+          - { level: A0, day: { ex: Wednesday, tr: { es: miércoles } }, ipa: /ˈwenzdeɪ/, short: Wed }
+          - { level: A0, day: { ex: Thursday, tr: { es: jueves } }, ipa: /ˈθɜːzdeɪ/, short: Thu }
+          - { level: A0, day: { ex: Friday, tr: { es: viernes } }, ipa: /ˈfraɪdeɪ/, short: Fri }
+          - { level: A0, day: { ex: Saturday, tr: { es: sábado } }, ipa: /ˈsætədeɪ/, short: Sat }
+          - { level: A0, day: { ex: Sunday, tr: { es: domingo } }, ipa: /ˈsʌndeɪ/, short: Sun }
       - type: bullets
         items:
           - level: A0
             text:
               en: "Days and months always start with a capital letter: **M**onday, **J**une."
+              es: "Los días y los meses siempre empiezan con mayúscula: **M**onday, **J**une."
           - level: A0
             text:
               en: "Wednesday has a silent first d: /ˈwenzdeɪ/."
+              es: "En Wednesday la primera d no suena: /ˈwenzdeɪ/."
           - level: A0
-            text: { en: "Saturday and Sunday are **the weekend**; the other days are **weekdays**." }
+            text: { en: "Saturday and Sunday are **the weekend**; the other days are **weekdays**.", es: "Saturday y Sunday son **the weekend**; los demás días son **weekdays**." }
 
-  - title: { en: Months }
+  - title: { en: Months, es: Los meses }
     content:
       - type: table
         columns:
-          - { key: month, label: { en: Month } }
-          - { key: ipa, label: { en: Pronunciation } }
-          - { key: short, label: { en: Short } }
+          - { key: month, label: { en: Month, es: Mes } }
+          - { key: ipa, label: { en: Pronunciation, es: Pronunciación } }
+          - { key: short, label: { en: Short, es: Abreviatura } }
         rows:
-          - { level: A0, month: { ex: January }, ipa: /ˈdʒænjuəri/, short: Jan }
-          - { level: A0, month: { ex: February }, ipa: /ˈfebruəri/, short: Feb }
-          - { level: A0, month: { ex: March }, ipa: /mɑːtʃ/, short: Mar }
-          - { level: A0, month: { ex: April }, ipa: /ˈeɪprəl/, short: Apr }
-          - { level: A0, month: { ex: May }, ipa: /meɪ/, short: May }
-          - { level: A0, month: { ex: June }, ipa: /dʒuːn/, short: Jun }
-          - { level: A0, month: { ex: July }, ipa: /dʒuˈlaɪ/, short: Jul }
-          - { level: A0, month: { ex: August }, ipa: /ˈɔːɡəst/, short: Aug }
-          - { level: A0, month: { ex: September }, ipa: /sepˈtembə/, short: Sep }
-          - { level: A0, month: { ex: October }, ipa: /ɒkˈtəʊbə/, short: Oct }
-          - { level: A0, month: { ex: November }, ipa: /nəʊˈvembə/, short: Nov }
-          - { level: A0, month: { ex: December }, ipa: /dɪˈsembə/, short: Dec }
+          - { level: A0, month: { ex: January, tr: { es: enero } }, ipa: /ˈdʒænjuəri/, short: Jan }
+          - { level: A0, month: { ex: February, tr: { es: febrero } }, ipa: /ˈfebruəri/, short: Feb }
+          - { level: A0, month: { ex: March, tr: { es: marzo } }, ipa: /mɑːtʃ/, short: Mar }
+          - { level: A0, month: { ex: April, tr: { es: abril } }, ipa: /ˈeɪprəl/, short: Apr }
+          - { level: A0, month: { ex: May, tr: { es: mayo } }, ipa: /meɪ/, short: May }
+          - { level: A0, month: { ex: June, tr: { es: junio } }, ipa: /dʒuːn/, short: Jun }
+          - { level: A0, month: { ex: July, tr: { es: julio } }, ipa: /dʒuˈlaɪ/, short: Jul }
+          - { level: A0, month: { ex: August, tr: { es: agosto } }, ipa: /ˈɔːɡəst/, short: Aug }
+          - { level: A0, month: { ex: September, tr: { es: septiembre } }, ipa: /sepˈtembə/, short: Sep }
+          - { level: A0, month: { ex: October, tr: { es: octubre } }, ipa: /ɒkˈtəʊbə/, short: Oct }
+          - { level: A0, month: { ex: November, tr: { es: noviembre } }, ipa: /nəʊˈvembə/, short: Nov }
+          - { level: A0, month: { ex: December, tr: { es: diciembre } }, ipa: /dɪˈsembə/, short: Dec }
 
-  - title: { en: Dates }
+  - title: { en: Dates, es: Las fechas }
     content:
       - type: table
         columns:
-          - { key: written, label: { en: Written } }
-          - { key: said, label: { en: Said } }
+          - { key: written, label: { en: Written, es: Se escribe } }
+          - { key: said, label: { en: Said, es: Se dice } }
         rows:
           - { level: A0, written: "5 May · 5/5", said: "the **fifth** of May" }
           - { level: A0, written: "1 June · 1/6", said: "the **first** of June" }
@@ -91,22 +94,26 @@ sections:
           - level: A0
             text:
               en: "Say the day as an ordinal number: the **third** of July. Ordinals: [Numbers](id:en.foundations.numbers)."
+              es: "El día se dice con número ordinal: the **third** of July. Ordinales: [Los números](id:en.foundations.numbers)."
           - level: A0
             text:
               en: "British order: day, month, year. 04/07/2026 is 4 July."
+              es: "Orden británico: día, mes, año. 04/07/2026 es el 4 de julio."
           - level: A0
             text:
               en: "US: month, day, year. 04/07/2026 is April 7; say *April seventh*."
+              es: "US: mes, día, año. 04/07/2026 es el 7 de abril; se dice *April seventh*."
           - level: A0
-            text: { en: "Ask the date with **What's the date today?**" }
+            text: { en: "Ask the date with **What's the date today?**", es: "La fecha se pregunta con **What's the date today?**" }
             ex: "It's the **tenth** of October."
+            tr: { es: Es 10 de octubre. }
 
-  - title: { en: Years }
+  - title: { en: Years, es: Los años }
     content:
       - type: table
         columns:
-          - { key: year, label: { en: Year } }
-          - { key: said, label: { en: Said } }
+          - { key: year, label: { en: Year, es: Año } }
+          - { key: said, label: { en: Said, es: Se dice } }
         rows:
           - { level: A0, year: "1999", said: "**nineteen** ninety-nine" }
           - { level: A0, year: "1900", said: "nineteen **hundred**" }
@@ -119,13 +126,18 @@ sections:
           - level: A0
             text:
               en: "Say most years in two pairs of digits: 19 | 99 → nineteen ninety-nine."
+              es: "La mayoría de los años se dicen en dos pares de cifras: 19 | 99 → nineteen ninety-nine."
           - level: A0
             text:
               en: "2000–2009: two thousand (and) + unit. From 2010, both forms are common."
+              es: "2000–2009: two thousand (and) + unidad. Desde 2010, las dos formas son habituales."
 
-  - title: { en: Typical errors }
+  - title: { en: Typical errors, es: Errores típicos }
     content:
       - type: errors
+        audience: true
         rows:
-          - { level: A0, wrong: Wednesday /ˈwednzdeɪ/, right: "Wednesday **/ˈwenzdeɪ/**", rule: { en: "the first d is silent" } }
-          - { level: A0, wrong: the five of May, right: "the **fifth** of May", rule: { en: "days are ordinals" } }
+          - { level: A0, for: [es], wrong: monday · june, right: "**M**onday · **J**une", rule: { es: "días y meses con mayúscula" } }
+          - { level: A0, wrong: Wednesday /ˈwednzdeɪ/, right: "Wednesday **/ˈwenzdeɪ/**", rule: { en: "the first d is silent", es: "la primera d no suena" } }
+          - { level: A0, wrong: the five of May, right: "the **fifth** of May", rule: { en: "days are ordinals", es: "el día es ordinal" } }
+          - { level: A0, for: [es], wrong: "1999 = one thousand nine hundred ninety-nine", right: "1999 = **nineteen ninety-nine**", rule: { es: "dos pares de cifras" } }

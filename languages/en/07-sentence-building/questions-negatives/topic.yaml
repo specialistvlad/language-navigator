@@ -5,181 +5,213 @@ kind: grammar
 tags: [questions, negatives, wh-questions, auxiliaries]
 concepts: [questions-negatives]
 related: [en.sentence-building.word-order, en.tenses.simple-tenses, en.verbs.to-be, en.modals.can-could, en.sentence-building.question-tags]
-status: { en: draft }
+status: { en: draft, es: draft }
 
-title: { en: "Questions and negatives" }
+title: { en: "Questions and negatives", es: "Preguntas y negativas" }
 summary:
   en: "Yes/no questions, wh-questions, short answers and negatives, with be, modals and every other verb. Be and modals invert or take not; other verbs use do, does or did with the base verb: **Do** you **like** tea?"
+  es: "Preguntas, respuestas cortas y negativas con be, modales y los demás verbos. En inglés la pregunta y la negativa de un verbo normal llevan do, does o did, y el sujeto siempre aparece: **Do** you **like** tea? I **don't like** tea."
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: form, label: { en: Form } }
-        - { key: be, label: { en: "be and modals" } }
-        - { key: other, label: { en: Other verbs } }
+        - { key: form, label: { en: Form, es: Forma } }
+        - { key: be, label: { en: "be and modals", es: "be y modales" } }
+        - { key: other, label: { en: Other verbs, es: Otros verbos } }
       rows:
         - level: A1
-          form: { en: Affirmative }
-          be: { ex: "She **is** here. / She **can** swim." }
-          other: { ex: "She **likes** tea." }
+          form: { en: Affirmative, es: Afirmativa }
+          be: { ex: "She **is** here. / She **can** swim.", tr: { es: Está aquí. / Sabe nadar. } }
+          other: { ex: "She **likes** tea.", tr: { es: Le gusta el té. } }
         - level: A1
-          form: { en: Negative }
-          be: { ex: "She **isn't** here. / She **can't** swim." }
-          other: { ex: "She **doesn't like** tea." }
+          form: { en: Negative, es: Negativa }
+          be: { ex: "She **isn't** here. / She **can't** swim.", tr: { es: No está aquí. / No sabe nadar. } }
+          other: { ex: "She **doesn't like** tea.", tr: { es: No le gusta el té. } }
         - level: A1
-          form: { en: Question }
-          be: { ex: "**Is** she here? / **Can** she swim?" }
-          other: { ex: "**Does** she **like** tea?" }
+          form: { en: Question, es: Pregunta }
+          be: { ex: "**Is** she here? / **Can** she swim?", tr: { es: "¿Está aquí? / ¿Sabe nadar?" } }
+          other: { ex: "**Does** she **like** tea?", tr: { es: "¿Le gusta el té?" } }
         - level: A1
-          form: { en: Short answer }
-          be: { ex: "Yes, she **is**. / No, she **can't**." }
-          other: { ex: "Yes, she **does**. / No, she **doesn't**." }
+          form: { en: Short answer, es: Respuesta corta }
+          be: { ex: "Yes, she **is**. / No, she **can't**.", tr: { es: Sí. / No. } }
+          other: { ex: "Yes, she **does**. / No, she **doesn't**.", tr: { es: Sí. / No. } }
 
 sections:
-  - title: { en: Overview }
+  - title: { en: Overview, es: Resumen }
     content:
       - type: bullets
         items:
           - level: A1
             text:
               en: "**be** and modal verbs invert with the subject or take **not**. Other verbs use **do / does / did**."
+              es: "**be** y los verbos modales se invierten con el sujeto o llevan **not**. Los demás verbos usan **do / does / did**."
           - level: A1
             text:
               en: "Every question and negative sentence has a subject."
+              es: "Toda pregunta y toda negativa tiene sujeto."
+          - level: A1
+            for: [es]
+            text: { es: "El signo ? va solo al final: *¿Dónde vives?* → Where do you live?" }
+          - level: A1
+            for: [es]
+            text: { es: "En español basta la entonación: *¿Vives aquí?* En inglés hace falta el auxiliar: **Do** you live here?" }
 
-  - title: { en: "Form: be and modals" }
+  - title: { en: "Form: be and modals", es: "Forma: be y modales" }
     content:
       - type: table
         columns:
-          - { key: form, label: { en: Form } }
-          - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: pattern, label: { en: Pattern, es: Patrón } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, form: { en: Negative }, pattern: "subject + be / modal + not", example: "They **are not** at home. / He **can't** drive." }
-          - { level: A1, form: { en: Question }, pattern: "be / modal + subject", example: "**Are** they at home? / **Can** he drive?" }
+          - { level: A1, form: { en: Negative, es: Negativa }, pattern: "subject + be / modal + not", example: "They **are not** at home. / He **can't** drive.", tr: { es: No están en casa. / No sabe conducir. } }
+          - { level: A1, form: { en: Question, es: Pregunta }, pattern: "be / modal + subject", example: "**Are** they at home? / **Can** he drive?", tr: { es: "¿Están en casa? / ¿Sabe conducir?" } }
       - type: bullets
         items:
           - level: A1
             text:
               en: "**be** and **can**, **will**, **should**, **must** need no do / does / did."
+              es: "**be** y **can**, **will**, **should**, **must** no necesitan do / does / did."
           - level: A1
             text:
               en: "**am not** has the short form **I'm not**: I'm not ready."
+              es: "**am not** tiene la forma corta **I'm not**: I'm not ready."
           - level: A1
             text:
               en: "**have got** inverts too: **Have** you **got** a pen?"
+              es: "**have got** también se invierte: **Have** you **got** a pen?"
 
-  - title: { en: "Form: do, does and did" }
+  - title: { en: "Form: do, does and did", es: "Forma: do, does y did" }
     content:
       - type: table
         columns:
-          - { key: aux, label: { en: Auxiliary } }
-          - { key: use, label: { en: Subject and tense } }
-          - { key: example, label: { en: Example } }
+          - { key: aux, label: { en: Auxiliary, es: Auxiliar } }
+          - { key: use, label: { en: Subject and tense, es: Sujeto y tiempo } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, aux: do / don't, use: { en: "I / you / we / they, present" }, example: "**Do** you **like** jazz?" }
-          - { level: A1, aux: does / doesn't, use: { en: "he / she / it, present" }, example: "He **doesn't like** jazz." }
-          - { level: A1, aux: did / didn't, use: { en: "every subject, past" }, example: "**Did** you **call** her?" }
+          - { level: A1, aux: do / don't, use: { en: "I / you / we / they, present", es: "I / you / we / they, presente" }, example: "**Do** you **like** jazz?", tr: { es: "¿Te gusta el jazz?" } }
+          - { level: A1, aux: does / doesn't, use: { en: "he / she / it, present", es: "he / she / it, presente" }, example: "He **doesn't like** jazz.", tr: { es: No le gusta el jazz. } }
+          - { level: A1, aux: did / didn't, use: { en: "every subject, past", es: "todos los sujetos, pasado" }, example: "**Did** you **call** her?", tr: { es: "¿La llamaste?" } }
       - type: bullets
         items:
           - level: A1
             text:
               en: "After **do / does / did** the verb is in the base form: Did you **call**?"
+              es: "Después de **do / does / did** el verbo va en forma base: Did you **call**?"
           - level: A1
             text:
               en: "The auxiliary carries the tense and the person; the main verb stays unchanged."
+              es: "El auxiliar lleva el tiempo y la persona; el verbo principal no cambia."
           - level: A1
             text:
               en: "Present tables: [Present Simple](id:en.tenses.simple-tenses). Past: [Past simple](id:en.tenses.simple-tenses)."
+              es: "Tablas del presente: [Presente simple](id:en.tenses.simple-tenses). Pasado: [Pasado simple](id:en.tenses.simple-tenses)."
+          - level: A1
+            for: [es]
+            text: { es: "El *no* español pasa a **don't / doesn't / didn't** delante del verbo: *No lo sé.* → I **don't** know." }
           - level: A1
             text:
               en: "A negative sentence takes one negative word: I **don't** know **anything**. / I know **nothing**."
+              es: "Una negativa lleva una sola palabra negativa: I **don't** know **anything**. / I know **nothing**."
+          - level: A1
+            for: [es]
+            text: { es: "*No sé nada* → I don't know **anything**. Con **don't** se usan **anything** y **ever**; **nothing** y **never** van sin don't." }
 
-  - title: { en: "Form: negative contractions" }
+  - title: { en: "Form: negative contractions", es: "Forma: contracciones negativas" }
     content:
       - type: table
         columns:
-          - { key: full, label: { en: Full form } }
-          - { key: short, label: { en: Short form } }
-          - { key: example, label: { en: Example } }
+          - { key: full, label: { en: Full form, es: Forma completa } }
+          - { key: short, label: { en: Short form, es: Forma corta } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, full: is not, short: isn't, example: "It **isn't** cold." }
-          - { level: A1, full: are not, short: aren't, example: "They **aren't** here." }
-          - { level: A1, full: was / were not, short: "wasn't / weren't", example: "We **weren't** late." }
-          - { level: A1, full: do / does / did not, short: "don't / doesn't / didn't", example: "She **doesn't** know." }
-          - { level: A1, full: cannot, short: can't, example: "I **can't** see." }
-          - { level: A1, full: will not, short: won't, example: "It **won't** work." }
-          - { level: A1, full: "should / must / could / would not", short: "shouldn't / mustn't / couldn't / wouldn't", example: "You **shouldn't** go." }
+          - { level: A1, full: is not, short: isn't, example: "It **isn't** cold.", tr: { es: No hace frío. } }
+          - { level: A1, full: are not, short: aren't, example: "They **aren't** here.", tr: { es: No están aquí. } }
+          - { level: A1, full: was / were not, short: "wasn't / weren't", example: "We **weren't** late.", tr: { es: No llegamos tarde. } }
+          - { level: A1, full: do / does / did not, short: "don't / doesn't / didn't", example: "She **doesn't** know.", tr: { es: No lo sabe. } }
+          - { level: A1, full: cannot, short: can't, example: "I **can't** see.", tr: { es: No veo. } }
+          - { level: A1, full: will not, short: won't, example: "It **won't** work.", tr: { es: No va a funcionar. } }
+          - { level: A1, full: "should / must / could / would not", short: "shouldn't / mustn't / couldn't / wouldn't", example: "You **shouldn't** go.", tr: { es: No deberías ir. } }
       - type: bullets
         items:
           - level: A1
             text:
               en: "Speech and messages use the short forms. The full forms add emphasis: I do **not** agree."
+              es: "En la conversación y en los mensajes se usan las formas cortas. Las completas dan énfasis: I do **not** agree."
 
-  - title: { en: "Form: wh-questions" }
+  - title: { en: "Form: wh-questions", es: "Forma: preguntas con wh-" }
     content:
       - type: table
         columns:
-          - { key: word, label: { en: Wh-word } }
-          - { key: asks, label: { en: Asks about } }
-          - { key: example, label: { en: Example } }
+          - { key: word, label: { en: Wh-word, es: Palabra } }
+          - { key: asks, label: { en: Asks about, es: Pregunta por } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, word: what, asks: { en: a thing }, example: "**What** do you want?" }
-          - { level: A1, word: where, asks: { en: a place }, example: "**Where** does he live?" }
-          - { level: A1, word: when, asks: { en: a time }, example: "**When** is the party?" }
-          - { level: A1, word: who, asks: { en: a person }, example: "**Who** did you meet?" }
-          - { level: A1, word: why, asks: { en: a reason }, example: "**Why** are you late?" }
-          - { level: A1, word: how, asks: { en: a way }, example: "**How** do you get to work?" }
-          - { level: A1, word: which, asks: { en: a choice }, example: "**Which** bag is yours?" }
-          - { level: A1, word: whose, asks: { en: an owner }, example: "**Whose** keys are these?" }
-          - { level: A1, word: how much, asks: { en: "an amount or a price" }, example: "**How much** is this?" }
-          - { level: A1, word: how many, asks: { en: a number }, example: "**How many** brothers have you got?" }
-          - { level: A1, word: how often, asks: { en: frequency }, example: "**How often** do you swim?" }
-          - { level: A1, word: how old, asks: { en: age }, example: "**How old** is your sister?" }
-          - { level: A1, word: how long, asks: { en: "a length of time" }, example: "**How long** is the film?" }
+          - { level: A1, word: what, asks: { en: a thing, es: una cosa }, example: "**What** do you want?", tr: { es: "¿Qué quieres?" } }
+          - { level: A1, word: where, asks: { en: a place, es: un lugar }, example: "**Where** does he live?", tr: { es: "¿Dónde vive?" } }
+          - { level: A1, word: when, asks: { en: a time, es: un momento }, example: "**When** is the party?", tr: { es: "¿Cuándo es la fiesta?" } }
+          - { level: A1, word: who, asks: { en: a person, es: una persona }, example: "**Who** did you meet?", tr: { es: "¿A quién conociste?" } }
+          - { level: A1, word: why, asks: { en: a reason, es: una razón }, example: "**Why** are you late?", tr: { es: "¿Por qué llegas tarde?" } }
+          - { level: A1, word: how, asks: { en: a way, es: una manera }, example: "**How** do you get to work?", tr: { es: "¿Cómo vas al trabajo?" } }
+          - { level: A1, word: which, asks: { en: a choice, es: una elección }, example: "**Which** bag is yours?", tr: { es: "¿Cuál es tu bolso?" } }
+          - { level: A1, word: whose, asks: { en: an owner, es: un dueño }, example: "**Whose** keys are these?", tr: { es: "¿De quién son estas llaves?" } }
+          - { level: A1, word: how much, asks: { en: "an amount or a price", es: "una cantidad o un precio" }, example: "**How much** is this?", tr: { es: "¿Cuánto cuesta esto?" } }
+          - { level: A1, word: how many, asks: { en: a number, es: un número }, example: "**How many** brothers have you got?", tr: { es: "¿Cuántos hermanos tienes?" } }
+          - { level: A1, word: how often, asks: { en: frequency, es: frecuencia }, example: "**How often** do you swim?", tr: { es: "¿Con qué frecuencia nadas?" } }
+          - { level: A1, word: how old, asks: { en: age, es: edad }, example: "**How old** is your sister?", tr: { es: "¿Cuántos años tiene tu hermana?" } }
+          - { level: A1, word: how long, asks: { en: "a length of time", es: "una duración" }, example: "**How long** is the film?", tr: { es: "¿Cuánto dura la película?" } }
       - type: bullets
         items:
           - level: A1
             text:
               en: "The order is wh-word + auxiliary + subject + base verb: **Where do** you **live**?"
+              es: "El orden es wh-word + auxiliar + sujeto + verbo base: **Where do** you **live**?"
           - level: A1
             text:
               en: "With **be** the order is wh-word + be + subject: **Where are** you from?"
+              es: "Con **be** el orden es wh-word + be + sujeto: **Where are** you from?"
           - level: A1
             text:
               en: "**which** and **whose** can take a noun: **Which colour** do you like?"
+              es: "**which** y **whose** pueden ir con un sustantivo: **Which colour** do you like?"
           - level: A1
             text:
               en: "**how many** takes a plural noun, **how much** an uncountable noun: How many eggs? / How much milk?"
+              es: "**how many** lleva un sustantivo plural y **how much** uno incontable: How many eggs? / How much milk?"
+          - level: A1
+            for: [es]
+            text: { es: "En español el sujeto puede ir después del verbo: *¿Qué significa esto?* En inglés va delante: What does this **mean**?" }
 
-  - title: { en: "Form: subject questions" }
+  - title: { en: "Form: subject questions", es: "Forma: preguntas de sujeto" }
     content:
       - type: table
         columns:
-          - { key: word, label: { en: Question word } }
-          - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: word, label: { en: Question word, es: Palabra } }
+          - { key: pattern, label: { en: Pattern, es: Patrón } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, word: who, pattern: "who + verb", example: "**Who called** you?" }
-          - { level: A1, word: what, pattern: "what + verb", example: "**What happens** next?" }
-          - { level: A1, word: "which / how many", pattern: "which / how many + noun + verb", example: "**How many people came**?" }
+          - { level: A1, word: who, pattern: "who + verb", example: "**Who called** you?", tr: { es: "¿Quién te llamó?" } }
+          - { level: A1, word: what, pattern: "what + verb", example: "**What happens** next?", tr: { es: "¿Qué pasa después?" } }
+          - { level: A1, word: "which / how many", pattern: "which / how many + noun + verb", example: "**How many people came**?", tr: { es: "¿Cuánta gente vino?" } }
       - type: bullets
         items:
           - level: A1
             text:
               en: "When the question word is the subject, the question has no do / does / did."
+              es: "Cuando la palabra interrogativa es el sujeto, la pregunta no lleva do / does / did."
           - level: A1
             text:
               en: "The verb takes the tense directly: **Who lives** here? / **Who lived** here?"
+              es: "El verbo lleva el tiempo directamente: **Who lives** here? / **Who lived** here?"
 
-  - title: { en: "Form: short answers" }
+  - title: { en: "Form: short answers", es: "Forma: respuestas cortas" }
     content:
       - type: table
         columns:
-          - { key: question, label: { en: Question } }
-          - { key: "yes", label: { en: "Yes" } }
-          - { key: "no", label: { en: "No" } }
+          - { key: question, label: { en: Question, es: Pregunta } }
+          - { key: "yes", label: { en: "Yes", es: Sí } }
+          - { key: "no", label: { en: "No", es: "No" } }
         rows:
           - { level: A1, question: Are you tired?, "yes": "Yes, I **am**.", "no": "No, I'**m not**." }
           - { level: A1, question: Can she swim?, "yes": "Yes, she **can**.", "no": "No, she **can't**." }
@@ -189,28 +221,39 @@ sections:
           - level: A1
             text:
               en: "A short answer repeats the be, modal or auxiliary verb from the question."
+              es: "La respuesta corta repite el verbo be, el modal o el auxiliar de la pregunta."
           - level: A1
             text:
               en: "A positive short answer keeps the full form: Yes, I **am**."
+              es: "La respuesta corta afirmativa conserva la forma completa: Yes, I **am**."
           - level: A1
             text:
               en: "For **do / does** see [Present Simple](id:en.tenses.simple-tenses)."
+              es: "Para **do / does** ver [Presente simple](id:en.tenses.simple-tenses)."
 
-  - title: { en: "Pronunciation: question intonation" }
+  - title: { en: "Pronunciation: question intonation", es: "Pronunciación: entonación de las preguntas" }
     content:
       - type: table
         columns:
-          - { key: question, label: { en: Question } }
-          - { key: tune, label: { en: Voice } }
-          - { key: example, label: { en: Example } }
+          - { key: question, label: { en: Question, es: Pregunta } }
+          - { key: tune, label: { en: Voice, es: Voz } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, question: yes / no, tune: { en: rises at the end }, example: "Do you like tea? ↗" }
-          - { level: A1, question: wh-, tune: { en: falls at the end }, example: "Where do you live? ↘" }
+          - { level: A1, question: yes / no, tune: { en: rises at the end, es: sube al final }, example: "Do you like tea? ↗", tr: { es: "¿Te gusta el té?" } }
+          - { level: A1, question: wh-, tune: { en: falls at the end, es: baja al final }, example: "Where do you live? ↘", tr: { es: "¿Dónde vives?" } }
 
-  - title: { en: Typical errors }
+  - title: { en: Typical errors, es: Errores típicos }
     content:
       - type: errors
+        audience: true
         rows:
-          - { level: A1, wrong: Did you went?, right: "Did you **go**?", rule: { en: after did the verb is in the base form } }
-          - { level: A1, wrong: Who did call you?, right: "**Who called** you?", rule: { en: a subject question has no did } }
-          - { level: A1, wrong: Do she like tea?, right: "**Does** she like tea?", rule: { en: he / she / it → does } }
+          - { level: A1, for: [es], wrong: Where you live?, right: "Where **do** you live?", rule: { es: "pregunta: wh-word + do / does + sujeto + V" } }
+          - { level: A1, for: [es], wrong: You speak English?, right: "**Do** you speak English?", rule: { es: "la pregunta empieza con el auxiliar, no solo con entonación" } }
+          - { level: A1, for: [es], wrong: Where you are from?, right: "Where **are you** from?", rule: { es: "con be se invierte el sujeto: be + sujeto" } }
+          - { level: A1, for: [es], wrong: I no like coffee., right: "I **don't like** coffee.", rule: { es: "negativa: don't / doesn't + V" } }
+          - { level: A1, for: [es], wrong: I don't know nothing., right: "I don't know **anything**.", rule: { es: una sola palabra negativa por frase } }
+          - { level: A1, for: [es], wrong: What means this word?, right: "What **does** this word **mean**?", rule: { es: "wh-word + do / does + sujeto + V" } }
+          - { level: A1, for: [es], wrong: "Do you like tea? — Yes, I like.", right: "Yes, I **do**.", rule: { es: la respuesta corta repite el auxiliar } }
+          - { level: A1, wrong: Did you went?, right: "Did you **go**?", rule: { en: after did the verb is in the base form, es: después de did el verbo va en forma base } }
+          - { level: A1, wrong: Who did call you?, right: "**Who called** you?", rule: { en: a subject question has no did, es: la pregunta de sujeto no lleva did } }
+          - { level: A1, for: [en], wrong: Do she like tea?, right: "**Does** she like tea?", rule: { en: he / she / it → does } }

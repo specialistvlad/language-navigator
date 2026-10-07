@@ -5,62 +5,67 @@ kind: grammar
 tags: [demonstratives, determiners, pronouns]
 concepts: [demonstratives]
 related: [en.nouns-determiners.plurals, en.nouns-determiners.articles-a-an-the, en.verbs.to-be, en.pronouns.personal-pronouns]
-status: { en: draft }
+status: { en: draft, es: draft }
 
-title: { en: "This, That, These, Those" }
+title: { en: "This, That, These, Those", es: "Demostrativos: this, that, these, those" }
 summary:
   en: "This and these point to things near you; that and those point to things far away, in the singular and the plural. These and those go with plural nouns and are: **These** are my keys. **Those** shoes **are** nice."
+  es: "This y these señalan cosas cercanas; that y those, cosas lejanas, en singular y en plural. El inglés distingue solo cerca y lejos, así que *ese* y *aquel* son los dos **that**: **That** is my bag. **Those** are my shoes."
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: where, label: { en: Distance } }
-        - { key: singular, label: { en: Singular } }
-        - { key: plural, label: { en: Plural } }
+        - { key: where, label: { en: Distance, es: Distancia } }
+        - { key: singular, label: { en: Singular, es: Singular } }
+        - { key: plural, label: { en: Plural, es: Plural } }
       rows:
-        - { level: A0, where: { en: "near: here" }, singular: "**this** book", plural: "**these** books" }
-        - { level: A0, where: { en: "far: there" }, singular: "**that** book", plural: "**those** books" }
+        - { level: A0, where: { en: "near: here", es: "cerca: aquí" }, singular: "**this** book", plural: "**these** books", tr: { es: este libro / estos libros } }
+        - { level: A0, where: { en: "far: there", es: "lejos: ahí, allí" }, singular: "**that** book", plural: "**those** books", tr: { es: ese libro / esos libros } }
 
 sections:
-  - title: { en: Overview }
+  - title: { en: Overview, es: Resumen }
     content:
       - type: bullets
         items:
+          - { level: A0, for: [es], text: { es: "*ese* y *aquel* son los dos **that**; *esos* y *aquellos*, **those**." } }
           - level: A0
             text:
               en: "The four words never change for masculine or feminine: **this** man, **this** woman."
+              es: "Las cuatro palabras no cambian con el género: **this** man, **this** woman."
 
-  - title: { en: "Form: before a noun or alone" }
+  - title: { en: "Form: before a noun or alone", es: "Forma: delante de un sustantivo o solo" }
     content:
       - type: table
         columns:
-          - { key: form, label: { en: Form } }
-          - { key: example, label: { en: Example } }
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A0, form: { en: + singular noun }, example: "**This** bag is new." }
-          - { level: A0, form: { en: + plural noun }, example: "**Those** shoes are nice." }
-          - { level: A0, form: { en: alone }, example: "**This** is my bag. / **Those** are my shoes." }
-          - { level: A1, form: "+ one", example: "I like **that one**." }
+          - { level: A0, form: { en: + singular noun, es: + sustantivo singular }, example: "**This** bag is new.", tr: { es: Este bolso es nuevo. } }
+          - { level: A0, form: { en: + plural noun, es: + sustantivo plural }, example: "**Those** shoes are nice.", tr: { es: Esos zapatos son bonitos. } }
+          - { level: A0, form: { en: alone, es: solo }, example: "**This** is my bag. / **Those** are my shoes.", tr: { es: Este es mi bolso. / Esos son mis zapatos. } }
+          - { level: A1, form: "+ one", example: "I like **that one**.", tr: { es: Me gusta ese. } }
       - type: bullets
         items:
           - level: A0
             text:
               en: "this / that + singular noun + **is**; these / those + plural noun + **are**."
+              es: "this / that + sustantivo singular + **is**; these / those + sustantivo plural + **are**."
           - level: A1
             text:
               en: "**one** replaces a singular noun already known: this one, that one."
+              es: "**one** sustituye a un sustantivo singular ya conocido: this one, that one."
 
-  - title: { en: "Pronunciation: this and these" }
+  - title: { en: "Pronunciation: this and these", es: "Pronunciación: this y these" }
     content:
       - type: table
         columns:
-          - { key: word, label: { en: Word } }
-          - { key: ipa, label: { en: Sound } }
-          - { key: vowel, label: { en: Vowel } }
+          - { key: word, label: { en: Word, es: Palabra } }
+          - { key: ipa, label: { en: Sound, es: Sonido } }
+          - { key: vowel, label: { en: Vowel, es: Vocal } }
         rows:
-          - { level: A0, word: this, ipa: /ðɪs/, vowel: { en: short /ɪ/ } }
-          - { level: A0, word: these, ipa: /ðiːz/, vowel: { en: long /iː/ } }
+          - { level: A0, word: this, ipa: /ðɪs/, vowel: { en: short /ɪ/, es: /ɪ/ corta } }
+          - { level: A0, word: these, ipa: /ðiːz/, vowel: { en: long /iː/, es: /iː/ larga } }
           - { level: A0, word: that, ipa: /ðæt/, vowel: /æ/ }
           - { level: A0, word: those, ipa: /ðəʊz/, vowel: /əʊ/ }
       - type: bullets
@@ -68,25 +73,30 @@ sections:
           - level: A0
             text:
               en: "All four start with /ð/, the voiced th."
+              es: "Las cuatro empiezan con /ð/, la th sonora: «d» suave de *cada*."
           - level: A0
             text:
               en: "**these** and **those** end in /z/; **this** ends in /s/."
+              es: "**these** y **those** acaban en /z/; **this** acaba en /s/."
 
-  - title: { en: Use }
+  - title: { en: Use, es: Uso }
     content:
       - type: table
         columns:
-          - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A0, use: { en: Introducing people }, example: "**This is** Ana. She's my sister." }
-          - { level: A0, use: { en: "On the phone: you / the other person" }, example: "Hi, **this is** Tom. Is **that** Ana? (US: Is **this** Ana?)" }
-          - { level: A1, use: { en: "Time: now / then" }, example: "**this** morning / **that** day" }
-          - { level: A1, use: { en: Something just said or done }, example: "**That's** great! / **That's** right." }
+          - { level: A0, use: { en: Introducing people, es: Presentar a alguien }, example: "**This is** Ana. She's my sister.", tr: { es: Esta es Ana. Es mi hermana. } }
+          - { level: A0, use: { en: "On the phone: you / the other person", es: "Al teléfono: tú / la otra persona" }, example: "Hi, **this is** Tom. Is **that** Ana? (US: Is **this** Ana?)", tr: { es: "Hola, soy Tom. ¿Eres Ana?" } }
+          - { level: A1, use: { en: "Time: now / then", es: "Tiempo: ahora / entonces" }, example: "**this** morning / **that** day", tr: { es: esta mañana / aquel día } }
+          - { level: A1, use: { en: Something just said or done, es: Algo que se acaba de decir o hacer }, example: "**That's** great! / **That's** right.", tr: { es: ¡Qué bien! / Eso es. } }
 
-  - title: { en: Typical errors }
+  - title: { en: Typical errors, es: Errores típicos }
     content:
       - type: errors
+        audience: true
         rows:
-          - { level: A0, wrong: this books, right: "**these** books", rule: { en: "plural noun → these / those" } }
-          - { level: A0, wrong: These is my keys., right: "These **are** my keys.", rule: { en: "these / those + are" } }
+          - { level: A0, wrong: this books, right: "**these** books", rule: { en: "plural noun → these / those", es: "sustantivo plural → these / those" } }
+          - { level: A0, wrong: These is my keys., right: "These **are** my keys.", rule: { en: "these / those + are", es: "these / those + are" } }
+          - { level: A0, for: [es], wrong: these /ðɪs/, right: "these **/ðiːz/**", rule: { es: "/iː/ larga y /z/ final" } }
+          - { level: A0, for: [es], wrong: "Hello, I am Tom. (on the phone)", right: "Hello, **this is** Tom.", rule: { es: "al teléfono: this is" } }

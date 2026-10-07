@@ -7,42 +7,45 @@ kind: grammar
 tags: []
 concepts: []
 related: []
-status: { en: draft }
+status: { en: draft, es: draft }
 
-title: { en: "{Title}" }
+title: { en: "{Title}", es: "{Título}" }
 summary:
   en: "{Lead: the forms and what they do, at most 160 characters.} {The rule to get right, with a **bold** example.}"
+  es: "{Entrada: las formas y para qué sirven, como máximo 160 caracteres.} {La regla clave, con un ejemplo en **negrita**.}"
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: form, label: { en: Form }, merge: true, center: true }
-        - { key: rule, label: { en: Rule } }
-        - { key: example, label: { en: Example } }
+        - { key: form, label: { en: Form, es: Forma }, merge: true, center: true }
+        - { key: rule, label: { en: Rule, es: Regla } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
       rows:
-        - { level: "{A1}", form: { en: "{form}" }, rule: { en: "{rule}" }, example: "{example with **target** in bold}" }
-        - { level: "{A2}", form: { en: "{form}" }, rule: { en: "{rule}" }, example: "{example}" }
+        - { level: "{A1}", form: { en: "{form}", es: "{forma}" }, rule: { en: "{rule}", es: "{regla}" }, example: "{example with **target** in bold}", tr: { es: "{traducción}" } }
+        - { level: "{A2}", form: { en: "{form}", es: "{forma}" }, rule: { en: "{rule}", es: "{regla}" }, example: "{example}", tr: { es: "{traducción}" } }
 
 sections:
-  - title: { en: Overview }
+  - title: { en: Overview, es: Resumen }
     content:
       - type: bullets
         items:
-          - { level: "{A1}", text: { en: "{Rule.}" } }
+          - { level: "{A1}", text: { en: "{Rule.}", es: "{Regla.}" } }
+          - { level: "{A1}", for: [es], text: { es: "{Note only for Spanish speakers.}" } }
 
-  - title: { en: Use }
+  - title: { en: Use, es: Uso }
     content:
       - type: table
         columns:
-          - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: "{A1}", use: { en: "{use}" }, example: "{example}" }
-          - { level: "{A2}", use: { en: "{use}" }, example: "{example}" }
+          - { level: "{A1}", use: { en: "{use}", es: "{uso}" }, example: "{example}", tr: { es: "{traducción}" } }
+          - { level: "{A2}", use: { en: "{use}", es: "{uso}" }, example: "{example}", tr: { es: "{traducción}" } }
 
-  - title: { en: Typical errors }
+  - title: { en: Typical errors, es: Errores típicos }
     content:
       - type: errors
+        audience: true
         rows:
-          - { level: "{A1}", wrong: "{wrong}", right: "{right with **fix** in bold}", rule: { en: "{rule}" } }
+          - { level: "{A1}", wrong: "{wrong}", right: "{right with **fix** in bold}", rule: { en: "{rule}", es: "{regla}" } }

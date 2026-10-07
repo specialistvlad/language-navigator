@@ -5,97 +5,108 @@ kind: grammar
 tags: [nouns, countable, uncountable]
 concepts: [countability]
 related: [en.nouns-determiners.plurals, en.nouns-determiners.articles-a-an-the, en.nouns-determiners.quantifiers-some-any-much-many]
-status: { en: draft }
+status: { en: draft, es: draft }
 
-title: { en: "Countable and Uncountable Nouns" }
+title: { en: "Countable and Uncountable Nouns", es: "Sustantivos contables e incontables" }
 summary:
   en: "Countable nouns are counted one by one (a book, two books); uncountable nouns are masses and ideas (water, advice). Uncountable nouns take no a or an, no plural and a singular verb: The news **is** good."
+  es: "Los contables se cuentan uno a uno (a book, two books); los incontables son masas e ideas (water, advice). Advice, information, news y furniture son incontables: sin a, sin -s y con verbo en singular: The news **is** good."
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: point, label: { en: Point } }
-        - { key: countable, label: { en: Countable } }
-        - { key: uncountable, label: { en: Uncountable } }
+        - { key: point, label: { en: Point, es: Punto } }
+        - { key: countable, label: { en: Countable, es: Contable } }
+        - { key: uncountable, label: { en: Uncountable, es: Incontable } }
       rows:
-        - { level: A1, point: { en: Meaning }, countable: { en: "things you count one by one" }, uncountable: { en: "masses, materials, ideas" } }
-        - { level: A1, point: a / an, countable: "**a** book", uncountable: { en: "no a / an: water" } }
-        - { level: A1, point: Plural, countable: "book**s**", uncountable: { en: "no plural" } }
-        - { level: A1, point: { en: Verb }, countable: "The book **is** new. / The books **are** new.", uncountable: "The water **is** cold." }
+        - { level: A1, point: { en: Meaning, es: Significado }, countable: { en: "things you count one by one", es: "cosas que se cuentan una a una" }, uncountable: { en: "masses, materials, ideas", es: "masas, materiales, ideas" } }
+        - { level: A1, point: a / an, countable: "**a** book", uncountable: { en: "no a / an: water", es: "sin a / an: water" } }
+        - { level: A1, point: Plural, countable: "book**s**", uncountable: { en: "no plural", es: "sin plural" } }
+        - { level: A1, point: { en: Verb, es: Verbo }, countable: "The book **is** new. / The books **are** new.", uncountable: "The water **is** cold." }
 
 sections:
-  - title: { en: Overview }
+  - title: { en: Overview, es: Resumen }
     content:
       - type: bullets
         items:
           - level: A1
             text:
               en: "A singular countable noun needs a word before it: **a** book, **the** book, **my** book."
+              es: "Un sustantivo contable en singular necesita una palabra delante: **a** book, **the** book, **my** book."
           - level: A1
             text:
               en: "Articles: [Articles: a, an, the](id:en.nouns-determiners.articles-a-an-the). How much / how many: [Quantifiers](id:en.nouns-determiners.quantifiers-some-any-much-many)."
+              es: "Artículos: [Artículos: a, an, the](id:en.nouns-determiners.articles-a-an-the). Cuánto / cuántos: [Cuantificadores](id:en.nouns-determiners.quantifiers-some-any-much-many)."
 
-  - title: { en: Common uncountable nouns }
+  - title: { en: Common uncountable nouns, es: Sustantivos incontables frecuentes }
     content:
       - type: table
         columns:
-          - { key: group, label: { en: Group } }
-          - { key: nouns, label: { en: Nouns } }
+          - { key: group, label: { en: Group, es: Grupo } }
+          - { key: nouns, label: { en: Nouns, es: Sustantivos } }
         rows:
-          - { level: A1, group: { en: Food and drink }, nouns: "water, milk, coffee, tea, bread, rice, cheese, meat, sugar" }
-          - { level: A1, group: { en: Materials }, nouns: "wood, glass, paper, plastic, gold" }
-          - { level: A1, group: { en: Ideas and information }, nouns: "advice, information, news, help, music" }
-          - { level: A1, group: { en: Others }, nouns: "money, weather, work" }
-          - { level: A2, group: { en: Groups of things }, nouns: "furniture, luggage (US: baggage), equipment, homework, traffic" }
+          - { level: A1, group: { en: Food and drink, es: Comida y bebida }, nouns: "water, milk, coffee, tea, bread, rice, cheese, meat, sugar", tr: { es: "agua, leche, café, té, pan, arroz, queso, carne, azúcar" } }
+          - { level: A1, group: { en: Materials, es: Materiales }, nouns: "wood, glass, paper, plastic, gold", tr: { es: "madera, vidrio, papel, plástico, oro" } }
+          - { level: A1, group: { en: Ideas and information, es: Ideas e información }, nouns: "advice, information, news, help, music", tr: { es: "consejos, información, noticias, ayuda, música" } }
+          - { level: A1, group: { en: Others, es: Otros }, nouns: "money, weather, work", tr: { es: "dinero, tiempo (clima), trabajo" } }
+          - { level: A2, group: { en: Groups of things, es: Conjuntos de cosas }, nouns: "furniture, luggage (US: baggage), equipment, homework, traffic", tr: { es: "muebles, equipaje, equipo, deberes, tráfico" } }
       - type: bullets
         items:
           - level: A1
             text:
               en: "**news** ends in -s but is uncountable: The news **is** good."
+              es: "**news** acaba en -s pero es incontable: The news **is** good."
+          - { level: A1, for: [es], text: { es: "Muchos son contables en español: *muebles, consejos, noticias, deberes* → furniture, advice, news, homework." } }
 
-  - title: { en: Counting uncountable nouns }
+  - title: { en: Counting uncountable nouns, es: Contar sustantivos incontables }
     content:
       - type: table
         columns:
-          - { key: unit, label: { en: Unit } }
-          - { key: example, label: { en: Example } }
+          - { key: unit, label: { en: Unit, es: Unidad } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, unit: a glass of, example: "a **glass of** water" }
-          - { level: A1, unit: a cup of, example: "a **cup of** tea" }
-          - { level: A1, unit: a bottle of, example: "two **bottles of** milk" }
-          - { level: A1, unit: a slice of, example: "a **slice of** cheese" }
-          - { level: A1, unit: a kilo of, example: "a **kilo of** rice" }
-          - { level: A1, unit: a piece of, example: "a **piece of** cake / advice / furniture" }
-          - { level: A2, unit: a loaf of, example: "a **loaf of** bread" }
+          - { level: A1, unit: a glass of, example: "a **glass of** water", tr: { es: un vaso de agua } }
+          - { level: A1, unit: a cup of, example: "a **cup of** tea", tr: { es: una taza de té } }
+          - { level: A1, unit: a bottle of, example: "two **bottles of** milk", tr: { es: dos botellas de leche } }
+          - { level: A1, unit: a slice of, example: "a **slice of** cheese", tr: { es: una loncha de queso } }
+          - { level: A1, unit: a kilo of, example: "a **kilo of** rice", tr: { es: un kilo de arroz } }
+          - { level: A1, unit: a piece of, example: "a **piece of** cake / advice / furniture", tr: { es: un trozo de tarta / un consejo / un mueble } }
+          - { level: A2, unit: a loaf of, example: "a **loaf of** bread", tr: { es: una barra de pan } }
       - type: bullets
         items:
           - level: A1
             text:
               en: "The unit is countable and takes the plural: two **cups** of coffee."
+              es: "La unidad es contable y lleva plural: two **cups** of coffee."
 
-  - title: { en: Countable and uncountable meanings }
+  - title: { en: Countable and uncountable meanings, es: Significado contable e incontable }
     content:
       - type: text
         level: A2
         text:
           en: "Some nouns are both. The meaning changes."
+          es: "Algunos sustantivos son las dos cosas. El significado cambia."
       - type: table
         columns:
-          - { key: uncountable, label: { en: Uncountable } }
-          - { key: countable, label: { en: Countable } }
+          - { key: uncountable, label: { en: Uncountable, es: Incontable } }
+          - { key: countable, label: { en: Countable, es: Contable } }
         rows:
-          - { level: A2, uncountable: { ex: "I like **coffee**." }, countable: { ex: "Two **coffees**, please." } }
-          - { level: A2, uncountable: { ex: "She has long **hair**." }, countable: { ex: "There's **a hair** in my soup." } }
-          - { level: A2, uncountable: { ex: "a sheet of **paper**" }, countable: { ex: "I buy **a paper** every day." } }
-          - { level: A2, uncountable: { ex: "There's no **room** in the car." }, countable: { ex: "The flat has three **rooms**." } }
+          - { level: A2, uncountable: { ex: "I like **coffee**.", tr: { es: Me gusta el café. } }, countable: { ex: "Two **coffees**, please.", tr: { es: "Dos cafés, por favor." } } }
+          - { level: A2, uncountable: { ex: "She has long **hair**.", tr: { es: Tiene el pelo largo. } }, countable: { ex: "There's **a hair** in my soup.", tr: { es: Hay un pelo en mi sopa. } } }
+          - { level: A2, uncountable: { ex: "a sheet of **paper**", tr: { es: una hoja de papel } }, countable: { ex: "I buy **a paper** every day.", tr: { es: Compro un periódico cada día. } } }
+          - { level: A2, uncountable: { ex: "There's no **room** in the car.", tr: { es: No hay sitio en el coche. } }, countable: { ex: "The flat has three **rooms**.", tr: { es: El piso tiene tres habitaciones. } } }
 
-  - title: { en: Typical errors }
+  - title: { en: Typical errors, es: Errores típicos }
     content:
       - type: errors
+        audience: true
         rows:
-          - { level: A1, wrong: an advice, right: "**a piece of advice** / **some advice**", rule: { en: "uncountable: no a / an" } }
-          - { level: A1, wrong: The news are good., right: "The news **is** good.", rule: { en: "news + singular verb" } }
-          - { level: A2, wrong: a bread, right: "**a loaf of bread** / **some bread**", rule: { en: "count it with a unit" } }
-          - { level: A1, wrong: She has a good work., right: "She has a good **job**.", rule: { en: "work is uncountable; a job is countable" } }
-          - { level: A1, wrong: What a terrible weather!, right: "What **terrible weather**!", rule: { en: "weather: no a / an" } }
+          - { level: A1, for: [es], wrong: informations, right: "**information**", rule: { es: "incontable: sin -s" } }
+          - { level: A1, wrong: an advice, right: "**a piece of advice** / **some advice**", rule: { en: "uncountable: no a / an", es: "incontable: sin a / an" } }
+          - { level: A1, wrong: The news are good., right: "The news **is** good.", rule: { en: "news + singular verb", es: "news + verbo en singular" } }
+          - { level: A2, wrong: a bread, right: "**a loaf of bread** / **some bread**", rule: { en: "count it with a unit", es: "se cuenta con una unidad" } }
+          - { level: A1, wrong: She has a good work., right: "She has a good **job**.", rule: { en: "work is uncountable; a job is countable", es: "*un trabajo* = a job; work es incontable" } }
+          - { for: [es], level: A2, wrong: furnitures, right: "**furniture**", rule: { es: "incontable: sin -s" } }
+          - { for: [es], level: A2, wrong: I have many homeworks., right: "I have **a lot of homework**.", rule: { es: "homework es incontable" } }
+          - { level: A1, wrong: What a terrible weather!, right: "What **terrible weather**!", rule: { en: "weather: no a / an", es: "weather: sin a / an" } }

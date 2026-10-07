@@ -5,64 +5,68 @@ kind: grammar
 tags: [adjectives, comparison]
 concepts: [comparison]
 related: [en.adjectives-adverbs.adjective-order, en.adjectives-adverbs.too-enough-so-such, en.verbs.to-be]
-status: { en: draft }
+status: { en: draft, es: draft }
 
-title: { en: Comparatives and Superlatives }
+title: { en: Comparatives and Superlatives, es: Comparativos y superlativos }
 summary:
   en: "Comparatives and superlatives compare things: taller than, the tallest, as tall as. Short adjectives add -er and -est, and long adjectives take more and the most: She is **taller** than me. This bag is **more expensive**."
+  es: "Comparativos y superlativos para comparar cosas: taller than, the tallest, as tall as. Cada adjetivo lleva -er o more, uno solo: *más alto* es **taller** y *más caro* es **more expensive**."
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: pattern, label: { en: Pattern } }
-        - { key: example, label: { en: Example } }
+        - { key: pattern, label: { en: Pattern, es: Patrón } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
       rows:
-        - { level: A2, pattern: "comparative + than", example: "My bag is **heavier than** yours." }
-        - { level: A2, pattern: "the + superlative + in / of", example: "She is **the tallest** in the class." }
-        - { level: A2, pattern: "as + adjective + as", example: "He is **as tall as** me." }
-        - { level: A2, pattern: "not as + adjective + as", example: "I'm **not as tall as** him." }
+        - { level: A2, pattern: "comparative + than", example: "My bag is **heavier than** yours.", tr: { es: Mi bolsa pesa más que la tuya. } }
+        - { level: A2, pattern: "the + superlative + in / of", example: "She is **the tallest** in the class.", tr: { es: Es la más alta de la clase. } }
+        - { level: A2, pattern: "as + adjective + as", example: "He is **as tall as** me.", tr: { es: Es tan alto como yo. } }
+        - { level: A2, pattern: "not as + adjective + as", example: "I'm **not as tall as** him.", tr: { es: No soy tan alto como él. } }
 
 sections:
-  - title: { en: "Form: comparative and superlative" }
+  - title: { en: "Form: comparative and superlative", es: "Forma: comparativo y superlativo" }
     content:
       - type: table
         columns:
-          - { key: adjective, label: { en: Adjective } }
-          - { key: comparative, label: { en: Comparative } }
-          - { key: superlative, label: { en: Superlative } }
+          - { key: adjective, label: { en: Adjective, es: Adjetivo } }
+          - { key: comparative, label: { en: Comparative, es: Comparativo } }
+          - { key: superlative, label: { en: Superlative, es: Superlativo } }
         rows:
-          - { level: A2, adjective: { en: "one syllable: cheap" }, comparative: "cheap**er**", superlative: "the cheap**est**" }
-          - { level: A2, adjective: { en: "two syllables ending in -y: easy" }, comparative: "eas**ier**", superlative: "the eas**iest**" }
-          - { level: A2, adjective: { en: "two or more syllables: expensive" }, comparative: "**more** expensive", superlative: "the **most** expensive" }
+          - { level: A2, adjective: { en: "one syllable: cheap", es: "una sílaba: cheap" }, comparative: "cheap**er**", superlative: "the cheap**est**" }
+          - { level: A2, adjective: { en: "two syllables ending in -y: easy", es: "dos sílabas que acaban en -y: easy" }, comparative: "eas**ier**", superlative: "the eas**iest**" }
+          - { level: A2, adjective: { en: "two or more syllables: expensive", es: "dos o más sílabas: expensive" }, comparative: "**more** expensive", superlative: "the **most** expensive" }
       - type: bullets
         items:
           - level: A2
             text:
               en: "Some two-syllable adjectives take both: clever → cleverer / more clever."
+              es: "Algunos adjetivos de dos sílabas admiten las dos formas: clever → cleverer / more clever."
           - level: A2
             text:
               en: "Use **the** before a superlative: the cheapest."
+              es: "Delante del superlativo va **the**: the cheapest."
+          - { level: A2, for: [es], text: { es: "*Más grande* → **bigger**: la idea de *más* ya está en -er." } }
 
-  - title: { en: "Spelling: -er and -est" }
+  - title: { en: "Spelling: -er and -est", es: "Ortografía: -er y -est" }
     content:
       - type: table
         columns:
-          - { key: ending, label: { en: Ending } }
-          - { key: rule, label: { en: Rule } }
-          - { key: examples, label: { en: Examples } }
+          - { key: ending, label: { en: Ending, es: Terminación } }
+          - { key: rule, label: { en: Rule, es: Regla } }
+          - { key: examples, label: { en: Examples, es: Ejemplos } }
         rows:
           - { level: A2, ending: "-e", rule: "+ r / + st", examples: "nice → nicer → nicest" }
-          - { level: A2, ending: { en: consonant + y }, rule: "y → ier / iest", examples: "happy → happier → happiest" }
-          - { level: A2, ending: { en: "one vowel + one consonant (not w, y)" }, rule: { en: double the consonant }, examples: "big → bigger → biggest / hot → hotter → hottest" }
+          - { level: A2, ending: { en: consonant + y, es: consonante + y }, rule: "y → ier / iest", examples: "happy → happier → happiest" }
+          - { level: A2, ending: { en: "one vowel + one consonant (not w, y)", es: "una vocal + una consonante (salvo w, y)" }, rule: { en: double the consonant, es: se duplica la consonante }, examples: "big → bigger → biggest / hot → hotter → hottest" }
 
-  - title: { en: "Form: irregular" }
+  - title: { en: "Form: irregular", es: "Forma: irregulares" }
     content:
       - type: table
         columns:
-          - { key: adjective, label: { en: Adjective } }
-          - { key: comparative, label: { en: Comparative } }
-          - { key: superlative, label: { en: Superlative } }
+          - { key: adjective, label: { en: Adjective, es: Adjetivo } }
+          - { key: comparative, label: { en: Comparative, es: Comparativo } }
+          - { key: superlative, label: { en: Superlative, es: Superlativo } }
         rows:
           - { level: A2, adjective: good, comparative: better, superlative: the best }
           - { level: A2, adjective: bad, comparative: worse, superlative: the worst }
@@ -70,42 +74,54 @@ sections:
           - { level: A2, adjective: little, comparative: less, superlative: the least }
           - { level: A2, adjective: "much / many", comparative: more, superlative: the most }
 
-  - title: { en: Use }
+  - title: { en: Use, es: Uso }
     content:
       - type: table
         columns:
-          - { key: use, label: { en: Use } }
-          - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: pattern, label: { en: Pattern, es: Patrón } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A2, use: { en: "compare two things" }, pattern: "comparative + than", example: "Trains are **faster than** buses." }
-          - { level: A2, use: { en: "less than" }, pattern: "less + adjective + than", example: "Buses are **less expensive than** taxis." }
-          - { level: A2, use: { en: "a big or small difference" }, pattern: "a lot / much / a bit + comparative", example: "This room is **a lot bigger**." }
-          - { level: A2, use: { en: "the top of three or more" }, pattern: "the + superlative", example: "It's **the best** film of the year." }
-          - { level: A2, use: { en: "equal" }, pattern: "as + adjective + as", example: "My flat is **as big as** yours." }
-          - { level: A2, use: { en: "not equal" }, pattern: "not as + adjective + as", example: "Tea is **not as strong as** coffee." }
+          - { level: A2, use: { en: "compare two things", es: "comparar dos cosas" }, pattern: "comparative + than", example: "Trains are **faster than** buses.", tr: { es: Los trenes son más rápidos que los autobuses. } }
+          - { level: A2, use: { en: "less than", es: "menos que" }, pattern: "less + adjective + than", example: "Buses are **less expensive than** taxis.", tr: { es: Los autobuses son menos caros que los taxis. } }
+          - { level: A2, use: { en: "a big or small difference", es: "una diferencia grande o pequeña" }, pattern: "a lot / much / a bit + comparative", example: "This room is **a lot bigger**.", tr: { es: Esta habitación es mucho más grande. } }
+          - { level: A2, use: { en: "the top of three or more", es: "el primero de tres o más" }, pattern: "the + superlative", example: "It's **the best** film of the year.", tr: { es: Es la mejor película del año. } }
+          - { level: A2, use: { en: "equal", es: "igualdad" }, pattern: "as + adjective + as", example: "My flat is **as big as** yours.", tr: { es: Mi piso es tan grande como el tuyo. } }
+          - { level: A2, use: { en: "not equal", es: "desigualdad" }, pattern: "not as + adjective + as", example: "Tea is **not as strong as** coffee.", tr: { es: El té no es tan fuerte como el café. } }
       - type: bullets
         items:
           - level: A2
             text:
               en: "After a superlative, **in** goes with a place or group:"
+              es: "Después de un superlativo, **in** va con un lugar o un grupo:"
             ex: "the tallest girl **in** the class / the biggest city **in** Spain"
+            tr: { es: la chica más alta de la clase / la ciudad más grande de España }
           - level: A2
             text:
               en: "After a superlative, **of** goes with a number or a plural:"
+              es: "Después de un superlativo, **of** va con un número o un plural:"
             ex: "the best **of** the three / the oldest **of** all"
+            tr: { es: el mejor de los tres / el más antiguo de todos }
           - level: A2
             text:
               en: "After **than**, speech uses an object pronoun:"
+              es: "Después de **than**, en la conversación se usa el pronombre de objeto:"
             ex: "She is taller than **me**."
+            tr: { es: Es más alta que yo. }
+          - { level: A2, for: [es], text: { es: "*que* tras comparativo = **than**. *Tan… como* = **as… as**." } }
 
-  - title: { en: Typical errors }
+  - title: { en: Typical errors, es: Errores típicos }
     content:
       - type: errors
+        audience: true
         rows:
-          - { level: A2, wrong: This is more better., right: "This is **better**.", rule: { en: "better, worse are already comparatives" } }
-          - { level: A2, wrong: more happy, right: "**happier**", rule: { en: "consonant + y → -ier" } }
-          - { level: A2, wrong: He is more tall than me., right: "He is **taller** than me.", rule: { en: "short adjectives take -er" } }
-          - { level: A2, wrong: He is the most tall., right: "He is **the tallest**.", rule: { en: "three or more: the + -est" } }
-          - { level: A2, wrong: the best of the world, right: "the best **in** the world", rule: { en: "in + place or group" } }
-          - { level: A2, wrong: This is expensiver., right: "This is **more expensive**.", rule: { en: "long adjectives take more" } }
+          - { level: A2, for: [es], wrong: This bag is more big., right: "This bag is **bigger**.", rule: { es: "adjetivo corto: -er, sin more" } }
+          - { level: A2, for: [es], wrong: She is the most big girl., right: "She is **the biggest** girl.", rule: { es: "adjetivo corto: the + -est" } }
+          - { level: A2, for: [es], wrong: He is taller that me., right: "He is taller **than** me.", rule: { es: "*que* tras comparativo = than" } }
+          - { level: A2, for: [es], wrong: It is as big than mine., right: "It is as big **as** mine.", rule: { es: "*tan… como* = as… as" } }
+          - { level: A2, wrong: This is more better., right: "This is **better**.", rule: { en: "better, worse are already comparatives", es: "better y worse ya son comparativos" } }
+          - { level: A2, wrong: more happy, right: "**happier**", rule: { en: "consonant + y → -ier", es: "consonante + y → -ier" } }
+          - { level: A2, wrong: He is more tall than me., right: "He is **taller** than me.", rule: { en: "short adjectives take -er", es: "los adjetivos cortos llevan -er" } }
+          - { level: A2, wrong: He is the most tall., right: "He is **the tallest**.", rule: { en: "three or more: the + -est", es: "tres o más: the + -est" } }
+          - { level: A2, wrong: the best of the world, right: "the best **in** the world", rule: { en: "in + place or group", es: "in + lugar o grupo" } }
+          - { level: A2, wrong: This is expensiver., right: "This is **more expensive**.", rule: { en: "long adjectives take more", es: "los adjetivos largos llevan more" } }

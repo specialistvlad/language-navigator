@@ -5,324 +5,351 @@ kind: reference
 tags: [verbs, irregular, reference]
 concepts: [irregular-verbs]
 related: [en.tenses.simple-tenses, en.tenses.perfect-tenses, en.verbs.to-be, en.verbs.have-have-got, en.sentence-building.passive-voice]
-status: { en: draft }
+status: { en: draft, es: draft }
 
-title: { en: Irregular Verbs Table }
+title: { en: Irregular Verbs Table, es: Tabla de verbos irregulares }
 summary:
   en: "The most common irregular verbs: base form, past simple and past participle, grouped by the pattern each verb follows. Past simple and past participle are separate forms for many verbs: I **went** there. I have **gone** there."
+  es: "Los verbos irregulares más comunes: forma base, pasado simple y participio, agrupados por el patrón que sigue cada verbo. Pasado y participio son formas propias en muchos verbos, y el participio va tras have: I **went** there. I have **gone** there."
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: pattern, label: { en: Pattern } }
-        - { key: example, label: { en: "Base – past – participle" } }
+        - { key: pattern, label: { en: Pattern, es: Modelo } }
+        - { key: example, label: { en: "Base – past – participle", es: "Base – pasado – participio" } }
       rows:
-        - { level: A1, pattern: { en: "all three forms are the same" }, example: "put – put – put" }
-        - { level: A1, pattern: { en: "-ought / -aught" }, example: "buy – bought – bought" }
-        - { level: A1, pattern: { en: "past and participle end in -d" }, example: "make – made – made" }
-        - { level: A1, pattern: { en: "final -d becomes -t" }, example: "send – sent – sent" }
-        - { level: A1, pattern: { en: "long vowel shortens, -t added" }, example: "keep – kept – kept" }
-        - { level: A1, pattern: { en: "/iː/ shortens to /e/" }, example: "meet – met – met" }
-        - { level: A1, pattern: { en: "vowel changes, past = participle" }, example: "sit – sat – sat" }
-        - { level: A1, pattern: { en: "participle = base form" }, example: "come – came – come" }
-        - { level: A1, pattern: { en: "i – a – u" }, example: "drink – drank – drunk" }
-        - { level: A1, pattern: { en: "participle in -en" }, example: "take – took – taken" }
-        - { level: A1, pattern: { en: "past in -ew, participle in -n" }, example: "know – knew – known" }
-        - { level: A1, pattern: { en: "participle in -n / -ne" }, example: "go – went – gone" }
+        - { level: A1, pattern: { en: "all three forms are the same", es: "las tres formas son iguales" }, example: "put – put – put" }
+        - { level: A1, pattern: { en: "-ought / -aught", es: "-ought / -aught" }, example: "buy – bought – bought" }
+        - { level: A1, pattern: { en: "past and participle end in -d", es: "pasado y participio terminan en -d" }, example: "make – made – made" }
+        - { level: A1, pattern: { en: "final -d becomes -t", es: "la -d final pasa a -t" }, example: "send – sent – sent" }
+        - { level: A1, pattern: { en: "long vowel shortens, -t added", es: "vocal larga se acorta, se añade -t" }, example: "keep – kept – kept" }
+        - { level: A1, pattern: { en: "/iː/ shortens to /e/", es: "/iː/ se acorta a /e/" }, example: "meet – met – met" }
+        - { level: A1, pattern: { en: "vowel changes, past = participle", es: "cambia la vocal, pasado = participio" }, example: "sit – sat – sat" }
+        - { level: A1, pattern: { en: "participle = base form", es: "participio = forma base" }, example: "come – came – come" }
+        - { level: A1, pattern: { en: "i – a – u", es: "i – a – u" }, example: "drink – drank – drunk" }
+        - { level: A1, pattern: { en: "participle in -en", es: "participio en -en" }, example: "take – took – taken" }
+        - { level: A1, pattern: { en: "past in -ew, participle in -n", es: "pasado en -ew, participio en -n" }, example: "know – knew – known" }
+        - { level: A1, pattern: { en: "participle in -n / -ne", es: "participio en -n / -ne" }, example: "go – went – gone" }
 
 sections:
-  - title: { en: Overview }
+  - title: { en: Overview, es: Resumen }
     content:
       - type: bullets
         items:
           - level: A1
             text:
               en: "The **past simple** is used for finished actions. See [Past Simple](id:en.tenses.simple-tenses)."
+              es: "El **pasado simple** se usa para acciones terminadas. Ver [Pasado simple](id:en.tenses.simple-tenses)."
           - level: A1
             text:
               en: "The **past participle** is used after have in the present perfect. See [Present Perfect](id:en.tenses.perfect-tenses)."
+              es: "El **participio** se usa después de have en el present perfect. Ver [Presente perfecto](id:en.tenses.perfect-tenses)."
           - level: A1
             text:
               en: "Regular verbs add **-ed** to both forms: work – worked – worked."
+              es: "Los verbos regulares añaden **-ed** a las dos formas: work – worked – worked."
+          - { level: A1, for: [es], text: { es: "El participio inglés equivale a *-ado / -ido*, pero no siempre termina en **-ed**: *he comido* = I have **eaten**." } }
           - level: A1
             text:
               en: "The Level column shows when a verb is usually met: A1 first, B1 last."
+              es: "La columna Nivel indica cuándo se suele aprender cada verbo: A1 primero, B1 al final."
 
-  - title: { en: "Pattern: all three forms are the same" }
+  - title: { en: "Pattern: all three forms are the same", es: "Modelo: las tres formas son iguales" }
     content:
       - type: table
         columns:
-          - { key: base, label: { en: Base form } }
-          - { key: past, label: { en: Past simple } }
-          - { key: participle, label: { en: Past participle } }
+          - { key: base, label: { en: Base form, es: Forma base } }
+          - { key: past, label: { en: Past simple, es: Pasado simple } }
+          - { key: participle, label: { en: Past participle, es: Participio } }
         rows:
-          - { level: A1, base: { ex: "put" }, past: "put", participle: "put" }
-          - { level: A2, base: { ex: "cut" }, past: "cut", participle: "cut" }
-          - { level: A2, base: { ex: "let" }, past: "let", participle: "let" }
-          - { level: A2, base: { ex: "hit" }, past: "hit", participle: "hit" }
-          - { level: A2, base: { ex: "shut" }, past: "shut", participle: "shut" }
-          - { level: A2, base: { ex: "hurt" }, past: "hurt", participle: "hurt" }
-          - { level: A2, base: { ex: "cost" }, past: "cost", participle: "cost" }
-          - { level: B1, base: { ex: "set" }, past: "set", participle: "set" }
-          - { level: B1, base: { ex: "spread" }, past: "spread", participle: "spread" }
+          - { level: A1, base: { ex: "put", tr: { es: "poner" } }, past: "put", participle: "put" }
+          - { level: A2, base: { ex: "cut", tr: { es: "cortar" } }, past: "cut", participle: "cut" }
+          - { level: A2, base: { ex: "let", tr: { es: "dejar, permitir" } }, past: "let", participle: "let" }
+          - { level: A2, base: { ex: "hit", tr: { es: "golpear" } }, past: "hit", participle: "hit" }
+          - { level: A2, base: { ex: "shut", tr: { es: "cerrar" } }, past: "shut", participle: "shut" }
+          - { level: A2, base: { ex: "hurt", tr: { es: "doler, herir" } }, past: "hurt", participle: "hurt" }
+          - { level: A2, base: { ex: "cost", tr: { es: "costar" } }, past: "cost", participle: "cost" }
+          - { level: B1, base: { ex: "set", tr: { es: "poner, fijar" } }, past: "set", participle: "set" }
+          - { level: B1, base: { ex: "spread", tr: { es: "extender" } }, past: "spread", participle: "spread" }
       - type: bullets
         items:
           - level: A1
             text:
               en: "The three forms are the same. The sentence shows the tense: I **put** it there. / I have **put** it there."
+              es: "Las tres formas son iguales. La frase indica el tiempo: I **put** it there. / I have **put** it there."
 
-  - title: { en: "Pattern: past and participle in -ought / -aught" }
+  - title: { en: "Pattern: past and participle in -ought / -aught", es: "Modelo: pasado y participio en -ought / -aught" }
     content:
       - type: table
         columns:
-          - { key: base, label: { en: Base form } }
-          - { key: past, label: { en: Past simple } }
-          - { key: participle, label: { en: Past participle } }
+          - { key: base, label: { en: Base form, es: Forma base } }
+          - { key: past, label: { en: Past simple, es: Pasado simple } }
+          - { key: participle, label: { en: Past participle, es: Participio } }
         rows:
-          - { level: A1, base: { ex: "buy" }, past: "bought", participle: "bought" }
-          - { level: A1, base: { ex: "think" }, past: "thought", participle: "thought" }
-          - { level: A2, base: { ex: "bring" }, past: "brought", participle: "brought" }
-          - { level: A2, base: { ex: "catch" }, past: "caught", participle: "caught" }
-          - { level: A2, base: { ex: "teach" }, past: "taught", participle: "taught" }
-          - { level: B1, base: { ex: "fight" }, past: "fought", participle: "fought" }
+          - { level: A1, base: { ex: "buy", tr: { es: "comprar" } }, past: "bought", participle: "bought" }
+          - { level: A1, base: { ex: "think", tr: { es: "pensar, creer" } }, past: "thought", participle: "thought" }
+          - { level: A2, base: { ex: "bring", tr: { es: "traer" } }, past: "brought", participle: "brought" }
+          - { level: A2, base: { ex: "catch", tr: { es: "coger, atrapar" } }, past: "caught", participle: "caught" }
+          - { level: A2, base: { ex: "teach", tr: { es: "enseñar" } }, past: "taught", participle: "taught" }
+          - { level: B1, base: { ex: "fight", tr: { es: "pelear, luchar" } }, past: "fought", participle: "fought" }
       - type: bullets
         items:
           - level: A1
             text:
               en: "Past and participle share one form. **-ought** and **-aught** are both pronounced /ɔːt/: bought /bɔːt/, caught /kɔːt/."
+              es: "Pasado y participio tienen una sola forma. **-ought** y **-aught** se pronuncian /ɔːt/: bought /bɔːt/, caught /kɔːt/."
 
-  - title: { en: "Pattern: past and participle end in -d" }
+  - title: { en: "Pattern: past and participle end in -d", es: "Modelo: pasado y participio terminan en -d" }
     content:
       - type: table
         columns:
-          - { key: base, label: { en: Base form } }
-          - { key: past, label: { en: Past simple } }
-          - { key: participle, label: { en: Past participle } }
+          - { key: base, label: { en: Base form, es: Forma base } }
+          - { key: past, label: { en: Past simple, es: Pasado simple } }
+          - { key: participle, label: { en: Past participle, es: Participio } }
         rows:
-          - { level: A1, base: { ex: "have" }, past: "had", participle: "had" }
-          - { level: A1, base: { ex: "make" }, past: "made", participle: "made" }
-          - { level: A1, base: { ex: "say" }, past: "said /sed/", participle: "said /sed/" }
-          - { level: A1, base: { ex: "tell" }, past: "told", participle: "told" }
-          - { level: A2, base: { ex: "pay" }, past: "paid", participle: "paid" }
-          - { level: A2, base: { ex: "sell" }, past: "sold", participle: "sold" }
-          - { level: A2, base: { ex: "hear" }, past: "heard /hɜːd/", participle: "heard /hɜːd/" }
+          - { level: A1, base: { ex: "have", tr: { es: "tener" } }, past: "had", participle: "had" }
+          - { level: A1, base: { ex: "make", tr: { es: "hacer, fabricar" } }, past: "made", participle: "made" }
+          - { level: A1, base: { ex: "say", tr: { es: "decir" } }, past: "said /sed/", participle: "said /sed/" }
+          - { level: A1, base: { ex: "tell", tr: { es: "contar, decir" } }, past: "told", participle: "told" }
+          - { level: A2, base: { ex: "pay", tr: { es: "pagar" } }, past: "paid", participle: "paid" }
+          - { level: A2, base: { ex: "sell", tr: { es: "vender" } }, past: "sold", participle: "sold" }
+          - { level: A2, base: { ex: "hear", tr: { es: "oír" } }, past: "heard /hɜːd/", participle: "heard /hɜːd/" }
       - type: bullets
         items:
           - level: A1
             text:
               en: "Past and participle share one form with **-d** at the end. The vowel or the stem changes in some verbs."
+              es: "Pasado y participio tienen una sola forma que termina en **-d**. En algunos verbos cambia la vocal o la raíz."
           - level: A1
             text:
               en: "**say** and **hear** change their vowel sound: say /seɪ/ → said /sed/, hear /hɪə/ → heard /hɜːd/."
+              es: "**say** y **hear** cambian el sonido de la vocal: say /seɪ/ → said /sed/, hear /hɪə/ → heard /hɜːd/."
 
-  - title: { en: "Pattern: final -d becomes -t" }
+  - title: { en: "Pattern: final -d becomes -t", es: "Modelo: la -d final pasa a -t" }
     content:
       - type: table
         columns:
-          - { key: base, label: { en: Base form } }
-          - { key: past, label: { en: Past simple } }
-          - { key: participle, label: { en: Past participle } }
+          - { key: base, label: { en: Base form, es: Forma base } }
+          - { key: past, label: { en: Past simple, es: Pasado simple } }
+          - { key: participle, label: { en: Past participle, es: Participio } }
         rows:
-          - { level: A2, base: { ex: "send" }, past: "sent", participle: "sent" }
-          - { level: A2, base: { ex: "spend" }, past: "spent", participle: "spent" }
-          - { level: B1, base: { ex: "build" }, past: "built", participle: "built" }
-          - { level: B1, base: { ex: "lend" }, past: "lent", participle: "lent" }
+          - { level: A2, base: { ex: "send", tr: { es: "enviar" } }, past: "sent", participle: "sent" }
+          - { level: A2, base: { ex: "spend", tr: { es: "gastar, pasar (tiempo)" } }, past: "spent", participle: "spent" }
+          - { level: B1, base: { ex: "build", tr: { es: "construir" } }, past: "built", participle: "built" }
+          - { level: B1, base: { ex: "lend", tr: { es: "prestar" } }, past: "lent", participle: "lent" }
       - type: bullets
         items:
           - level: A1
             text:
               en: "The final **-d** of the base verb changes to **-t**. Past and participle share one form."
+              es: "La **-d** final del verbo base pasa a **-t**. Pasado y participio tienen una sola forma."
 
-  - title: { en: "Pattern: the long vowel shortens and -t is added" }
+  - title: { en: "Pattern: the long vowel shortens and -t is added", es: "Modelo: la vocal larga se acorta y se añade -t" }
     content:
       - type: table
         columns:
-          - { key: base, label: { en: Base form } }
-          - { key: past, label: { en: Past simple } }
-          - { key: participle, label: { en: Past participle } }
+          - { key: base, label: { en: Base form, es: Forma base } }
+          - { key: past, label: { en: Past simple, es: Pasado simple } }
+          - { key: participle, label: { en: Past participle, es: Participio } }
         rows:
-          - { level: A2, base: { ex: "feel" }, past: "felt", participle: "felt" }
-          - { level: A2, base: { ex: "keep" }, past: "kept", participle: "kept" }
-          - { level: A2, base: { ex: "sleep" }, past: "slept", participle: "slept" }
-          - { level: A2, base: { ex: "leave" }, past: "left", participle: "left" }
-          - { level: A2, base: { ex: "lose" }, past: "lost", participle: "lost" }
+          - { level: A2, base: { ex: "feel", tr: { es: "sentir" } }, past: "felt", participle: "felt" }
+          - { level: A2, base: { ex: "keep", tr: { es: "guardar, mantener" } }, past: "kept", participle: "kept" }
+          - { level: A2, base: { ex: "sleep", tr: { es: "dormir" } }, past: "slept", participle: "slept" }
+          - { level: A2, base: { ex: "leave", tr: { es: "irse, dejar" } }, past: "left", participle: "left" }
+          - { level: A2, base: { ex: "lose", tr: { es: "perder" } }, past: "lost", participle: "lost" }
       - type: bullets
         items:
           - level: A1
             text:
               en: "The vowel is short in the past and the participle, and the form ends in **-t**: keep /kiːp/ → kept /kept/."
+              es: "La vocal es corta en el pasado y el participio, y la forma termina en **-t**: keep /kiːp/ → kept /kept/."
           - level: A1
             text:
               en: "**leave** → left and **lose** → lost change the final consonant as well: /liːv/ → /left/, /luːz/ → /lɒst/."
+              es: "**leave** → left y **lose** → lost cambian también la consonante final: /liːv/ → /left/, /luːz/ → /lɒst/."
 
-  - title: { en: "Pattern: the vowel /iː/ shortens to /e/" }
+  - title: { en: "Pattern: the vowel /iː/ shortens to /e/", es: "Modelo: la vocal /iː/ se acorta a /e/" }
     content:
       - type: table
         columns:
-          - { key: base, label: { en: Base form } }
-          - { key: past, label: { en: Past simple } }
-          - { key: participle, label: { en: Past participle } }
+          - { key: base, label: { en: Base form, es: Forma base } }
+          - { key: past, label: { en: Past simple, es: Pasado simple } }
+          - { key: participle, label: { en: Past participle, es: Participio } }
         rows:
-          - { level: A1, base: { ex: "meet" }, past: "met", participle: "met" }
-          - { level: A1, base: { ex: "read" }, past: "read /red/", participle: "read /red/" }
-          - { level: B1, base: { ex: "lead" }, past: "led", participle: "led" }
-          - { level: B1, base: { ex: "feed" }, past: "fed", participle: "fed" }
+          - { level: A1, base: { ex: "meet", tr: { es: "conocer, quedar con" } }, past: "met", participle: "met" }
+          - { level: A1, base: { ex: "read", tr: { es: "leer" } }, past: "read /red/", participle: "read /red/" }
+          - { level: B1, base: { ex: "lead", tr: { es: "dirigir, guiar" } }, past: "led", participle: "led" }
+          - { level: B1, base: { ex: "feed", tr: { es: "alimentar" } }, past: "fed", participle: "fed" }
       - type: bullets
         items:
           - level: A1
             text:
               en: "Past and participle share one form with the short vowel /e/: meet /miːt/ → met /met/."
+              es: "Pasado y participio tienen una sola forma con la vocal corta /e/: meet /miːt/ → met /met/."
           - level: A1
             text:
               en: "**read** is spelled the same in all three forms: /riːd/ in the base, /red/ in the past and the participle."
+              es: "**read** se escribe igual en las tres formas: /riːd/ en la base, /red/ en el pasado y el participio."
 
-  - title: { en: "Pattern: the vowel changes, past = participle" }
+  - title: { en: "Pattern: the vowel changes, past = participle", es: "Modelo: cambia la vocal, pasado = participio" }
     content:
       - type: table
         columns:
-          - { key: base, label: { en: Base form } }
-          - { key: past, label: { en: Past simple } }
-          - { key: participle, label: { en: Past participle } }
+          - { key: base, label: { en: Base form, es: Forma base } }
+          - { key: past, label: { en: Past simple, es: Pasado simple } }
+          - { key: participle, label: { en: Past participle, es: Participio } }
         rows:
-          - { level: A1, base: { ex: "sit" }, past: "sat", participle: "sat" }
-          - { level: A1, base: { ex: "get" }, past: "got", participle: "got" }
-          - { level: A1, base: { ex: "find" }, past: "found", participle: "found" }
-          - { level: A2, base: { ex: "stand" }, past: "stood", participle: "stood" }
-          - { level: A2, base: { ex: "win" }, past: "won", participle: "won" }
-          - { level: A2, base: { ex: "understand" }, past: "understood", participle: "understood" }
-          - { level: B1, base: { ex: "hold" }, past: "held", participle: "held" }
+          - { level: A1, base: { ex: "sit", tr: { es: "sentarse" } }, past: "sat", participle: "sat" }
+          - { level: A1, base: { ex: "get", tr: { es: "conseguir, recibir" } }, past: "got", participle: "got" }
+          - { level: A1, base: { ex: "find", tr: { es: "encontrar" } }, past: "found", participle: "found" }
+          - { level: A2, base: { ex: "stand", tr: { es: "estar de pie" } }, past: "stood", participle: "stood" }
+          - { level: A2, base: { ex: "win", tr: { es: "ganar" } }, past: "won", participle: "won" }
+          - { level: A2, base: { ex: "understand", tr: { es: "entender" } }, past: "understood", participle: "understood" }
+          - { level: B1, base: { ex: "hold", tr: { es: "sostener" } }, past: "held", participle: "held" }
       - type: bullets
         items:
           - level: A1
             text:
               en: "A new vowel appears in the past simple, and the participle repeats it."
+              es: "Aparece una vocal nueva en el pasado simple y el participio la repite."
           - level: A1
             text:
               en: "US: the participle of **get** is **gotten**: I've gotten a new phone. British English keeps **got**."
+              es: "US: el participio de **get** es **gotten**: I've gotten a new phone. El inglés británico mantiene **got**."
 
-  - title: { en: "Pattern: participle = base form" }
+  - title: { en: "Pattern: participle = base form", es: "Modelo: participio = forma base" }
     content:
       - type: table
         columns:
-          - { key: base, label: { en: Base form } }
-          - { key: past, label: { en: Past simple } }
-          - { key: participle, label: { en: Past participle } }
+          - { key: base, label: { en: Base form, es: Forma base } }
+          - { key: past, label: { en: Past simple, es: Pasado simple } }
+          - { key: participle, label: { en: Past participle, es: Participio } }
         rows:
-          - { level: A1, base: { ex: "come" }, past: "came", participle: "come" }
-          - { level: A1, base: { ex: "run" }, past: "ran", participle: "run" }
-          - { level: A2, base: { ex: "become" }, past: "became", participle: "become" }
+          - { level: A1, base: { ex: "come", tr: { es: "venir" } }, past: "came", participle: "come" }
+          - { level: A1, base: { ex: "run", tr: { es: "correr" } }, past: "ran", participle: "run" }
+          - { level: A2, base: { ex: "become", tr: { es: "convertirse en, hacerse" } }, past: "became", participle: "become" }
       - type: bullets
         items:
           - level: A1
             text:
               en: "The participle equals the base verb. Only the past simple has its own form."
+              es: "El participio es igual que el verbo base. Solo el pasado simple tiene forma propia."
 
-  - title: { en: "Pattern: i – a – u" }
+  - title: { en: "Pattern: i – a – u", es: "Modelo: i – a – u" }
     content:
       - type: table
         columns:
-          - { key: base, label: { en: Base form } }
-          - { key: past, label: { en: Past simple } }
-          - { key: participle, label: { en: Past participle } }
+          - { key: base, label: { en: Base form, es: Forma base } }
+          - { key: past, label: { en: Past simple, es: Pasado simple } }
+          - { key: participle, label: { en: Past participle, es: Participio } }
         rows:
-          - { level: A1, base: { ex: "drink" }, past: "drank", participle: "drunk" }
-          - { level: A2, base: { ex: "begin" }, past: "began", participle: "begun" }
-          - { level: A2, base: { ex: "swim" }, past: "swam", participle: "swum" }
-          - { level: A2, base: { ex: "sing" }, past: "sang", participle: "sung" }
-          - { level: B1, base: { ex: "ring" }, past: "rang", participle: "rung" }
+          - { level: A1, base: { ex: "drink", tr: { es: "beber" } }, past: "drank", participle: "drunk" }
+          - { level: A2, base: { ex: "begin", tr: { es: "empezar" } }, past: "began", participle: "begun" }
+          - { level: A2, base: { ex: "swim", tr: { es: "nadar" } }, past: "swam", participle: "swum" }
+          - { level: A2, base: { ex: "sing", tr: { es: "cantar" } }, past: "sang", participle: "sung" }
+          - { level: B1, base: { ex: "ring", tr: { es: "sonar, llamar" } }, past: "rang", participle: "rung" }
       - type: bullets
         items:
           - level: A1
             text:
               en: "The vowel runs **i → a → u**: the past takes **a**, the participle takes **u**."
+              es: "La vocal sigue el orden **i → a → u**: el pasado lleva **a** y el participio lleva **u**."
 
-  - title: { en: "Pattern: participle in -en" }
+  - title: { en: "Pattern: participle in -en", es: "Modelo: participio en -en" }
     content:
       - type: table
         columns:
-          - { key: base, label: { en: Base form } }
-          - { key: past, label: { en: Past simple } }
-          - { key: participle, label: { en: Past participle } }
+          - { key: base, label: { en: Base form, es: Forma base } }
+          - { key: past, label: { en: Past simple, es: Pasado simple } }
+          - { key: participle, label: { en: Past participle, es: Participio } }
         rows:
-          - { level: A1, base: { ex: "give" }, past: "gave", participle: "given" }
-          - { level: A1, base: { ex: "take" }, past: "took", participle: "taken" }
-          - { level: A1, base: { ex: "eat" }, past: "ate /et/ or /eɪt/", participle: "eaten" }
-          - { level: A1, base: { ex: "write" }, past: "wrote", participle: "written" }
-          - { level: A2, base: { ex: "drive" }, past: "drove", participle: "driven" }
-          - { level: A2, base: { ex: "ride" }, past: "rode", participle: "ridden" }
-          - { level: A2, base: { ex: "break" }, past: "broke", participle: "broken" }
-          - { level: A2, base: { ex: "speak" }, past: "spoke", participle: "spoken" }
-          - { level: A2, base: { ex: "choose" }, past: "chose", participle: "chosen" }
-          - { level: A2, base: { ex: "forget" }, past: "forgot", participle: "forgotten" }
-          - { level: A2, base: { ex: "fall" }, past: "fell", participle: "fallen" }
-          - { level: B1, base: { ex: "wake" }, past: "woke", participle: "woken" }
-          - { level: B1, base: { ex: "steal" }, past: "stole", participle: "stolen" }
-          - { level: B1, base: { ex: "hide" }, past: "hid", participle: "hidden" }
-          - { level: B1, base: { ex: "freeze" }, past: "froze", participle: "frozen" }
+          - { level: A1, base: { ex: "give", tr: { es: "dar" } }, past: "gave", participle: "given" }
+          - { level: A1, base: { ex: "take", tr: { es: "coger, llevar" } }, past: "took", participle: "taken" }
+          - { level: A1, base: { ex: "eat", tr: { es: "comer" } }, past: "ate /et/ or /eɪt/", participle: "eaten" }
+          - { level: A1, base: { ex: "write", tr: { es: "escribir" } }, past: "wrote", participle: "written" }
+          - { level: A2, base: { ex: "drive", tr: { es: "conducir" } }, past: "drove", participle: "driven" }
+          - { level: A2, base: { ex: "ride", tr: { es: "montar" } }, past: "rode", participle: "ridden" }
+          - { level: A2, base: { ex: "break", tr: { es: "romper" } }, past: "broke", participle: "broken" }
+          - { level: A2, base: { ex: "speak", tr: { es: "hablar" } }, past: "spoke", participle: "spoken" }
+          - { level: A2, base: { ex: "choose", tr: { es: "elegir" } }, past: "chose", participle: "chosen" }
+          - { level: A2, base: { ex: "forget", tr: { es: "olvidar" } }, past: "forgot", participle: "forgotten" }
+          - { level: A2, base: { ex: "fall", tr: { es: "caer" } }, past: "fell", participle: "fallen" }
+          - { level: B1, base: { ex: "wake", tr: { es: "despertar(se)" } }, past: "woke", participle: "woken" }
+          - { level: B1, base: { ex: "steal", tr: { es: "robar" } }, past: "stole", participle: "stolen" }
+          - { level: B1, base: { ex: "hide", tr: { es: "esconder(se)" } }, past: "hid", participle: "hidden" }
+          - { level: B1, base: { ex: "freeze", tr: { es: "congelar(se)" } }, past: "froze", participle: "frozen" }
       - type: bullets
         items:
           - level: A1
             text:
               en: "The past has its own vowel. The participle ends in **-en**."
+              es: "El pasado tiene su propia vocal. El participio termina en **-en**."
           - level: A1
             text:
               en: "US: **ate** is /eɪt/. British English also uses /et/."
+              es: "US: **ate** se pronuncia /eɪt/. El inglés británico usa también /et/."
 
-  - title: { en: "Pattern: past in -ew, participle in -n" }
+  - title: { en: "Pattern: past in -ew, participle in -n", es: "Modelo: pasado en -ew, participio en -n" }
     content:
       - type: table
         columns:
-          - { key: base, label: { en: Base form } }
-          - { key: past, label: { en: Past simple } }
-          - { key: participle, label: { en: Past participle } }
+          - { key: base, label: { en: Base form, es: Forma base } }
+          - { key: past, label: { en: Past simple, es: Pasado simple } }
+          - { key: participle, label: { en: Past participle, es: Participio } }
         rows:
-          - { level: A1, base: { ex: "know" }, past: "knew", participle: "known" }
-          - { level: A2, base: { ex: "fly" }, past: "flew", participle: "flown" }
-          - { level: A2, base: { ex: "grow" }, past: "grew", participle: "grown" }
-          - { level: A2, base: { ex: "draw" }, past: "drew", participle: "drawn" }
-          - { level: B1, base: { ex: "throw" }, past: "threw", participle: "thrown" }
-          - { level: B1, base: { ex: "blow" }, past: "blew", participle: "blown" }
+          - { level: A1, base: { ex: "know", tr: { es: "saber, conocer" } }, past: "knew", participle: "known" }
+          - { level: A2, base: { ex: "fly", tr: { es: "volar" } }, past: "flew", participle: "flown" }
+          - { level: A2, base: { ex: "grow", tr: { es: "crecer" } }, past: "grew", participle: "grown" }
+          - { level: A2, base: { ex: "draw", tr: { es: "dibujar" } }, past: "drew", participle: "drawn" }
+          - { level: B1, base: { ex: "throw", tr: { es: "lanzar" } }, past: "threw", participle: "thrown" }
+          - { level: B1, base: { ex: "blow", tr: { es: "soplar" } }, past: "blew", participle: "blown" }
       - type: bullets
         items:
           - level: A1
             text:
               en: "The past ends in **-ew** and the participle ends in **-n**: know → knew → known."
+              es: "El pasado termina en **-ew** y el participio en **-n**: know → knew → known."
 
-  - title: { en: "Pattern: participle in -n / -ne, past has its own form" }
+  - title: { en: "Pattern: participle in -n / -ne, past has its own form", es: "Modelo: participio en -n / -ne, pasado con forma propia" }
     content:
       - type: table
         columns:
-          - { key: base, label: { en: Base form } }
-          - { key: past, label: { en: Past simple } }
-          - { key: participle, label: { en: Past participle } }
+          - { key: base, label: { en: Base form, es: Forma base } }
+          - { key: past, label: { en: Past simple, es: Pasado simple } }
+          - { key: participle, label: { en: Past participle, es: Participio } }
         rows:
-          - { level: A1, base: { ex: "be" }, past: "was / were", participle: "been /biːn/" }
-          - { level: A1, base: { ex: "do" }, past: "did", participle: "done /dʌn/" }
-          - { level: A1, base: { ex: "go" }, past: "went", participle: "gone /ɡɒn/" }
-          - { level: A1, base: { ex: "see" }, past: "saw", participle: "seen" }
-          - { level: A2, base: { ex: "wear" }, past: "wore", participle: "worn" }
-          - { level: B1, base: { ex: "tear" }, past: "tore", participle: "torn" }
+          - { level: A1, base: { ex: "be", tr: { es: "ser, estar" } }, past: "was / were", participle: "been /biːn/" }
+          - { level: A1, base: { ex: "do", tr: { es: "hacer" } }, past: "did", participle: "done /dʌn/" }
+          - { level: A1, base: { ex: "go", tr: { es: "ir" } }, past: "went", participle: "gone /ɡɒn/" }
+          - { level: A1, base: { ex: "see", tr: { es: "ver" } }, past: "saw", participle: "seen" }
+          - { level: A2, base: { ex: "wear", tr: { es: "llevar puesto" } }, past: "wore", participle: "worn" }
+          - { level: B1, base: { ex: "tear", tr: { es: "rasgar" } }, past: "tore", participle: "torn" }
       - type: bullets
         items:
           - level: A1
             text:
               en: "The participle ends in **-n** or **-ne**. The past is a form of its own."
+              es: "El participio termina en **-n** o **-ne**. El pasado tiene forma propia."
           - level: A1
             text:
               en: "**been** is /biːn/ (US: /bɪn/). **go** has two participles: **gone** and **been**."
+              es: "**been** se pronuncia /biːn/ (US: /bɪn/). **go** tiene dos participios: **gone** y **been**."
           - level: A1
             text:
               en: "**gone** = he is away. **been** = he went and came back: He has **been** to Paris."
+              es: "**gone** = se ha ido. **been** = fue y volvió: He has **been** to Paris."
 
-  - title: { en: Typical errors }
+  - title: { en: Typical errors, es: Errores típicos }
     content:
       - type: errors
+        audience: true
         rows:
-          - { level: A1, wrong: I goed to Madrid., right: "I **went** to Madrid.", rule: { en: "irregular verbs have their own past form, no -ed" } }
-          - { level: A1, wrong: She buyed a car., right: "She **bought** a car.", rule: { en: "buy → bought" } }
-          - { level: A1, wrong: I have went there., right: "I have **gone** there.", rule: { en: "after have use the participle: gone" } }
-          - { level: A1, wrong: I have saw it., right: "I have **seen** it.", rule: { en: "after have use the participle: seen" } }
-          - { level: A1, wrong: I seen him yesterday., right: "I **saw** him yesterday.", rule: { en: "the past simple takes the past form: saw" } }
-          - { level: A1, wrong: I have wrote a letter., right: "I have **written** a letter.", rule: { en: "write → wrote → written" } }
-          - { level: A1, wrong: He readed the book., right: "He **read** /red/ the book.", rule: { en: "read is spelled the same in all forms, the past sounds /red/" } }
+          - { level: A1, wrong: I goed to Madrid., right: "I **went** to Madrid.", rule: { en: "irregular verbs have their own past form, no -ed", es: "los verbos irregulares tienen su propio pasado, sin -ed" } }
+          - { level: A1, wrong: She buyed a car., right: "She **bought** a car.", rule: { en: "buy → bought", es: "buy → bought" } }
+          - { level: A1, wrong: I have went there., right: "I have **gone** there.", rule: { en: "after have use the participle: gone", es: "después de have va el participio: gone" } }
+          - { level: A1, wrong: I have saw it., right: "I have **seen** it.", rule: { en: "after have use the participle: seen", es: "después de have va el participio: seen" } }
+          - { level: A1, wrong: I seen him yesterday., right: "I **saw** him yesterday.", rule: { en: "the past simple takes the past form: saw", es: "el pasado simple lleva la forma de pasado: saw" } }
+          - { level: A1, wrong: I have wrote a letter., right: "I have **written** a letter.", rule: { en: "write → wrote → written", es: "write → wrote → written" } }
+          - { level: A1, for: [es], wrong: I have eated. / I have taked., right: "I have **eaten**. / I have **taken**.", rule: { es: "el participio no siempre termina en -ed (*he comido* = eaten)" } }
+          - { level: A1, wrong: He readed the book., right: "He **read** /red/ the book.", rule: { en: "read is spelled the same in all forms, the past sounds /red/", es: "read se escribe igual en todas las formas, el pasado suena /red/" } }

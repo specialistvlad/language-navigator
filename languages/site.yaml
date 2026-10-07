@@ -11,4 +11,7 @@ repository: https://github.com/specialistvlad/language-navigator
 explain:
   - code: en
     enabled: true
-    name: { en: English }
+    name: { en: English, es: Inglés }
+  - code: es
+    enabled: true
+    name: { en: Spanish, es: Español }

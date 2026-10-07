@@ -5,92 +5,108 @@ kind: grammar
 tags: [pronouns, reflexive, myself, each other]
 concepts: [reflexive, pronouns]
 related: [en.pronouns.personal-pronouns, en.pronouns.indefinite-pronouns, en.verbs.phrasal-verbs-core, en.tenses.simple-tenses]
-status: { en: draft }
+status: { en: draft, es: draft }
 
-title: { en: Reflexive Pronouns }
+title: { en: Reflexive Pronouns, es: Pronombres reflexivos }
 summary:
   en: "Reflexive pronouns (myself, yourself, themselves) show that the subject and the object are the same person. Routine verbs such as get up and get dressed take no reflexive: I **get up**, I **get dressed**."
+  es: "Los pronombres reflexivos (myself, yourself, themselves) indican que el sujeto y el objeto son la misma persona. Los verbos de rutina que en español son pronominales van sin reflexivo en inglés: I **get up** (*me levanto*), I **get dressed** (*me visto*)."
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: subject, label: { en: Subject } }
-        - { key: reflexive, label: { en: Reflexive } }
-        - { key: example, label: { en: Example } }
+        - { key: subject, label: { en: Subject, es: Sujeto } }
+        - { key: reflexive, label: { en: Reflexive, es: Reflexivo } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
       rows:
-        - { level: A2, subject: I, reflexive: myself, example: "I cut **myself**." }
-        - { level: A2, subject: you, reflexive: yourself / yourselves, example: "Help **yourself**. / Help **yourselves**." }
-        - { level: A2, subject: he, reflexive: himself, example: "He hurt **himself**." }
-        - { level: A2, subject: she, reflexive: herself, example: "She taught **herself** French." }
-        - { level: A2, subject: it, reflexive: itself, example: "The door closes by **itself**." }
-        - { level: A2, subject: we, reflexive: ourselves, example: "We enjoyed **ourselves**." }
-        - { level: A2, subject: they, reflexive: themselves, example: "They looked at **themselves** in the mirror." }
+        - { level: A2, subject: I, reflexive: myself, example: "I cut **myself**.", tr: { es: Me corté. } }
+        - { level: A2, subject: you, reflexive: yourself / yourselves, example: "Help **yourself**. / Help **yourselves**.", tr: { es: Sírvete. / Servíos. } }
+        - { level: A2, subject: he, reflexive: himself, example: "He hurt **himself**.", tr: { es: Se hizo daño. } }
+        - { level: A2, subject: she, reflexive: herself, example: "She taught **herself** French.", tr: { es: Aprendió francés sola. } }
+        - { level: A2, subject: it, reflexive: itself, example: "The door closes by **itself**.", tr: { es: La puerta se cierra sola. } }
+        - { level: A2, subject: we, reflexive: ourselves, example: "We enjoyed **ourselves**.", tr: { es: Lo pasamos bien. } }
+        - { level: A2, subject: they, reflexive: themselves, example: "They looked at **themselves** in the mirror.", tr: { es: Se miraron en el espejo. } }
 
 sections:
-  - title: { en: Overview }
+  - title: { en: Overview, es: Resumen }
     content:
       - type: bullets
         items:
           - level: A2
             text:
               en: "Singular forms end in **-self**; plural forms end in **-selves**."
+              es: "Las formas singulares acaban en **-self**; las plurales, en **-selves**."
           - level: A2
             text:
               en: "**you** has two forms: **yourself** for one person, **yourselves** for several."
+              es: "**you** tiene dos formas: **yourself** para una persona, **yourselves** para varias."
           - level: A2
             text:
               en: "The stress falls on -self: myself /maɪˈself/, themselves /ðəmˈselvz/."
+              es: "El acento cae en -self: myself /maɪˈself/, themselves /ðəmˈselvz/."
 
-  - title: { en: Use }
+  - title: { en: Use, es: Uso }
     content:
       - type: table
         columns:
-          - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A2, use: { en: "object = subject" }, example: "I burnt **myself** in the kitchen." }
-          - { level: A2, use: { en: "after a preposition, same person" }, example: "She talks to **herself**." }
-          - { level: A2, use: { en: "emphasis: that person and nobody else" }, example: "I made the cake **myself**." }
-          - { level: A2, use: { en: "by + reflexive = alone, without help" }, example: "He lives **by himself**." }
-          - { level: A2, use: { en: "fixed expressions" }, example: "Enjoy **yourselves**! / Make **yourself** at home." }
+          - { level: A2, use: { en: "object = subject", es: "objeto = sujeto" }, example: "I burnt **myself** in the kitchen.", tr: { es: Me quemé en la cocina. } }
+          - { level: A2, use: { en: "after a preposition, same person", es: "tras una preposición, la misma persona" }, example: "She talks to **herself**.", tr: { es: Habla sola. } }
+          - { level: A2, use: { en: "emphasis: that person and nobody else", es: "énfasis: esa persona y nadie más" }, example: "I made the cake **myself**.", tr: { es: Hice la tarta yo mismo. } }
+          - { level: A2, use: { en: "by + reflexive = alone, without help", es: "by + reflexivo = solo, sin ayuda" }, example: "He lives **by himself**.", tr: { es: Vive solo. } }
+          - { level: A2, use: { en: "fixed expressions", es: "expresiones fijas" }, example: "Enjoy **yourselves**! / Make **yourself** at home.", tr: { es: ¡Pasadlo bien! / Estás en tu casa. } }
 
-  - title: { en: "Everyday routines: the verb alone" }
+  - title: { en: "Everyday routines: the verb alone", es: "Rutinas: el verbo solo" }
     content:
       - type: text
         level: A2
         text:
           en: "These everyday verbs take no reflexive pronoun:"
+          es: "Estos verbos son reflexivos en español y en inglés van solos:"
       - type: table
         columns:
-          - { key: verb, label: { en: Verb } }
-          - { key: example, label: { en: Example } }
+          - { key: verb, label: { en: Verb, es: Verbo } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A2, verb: get up / wake up, example: "I **get up** at seven." }
-          - { level: A2, verb: have a shower, example: "He **has a shower** every morning." }
-          - { level: A2, verb: get dressed, example: "I **get dressed** quickly." }
-          - { level: A2, verb: sit down, example: "Please **sit down**." }
-          - { level: A2, verb: feel, example: "I **feel** tired." }
-          - { level: A2, verb: relax, example: "We **relax** at the weekend." }
-          - { level: A2, verb: remember, example: "I **remember** her." }
-          - { level: A2, verb: meet, example: "We **met** in 2019." }
-          - { level: A2, verb: worry, example: "Don't **worry**." }
+          - { level: A2, verb: get up / wake up, example: "I **get up** at seven.", tr: { es: Me levanto a las siete. } }
+          - { level: A2, verb: have a shower, example: "He **has a shower** every morning.", tr: { es: Se ducha cada mañana. } }
+          - { level: A2, verb: get dressed, example: "I **get dressed** quickly.", tr: { es: Me visto rápido. } }
+          - { level: A2, verb: sit down, example: "Please **sit down**.", tr: { es: "Siéntese, por favor." } }
+          - { level: A2, verb: feel, example: "I **feel** tired.", tr: { es: Me siento cansado. } }
+          - { level: A2, verb: relax, example: "We **relax** at the weekend.", tr: { es: Nos relajamos el fin de semana. } }
+          - { level: A2, verb: remember, example: "I **remember** her.", tr: { es: Me acuerdo de ella. } }
+          - { level: A2, verb: meet, example: "We **met** in 2019.", tr: { es: Nos conocimos en 2019. } }
+          - { level: A2, verb: worry, example: "Don't **worry**.", tr: { es: No te preocupes. } }
+      - type: bullets
+        items:
+          - { level: A2, for: [es], text: { es: "Partes del cuerpo: posesivo. *Me lavo las manos* → I wash **my** hands. Ver [Pronombres personales](id:en.pronouns.personal-pronouns)." } }
 
-  - title: { en: "Compare: themselves and each other" }
+  - title: { en: "Compare: themselves and each other", es: "Comparación: themselves y each other" }
     content:
       - type: table
         columns:
           - { key: self, label: themselves }
           - { key: other, label: each other }
         rows:
-          - { level: A2, self: { en: "each person → the same person" }, other: { en: "each person → the other person" } }
-          - { level: A2, self: { ex: "They looked at **themselves** in the mirror." }, other: { ex: "They looked at **each other**." } }
-          - { level: A2, self: { ex: "We blamed **ourselves**." }, other: { ex: "We blamed **each other**." } }
+          - { level: A2, self: { en: "each person → the same person", es: "cada uno → a sí mismo" }, other: { en: "each person → the other person", es: "cada uno → al otro" } }
+          - { level: A2, self: { ex: "They looked at **themselves** in the mirror.", tr: { es: "Se miraron en el espejo (cada uno a sí mismo)." } }, other: { ex: "They looked at **each other**.", tr: { es: "Se miraron (el uno al otro)." } } }
+          - { level: A2, self: { ex: "We blamed **ourselves**.", tr: { es: Nos echamos la culpa a nosotros mismos. } }, other: { ex: "We blamed **each other**.", tr: { es: Nos echamos la culpa el uno al otro. } } }
+      - type: bullets
+        items:
+          - { level: A2, for: [es], text: { es: "*se* recíproco (*se quieren*, *se escriben*) = **each other**: They love **each other**." } }
 
-  - title: { en: Typical errors }
+  - title: { en: Typical errors, es: Errores típicos }
     content:
       - type: errors
+        audience: true
         rows:
-          - { level: A2, wrong: He hurt hisself., right: "He hurt **himself**.", rule: { en: "him + self" } }
-          - { level: A2, wrong: They enjoyed theirselves., right: "They enjoyed **themselves**.", rule: { en: "them + selves" } }
-          - { level: A2, wrong: "Help yourself, children!", right: "Help **yourselves**, children!", rule: { en: "several people → yourselves" } }
+          - { level: A2, wrong: He hurt hisself., right: "He hurt **himself**.", rule: { en: "him + self", es: "him + self" } }
+          - { level: A2, wrong: They enjoyed theirselves., right: "They enjoyed **themselves**.", rule: { en: "them + selves", es: "them + selves" } }
+          - { level: A2, wrong: "Help yourself, children!", right: "Help **yourselves**, children!", rule: { en: "several people → yourselves", es: "varias personas → yourselves" } }
+          - { level: A2, for: [es], wrong: I feel myself tired., right: "I **feel** tired.", rule: { es: "*sentirse* = feel, el verbo solo" } }
+          - { level: A2, for: [es], wrong: We relax ourselves at the weekend., right: "We **relax** at the weekend.", rule: { es: "*relajarse* = relax, el verbo solo" } }
+          - { level: A2, for: [es], wrong: We met ourselves in 2019., right: "We **met** in 2019.", rule: { es: "*conocerse* = meet" } }
+          - { level: A2, for: [es], wrong: They love themselves., right: "They love **each other**.", rule: { es: "*se* recíproco = each other" } }
