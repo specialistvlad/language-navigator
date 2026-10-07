@@ -35,7 +35,7 @@ sections:
           - en: "The **past simple** is used for finished actions. See [Past simple](id:en.tenses.past-simple)."
             es: "El **pasado simple** se usa para acciones terminadas. Ver [Pasado simple](id:en.tenses.past-simple)."
           - en: "The **past participle** is used after have in the present perfect. See [Present perfect](id:en.tenses.present-perfect)."
-            es: "El **participio** se usa después de have en el present perfect. Ver [Present perfect](id:en.tenses.present-perfect)."
+            es: "El **participio** se usa después de have en el present perfect. Ver [Presente perfecto](id:en.tenses.present-perfect)."
           - en: "Regular verbs add **-ed** to both forms: work – worked – worked."
             es: "Los verbos regulares añaden **-ed** a las dos formas: work – worked – worked."
           - { for: [es], text: { es: "El participio inglés equivale a *-ado / -ido*, pero no siempre termina en **-ed**: *he comido* = I have **eaten**." } }

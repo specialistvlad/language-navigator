@@ -266,7 +266,7 @@ sections:
         items:
           - { for: [es], text: { es: "El presente español cubre los dos: *trabajo* = I work / I'm working." } }
           - en: "See [Present continuous](id:en.tenses.present-continuous)."
-            es: "Ver [Present continuous](id:en.tenses.present-continuous)."
+            es: "Ver [Presente continuo](id:en.tenses.present-continuous)."
 
   - title: { en: Typical errors, es: Errores típicos }
     level: A1-A2

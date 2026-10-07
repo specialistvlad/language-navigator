@@ -72,7 +72,7 @@ sections:
             ex: "I'**d** go. (= I would go) / I'**d** gone. (= I had gone)"
             tr: { es: Iría. / Había ido. }
           - en: "See [Past perfect](id:en.tenses.past-perfect)."
-            es: "Ver [Past perfect](id:en.tenses.past-perfect)."
+            es: "Ver [Pluscuamperfecto](id:en.tenses.past-perfect)."
 
   - title: { en: "Pronunciation: would and 'd", es: "Pronunciación: would y 'd" }
     level: B1
@@ -140,7 +140,7 @@ sections:
       - type: bullets
         items:
           - en: "A past state (live, be, have, know) takes **used to**. See [Used to](id:en.tenses.used-to)."
-            es: "Un estado del pasado (live, be, have, know) lleva **used to**. Ver [Used to](id:en.tenses.used-to)."
+            es: "Un estado del pasado (live, be, have, know) lleva **used to**. Ver [Hábitos del pasado](id:en.tenses.used-to)."
 
   - title: { en: Typical errors, es: Errores típicos }
     level: B1

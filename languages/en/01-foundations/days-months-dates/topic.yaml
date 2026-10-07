@@ -74,7 +74,7 @@ sections:
       - type: bullets
         items:
           - en: "Say the day as an ordinal number: the **third** of July. Ordinals: [Numbers](id:en.foundations.numbers)."
-            es: "El día se dice con número ordinal: the **third** of July. Ordinales: [Numbers](id:en.foundations.numbers)."
+            es: "El día se dice con número ordinal: the **third** of July. Ordinales: [Los números](id:en.foundations.numbers)."
           - en: "British order: day, month, year. 04/07/2026 is 4 July."
             es: "Orden británico: día, mes, año. 04/07/2026 es el 4 de julio."
           - en: "US: month, day, year. 04/07/2026 is April 7; say *April seventh*."
