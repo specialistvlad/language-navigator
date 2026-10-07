@@ -1,4 +1,4 @@
-// Progressive enhancement for the static pages: level filter, view, theme, menu, live reload.
+// Progressive enhancement for the static pages: level filter, view, theme, menu, sidebar scroll, lanes, live reload.
 (() => {
   "use strict";
   const root = document.documentElement;
@@ -59,6 +59,16 @@
   });
 
   mark();
+
+  // Sidebar scroll position for the next page; the page shell restores it.
+  const sidebar = document.getElementById("sidebar");
+  if (sidebar) {
+    addEventListener("pagehide", () => {
+      try {
+        sessionStorage.setItem("ln-nav", JSON.stringify({ k: sidebar.dataset.key, t: sidebar.scrollTop }));
+      } catch {}
+    });
+  }
 
   // Lanes without grid-lanes: CSS sets the column count, this places each visible block, in order,
   // at the top of the shortest column on a grid of 4px rows.
