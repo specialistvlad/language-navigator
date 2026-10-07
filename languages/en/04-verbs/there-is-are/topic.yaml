@@ -42,7 +42,7 @@ sections:
           - { key: form, label: { en: Form, es: Forma } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { noun: { en: singular countable, es: contable singular }, form: there is / there's + a / an, example: "There**'s** a cat in the garden.", tr: { es: Hay un gato en el jardín. } }
+          - { noun: { en: singular countable, es: contable singular }, form: there is / there's + a / an, example: "There'**s** a cat in the garden.", tr: { es: Hay un gato en el jardín. } }
           - { noun: { en: plural, es: plural }, form: there are + some / number, example: "There **are** three chairs.", tr: { es: Hay tres sillas. } }
           - { noun: { en: uncountable, es: incontable }, form: there is + some, example: "There **is** some milk.", tr: { es: Hay algo de leche. } }
       - type: bullets
@@ -78,7 +78,7 @@ sections:
           - { form: "Are there + any", example: "**Are there any** shops?", tr: { es: ¿Hay tiendas? } }
           - { form: "How many … are there?", example: "How many people **are there**?", tr: { es: ¿Cuánta gente hay? } }
           - { form: "How much … is there?", example: "How much milk **is there**?", tr: { es: ¿Cuánta leche hay? } }
-          - { form: "What is there …?", example: "What**'s there** in the fridge?", tr: { es: ¿Qué hay en la nevera? } }
+          - { form: "What is there …?", example: "What'**s there** in the fridge?", tr: { es: ¿Qué hay en la nevera? } }
       - type: bullets
         items:
           - en: "A question puts **be** before **there**: There is → **Is there**…?"
@@ -133,7 +133,7 @@ sections:
           - { key: rule, label: { en: Rule, es: Regla } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { word: a / an, rule: { en: "singular countable, + and ?", es: "contable singular, + y ?" }, example: "There**'s a** bus stop.", tr: { es: Hay una parada de autobús. } }
+          - { word: a / an, rule: { en: "singular countable, + and ?", es: "contable singular, + y ?" }, example: "There'**s a** bus stop.", tr: { es: Hay una parada de autobús. } }
           - { word: some, rule: { en: "plural or uncountable, +", es: "plural o incontable, +" }, example: "There are **some** apples.", tr: { es: Hay unas manzanas. } }
           - { word: any, rule: { en: "plural or uncountable, − and ?", es: "plural o incontable, − y ?" }, example: "Are there **any** apples?", tr: { es: ¿Hay manzanas? } }
           - { word: { en: number, es: número }, rule: { en: "plural, + − ?", es: "plural, + − ?" }, example: "There are **four** apples.", tr: { es: Hay cuatro manzanas. } }

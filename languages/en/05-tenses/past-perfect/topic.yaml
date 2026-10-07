@@ -46,8 +46,8 @@ sections:
           - { subject: I / you / he / she / it / we / they, aux: had + V-ed, example: "She **had finished** before me.", tr: { es: Había terminado antes que yo. } }
       - type: bullets
         items:
-          - en: "Contraction: I**'d**, she**'d**, they**'d**. Speech and messages use it."
-            es: "Contracción: I**'d**, she**'d**, they**'d**. Se usa en conversación y mensajes."
+          - en: "Contraction: I'**d**, she'**d**, they'**d**. Speech and messages use it."
+            es: "Contracción: I'**d**, she'**d**, they'**d**. Se usa en conversación y mensajes."
           - en: "Regular verbs take -ed; irregular participles are in the [Irregular verbs table](id:en.verbs.irregular-verbs-table)."
             es: "Los regulares llevan -ed; los participios irregulares están en la [Tabla de verbos irregulares](id:en.verbs.irregular-verbs-table)."
 

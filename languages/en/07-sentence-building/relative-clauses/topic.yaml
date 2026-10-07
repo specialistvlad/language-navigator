@@ -76,7 +76,7 @@ sections:
         text:
           en: "A non-defining clause adds extra information. Commas separate it from the rest."
           es: "Una oración explicativa añade información extra. Se separa con comas."
-        ex: "My uncle**, who lives in Leeds,** is a doctor."
+        ex: "My uncle, **who lives in Leeds**, is a doctor."
         tr: { es: "Mi tío, que vive en Leeds, es médico." }
       - type: table
         columns:
@@ -92,14 +92,14 @@ sections:
         columns:
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { example: "Paris**, which** I visited in May**,** is beautiful.", tr: { es: "París, que visité en mayo, es preciosa." } }
-          - { example: "Tom**, whose** brother is a chef**,** cooks well.", tr: { es: "Tom, cuyo hermano es cocinero, cocina bien." } }
+          - { example: "Paris, **which** I visited in May, is beautiful.", tr: { es: "París, que visité en mayo, es preciosa." } }
+          - { example: "Tom, **whose** brother is a chef, cooks well.", tr: { es: "Tom, cuyo hermano es cocinero, cocina bien." } }
       - type: bullets
         items:
           - text:
               en: "**which** can refer to a whole clause:"
               es: "**which** puede referirse a toda una oración:"
-            ex: "He passed the exam**, which** surprised everyone."
+            ex: "He passed the exam, **which** surprised everyone."
             tr: { es: "Aprobó el examen, lo cual sorprendió a todos." }
           - { for: [es], text: { es: "*que* de las explicativas → who / which, con comas: *Mi tío, que vive en Leeds* → my uncle, **who** lives in Leeds." } }
 
@@ -117,7 +117,7 @@ sections:
           - { for: [en], wrong: I know a man lives in Paris., right: "I know a man **who** lives in Paris.", rule: { en: "a subject pronoun stays" } }
           - { for: [es], wrong: The girl who her father is a doctor is my friend., right: "The girl **whose** father is a doctor is my friend.", rule: { es: "posesión → whose + sustantivo (*cuyo*)" } }
           - { wrong: "Paris, which I visited it in May, is beautiful.", right: "Paris, which I visited in May, is beautiful.", rule: { en: "which stands for the object", es: "which ya sustituye al objeto" } }
-          - { wrong: "Paris which I visited in May is beautiful.", right: "Paris**,** which I visited in May**,** is beautiful.", rule: { en: "non-defining clauses need commas", es: "las explicativas llevan comas" } }
+          - { wrong: "Paris which I visited in May is beautiful.", right: "Paris, which I visited in May, is beautiful.", rule: { en: "non-defining clauses need commas", es: "las explicativas llevan comas" } }
 
 essentials:
   - level: B1

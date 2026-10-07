@@ -227,8 +227,8 @@ essentials:
 reminders:
   - level: A1
     items:
-      - en: "A comma comes before **but** and **so** between two clauses: I was tired**,** so I left."
-        es: "Coma delante de **but** y **so** entre dos oraciones: I was tired**,** so I left."
+      - en: "A comma comes before **but** and **so** between two clauses: I was tired, **so** I left."
+        es: "Coma delante de **but** y **so** entre dos oraciones: I was tired, **so** I left."
   - level: A2
     items:
       - en: "**because** + clause, **because of** + noun."

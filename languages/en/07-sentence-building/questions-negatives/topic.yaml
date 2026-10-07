@@ -177,7 +177,7 @@ sections:
           - { key: "yes", label: { en: "Yes", es: Sí } }
           - { key: "no", label: { en: "No", es: "No" } }
         rows:
-          - { question: Are you tired?, "yes": "Yes, I **am**.", "no": "No, I**'m not**." }
+          - { question: Are you tired?, "yes": "Yes, I **am**.", "no": "No, I'**m not**." }
           - { question: Can she swim?, "yes": "Yes, she **can**.", "no": "No, she **can't**." }
           - { question: Did he call?, "yes": "Yes, he **did**.", "no": "No, he **didn't**." }
       - type: bullets

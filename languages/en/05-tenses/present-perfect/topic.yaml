@@ -44,14 +44,14 @@ sections:
           - { subject: he / she / it, aux: has + V-ed, example: "She **has finished** her work.", tr: { es: Ha terminado su trabajo. } }
       - type: bullets
         items:
-          - en: "Contractions: I**'ve** / you**'ve** / we**'ve** / they**'ve** and he**'s** / she**'s** / it**'s**."
-            es: "Contracciones: I**'ve** / you**'ve** / we**'ve** / they**'ve** y he**'s** / she**'s** / it**'s**."
+          - en: "Contractions: I'**ve** / you'**ve** / we'**ve** / they'**ve** and he'**s** / she'**s** / it'**s**."
+            es: "Contracciones: I'**ve** / you'**ve** / we'**ve** / they'**ve** y he'**s** / she'**s** / it'**s**."
           - en: "Speech and messages use the contracted forms."
             es: "En la conversación y en los mensajes se usan las formas contraídas."
           - for: [es]
             text:
               es: "El auxiliar es *haber* = **have / has**."
-            ex: "Hemos llegado. → We**'ve** arrived."
+            ex: "Hemos llegado. → We'**ve** arrived."
 
   - title: { en: "Form: past participle", es: "Forma: participio pasado" }
     level: A2
@@ -245,8 +245,8 @@ essentials:
             items:
               - en: "have / has + **past participle**: regular V-ed, irregular forms to learn (seen, been, done)."
                 es: "have / has + **participio pasado**: regular V-ed, irregulares que se aprenden (seen, been, done)."
-              - en: "Contractions: I**'ve**, she**'s**, haven't, hasn't."
-                es: "Contracciones: I**'ve**, she**'s**, haven't, hasn't."
+              - en: "Contractions: I'**ve**, she'**s**, haven't, hasn't."
+                es: "Contracciones: I'**ve**, she'**s**, haven't, hasn't."
               - en: "**ever**, **never**, **just**, **already** go before the participle; **yet** goes at the end."
                 es: "**ever**, **never**, **just**, **already** van antes del participio; **yet** va al final."
               - en: "A finished-time word (yesterday, last week, ago) takes the past simple."

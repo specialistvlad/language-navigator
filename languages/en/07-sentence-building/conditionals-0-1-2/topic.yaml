@@ -139,7 +139,7 @@ sections:
           - { for: [es], wrong: "If I would have time, I would help.", right: "If I **had** time, I'd help.", rule: { es: "tras if va pasado simple" } }
           - { wrong: "If I am you, I would go.", right: "If I **were** you, I'd go.", rule: { en: advice uses If I were you, es: el consejo usa If I were you } }
           - { wrong: "If I win the lottery, I would buy a house.", right: "If I **won** the lottery, I **would** buy a house.", rule: { en: "match the pair: present + will or past + would", es: "empareja bien: presente + will o pasado + would" } }
-          - { wrong: If it rains we'll stay in., right: "If it rains**,** we'll stay in.", rule: { en: comma after an if-clause at the start, es: coma tras la oración con if al principio } }
+          - { wrong: If it rains we'll stay in., right: "**If it rains,** we'll stay in.", rule: { en: comma after an if-clause at the start, es: coma tras la oración con if al principio } }
           - { wrong: "Unless you don't hurry, you'll miss the bus.", right: "**Unless** you hurry, you'll miss the bus.", rule: { en: unless already means if … not, es: unless ya significa if … not } }
           - { for: [en], wrong: "If she come, I'll call you.", right: "If she **comes**, I'll call you.", rule: { en: she / he / it → V-s in the if-clause } }
 

@@ -23,7 +23,7 @@ sections:
           - { key: have, label: have }
           - { key: got, label: have got }
         rows:
-          - { form: { en: Affirmative, es: Afirmativa }, have: "I **have** a car.", got: "I**'ve got** a car." }
+          - { form: { en: Affirmative, es: Afirmativa }, have: "I **have** a car.", got: "I'**ve got** a car." }
           - { form: { en: Negative, es: Negativa }, have: "I **don't have** a car.", got: "I **haven't got** a car." }
           - { form: { en: Question, es: Pregunta }, have: "**Do** you **have** a car?", got: "**Have** you **got** a car?" }
           - { form: { en: Short answer, es: Respuesta corta }, have: "Yes, I **do**. / No, I **don't**.", got: "Yes, I **have**. / No, I **haven't**." }
@@ -44,8 +44,8 @@ sections:
           - { key: have, label: have }
           - { key: got, label: have got }
         rows:
-          - { subject: I / you / we / they, have: "They **have** two children.", got: "They**'ve got** two children.", tr: { es: Tienen dos hijos. } }
-          - { subject: he / she / it, have: "She **has** a brother.", got: "She**'s got** a brother.", tr: { es: Tiene un hermano. } }
+          - { subject: I / you / we / they, have: "They **have** two children.", got: "They'**ve got** two children.", tr: { es: Tienen dos hijos. } }
+          - { subject: he / she / it, have: "She **has** a brother.", got: "She'**s got** a brother.", tr: { es: Tiene un hermano. } }
       - type: bullets
         items:
           - en: "he / she / it takes **has**: She **has** a dog."
@@ -115,10 +115,10 @@ sections:
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
           - { use: { en: Possession, es: Posesión }, example: "I **have** a new phone.", tr: { es: Tengo un móvil nuevo. } }
-          - { use: { en: Family and friends, es: Familia y amigos }, example: "She**'s got** two sisters.", tr: { es: Tiene dos hermanas. } }
+          - { use: { en: Family and friends, es: Familia y amigos }, example: "She'**s got** two sisters.", tr: { es: Tiene dos hermanas. } }
           - { use: { en: "Features, appearance", es: "Rasgos, aspecto" }, example: "He **has** blue eyes. / My flat **has** a balcony.", tr: { es: Tiene los ojos azules. / Mi piso tiene balcón. } }
-          - { use: { en: "Illness, pain", es: "Enfermedad, dolor" }, example: "I**'ve got** a headache.", tr: { es: Tengo dolor de cabeza. } }
-          - { use: { en: "Work, appointments", es: "Trabajo, citas" }, example: "I**'ve got** a meeting at 3.", tr: { es: Tengo una reunión a las 3. } }
+          - { use: { en: "Illness, pain", es: "Enfermedad, dolor" }, example: "I'**ve got** a headache.", tr: { es: Tengo dolor de cabeza. } }
+          - { use: { en: "Work, appointments", es: "Trabajo, citas" }, example: "I'**ve got** a meeting at 3.", tr: { es: Tengo una reunión a las 3. } }
       - type: bullets
         items:
           - { for: [es], text: { es: "Edad, hambre, sed, frío y calor llevan **be**: I am 20 / hungry. Ver [To be](id:en.verbs.to-be)." } }
@@ -186,7 +186,7 @@ essentials:
               - { key: have, label: have }
               - { key: got, label: have got }
             rows:
-              - { form: +, have: "I / they **have**. / She **has**.", got: "I**'ve got** / She**'s got**." }
+              - { form: +, have: "I / they **have**. / She **has**.", got: "I'**ve got** / She'**s got**." }
               - { form: −, have: "I **don't have**. / She **doesn't have**.", got: "I **haven't got**. / She **hasn't got**." }
               - { form: "?", have: "**Do** you **have**…? / **Does** she **have**…?", got: "**Have** you **got**…? / **Has** she **got**…?" }
               - { form: { en: Short answer, es: Respuesta corta }, have: "Yes, I **do**. / No, she **doesn't**.", got: "Yes, I **have**. / No, she **hasn't**." }
@@ -210,7 +210,7 @@ essentials:
               - { key: example, label: { en: Example, es: Ejemplo } }
             rows:
               - { use: { en: possession, es: posesión }, example: "I **have** a new phone." }
-              - { use: { en: "family, features", es: "familia, rasgos" }, example: "She**'s got** two sisters. / He **has** blue eyes." }
+              - { use: { en: "family, features", es: "familia, rasgos" }, example: "She'**s got** two sisters. / He **has** blue eyes." }
               - { use: { en: "actions", es: "acciones" }, example: "I **have** a shower. / We **have** lunch." }
       - title: { en: Top errors, es: Errores principales }
         content:

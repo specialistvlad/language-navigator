@@ -24,9 +24,9 @@ sections:
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
           - { owner: { en: singular noun, es: sustantivo singular }, form: "'s", example: "**Ana's** car", tr: { es: el coche de Ana } }
-          - { owner: { en: plural ending in -s, es: plural acabado en -s }, form: "'", example: "my **parents'** house", tr: { es: la casa de mis padres } }
+          - { owner: { en: plural ending in -s, es: plural acabado en -s }, form: "'", example: "my **parents**' house", tr: { es: la casa de mis padres } }
           - { owner: { en: "irregular plural: children, men, women, people", es: "plural irregular: children, men, women, people" }, form: "'s", example: "the **children's** room", tr: { es: la habitación de los niños } }
-          - { owner: { en: name ending in -s, es: nombre acabado en -s }, form: "'s / '", example: "**James's** / **James'** bike", tr: { es: la bici de James } }
+          - { owner: { en: name ending in -s, es: nombre acabado en -s }, form: "'s / '", example: "**James's** / **James**' bike", tr: { es: la bici de James } }
           - { owner: { en: two owners of one thing, es: dos poseedores de una cosa }, form: { en: "'s on the last name", es: "'s en el último nombre" }, example: "Tom and **Ana's** flat", tr: { es: el piso de Tom y Ana } }
       - type: bullets
         items:
@@ -93,10 +93,10 @@ sections:
         audience: true
         rows:
           - { for: [es], wrong: the car of Ana, right: "**Ana's** car", rule: { es: "persona + 's + cosa" } }
-          - { for: [es], wrong: the house of my parents, right: "my **parents'** house", rule: { es: "persona + 's / ' + cosa" } }
+          - { for: [es], wrong: the house of my parents, right: "my **parents**' house", rule: { es: "persona + 's / ' + cosa" } }
           - { for: [es], wrong: the Ana's car, right: "**Ana's** car", rule: { es: "nombre + 's, sin the" } }
           - { for: [es], wrong: Ana car, right: "**Ana's** car", rule: { es: "el poseedor lleva 's" } }
-          - { wrong: my parents's house, right: "my **parents'** house", rule: { en: "plural in -s → + '", es: "plural en -s → + '" } }
+          - { wrong: my parents's house, right: "my **parents**' house", rule: { en: "plural in -s → + '", es: "plural en -s → + '" } }
           - { wrong: the childrens' room, right: "the **children's** room", rule: { en: "irregular plural → + 's", es: "plural irregular → + 's" } }
           - { wrong: Who's bag is this?, right: "**Whose** bag is this?", rule: { en: "who's = who is", es: "who's = who is" } }
 
@@ -125,12 +125,12 @@ essentials:
           - type: errors
             rows:
               - { for: [es], wrong: the car of Ana, right: "**Ana's** car" }
-              - { wrong: my parents's house, right: "my **parents'** house" }
+              - { wrong: my parents's house, right: "my **parents**' house" }
               - { wrong: Who's bag is this?, right: "**Whose** bag is this?" }
 
 reminders:
   - level: A1
     items:
-      - { en: "Plural in -s + ': my **parents'** house.", es: "Plural en -s + ': my **parents'** house." }
+      - { en: "Plural in -s + ': my **parents**' house.", es: "Plural en -s + ': my **parents**' house." }
       - { en: "**Whose** bag? ≠ **Who's** (= who is) there?", es: "**Whose** bag? ≠ **Who's** (= who is) there?" }
       - { for: [es], text: { es: "*El coche de Ana* → **Ana's** car." } }
