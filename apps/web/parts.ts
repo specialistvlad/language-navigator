@@ -15,12 +15,15 @@ export const slugify = (text: string): string =>
     .replace(/^-|-$/g, "");
 
 export const single = (level: Level): Range => ({ from: level, to: level });
-export const rangeLabel = (r: Range): string => (r.from === r.to ? r.from : `${r.from}–${r.to}`);
 
-// A level badge, lowest–highest: it takes the colour of its lowest level (levels.css), and client.ts
-// trims its highest level to the level filter.
+// A level badge: one level reads (A1); a range joins two halves, (A1][B1), the lowest on the left and
+// the highest on the right, each in its own level's colour (levels.css). A hidden dash makes the text
+// read A1–B1. client.ts builds the same halves when it trims the highest level to the level filter.
+const half = (level: Level): string => `<span class="half lvl-${level}">${level}</span>`;
+export const badgeHalves = (r: Range): string =>
+  r.from === r.to ? half(r.from) : `${half(r.from)}<span class="sr-only">–</span>${half(r.to)}`;
 export const badge = (r: Range | null): string =>
-  r === null ? "" : `<span class="badge lvl lvl-${r.from}" data-from="${r.from}" data-to="${r.to}">${rangeLabel(r)}</span>`;
+  r === null ? "" : `<span class="badge lvl" data-from="${r.from}" data-to="${r.to}">${badgeHalves(r)}</span>`;
 
 // What the level filter reads: an element hides while the filter sits below its lowest level.
 export const levelAttrs = (r: Range | null): string => (r === null ? "" : ` data-level="${r.from}" data-to="${r.to}"`);

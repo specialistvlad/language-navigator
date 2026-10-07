@@ -22,7 +22,7 @@
 .doc-head h1 .lvl {
   margin-left: 12px;
   font-size: 12px;
-  padding: 2px 9px;
+  --badge-pad: 2px 9px;
   position: relative;
   top: -3px;
 }

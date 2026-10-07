@@ -73,7 +73,10 @@ describe.each(topicPages)("%s", (path) => {
     const doc = await read(path);
     for (const badge of doc.querySelectorAll(".lvl")) {
       expect(badge.textContent).toBe(label(badge.getAttribute("data-from") ?? "", badge.getAttribute("data-to") ?? ""));
-      expect(badge.className).toContain(`lvl-${badge.getAttribute("data-from") ?? ""}`);
+      // One level is one half in its colour; a range is two halves, lowest left, highest right.
+      const [a, b] = [badge.getAttribute("data-from") ?? "", badge.getAttribute("data-to") ?? ""];
+      const halves = [...badge.querySelectorAll(":scope > .half")].map((h) => `${h.className}:${h.textContent}`);
+      expect(halves).toEqual(a === b ? [`half lvl-${a}:${a}`] : [`half lvl-${a}:${a}`, `half lvl-${b}:${b}`]);
     }
     for (const section of doc.querySelectorAll("section.part")) {
       expect(ownBadge(section, "h2")?.textContent).toBe(label(from(section), to(section)));

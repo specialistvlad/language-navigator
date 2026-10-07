@@ -86,14 +86,16 @@ section in the menu.
 
 **Levels on the page.**
 
-- A badge shows a range, lowest–highest, in the colour of its lowest level. `levels.yaml` gives
-  each level one colour per theme, and every badge takes it from there.
+- A badge for one level is one pill, (A1). A badge for a range joins two halves, (A1][B1): the
+  lowest level on the left, the highest on the right, each in its own level's colour. `levels.yaml`
+  gives each level one colour per theme; every badge shows the level code in that colour on a light
+  tint of it.
 - The topic title, section headings, the rail and the menu show their range. A block shows its
   range when it starts above its section; a leaf shows its level when it sits above its block's
   lowest level. A topic at a single level shows its level once, in the header.
 - The level filter hides every element that starts above the chosen level, so a block hides with
-  its last leaf and a menu entry with its topic. Badges read up to the chosen level: A1–B1 reads
-  A1–A2 at A2. The rail keeps every entry and greys out the ones the filter hides.
+  its last leaf and a menu entry with its topic. Badges read up to the chosen level: (A1][B1) reads
+  (A1][A2) at A2 and (A1) at A1. The rail keeps every entry and greys out the ones the filter hides.
 
 ## 4. Text values
 

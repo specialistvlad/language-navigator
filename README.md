@@ -43,8 +43,9 @@ Defined in `languages/levels.yaml`, which the site reads.
 | C2 | Proficiency | understand virtually everything and express fine shades of meaning |
 
 Every table row, bullet and paragraph carries its level; sections, topics and menu entries take
-their range from what they hold. The level filter shows what starts at or below the chosen level
-([languages/CONVENTIONS.md](languages/CONVENTIONS.md) §3).
+their range from what they hold. A badge shows one level as (A1) and a range as two joined halves,
+(A1][B1), each in its own level's colour. The level filter shows what starts at or below the chosen
+level ([languages/CONVENTIONS.md](languages/CONVENTIONS.md) §3).
 
 ## Layout
 

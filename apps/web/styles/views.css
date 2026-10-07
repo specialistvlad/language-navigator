@@ -51,7 +51,7 @@ html:not([data-view="cheatsheet"]) .filter-empty.cheatsheet {
 .sidebar .lvl {
   margin: 0;
   font-size: 10px;
-  padding: 0 6px;
+  --badge-pad: 0 6px;
 }
 .sidebar a,
 .sidebar .todo {

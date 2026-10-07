@@ -71,9 +71,9 @@
 /* Badges */
 
 .badge {
-  display: inline-block;
-  padding: 1px 7px;
+  display: inline-flex;
   border-radius: 999px;
+  overflow: hidden;
   font-size: 11px;
   font-weight: 650;
   line-height: 1.6;
@@ -82,11 +82,16 @@
   white-space: nowrap;
 }
 
-/* Every level badge takes its colour from --lvl, which levels.css sets once per level */
+/* A level badge is one pill, (A1), or two joined halves, (A1][B1): the rounded badge clips its
+   halves, and each half takes its level's colour from --lvl, which levels.css sets once per level:
+   the code in that colour on a clean tint of it over the surface colour. --badge-pad sizes the halves. */
 .lvl {
-  background: var(--lvl);
-  color: #fff;
   margin-left: 8px;
+}
+.lvl > .half {
+  padding: var(--badge-pad, 1px 7px);
+  background: color-mix(in oklch, var(--lvl) 22%, var(--surface));
+  color: var(--lvl);
 }
 .blk-level {
   margin: 0 0 6px;

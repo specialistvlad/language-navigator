@@ -70,7 +70,15 @@ async function look(levels: readonly string[]): Promise<Seen> {
       .filter((b) => {
         const from = order.indexOf(b.dataset["from"] ?? "");
         const shown = order[Math.max(from, Math.min(order.indexOf(b.dataset["to"] ?? ""), at))];
-        return b.textContent !== (shown === order[from] ? order[from] : `${order[from] ?? ""}–${shown ?? ""}`);
+        const want = shown === order[from] ? [order[from]] : [order[from], shown];
+        const halves = [...b.querySelectorAll(":scope > .half")].map((h) => `${h.className}:${h.textContent}`);
+        return (
+          b.textContent !== want.join("–") ||
+          halves.join() !== want.map((l) => `half lvl-${l ?? ""}:${l ?? ""}`).join() ||
+          // Each half shows its own level's colour.
+          b.querySelectorAll(":scope > .half").length !==
+            new Set([...b.querySelectorAll(":scope > .half")].map((h) => getComputedStyle(h).backgroundColor)).size
+        );
       })
       .map(name);
     const note = [...document.querySelectorAll(".filter-empty")].some(visible);

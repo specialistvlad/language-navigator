@@ -16,3 +16,6 @@ One topic at a time; each topic is approved before the next one starts.
 | 2 | Pilot topics ; web app review | done |
 | 3 | All English topics by level: A0–A1 → A2 → B1 | done |
 | 4 | Internalization: plus two languages. Spanish and Ukrainian | Todo |
+| 5 | Visualization system | Todo |
+| 6 | Interactive system | Todo |
+| 7 | Dynamic tooltip/helper aka lens for content | Todo |
