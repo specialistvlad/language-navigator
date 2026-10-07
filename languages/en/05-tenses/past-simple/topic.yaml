@@ -1,0 +1,326 @@
+# yaml-language-server: $schema=../../../schema/topic.schema.json
+id: en.tenses.past-simple
+lang: en
+kind: grammar
+levels: [A1, A2]
+tags: [verbs, tenses, past]
+concepts: [past-tense]
+related: [en.tenses.past-continuous, en.tenses.used-to, en.tenses.present-perfect, en.verbs-core.to-be, en.verbs-core.irregular-verbs-table, en.sentence-building.questions-negatives, en.tenses.tense-map]
+status: { en: draft, es: draft }
+
+title: { en: Past Simple, es: Pasado simple (past simple) }
+summary:
+  en: Finished actions and states at a stated time in the past, and sequences of events.
+  es: Acciones y estados terminados en un momento del pasado, y secuencias de hechos.
+
+sections:
+  - title: { en: Overview, es: Resumen }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { form: { en: Affirmative, es: Afirmativa }, example: "I **worked**. / I **went**.", tr: { es: "Trabajé. / Fui." } }
+          - { form: { en: Negative, es: Negativa }, example: "I **didn't work**.", tr: { es: "No trabajé." } }
+          - { form: { en: Question, es: Pregunta }, example: "**Did** you **work**?", tr: { es: "¿Trabajaste?" } }
+          - { form: { en: Short answer, es: Respuesta corta }, example: "Yes, I **did**. / No, I **didn't**.", tr: { es: "Sí. / No." } }
+          - { form: be, example: "I **was** tired. **Were** you there?", tr: { es: "Estaba cansado. ¿Estabas allí?" } }
+      - type: bullets
+        items:
+          - { for: [es], text: { es: "El past simple tiene una sola forma para todas las personas: I / you / he / we / they **worked**." } }
+
+  - title: { en: "Form: be", es: "Forma: be" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: singular, label: I / he / she / it }
+          - { key: plural, label: you / we / they }
+        rows:
+          - { form: +, singular: { ex: "I **was** at home.", tr: { es: "Estaba en casa." } }, plural: { ex: "We **were** at home.", tr: { es: "Estábamos en casa." } } }
+          - { form: −, singular: { ex: "She **wasn't** at home.", tr: { es: "No estaba en casa." } }, plural: { ex: "They **weren't** at home.", tr: { es: "No estaban en casa." } } }
+          - { form: "?", singular: { ex: "**Was** he at home?", tr: { es: "¿Estaba en casa?" } }, plural: { ex: "**Were** you at home?", tr: { es: "¿Estabas en casa?" } } }
+          - { form: { en: Short answer, es: Respuesta corta }, singular: { ex: "Yes, he **was**. / No, he **wasn't**.", tr: { es: "Sí. / No." } }, plural: { ex: "Yes, we **were**. / No, we **weren't**.", tr: { es: "Sí. / No." } } }
+      - type: bullets
+        items:
+          - en: "**be** makes questions and negatives directly, with no **did**."
+            es: "**be** forma preguntas y negativas directamente, sin **did**."
+          - { for: [es], text: { es: "was / were traduce *era, estaba, fue, estuvo*: un solo verbo con dos formas." } }
+
+  - title: { en: "Form: affirmative", es: "Forma: afirmativa" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: type, label: { en: Verb type, es: Tipo de verbo } }
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { type: { en: regular, es: regular }, form: V-ed, example: "I **watched** TV.", tr: { es: "Vi la tele." } }
+          - { type: { en: irregular, es: irregular }, form: { en: own form, es: forma propia }, example: "I **saw** a film.", tr: { es: "Vi una película." } }
+      - type: bullets
+        items:
+          - en: "The form is the same for every subject: I / he / they **worked**."
+            es: "La forma es la misma para todos los sujetos: I / he / they **worked**."
+          - en: "Regular verbs add **-ed** to the base verb. See Spelling below."
+            es: "Los verbos regulares añaden **-ed** al verbo base. Ver Ortografía más abajo."
+      - type: text
+        text: { en: "The most common irregular verbs:", es: "Los verbos irregulares más frecuentes:" }
+      - type: table
+        columns:
+          - { key: base, label: { en: Base verb, es: Verbo base } }
+          - { key: past, label: { en: Past simple, es: Pasado } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { base: go, past: went, example: "We **went** home.", tr: { es: "Fuimos a casa." } }
+          - { base: have, past: had, example: "I **had** lunch.", tr: { es: "Comí." } }
+          - { base: do, past: did, example: "She **did** her homework.", tr: { es: "Hizo los deberes." } }
+          - { base: see, past: saw, example: "I **saw** Tom.", tr: { es: "Vi a Tom." } }
+          - { base: get, past: got, example: "He **got** a letter.", tr: { es: "Recibió una carta." } }
+          - { base: make, past: made, example: "They **made** a cake.", tr: { es: "Hicieron una tarta." } }
+          - { base: take, past: took, example: "I **took** a taxi.", tr: { es: "Cogí un taxi." } }
+          - { base: come, past: came, example: "She **came** late.", tr: { es: "Llegó tarde." } }
+          - { base: eat, past: ate, example: "We **ate** pizza.", tr: { es: "Comimos pizza." } }
+          - { base: buy, past: bought, example: "I **bought** a coat.", tr: { es: "Compré un abrigo." } }
+          - { base: say, past: said, example: "He **said** hello.", tr: { es: "Dijo hola." } }
+          - { base: write, past: wrote, example: "I **wrote** an email.", tr: { es: "Escribí un correo." } }
+      - type: bullets
+        items:
+          - en: "More verbs are in the [Irregular verbs table](id:en.verbs-core.irregular-verbs-table)."
+            es: "Más verbos en la [Tabla de verbos irregulares (irregular verbs table)](id:en.verbs-core.irregular-verbs-table)."
+
+  - title: { en: "Form: negative", es: "Forma: negativa" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: subject, label: { en: Subject, es: Sujeto } }
+          - { key: aux, label: { en: Auxiliary + verb, es: Auxiliar + verbo } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { subject: { en: all subjects, es: todos los sujetos }, aux: did not / didn't + V, example: "She **didn't call** me.", tr: { es: "No me llamó." } }
+      - type: bullets
+        items:
+          - en: "After **didn't** the verb is in the base form: She didn't **call**."
+            es: "Después de **didn't** el verbo va en forma base: She didn't **call**."
+          - { for: [es], text: { es: "El pasado está en **didn't**; el verbo principal no cambia: *No fui* → I **didn't go**." } }
+
+  - title: { en: "Form: questions", es: "Forma: preguntas" }
+    level: A1-A2
+    content:
+      - type: table
+        columns:
+          - { key: aux, label: { en: Auxiliary + subject, es: Auxiliar + sujeto } }
+          - { key: verb, label: { en: Verb, es: Verbo } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { aux: Did + I / you / he / she / it / we / they, verb: V, example: "**Did** you **see** the match?", tr: { es: "¿Viste el partido?" } }
+      - type: text
+        text:
+          en: "Wh-questions: **wh-word + did + subject + V**"
+          es: "Preguntas con palabra interrogativa: **wh-word + did + sujeto + V**"
+      - type: table
+        columns:
+          - { key: word, label: { en: Wh-word, es: Palabra } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { word: What, example: "What **did** you **buy**?", tr: { es: "¿Qué compraste?" } }
+          - { word: Where, example: "Where **did** they **go**?", tr: { es: "¿Adónde fueron?" } }
+          - { word: When, example: "When **did** she **arrive**?", tr: { es: "¿Cuándo llegó?" } }
+          - { word: Why, example: "Why **did** he **leave**?", tr: { es: "¿Por qué se fue?" } }
+      - type: bullets
+        items:
+          - en: "After **did** the verb is in the base form: Did you **see**…?"
+            es: "Después de **did** el verbo va en forma base: Did you **see**…?"
+          - level: A2
+            text:
+              en: "When **who** or **what** is the subject, the verb is in the past directly, with no did:"
+              es: "Cuando **who** o **what** es el sujeto, el verbo va directamente en pasado, sin did:"
+            ex: "Who **called** you? / What **happened**?"
+            tr: { es: "¿Quién te llamó? / ¿Qué pasó?" }
+
+  - title: { en: "Form: short answers", es: "Forma: respuestas cortas" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: question, label: { en: Question, es: Pregunta } }
+          - { key: "yes", label: { en: "Yes", es: Sí } }
+          - { key: "no", label: { en: "No", es: "No" } }
+        rows:
+          - { question: Did you like the film?, "yes": "Yes, I **did**.", "no": "No, I **didn't**." }
+          - { question: Did she call you?, "yes": "Yes, she **did**.", "no": "No, she **didn't**." }
+          - { question: Did they win?, "yes": "Yes, they **did**.", "no": "No, they **didn't**." }
+      - type: bullets
+        items:
+          - en: "A short answer repeats the auxiliary from the question."
+            es: "La respuesta corta repite el auxiliar de la pregunta: *¿Te gustó? — Sí.* → Yes, I **did**."
+
+  - title: { en: "Spelling: -ed", es: "Ortografía: -ed" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: ending, label: { en: Verb ending, es: Terminación } }
+          - { key: rule, label: { en: Rule, es: Regla } }
+          - { key: examples, label: { en: Examples, es: Ejemplos } }
+        rows:
+          - { ending: { en: most verbs, es: la mayoría de los verbos }, rule: + ed, examples: work → worked / watch → watched / visit → visited }
+          - { ending: "-e", rule: + d, examples: live → lived / like → liked / arrive → arrived }
+          - { ending: { en: consonant + y, es: consonante + y }, rule: y → ied, examples: study → studied / try → tried / cry → cried }
+          - { ending: { en: vowel + y, es: vocal + y }, rule: + ed, examples: play → played / stay → stayed / enjoy → enjoyed }
+          - { ending: { en: "1 vowel + 1 consonant, one syllable", es: "1 vocal + 1 consonante, una sílaba" }, rule: { en: double the consonant + ed, es: dobla la consonante + ed }, examples: stop → stopped / plan → planned / drop → dropped }
+          - { ending: "-w, -x, -y", rule: { en: no doubling, es: no se dobla }, examples: show → showed / fix → fixed }
+
+  - title: { en: "Pronunciation: the -ed ending", es: "Pronunciación: la terminación -ed" }
+    level: A1-A2
+    content:
+      - type: table
+        columns:
+          - { key: sound, label: { en: Sound, es: Sonido } }
+          - { key: after, label: { en: After, es: Después de } }
+          - { key: examples, label: { en: Examples, es: Ejemplos } }
+        rows:
+          - { sound: /t/, after: { en: voiceless sounds /p k f s ʃ tʃ/, es: sonidos sordos /p k f s ʃ tʃ/ }, examples: stopped /stɒpt/ / worked /wɜːkt/ / watched /wɒtʃt/ }
+          - { sound: /d/, after: { en: voiced sounds and vowels, es: sonidos sonoros y vocales }, examples: lived /lɪvd/ / played /pleɪd/ / opened /ˈəʊpənd/ }
+          - { sound: /ɪd/, after: /t d/, examples: wanted /ˈwɒntɪd/ / needed /ˈniːdɪd/ / visited /ˈvɪzɪtɪd/ }
+      - type: bullets
+        items:
+          - en: "The ending adds a syllable only after /t/ and /d/: wanted has 2 syllables, worked has 1."
+            es: "La terminación añade una sílaba solo tras /t/ y /d/: wanted tiene 2 sílabas, worked tiene 1."
+          - { for: [es], text: { es: "La **e** de -ed no se pronuncia: worked /wɜːkt/, no */wɜːkɪd/*." } }
+
+  - title: { en: Use, es: Uso }
+    level: A1-A2
+    content:
+      - type: table
+        columns:
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { level: A1, use: { en: Finished actions at a stated past time, es: Acciones terminadas en un momento concreto del pasado }, example: "I **visited** Paris last year.", tr: { es: "Visité París el año pasado." } }
+          - { level: A1, use: { en: Past states, es: Estados en el pasado }, example: "She **was** ill on Monday.", tr: { es: "El lunes estaba enferma." } }
+          - { level: A1, use: { en: Sequences of events, es: Secuencias de hechos }, example: "I **got up**, **had** a shower and **left**.", tr: { es: "Me levanté, me di una ducha y salí." } }
+          - { level: A2, use: { en: Past habits and states that are over, es: Hábitos y estados del pasado que ya terminaron }, example: "When I was a child, I **played** outside every day.", tr: { es: "Cuando era niño, jugaba fuera todos los días." } }
+      - type: bullets
+        items:
+          - level: A2
+            text:
+              en: "Past habits with *used to*: see [Used to](id:en.tenses.used-to)."
+              es: "Hábitos del pasado con *used to*: ver [Hábitos del pasado (used to)](id:en.tenses.used-to)."
+          - { for: [es], text: { es: "El past simple cubre el indefinido (*fui, comí*) y muchos casos del imperfecto (*era, vivía*)." } }
+          - { for: [es], text: { es: "El imperfecto de hábito (*jugaba cada día*) pide *used to* o el past simple con una expresión de tiempo." } }
+
+  - title: { en: Signal words, es: Palabras clave }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: expression, label: { en: Expression, es: Expresión } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { expression: yesterday, example: "I called him **yesterday**.", tr: { es: "ayer" } }
+          - { expression: last night / week / month / year, example: "We moved **last year**.", tr: { es: "anoche / la semana pasada / el mes pasado / el año pasado" } }
+          - { expression: two days / a week / years ago, example: "She left **two days ago**.", tr: { es: "hace dos días / una semana / años" } }
+          - { expression: in + year / month, example: "He was born **in 1995**.", tr: { es: "en 1995 / en mayo" } }
+          - { expression: on + day / date, example: "I saw her **on Monday**.", tr: { es: "el lunes" } }
+          - { expression: when I was a child, example: "**When I was a child**, I lived here.", tr: { es: "cuando era niño" } }
+      - type: bullets
+        items:
+          - en: "**ago** comes after the time period: two years **ago**."
+            es: "**ago** va después del periodo de tiempo: two years **ago**."
+          - { for: [es], text: { es: "*Hace dos años* → two years **ago**: el orden se invierte y no hay verbo *hacer*." } }
+          - { for: [es], text: { es: "*La semana pasada* → **last** week: sin artículo." } }
+          - en: "Time expressions go at the end of the sentence, or at the start."
+            es: "Las expresiones de tiempo van al final de la frase, o al principio."
+
+  - title: { en: Typical errors, es: Errores típicos }
+    level: A1-A2
+    content:
+      - type: errors
+        audience: true
+        rows:
+          - { for: [en], wrong: I goed home., right: "I **went** home.", rule: { en: "go → went (irregular verb)" } }
+          - { wrong: Did you went there?, right: "Did you **go** there?", rule: { en: "did + base verb", es: "did + forma base" } }
+          - { wrong: She didn't called., right: "She didn't **call**.", rule: { en: "didn't + base verb", es: "didn't + forma base" } }
+          - { for: [es], wrong: I no went to school., right: "I **didn't go** to school.", rule: { es: "negativa: didn't + V" } }
+          - { wrong: Where you went?, right: "Where **did** you **go**?", rule: { en: "questions need did", es: "pregunta: wh-word + did + sujeto + V" } }
+          - { for: [en], wrong: Did he was late?, right: "**Was** he late?", rule: { en: "be makes questions without did" } }
+          - { for: [es], wrong: Before two years I lived there., right: "I lived there two years **ago**.", rule: { es: "*hace dos años* = two years ago, al final" } }
+          - { for: [es], wrong: I visited Paris the last year., right: "I visited Paris **last** year.", rule: { es: "last year, sin artículo" } }
+          - { for: [es], wrong: "Did you like it? — Yes, I liked.", right: "Yes, I **did**.", rule: { es: "la respuesta corta repite el auxiliar" } }
+          - { for: [es], wrong: "worked /ˈwɜːkɪd/", right: "worked /wɜːkt/", rule: { es: "-ed tras sonido sordo suena /t/, sin sílaba extra" } }
+          - { for: [en], wrong: We was at home., right: "We **were** at home.", rule: { en: "you / we / they → were" } }
+
+essentials:
+  - level: A1
+    parts:
+      - title: { en: Form, es: Forma }
+        content:
+          - type: table
+            columns:
+              - { key: form, label: { en: Form, es: Forma } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { form: +, example: "I **worked**. / I **went**. / She **was** ill." }
+              - { form: −, example: "I **didn't work**. / She **wasn't** ill." }
+              - { form: "?", example: "**Did** you **work**? / **Was** she ill?" }
+              - { form: { en: Short answer, es: Respuesta corta }, example: "Yes, I **did**. / No, she **wasn't**." }
+              - { form: { en: Wh-question, es: Con wh- }, example: "Where **did** you **go**?" }
+      - title: { en: Key rules, es: Reglas clave }
+        content:
+          - type: bullets
+            items:
+              - en: "Regular verbs: V + **-ed**. The form is the same for every subject."
+                es: "Verbos regulares: V + **-ed**. La forma es la misma para todos los sujetos."
+              - en: "Spelling: live → lived, study → studied, stop → stopped."
+                es: "Ortografía: live → lived, study → studied, stop → stopped."
+              - en: "Irregular verbs have their own form: go → went, have → had, see → saw."
+                es: "Los verbos irregulares tienen forma propia: go → went, have → had, see → saw."
+              - en: "did / didn't + **base verb**: She didn't **call**. / Did you **see** it?"
+                es: "did / didn't + **forma base**: She didn't **call**. / Did you **see** it?"
+              - en: "**be**: I / he / she / it **was**, you / we / they **were**. No did."
+                es: "**be**: I / he / she / it **was**, you / we / they **were**. Sin did."
+      - title: { en: Use, es: Uso }
+        content:
+          - type: table
+            columns:
+              - { key: use, label: { en: Use, es: Uso } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { use: { en: "finished action, stated time", es: "acción terminada, momento concreto" }, example: "I **visited** Paris last year.", tr: { es: "Visité París el año pasado." } }
+              - { use: { en: "past state", es: "estado pasado" }, example: "She **was** ill on Monday.", tr: { es: "El lunes estaba enferma." } }
+              - { use: { en: "sequence of events", es: "secuencia de hechos" }, example: "I **got up** and **left**.", tr: { es: "Me levanté y salí." } }
+              - { use: { en: "signal words", es: "palabras clave" }, example: "yesterday / last week / two days **ago** / in 2010", tr: { es: "ayer / la semana pasada / hace dos días / en 2010" } }
+      - title: { en: Top errors, es: Errores principales }
+        content:
+          - type: errors
+            rows:
+              - { wrong: Did you went there?, right: "Did you **go** there?" }
+              - { wrong: She didn't called., right: "She didn't **call**." }
+              - { for: [es], wrong: I no went to school., right: "I **didn't go** to school." }
+              - { wrong: Where you went?, right: "Where **did** you **go**?" }
+              - { for: [es], wrong: Before two years I lived there., right: "I lived there two years **ago**." }
+  - level: A2
+    content:
+      - type: table
+        columns:
+          - { key: point, label: { en: Point, es: Punto } }
+          - { key: rule, label: { en: Rule, es: Regla } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { point: { en: -ed sound, es: Sonido de -ed }, rule: { en: "/t/ after /p k f s ʃ tʃ/ · /d/ after voiced sounds · /ɪd/ after /t d/", es: "/t/ tras /p k f s ʃ tʃ/ · /d/ tras sonidos sonoros · /ɪd/ tras /t d/" }, example: worked / played / wanted }
+          - { point: { en: Subject questions, es: Preguntas de sujeto }, rule: { en: "who / what as subject + past verb, no did", es: "who / what como sujeto + verbo en pasado, sin did" }, example: "Who **called** you?" }
+          - { point: { en: Past habits, es: Hábitos del pasado }, rule: { en: "past simple with a time expression, or used to", es: "past simple con expresión de tiempo, o used to" }, example: "I **played** outside every day." }
+
+reminders:
+  - level: A1
+    items:
+      - en: "did / didn't + base verb: **Did** you **go**? / She **didn't go**."
+        es: "did / didn't + forma base: **Did** you **go**? / She **didn't go**."
+      - en: "be makes questions and negatives without did: **Was** he late?"
+        es: "be forma preguntas y negativas sin did: **Was** he late?"
+      - { for: [es], text: { es: "*Hace dos años* → two years **ago**; *la semana pasada* → **last** week." } }

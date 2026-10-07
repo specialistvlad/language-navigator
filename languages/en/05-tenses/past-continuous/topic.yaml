@@ -1,0 +1,230 @@
+# yaml-language-server: $schema=../../../schema/topic.schema.json
+id: en.tenses.past-continuous
+lang: en
+kind: grammar
+levels: [A2]
+tags: [verbs, tenses, past, continuous]
+concepts: [past-tense, continuous]
+related: [en.tenses.past-simple, en.tenses.present-continuous, en.tenses.used-to, en.verbs-core.to-be, en.tenses.tense-map]
+status: { en: draft, es: draft }
+
+title: { en: Past Continuous, es: Pasado continuo (past continuous) }
+summary:
+  en: Actions in progress at a moment in the past, background and interrupted actions.
+  es: Acciones en curso en un momento del pasado, escenario de una historia y acciones interrumpidas.
+
+sections:
+  - title: { en: Overview, es: Resumen }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { form: { en: Affirmative, es: Afirmativa }, example: "I **was working**. / They **were working**.", tr: { es: "Estaba trabajando. / Estaban trabajando." } }
+          - { form: { en: Negative, es: Negativa }, example: "I **wasn't working**.", tr: { es: "No estaba trabajando." } }
+          - { form: { en: Question, es: Pregunta }, example: "**Were** you **working**?", tr: { es: "¿Estabas trabajando?" } }
+          - { form: { en: Short answer, es: Respuesta corta }, example: "Yes, I **was**. / No, I **wasn't**.", tr: { es: "Sí. / No." } }
+      - type: bullets
+        items:
+          - { for: [es], text: { es: "I was working = *estaba trabajando*. El sujeto y was / were siempre aparecen." } }
+
+  - title: { en: "Form: affirmative", es: "Forma: afirmativa" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: subject, label: { en: Subject, es: Sujeto } }
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { subject: I / he / she / it, form: was + V-ing, example: "She **was reading**.", tr: { es: "Estaba leyendo." } }
+          - { subject: you / we / they, form: were + V-ing, example: "We **were reading**.", tr: { es: "Estábamos leyendo." } }
+      - type: bullets
+        items:
+          - en: "V-ing = base verb + -ing. The spelling rules are in [Present continuous](id:en.tenses.present-continuous)."
+            es: "V-ing = verbo base + -ing. Las reglas de ortografía están en [Presente continuo (present continuous)](id:en.tenses.present-continuous)."
+          - { for: [es], text: { es: "*Estaba leyendo* → She was reading. Los dos verbos aparecen: was / were + V-ing." } }
+
+  - title: { en: "Form: negative", es: "Forma: negativa" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: subject, label: { en: Subject, es: Sujeto } }
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { subject: I / he / she / it, form: wasn't + V-ing, example: "He **wasn't sleeping**.", tr: { es: "No estaba durmiendo." } }
+          - { subject: you / we / they, form: weren't + V-ing, example: "They **weren't sleeping**.", tr: { es: "No estaban durmiendo." } }
+      - type: bullets
+        items:
+          - en: "**not** goes after was / were. The verb keeps -ing."
+            es: "**not** va después de was / were. El verbo mantiene -ing."
+
+  - title: { en: "Form: questions", es: "Forma: preguntas" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: aux, label: { en: "Be + subject", es: "Be + sujeto" } }
+          - { key: verb, label: { en: Verb, es: Verbo } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { aux: Was + I / he / she / it, verb: V-ing, example: "**Was** it **raining**?", tr: { es: "¿Estaba lloviendo?" } }
+          - { aux: Were + you / we / they, verb: V-ing, example: "**Were** you **sleeping**?", tr: { es: "¿Estabas durmiendo?" } }
+      - type: text
+        text:
+          en: "Wh-questions: **wh-word + was / were + subject + V-ing**"
+          es: "Preguntas con palabra interrogativa: **wh-word + was / were + sujeto + V-ing**"
+      - type: table
+        columns:
+          - { key: word, label: { en: Wh-word, es: Palabra } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { word: What, example: "What **were** you **doing** at 8?", tr: { es: "¿Qué estabas haciendo a las 8?" } }
+          - { word: Where, example: "Where **was** she **going**?", tr: { es: "¿Adónde iba?" } }
+
+  - title: { en: "Form: short answers", es: "Forma: respuestas cortas" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: question, label: { en: Question, es: Pregunta } }
+          - { key: "yes", label: { en: "Yes", es: Sí } }
+          - { key: "no", label: { en: "No", es: "No" } }
+        rows:
+          - { question: Were you sleeping?, "yes": "Yes, I **was**.", "no": "No, I **wasn't**." }
+          - { question: Was he driving?, "yes": "Yes, he **was**.", "no": "No, he **wasn't**." }
+          - { question: Were they waiting?, "yes": "Yes, they **were**.", "no": "No, they **weren't**." }
+      - type: bullets
+        items:
+          - en: "A short answer repeats was / were from the question."
+            es: "La respuesta corta repite was / were de la pregunta: *¿Dormías? — Sí.* → Yes, I **was**."
+
+  - title: { en: Use, es: Uso }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { use: { en: In progress at a past moment, es: En curso en un momento del pasado }, example: "At 8 o'clock I **was having** dinner.", tr: { es: "A las 8 estaba cenando." } }
+          - { use: { en: Background to a story, es: Escenario de una historia }, example: "The sun **was shining** and children **were playing**.", tr: { es: "Brillaba el sol y los niños jugaban." } }
+          - { use: { en: "Interrupted action (when + past simple)", es: "Acción interrumpida (when + past simple)" }, example: "I **was cooking** when the phone **rang**.", tr: { es: "Estaba cocinando cuando sonó el teléfono." } }
+          - { use: { en: "Two actions at the same time (while)", es: "Dos acciones a la vez (while)" }, example: "While I **was cooking**, he **was watching** TV.", tr: { es: "Mientras yo cocinaba, él veía la tele." } }
+      - type: bullets
+        items:
+          - en: "Stative verbs take the past simple: I **knew** the answer."
+            es: "Los verbos de estado van en past simple: I **knew** the answer."
+          - { for: [es], text: { es: "Estar + gerundio en imperfecto = was / were + V-ing. El español usa también el imperfecto simple: *cocinaba* = I was cooking." } }
+
+  - title: { en: Signal words, es: Palabras clave }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: expression, label: { en: Expression, es: Expresión } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { expression: while, example: "I fell asleep **while** I was reading.", tr: { es: "mientras" } }
+          - { expression: when, example: "He called **when** I was driving.", tr: { es: "cuando" } }
+          - { expression: at + time + yesterday, example: "I was working **at 9 yesterday**.", tr: { es: "ayer a las 9" } }
+          - { expression: at that moment, example: "It was raining **at that moment**.", tr: { es: "en ese momento" } }
+          - { expression: all morning / all day, example: "We were studying **all morning**.", tr: { es: "toda la mañana / todo el día" } }
+      - type: bullets
+        items:
+          - en: "**while** comes before the action in progress: While I **was walking**…"
+            es: "**while** va delante de la acción en curso: While I **was walking**…"
+          - en: "**when** comes before the short action: …when the phone **rang**."
+            es: "**when** va delante de la acción corta: …when the phone **rang**."
+
+  - title: { en: "Compare: past continuous vs past simple", es: "Comparación: past continuous y past simple" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: continuous, label: Past continuous }
+          - { key: simple, label: Past simple }
+        rows:
+          - { continuous: { en: "action in progress, background", es: "acción en curso, escenario" }, simple: { en: "finished action, event", es: "acción terminada, hecho" } }
+          - { continuous: { ex: "I **was walking** home.", tr: { es: "Iba andando a casa." } }, simple: { ex: "I **walked** home.", tr: { es: "Fui andando a casa." } } }
+          - { continuous: { ex: "I **was reading** at 9.", tr: { es: "A las 9 estaba leyendo." } }, simple: { ex: "I **read** a book last week.", tr: { es: "La semana pasada leí un libro." } } }
+          - { continuous: { ex: "It **was raining** when I **left**.", tr: { es: "Llovía cuando salí." } }, simple: { ex: "I **left** and it **rained**.", tr: { es: "Salí y llovió." } } }
+      - type: bullets
+        items:
+          - en: "The long action takes the past continuous. The short action that interrupts it takes the past simple."
+            es: "La acción larga va en past continuous. La acción corta que la interrumpe va en past simple."
+          - { for: [es], text: { es: "*Llovía cuando salí* = imperfecto + indefinido → It was raining when I left." } }
+          - en: "See [Past simple](id:en.tenses.past-simple)."
+            es: "Ver [Pasado simple (past simple)](id:en.tenses.past-simple)."
+
+  - title: { en: Typical errors, es: Errores típicos }
+    level: A2
+    content:
+      - type: errors
+        audience: true
+        rows:
+          - { wrong: I was cook when he called., right: "I **was cooking** when he called.", rule: { en: "was / were + V-ing", es: "was / were + V-ing" } }
+          - { wrong: She cooking when I arrived., right: "She **was cooking** when I arrived.", rule: { en: "was / were is required", es: "was / were es obligatorio" } }
+          - { for: [es], wrong: I no was working., right: "I **wasn't working**.", rule: { es: "negativa: wasn't / weren't + V-ing" } }
+          - { wrong: What you were doing?, right: "What **were you** doing?", rule: { en: "be goes before the subject", es: "be va antes del sujeto: wh-word + was / were + sujeto + V-ing" } }
+          - { for: [en], wrong: Did you were sleeping?, right: "**Were** you sleeping?", rule: { en: "questions start with was / were" } }
+          - { wrong: "When I was walking home, I was seeing an accident.", right: "…I **saw** an accident.", rule: { en: "short interrupting action → past simple", es: "acción corta que interrumpe → past simple" } }
+          - { for: [es], wrong: I was working when the phone was ringing., right: "…when the phone **rang**.", rule: { es: "el hecho puntual va en past simple (*sonó*)" } }
+          - { wrong: I was knowing the answer., right: "I **knew** the answer.", rule: { en: "stative verbs → past simple", es: "verbos de estado → past simple" } }
+          - { for: [en], wrong: We was playing., right: "We **were** playing.", rule: { en: "you / we / they → were" } }
+
+essentials:
+  - level: A2
+    parts:
+      - title: { en: Form, es: Forma }
+        content:
+          - type: table
+            columns:
+              - { key: form, label: { en: Form, es: Forma } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { form: +, example: "I **was working**. / They **were working**." }
+              - { form: −, example: "I **wasn't working**. / They **weren't working**." }
+              - { form: "?", example: "**Were** you **working**? / What **was** she **doing**?" }
+              - { form: { en: Short answer, es: Respuesta corta }, example: "Yes, I **was**. / No, they **weren't**." }
+      - title: { en: Key rules, es: Reglas clave }
+        content:
+          - type: bullets
+            items:
+              - en: "was / were + **V-ing**. The subject and was / were always appear."
+                es: "was / were + **V-ing**. El sujeto y was / were siempre aparecen."
+              - en: "Questions and negatives use was / were: **Were** you working? / I **wasn't** working."
+                es: "Preguntas y negativas usan was / were: **Were** you working? / I **wasn't** working."
+              - en: "Stative verbs take the past simple: I **knew** the answer."
+                es: "Los verbos de estado van en past simple: I **knew** the answer."
+      - title: { en: Use, es: Uso }
+        content:
+          - type: table
+            columns:
+              - { key: use, label: { en: Use, es: Uso } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { use: { en: "in progress at a past moment", es: "en curso en un momento pasado" }, example: "At 8 I **was having** dinner.", tr: { es: "A las 8 estaba cenando." } }
+              - { use: { en: "background to a story", es: "escenario de una historia" }, example: "The sun **was shining**.", tr: { es: "Brillaba el sol." } }
+              - { use: { en: "interrupted action", es: "acción interrumpida" }, example: "I **was cooking** when the phone **rang**.", tr: { es: "Estaba cocinando cuando sonó el teléfono." } }
+              - { use: { en: "two actions at once", es: "dos acciones a la vez" }, example: "While I **was cooking**, he **was watching** TV.", tr: { es: "Mientras yo cocinaba, él veía la tele." } }
+      - title: { en: Top errors, es: Errores principales }
+        content:
+          - type: errors
+            rows:
+              - { wrong: She cooking when I arrived., right: "She **was cooking** when I arrived." }
+              - { for: [es], wrong: I no was working., right: "I **wasn't working**." }
+              - { wrong: "When I was walking home, I was seeing an accident.", right: "…I **saw** an accident." }
+              - { wrong: I was knowing the answer., right: "I **knew** the answer." }
+
+reminders:
+  - level: A2
+    items:
+      - en: "was / were + V-ing: She **was cooking**."
+        es: "was / were + V-ing: She **was cooking**."
+      - en: "Long action → past continuous; short interrupting action → past simple: I **was cooking** when he **called**."
+        es: "Acción larga → past continuous; acción corta que interrumpe → past simple: I **was cooking** when he **called**."

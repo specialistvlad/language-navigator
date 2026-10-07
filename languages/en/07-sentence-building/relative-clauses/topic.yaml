@@ -1,0 +1,159 @@
+# yaml-language-server: $schema=../../../schema/topic.schema.json
+id: en.sentence-building.relative-clauses
+lang: en
+kind: grammar
+levels: [B1]
+tags: [clauses, relative, who, which, that]
+concepts: [relative-clauses]
+related: [en.sentence-building.conjunctions-linkers, en.sentence-building.passive-voice, en.sentence-building.word-order]
+status: { en: draft, es: draft }
+
+title: { en: Relative Clauses, es: Oraciones de relativo (relative clauses) }
+summary:
+  en: Who, which, that, whose and where join extra information to a noun.
+  es: Who, which, that, whose y where añaden información a un sustantivo.
+
+sections:
+  - title: { en: "Form: relative pronouns", es: "Forma: pronombres relativos" }
+    level: B1
+    content:
+      - type: table
+        columns:
+          - { key: pronoun, label: { en: Word, es: Palabra } }
+          - { key: refers, label: { en: Refers to, es: Se refiere a } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { pronoun: who, refers: { en: people, es: personas }, example: "The woman **who** lives next door is a nurse.", tr: { es: La mujer que vive al lado es enfermera. } }
+          - { pronoun: which, refers: { en: things, es: cosas }, example: "The book **which** I bought was cheap.", tr: { es: El libro que compré era barato. } }
+          - { pronoun: that, refers: { en: "people or things (defining clauses)", es: "personas o cosas (cláusulas especificativas)" }, example: "The film **that** we saw was long.", tr: { es: La película que vimos era larga. } }
+          - { pronoun: whose, refers: { en: possession, es: posesión }, example: "The man **whose** car was stolen called the police.", tr: { es: El hombre al que le robaron el coche llamó a la policía. } }
+          - { pronoun: where, refers: { en: places, es: lugares }, example: "The café **where** we met has closed.", tr: { es: La cafetería donde nos conocimos ha cerrado. } }
+      - type: bullets
+        items:
+          - en: "A relative clause comes straight after the noun it describes."
+            es: "La oración de relativo va justo detrás del sustantivo que describe."
+          - en: "**whose** is followed by a noun: whose car, whose idea."
+            es: "Después de **whose** va un sustantivo: whose car, whose idea."
+          - en: "**where** already shows the place, so no preposition follows: the house where I live."
+            es: "**where** ya indica el lugar, así que no lleva preposición: the house where I live."
+          - { for: [es], text: { es: "*que* cubre who, which y that: *el hombre que vive aquí* → the man **who** lives here." } }
+          - { for: [es], text: { es: "*cuyo* = whose, y no cambia con el género: *la chica cuyo padre…* → the girl **whose** father…" } }
+
+  - title: { en: "Form: defining clauses", es: "Forma: cláusulas especificativas" }
+    level: B1
+    content:
+      - type: text
+        text:
+          en: "A defining clause says which person or thing. It has no commas."
+          es: "Una cláusula especificativa dice de qué persona o cosa se habla. No lleva comas."
+        ex: "The man **who called** is my uncle."
+        tr: { es: El hombre que llamó es mi tío. }
+      - type: table
+        columns:
+          - { key: role, label: { en: The pronoun is, es: El pronombre es } }
+          - { key: with, label: { en: With pronoun, es: Con pronombre } }
+          - { key: without, label: { en: Without pronoun, es: Sin pronombre } }
+        rows:
+          - { role: { en: "subject (verb follows)", es: "sujeto (sigue el verbo)" }, with: { ex: "The girl **who speaks** French is my cousin.", tr: { es: La chica que habla francés es mi prima. } }, without: "—" }
+          - { role: { en: "object (subject follows)", es: "objeto (sigue el sujeto)" }, with: { ex: "The film **that I saw** was long.", tr: { es: La película que vi era larga. } }, without: { ex: "The film **I saw** was long.", tr: { es: La película que vi era larga. } } }
+          - { role: { en: "object of a preposition", es: "objeto de una preposición" }, with: { ex: "The man **who I spoke to** was kind.", tr: { es: El hombre con el que hablé era amable. } }, without: { ex: "The man **I spoke to** was kind.", tr: { es: El hombre con el que hablé era amable. } } }
+      - type: bullets
+        items:
+          - en: "A subject pronoun stays: who / which / that is followed by a verb."
+            es: "El pronombre sujeto se mantiene: tras who / which / that va un verbo."
+          - en: "An object pronoun can be left out: who / which / that is followed by a subject."
+            es: "El pronombre objeto se puede omitir: tras who / which / that va un sujeto."
+          - en: "In everyday English the preposition goes to the end of the clause."
+            es: "En el inglés de uso diario la preposición pasa al final de la cláusula."
+          - { for: [es], text: { es: "*que* nunca se omite en español: *la película que vi* → the film (that) I saw." } }
+
+  - title: { en: "Form: non-defining clauses", es: "Forma: cláusulas explicativas" }
+    level: B1
+    content:
+      - type: text
+        text:
+          en: "A non-defining clause adds extra information. Commas separate it from the rest."
+          es: "Una cláusula explicativa añade información extra. Se separa con comas."
+        ex: "My uncle**, who lives in Leeds,** is a doctor."
+        tr: { es: "Mi tío, que vive en Leeds, es médico." }
+      - type: table
+        columns:
+          - { key: feature, label: { en: Feature, es: Rasgo } }
+          - { key: defining, label: { en: Defining, es: Especificativa } }
+          - { key: nondefining, label: { en: Non-defining, es: Explicativa } }
+        rows:
+          - { feature: { en: Information, es: Información }, defining: { en: "says which one", es: "dice cuál" }, nondefining: { en: "extra, can be removed", es: "extra, se puede quitar" } }
+          - { feature: { en: Commas, es: Comas }, defining: { en: none, es: ninguna }, nondefining: { en: "yes, and a pause in speech", es: "sí, y una pausa al hablar" } }
+          - { feature: { en: Pronouns, es: Pronombres }, defining: who / which / that, nondefining: who / which / whose / where }
+          - { feature: { en: "Leave out the object pronoun", es: "Omitir el pronombre objeto" }, defining: { en: possible, es: posible }, nondefining: { en: never, es: nunca } }
+      - type: table
+        columns:
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { example: "Paris**, which** I visited in May**,** is beautiful.", tr: { es: "París, que visité en mayo, es preciosa." } }
+          - { example: "Tom**, whose** brother is a chef**,** cooks well.", tr: { es: "Tom, cuyo hermano es cocinero, cocina bien." } }
+      - type: bullets
+        items:
+          - text:
+              en: "**which** can refer to a whole clause:"
+              es: "**which** puede referirse a toda una oración:"
+            ex: "He passed the exam**, which** surprised everyone."
+            tr: { es: "Aprobó el examen, lo cual sorprendió a todos." }
+          - { for: [es], text: { es: "*que* de las explicativas → who / which, con comas: *Mi tío, que vive en Leeds* → my uncle, **who** lives in Leeds." } }
+
+  - title: { en: Typical errors, es: Errores típicos }
+    level: B1
+    content:
+      - type: errors
+        audience: true
+        rows:
+          - { wrong: The man which lives next door is a doctor., right: "The man **who** lives next door is a doctor.", rule: { en: people → who or that, es: "personas → who o that" } }
+          - { for: [es], wrong: The film what I saw was long., right: "The film **that** I saw was long.", rule: { es: "*que* relativo = that / which / who, nunca what" } }
+          - { wrong: The house where I live in is old., right: "The house **where I live** is old. / The house **I live in** is old.", rule: { en: "where replaces in the house; do not add in", es: "where ya incluye la preposición: no se añade in" } }
+          - { wrong: "My uncle, that lives in Leeds, is a doctor.", right: "My uncle, **who** lives in Leeds, is a doctor.", rule: { en: "no that in non-defining clauses", es: "en las explicativas no se usa that" } }
+          - { for: [en], wrong: The film that I saw it was long., right: "The film that I saw was long.", rule: { en: "the pronoun already stands for the object; do not repeat it" } }
+          - { for: [en], wrong: I know a man lives in Paris., right: "I know a man **who** lives in Paris.", rule: { en: "a subject pronoun stays" } }
+          - { for: [es], wrong: The girl who her father is a doctor is my friend., right: "The girl **whose** father is a doctor is my friend.", rule: { es: "posesión → whose + sustantivo (*cuyo*)" } }
+          - { wrong: "Paris, which I visited it in May, is beautiful.", right: "Paris, which I visited in May, is beautiful.", rule: { en: "do not repeat the object after which", es: "no se repite el objeto después de which" } }
+          - { wrong: "Paris which I visited in May is beautiful.", right: "Paris**,** which I visited in May**,** is beautiful.", rule: { en: "non-defining clauses need commas", es: "las explicativas llevan comas" } }
+
+essentials:
+  - level: B1
+    parts:
+      - title: { en: Form, es: Forma }
+        content:
+          - type: table
+            columns:
+              - { key: word, label: { en: Word, es: Palabra } }
+              - { key: refers, label: { en: Refers to, es: Se refiere a } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { word: who, refers: { en: people, es: personas }, example: "The woman **who** lives next door" }
+              - { word: which, refers: { en: things, es: cosas }, example: "The book **which** I bought" }
+              - { word: that, refers: { en: "people or things (defining)", es: "personas o cosas (especificativa)" }, example: "The film **that** we saw" }
+              - { word: whose, refers: { en: possession, es: posesión }, example: "The man **whose** car was stolen" }
+              - { word: where, refers: { en: places, es: lugares }, example: "The café **where** we met" }
+      - title: { en: Key rules, es: Reglas clave }
+        content:
+          - type: bullets
+            items:
+              - { en: "Defining clause: no commas. Non-defining clause: commas, extra information.", es: "Especificativa: sin comas. Explicativa: con comas, información extra." }
+              - { en: "A subject pronoun stays: the girl **who speaks** French.", es: "El pronombre sujeto se mantiene: the girl **who speaks** French." }
+              - { en: "An object pronoun can go in a defining clause: the film (that) I saw.", es: "El pronombre objeto se puede omitir en una especificativa: the film (that) I saw." }
+              - { en: "Non-defining clauses take who / which, never that: My uncle, **who** lives in Leeds, …", es: "Las explicativas llevan who / which, nunca that: My uncle, **who** lives in Leeds, …" }
+              - { en: "where includes the preposition: the house **where** I live.", es: "where incluye la preposición: the house **where** I live." }
+      - title: { en: Top errors, es: Errores principales }
+        content:
+          - type: errors
+            rows:
+              - { wrong: The man which lives here., right: "The man **who** lives here." }
+              - { wrong: The house where I live in., right: "The house **where** I live." }
+              - { for: [es], wrong: The film what I saw., right: "The film **that** I saw." }
+              - { wrong: "My uncle, that lives in Leeds, …", right: "My uncle, **who** lives in Leeds, …" }
+
+reminders:
+  - level: B1
+    items:
+      - { en: "People → **who**; things → **which**; **that** only in defining clauses.", es: "Personas → **who**; cosas → **which**; **that** solo en especificativas." }
+      - { en: "The house **where** I live: no extra preposition.", es: "The house **where** I live: sin preposición añadida." }
+      - { for: [es], text: { es: "*que* no se omite en español; en inglés el pronombre objeto sí: the film I saw." } }

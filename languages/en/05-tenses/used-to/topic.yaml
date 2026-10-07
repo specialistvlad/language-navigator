@@ -1,0 +1,223 @@
+# yaml-language-server: $schema=../../../schema/topic.schema.json
+id: en.tenses.used-to
+lang: en
+kind: grammar
+levels: [A2]
+tags: [verbs, tenses, past, habits]
+concepts: [past-habits, past-tense]
+related: [en.tenses.past-simple, en.tenses.past-continuous, en.sentence-building.questions-negatives, en.tenses.tense-map]
+status: { en: draft, es: draft }
+
+title: { en: Used to, es: Hábitos del pasado (used to) }
+summary:
+  en: Past habits and states that are over now.
+  es: Hábitos y estados del pasado que ya terminaron.
+
+sections:
+  - title: { en: Overview, es: Resumen }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { form: { en: Affirmative, es: Afirmativa }, example: "I **used to play** football.", tr: { es: "Antes jugaba al fútbol." } }
+          - { form: { en: Negative, es: Negativa }, example: "I **didn't use to play** football.", tr: { es: "Antes no jugaba al fútbol." } }
+          - { form: { en: Question, es: Pregunta }, example: "**Did** you **use to play** football?", tr: { es: "¿Jugabas al fútbol antes?" } }
+          - { form: { en: Short answer, es: Respuesta corta }, example: "Yes, I **did**. / No, I **didn't**.", tr: { es: "Sí. / No." } }
+
+  - title: { en: "Form: affirmative", es: "Forma: afirmativa" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: subject, label: { en: Subject, es: Sujeto } }
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { subject: { en: all subjects, es: todos los sujetos }, form: used to + V, example: "She **used to live** in Rome.", tr: { es: "Antes vivía en Roma." } }
+      - type: bullets
+        items:
+          - en: "The form is the same for every subject: I / he / they **used to** live here."
+            es: "La forma es la misma para todos los sujetos: I / he / they **used to** live here."
+          - en: "**used to** is followed by the base verb: used to **play**."
+            es: "Después de **used to** va el verbo en forma base: used to **play**."
+          - en: "**used to** has only a past form. It has no present form."
+            es: "**used to** solo existe en pasado."
+
+  - title: { en: "Form: negative", es: "Forma: negativa" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: subject, label: { en: Subject, es: Sujeto } }
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { subject: { en: all subjects, es: todos los sujetos }, form: didn't use to + V, example: "We **didn't use to have** a car.", tr: { es: "Antes no teníamos coche." } }
+      - type: bullets
+        items:
+          - en: "After **didn't** the form is **use to**, with no -d."
+            es: "Después de **didn't** la forma es **use to**, sin -d."
+          - en: "**never** also makes a negative: I **never used to** like fish."
+            es: "**never** también hace la negativa: I **never used to** like fish."
+
+  - title: { en: "Form: questions", es: "Forma: preguntas" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: aux, label: { en: Auxiliary + subject, es: Auxiliar + sujeto } }
+          - { key: verb, label: { en: Verb, es: Verbo } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { aux: Did + subject, verb: use to + V, example: "**Did** you **use to walk** to school?", tr: { es: "¿Ibas andando al colegio?" } }
+          - { aux: wh-word + did + subject, verb: use to + V, example: "Where **did** you **use to live**?", tr: { es: "¿Dónde vivías antes?" } }
+      - type: bullets
+        items:
+          - en: "After **Did** the form is **use to**, with no -d."
+            es: "Después de **Did** la forma es **use to**, sin -d."
+          - en: "A short answer repeats did: Yes, I **did**. / No, I **didn't**."
+            es: "La respuesta corta repite did: Yes, I **did**. / No, I **didn't**."
+
+  - title: { en: "Pronunciation: used to", es: "Pronunciación: used to" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: ipa, label: IPA }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { form: used to, ipa: "/ˈjuːst tə/", example: "I **used to** swim." }
+          - { form: use to, ipa: "/juːs tə/", example: "Did you **use to** swim?" }
+      - type: bullets
+        items:
+          - en: "The **d** is silent in speech: used to sounds like *use-ta*."
+            es: "La **d** no se oye al hablar: used to suena como *yus-ta*."
+          - { for: [es], text: { es: "La **s** suena /s/, no /z/: /ˈjuːst/." } }
+
+  - title: { en: Use, es: Uso }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { use: { en: Past habits, es: Hábitos del pasado }, example: "I **used to walk** to school.", tr: { es: "Antes iba andando al colegio." } }
+          - { use: { en: Past states, es: Estados del pasado }, example: "We **used to have** a dog.", tr: { es: "Antes teníamos un perro." } }
+          - { use: { en: Past situations that changed, es: Situaciones pasadas que cambiaron }, example: "There **used to be** a cinema here.", tr: { es: "Antes había un cine aquí." } }
+      - type: bullets
+        items:
+          - en: "The habit or state is over now. The speaker compares past and present."
+            es: "El hábito o el estado ya terminó. Se contrapone el pasado al presente."
+          - en: "**used to** has no number of times and no length of time."
+            es: "**used to** no lleva número de veces ni duración."
+          - { for: [es], text: { es: "*Solía jugar*, *antes jugaba* → I **used to play**. El imperfecto español sirve para más casos." } }
+
+  - title: { en: Signal words, es: Palabras clave }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: expression, label: { en: Expression, es: Expresión } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { expression: when I was a child / young, example: "**When I was a child**, I used to climb trees.", tr: { es: "cuando era niño / joven" } }
+          - { expression: in those days, example: "People used to write letters **in those days**.", tr: { es: "en aquellos tiempos" } }
+          - { expression: years ago, example: "I used to smoke **years ago**.", tr: { es: "hace años" } }
+          - { expression: always / often / never, example: "He **always** used to be late.", tr: { es: "siempre / a menudo / nunca" } }
+          - { expression: but now, example: "I used to run, **but now** I swim.", tr: { es: "pero ahora" } }
+      - type: bullets
+        items:
+          - en: "**always**, **often** and **never** go before **used to**: He **always** used to be late."
+            es: "**always**, **often** y **never** van antes de **used to**: He **always** used to be late."
+
+  - title: { en: "Compare: used to vs past simple", es: "Comparación: used to y past simple" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: used, label: Used to }
+          - { key: simple, label: Past simple }
+        rows:
+          - { used: { en: "past habits and states, over now", es: "hábitos y estados pasados, ya terminados" }, simple: { en: "finished actions, stated time or number", es: "acciones terminadas, con momento o número" } }
+          - { used: { ex: "I **used to live** in Paris.", tr: { es: "Antes vivía en París." } }, simple: { ex: "I **lived** in Paris for two years.", tr: { es: "Viví en París dos años." } } }
+          - { used: { ex: "We **used to eat** out on Fridays.", tr: { es: "Antes cenábamos fuera los viernes." } }, simple: { ex: "We **ate** out last Friday.", tr: { es: "El viernes pasado cenamos fuera." } } }
+          - { used: { ex: "**Did** you **use to** have a dog?", tr: { es: "¿Tenías perro antes?" } }, simple: { ex: "**Did** you **have** a dog last year?", tr: { es: "¿Tuviste perro el año pasado?" } } }
+      - type: bullets
+        items:
+          - en: "A single event takes the past simple: I **visited** Rome in May."
+            es: "Un hecho único va en past simple: I **visited** Rome in May."
+          - en: "A habit takes either form: I **played** football every Saturday."
+            es: "Un hábito admite las dos formas: I **played** football every Saturday."
+          - en: "See [Past simple](id:en.tenses.past-simple)."
+            es: "Ver [Pasado simple (past simple)](id:en.tenses.past-simple)."
+
+  - title: { en: Typical errors, es: Errores típicos }
+    level: A2
+    content:
+      - type: errors
+        audience: true
+        rows:
+          - { for: [en], wrong: I use to play football., right: "I **used to** play football.", rule: { en: "affirmative → used to, with -d" } }
+          - { wrong: Did you used to play?, right: "Did you **use to** play?", rule: { en: "after did → use to", es: "después de did → use to, sin -d" } }
+          - { wrong: I didn't used to like it., right: "I didn't **use to** like it.", rule: { en: "after didn't → use to", es: "después de didn't → use to, sin -d" } }
+          - { for: [es], wrong: I was used to play football., right: "I **used to play** football.", rule: { es: "*solía jugar* = used to + V, sin be" } }
+          - { for: [en], wrong: I used to playing football., right: "I used to **play** football.", rule: { en: "used to + base verb" } }
+          - { for: [es], wrong: I used to visit Paris three times., right: "I **visited** Paris three times.", rule: { es: "con número de veces → past simple" } }
+          - { for: [es], wrong: I use to play football now., right: "I **play** football now.", rule: { es: "used to solo expresa pasado; el presente es el presente simple" } }
+          - { for: [es], wrong: I no used to smoke., right: "I **didn't use to** smoke.", rule: { es: "negativa: didn't use to + V" } }
+          - { for: [es], wrong: Used you to play?, right: "**Did** you **use to** play?", rule: { es: "pregunta: Did + sujeto + use to + V" } }
+
+essentials:
+  - level: A2
+    parts:
+      - title: { en: Form, es: Forma }
+        content:
+          - type: table
+            columns:
+              - { key: form, label: { en: Form, es: Forma } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { form: +, example: "I **used to play** football." }
+              - { form: −, example: "I **didn't use to play** football." }
+              - { form: "?", example: "**Did** you **use to play** football?" }
+              - { form: { en: Short answer, es: Respuesta corta }, example: "Yes, I **did**. / No, I **didn't**." }
+      - title: { en: Key rules, es: Reglas clave }
+        content:
+          - type: bullets
+            items:
+              - en: "used to + **base verb**. The form is the same for every subject."
+                es: "used to + **forma base**. La forma es la misma para todos los sujetos."
+              - en: "After did / didn't the form is **use to**, with no -d."
+                es: "Después de did / didn't la forma es **use to**, sin -d."
+              - en: "Pronunciation: used to /ˈjuːst tə/."
+                es: "Pronunciación: used to /ˈjuːst tə/."
+      - title: { en: Use, es: Uso }
+        content:
+          - type: table
+            columns:
+              - { key: use, label: { en: Use, es: Uso } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { use: { en: "past habit, over now", es: "hábito pasado, ya terminado" }, example: "I **used to walk** to school.", tr: { es: "Antes iba andando al colegio." } }
+              - { use: { en: "past state, over now", es: "estado pasado, ya terminado" }, example: "We **used to have** a dog.", tr: { es: "Antes teníamos un perro." } }
+              - { use: { en: "single event or number of times", es: "hecho único o número de veces" }, example: "I **visited** Rome in May.", tr: { es: "Visité Roma en mayo." } }
+      - title: { en: Top errors, es: Errores principales }
+        content:
+          - type: errors
+            rows:
+              - { for: [en], wrong: I use to play football., right: "I **used to** play football." }
+              - { wrong: Did you used to play?, right: "Did you **use to** play?" }
+              - { for: [es], wrong: I was used to play football., right: "I **used to play** football." }
+              - { for: [es], wrong: I used to visit Paris three times., right: "I **visited** Paris three times." }
+
+reminders:
+  - level: A2
+    items:
+      - en: "After did / didn't: **use to**, with no -d."
+        es: "Después de did / didn't: **use to**, sin -d."
+      - { for: [es], text: { es: "*Solía* / *antes* + verbo → **used to** + V, sin be." } }
