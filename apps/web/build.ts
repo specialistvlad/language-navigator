@@ -7,7 +7,12 @@ import {
   type CurriculumSection,
   EXPLAIN,
   type Explain,
+  LEVEL_INFO,
   LEVELS,
+  levelName,
+  levelRange,
+  lv,
+  SITE,
   loadCurriculum,
   loadTopics,
   ROOT,
@@ -16,7 +21,7 @@ import {
 } from "../../scripts/lib.ts";
 import { essentialsMarkdown, LEVEL_HEADINGS, type LinkFn, reminderMarkdown, renderGuide } from "../../scripts/markdown.ts";
 import { type Choice, controls, page, UI } from "./layout.ts";
-import { createRenderer, escapeHtml, levelBadge, lv, splitDoc } from "./render.ts";
+import { createRenderer, escapeHtml, levelBadge, splitDoc } from "./render.ts";
 import {
   homeUrl,
   levelSheet,
@@ -39,9 +44,8 @@ const APP = import.meta.dir;
 const EXPLAINS = Object.keys(EXPLAIN) as Explain[];
 const md = createRenderer();
 
-const REPO = ((await Bun.file(join(ROOT, "package.json")).json()).repository?.url ?? "").replace(/\.git$/, "");
 // Opens the file in GitHub's editor (a fork for anyone without write access).
-const editUrl = (path: string) => `${REPO}/edit/main/${path}`;
+const editUrl = (path: string) => `${SITE.repository}/edit/main/${path}`;
 // GitHub mark (Octicons mark-github, MIT).
 const GITHUB_ICON =
   '<svg class="icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>';
@@ -71,8 +75,22 @@ const slugify = (text: string) =>
   text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 // Level chips: one soft chip per level, joined into a group.
-const levelSpan = (from: string, to: string) => LEVELS.filter((l) => lv(l) >= lv(from) && lv(l) <= lv(to));
 const chips = (levels: readonly string[]) => `<span class="chips">${levels.map((l) => `<span class="chip c-${l}">${l}</span>`).join("")}</span>`;
+
+// Level colours from languages/levels.yaml in both themes, with each level's badge and chip.
+function levelsCss(): string {
+  const vars = (theme: "light" | "dark") => LEVEL_INFO.map((l) => `--lvl-${l.code}: ${l.color[theme]};`).join(" ");
+  const rules = LEVEL_INFO.map(
+    ({ code }) =>
+      `.lvl-${code} { background: var(--lvl-${code}); }\n.c-${code} { background: color-mix(in srgb, var(--lvl-${code}) 16%, transparent); color: var(--lvl-${code}); }`,
+  );
+  return [
+    `:root { ${vars("light")} }`,
+    `@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { ${vars("dark")} } }`,
+    `:root[data-theme="dark"] { ${vars("dark")} }`,
+    ...rules,
+  ].join("\n") + "\n";
+}
 
 // Level range covered by a section's topics, e.g. "A0-A1".
 function sectionRange(section: CurriculumSection): string {
@@ -155,10 +173,10 @@ export async function build(o: BuildOptions): Promise<number> {
     page({
       kind: "home",
       lang: "en",
-      title: "Language Navigator — English and Spanish, A0 to B1",
+      title: `${SITE.name} — English and Spanish, A0 to B1`,
       description: "Reference guides and cheatsheets for learners of English and Spanish from A0 to B1, explained in English and in Spanish.",
       path: homeUrl(),
-      main: `<article class="doc home"><h1>Language Navigator</h1><blockquote><p>English and Spanish, A0–B1, explained in English and in Spanish.</p></blockquote><div class="cards">${cards}</div></article>`,
+      main: `<article class="doc home"><h1>${escapeHtml(SITE.name)}</h1><blockquote><p>English and Spanish, A0–B1, explained in English and in Spanish.</p></blockquote><div class="cards">${cards}</div></article>`,
       dev: o.dev,
       siteUrl: o.siteUrl,
     }),
@@ -199,7 +217,7 @@ export async function build(o: BuildOptions): Promise<number> {
         page({
           kind: "track",
           lang: explain,
-          title: `${trackTitle} — Language Navigator`,
+          title: `${trackTitle} — ${SITE.name}`,
           description: `${trackTitle}, ${t.explained}: ${t.written(written.length, langRefs.length)}.`,
           path: trackUrl(explain, lang),
           alternates: alternates((e) => trackUrl(e, lang)),
@@ -241,7 +259,7 @@ export async function build(o: BuildOptions): Promise<number> {
 
         // Rail: the guide sections with their levels, the Essentials view, and the next topic.
         const tocItems = parts.map((s) => {
-          const levels = s.from ? chips(levelSpan(s.from, s.to ?? s.from)) : "";
+          const levels = s.from ? chips(levelRange(`${s.from}-${s.to ?? s.from}`)) : "";
           return `<li${s.from ? ` data-level="${s.from}"` : ""}><a href="#${idOf.get(s)}" data-view="guide"><span class="name">${escapeHtml(s.title)}</span>${levels}</a></li>`;
         });
         tocItems.push(
@@ -317,11 +335,11 @@ export async function build(o: BuildOptions): Promise<number> {
       const push = (s: Omit<Sheet, "markdown">, markdown: string | null) => markdown && sheets.push({ ...s, markdown });
 
       for (const level of LEVELS) {
-        const s = { id: levelSheet(level), group: "levels" as const, label: t.levelNames[level], range: level, title: `${t.sheet} ${level}` };
+        const s = { id: levelSheet(level), group: "levels" as const, label: levelName(level, explain), range: level, title: `${t.sheet} ${level}` };
         push(s, compose(s.title, written, () => [{ kind: "essentials", level }]));
       }
       for (const level of LEVELS.slice(1)) {
-        const s = { id: progressiveSheet(level), group: "progressive" as const, label: `${t.upTo} ${t.levelNames[level]}`, range: `A0-${level}`, title: `${t.sheet} A0–${level}` };
+        const s = { id: progressiveSheet(level), group: "progressive" as const, label: `${t.upTo} ${levelName(level, explain)}`, range: `${LEVELS[0]}-${level}`, title: `${t.sheet} ${LEVELS[0]}–${level}` };
         const below = LEVELS.filter((l) => lv(l) < lv(level));
         push(
           s,
@@ -415,7 +433,7 @@ export async function build(o: BuildOptions): Promise<number> {
     page({
       kind: "404",
       lang: "en",
-      title: "Page not found — Language Navigator",
+      title: `Page not found — ${SITE.name}`,
       description: UI.en.notFound,
       path: "/404.html",
       main: `<article class="doc"><h1>${UI.en.notFound} · ${UI.es.notFound}</h1><p><a href="/">${UI.en.backHome}</a> · <a href="/">${UI.es.backHome}</a></p></article>`,
@@ -451,6 +469,7 @@ ${pages
   await Bun.write(join(tmp, "sitemap.xml"), sitemap);
   await Bun.write(join(tmp, "robots.txt"), robots);
   await cp(join(APP, "style.css"), join(tmp, "style.css"));
+  await Bun.write(join(tmp, "levels.css"), levelsCss());
   await cp(join(APP, "client.js"), join(tmp, "client.js"));
   await rm(old, { recursive: true, force: true });
   await rename(o.outDir, old).catch(() => {});

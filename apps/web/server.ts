@@ -4,7 +4,7 @@ import { watch } from "node:fs";
 import { stat } from "node:fs/promises";
 import { networkInterfaces } from "node:os";
 import { join, normalize } from "node:path";
-import { ROOT } from "../../scripts/lib.ts";
+import { ROOT, SITE } from "../../scripts/lib.ts";
 import { build } from "./build.ts";
 
 const HOST = process.env.HOST ?? "0.0.0.0";
@@ -108,8 +108,8 @@ Bun.serve({
 });
 
 if (HOST === "0.0.0.0") {
-  console.log(`Language Navigator → http://127.0.0.1:${PORT}/`);
+  console.log(`${SITE.name} → http://127.0.0.1:${PORT}/`);
   for (const address of LAN) console.log(`  on your network → http://${address}:${PORT}/`);
 } else {
-  console.log(`Language Navigator → http://${HOST}:${PORT}/`);
+  console.log(`${SITE.name} → http://${HOST}:${PORT}/`);
 }

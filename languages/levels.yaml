@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=schema/levels.schema.json
+# The level scale, lowest first. Every app names, describes and colours levels from this file.
+
+levels:
+  - code: A0
+    name: { en: Starter, es: Inicial }
+    description:
+      en: recognise letters, numbers and a few fixed phrases
+      es: reconoce letras, números y unas pocas frases hechas
+    color: { light: "#6b6b70", dark: "#9a9aa2" }
+  - code: A1
+    name: { en: Beginner, es: Principiante }
+    description:
+      en: introduce themselves, ask and answer simple everyday questions
+      es: se presenta y hace y responde preguntas sencillas del día a día
+    color: { light: "#1f8a4c", dark: "#5cc98a" }
+  - code: A2
+    name: { en: Elementary, es: Elemental }
+    description:
+      en: describe routines, past events and immediate needs
+      es: describe rutinas, hechos pasados y necesidades inmediatas
+    color: { light: "#2f5bd3", dark: "#7ea2ff" }
+  - code: B1
+    name: { en: Intermediate, es: Intermedio }
+    description:
+      en: handle travel situations, describe experiences, give reasons and opinions
+      es: se desenvuelve en viajes, describe experiencias y da razones y opiniones
+    color: { light: "#7b3fc4", dark: "#b88cff" }

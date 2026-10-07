@@ -1,12 +1,41 @@
-// Shared data access: curriculum, concepts and topics.
+// Shared data access: configuration, curriculum, concepts and topics.
 import { join } from "node:path";
+import levelsFile from "../languages/levels.yaml";
+import siteFile from "../languages/site.yaml";
 
 export const ROOT = join(import.meta.dir, "..");
 export const CONTENT = join(ROOT, "languages");
-export const LEVELS = ["A0", "A1", "A2", "B1"] as const;
-export const EXPLAIN = { en: "English", es: "Español" } as const;
-export type Explain = keyof typeof EXPLAIN;
-export type Level = (typeof LEVELS)[number];
+
+// ---------- Configuration (languages/site.yaml, languages/levels.yaml) ----------
+
+export type Explain = string;
+export type Level = string;
+export interface Site {
+  name: string;
+  url: string;
+  repository: string;
+  explain: { code: Explain; name: Record<Explain, string> }[];
+}
+export interface LevelInfo {
+  code: Level;
+  name: Record<Explain, string>;
+  description: Record<Explain, string>;
+  color: { light: string; dark: string };
+}
+
+export const SITE = siteFile as Site;
+export const LEVEL_INFO = (levelsFile as { levels: LevelInfo[] }).levels;
+export const LEVELS: readonly Level[] = LEVEL_INFO.map((l) => l.code);
+// Explanation languages, each under its own name: { en: "English", es: "Español" }.
+export const EXPLAIN: Record<Explain, string> = Object.fromEntries(SITE.explain.map((e) => [e.code, e.name[e.code]]));
+
+export const lv = (level: string | null) => LEVELS.indexOf(level ?? "");
+// Every level in a range such as "A0-A2".
+export const levelRange = (range: string) => {
+  const [from, to = from] = range.split("-");
+  return LEVELS.filter((l) => lv(l) >= lv(from) && lv(l) <= lv(to));
+};
+export const levelName = (level: Level, explain: Explain) => LEVEL_INFO.find((l) => l.code === level)?.name[explain] ?? level;
 
 // ---------- Data model (mirrors languages/schema/*.schema.json) ----------
 

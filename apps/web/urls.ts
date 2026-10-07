@@ -1,5 +1,5 @@
 // Clean, stable, named URLs (languages/CONVENTIONS.md §10). Every URL ends with "/".
-import { type Explain, sectionSlug, type TopicRef } from "../../scripts/lib.ts";
+import { type Explain, LEVELS, sectionSlug, type TopicRef } from "../../scripts/lib.ts";
 
 interface LangSlug {
   slug: string;
@@ -14,6 +14,6 @@ export const sheetUrl = (explain: Explain, lang: LangSlug, sheet: string) => `${
 
 // Sheet identifiers inside a track.
 export const levelSheet = (level: string) => level.toLowerCase();
-export const progressiveSheet = (level: string) => `a0-${level.toLowerCase()}`;
+export const progressiveSheet = (level: string) => `${LEVELS[0]}-${level}`.toLowerCase();
 export const sectionSheet = (ref: Pick<TopicRef, "section">) => sectionSlug(ref.section.dir);
 export const topicSheet = (ref: TopicRef) => `${sectionSlug(ref.section.dir)}/${ref.entry.slug}`;

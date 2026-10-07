@@ -1,5 +1,5 @@
 // Page shell, controls and interface text for the static site.
-import { EXPLAIN, type Explain, LEVELS } from "../../scripts/lib.ts";
+import { EXPLAIN, type Explain, LEVELS, SITE } from "../../scripts/lib.ts";
 import { escapeHtml } from "./render.ts";
 
 export const UI = {
@@ -27,7 +27,6 @@ export const UI = {
     editOn: "Edit on",
     editTitle: "Edit this topic on GitHub",
     upTo: "Up to",
-    levelNames: { A0: "Starter", A1: "Beginner", A2: "Elementary", B1: "Intermediate" },
     written: (n: number, total: number) => `${n} of ${total} topics written`,
     notFound: "Page not found",
     backHome: "Go to the home page",
@@ -56,7 +55,6 @@ export const UI = {
     editOn: "Editar en",
     editTitle: "Editar este tema en GitHub",
     upTo: "Hasta",
-    levelNames: { A0: "Inicial", A1: "Principiante", A2: "Elemental", B1: "Intermedio" },
     written: (n: number, total: number) => `${n} de ${total} temas escritos`,
     notFound: "Página no encontrada",
     backHome: "Ir a la página principal",
@@ -136,12 +134,13 @@ export function page(o: PageOptions): string {
   <meta property="og:description" content="${escapeHtml(o.description)}">
   <meta property="og:url" content="${url(o.path)}">
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/levels.css">
   <script>${PREFS}</script>
 </head>
 <body>
   <header class="topbar">
     ${o.nav ? '<button class="menu" id="menu" type="button" aria-label="Menu">☰</button>' : ""}
-    <a class="brand" href="/">Language Navigator</a>
+    <a class="brand" href="/">${escapeHtml(SITE.name)}</a>
     <div class="controls">${o.controls ?? ""}</div>
     <div class="tools">
       <button class="tool" id="theme" type="button" title="Theme">◐</button>

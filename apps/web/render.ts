@@ -1,12 +1,11 @@
 // Markdown → HTML for guides: level badges, level attributes on rows and bullets,
 // error tables, scrollable table wrappers and links to unwritten topics.
 import MarkdownIt from "markdown-it";
+import { LEVELS } from "../../scripts/lib.ts";
 
-export const LEVELS = ["A0", "A1", "A2", "B1"] as const;
-export const lv = (level: string | null) => LEVELS.indexOf(level as (typeof LEVELS)[number]);
-
-const TAG = /\s*\[(A0|A1|A2|B1)(?:-(A0|A1|A2|B1))?\]\s*$/;
-const BULLET_TAG = /^\[(A0|A1|A2|B1)\]\s*/;
+const CODE = `(${LEVELS.join("|")})`;
+const TAG = new RegExp(`\\s*\\[${CODE}(?:-${CODE})?\\]\\s*$`);
+const BULLET_TAG = new RegExp(`^\\[${CODE}\\]\\s*`);
 
 export type SectionKind = "essentials" | "reminder" | "links" | "body";
 
@@ -106,7 +105,7 @@ export function createRenderer(): MarkdownIt {
             } else if (t.type === "td_open") cell++;
             else if (t.type === "inline" && row && cell === col) {
               const value = t.content.trim();
-              if ((LEVELS as readonly string[]).includes(value)) {
+              if (LEVELS.includes(value)) {
                 row.attrSet("data-level", value);
                 t.children = [html(levelBadge(value))];
               }

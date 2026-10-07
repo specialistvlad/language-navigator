@@ -1,4 +1,4 @@
-// Validates curriculum, concepts and every topic: JSON Schema first, then content rules.
+// Validates configuration, curriculum, concepts and every topic: JSON Schema first, then content rules.
 // Run: npm run check
 import Ajv, { type ValidateFunction } from "ajv";
 import { join } from "node:path";
@@ -8,13 +8,17 @@ import {
   EXPLAIN,
   type Explain,
   type Item,
+  LEVEL_INFO,
   LEVELS,
+  levelRange as range,
+  lv,
   type Localized,
   loadConcepts,
   loadCurriculum,
   loadTopics,
   readYaml,
   ROOT,
+  SITE,
   type Topic,
 } from "./lib.ts";
 import { isLocalized, tableShape } from "./markdown.ts";
@@ -22,11 +26,6 @@ import { isLocalized, tableShape } from "./markdown.ts";
 const ajv = new Ajv({ allErrors: true, strict: false });
 const schema = async (name: string) => ajv.compile(await readYaml<object>(join(CONTENT, "schema", `${name}.schema.json`)));
 const ALL: Explain[] = Object.keys(EXPLAIN) as Explain[];
-const lv = (level: string) => LEVELS.indexOf(level as (typeof LEVELS)[number]);
-const range = (r: string) => {
-  const [from, to = from] = r.split("-");
-  return LEVELS.filter((l) => lv(l) >= lv(from) && lv(l) <= lv(to));
-};
 
 let problems = 0;
 const fail = (where: string, message: string) => {
@@ -37,6 +36,30 @@ const fail = (where: string, message: string) => {
 function schemaErrors(validate: ValidateFunction, data: unknown, where: string) {
   if (validate(data)) return;
   for (const e of validate.errors ?? []) fail(where, `${e.instancePath || "/"} ${e.message}`);
+}
+
+// Configuration: each file against its schema, and every data schema lists exactly the configured
+// levels and explanation languages.
+console.log("site.yaml, levels.yaml");
+schemaErrors(await schema("site"), SITE, "site.yaml");
+schemaErrors(await schema("levels"), { levels: LEVEL_INFO }, "levels.yaml");
+const codes = ALL.join("|");
+const levelCodes = LEVELS.join("|");
+for (const name of ["curriculum", "concepts", "topic"]) {
+  const text = await Bun.file(join(CONTENT, "schema", `${name}.schema.json`)).text();
+  const json = JSON.parse(text);
+  for (const [, list] of text.matchAll(/\(((?:[A-Z][0-9]\|)+[A-Z][0-9])\)/g)) {
+    if (list !== levelCodes) fail(`schema/${name}.schema.json`, `level pattern (${list}) differs from levels.yaml (${levelCodes})`);
+  }
+  for (const [, list] of text.matchAll(/\(((?:[a-z]{2}\|)+[a-z]{2})\)\\\\\./g)) {
+    if (list !== codes) fail(`schema/${name}.schema.json`, `language pattern (${list}) differs from site.yaml (${codes})`);
+  }
+  const defs = json.definitions ?? {};
+  if (defs.level && defs.level.enum.join("|") !== levelCodes) fail(`schema/${name}.schema.json`, "level enum differs from levels.yaml");
+  if (defs.explain && defs.explain.enum.join("|") !== codes) fail(`schema/${name}.schema.json`, "explain enum differs from site.yaml");
+  if (defs.localized && Object.keys(defs.localized.properties).join("|") !== codes) {
+    fail(`schema/${name}.schema.json`, "localized languages differ from site.yaml");
+  }
 }
 
 const curriculum = await loadCurriculum();

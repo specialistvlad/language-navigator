@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=schema/site.schema.json
+# Product identity and the explanation languages: the languages every guide is written in.
+# Each explanation language names itself and the others.
+
+name: Language Navigator
+url: https://specialistvlad.github.io/language-navigator
+repository: https://github.com/specialistvlad/language-navigator
+
+explain:
+  - code: en
+    name: { en: English, es: Inglés }
+  - code: es
+    name: { en: Spanish, es: Español }

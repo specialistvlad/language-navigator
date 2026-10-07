@@ -24,6 +24,8 @@ progressive sheet reaches, the more material it covers and the more concentrated
 
 ## Levels
 
+Defined in `languages/levels.yaml`, which every app reads.
+
 | Level | Name | The learner can… |
 |---|---|---|
 | A0 | Starter (pre-A1) | recognise letters, numbers and a few fixed phrases |
@@ -39,6 +41,8 @@ language-navigator/
 ├── ROADMAP.md                 project phases
 ├── languages/                 all language data
 │   ├── CONVENTIONS.md         rules for the data
+│   ├── site.yaml              product name, URLs, explanation languages
+│   ├── levels.yaml            level scale: names, descriptions, colours
 │   ├── curriculum.yaml        every planned topic, in study order
 │   ├── concepts.yaml          concept keys that pair topics across languages
 │   ├── schema/                JSON Schemas
