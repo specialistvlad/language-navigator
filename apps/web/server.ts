@@ -7,21 +7,21 @@ import { join, normalize } from "node:path";
 import { ROOT, SITE } from "../../scripts/lib.ts";
 import { build } from "./build.ts";
 
-const HOST = process.env.HOST ?? "0.0.0.0";
-const PORT = Number(process.env.PORT ?? 47380);
+const HOST = process.env["HOST"] ?? "0.0.0.0";
+const PORT = Number(process.env["PORT"] ?? 47380);
 // Addresses other devices on the network can reach (phone on the same Wi-Fi).
 const LAN = Object.values(networkInterfaces())
   .flat()
-  .filter((i) => i && i.family === "IPv4" && !i.internal)
-  .map((i) => i!.address);
-const SITE = `http://${HOST === "0.0.0.0" ? (LAN[0] ?? "127.0.0.1") : HOST}:${PORT}`;
+  .filter((i) => i?.family === "IPv4" && !i.internal)
+  .map((i) => i?.address ?? "");
+const DEV_URL = `http://${HOST === "0.0.0.0" ? (LAN[0] ?? "127.0.0.1") : HOST}:${PORT}`;
 // Its own output folder: `npm run build` writes build/web/ without the live-reload hook.
 const OUT = join(ROOT, "build/dev");
 const NO_STORE = { "Cache-Control": "no-store" };
 const encoder = new TextEncoder();
 const clients = new Set<ReadableStreamDefaultController<Uint8Array>>();
 
-function send(message: string) {
+function send(message: string): void {
   for (const client of clients) {
     try {
       client.enqueue(encoder.encode(message));
@@ -32,11 +32,11 @@ function send(message: string) {
 }
 
 let queue = Promise.resolve();
-function rebuild(reason: string) {
+function rebuild(reason: string): Promise<void> {
   queue = queue.then(async () => {
     const started = performance.now();
     try {
-      const count = await build({ outDir: OUT, dev: true, siteUrl: SITE });
+      const count = await build({ outDir: OUT, dev: true, siteUrl: DEV_URL });
       console.log(`built ${count} pages in ${Math.round(performance.now() - started)} ms (${reason})`);
       send("data: reload\n\n");
     } catch (error) {
@@ -52,8 +52,8 @@ await rebuild("start");
 let timer: ReturnType<typeof setTimeout> | undefined;
 const changed = new Set<string>();
 watch(ROOT, { recursive: true }, (_event, filename) => {
-  if (!filename) return;
-  const file = String(filename);
+  if (filename === null) return;
+  const file = filename;
   const relevant = (file.startsWith("languages/") && /\.(ya?ml|json)$/.test(file)) || /^apps\/web\/(style\.css|client\.js)$/.test(file);
   if (!relevant) return;
   changed.add(file);
@@ -61,12 +61,14 @@ watch(ROOT, { recursive: true }, (_event, filename) => {
   timer = setTimeout(() => {
     const reason = [...changed].join(", ");
     changed.clear();
-    rebuild(reason);
+    void rebuild(reason);
   }, 120);
 });
-setInterval(() => send(": ping\n\n"), 25_000);
+setInterval(() => {
+  send(": ping\n\n");
+}, 25_000);
 
-function fileResponse(path: string, status = 200) {
+function fileResponse(path: string, status = 200): Response {
   return new Response(Bun.file(path), { status, headers: NO_STORE });
 }
 
@@ -96,11 +98,11 @@ Bun.serve({
     if (rel.startsWith("..")) return fileResponse(join(OUT, "404.html"), 404);
     const path = join(OUT, rel);
     const info = await stat(path).catch(() => null);
-    if (info?.isDirectory()) {
+    if (info?.isDirectory() === true) {
       if (!pathname.endsWith("/")) return new Response(null, { status: 301, headers: { Location: `${pathname}/` } });
       const index = join(path, "index.html");
       if (await Bun.file(index).exists()) return fileResponse(index);
-    } else if (info?.isFile()) {
+    } else if (info?.isFile() === true) {
       return fileResponse(path);
     }
     return fileResponse(join(OUT, "404.html"), 404);
