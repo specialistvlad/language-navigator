@@ -83,9 +83,11 @@ section in the menu.
 
 - Each level has a colour, and the levels run through the rainbow, lowest first: A0 red, A1
   orange, A2 yellow, B1 green, B2 blue, C1 indigo, C2 violet. `levels.yaml` gives each level its
-  hue; the theme gives every level the same tone, deeper in the light theme and brighter in the dark
-  one, so a level keeps its colour in both. A level's code reads on a light tint of its colour at a
-  contrast of at least 4.5:1 in both themes (`npm run e2e` measures it).
+  hue; each theme gives every level the same tones (`apps/web/level-colours.ts`): a lightness, and a
+  saturation that takes the same share of the chroma sRGB holds at each hue. The light theme writes
+  a deep code on a pale tint and the dark theme a bright code on a deep tint, so a level keeps its
+  colour in both. Every level colour lies inside sRGB (`npm test` checks it), and a level's code
+  reads on its tint at a contrast of at least 4.5:1 in both themes (`npm run e2e` measures it).
 - A badge for one level is one pill, (A1). A badge for a range joins two halves, (A1][B1): the
   lowest level on the left, the highest on the right, each in its own level's colour.
 - In a list (the menu, the rail, the track index, Up next) the halves share one width and the badges

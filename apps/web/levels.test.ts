@@ -121,11 +121,13 @@ describe.each(topicPages)("%s", (path) => {
   });
 });
 
-test("levels.css hides each level above the filter, gives every level its hue in the theme tone, and tints the switcher up to the chosen level", async () => {
+test("levels.css hides each level above the filter, gives every level its colours, and tints the switcher up to the chosen level", async () => {
   await testSite();
   const css = await Bun.file(join(SITE_DIR, "levels.css")).text();
-  for (const [i, { code, hue }] of LEVEL_INFO.entries()) {
-    expect(css).toContain(`.lvl-${code} { --lvl: oklch(var(--level-l) var(--level-c) ${hue}); }`);
+  for (const [i, { code }] of LEVEL_INFO.entries()) {
+    expect(css).toContain(
+      `.lvl-${code} { --lvl: var(--lvl-${code}-ink); --level-tint: var(--lvl-${code}-tint); --level-strong: var(--lvl-${code}-strong); }`,
+    );
     expect(css).toContain(
       `html[data-level="${code}"] .seg :is(${LEVELS.slice(0, i + 1)
         .map((c) => `[data-set-level="${c}"]`)

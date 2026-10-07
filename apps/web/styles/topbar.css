@@ -65,7 +65,7 @@
   font-weight: 600;
 }
 .seg button[data-set-level].on {
-  background: color-mix(in oklch, var(--lvl) 40%, var(--surface));
+  background: var(--level-strong);
   color: var(--text);
 }
 

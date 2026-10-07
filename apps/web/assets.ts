@@ -1,6 +1,7 @@
 // Files every page loads: the stylesheet, the browser script and the level colours.
 import { join } from "node:path";
 import { LEVEL_INFO } from "../../scripts/lib.ts";
+import { levelColoursCss } from "./level-colours.ts";
 
 const APP = import.meta.dir;
 
@@ -21,14 +22,13 @@ export async function clientJs(): Promise<string> {
   return file.text();
 }
 
-// Everything about levels that depends on the scale in languages/levels.yaml: each level's colour,
-// its hue from levels.yaml in the theme's tone (--level-l, --level-c in base.css), the level switcher
-// tinted from the lowest level up to the chosen one, and the level filter. An element's data-level is its lowest level; it
+// Everything about levels that depends on the scale in languages/levels.yaml: each level's colours,
+// its hue from levels.yaml in each theme's tones (level-colours.ts), the level switcher tinted from
+// the lowest level up to the chosen one, and the level filter. An element's data-level is its lowest level; it
 // hides while the filter (data-level on <html>) sits below it. The rail keeps its entries and greys
 // them out; a view whose content all sits above the filter shows its note instead.
 export function levelsCss(): string {
   const codes = LEVEL_INFO.map((l) => l.code);
-  const colours = LEVEL_INFO.map((l) => `.lvl-${l.code} { --lvl: oklch(var(--level-l) var(--level-c) ${l.hue}); }`);
   const switcher = codes.map(
     (code, i) =>
       `html[data-level="${code}"] .seg :is(${codes
@@ -51,5 +51,5 @@ export function levelsCss(): string {
       `${at} .filter-empty${needs} { display: block; }`,
     ];
   });
-  return [...colours, ...switcher, ...filter].join("\n") + "\n";
+  return [levelColoursCss(), ...switcher, ...filter].join("\n") + "\n";
 }
