@@ -67,8 +67,7 @@
                     "type": "object",
                     "additionalProperties": false,
                     "required": [
-                      "slug",
-                      "levels"
+                      "slug"
                     ],
                     "properties": {
                       "slug": {
@@ -77,7 +76,8 @@
                       },
                       "levels": {
                         "type": "string",
-                        "pattern": "^(A0|A1|A2|B1)(-(A0|A1|A2|B1))?$"
+                        "pattern": "^(A0|A1|A2|B1|B2|C1|C2)(-(A0|A1|A2|B1|B2|C1|C2))?$",
+                        "description": "Planned range of a topic without a topic file; a written topic takes its range from its data."
                       },
                       "title": {
                         "$ref": "#/definitions/localized"

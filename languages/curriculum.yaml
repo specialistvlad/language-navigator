@@ -10,76 +10,76 @@ languages:
       - dir: 01-foundations
         title: { en: Foundations, es: Fundamentos }
         topics:
-          - { slug: alphabet-spelling, levels: A0 }
-          - { slug: pronunciation-ipa, levels: A0-A1, title: { en: "Sounds and IPA", es: "Los sonidos y el AFI" } }
-          - { slug: numbers, levels: A0, title: { en: "Numbers", es: "Los números" } }
-          - { slug: days-months-dates, levels: A0 }
-          - { slug: telling-time, levels: A0-A1 }
+          - { slug: alphabet-spelling }
+          - { slug: pronunciation-ipa, title: { en: "Sounds and IPA", es: "Los sonidos y el AFI" } }
+          - { slug: numbers, title: { en: "Numbers", es: "Los números" } }
+          - { slug: days-months-dates }
+          - { slug: telling-time }
       - dir: 02-nouns-determiners
         title: { en: Nouns and determiners, es: Sustantivos y determinantes }
         topics:
-          - { slug: articles-a-an-the, levels: A1-B1, title: { en: "Articles: a, an, the", es: "Artículos: a, an, the" } }
-          - { slug: plurals, levels: A0-A1 }
-          - { slug: countable-uncountable, levels: A1-A2 }
-          - { slug: quantifiers-some-any-much-many, levels: A1-B1 }
-          - { slug: demonstratives-this-that, levels: A0-A1 }
-          - { slug: possessive-s, levels: A1 }
+          - { slug: articles-a-an-the, title: { en: "Articles: a, an, the", es: "Artículos: a, an, the" } }
+          - { slug: plurals }
+          - { slug: countable-uncountable }
+          - { slug: quantifiers-some-any-much-many }
+          - { slug: demonstratives-this-that }
+          - { slug: possessive-s }
       - dir: 03-pronouns
         title: { en: Pronouns, es: Pronombres }
         topics:
-          - { slug: personal-pronouns, levels: A0-A1 }
-          - { slug: indefinite-pronouns, levels: A2 }
-          - { slug: reflexive-pronouns, levels: A2 }
+          - { slug: personal-pronouns }
+          - { slug: indefinite-pronouns }
+          - { slug: reflexive-pronouns }
       - dir: 04-verbs
         title: { en: Verbs, es: Verbos }
         topics:
-          - { slug: to-be, levels: A0-A2, title: { en: "To be", es: "To be (ser / estar)" } }
-          - { slug: have-have-got, levels: A1 }
-          - { slug: there-is-are, levels: A1 }
-          - { slug: imperative, levels: A1 }
-          - { slug: irregular-verbs-table, levels: A1-B1 }
-          - { slug: phrasal-verbs-core, levels: A2-B1 }
-          - { slug: gerund-vs-infinitive, levels: B1 }
+          - { slug: to-be, title: { en: "To be", es: "To be (ser / estar)" } }
+          - { slug: have-have-got }
+          - { slug: there-is-are }
+          - { slug: imperative }
+          - { slug: irregular-verbs-table }
+          - { slug: phrasal-verbs-core }
+          - { slug: gerund-vs-infinitive }
       - dir: 05-tenses
         title: { en: Tenses, es: Tiempos verbales }
         topics:
-          - { slug: tense-map, levels: A1-B1, title: { en: "Tense map", es: "Mapa de tiempos verbales" } }
-          - { slug: simple-tenses, levels: A1-A2, title: { en: "Simple Tenses", es: "Tiempos simples" } }
-          - { slug: continuous-tenses, levels: A1-B1, title: { en: "Continuous Tenses", es: "Tiempos continuos" } }
-          - { slug: perfect-tenses, levels: A2-B1, title: { en: "Perfect Tenses", es: "Tiempos perfectos" } }
-          - { slug: future-forms, levels: A1-B1 }
-          - { slug: used-to, levels: A2 }
+          - { slug: tense-map, title: { en: "Tense map", es: "Mapa de tiempos verbales" } }
+          - { slug: simple-tenses, title: { en: "Simple Tenses", es: "Tiempos simples" } }
+          - { slug: continuous-tenses, title: { en: "Continuous Tenses", es: "Tiempos continuos" } }
+          - { slug: perfect-tenses, title: { en: "Perfect Tenses", es: "Tiempos perfectos" } }
+          - { slug: future-forms }
+          - { slug: used-to }
       - dir: 06-modals
         title: { en: Modal verbs, es: Verbos modales }
         topics:
-          - { slug: can-could, levels: A1-A2 }
-          - { slug: must-have-to, levels: A2 }
-          - { slug: should, levels: A2 }
-          - { slug: may-might, levels: A2-B1 }
-          - { slug: would, levels: B1 }
+          - { slug: can-could }
+          - { slug: must-have-to }
+          - { slug: should }
+          - { slug: may-might }
+          - { slug: would }
       - dir: 07-sentence-building
         title: { en: Sentence building, es: Construcción de frases }
         topics:
-          - { slug: word-order, levels: A0-A1 }
-          - { slug: questions-negatives, levels: A1, title: { en: "Questions and negatives", es: "Preguntas y negativas" } }
-          - { slug: conjunctions-linkers, levels: A1-B1 }
-          - { slug: conditionals-0-1-2, levels: A2-B1 }
-          - { slug: relative-clauses, levels: B1 }
-          - { slug: passive-voice, levels: B1 }
-          - { slug: reported-speech, levels: B1 }
-          - { slug: question-tags, levels: B1 }
+          - { slug: word-order }
+          - { slug: questions-negatives, title: { en: "Questions and negatives", es: "Preguntas y negativas" } }
+          - { slug: conjunctions-linkers }
+          - { slug: conditionals-0-1-2 }
+          - { slug: relative-clauses }
+          - { slug: passive-voice }
+          - { slug: reported-speech }
+          - { slug: question-tags }
       - dir: 08-adjectives-adverbs
         title: { en: Adjectives and adverbs, es: Adjetivos y adverbios }
         topics:
-          - { slug: adjective-order, levels: A1-A2 }
-          - { slug: comparatives-superlatives, levels: A2 }
-          - { slug: adverbs-frequency-manner, levels: A1-A2, title: { en: "Adverbs of frequency and manner", es: "Adverbios de frecuencia y modo" } }
-          - { slug: too-enough-so-such, levels: B1 }
+          - { slug: adjective-order }
+          - { slug: comparatives-superlatives }
+          - { slug: adverbs-frequency-manner, title: { en: "Adverbs of frequency and manner", es: "Adverbios de frecuencia y modo" } }
+          - { slug: too-enough-so-such }
       - dir: 09-prepositions
         title: { en: Prepositions, es: Preposiciones }
         topics:
-          - { slug: time-in-on-at, levels: A1 }
-          - { slug: place-movement, levels: A1-A2 }
+          - { slug: time-in-on-at }
+          - { slug: place-movement }
   - code: es
     enabled: false
     slug: spanish
@@ -99,7 +99,7 @@ languages:
         topics:
           - { slug: how-conjugation-works, levels: A0-A1 }
           - { slug: subject-pronouns-tu-usted, levels: A0-A1, title: { en: "Subject Pronouns: tú and usted", es: "Pronombres sujeto: tú y usted" } }
-          - { slug: presente-regular, levels: A1-A2, title: { en: "Present Tense: Regular Verbs (presente de indicativo)", es: "Presente de indicativo: verbos regulares" } }
+          - { slug: presente-regular, title: { en: "Present Tense: Regular Verbs (presente de indicativo)", es: "Presente de indicativo: verbos regulares" } }
           - { slug: presente-irregular, levels: A1-A2, title: { en: "Present Tense: Irregular Verbs (presente irregular)", es: "Presente: verbos irregulares" } }
           - { slug: reflexive-verbs, levels: A1-A2 }
           - { slug: conjugation-tables, levels: A1-B1, title: { en: "Conjugation Tables", es: "Tablas de conjugación" } }

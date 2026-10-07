@@ -9,7 +9,6 @@
     "id",
     "lang",
     "kind",
-    "levels",
     "tags",
     "concepts",
     "related",
@@ -33,14 +32,6 @@
         "foundations",
         "reference"
       ]
-    },
-    "levels": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/level"
-      },
-      "minItems": 1,
-      "uniqueItems": true
     },
     "tags": {
       "type": "array",
@@ -95,13 +86,9 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "level",
         "content"
       ],
       "properties": {
-        "level": {
-          "$ref": "#/definitions/levelRange"
-        },
         "content": {
           "$ref": "#/definitions/content"
         }
@@ -110,16 +97,16 @@
   },
   "definitions": {
     "level": {
+      "description": "A level from languages/levels.yaml. Every leaf carries one; sections, cheatsheets and topics take their range from their leaves.",
       "enum": [
         "A0",
         "A1",
         "A2",
-        "B1"
+        "B1",
+        "B2",
+        "C1",
+        "C2"
       ]
-    },
-    "levelRange": {
-      "type": "string",
-      "pattern": "^(A0|A1|A2|B1)(-(A0|A1|A2|B1))?$"
     },
     "explain": {
       "enum": [
@@ -201,59 +188,54 @@
       ]
     },
     "item": {
-      "oneOf": [
+      "description": "A bullet: explanation text or an example, with its level.",
+      "type": "object",
+      "additionalProperties": false,
+      "anyOf": [
         {
+          "properties": {
+            "text": true
+          },
+          "required": [
+            "text"
+          ]
+        },
+        {
+          "properties": {
+            "ex": true
+          },
+          "required": [
+            "ex"
+          ]
+        }
+      ],
+      "properties": {
+        "text": {
+          "$ref": "#/definitions/text"
+        },
+        "ex": {
           "type": "string"
         },
-        {
+        "tr": {
           "$ref": "#/definitions/localized"
         },
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "anyOf": [
-            {
-              "properties": {
-                "text": true
-              },
-              "required": [
-                "text"
-              ]
-            },
-            {
-              "properties": {
-                "ex": true
-              },
-              "required": [
-                "ex"
-              ]
-            }
-          ],
-          "properties": {
-            "text": {
-              "$ref": "#/definitions/text"
-            },
-            "ex": {
-              "type": "string"
-            },
-            "tr": {
-              "$ref": "#/definitions/localized"
-            },
-            "level": {
-              "$ref": "#/definitions/level"
-            },
-            "for": {
-              "$ref": "#/definitions/for"
-            }
-          }
+        "level": {
+          "$ref": "#/definitions/level"
+        },
+        "for": {
+          "$ref": "#/definitions/for"
         }
+      },
+      "required": [
+        "level"
       ]
     },
     "textBlock": {
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "type"
+        "type",
+        "level"
       ],
       "anyOf": [
         {
@@ -276,6 +258,9 @@
       "properties": {
         "type": {
           "const": "text"
+        },
+        "level": {
+          "$ref": "#/definitions/level"
         },
         "text": {
           "$ref": "#/definitions/text"
@@ -347,7 +332,7 @@
       }
     },
     "row": {
-      "description": "Cells by column key, plus optional level, translation and explanation-language filter.",
+      "description": "Cells by column key, plus the row's level, an optional translation and explanation-language filter.",
       "type": "object",
       "properties": {
         "level": {
@@ -362,7 +347,10 @@
       },
       "additionalProperties": {
         "$ref": "#/definitions/cell"
-      }
+      },
+      "required": [
+        "level"
+      ]
     },
     "tableBlock": {
       "type": "object",
@@ -400,6 +388,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
+        "level",
         "wrong",
         "right"
       ],
@@ -476,15 +465,11 @@
       "additionalProperties": false,
       "required": [
         "title",
-        "level",
         "content"
       ],
       "properties": {
         "title": {
           "$ref": "#/definitions/localized"
-        },
-        "level": {
-          "$ref": "#/definitions/levelRange"
         },
         "content": {
           "$ref": "#/definitions/content"

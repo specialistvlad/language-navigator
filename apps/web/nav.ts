@@ -1,7 +1,9 @@
-// The sidebar menu: back to the home page, the track index, and every topic of the track.
+// The sidebar menu: back to the home page, the track index, and every topic of the track. Sections
+// and topics show their level range; the level filter hides those that start above it.
 import { type CurriculumLanguage, type Explain, localize, topicTitle, type TopicRef } from "../../scripts/lib.ts";
+import { refRange } from "../../scripts/levels.ts";
 import { ui } from "./layout.ts";
-import { firstLevel, sectionRange } from "./parts.ts";
+import { badge, levelAttrs, refsRange } from "./parts.ts";
 import { escapeHtml } from "./render.ts";
 import { homeUrl, topicUrl, trackUrl } from "./urls.ts";
 
@@ -13,15 +15,17 @@ export function trackNav(refs: TopicRef[], explain: Explain, lang: CurriculumLan
   const t = ui(explain);
   const out = [navHome(explain), `<a class="nav-track" href="${trackUrl(explain, lang)}">${escapeHtml(t.index)}</a>`];
   for (const section of lang.sections) {
-    out.push(`<h4 data-level="${firstLevel(sectionRange(section))}">${escapeHtml(localize(section.title, explain))}</h4>`);
-    for (const ref of refs.filter((r) => r.lang === lang.code && r.section === section)) {
-      const from = firstLevel(ref.entry.levels);
-      const name = `<span class="name">${escapeHtml(topicTitle(ref, explain))}</span>`;
+    const inSection = refs.filter((r) => r.lang === lang.code && r.section === section);
+    const range = refsRange(inSection, explain);
+    out.push(`<h4${levelAttrs(range)}><span class="name">${escapeHtml(localize(section.title, explain))}</span>${badge(range)}</h4>`);
+    for (const ref of inSection) {
+      const own = refRange(ref, explain);
+      const name = `<span class="name">${escapeHtml(topicTitle(ref, explain))}</span>${badge(own)}`;
       if (ref.topic) {
         const on = current === ref ? ' class="on" aria-current="page"' : "";
-        out.push(`<a href="${topicUrl(explain, lang, ref)}" data-level="${from}"${on}>${name}</a>`);
+        out.push(`<a href="${topicUrl(explain, lang, ref)}"${levelAttrs(own)}${on}>${name}</a>`);
       } else {
-        out.push(`<div class="todo" data-level="${from}">${name}</div>`);
+        out.push(`<div class="todo"${levelAttrs(own)}>${name}</div>`);
       }
     }
   }

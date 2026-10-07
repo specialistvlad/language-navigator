@@ -2,7 +2,6 @@
 id: en.pronouns.personal-pronouns
 lang: en
 kind: grammar
-levels: [A0, A1]
 tags: [pronouns, subject, object, possessives]
 concepts: [pronouns, possession]
 related: [en.verbs.to-be, en.nouns-determiners.possessive-s, en.nouns-determiners.demonstratives-this-that, en.pronouns.indefinite-pronouns]
@@ -14,7 +13,6 @@ summary:
   es: "Pronombres sujeto, objeto y posesivos: I, me, my, mine. En inglés el sujeto siempre aparece, también con el tiempo y la hora: **It** is cold (*hace frío*), **I** am tired (*estoy cansado*)."
 
 cheatsheet:
-  level: A1
   content:
     - type: table
       columns:
@@ -23,19 +21,19 @@ cheatsheet:
         - { key: det, label: { en: Possessive + noun, es: Posesivo + sustantivo } }
         - { key: alone, label: { en: Possessive alone, es: Posesivo solo } }
       rows:
-        - { subject: I, object: me, det: my, alone: mine }
-        - { subject: you, object: you, det: your, alone: yours }
-        - { subject: he, object: him, det: his, alone: his }
-        - { subject: she, object: her, det: her, alone: hers }
-        - { subject: it, object: it, det: its, alone: "—" }
-        - { subject: we, object: us, det: our, alone: ours }
-        - { subject: they, object: them, det: their, alone: theirs }
+        - { level: A1, subject: I, object: me, det: my, alone: mine }
+        - { level: A1, subject: you, object: you, det: your, alone: yours }
+        - { level: A1, subject: he, object: him, det: his, alone: his }
+        - { level: A1, subject: she, object: her, det: her, alone: hers }
+        - { level: A1, subject: it, object: it, det: its, alone: "—" }
+        - { level: A1, subject: we, object: us, det: our, alone: ours }
+        - { level: A1, subject: they, object: them, det: their, alone: theirs }
 
 sections:
   - title: { en: Overview, es: Resumen }
-    level: A1
     content:
       - type: text
+        level: A1
         text:
           en: "Subject before the verb, object after it, possessive before a noun or alone:"
           es: "Sujeto delante del verbo, objeto detrás, posesivo delante de un sustantivo o solo:"
@@ -43,7 +41,6 @@ sections:
         tr: { es: Nos caen bien. Su casa está al lado de la nuestra. }
 
   - title: { en: "Form: subject pronouns", es: "Forma: pronombres sujeto" }
-    level: A0
     content:
       - type: table
         columns:
@@ -51,29 +48,37 @@ sections:
           - { key: refers, label: { en: Refers to, es: Se refiere a } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { pronoun: I, refers: { en: the speaker, es: quien habla }, example: "**I**'m Tom.", tr: { es: Soy Tom. } }
-          - { pronoun: you, refers: { en: the listener or listeners, es: "quien escucha: una o varias personas" }, example: "**You**'re late.", tr: { es: Llegas tarde. / Llegáis tarde. } }
-          - { pronoun: he, refers: { en: a man or a boy, es: un hombre o un chico }, example: "**He**'s my brother.", tr: { es: Es mi hermano. } }
-          - { pronoun: she, refers: { en: a woman or a girl, es: una mujer o una chica }, example: "**She**'s a teacher.", tr: { es: Es profesora. } }
-          - { pronoun: it, refers: { en: a thing or an animal, es: una cosa o un animal }, example: "**It**'s new.", tr: { es: Es nuevo. } }
-          - { pronoun: we, refers: { en: the speaker and others, es: quien habla y otros }, example: "**We**'re from Spain.", tr: { es: Somos de España. } }
-          - { pronoun: they, refers: { en: people or things, es: personas o cosas }, example: "**They**'re here.", tr: { es: Están aquí. } }
+          - { level: A0, pronoun: I, refers: { en: the speaker, es: quien habla }, example: "**I**'m Tom.", tr: { es: Soy Tom. } }
+          - { level: A0, pronoun: you, refers: { en: the listener or listeners, es: "quien escucha: una o varias personas" }, example: "**You**'re late.", tr: { es: Llegas tarde. / Llegáis tarde. } }
+          - { level: A0, pronoun: he, refers: { en: a man or a boy, es: un hombre o un chico }, example: "**He**'s my brother.", tr: { es: Es mi hermano. } }
+          - { level: A0, pronoun: she, refers: { en: a woman or a girl, es: una mujer o una chica }, example: "**She**'s a teacher.", tr: { es: Es profesora. } }
+          - { level: A0, pronoun: it, refers: { en: a thing or an animal, es: una cosa o un animal }, example: "**It**'s new.", tr: { es: Es nuevo. } }
+          - { level: A0, pronoun: we, refers: { en: the speaker and others, es: quien habla y otros }, example: "**We**'re from Spain.", tr: { es: Somos de España. } }
+          - { level: A0, pronoun: they, refers: { en: people or things, es: personas o cosas }, example: "**They**'re here.", tr: { es: Están aquí. } }
       - type: bullets
         items:
-          - { for: [es], text: { es: "El sujeto siempre aparece, también **it** para cosas: *Es médico.* → **He**'s a doctor. *Es nuevo.* → **It**'s new." } }
-          - en: "**I** is always a capital letter: Tom and **I**."
-            es: "**I** se escribe siempre con mayúscula: Tom and **I**."
-          - en: "**you** is one word for one or many people, friends or strangers."
-            es: "**you** = *tú, usted, vosotros, vosotras, ustedes*: una sola palabra."
-          - en: "**we** and **they** have no gender: **they** = men, women or things."
-            es: "**we** y **they** no tienen género: *nosotros, nosotras* = we; *ellos, ellas* = they."
-          - en: "Pets often take **he** or **she**: Max is our dog. **He**'s two."
-            es: "Las mascotas suelen llevar **he** o **she**: Max is our dog. **He**'s two."
+          - { level: A0, for: [es], text: { es: "El sujeto siempre aparece, también **it** para cosas: *Es médico.* → **He**'s a doctor. *Es nuevo.* → **It**'s new." } }
+          - level: A0
+            text:
+              en: "**I** is always a capital letter: Tom and **I**."
+              es: "**I** se escribe siempre con mayúscula: Tom and **I**."
+          - level: A0
+            text:
+              en: "**you** is one word for one or many people, friends or strangers."
+              es: "**you** = *tú, usted, vosotros, vosotras, ustedes*: una sola palabra."
+          - level: A0
+            text:
+              en: "**we** and **they** have no gender: **they** = men, women or things."
+              es: "**we** y **they** no tienen género: *nosotros, nosotras* = we; *ellos, ellas* = they."
+          - level: A0
+            text:
+              en: "Pets often take **he** or **she**: Max is our dog. **He**'s two."
+              es: "Las mascotas suelen llevar **he** o **she**: Max is our dog. **He**'s two."
 
   - title: { en: "Form: object pronouns", es: "Forma: pronombres objeto" }
-    level: A1
     content:
       - type: text
+        level: A1
         text:
           en: "The object pronoun goes after the verb or after a preposition."
           es: "El pronombre objeto va detrás del verbo o detrás de una preposición."
@@ -83,24 +88,26 @@ sections:
           - { key: object, label: { en: Object, es: Objeto } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { subject: I, object: me, example: "Can you help **me**?", tr: { es: ¿Me ayudas? } }
-          - { subject: you, object: you, example: "I love **you**.", tr: { es: Te quiero. } }
-          - { subject: he, object: him, example: "I know **him**.", tr: { es: Lo conozco. } }
-          - { subject: she, object: her, example: "Call **her** later.", tr: { es: Llámala luego. } }
-          - { subject: it, object: it, example: "I like **it**.", tr: { es: Me gusta. } }
-          - { subject: we, object: us, example: "Come with **us**.", tr: { es: Ven con nosotros. } }
-          - { subject: they, object: them, example: "I see **them** every day.", tr: { es: Los veo todos los días. } }
+          - { level: A1, subject: I, object: me, example: "Can you help **me**?", tr: { es: ¿Me ayudas? } }
+          - { level: A1, subject: you, object: you, example: "I love **you**.", tr: { es: Te quiero. } }
+          - { level: A1, subject: he, object: him, example: "I know **him**.", tr: { es: Lo conozco. } }
+          - { level: A1, subject: she, object: her, example: "Call **her** later.", tr: { es: Llámala luego. } }
+          - { level: A1, subject: it, object: it, example: "I like **it**.", tr: { es: Me gusta. } }
+          - { level: A1, subject: we, object: us, example: "Come with **us**.", tr: { es: Ven con nosotros. } }
+          - { level: A1, subject: they, object: them, example: "I see **them** every day.", tr: { es: Los veo todos los días. } }
       - type: bullets
         items:
-          - { for: [es], text: { es: "El pronombre que en español va delante del verbo va detrás en inglés: *Te quiero* → I love **you**." } }
-          - { for: [es], text: { es: "*conmigo, contigo* → with **me**, with **you**." } }
-          - en: "Short answers and answers with be take the object form: Who's there? — It's **me**. / **Me** too."
-            es: "Las respuestas cortas y las respuestas con be llevan la forma objeto: Who's there? — It's **me**. / **Me** too."
+          - { level: A1, for: [es], text: { es: "El pronombre que en español va delante del verbo va detrás en inglés: *Te quiero* → I love **you**." } }
+          - { level: A1, for: [es], text: { es: "*conmigo, contigo* → with **me**, with **you**." } }
+          - level: A1
+            text:
+              en: "Short answers and answers with be take the object form: Who's there? — It's **me**. / **Me** too."
+              es: "Las respuestas cortas y las respuestas con be llevan la forma objeto: Who's there? — It's **me**. / **Me** too."
 
   - title: { en: "Form: my, your, his…", es: "Forma: my, your, his…" }
-    level: A0-A1
     content:
       - type: text
+        level: A0
         text:
           en: "my, your, his… go before a noun and show the owner."
           es: "my, your, his… van delante de un sustantivo e indican el poseedor."
@@ -110,24 +117,32 @@ sections:
           - { key: possessive, label: { en: Possessive, es: Posesivo } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { subject: I, possessive: my, example: "**My** name is Tom.", tr: { es: Me llamo Tom. } }
-          - { subject: you, possessive: your, example: "What's **your** name?", tr: { es: ¿Cómo te llamas? } }
-          - { subject: he, possessive: his, example: "**His** car is red.", tr: { es: Su coche es rojo. } }
-          - { subject: she, possessive: her, example: "**Her** car is blue.", tr: { es: Su coche es azul. } }
-          - { subject: it, possessive: its, example: "The dog is in **its** bed.", tr: { es: El perro está en su cama. } }
-          - { subject: we, possessive: our, example: "**Our** flat is small.", tr: { es: Nuestro piso es pequeño. } }
-          - { subject: they, possessive: their, example: "**Their** children are at school.", tr: { es: Sus hijos están en el colegio. } }
+          - { level: A0, subject: I, possessive: my, example: "**My** name is Tom.", tr: { es: Me llamo Tom. } }
+          - { level: A0, subject: you, possessive: your, example: "What's **your** name?", tr: { es: ¿Cómo te llamas? } }
+          - { level: A0, subject: he, possessive: his, example: "**His** car is red.", tr: { es: Su coche es rojo. } }
+          - { level: A0, subject: she, possessive: her, example: "**Her** car is blue.", tr: { es: Su coche es azul. } }
+          - { level: A0, subject: it, possessive: its, example: "The dog is in **its** bed.", tr: { es: El perro está en su cama. } }
+          - { level: A0, subject: we, possessive: our, example: "**Our** flat is small.", tr: { es: Nuestro piso es pequeño. } }
+          - { level: A0, subject: they, possessive: their, example: "**Their** children are at school.", tr: { es: Sus hijos están en el colegio. } }
       - type: bullets
         items:
-          - en: "**his** or **her** depends on the owner: Tom and **his** sister, Ana and **her** brother."
-            es: "**his** o **her** depende del poseedor, no de la cosa: Tom and **his** sister, Ana and **her** brother."
-          - { for: [es], text: { es: "*su* = his, her, its, your o their, según quién es el poseedor." } }
-          - en: "The possessive never changes for the thing: **my** book, **my** books."
-            es: "El posesivo no cambia con la cosa: **my** book, **my** books (*mi libro, mis libros*)."
-          - en: "No article before it: **my** car."
-            es: "No lleva artículo delante: **my** car."
-          - en: "**its** has no apostrophe; **it's** = it is."
-            es: "**its** no lleva apóstrofo; **it's** = it is."
+          - level: A0
+            text:
+              en: "**his** or **her** depends on the owner: Tom and **his** sister, Ana and **her** brother."
+              es: "**his** o **her** depende del poseedor, no de la cosa: Tom and **his** sister, Ana and **her** brother."
+          - { level: A0, for: [es], text: { es: "*su* = his, her, its, your o their, según quién es el poseedor." } }
+          - level: A0
+            text:
+              en: "The possessive never changes for the thing: **my** book, **my** books."
+              es: "El posesivo no cambia con la cosa: **my** book, **my** books (*mi libro, mis libros*)."
+          - level: A0
+            text:
+              en: "No article before it: **my** car."
+              es: "No lleva artículo delante: **my** car."
+          - level: A0
+            text:
+              en: "**its** has no apostrophe; **it's** = it is."
+              es: "**its** no lleva apóstrofo; **it's** = it is."
           - level: A1
             text:
               en: "Body parts and clothes take a possessive:"
@@ -136,9 +151,9 @@ sections:
             tr: { es: Me lavo las manos. / Quítate el abrigo. }
 
   - title: { en: "Form: mine, yours, his…", es: "Forma: mine, yours, his…" }
-    level: A1
     content:
       - type: text
+        level: A1
         text:
           en: "mine, yours, his… stand alone, without a noun."
           es: "mine, yours, his… van solos, sin sustantivo."
@@ -148,28 +163,33 @@ sections:
           - { key: alone, label: { en: Alone, es: Solo } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { possessive: my, alone: mine, example: "This bag is **mine**.", tr: { es: Este bolso es mío. } }
-          - { possessive: your, alone: yours, example: "Is this **yours**?", tr: { es: ¿Es tuyo esto? } }
-          - { possessive: his, alone: his, example: "The red car is **his**.", tr: { es: El coche rojo es suyo. } }
-          - { possessive: her, alone: hers, example: "The blue one is **hers**.", tr: { es: El azul es suyo. } }
-          - { possessive: our, alone: ours, example: "This table is **ours**.", tr: { es: Esta mesa es nuestra. } }
-          - { possessive: their, alone: theirs, example: "The house is **theirs**.", tr: { es: La casa es suya. } }
+          - { level: A1, possessive: my, alone: mine, example: "This bag is **mine**.", tr: { es: Este bolso es mío. } }
+          - { level: A1, possessive: your, alone: yours, example: "Is this **yours**?", tr: { es: ¿Es tuyo esto? } }
+          - { level: A1, possessive: his, alone: his, example: "The red car is **his**.", tr: { es: El coche rojo es suyo. } }
+          - { level: A1, possessive: her, alone: hers, example: "The blue one is **hers**.", tr: { es: El azul es suyo. } }
+          - { level: A1, possessive: our, alone: ours, example: "This table is **ours**.", tr: { es: Esta mesa es nuestra. } }
+          - { level: A1, possessive: their, alone: theirs, example: "The house is **theirs**.", tr: { es: La casa es suya. } }
       - type: bullets
         items:
-          - en: "No noun after it and no article before it: It's **mine**."
-            es: "Sin sustantivo detrás y sin artículo delante: *Es el mío.* → It's **mine**."
-          - en: "No apostrophe: yours, hers, ours, theirs."
-            es: "Sin apóstrofo: yours, hers, ours, theirs."
-          - text:
+          - level: A1
+            text:
+              en: "No noun after it and no article before it: It's **mine**."
+              es: "Sin sustantivo detrás y sin artículo delante: *Es el mío.* → It's **mine**."
+          - level: A1
+            text:
+              en: "No apostrophe: yours, hers, ours, theirs."
+              es: "Sin apóstrofo: yours, hers, ours, theirs."
+          - level: A1
+            text:
               en: "**a friend of mine** = one of my friends:"
               es: "**a friend of mine** = uno de mis amigos:"
             ex: "Ana is **a friend of mine**."
             tr: { es: Ana es una amiga mía. }
 
   - title: { en: "It for weather, time and distance", es: "It para el tiempo, la hora y la distancia" }
-    level: A0-A1
     content:
       - type: text
+        level: A0
         text:
           en: "Weather, time and distance have no real subject. **it** fills the place."
           es: "El tiempo, la hora y la distancia no tienen un sujeto real. **it** ocupa ese lugar."
@@ -178,22 +198,21 @@ sections:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { use: { en: Weather, es: Tiempo atmosférico }, example: "**It**'s cold today.", tr: { es: Hoy hace frío. } }
-          - { use: { en: Time, es: Hora }, example: "**It**'s five o'clock.", tr: { es: Son las cinco. } }
-          - { use: { en: Days and dates, es: Días y fechas }, example: "**It**'s Monday.", tr: { es: Es lunes. } }
+          - { level: A0, use: { en: Weather, es: Tiempo atmosférico }, example: "**It**'s cold today.", tr: { es: Hoy hace frío. } }
+          - { level: A0, use: { en: Time, es: Hora }, example: "**It**'s five o'clock.", tr: { es: Son las cinco. } }
+          - { level: A0, use: { en: Days and dates, es: Días y fechas }, example: "**It**'s Monday.", tr: { es: Es lunes. } }
           - { level: A1, use: { en: Distance, es: Distancia }, example: "**It**'s two kilometres to the station.", tr: { es: Hay dos kilómetros hasta la estación. } }
           - { level: A1, use: { en: "it + be + adjective + to + V", es: "it + be + adjetivo + to + V" }, example: "**It**'s easy to cook pasta.", tr: { es: Es fácil cocinar pasta. } }
 
   - title: { en: Typical errors, es: Errores típicos }
-    level: A0-A1
     content:
       - type: errors
         audience: true
         rows:
-          - { for: [es], wrong: Is my brother., right: "**He**'s my brother.", rule: { es: "el sujeto siempre aparece" } }
-          - { for: [es], wrong: Is cold today., right: "**It**'s cold today.", rule: { es: "tiempo, hora, distancia: sujeto it" } }
-          - { for: [es], wrong: Ana and his brother, right: "Ana and **her** brother", rule: { es: "his / her según el poseedor" } }
-          - { wrong: The dog wants it's food., right: "The dog wants **its** food.", rule: { en: "its = possessive; it's = it is", es: "its = posesivo; it's = it is" } }
+          - { level: A0, for: [es], wrong: Is my brother., right: "**He**'s my brother.", rule: { es: "el sujeto siempre aparece" } }
+          - { level: A0, for: [es], wrong: Is cold today., right: "**It**'s cold today.", rule: { es: "tiempo, hora, distancia: sujeto it" } }
+          - { level: A0, for: [es], wrong: Ana and his brother, right: "Ana and **her** brother", rule: { es: "his / her según el poseedor" } }
+          - { level: A0, wrong: The dog wants it's food., right: "The dog wants **its** food.", rule: { en: "its = possessive; it's = it is", es: "its = posesivo; it's = it is" } }
           - { level: A1, wrong: I know he., right: "I know **him**.", rule: { en: "after the verb: object form", es: "detrás del verbo: forma objeto" } }
           - { for: [es], level: A1, wrong: I you love., right: "I love **you**.", rule: { es: "el pronombre objeto va detrás del verbo" } }
           - { for: [es], level: A1, wrong: I wash the hands., right: "I wash **my** hands.", rule: { es: "partes del cuerpo: posesivo" } }

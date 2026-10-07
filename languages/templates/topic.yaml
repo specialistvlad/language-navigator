@@ -1,9 +1,9 @@
 # yaml-language-server: $schema=../../../schema/topic.schema.json
 # Copy to languages/{lang}/{NN-section}/{topic}/topic.yaml and replace every {placeholder}.
+# Every row, bullet and text block carries its level; sections and the topic take their range from them.
 id: "{lang}.{section}.{topic}"
 lang: "{en|es}"
 kind: grammar
-levels: ["{A1}"]
 tags: []
 concepts: []
 related: []
@@ -15,7 +15,6 @@ summary:
   es: "{Entrada: las formas y para qué sirven, como máximo 160 caracteres.} {La regla clave, con un ejemplo en **negrita**.}"
 
 cheatsheet:
-  level: "{A1-A2}"
   content:
     - type: table
       columns:
@@ -23,20 +22,18 @@ cheatsheet:
         - { key: rule, label: { en: Rule, es: Regla } }
         - { key: example, label: { en: Example, es: Ejemplo } }
       rows:
-        - { form: { en: "{form}", es: "{forma}" }, rule: { en: "{rule}", es: "{regla}" }, example: "{example with **target** in bold}", tr: { es: "{traducción}" } }
+        - { level: "{A1}", form: { en: "{form}", es: "{forma}" }, rule: { en: "{rule}", es: "{regla}" }, example: "{example with **target** in bold}", tr: { es: "{traducción}" } }
         - { level: "{A2}", form: { en: "{form}", es: "{forma}" }, rule: { en: "{rule}", es: "{regla}" }, example: "{example}", tr: { es: "{traducción}" } }
 
 sections:
   - title: { en: Overview, es: Resumen }
-    level: "{A1}"
     content:
       - type: bullets
         items:
-          - { en: "{Rule.}", es: "{Regla.}" }
-          - { for: [es], text: { es: "{Note only for Spanish speakers.}" } }
+          - { level: "{A1}", text: { en: "{Rule.}", es: "{Regla.}" } }
+          - { level: "{A1}", for: [es], text: { es: "{Note only for Spanish speakers.}" } }
 
   - title: { en: Use, es: Uso }
-    level: "{A1-A2}"
     content:
       - type: table
         columns:
@@ -44,11 +41,11 @@ sections:
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
           - { level: "{A1}", use: { en: "{use}", es: "{uso}" }, example: "{example}", tr: { es: "{traducción}" } }
+          - { level: "{A2}", use: { en: "{use}", es: "{uso}" }, example: "{example}", tr: { es: "{traducción}" } }
 
   - title: { en: Typical errors, es: Errores típicos }
-    level: "{A1}"
     content:
       - type: errors
         audience: true
         rows:
-          - { wrong: "{wrong}", right: "{right with **fix** in bold}", rule: { en: "{rule}", es: "{regla}" } }
+          - { level: "{A1}", wrong: "{wrong}", right: "{right with **fix** in bold}", rule: { en: "{rule}", es: "{regla}" } }

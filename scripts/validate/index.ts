@@ -2,9 +2,10 @@
 // npm run check prints the problems; the dev server reports them on every rebuild.
 import Ajv, { type ValidateFunction } from "ajv";
 import { join } from "node:path";
-import { CONTENT, loadConcepts, loadCurriculum, loadTopics, readYaml, ROOT } from "../lib.ts";
+import { type Concepts, CONTENT, loadConcepts, loadCurriculum, loadTopics, readYaml, ROOT, type TopicRef } from "../lib.ts";
+import { parseRange } from "../levels.ts";
 import { checkConfig } from "./config.ts";
-import { type Problem, schemaErrors } from "./report.ts";
+import { type Problem, type Report, schemaErrors } from "./report.ts";
 import { checkTopic } from "./topic.ts";
 
 export type { Problem } from "./report.ts";
@@ -41,11 +42,16 @@ export async function validate(): Promise<Problem[]> {
     if (!known.has(path)) report(path, "not listed in curriculum.yaml");
   }
 
-  const validateTopic = await schema("topic");
-  for (const ref of refs) {
-    if (!ref.topic) continue;
-    // Content rules run only on a topic that matches its schema.
-    if (schemaErrors(validateTopic, ref.topic, ref.path, report)) checkTopic(ref, ref.topic, ids, concepts, report);
-  }
+  for (const ref of refs) await checkRef(ref, ids, concepts, report);
   return problems;
+}
+
+// One curriculum entry: a planned topic names the levels it will cover; a written topic matches its
+// schema first, then the content rules.
+export async function checkRef(ref: TopicRef, ids: Set<string>, concepts: Concepts, report: Report): Promise<void> {
+  if (!ref.topic) {
+    if (parseRange(ref.entry.levels) === null) report("curriculum.yaml", `${ref.id}: a planned topic needs "levels", such as A1 or A1-B1`);
+    return;
+  }
+  if (schemaErrors(await schema("topic"), ref.topic, ref.path, report)) checkTopic(ref, ref.topic, ids, concepts, report);
 }

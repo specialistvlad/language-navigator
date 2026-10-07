@@ -28,5 +28,5 @@ export default defineConfig(
       "max-lines": ["error", { max: 200 }],
     },
   },
-  { files: ["apps/web/client.ts"], languageOptions: { globals: globals.browser } },
+  { files: ["apps/web/client.ts", "apps/web/client-*.ts"], languageOptions: { globals: globals.browser } },
 );

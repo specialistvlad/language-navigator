@@ -3,7 +3,8 @@ import { localize, SITE, topicTitle } from "../../../scripts/lib.ts";
 import { alternates, readChoices, type Track } from "../context.ts";
 import { controls, page } from "../layout.ts";
 import { trackNav } from "../nav.ts";
-import { firstLevel, sectionRange, startBadge } from "../parts.ts";
+import { refRange } from "../../../scripts/levels.ts";
+import { badge, levelAttrs, refsRange } from "../parts.ts";
 import { escapeHtml } from "../render.ts";
 import { topicUrl, trackUrl } from "../urls.ts";
 
@@ -15,16 +16,16 @@ export function trackIndex(track: Track): void {
       const sectionRefs = langRefs.filter((r) => r.section === section);
       const items = sectionRefs
         .map((ref) => {
-          const from = firstLevel(ref.entry.levels);
-          const row = `<span class="name">${escapeHtml(topicTitle(ref, explain))}</span>${startBadge(ref.entry.levels)}`;
+          const range = refRange(ref, explain);
+          const row = `<span class="name">${escapeHtml(topicTitle(ref, explain))}</span>${badge(range)}`;
           return ref.topic
-            ? `<li data-level="${from}"><a href="${topicUrl(explain, lang, ref)}">${row}</a></li>`
-            : `<li data-level="${from}" class="todo"><span class="row">${row}</span></li>`;
+            ? `<li${levelAttrs(range)}><a href="${topicUrl(explain, lang, ref)}">${row}</a></li>`
+            : `<li${levelAttrs(range)} class="todo"><span class="row">${row}</span></li>`;
         })
         .join("");
       const count = String(sectionRefs.length);
       const head = `<header><span class="num">${section.dir.slice(0, 2)}</span><h2>${escapeHtml(localize(section.title, explain))}</h2><span class="count">${count}</span></header>`;
-      return `<section class="index-card" data-level="${firstLevel(sectionRange(section))}">${head}<ol class="index-list">${items}</ol></section>`;
+      return `<section class="index-card"${levelAttrs(refsRange(sectionRefs, explain))}>${head}<ol class="index-list">${items}</ol></section>`;
     })
     .join("");
   const indexHead =

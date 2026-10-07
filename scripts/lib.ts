@@ -47,11 +47,6 @@ export const filled = (value: string | null | undefined): value is string => val
 export const ENABLED_EXPLAIN: Explain[] = SITE.explain.filter((e) => e.enabled).map((e) => e.code);
 
 export const lv = (level: string | null): number => (level !== null && isLevel(level) ? LEVELS.indexOf(level) : -1);
-// Every level in a range such as "A0-A2".
-export const levelRange = (range: string): Level[] => {
-  const [from = "", to = from] = range.split("-");
-  return LEVELS.filter((l) => lv(l) >= lv(from) && lv(l) <= lv(to));
-};
 export const levelName = (level: Level, explain: Explain): string => LEVEL_INFO.find((l) => l.code === level)?.name[explain] ?? level;
 
 export const INTERFACE = interfaceFile as Interface;

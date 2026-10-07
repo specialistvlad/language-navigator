@@ -1,6 +1,6 @@
-// Small HTML and text pieces the pages share: level badges and chips, anchors, edit links.
-import { type CurriculumSection, lv, SITE } from "../../scripts/lib.ts";
-import { levelBadge } from "./render.ts";
+// Small HTML and text pieces the pages share: level badges and attributes, anchors, edit links.
+import { type Explain, type Level, SITE, type TopicRef } from "../../scripts/lib.ts";
+import { join, type Range, refRange } from "../../scripts/levels.ts";
 
 // Opens the file in GitHub's editor (a fork for anyone without write access).
 export const editUrl = (path: string): string => `${SITE.repository}/edit/main/${path}`;
@@ -14,25 +14,16 @@ export const slugify = (text: string): string =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 
-// Level chips: one soft chip per level, joined into a group.
-export const chips = (levels: readonly string[]): string =>
-  `<span class="chips">${levels.map((l) => `<span class="chip c-${l}">${l}</span>`).join("")}</span>`;
+export const single = (level: Level): Range => ({ from: level, to: level });
+export const rangeLabel = (r: Range): string => (r.from === r.to ? r.from : `${r.from}–${r.to}`);
 
-// First and last level of a range such as "A0-A1".
-export const firstLevel = (range: string): string => range.split("-")[0] ?? range;
-export const lastLevel = (range: string): string => range.split("-").at(-1) ?? range;
+// A level badge, lowest–highest: it takes the colour of its lowest level (levels.css), and client.ts
+// trims its highest level to the level filter.
+export const badge = (r: Range | null): string =>
+  r === null ? "" : `<span class="badge lvl lvl-${r.from}" data-from="${r.from}" data-to="${r.to}">${rangeLabel(r)}</span>`;
 
-// Level range covered by a section's topics, e.g. "A0-A1".
-export function sectionRange(section: CurriculumSection): string {
-  const froms = section.topics.map((t) => firstLevel(t.levels));
-  const tos = section.topics.map((t) => lastLevel(t.levels));
-  const from = froms.sort((a, b) => lv(a) - lv(b))[0] ?? "";
-  const to = tos.sort((a, b) => lv(b) - lv(a))[0] ?? "";
-  return from === to ? from : `${from}-${to}`;
-}
-export const rangeBadge = (levels: string): string => {
-  const [from = levels, to] = levels.split("-");
-  return levelBadge(from, to);
-};
-// Topic entries in lists show one badge: the level where the topic starts.
-export const startBadge = (levels: string): string => levelBadge(firstLevel(levels));
+// What the level filter reads: an element hides while the filter sits below its lowest level.
+export const levelAttrs = (r: Range | null): string => (r === null ? "" : ` data-level="${r.from}" data-to="${r.to}"`);
+
+// The range of some curriculum topics in an explanation language.
+export const refsRange = (refs: TopicRef[], explain: Explain): Range | null => join(refs.map((r) => refRange(r, explain)));

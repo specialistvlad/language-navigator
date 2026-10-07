@@ -2,7 +2,6 @@
 id: en.tenses.simple-tenses
 lang: en
 kind: grammar
-levels: [A1, A2]
 tags: [verbs, tenses, simple, present, past, future]
 concepts: [present-tense, past-tense, future]
 related: [en.tenses.tense-map, en.verbs.to-be, en.verbs.irregular-verbs-table, en.tenses.future-forms, en.tenses.used-to, en.sentence-building.questions-negatives, en.adjectives-adverbs.adverbs-frequency-manner]
@@ -14,7 +13,6 @@ summary:
   es: "Presente, pasado y futuro simple: do o does, did y will forman preguntas y negativas, y el verbo principal queda en forma base. El sujeto siempre aparece y, con auxiliar, el verbo pierde la -s y la -ed: **Does** she **like** tea? She **didn't go**."
 
 cheatsheet:
-  level: A1-A2
   content:
     - type: table
       columns:
@@ -36,45 +34,54 @@ cheatsheet:
         - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "it", qv: "work?", ss: "It", sh: "**will**", sv: "work.", ns: "It", nh: "**won't**", nv: "work." }
         - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "we", qv: "work?", ss: "We", sh: "**will**", sv: "work.", ns: "We", nh: "**won't**", nv: "work." }
         - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "they", qv: "work?", ss: "They", sh: "**will**", sv: "work.", ns: "They", nh: "**won't**", nv: "work." }
-        - { tense: { en: Present, es: Presente }, qh: "**Do**", qs: "I", qv: "work?", ss: "I", sv: "work.", ns: "I", nh: "**don't**", nv: "work." }
-        - { tense: { en: Present, es: Presente }, qh: "**Do**", qs: "you", qv: "work?", ss: "You", sv: "work.", ns: "You", nh: "**don't**", nv: "work." }
-        - { tense: { en: Present, es: Presente }, qh: "**Does**", qs: "he", qv: "work?", ss: "He", sv: "work**s**.", ns: "He", nh: "**doesn't**", nv: "work." }
-        - { tense: { en: Present, es: Presente }, qh: "**Does**", qs: "she", qv: "work?", ss: "She", sv: "work**s**.", ns: "She", nh: "**doesn't**", nv: "work." }
-        - { tense: { en: Present, es: Presente }, qh: "**Does**", qs: "it", qv: "work?", ss: "It", sv: "work**s**.", ns: "It", nh: "**doesn't**", nv: "work." }
-        - { tense: { en: Present, es: Presente }, qh: "**Do**", qs: "we", qv: "work?", ss: "We", sv: "work.", ns: "We", nh: "**don't**", nv: "work." }
-        - { tense: { en: Present, es: Presente }, qh: "**Do**", qs: "they", qv: "work?", ss: "They", sv: "work.", ns: "They", nh: "**don't**", nv: "work." }
-        - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "I", qv: "work?", ss: "I", sv: "work**ed**.", ns: "I", nh: "**didn't**", nv: "work." }
-        - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "you", qv: "work?", ss: "You", sv: "work**ed**.", ns: "You", nh: "**didn't**", nv: "work." }
-        - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "he", qv: "work?", ss: "He", sv: "work**ed**.", ns: "He", nh: "**didn't**", nv: "work." }
-        - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "she", qv: "work?", ss: "She", sv: "work**ed**.", ns: "She", nh: "**didn't**", nv: "work." }
-        - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "it", qv: "work?", ss: "It", sv: "work**ed**.", ns: "It", nh: "**didn't**", nv: "work." }
-        - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "we", qv: "work?", ss: "We", sv: "work**ed**.", ns: "We", nh: "**didn't**", nv: "work." }
-        - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "they", qv: "work?", ss: "They", sv: "work**ed**.", ns: "They", nh: "**didn't**", nv: "work." }
+        - { level: A1, tense: { en: Present, es: Presente }, qh: "**Do**", qs: "I", qv: "work?", ss: "I", sv: "work.", ns: "I", nh: "**don't**", nv: "work." }
+        - { level: A1, tense: { en: Present, es: Presente }, qh: "**Do**", qs: "you", qv: "work?", ss: "You", sv: "work.", ns: "You", nh: "**don't**", nv: "work." }
+        - { level: A1, tense: { en: Present, es: Presente }, qh: "**Does**", qs: "he", qv: "work?", ss: "He", sv: "work**s**.", ns: "He", nh: "**doesn't**", nv: "work." }
+        - { level: A1, tense: { en: Present, es: Presente }, qh: "**Does**", qs: "she", qv: "work?", ss: "She", sv: "work**s**.", ns: "She", nh: "**doesn't**", nv: "work." }
+        - { level: A1, tense: { en: Present, es: Presente }, qh: "**Does**", qs: "it", qv: "work?", ss: "It", sv: "work**s**.", ns: "It", nh: "**doesn't**", nv: "work." }
+        - { level: A1, tense: { en: Present, es: Presente }, qh: "**Do**", qs: "we", qv: "work?", ss: "We", sv: "work.", ns: "We", nh: "**don't**", nv: "work." }
+        - { level: A1, tense: { en: Present, es: Presente }, qh: "**Do**", qs: "they", qv: "work?", ss: "They", sv: "work.", ns: "They", nh: "**don't**", nv: "work." }
+        - { level: A1, tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "I", qv: "work?", ss: "I", sv: "work**ed**.", ns: "I", nh: "**didn't**", nv: "work." }
+        - { level: A1, tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "you", qv: "work?", ss: "You", sv: "work**ed**.", ns: "You", nh: "**didn't**", nv: "work." }
+        - { level: A1, tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "he", qv: "work?", ss: "He", sv: "work**ed**.", ns: "He", nh: "**didn't**", nv: "work." }
+        - { level: A1, tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "she", qv: "work?", ss: "She", sv: "work**ed**.", ns: "She", nh: "**didn't**", nv: "work." }
+        - { level: A1, tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "it", qv: "work?", ss: "It", sv: "work**ed**.", ns: "It", nh: "**didn't**", nv: "work." }
+        - { level: A1, tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "we", qv: "work?", ss: "We", sv: "work**ed**.", ns: "We", nh: "**didn't**", nv: "work." }
+        - { level: A1, tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "they", qv: "work?", ss: "They", sv: "work**ed**.", ns: "They", nh: "**didn't**", nv: "work." }
 
 sections:
   - title: { en: Overview, es: Resumen }
-    level: A1
     content:
       - type: text
+        level: A1
         text:
           en: "Each simple tense has a helper verb: **will** for the future, **do / does** for the present, **did** for the past."
           es: "Cada tiempo simple tiene un verbo auxiliar: **will** para el futuro, **do / does** para el presente y **did** para el pasado."
       - type: bullets
         items:
-          - en: "In questions the helper goes before the subject; in negatives it takes **not**: don't, doesn't, didn't, won't."
-            es: "En las preguntas el auxiliar va delante del sujeto; en las negativas lleva **not**: don't, doesn't, didn't, won't."
-          - en: "After every helper the main verb is in the base form: Does she **work**? / She didn't **work**."
-            es: "Después de cualquier auxiliar el verbo principal va en forma base: Does she **work**? / She didn't **work**."
-          - en: "Present and past statements have no helper: the verb itself takes **-s** (he, she, it) or **-ed**."
-            es: "Las afirmaciones en presente y pasado no llevan auxiliar: el propio verbo lleva **-s** (he, she, it) o **-ed**."
-          - en: "**will** and **did** are the same for every person; only the present changes with he, she, it."
-            es: "**will** y **did** son iguales para todas las personas; solo el presente cambia con he, she, it."
-          - en: "**be** has its own forms: am / is / are, was / were. See [To be](id:en.verbs.to-be)."
-            es: "**be** tiene formas propias: am / is / are, was / were. Ver [To be](id:en.verbs.to-be)."
-          - { for: [es], text: { es: "El sujeto siempre aparece: *Trabajo* → **I** work. *Trabajó* → **She** worked." } }
+          - level: A1
+            text:
+              en: "In questions the helper goes before the subject; in negatives it takes **not**: don't, doesn't, didn't, won't."
+              es: "En las preguntas el auxiliar va delante del sujeto; en las negativas lleva **not**: don't, doesn't, didn't, won't."
+          - level: A1
+            text:
+              en: "After every helper the main verb is in the base form: Does she **work**? / She didn't **work**."
+              es: "Después de cualquier auxiliar el verbo principal va en forma base: Does she **work**? / She didn't **work**."
+          - level: A1
+            text:
+              en: "Present and past statements have no helper: the verb itself takes **-s** (he, she, it) or **-ed**."
+              es: "Las afirmaciones en presente y pasado no llevan auxiliar: el propio verbo lleva **-s** (he, she, it) o **-ed**."
+          - level: A1
+            text:
+              en: "**will** and **did** are the same for every person; only the present changes with he, she, it."
+              es: "**will** y **did** son iguales para todas las personas; solo el presente cambia con he, she, it."
+          - level: A1
+            text:
+              en: "**be** has its own forms: am / is / are, was / were. See [To be](id:en.verbs.to-be)."
+              es: "**be** tiene formas propias: am / is / are, was / were. Ver [To be](id:en.verbs.to-be)."
+          - { level: A1, for: [es], text: { es: "El sujeto siempre aparece: *Trabajo* → **I** work. *Trabajó* → **She** worked." } }
 
   - title: { en: "Present simple: form", es: "Presente simple: forma" }
-    level: A1-A2
     content:
       - type: table
         columns:
@@ -82,18 +89,20 @@ sections:
           - { key: verb, label: { en: Verb, es: Verbo } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { subject: I / you / we / they, verb: V, example: "I **live** in Madrid.", tr: { es: Vivo en Madrid. } }
-          - { subject: he / she / it, verb: V-s, example: "She **lives** in Madrid.", tr: { es: Vive en Madrid. } }
-          - { subject: { en: singular noun, es: sustantivo singular }, verb: V-s, example: "My brother **lives** in Madrid.", tr: { es: Mi hermano vive en Madrid. } }
-          - { subject: { en: plural noun, es: sustantivo plural }, verb: V, example: "My parents **live** in Madrid.", tr: { es: Mis padres viven en Madrid. } }
+          - { level: A1, subject: I / you / we / they, verb: V, example: "I **live** in Madrid.", tr: { es: Vivo en Madrid. } }
+          - { level: A1, subject: he / she / it, verb: V-s, example: "She **lives** in Madrid.", tr: { es: Vive en Madrid. } }
+          - { level: A1, subject: { en: singular noun, es: sustantivo singular }, verb: V-s, example: "My brother **lives** in Madrid.", tr: { es: Mi hermano vive en Madrid. } }
+          - { level: A1, subject: { en: plural noun, es: sustantivo plural }, verb: V, example: "My parents **live** in Madrid.", tr: { es: Mis padres viven en Madrid. } }
       - type: bullets
         items:
-          - text:
+          - level: A1
+            text:
               en: "A short answer repeats the helper:"
               es: "La respuesta corta repite el auxiliar:"
             ex: "Do you like tea? — Yes, I **do**. / No, I **don't**."
             tr: { es: "¿Te gusta el té? — Sí. / No." }
-          - text:
+          - level: A1
+            text:
               en: "A wh-word goes first: wh-word + do / does + subject + verb."
               es: "La palabra interrogativa va primero: wh-word + do / does + sujeto + verbo."
             ex: "Where **does** he **live**?"
@@ -104,12 +113,13 @@ sections:
               es: "Cuando **who** o **what** es el sujeto, el verbo va directamente, con -s:"
             ex: "Who **lives** here?"
             tr: { es: "¿Quién vive aquí?" }
-          - { for: [es], text: { es: "El *no* español delante del verbo → **don't / doesn't** delante del verbo: *No trabaja* → She **doesn't work**." } }
-          - en: "More question patterns: [Questions and negatives](id:en.sentence-building.questions-negatives)."
-            es: "Más tipos de pregunta: [Preguntas y negativas](id:en.sentence-building.questions-negatives)."
+          - { level: A1, for: [es], text: { es: "El *no* español delante del verbo → **don't / doesn't** delante del verbo: *No trabaja* → She **doesn't work**." } }
+          - level: A1
+            text:
+              en: "More question patterns: [Questions and negatives](id:en.sentence-building.questions-negatives)."
+              es: "Más tipos de pregunta: [Preguntas y negativas](id:en.sentence-building.questions-negatives)."
 
   - title: { en: "Present simple: the -s ending", es: "Presente simple: la terminación -s" }
-    level: A1-A2
     content:
       - type: table
         columns:
@@ -117,12 +127,12 @@ sections:
           - { key: rule, label: { en: Spelling, es: Ortografía } }
           - { key: examples, label: { en: Examples, es: Ejemplos } }
         rows:
-          - { ending: { en: most verbs, es: la mayoría de los verbos }, rule: + s, examples: work → works / read → reads }
-          - { ending: "-s, -ss, -sh, -ch, -x, -z", rule: + es, examples: pass → passes / wash → washes / watch → watches / fix → fixes }
-          - { ending: "-o", rule: + es, examples: go → goes / do → does }
-          - { ending: { en: consonant + y, es: consonante + y }, rule: y → ies, examples: study → studies / try → tries }
-          - { ending: { en: vowel + y, es: vocal + y }, rule: + s, examples: play → plays / buy → buys }
-          - { ending: have, rule: { en: own form, es: forma propia }, examples: have → has }
+          - { level: A1, ending: { en: most verbs, es: la mayoría de los verbos }, rule: + s, examples: work → works / read → reads }
+          - { level: A1, ending: "-s, -ss, -sh, -ch, -x, -z", rule: + es, examples: pass → passes / wash → washes / watch → watches / fix → fixes }
+          - { level: A1, ending: "-o", rule: + es, examples: go → goes / do → does }
+          - { level: A1, ending: { en: consonant + y, es: consonante + y }, rule: y → ies, examples: study → studies / try → tries }
+          - { level: A1, ending: { en: vowel + y, es: vocal + y }, rule: + s, examples: play → plays / buy → buys }
+          - { level: A1, ending: have, rule: { en: own form, es: forma propia }, examples: have → has }
       - type: table
         columns:
           - { key: sound, label: { en: Sound, es: Sonido } }
@@ -134,33 +144,36 @@ sections:
           - { level: A2, sound: /ɪz/, after: /s z ʃ tʃ dʒ/, examples: washes /ˈwɒʃɪz/ / watches /ˈwɒtʃɪz/ / uses /ˈjuːzɪz/ }
       - type: bullets
         items:
-          - en: "Three verbs change their vowel sound: does /dʌz/, says /sez/, has /hæz/."
-            es: "Tres verbos cambian la vocal: does /dʌz/, says /sez/, has /hæz/."
+          - level: A1
+            text:
+              en: "Three verbs change their vowel sound: does /dʌz/, says /sez/, has /hæz/."
+              es: "Tres verbos cambian la vocal: does /dʌz/, says /sez/, has /hæz/."
           - { level: A2, for: [es], text: { es: "/z/ es una s sonora: vibra en la garganta, como el zumbido de una abeja." } }
 
   - title: { en: "Present simple: use", es: "Presente simple: uso" }
-    level: A1-A2
     content:
       - type: table
         columns:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { use: { en: Habits and routines, es: Hábitos y rutinas }, example: "I **get up** at 7.", tr: { es: Me levanto a las 7. } }
-          - { use: { en: Facts and general truths, es: Hechos y verdades generales }, example: "Water **boils** at 100 °C.", tr: { es: El agua hierve a 100 °C. } }
-          - { use: { en: Permanent states, es: Estados permanentes }, example: "She **lives** in London.", tr: { es: Vive en Londres. } }
-          - { use: { en: "Likes, dislikes, opinions", es: Gustos y opiniones }, example: "I **like** coffee. / I **think** so.", tr: { es: Me gusta el café. / Creo que sí. } }
-          - { use: { en: Jobs and regular activities, es: Profesiones y actividades habituales }, example: "He **teaches** maths.", tr: { es: Enseña matemáticas. } }
+          - { level: A1, use: { en: Habits and routines, es: Hábitos y rutinas }, example: "I **get up** at 7.", tr: { es: Me levanto a las 7. } }
+          - { level: A1, use: { en: Facts and general truths, es: Hechos y verdades generales }, example: "Water **boils** at 100 °C.", tr: { es: El agua hierve a 100 °C. } }
+          - { level: A1, use: { en: Permanent states, es: Estados permanentes }, example: "She **lives** in London.", tr: { es: Vive en Londres. } }
+          - { level: A1, use: { en: "Likes, dislikes, opinions", es: Gustos y opiniones }, example: "I **like** coffee. / I **think** so.", tr: { es: Me gusta el café. / Creo que sí. } }
+          - { level: A1, use: { en: Jobs and regular activities, es: Profesiones y actividades habituales }, example: "He **teaches** maths.", tr: { es: Enseña matemáticas. } }
           - { level: A2, use: { en: "Timetables and schedules (future)", es: "Horarios y calendarios (futuro)" }, example: "The train **leaves** at 6:15.", tr: { es: El tren sale a las 6:15. } }
           - { level: A2, use: { en: Instructions and directions, es: Instrucciones e indicaciones }, example: "You **turn** left at the bank.", tr: { es: Giras a la izquierda en el banco. } }
       - type: bullets
         items:
-          - text:
+          - level: A1
+            text:
               en: "Frequency adverbs go before the main verb and after be:"
               es: "Los adverbios de frecuencia van antes del verbo principal y después de be:"
             ex: "I **often** walk to work. / She is **always** late."
             tr: { es: "A menudo voy andando al trabajo. / Siempre llega tarde." }
-          - text:
+          - level: A1
+            text:
               en: "Time expressions go at the end:"
               es: "Las expresiones de tiempo van al final:"
             ex: "I swim **every day**. / She works late **on Mondays**."
@@ -171,20 +184,23 @@ sections:
               es: "Los verbos de estado van en presente simple, también para ahora:"
             ex: "I **know** the answer. / I **want** a coffee."
             tr: { es: "Sé la respuesta. / Quiero un café." }
-          - en: "All frequency adverbs: [Adverbs of frequency and manner](id:en.adjectives-adverbs.adverbs-frequency-manner)."
-            es: "Todos los adverbios de frecuencia: [Adverbios de frecuencia y modo](id:en.adjectives-adverbs.adverbs-frequency-manner)."
+          - level: A1
+            text:
+              en: "All frequency adverbs: [Adverbs of frequency and manner](id:en.adjectives-adverbs.adverbs-frequency-manner)."
+              es: "Todos los adverbios de frecuencia: [Adverbios de frecuencia y modo](id:en.adjectives-adverbs.adverbs-frequency-manner)."
 
   - title: { en: "Past simple: form", es: "Pasado simple: forma" }
-    level: A1-A2
     content:
       - type: bullets
         items:
-          - text:
+          - level: A1
+            text:
               en: "**be** has its own past, with no helper: was / were. See [To be](id:en.verbs.to-be)."
               es: "**be** tiene su propio pasado, sin auxiliar: was / were. Ver [To be](id:en.verbs.to-be)."
             ex: "I **was** at home. / **Were** you there?"
             tr: { es: "Estaba en casa. / ¿Estabas allí?" }
       - type: text
+        level: A1
         text:
           en: "Every other verb has one past form for every person:"
           es: "Los demás verbos tienen una sola forma de pasado para todas las personas:"
@@ -194,16 +210,18 @@ sections:
           - { key: form, label: { en: Form, es: Forma } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { type: { en: regular, es: regular }, form: V-ed, example: "I **watched** TV.", tr: { es: "Vi la tele." } }
-          - { type: { en: irregular, es: irregular }, form: { en: own form, es: forma propia }, example: "I **saw** a film.", tr: { es: "Vi una película." } }
+          - { level: A1, type: { en: regular, es: regular }, form: V-ed, example: "I **watched** TV.", tr: { es: "Vi la tele." } }
+          - { level: A1, type: { en: irregular, es: irregular }, form: { en: own form, es: forma propia }, example: "I **saw** a film.", tr: { es: "Vi una película." } }
       - type: bullets
         items:
-          - text:
+          - level: A1
+            text:
               en: "A short answer repeats the helper:"
               es: "La respuesta corta repite el auxiliar:"
             ex: "Did you like it? — Yes, I **did**. / No, I **didn't**."
             tr: { es: "¿Te gustó? — Sí. / No." }
-          - text:
+          - level: A1
+            text:
               en: "A wh-word goes first: wh-word + did + subject + verb."
               es: "La palabra interrogativa va primero: wh-word + did + sujeto + verbo."
             ex: "Where **did** they **go**?"
@@ -214,10 +232,9 @@ sections:
               es: "Cuando **who** o **what** es el sujeto, el verbo va directamente en pasado:"
             ex: "Who **called** you? / What **happened**?"
             tr: { es: "¿Quién te llamó? / ¿Qué pasó?" }
-          - { for: [es], text: { es: "**didn't** lleva el pasado y el verbo queda en forma base: *No fui* → I **didn't go**." } }
+          - { level: A1, for: [es], text: { es: "**didn't** lleva el pasado y el verbo queda en forma base: *No fui* → I **didn't go**." } }
 
   - title: { en: "Past simple: the -ed ending", es: "Pasado simple: la terminación -ed" }
-    level: A1-A2
     content:
       - type: table
         columns:
@@ -225,11 +242,11 @@ sections:
           - { key: rule, label: { en: Spelling, es: Ortografía } }
           - { key: examples, label: { en: Examples, es: Ejemplos } }
         rows:
-          - { ending: { en: most verbs, es: la mayoría de los verbos }, rule: + ed, examples: work → worked / watch → watched / visit → visited }
-          - { ending: "-e", rule: + d, examples: live → lived / like → liked / arrive → arrived }
-          - { ending: { en: consonant + y, es: consonante + y }, rule: y → ied, examples: study → studied / try → tried }
-          - { ending: { en: vowel + y, es: vocal + y }, rule: + ed, examples: play → played / stay → stayed }
-          - { ending: { en: "1 vowel + 1 consonant, one syllable", es: "1 vocal + 1 consonante, una sílaba" }, rule: { en: double the consonant + ed, es: dobla la consonante + ed }, examples: stop → stopped / plan → planned }
+          - { level: A1, ending: { en: most verbs, es: la mayoría de los verbos }, rule: + ed, examples: work → worked / watch → watched / visit → visited }
+          - { level: A1, ending: "-e", rule: + d, examples: live → lived / like → liked / arrive → arrived }
+          - { level: A1, ending: { en: consonant + y, es: consonante + y }, rule: y → ied, examples: study → studied / try → tried }
+          - { level: A1, ending: { en: vowel + y, es: vocal + y }, rule: + ed, examples: play → played / stay → stayed }
+          - { level: A1, ending: { en: "1 vowel + 1 consonant, one syllable", es: "1 vocal + 1 consonante, una sílaba" }, rule: { en: double the consonant + ed, es: dobla la consonante + ed }, examples: stop → stopped / plan → planned }
       - type: table
         columns:
           - { key: sound, label: { en: Sound, es: Sonido } }
@@ -247,7 +264,6 @@ sections:
               es: "La terminación añade una sílaba solo tras /t/ y /d/: wanted tiene dos sílabas, worked tiene una."
 
   - title: { en: "Past simple: irregular verbs", es: "Pasado simple: verbos irregulares" }
-    level: A1
     content:
       - type: table
         columns:
@@ -255,53 +271,56 @@ sections:
           - { key: past, label: { en: Past simple, es: Pasado } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { base: go, past: went, example: "We **went** home.", tr: { es: "Fuimos a casa." } }
-          - { base: have, past: had, example: "I **had** lunch.", tr: { es: "Almorcé." } }
-          - { base: do, past: did, example: "She **did** her homework.", tr: { es: "Hizo los deberes." } }
-          - { base: see, past: saw, example: "I **saw** Tom.", tr: { es: "Vi a Tom." } }
-          - { base: get, past: got, example: "He **got** a letter.", tr: { es: "Recibió una carta." } }
-          - { base: make, past: made, example: "They **made** a cake.", tr: { es: "Hicieron una tarta." } }
-          - { base: take, past: took, example: "I **took** a taxi.", tr: { es: "Cogí un taxi." } }
-          - { base: come, past: came, example: "She **came** late.", tr: { es: "Llegó tarde." } }
-          - { base: eat, past: ate, example: "We **ate** pizza.", tr: { es: "Comimos pizza." } }
-          - { base: buy, past: bought, example: "I **bought** a coat.", tr: { es: "Compré un abrigo." } }
-          - { base: say, past: said, example: "He **said** hello.", tr: { es: "Dijo hola." } }
-          - { base: write, past: wrote, example: "I **wrote** an email.", tr: { es: "Escribí un correo." } }
+          - { level: A1, base: go, past: went, example: "We **went** home.", tr: { es: "Fuimos a casa." } }
+          - { level: A1, base: have, past: had, example: "I **had** lunch.", tr: { es: "Almorcé." } }
+          - { level: A1, base: do, past: did, example: "She **did** her homework.", tr: { es: "Hizo los deberes." } }
+          - { level: A1, base: see, past: saw, example: "I **saw** Tom.", tr: { es: "Vi a Tom." } }
+          - { level: A1, base: get, past: got, example: "He **got** a letter.", tr: { es: "Recibió una carta." } }
+          - { level: A1, base: make, past: made, example: "They **made** a cake.", tr: { es: "Hicieron una tarta." } }
+          - { level: A1, base: take, past: took, example: "I **took** a taxi.", tr: { es: "Cogí un taxi." } }
+          - { level: A1, base: come, past: came, example: "She **came** late.", tr: { es: "Llegó tarde." } }
+          - { level: A1, base: eat, past: ate, example: "We **ate** pizza.", tr: { es: "Comimos pizza." } }
+          - { level: A1, base: buy, past: bought, example: "I **bought** a coat.", tr: { es: "Compré un abrigo." } }
+          - { level: A1, base: say, past: said, example: "He **said** hello.", tr: { es: "Dijo hola." } }
+          - { level: A1, base: write, past: wrote, example: "I **wrote** an email.", tr: { es: "Escribí un correo." } }
       - type: bullets
         items:
-          - en: "The irregular form is only for statements; questions and negatives take did + base verb: Did you **go**?"
-            es: "La forma irregular es solo para afirmaciones; preguntas y negativas llevan did + forma base: Did you **go**?"
-          - en: "More verbs: [Irregular verbs table](id:en.verbs.irregular-verbs-table)."
-            es: "Más verbos: [Tabla de verbos irregulares](id:en.verbs.irregular-verbs-table)."
+          - level: A1
+            text:
+              en: "The irregular form is only for statements; questions and negatives take did + base verb: Did you **go**?"
+              es: "La forma irregular es solo para afirmaciones; preguntas y negativas llevan did + forma base: Did you **go**?"
+          - level: A1
+            text:
+              en: "More verbs: [Irregular verbs table](id:en.verbs.irregular-verbs-table)."
+              es: "Más verbos: [Tabla de verbos irregulares](id:en.verbs.irregular-verbs-table)."
 
   - title: { en: "Past simple: use", es: "Pasado simple: uso" }
-    level: A1-A2
     content:
       - type: table
         columns:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { use: { en: Finished actions at a stated past time, es: Acciones terminadas en un momento concreto del pasado }, example: "I **visited** Paris last year.", tr: { es: "Visité París el año pasado." } }
-          - { use: { en: Past states, es: Estados en el pasado }, example: "She **was** ill on Monday.", tr: { es: "El lunes estaba enferma." } }
-          - { use: { en: Sequences of events, es: Secuencias de hechos }, example: "I **got up**, **had** a shower and **left**.", tr: { es: "Me levanté, me di una ducha y salí." } }
+          - { level: A1, use: { en: Finished actions at a stated past time, es: Acciones terminadas en un momento concreto del pasado }, example: "I **visited** Paris last year.", tr: { es: "Visité París el año pasado." } }
+          - { level: A1, use: { en: Past states, es: Estados en el pasado }, example: "She **was** ill on Monday.", tr: { es: "El lunes estaba enferma." } }
+          - { level: A1, use: { en: Sequences of events, es: Secuencias de hechos }, example: "I **got up**, **had** a shower and **left**.", tr: { es: "Me levanté, me di una ducha y salí." } }
           - { level: A2, use: { en: Past habits that are over, es: Hábitos del pasado que ya terminaron }, example: "When I was a child, I **played** outside every day.", tr: { es: "Cuando era niño, jugaba fuera todos los días." } }
       - type: bullets
         items:
-          - text:
+          - level: A1
+            text:
               en: "Time words: yesterday, last week, in 2020, two years ago. **ago** comes after the period:"
               es: "Expresiones de tiempo: yesterday, last week, in 2020, two years ago. **ago** va después del periodo:"
             ex: "She left two days **ago**."
             tr: { es: "Se fue hace dos días." }
-          - { for: [es], text: { es: "*La semana pasada* → **last** week, sin artículo. *Hace dos años* → two years **ago**." } }
-          - { for: [es], text: { es: "El past simple cubre el indefinido (*fui, comí*) y muchos casos del imperfecto (*era, vivía*)." } }
+          - { level: A1, for: [es], text: { es: "*La semana pasada* → **last** week, sin artículo. *Hace dos años* → two years **ago**." } }
+          - { level: A1, for: [es], text: { es: "El past simple cubre el indefinido (*fui, comí*) y muchos casos del imperfecto (*era, vivía*)." } }
           - level: A2
             text:
               en: "Past habits also take *used to*: see [Used to](id:en.tenses.used-to)."
               es: "Los hábitos del pasado también llevan *used to*: ver [Used to](id:en.tenses.used-to)."
 
   - title: { en: "Future simple: form", es: "Futuro simple: forma" }
-    level: A2
     content:
       - type: table
         columns:
@@ -309,43 +328,47 @@ sections:
           - { key: structure, label: { en: Structure, es: Estructura } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { form: +, structure: "will / 'll + V", example: "I'**ll help** you.", tr: { es: Te ayudo. } }
-          - { form: −, structure: "will not / won't + V", example: "He **won't come**.", tr: { es: No vendrá. } }
-          - { form: "?", structure: "will + subject + V", example: "**Will** she **come**?", tr: { es: "¿Vendrá?" } }
-          - { form: { en: Short answer, es: Respuesta corta }, structure: "Yes, I will. / No, I won't.", example: "**Will** you call? — Yes, I **will**.", tr: { es: "¿Llamarás? — Sí." } }
+          - { level: A2, form: +, structure: "will / 'll + V", example: "I'**ll help** you.", tr: { es: Te ayudo. } }
+          - { level: A2, form: −, structure: "will not / won't + V", example: "He **won't come**.", tr: { es: No vendrá. } }
+          - { level: A2, form: "?", structure: "will + subject + V", example: "**Will** she **come**?", tr: { es: "¿Vendrá?" } }
+          - { level: A2, form: { en: Short answer, es: Respuesta corta }, structure: "Yes, I will. / No, I won't.", example: "**Will** you call? — Yes, I **will**.", tr: { es: "¿Llamarás? — Sí." } }
       - type: bullets
         items:
-          - en: "Speech and messages use **'ll** and **won't**: 'll is /l/ after a vowel, /əl/ after a consonant; won't is /wəʊnt/."
-            es: "En la conversación se usan **'ll** y **won't**: 'll es /l/ tras vocal y /əl/ tras consonante; won't es /wəʊnt/."
-          - for: [es]
+          - level: A2
+            text:
+              en: "Speech and messages use **'ll** and **won't**: 'll is /l/ after a vowel, /əl/ after a consonant; won't is /wəʊnt/."
+              es: "En la conversación se usan **'ll** y **won't**: 'll es /l/ tras vocal y /əl/ tras consonante; won't es /wəʊnt/."
+          - level: A2
+            for: [es]
             text:
               es: "El futuro español es una sola palabra; en inglés son dos: **will** + verbo."
             ex: "Hablaré con él. → I **will speak** to him."
 
   - title: { en: "Future simple: use", es: "Futuro simple: uso" }
-    level: A2
     content:
       - type: table
         columns:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { use: { en: Decision at the moment of speaking, es: Decisión en el momento de hablar }, example: "It's cold. I'**ll close** the window.", tr: { es: Hace frío. Cierro la ventana. } }
-          - { use: { en: Offers, es: Ofrecimientos }, example: "I'**ll carry** your bag.", tr: { es: Te llevo la bolsa. } }
-          - { use: { en: Promises, es: Promesas }, example: "I **won't tell** anyone.", tr: { es: No se lo diré a nadie. } }
-          - { use: { en: "Opinions and predictions (I think)", es: "Opiniones y predicciones (I think)" }, example: "I think she'**ll win**.", tr: { es: Creo que ganará. } }
+          - { level: A2, use: { en: Decision at the moment of speaking, es: Decisión en el momento de hablar }, example: "It's cold. I'**ll close** the window.", tr: { es: Hace frío. Cierro la ventana. } }
+          - { level: A2, use: { en: Offers, es: Ofrecimientos }, example: "I'**ll carry** your bag.", tr: { es: Te llevo la bolsa. } }
+          - { level: A2, use: { en: Promises, es: Promesas }, example: "I **won't tell** anyone.", tr: { es: No se lo diré a nadie. } }
+          - { level: A2, use: { en: "Opinions and predictions (I think)", es: "Opiniones y predicciones (I think)" }, example: "I think she'**ll win**.", tr: { es: Creo que ganará. } }
       - type: bullets
         items:
-          - text:
+          - level: A2
+            text:
               en: "**probably** goes after will and before won't:"
               es: "**probably** va después de will y antes de won't:"
             ex: "It will **probably** rain. / It **probably** won't rain."
             tr: { es: "Probablemente lloverá. / Probablemente no lloverá." }
-          - en: "Plans and arrangements take going to or the present continuous: see [Future forms](id:en.tenses.future-forms)."
-            es: "Los planes y las citas llevan going to o el presente continuo: ver [Formas de futuro](id:en.tenses.future-forms)."
+          - level: A2
+            text:
+              en: "Plans and arrangements take going to or the present continuous: see [Future forms](id:en.tenses.future-forms)."
+              es: "Los planes y las citas llevan going to o el presente continuo: ver [Formas de futuro](id:en.tenses.future-forms)."
 
   - title: { en: "Compare: past, present and future", es: "Comparación: pasado, presente y futuro" }
-    level: A2
     content:
       - type: table
         columns:
@@ -353,30 +376,29 @@ sections:
           - { key: present, label: { en: Present simple, es: Presente simple } }
           - { key: future, label: { en: Future simple, es: Futuro simple } }
         rows:
-          - { past: "did", present: "do / does", future: "will" }
-          - { past: "yesterday, last week, ago", present: "every day, usually, on Mondays", future: "tomorrow, next week, soon" }
-          - { past: { ex: "I **worked** yesterday.", tr: { es: Trabajé ayer. } }, present: { ex: "I **work** every day.", tr: { es: Trabajo todos los días. } }, future: { ex: "I'**ll work** tomorrow.", tr: { es: Trabajaré mañana. } } }
-          - { past: { ex: "**Did** she **call**?", tr: { es: "¿Llamó?" } }, present: { ex: "**Does** she **call**?", tr: { es: "¿Llama?" } }, future: { ex: "**Will** she **call**?", tr: { es: "¿Llamará?" } } }
-          - { past: { ex: "He **didn't** come.", tr: { es: No vino. } }, present: { ex: "He **doesn't** come.", tr: { es: No viene. } }, future: { ex: "He **won't** come.", tr: { es: No vendrá. } } }
+          - { level: A2, past: "did", present: "do / does", future: "will" }
+          - { level: A2, past: "yesterday, last week, ago", present: "every day, usually, on Mondays", future: "tomorrow, next week, soon" }
+          - { level: A2, past: { ex: "I **worked** yesterday.", tr: { es: Trabajé ayer. } }, present: { ex: "I **work** every day.", tr: { es: Trabajo todos los días. } }, future: { ex: "I'**ll work** tomorrow.", tr: { es: Trabajaré mañana. } } }
+          - { level: A2, past: { ex: "**Did** she **call**?", tr: { es: "¿Llamó?" } }, present: { ex: "**Does** she **call**?", tr: { es: "¿Llama?" } }, future: { ex: "**Will** she **call**?", tr: { es: "¿Llamará?" } } }
+          - { level: A2, past: { ex: "He **didn't** come.", tr: { es: No vino. } }, present: { ex: "He **doesn't** come.", tr: { es: No viene. } }, future: { ex: "He **won't** come.", tr: { es: No vendrá. } } }
 
   - title: { en: Typical errors, es: Errores típicos }
-    level: A1-A2
     content:
       - type: errors
         audience: true
         rows:
-          - { wrong: She work here., right: "She **works** here.", rule: { en: "he / she / it → V-s", es: "he / she / it → V-s" } }
-          - { for: [es], wrong: Works in a bank., right: "**She** works in a bank.", rule: { es: "el sujeto siempre aparece" } }
-          - { for: [es], wrong: He no works., right: "He **doesn't work**.", rule: { es: "negativa: doesn't + V" } }
-          - { wrong: He doesn't works., right: "He doesn't **work**.", rule: { en: "helper + base verb", es: "auxiliar + forma base" } }
-          - { wrong: Where you live?, right: "Where **do** you live?", rule: { en: "questions need a helper", es: "la pregunta lleva auxiliar" } }
-          - { for: [es], wrong: "Do you like tea? — Yes, I like.", right: "Yes, I **do**.", rule: { es: "la respuesta corta repite el auxiliar" } }
-          - { wrong: Did you went there?, right: "Did you **go** there?", rule: { en: "did + base verb", es: "did + forma base" } }
-          - { wrong: She didn't called., right: "She didn't **call**.", rule: { en: "didn't + base verb", es: "didn't + forma base" } }
-          - { for: [es], wrong: I no went to school., right: "I **didn't go** to school.", rule: { es: "negativa: didn't + V" } }
-          - { for: [en], wrong: I goed home., right: "I **went** home.", rule: { en: "go → went (irregular verb)" } }
-          - { for: [en], wrong: Did he was late?, right: "**Was** he late?", rule: { en: "be makes questions by itself" } }
-          - { for: [es], wrong: Before two years I lived there., right: "I lived there two years **ago**.", rule: { es: "*hace dos años* = two years ago, al final" } }
+          - { level: A1, wrong: She work here., right: "She **works** here.", rule: { en: "he / she / it → V-s", es: "he / she / it → V-s" } }
+          - { level: A1, for: [es], wrong: Works in a bank., right: "**She** works in a bank.", rule: { es: "el sujeto siempre aparece" } }
+          - { level: A1, for: [es], wrong: He no works., right: "He **doesn't work**.", rule: { es: "negativa: doesn't + V" } }
+          - { level: A1, wrong: He doesn't works., right: "He doesn't **work**.", rule: { en: "helper + base verb", es: "auxiliar + forma base" } }
+          - { level: A1, wrong: Where you live?, right: "Where **do** you live?", rule: { en: "questions need a helper", es: "la pregunta lleva auxiliar" } }
+          - { level: A1, for: [es], wrong: "Do you like tea? — Yes, I like.", right: "Yes, I **do**.", rule: { es: "la respuesta corta repite el auxiliar" } }
+          - { level: A1, wrong: Did you went there?, right: "Did you **go** there?", rule: { en: "did + base verb", es: "did + forma base" } }
+          - { level: A1, wrong: She didn't called., right: "She didn't **call**.", rule: { en: "didn't + base verb", es: "didn't + forma base" } }
+          - { level: A1, for: [es], wrong: I no went to school., right: "I **didn't go** to school.", rule: { es: "negativa: didn't + V" } }
+          - { level: A1, for: [en], wrong: I goed home., right: "I **went** home.", rule: { en: "go → went (irregular verb)" } }
+          - { level: A1, for: [en], wrong: Did he was late?, right: "**Was** he late?", rule: { en: "be makes questions by itself" } }
+          - { level: A1, for: [es], wrong: Before two years I lived there., right: "I lived there two years **ago**.", rule: { es: "*hace dos años* = two years ago, al final" } }
           - { for: [en], level: A2, wrong: He will goes., right: "He will **go**.", rule: { en: "will + base verb" } }
           - { for: [es], level: A2, wrong: I will to help you., right: "I **will help** you.", rule: { es: "will va directamente con el verbo" } }
           - { level: A2, wrong: Do you will come?, right: "**Will** you come?", rule: { en: "will makes questions by itself", es: "will forma la pregunta por sí solo" } }

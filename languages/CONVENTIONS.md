@@ -37,7 +37,7 @@ languages/
 | `site.yaml` | `schema/site.schema.json` | product name, URLs, explanation languages with their names and `enabled` switch |
 | `levels.yaml` | `schema/levels.schema.json` | the level scale: code, name, description, colour per level |
 | `interface.yaml` | `schema/interface.schema.json` | interface wording by key, per explanation language; block headings and column titles the generator writes |
-| `curriculum.yaml` | `schema/curriculum.schema.json` | languages (with an `enabled` switch) → sections → topics (slug, levels, optional title) |
+| `curriculum.yaml` | `schema/curriculum.schema.json` | languages (with an `enabled` switch) → sections → topics (slug, optional title, levels of a planned topic) |
 
 `enabled: false` on a language being learned (`curriculum.yaml`) or an explanation language
 (`site.yaml`) keeps it from readers in every app; its data stays and `npm run check` still validates it.
@@ -56,8 +56,8 @@ languages/
 
 ## 3. Levels
 
-`levels.yaml` defines the scale; every app takes level codes, names, descriptions and colours from
-it, and the schemas list exactly its codes (`npm run check` compares them).
+`levels.yaml` defines the scale, lowest first; every app takes level codes, names, descriptions
+and colours from it, and the schemas list exactly its codes (`npm run check` compares them).
 
 | Level | Name |
 |---|---|
@@ -65,16 +65,30 @@ it, and the schemas list exactly its codes (`npm run check` compares them).
 | `A1` | Beginner |
 | `A2` | Elementary |
 | `B1` | Intermediate |
+| `B2` | Upper intermediate |
+| `C1` | Advanced |
+| `C2` | Proficiency |
 
-- A topic lists every level it covers in `levels`; it matches the range in `curriculum.yaml`.
-- Every section has a `level`: one level, or a range from its base to its top, `A1-A2`.
-- An item (table row, errors row, bullet, text) is at the section's base unless it carries its own
-  `level`; it carries one only when it is above the base, and within the range.
-- The range ends at the highest level an item carries, and at least one item stays at the base.
-- Every level in `levels` is covered by at least one section.
-- A marked item renders with a level badge at its start: in the first cell of a table row, at the
-  start of a bullet. A topic at a single level shows its level once, in the header.
-- `npm run check` enforces every rule in this list.
+**Levels live on the leaves.** Every leaf carries its `level`: a table row, an errors row, a
+bullet, a text block. Everything above a leaf takes its range from the leaves under it, from the
+lowest level to the highest: a block, a section, the cheatsheet, the topic, and a curriculum
+section in the menu.
+
+- A written topic's range comes from its data. A planned topic's entry in `curriculum.yaml`
+  gives `levels`, one level or a range such as `A1-B1`, until its topic file exists.
+- The cheatsheet's range lies within the range of the sections.
+- `npm run check` enforces these rules; `npm test` and `npm run e2e` test the pages built from them.
+
+**Levels on the page.**
+
+- A badge shows a range, lowest–highest, in the colour of its lowest level. `levels.yaml` gives
+  each level one colour per theme, and every badge takes it from there.
+- The topic title, section headings, the rail and the menu show their range. A block shows its
+  range when it starts above its section; a leaf shows its level when it sits above its block's
+  lowest level. A topic at a single level shows its level once, in the header.
+- The level filter hides every element that starts above the chosen level, so a block hides with
+  its last leaf and a menu entry with its topic. Badges read up to the chosen level: A1–B1 reads
+  A1–A2 at A2. The rail keeps every entry and greys out the ones the filter hides.
 
 ## 4. Text values
 
@@ -83,7 +97,7 @@ it, and the schemas list exactly its codes (`npm run check` compares them).
 | plain | `"I **live** in Madrid."` | same in every explanation language: examples, forms, symbols |
 | localized | `{ en: "…", es: "…" }` | explanation text |
 | example | `{ ex: "Vivo aquí.", tr: { en: "I live here." } }` | an example with its translations |
-| item | `{ text, ex, tr, level, for }` | a bullet or paragraph combining explanation and example |
+| item | `{ level, text, ex, tr, for }` | a bullet: explanation, example or both, with its level |
 
 - Inline formatting inside strings: `**bold**` marks the target form, `*italic*` marks a gloss.
 - Links point to topic IDs: `[To be](id:en.verbs.to-be)`. The renderers turn them into
@@ -96,10 +110,10 @@ it, and the schemas list exactly its codes (`npm run check` compares them).
 
 | Field | Content |
 |---|---|
-| `id`, `lang`, `kind`, `levels`, `tags`, `concepts`, `related` | identity and links |
+| `id`, `lang`, `kind`, `tags`, `concepts`, `related` | identity and links |
 | `status` | `draft` or `approved`, per explanation language |
 | `title`, `summary` | localized; the summary follows the rules below |
-| `cheatsheet` | `level` and `content`: the whole topic in one table, section 00 (§8) |
+| `cheatsheet` | `content`: the whole topic in one table, section 00 (§8) |
 | `sections` | the full guide, in order |
 
 **The summary.** The page shows the summary above the guide; topic cards and the meta description
@@ -152,10 +166,10 @@ Block types inside `content`:
 
 | Type | Fields | Renders as |
 |---|---|---|
-| `text` | `text`, `ex`, `tr` | a paragraph |
-| `bullets` | `items` | a bullet list |
+| `text` | `level`, `text`, `ex`, `tr` | a paragraph |
+| `bullets` | `items`, each an item with its `level` | a bullet list |
 | `table` | `columns` (`key`, `label`, `group`, `merge`, `center`, `for`), `rows` (cells by key, `level`, `tr`, `for`) | a table; `\n` in a cell starts a new line; a row without a key leaves that cell empty |
-| `errors` | `rows` (`wrong`, `right`, `rule`, `for`), `audience` | a ✗ / ✓ / rule table |
+| `errors` | `rows` (`level`, `wrong`, `right`, `rule`, `for`), `audience` | a ✗ / ✓ / rule table |
 
 ## 6. Translations and readers
 
@@ -209,9 +223,8 @@ the sentence. The tense cheatsheets use one: Tense, then Question (Helper, Subje
 
 ## 8. Cheatsheets
 
-Every topic has one `cheatsheet`: the whole topic in one table, on one screen. Its `level` runs
-from the topic's base level to the highest level a row carries, and a row above the base carries
-its own `level`, as in a section (§3).
+Every topic has one `cheatsheet`: the whole topic in one table, on one screen. Each row carries its
+`level`, and the cheatsheet's range runs from its lowest row to its highest (§3).
 
 - Every fact in it appears in the sections.
 - One table: forms and patterns, the key rules and the top traps. A topic built on a verb pattern
@@ -223,8 +236,8 @@ its own `level`, as in a section (§3).
 
 | Set | Content |
 |---|---|
-| Per level: A0, A1, A2, B1 | the cheatsheets of the topics at that level, rows up to that level |
-| Progressive: A0–A1, A0–A2, A0–B1 | the cheatsheets of every topic up to the top level, rows up to that level |
+| Per level: A0, A1, … | the cheatsheets of the topics at that level, rows up to that level |
+| Progressive: A0–A1, A0–A2, … | the cheatsheets of every topic up to the top level, rows up to that level |
 | Per topic | one topic's cheatsheet |
 | Per section | one section's cheatsheets, in topic order |
 
@@ -251,12 +264,12 @@ Every page has a clean, stable, named URL. This is a requirement for every app a
 | `{language}` | `slug` of the learned language in `curriculum.yaml` | `english`, `spanish` |
 | `{section}` | section slug, without its number | `tenses`, `conjugation` |
 | `{topic}` | topic slug | `simple-tenses` |
-| `{sheet}` | `a0`…`b1` (level), `a0-a1` / `a0-a2` / `a0-b1` (progressive), `{section}`, `{section}/{topic}` | `a0-b1` |
+| `{sheet}` | `a0`…`c2` (level), `a0-a1`…`a0-c2` (progressive), up to the highest level the topics reach; `{section}`, `{section}/{topic}` | `a0-b1` |
 
 - URLs use lowercase ASCII letters, digits, hyphens and slashes, and end with `/`.
 - URLs come from slugs, never from titles. A published slug stays fixed.
 - A page carries the choice of each switch it has in query parameters, so a shared link opens the
-  same state: `?level=a0`…`?level=b1` on topic and track pages, `?view=cheatsheet` or
+  same state: `?level=a0`…`?level=c2` on topic and track pages, `?view=cheatsheet` or
   `?view=extended` on topic pages. A page opened without them takes the reader's last choice, and
   the highest level and Extended the first time. The theme lives in the browser.
 - Page state never travels in percent-encoded text or fragments.

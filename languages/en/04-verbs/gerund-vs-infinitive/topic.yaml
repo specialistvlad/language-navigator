@@ -2,7 +2,6 @@
 id: en.verbs.gerund-vs-infinitive
 lang: en
 kind: grammar
-levels: [B1]
 tags: [verb-patterns, gerund, infinitive]
 concepts: [verb-patterns]
 related: [en.sentence-building.reported-speech, en.sentence-building.questions-negatives, en.tenses.future-forms]
@@ -14,7 +13,6 @@ summary:
   es: "Verbos seguidos de -ing, verbos seguidos de to + infinitivo y verbos que admiten ambas formas con cambio de significado. Tras una preposición va la forma -ing: **before leaving**, **interested in learning**."
 
 cheatsheet:
-  level: B1
   content:
     - type: table
       columns:
@@ -22,90 +20,97 @@ cheatsheet:
         - { key: verbs, label: { en: Verbs, es: Verbos } }
         - { key: example, label: { en: Example, es: Ejemplo } }
       rows:
-        - { pattern: verb + -ing, verbs: "enjoy, finish, mind, avoid, suggest, keep", example: "I **enjoy cooking**.", tr: { es: Disfruto cocinando. } }
-        - { pattern: verb + to + V, verbs: "want, decide, hope, plan, need, would like", example: "They **decided to move**.", tr: { es: Decidieron mudarse. } }
-        - { pattern: want / need / would like + person + to + V, verbs: "want, need, would like", example: "I **want you to come**.", tr: { es: Quiero que vengas. } }
-        - { pattern: preposition + -ing, verbs: "interested in, before, without", example: "Wash your hands **before eating**.", tr: { es: Lávate las manos antes de comer. } }
-        - { pattern: -ing as subject, verbs: "—", example: "**Swimming** is good for you.", tr: { es: Nadar es bueno para ti. } }
-        - { pattern: look forward to + -ing, verbs: "to is a preposition", example: "I look forward to **seeing** you.", tr: { es: Tengo ganas de verte. } }
-        - { pattern: stop + -ing / to + V, verbs: stop, example: "He **stopped smoking**. / He **stopped to smoke**.", tr: { es: Dejó de fumar. / Se paró a fumar. } }
-        - { pattern: remember + -ing / to + V, verbs: remember, example: "I **remember locking** it. / **Remember to lock** it.", tr: { es: Recuerdo haber cerrado. / Acuérdate de cerrar. } }
-        - { pattern: try + -ing / to + V, verbs: try, example: "**Try adding** salt. / I **tried to open** it.", tr: { es: Prueba a echarle sal. / Intenté abrirlo. } }
-        - { pattern: either form, verbs: "like, love, hate, prefer", example: "I **like** swimming. / I **like** to swim.", tr: { es: Me gusta nadar. } }
+        - { level: B1, pattern: verb + -ing, verbs: "enjoy, finish, mind, avoid, suggest, keep", example: "I **enjoy cooking**.", tr: { es: Disfruto cocinando. } }
+        - { level: B1, pattern: verb + to + V, verbs: "want, decide, hope, plan, need, would like", example: "They **decided to move**.", tr: { es: Decidieron mudarse. } }
+        - { level: B1, pattern: want / need / would like + person + to + V, verbs: "want, need, would like", example: "I **want you to come**.", tr: { es: Quiero que vengas. } }
+        - { level: B1, pattern: preposition + -ing, verbs: "interested in, before, without", example: "Wash your hands **before eating**.", tr: { es: Lávate las manos antes de comer. } }
+        - { level: B1, pattern: -ing as subject, verbs: "—", example: "**Swimming** is good for you.", tr: { es: Nadar es bueno para ti. } }
+        - { level: B1, pattern: look forward to + -ing, verbs: "to is a preposition", example: "I look forward to **seeing** you.", tr: { es: Tengo ganas de verte. } }
+        - { level: B1, pattern: stop + -ing / to + V, verbs: stop, example: "He **stopped smoking**. / He **stopped to smoke**.", tr: { es: Dejó de fumar. / Se paró a fumar. } }
+        - { level: B1, pattern: remember + -ing / to + V, verbs: remember, example: "I **remember locking** it. / **Remember to lock** it.", tr: { es: Recuerdo haber cerrado. / Acuérdate de cerrar. } }
+        - { level: B1, pattern: try + -ing / to + V, verbs: try, example: "**Try adding** salt. / I **tried to open** it.", tr: { es: Prueba a echarle sal. / Intenté abrirlo. } }
+        - { level: B1, pattern: either form, verbs: "like, love, hate, prefer", example: "I **like** swimming. / I **like** to swim.", tr: { es: Me gusta nadar. } }
 
 sections:
   - title: { en: "Form: verb + -ing", es: "Forma: verbo + -ing" }
-    level: B1
     content:
       - type: table
         columns:
           - { key: verb, label: { en: Verb, es: Verbo } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { verb: enjoy, example: "I **enjoy cooking**.", tr: { es: Disfruto cocinando. } }
-          - { verb: finish, example: "She **finished reading** the book.", tr: { es: Terminó de leer el libro. } }
-          - { verb: mind, example: "Do you **mind waiting**?", tr: { es: ¿Te importa esperar? } }
-          - { verb: avoid, example: "He **avoids driving** at night.", tr: { es: Evita conducir de noche. } }
-          - { verb: suggest, example: "I **suggest taking** a taxi.", tr: { es: Sugiero coger un taxi. } }
-          - { verb: keep, example: "She **keeps asking** questions.", tr: { es: No deja de hacer preguntas. } }
-          - { verb: "practise, consider, can't stand", example: "I **can't stand waiting**.", tr: { es: No soporto esperar. } }
+          - { level: B1, verb: enjoy, example: "I **enjoy cooking**.", tr: { es: Disfruto cocinando. } }
+          - { level: B1, verb: finish, example: "She **finished reading** the book.", tr: { es: Terminó de leer el libro. } }
+          - { level: B1, verb: mind, example: "Do you **mind waiting**?", tr: { es: ¿Te importa esperar? } }
+          - { level: B1, verb: avoid, example: "He **avoids driving** at night.", tr: { es: Evita conducir de noche. } }
+          - { level: B1, verb: suggest, example: "I **suggest taking** a taxi.", tr: { es: Sugiero coger un taxi. } }
+          - { level: B1, verb: keep, example: "She **keeps asking** questions.", tr: { es: No deja de hacer preguntas. } }
+          - { level: B1, verb: "practise, consider, can't stand", example: "I **can't stand waiting**.", tr: { es: No soporto esperar. } }
       - type: bullets
         items:
-          - en: "These verbs are followed by **-ing**: I enjoy **cooking**."
-            es: "Estos verbos van seguidos de **-ing**: I enjoy **cooking**."
-          - { for: [es], text: { es: "Muchos verbos que en español llevan infinitivo llevan -ing en inglés: *disfruto cocinando*, *evito conducir*." } }
+          - level: B1
+            text:
+              en: "These verbs are followed by **-ing**: I enjoy **cooking**."
+              es: "Estos verbos van seguidos de **-ing**: I enjoy **cooking**."
+          - { level: B1, for: [es], text: { es: "Muchos verbos que en español llevan infinitivo llevan -ing en inglés: *disfruto cocinando*, *evito conducir*." } }
 
   - title: { en: "Form: verb + to + infinitive", es: "Forma: verbo + to + infinitivo" }
-    level: B1
     content:
       - type: table
         columns:
           - { key: verb, label: { en: Verb, es: Verbo } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { verb: want, example: "I **want to go** home.", tr: { es: Quiero irme a casa. } }
-          - { verb: decide, example: "They **decided to move**.", tr: { es: Decidieron mudarse. } }
-          - { verb: hope, example: "We **hope to see** you soon.", tr: { es: Esperamos verte pronto. } }
-          - { verb: plan, example: "He **plans to study** abroad.", tr: { es: Piensa estudiar en el extranjero. } }
-          - { verb: need, example: "You **need to rest**.", tr: { es: Necesitas descansar. } }
-          - { verb: would like / would love, example: "I'**d like to book** a table.", tr: { es: Quisiera reservar una mesa. } }
-          - { verb: "learn, agree, promise, manage", example: "She **learned to swim**.", tr: { es: Aprendió a nadar. } }
+          - { level: B1, verb: want, example: "I **want to go** home.", tr: { es: Quiero irme a casa. } }
+          - { level: B1, verb: decide, example: "They **decided to move**.", tr: { es: Decidieron mudarse. } }
+          - { level: B1, verb: hope, example: "We **hope to see** you soon.", tr: { es: Esperamos verte pronto. } }
+          - { level: B1, verb: plan, example: "He **plans to study** abroad.", tr: { es: Piensa estudiar en el extranjero. } }
+          - { level: B1, verb: need, example: "You **need to rest**.", tr: { es: Necesitas descansar. } }
+          - { level: B1, verb: would like / would love, example: "I'**d like to book** a table.", tr: { es: Quisiera reservar una mesa. } }
+          - { level: B1, verb: "learn, agree, promise, manage", example: "She **learned to swim**.", tr: { es: Aprendió a nadar. } }
       - type: bullets
         items:
-          - en: "These verbs are followed by **to** + base verb."
-            es: "Estos verbos van seguidos de **to** + verbo en forma base."
-          - text:
+          - level: B1
+            text:
+              en: "These verbs are followed by **to** + base verb."
+              es: "Estos verbos van seguidos de **to** + verbo en forma base."
+          - level: B1
+            text:
               en: "With **want**, **need** and **would like**, a person can come before **to**:"
               es: "Con **want**, **need** y **would like**, puede ir una persona antes de **to**:"
             ex: "I **want you to come**."
             tr: { es: Quiero que vengas. }
-          - { for: [es], text: { es: "*quiero que vengas* (subjuntivo) → want + persona + to + infinitivo." } }
+          - { level: B1, for: [es], text: { es: "*quiero que vengas* (subjuntivo) → want + persona + to + infinitivo." } }
 
   - title: { en: "Form: after prepositions and as subject", es: "Forma: tras preposiciones y como sujeto" }
-    level: B1
     content:
       - type: table
         columns:
           - { key: use, label: { en: Position, es: Posición } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { use: { en: "after a preposition", es: "tras una preposición" }, example: "I'm interested **in learning** Spanish.", tr: { es: Me interesa aprender español. } }
-          - { use: { en: "after a preposition", es: "tras una preposición" }, example: "Wash your hands **before eating**.", tr: { es: Lávate las manos antes de comer. } }
-          - { use: { en: "after a preposition", es: "tras una preposición" }, example: "She left **without saying** goodbye.", tr: { es: Se fue sin despedirse. } }
-          - { use: { en: "as the subject", es: "como sujeto" }, example: "**Swimming** is good for you.", tr: { es: Nadar es bueno para ti. } }
-          - { use: { en: "after look forward to", es: "tras look forward to" }, example: "I look forward to **seeing** you.", tr: { es: Tengo ganas de verte. } }
+          - { level: B1, use: { en: "after a preposition", es: "tras una preposición" }, example: "I'm interested **in learning** Spanish.", tr: { es: Me interesa aprender español. } }
+          - { level: B1, use: { en: "after a preposition", es: "tras una preposición" }, example: "Wash your hands **before eating**.", tr: { es: Lávate las manos antes de comer. } }
+          - { level: B1, use: { en: "after a preposition", es: "tras una preposición" }, example: "She left **without saying** goodbye.", tr: { es: Se fue sin despedirse. } }
+          - { level: B1, use: { en: "as the subject", es: "como sujeto" }, example: "**Swimming** is good for you.", tr: { es: Nadar es bueno para ti. } }
+          - { level: B1, use: { en: "after look forward to", es: "tras look forward to" }, example: "I look forward to **seeing** you.", tr: { es: Tengo ganas de verte. } }
       - type: bullets
         items:
-          - en: "A verb after a preposition takes **-ing**."
-            es: "Un verbo detrás de una preposición lleva **-ing**."
-          - en: "In **look forward to**, **to** is a preposition, so **-ing** follows."
-            es: "En **look forward to**, **to** es una preposición, así que sigue **-ing**."
-          - en: "The -ing form works as a noun and can be the subject."
-            es: "La forma -ing funciona como un sustantivo y puede ser el sujeto."
-          - { for: [es], text: { es: "El español usa el infinitivo en estos casos: *antes de salir* → before **leaving**; *sin decir nada* → without **saying** anything." } }
+          - level: B1
+            text:
+              en: "A verb after a preposition takes **-ing**."
+              es: "Un verbo detrás de una preposición lleva **-ing**."
+          - level: B1
+            text:
+              en: "In **look forward to**, **to** is a preposition, so **-ing** follows."
+              es: "En **look forward to**, **to** es una preposición, así que sigue **-ing**."
+          - level: B1
+            text:
+              en: "The -ing form works as a noun and can be the subject."
+              es: "La forma -ing funciona como un sustantivo y puede ser el sujeto."
+          - { level: B1, for: [es], text: { es: "El español usa el infinitivo en estos casos: *antes de salir* → before **leaving**; *sin decir nada* → without **saying** anything." } }
 
   - title: { en: "Verbs with both forms", es: "Verbos con las dos formas" }
-    level: B1
     content:
       - type: table
         columns:
@@ -113,27 +118,28 @@ sections:
           - { key: ing, label: { en: "+ -ing", es: "+ -ing" } }
           - { key: to, label: { en: "+ to + infinitive", es: "+ to + infinitivo" } }
         rows:
-          - { verb: stop, ing: { ex: "He **stopped smoking**. (He quit.)", tr: { es: Dejó de fumar. } }, to: { ex: "He **stopped to smoke**. (He paused in order to smoke.)", tr: { es: Se paró a fumar. } } }
-          - { verb: remember, ing: { ex: "I **remember locking** the door. (I recall the action.)", tr: { es: Recuerdo haber cerrado la puerta. } }, to: { ex: "**Remember to lock** the door. (Do not forget.)", tr: { es: Acuérdate de cerrar la puerta. } } }
-          - { verb: try, ing: { ex: "**Try adding** salt. (Test it.)", tr: { es: Prueba a echarle sal. } }, to: { ex: "I **tried to open** it. (I made an effort.)", tr: { es: Intenté abrirlo. } } }
+          - { level: B1, verb: stop, ing: { ex: "He **stopped smoking**. (He quit.)", tr: { es: Dejó de fumar. } }, to: { ex: "He **stopped to smoke**. (He paused in order to smoke.)", tr: { es: Se paró a fumar. } } }
+          - { level: B1, verb: remember, ing: { ex: "I **remember locking** the door. (I recall the action.)", tr: { es: Recuerdo haber cerrado la puerta. } }, to: { ex: "**Remember to lock** the door. (Do not forget.)", tr: { es: Acuérdate de cerrar la puerta. } } }
+          - { level: B1, verb: try, ing: { ex: "**Try adding** salt. (Test it.)", tr: { es: Prueba a echarle sal. } }, to: { ex: "I **tried to open** it. (I made an effort.)", tr: { es: Intenté abrirlo. } } }
       - type: bullets
         items:
-          - en: "**like**, **love**, **hate** and **prefer** take either form, with almost the same meaning."
-            es: "**like**, **love**, **hate** y **prefer** admiten las dos formas, con casi el mismo significado."
-          - { en: "I **like** swimming. / I **like** to swim.", es: "I **like** swimming. / I **like** to swim. (*me gusta nadar*)" }
+          - level: B1
+            text:
+              en: "**like**, **love**, **hate** and **prefer** take either form, with almost the same meaning."
+              es: "**like**, **love**, **hate** y **prefer** admiten las dos formas, con casi el mismo significado."
+          - { level: B1, text: { en: "I **like** swimming. / I **like** to swim.", es: "I **like** swimming. / I **like** to swim. (*me gusta nadar*)" } }
 
   - title: { en: Typical errors, es: Errores típicos }
-    level: B1
     content:
       - type: errors
         audience: true
         rows:
-          - { wrong: I enjoy to cook., right: "I enjoy **cooking**.", rule: { en: "enjoy, finish, mind, avoid, suggest, keep → -ing", es: "enjoy, finish, mind, avoid, suggest, keep → -ing" } }
-          - { wrong: She decided going home., right: "She decided **to go** home.", rule: { en: "want, decide, hope, plan, need → to + infinitive", es: "want, decide, hope, plan, need → to + infinitivo" } }
-          - { wrong: I'm interested in learn Spanish., right: "I'm interested in **learning** Spanish.", rule: { en: "after a preposition → -ing", es: "tras una preposición → -ing" } }
-          - { for: [es], wrong: "Before to leave, call me.", right: "Before **leaving**, call me.", rule: { es: "*antes de salir* → before + -ing, sin to" } }
-          - { for: [es], wrong: I want that you come., right: "I want **you to come**.", rule: { es: "*quiero que vengas* → want + persona + to + infinitivo" } }
-          - { for: [es], wrong: Swim is good for you., right: "**Swimming** is good for you.", rule: { es: "el infinitivo de sujeto (*nadar es…*) → -ing" } }
-          - { wrong: He suggested to go by train., right: "He suggested **going** by train.", rule: { en: "suggest + -ing", es: "suggest + -ing" } }
-          - { wrong: I look forward to see you., right: "I look forward to **seeing** you.", rule: { en: "to is a preposition here → -ing", es: "to es una preposición aquí → -ing" } }
-          - { for: [es], wrong: She keeps to ask questions., right: "She keeps **asking** questions.", rule: { es: "*no deja de preguntar* → keep + -ing" } }
+          - { level: B1, wrong: I enjoy to cook., right: "I enjoy **cooking**.", rule: { en: "enjoy, finish, mind, avoid, suggest, keep → -ing", es: "enjoy, finish, mind, avoid, suggest, keep → -ing" } }
+          - { level: B1, wrong: She decided going home., right: "She decided **to go** home.", rule: { en: "want, decide, hope, plan, need → to + infinitive", es: "want, decide, hope, plan, need → to + infinitivo" } }
+          - { level: B1, wrong: I'm interested in learn Spanish., right: "I'm interested in **learning** Spanish.", rule: { en: "after a preposition → -ing", es: "tras una preposición → -ing" } }
+          - { level: B1, for: [es], wrong: "Before to leave, call me.", right: "Before **leaving**, call me.", rule: { es: "*antes de salir* → before + -ing, sin to" } }
+          - { level: B1, for: [es], wrong: I want that you come., right: "I want **you to come**.", rule: { es: "*quiero que vengas* → want + persona + to + infinitivo" } }
+          - { level: B1, for: [es], wrong: Swim is good for you., right: "**Swimming** is good for you.", rule: { es: "el infinitivo de sujeto (*nadar es…*) → -ing" } }
+          - { level: B1, wrong: He suggested to go by train., right: "He suggested **going** by train.", rule: { en: "suggest + -ing", es: "suggest + -ing" } }
+          - { level: B1, wrong: I look forward to see you., right: "I look forward to **seeing** you.", rule: { en: "to is a preposition here → -ing", es: "to es una preposición aquí → -ing" } }
+          - { level: B1, for: [es], wrong: She keeps to ask questions., right: "She keeps **asking** questions.", rule: { es: "*no deja de preguntar* → keep + -ing" } }

@@ -17,5 +17,7 @@ jobs:
       - uses: oven-sh/setup-bun@v2
       - name: Install
         run: bun install --frozen-lockfile
+      - name: Install Chromium for the browser tests
+        run: bunx playwright install --with-deps chromium
       - name: Verify code and content
         run: bun run verify

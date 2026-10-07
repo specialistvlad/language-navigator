@@ -1,5 +1,6 @@
 // The home page, where the language is chosen, and the missing page.
-import { listOf, LEVELS, localize, say, SITE } from "../../../scripts/lib.ts";
+import { listOf, localize, say, SITE } from "../../../scripts/lib.ts";
+import { join, refRange } from "../../../scripts/levels.ts";
 import { type Context, EXPLAINS, homeLanguage } from "../context.ts";
 import { page, ui } from "../layout.ts";
 import { escapeHtml } from "../render.ts";
@@ -9,14 +10,16 @@ import { homeUrl, trackUrl } from "../urls.ts";
 export function homePage(ctx: Context): void {
   const { o, refs } = ctx;
   const home = homeLanguage();
+  // The levels the curriculum covers: written topics by their data, planned ones by their entry.
+  const range = join(refs.filter((r) => ctx.languages.some((l) => l.code === r.lang)).map((r) => refRange(r)));
   const homeValues = {
     site: SITE.name,
     languages: listOf(
       ctx.languages.map((l) => localize(l.name, home)),
       home,
     ),
-    from: LEVELS[0] ?? "",
-    to: LEVELS.at(-1) ?? "",
+    from: range?.from ?? "",
+    to: range?.to ?? "",
     explain: listOf(
       SITE.explain.filter((e) => e.enabled).map((e) => say("explainedIn", home, { name: localize(e.name, home) })),
       home,

@@ -1,21 +1,11 @@
-/* Level filter (topic and track pages) and the Cheatsheet view */
-
-html:is([data-page="topic"], [data-page="track"])[data-level="A0"]
-  :is([data-level="A1"], [data-level="A2"], [data-level="B1"]):not(.toc > li),
-html:is([data-page="topic"], [data-page="track"])[data-level="A1"] :is([data-level="A2"], [data-level="B1"]):not(.toc > li),
-html:is([data-page="topic"], [data-page="track"])[data-level="A2"] [data-level="B1"]:not(.toc > li) {
-  display: none !important;
-}
+/* Level filter rules come from levels.yaml (assets.ts, levels.css); the Cheatsheet view is here */
 
 /* Cheatsheet view: section 00 alone */
 html[data-page="topic"][data-view="cheatsheet"] .sections > section.part:not(.cheatsheet) {
   display: none;
 }
 
-/* The rail keeps every entry: what the level filter or the view hides turns grey */
-html[data-page="topic"][data-level="A0"] .toc > li:is([data-level="A1"], [data-level="A2"], [data-level="B1"]),
-html[data-page="topic"][data-level="A1"] .toc > li:is([data-level="A2"], [data-level="B1"]),
-html[data-page="topic"][data-level="A2"] .toc > li[data-level="B1"],
+/* The rail keeps every entry: what the view hides turns grey */
 html[data-page="topic"][data-view="cheatsheet"] .toc > li.guide {
   opacity: 0.4;
   pointer-events: none;
@@ -42,11 +32,6 @@ html[data-page="topic"][data-view="cheatsheet"] .toc > li.guide {
   font: inherit;
   font-weight: 600;
   cursor: pointer;
-}
-html[data-level="A0"] .filter-empty:not([data-needs="A0"]),
-html[data-level="A1"] .filter-empty:is([data-needs="A2"], [data-needs="B1"]),
-html[data-level="A2"] .filter-empty[data-needs="B1"] {
-  display: block;
 }
 html[data-view="cheatsheet"] .filter-empty.extended,
 html:not([data-view="cheatsheet"]) .filter-empty.cheatsheet {

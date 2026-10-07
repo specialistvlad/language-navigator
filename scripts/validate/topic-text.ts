@@ -15,11 +15,6 @@ export function checkLanguages(topic: Topic, where: string, report: Report): voi
     for (const l of langs) if (!filled(value[l])) report(where, `${path} has no "${l}" text`);
   };
   const item = (it: Item, path: string, langs: Explain[]): void => {
-    if (typeof it === "string") return;
-    if (isLocalized(it)) {
-      need(it, path, langs);
-      return;
-    }
     need(it.text, `${path}.text`, scope(it, langs));
   };
   const blocks = (list: Block[], path: string, langs: Explain[]): void => {

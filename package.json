@@ -10,11 +10,13 @@
     "start": "bun --watch apps/web/server.ts",
     "build": "bun run apps/web/build.ts",
     "check": "bun run scripts/check.ts",
+    "test": "bun test",
+    "e2e": "bun test ./apps/web/levels.e2e.ts",
     "typecheck": "tsc -p .",
     "lint": "eslint . && bun run scripts/lint-css.ts",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "verify": "bun run scripts/schema-types.ts --check && bun run typecheck && bun run lint && bun run format:check && bun run check",
+    "verify": "bun run scripts/schema-types.ts --check && bun run typecheck && bun run lint && bun run format:check && bun run check && bun run test && bun run e2e",
     "types": "bun run scripts/schema-types.ts"
   },
   "dependencies": {
@@ -27,6 +29,8 @@
     "eslint": "^10.12.0",
     "globals": "^17.13.0",
     "json-schema-to-typescript": "^16.0.0",
+    "linkedom": "^0.18.13",
+    "playwright": "^1.63.0",
     "prettier": "^3.9.9",
     "typescript": "npm:typescript@^6.0.2",
     "typescript-eslint": "^8.71.1",

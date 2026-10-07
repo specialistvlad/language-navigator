@@ -136,8 +136,8 @@ export function page(o: PageOptions): string {
   <meta property="og:title" content="${escapeHtml(o.title)}">
   <meta property="og:description" content="${escapeHtml(o.description)}">
   <meta property="og:url" content="${url(o.path)}">
-  <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/levels.css">
+  <link rel="stylesheet" href="/style.css">
   <script>${PREFS}</script>
 </head>
 <body>

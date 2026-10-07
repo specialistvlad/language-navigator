@@ -33,6 +33,13 @@ Defined in `languages/levels.yaml`, which every app reads.
 | A1 | Beginner | introduce themselves, ask and answer simple everyday questions |
 | A2 | Elementary | describe routines, past events and immediate needs |
 | B1 | Intermediate | handle travel situations, describe experiences, give reasons and opinions |
+| B2 | Upper intermediate | follow complex texts, talk fluently with native speakers and argue a point of view |
+| C1 | Advanced | understand long, demanding texts and use the language flexibly at work and in study |
+| C2 | Proficiency | understand virtually everything and express fine shades of meaning |
+
+Every table row, bullet and paragraph carries its level; sections, topics and menu entries take
+their range from what they hold. The level filter shows what starts at or below the chosen level
+([languages/CONVENTIONS.md](languages/CONVENTIONS.md) §3).
 
 ## Layout
 
@@ -65,10 +72,12 @@ language-navigator/
 | `npm start` | builds the site into `build/dev/`, serves it on port 47380 on every interface (open the printed network address on a phone), rebuilds and reloads on every change, and lists the same problems as `npm run check` |
 | `npm run build` | builds the static site into `build/web/`; `SITE_URL=https://… npm run build` sets the public URL; its path prefixes every link |
 | `npm run check` | validates all data against the schemas and conventions |
+| `npm test` | unit tests, and checks on every built page that levels, badges and the filter agree with the data |
+| `npm run e2e` | drives every topic and track page in Chromium at every level and view; `bunx playwright install chromium` installs the browser |
 | `npm run typecheck` | type-checks the code under strict TypeScript (`tsconfig.json`) |
 | `npm run lint` | lints the code with typescript-eslint's strict and stylistic type-checked rules (`eslint.config.js`) |
 | `npm run format` | formats the code with Prettier; `npm run format:check` only reports |
-| `npm run verify` | typecheck, lint, format check and data check together; CI runs it on every push and before publishing |
+| `npm run verify` | typecheck, lint, format check, data check, tests and browser tests together; CI runs it on every push and before publishing |
 
 ## Publishing
 

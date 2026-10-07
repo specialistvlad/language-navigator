@@ -2,7 +2,6 @@
 id: es.conjugation.presente-regular
 lang: es
 kind: grammar
-levels: [A1, A2]
 tags: [verbs, tenses, present, conjugation]
 concepts: [present-tense, conjugation]
 related: [es.conjugation.presente-irregular, es.conjugation.subject-pronouns-tu-usted, es.conjugation.conjugation-tables, es.tenses-moods.estar-gerundio, es.sentence-building.word-order-questions]
@@ -16,28 +15,26 @@ summary:
   es: "El presente de los verbos regulares en -ar, -er e -ir: hábitos y hechos. -er e -ir solo se distinguen en nosotros y vosotros: **comemos**, **vivimos**; **coméis**, **vivís**."
 
 cheatsheet:
-  level: A1
   content:
     - type: table
       columns:
         - { key: step, label: { en: Step, es: Paso } }
         - { key: example, label: { en: Example, es: Ejemplo } }
       rows:
-        - { step: { en: 1. Take the infinitive, es: 1. Tomar el infinitivo }, example: hablar }
-        - { step: { en: 2. Remove -ar / -er / -ir → stem, es: 2. Quitar -ar / -er / -ir → raíz }, example: habl- }
-        - { step: { en: 3. Add the ending for the person, es: 3. Añadir la terminación de la persona }, example: "habl- + -o → **hablo**" }
+        - { level: A1, step: { en: 1. Take the infinitive, es: 1. Tomar el infinitivo }, example: hablar }
+        - { level: A1, step: { en: 2. Remove -ar / -er / -ir → stem, es: 2. Quitar -ar / -er / -ir → raíz }, example: habl- }
+        - { level: A1, step: { en: 3. Add the ending for the person, es: 3. Añadir la terminación de la persona }, example: "habl- + -o → **hablo**" }
 
 sections:
   - title: { en: Overview, es: Resumen }
-    level: A1
     content:
       - type: text
+        level: A1
         text:
           en: "Every Spanish infinitive ends in **-ar**, **-er** or **-ir**."
           es: "Todo infinitivo español termina en **-ar**, **-er** o **-ir**."
 
   - title: { en: "Form: endings", es: "Forma: terminaciones" }
-    level: A1
     content:
       - type: table
         columns:
@@ -46,24 +43,29 @@ sections:
           - { key: er, label: -er }
           - { key: ir, label: -ir }
         rows:
-          - { person: yo, ar: -o, er: -o, ir: -o }
-          - { person: tú, ar: -as, er: -es, ir: -es }
-          - { person: él / ella / usted, ar: -a, er: -e, ir: -e }
-          - { person: nosotros / nosotras, ar: -amos, er: -emos, ir: -imos }
-          - { person: vosotros / vosotras, ar: -áis, er: -éis, ir: -ís }
-          - { person: ellos / ellas / ustedes, ar: -an, er: -en, ir: -en }
+          - { level: A1, person: yo, ar: -o, er: -o, ir: -o }
+          - { level: A1, person: tú, ar: -as, er: -es, ir: -es }
+          - { level: A1, person: él / ella / usted, ar: -a, er: -e, ir: -e }
+          - { level: A1, person: nosotros / nosotras, ar: -amos, er: -emos, ir: -imos }
+          - { level: A1, person: vosotros / vosotras, ar: -áis, er: -éis, ir: -ís }
+          - { level: A1, person: ellos / ellas / ustedes, ar: -an, er: -en, ir: -en }
       - type: bullets
         items:
-          - en: "**-er** and **-ir** share every ending except nosotros (-emos / -imos) and vosotros (-éis / -ís)."
-            es: "**-er** e **-ir** comparten todas las terminaciones menos nosotros (-emos / -imos) y vosotros (-éis / -ís)."
-          - { en: "**yo** always ends in **-o**.", es: "**yo** termina siempre en **-o**." }
-          - en: "**usted** (formal *you*, singular) takes the él / ella form; **ustedes** takes the ellos / ellas form."
-            es: "**usted** (tratamiento formal, singular) lleva la forma de él / ella; **ustedes** lleva la forma de ellos / ellas."
-          - en: "LatAm: **ustedes** is the only plural *you*; the vosotros forms are used in Spain."
-            es: "LatAm: **ustedes** es la única forma de plural para hablar a varias personas; las formas de vosotros se usan en España."
+          - level: A1
+            text:
+              en: "**-er** and **-ir** share every ending except nosotros (-emos / -imos) and vosotros (-éis / -ís)."
+              es: "**-er** e **-ir** comparten todas las terminaciones menos nosotros (-emos / -imos) y vosotros (-éis / -ís)."
+          - { level: A1, text: { en: "**yo** always ends in **-o**.", es: "**yo** termina siempre en **-o**." } }
+          - level: A1
+            text:
+              en: "**usted** (formal *you*, singular) takes the él / ella form; **ustedes** takes the ellos / ellas form."
+              es: "**usted** (tratamiento formal, singular) lleva la forma de él / ella; **ustedes** lleva la forma de ellos / ellas."
+          - level: A1
+            text:
+              en: "LatAm: **ustedes** is the only plural *you*; the vosotros forms are used in Spain."
+              es: "LatAm: **ustedes** es la única forma de plural para hablar a varias personas; las formas de vosotros se usan en España."
 
   - title: { en: "Form: model verbs", es: "Forma: verbos modelo" }
-    level: A1
     content:
       - type: table
         columns:
@@ -72,17 +74,17 @@ sections:
           - { key: comer, label: { en: comer (eat), es: comer } }
           - { key: vivir, label: { en: vivir (live), es: vivir } }
         rows:
-          - { person: yo, hablar: "habl**o**", comer: "com**o**", vivir: "viv**o**" }
-          - { person: tú, hablar: "habl**as**", comer: "com**es**", vivir: "viv**es**" }
-          - { person: él / ella / usted, hablar: "habl**a**", comer: "com**e**", vivir: "viv**e**" }
-          - { person: nosotros / nosotras, hablar: "habl**amos**", comer: "com**emos**", vivir: "viv**imos**" }
-          - { person: vosotros / vosotras, hablar: "habl**áis**", comer: "com**éis**", vivir: "viv**ís**" }
-          - { person: ellos / ellas / ustedes, hablar: "habl**an**", comer: "com**en**", vivir: "viv**en**" }
+          - { level: A1, person: yo, hablar: "habl**o**", comer: "com**o**", vivir: "viv**o**" }
+          - { level: A1, person: tú, hablar: "habl**as**", comer: "com**es**", vivir: "viv**es**" }
+          - { level: A1, person: él / ella / usted, hablar: "habl**a**", comer: "com**e**", vivir: "viv**e**" }
+          - { level: A1, person: nosotros / nosotras, hablar: "habl**amos**", comer: "com**emos**", vivir: "viv**imos**" }
+          - { level: A1, person: vosotros / vosotras, hablar: "habl**áis**", comer: "com**éis**", vivir: "viv**ís**" }
+          - { level: A1, person: ellos / ellas / ustedes, hablar: "habl**an**", comer: "com**en**", vivir: "viv**en**" }
 
   - title: { en: "Form: subject pronouns", es: "Forma: pronombres sujeto" }
-    level: A1
     content:
       - type: text
+        level: A1
         text:
           en: The ending shows the person, so the subject pronoun is usually dropped.
           es: La terminación indica la persona, por eso el pronombre sujeto normalmente se omite.
@@ -91,41 +93,45 @@ sections:
           - { key: example, label: { en: Spanish, es: Ejemplo } }
           - { key: person, label: { en: Person, es: Persona } }
         rows:
-          - { example: "**Hablo** inglés.", person: yo, tr: { en: I speak English. } }
-          - { example: "¿**Vives** aquí?", person: tú, tr: { en: Do you live here? } }
-          - { example: "**Comemos** a las dos.", person: nosotros, tr: { en: We have lunch at two. } }
+          - { level: A1, example: "**Hablo** inglés.", person: yo, tr: { en: I speak English. } }
+          - { level: A1, example: "¿**Vives** aquí?", person: tú, tr: { en: Do you live here? } }
+          - { level: A1, example: "**Comemos** a las dos.", person: nosotros, tr: { en: We have lunch at two. } }
       - type: bullets
         items:
-          - text: { en: "Add the pronoun for contrast or emphasis:", es: "El pronombre aparece para contrastar o destacar:" }
+          - level: A1
+            text: { en: "Add the pronoun for contrast or emphasis:", es: "El pronombre aparece para contrastar o destacar:" }
             ex: "**Yo** trabajo y **él** estudia."
             tr: { en: I work and he studies. }
-          - en: "**usted** / **ustedes** often stay in the sentence, for politeness and clarity: ¿**Usted** vive aquí?"
-            es: "**usted** / **ustedes** aparecen a menudo, por cortesía y claridad: ¿**Usted** vive aquí?"
+          - level: A1
+            text:
+              en: "**usted** / **ustedes** often stay in the sentence, for politeness and clarity: ¿**Usted** vive aquí?"
+              es: "**usted** / **ustedes** aparecen a menudo, por cortesía y claridad: ¿**Usted** vive aquí?"
 
   - title: { en: "Form: negative", es: "Forma: negativa" }
-    level: A1
     content:
       - type: text
+        level: A1
         text: { en: "**no** goes directly before the verb.", es: "**no** va justo delante del verbo." }
       - type: table
         columns:
           - { key: example, label: { en: Spanish, es: Ejemplo } }
         rows:
-          - { example: "**No** hablo francés.", tr: { en: I don't speak French. } }
-          - { example: "Ana **no** come carne.", tr: { en: Ana doesn't eat meat. } }
-          - { example: "¿**No** vives aquí?", tr: { en: Don't you live here? } }
+          - { level: A1, example: "**No** hablo francés.", tr: { en: I don't speak French. } }
+          - { level: A1, example: "Ana **no** come carne.", tr: { en: Ana doesn't eat meat. } }
+          - { level: A1, example: "¿**No** vives aquí?", tr: { en: Don't you live here? } }
       - type: bullets
         items:
-          - text:
+          - level: A1
+            text:
               en: "A full \"no\" answer has two **no**: the first answers, the second negates the verb."
               es: "Una respuesta negativa completa lleva dos **no**: el primero responde, el segundo niega el verbo."
             ex: "¿Hablas alemán? — **No**, **no** hablo alemán."
             tr: { en: "No, I don't speak German." }
 
   - title: { en: "Form: questions", es: "Forma: preguntas" }
-    level: A1
     content:
       - type: text
+        level: A1
         text:
           en: "A question uses the same verb form as a statement. Written questions open with **¿** and close with **?**."
           es: "La pregunta usa la misma forma verbal que la afirmación. Por escrito empieza con **¿** y termina con **?**."
@@ -134,32 +140,35 @@ sections:
           - { key: type, label: { en: Type, es: Tipo } }
           - { key: example, label: { en: Spanish, es: Ejemplo } }
         rows:
-          - { type: { en: "Yes / no, statement order", es: "Sí / no, orden de la afirmación" }, example: "¿**Hablas** español?", tr: { en: Do you speak Spanish? } }
-          - { type: { en: "Yes / no, verb first", es: "Sí / no, verbo delante" }, example: "¿**Habla** usted inglés?", tr: { en: Do you speak English? } }
-          - { type: { en: "Wh-question: question word + verb + subject", es: "Con palabra interrogativa: palabra + verbo + sujeto" }, example: "¿Dónde **vive** Ana?", tr: { en: Where does Ana live? } }
+          - { level: A1, type: { en: "Yes / no, statement order", es: "Sí / no, orden de la afirmación" }, example: "¿**Hablas** español?", tr: { en: Do you speak Spanish? } }
+          - { level: A1, type: { en: "Yes / no, verb first", es: "Sí / no, verbo delante" }, example: "¿**Habla** usted inglés?", tr: { en: Do you speak English? } }
+          - { level: A1, type: { en: "Wh-question: question word + verb + subject", es: "Con palabra interrogativa: palabra + verbo + sujeto" }, example: "¿Dónde **vive** Ana?", tr: { en: Where does Ana live? } }
       - type: text
+        level: A1
         text: { en: "Question words carry an accent mark:", es: "Las palabras interrogativas llevan tilde:" }
       - type: table
         columns:
           - { key: word, label: { en: Spanish, es: Palabra } }
           - { key: asks, label: { en: Asks about, es: Pregunta por } }
         rows:
-          - { word: ¿qué?, asks: { en: "thing, action", es: "cosa, acción" }, tr: { en: what? } }
-          - { word: ¿dónde?, asks: { en: place, es: lugar }, tr: { en: where? } }
-          - { word: ¿cuándo?, asks: { en: time, es: tiempo }, tr: { en: when? } }
-          - { word: ¿cómo?, asks: { en: manner, es: modo }, tr: { en: how? } }
-          - { word: ¿quién? / ¿quiénes?, asks: { en: person, es: persona }, tr: { en: who? } }
-          - { word: ¿cuánto? / ¿cuánta? / ¿cuántos? / ¿cuántas?, asks: { en: amount, es: cantidad }, tr: { en: how much? / how many? } }
-          - { word: ¿por qué?, asks: { en: reason, es: causa }, tr: { en: why? } }
+          - { level: A1, word: ¿qué?, asks: { en: "thing, action", es: "cosa, acción" }, tr: { en: what? } }
+          - { level: A1, word: ¿dónde?, asks: { en: place, es: lugar }, tr: { en: where? } }
+          - { level: A1, word: ¿cuándo?, asks: { en: time, es: tiempo }, tr: { en: when? } }
+          - { level: A1, word: ¿cómo?, asks: { en: manner, es: modo }, tr: { en: how? } }
+          - { level: A1, word: ¿quién? / ¿quiénes?, asks: { en: person, es: persona }, tr: { en: who? } }
+          - { level: A1, word: ¿cuánto? / ¿cuánta? / ¿cuántos? / ¿cuántas?, asks: { en: amount, es: cantidad }, tr: { en: how much? / how many? } }
+          - { level: A1, word: ¿por qué?, asks: { en: reason, es: causa }, tr: { en: why? } }
       - type: bullets
         items:
-          - en: "See [Word order and questions](id:es.sentence-building.word-order-questions)."
-            es: "Ver [Orden de la frase y preguntas](id:es.sentence-building.word-order-questions)."
+          - level: A1
+            text:
+              en: "See [Word order and questions](id:es.sentence-building.word-order-questions)."
+              es: "Ver [Orden de la frase y preguntas](id:es.sentence-building.word-order-questions)."
 
   - title: { en: "Spelling: yo-form changes", es: "Ortografía: cambios en la forma de yo" }
-    level: A2
     content:
       - type: text
+        level: A2
         text:
           en: Some regular verbs change one letter in the **yo** form to keep the sound of the stem. All other forms are regular.
           es: Algunos verbos regulares cambian una letra en la forma de **yo** para mantener el sonido de la raíz. Las demás formas son regulares.
@@ -169,16 +178,17 @@ sections:
           - { key: change, label: { en: yo form, es: Forma de yo } }
           - { key: examples, label: { en: Examples, es: Ejemplos } }
         rows:
-          - { ending: -ger / -gir, change: g → j, examples: "coger → co**j**o / recoger → reco**j**o / proteger → prote**j**o / dirigir → diri**j**o" }
-          - { ending: { en: consonant + -cer, es: consonante + -cer }, change: c → z, examples: "vencer → ven**z**o / convencer → conven**z**o" }
-          - { ending: -guir, change: gu → g, examples: "distinguir → distin**g**o" }
+          - { level: A2, ending: -ger / -gir, change: g → j, examples: "coger → co**j**o / recoger → reco**j**o / proteger → prote**j**o / dirigir → diri**j**o" }
+          - { level: A2, ending: { en: consonant + -cer, es: consonante + -cer }, change: c → z, examples: "vencer → ven**z**o / convencer → conven**z**o" }
+          - { level: A2, ending: -guir, change: gu → g, examples: "distinguir → distin**g**o" }
       - type: bullets
         items:
-          - en: "LatAm: in many countries **coger** has a vulgar meaning; **tomar** or **agarrar** mean *take / grab*."
-            es: "LatAm: en muchos países **coger** tiene un sentido vulgar; en su lugar se usan **tomar** o **agarrar**."
+          - level: A2
+            text:
+              en: "LatAm: in many countries **coger** has a vulgar meaning; **tomar** or **agarrar** mean *take / grab*."
+              es: "LatAm: en muchos países **coger** tiene un sentido vulgar; en su lugar se usan **tomar** o **agarrar**."
 
   - title: { en: "Pronunciation: stress", es: "Pronunciación: acento" }
-    level: A1
     content:
       - type: table
         columns:
@@ -186,34 +196,36 @@ sections:
           - { key: stress, label: { en: Stress falls on, es: El acento cae en } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { person: "yo, tú, él / ella / usted, ellos / ellas / ustedes", stress: { en: the stem, es: la raíz }, example: "**HA**blo / **HA**blas / **HA**bla / **HA**blan" }
-          - { person: nosotros, stress: { en: the ending, es: la terminación }, example: "hab**LA**mos" }
-          - { person: vosotros, stress: { en: "the ending, with a written accent", es: "la terminación, con tilde" }, example: "habl**ÁIS** / com**ÉIS** / viv**ÍS**" }
+          - { level: A1, person: "yo, tú, él / ella / usted, ellos / ellas / ustedes", stress: { en: the stem, es: la raíz }, example: "**HA**blo / **HA**blas / **HA**bla / **HA**blan" }
+          - { level: A1, person: nosotros, stress: { en: the ending, es: la terminación }, example: "hab**LA**mos" }
+          - { level: A1, person: vosotros, stress: { en: "the ending, with a written accent", es: "la terminación, con tilde" }, example: "habl**ÁIS** / com**ÉIS** / viv**ÍS**" }
       - type: bullets
         items:
-          - en: "Capitals in this table show the stressed syllable. Normal spelling: hablo, hablamos, habláis."
-            es: "Las mayúsculas de esta tabla marcan la sílaba tónica. Ortografía normal: hablo, hablamos, habláis."
-          - en: "See [Stress and accent marks](id:es.foundations.stress-accent-marks)."
-            es: "Ver [Acento y tilde](id:es.foundations.stress-accent-marks)."
+          - level: A1
+            text:
+              en: "Capitals in this table show the stressed syllable. Normal spelling: hablo, hablamos, habláis."
+              es: "Las mayúsculas de esta tabla marcan la sílaba tónica. Ortografía normal: hablo, hablamos, habláis."
+          - level: A1
+            text:
+              en: "See [Stress and accent marks](id:es.foundations.stress-accent-marks)."
+              es: "Ver [Acento y tilde](id:es.foundations.stress-accent-marks)."
 
   - title: { en: Use, es: Uso }
-    level: A1-A2
     content:
       - type: table
         columns:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Spanish, es: Ejemplo } }
         rows:
-          - { use: { en: Habits and routines, es: Hábitos y rutinas }, example: "**Desayuno** a las ocho.", tr: { en: I have breakfast at eight. } }
-          - { use: { en: Facts, es: Hechos }, example: "En España **cenamos** tarde.", tr: { en: In Spain we have dinner late. } }
-          - { use: { en: Permanent states, es: Estados permanentes }, example: "**Vivo** en Valencia.", tr: { en: I live in Valencia. } }
-          - { use: { en: Actions happening now, es: Acciones en este momento }, example: "¿Qué **miras**?", tr: { en: What are you looking at? } }
+          - { level: A1, use: { en: Habits and routines, es: Hábitos y rutinas }, example: "**Desayuno** a las ocho.", tr: { en: I have breakfast at eight. } }
+          - { level: A1, use: { en: Facts, es: Hechos }, example: "En España **cenamos** tarde.", tr: { en: In Spain we have dinner late. } }
+          - { level: A1, use: { en: Permanent states, es: Estados permanentes }, example: "**Vivo** en Valencia.", tr: { en: I live in Valencia. } }
+          - { level: A1, use: { en: Actions happening now, es: Acciones en este momento }, example: "¿Qué **miras**?", tr: { en: What are you looking at? } }
           - { level: A2, use: { en: "Near future, with a time word", es: "Futuro próximo, con marcador temporal" }, example: "Mañana **trabajo** en casa.", tr: { en: "Tomorrow I'm working at home." } }
           - { level: A2, use: { en: "Requests, as a question", es: "Peticiones, en forma de pregunta" }, example: "¿Me **pasas** la sal?", tr: { en: Can you pass me the salt? } }
           - { level: A2, use: { en: "Duration up to now: desde hace", es: "Duración hasta ahora: desde hace" }, example: "**Estudio** español desde hace dos años.", tr: { en: "I've been studying Spanish for two years." } }
 
   - title: { en: Signal words, es: Palabras clave }
-    level: A1
     content:
       - type: table
         columns:
@@ -221,31 +233,34 @@ sections:
           - { key: often, label: { en: How often, es: Frecuencia } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { word: siempre, often: 100%, example: "**Siempre** desayuno café.", tr: { en: always } }
-          - { word: normalmente, often: ≈ 90%, example: "**Normalmente** ceno a las nueve.", tr: { en: usually } }
-          - { word: a menudo, often: ≈ 70%, example: "Viajamos **a menudo**.", tr: { en: often } }
-          - { word: a veces, often: ≈ 50%, example: "**A veces** cocino yo.", tr: { en: sometimes } }
-          - { word: casi nunca, often: ≈ 5%, example: "**Casi nunca** bebo vino.", tr: { en: hardly ever } }
-          - { word: nunca, often: 0%, example: "**Nunca** como carne.", tr: { en: never } }
+          - { level: A1, word: siempre, often: 100%, example: "**Siempre** desayuno café.", tr: { en: always } }
+          - { level: A1, word: normalmente, often: ≈ 90%, example: "**Normalmente** ceno a las nueve.", tr: { en: usually } }
+          - { level: A1, word: a menudo, often: ≈ 70%, example: "Viajamos **a menudo**.", tr: { en: often } }
+          - { level: A1, word: a veces, often: ≈ 50%, example: "**A veces** cocino yo.", tr: { en: sometimes } }
+          - { level: A1, word: casi nunca, often: ≈ 5%, example: "**Casi nunca** bebo vino.", tr: { en: hardly ever } }
+          - { level: A1, word: nunca, often: 0%, example: "**Nunca** como carne.", tr: { en: never } }
       - type: table
         columns:
           - { key: word, label: { en: Spanish, es: Expresión } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { word: todos los días, example: "Camino **todos los días**.", tr: { en: every day } }
-          - { word: los lunes, example: "**Los lunes** trabajo en casa.", tr: { en: on Mondays } }
-          - { word: una vez a la semana, example: "Nado **una vez a la semana**.", tr: { en: once a week } }
-          - { word: el fin de semana, example: "**El fin de semana** descanso.", tr: { en: at the weekend } }
-          - { word: por la mañana / tarde / noche, example: "Estudio **por la noche**.", tr: { en: in the morning / afternoon / at night } }
+          - { level: A1, word: todos los días, example: "Camino **todos los días**.", tr: { en: every day } }
+          - { level: A1, word: los lunes, example: "**Los lunes** trabajo en casa.", tr: { en: on Mondays } }
+          - { level: A1, word: una vez a la semana, example: "Nado **una vez a la semana**.", tr: { en: once a week } }
+          - { level: A1, word: el fin de semana, example: "**El fin de semana** descanso.", tr: { en: at the weekend } }
+          - { level: A1, word: por la mañana / tarde / noche, example: "Estudio **por la noche**.", tr: { en: in the morning / afternoon / at night } }
       - type: bullets
         items:
-          - en: "Frequency words go at the start or the end of the sentence."
-            es: "Las expresiones de frecuencia van al principio o al final de la frase."
-          - en: "**nunca** goes before the verb, or after the verb with **no** before it: **Nunca** como carne. / **No** como carne **nunca**."
-            es: "**nunca** va delante del verbo, o detrás con **no** delante: **Nunca** como carne. / **No** como carne **nunca**."
+          - level: A1
+            text:
+              en: "Frequency words go at the start or the end of the sentence."
+              es: "Las expresiones de frecuencia van al principio o al final de la frase."
+          - level: A1
+            text:
+              en: "**nunca** goes before the verb, or after the verb with **no** before it: **Nunca** como carne. / **No** como carne **nunca**."
+              es: "**nunca** va delante del verbo, o detrás con **no** delante: **Nunca** como carne. / **No** como carne **nunca**."
 
   - title: { en: Common regular verbs, es: Verbos regulares frecuentes }
-    level: A1
     content:
       - type: table
         columns:
@@ -253,49 +268,49 @@ sections:
           - { key: er, label: -er }
           - { key: ir, label: -ir }
         rows:
-          - { ar: { ex: hablar, tr: { en: speak } }, er: { ex: comer, tr: { en: eat } }, ir: { ex: vivir, tr: { en: live } } }
-          - { ar: { ex: trabajar, tr: { en: work } }, er: { ex: beber, tr: { en: drink } }, ir: { ex: escribir, tr: { en: write } } }
-          - { ar: { ex: estudiar, tr: { en: study } }, er: { ex: leer, tr: { en: read } }, ir: { ex: abrir, tr: { en: open } } }
-          - { ar: { ex: escuchar, tr: { en: listen (to) } }, er: { ex: aprender, tr: { en: learn } }, ir: { ex: recibir, tr: { en: receive } } }
-          - { ar: { ex: mirar, tr: { en: look (at) } }, er: { ex: comprender, tr: { en: understand } }, ir: { ex: decidir, tr: { en: decide } } }
-          - { ar: { ex: llamar, tr: { en: call } }, er: { ex: vender, tr: { en: sell } }, ir: { ex: subir, tr: { en: go up } } }
-          - { ar: { ex: comprar, tr: { en: buy } }, er: { ex: correr, tr: { en: run } }, ir: { ex: compartir, tr: { en: share } } }
-          - { ar: { ex: tomar, tr: { en: take / drink } }, er: { ex: deber, tr: { en: must / owe } }, ir: { ex: describir, tr: { en: describe } } }
-          - { ar: { ex: cocinar, tr: { en: cook } }, er: { ex: creer, tr: { en: believe } }, ir: { ex: asistir (a), tr: { en: attend } } }
-          - { ar: { ex: viajar, tr: { en: travel } }, er: { ex: responder, tr: { en: answer } }, ir: { ex: permitir, tr: { en: allow } } }
-          - { ar: { ex: llegar, tr: { en: arrive } }, er: { ex: romper, tr: { en: break } }, ir: { ex: discutir, tr: { en: argue / discuss } } }
-          - { ar: { ex: necesitar, tr: { en: need } }, er: { ex: prometer, tr: { en: promise } }, ir: { ex: cubrir, tr: { en: cover } } }
-          - { ar: { ex: ayudar, tr: { en: help } }, er: "", ir: "" }
-          - { ar: { ex: esperar, tr: { en: wait / hope } }, er: "", ir: "" }
-          - { ar: { ex: pagar, tr: { en: pay } }, er: "", ir: "" }
-          - { ar: { ex: terminar, tr: { en: finish } }, er: "", ir: "" }
-          - { ar: { ex: caminar, tr: { en: walk } }, er: "", ir: "" }
-          - { ar: { ex: desayunar, tr: { en: have breakfast } }, er: "", ir: "" }
-          - { ar: { ex: cenar, tr: { en: have dinner } }, er: "", ir: "" }
+          - { level: A1, ar: { ex: hablar, tr: { en: speak } }, er: { ex: comer, tr: { en: eat } }, ir: { ex: vivir, tr: { en: live } } }
+          - { level: A1, ar: { ex: trabajar, tr: { en: work } }, er: { ex: beber, tr: { en: drink } }, ir: { ex: escribir, tr: { en: write } } }
+          - { level: A1, ar: { ex: estudiar, tr: { en: study } }, er: { ex: leer, tr: { en: read } }, ir: { ex: abrir, tr: { en: open } } }
+          - { level: A1, ar: { ex: escuchar, tr: { en: listen (to) } }, er: { ex: aprender, tr: { en: learn } }, ir: { ex: recibir, tr: { en: receive } } }
+          - { level: A1, ar: { ex: mirar, tr: { en: look (at) } }, er: { ex: comprender, tr: { en: understand } }, ir: { ex: decidir, tr: { en: decide } } }
+          - { level: A1, ar: { ex: llamar, tr: { en: call } }, er: { ex: vender, tr: { en: sell } }, ir: { ex: subir, tr: { en: go up } } }
+          - { level: A1, ar: { ex: comprar, tr: { en: buy } }, er: { ex: correr, tr: { en: run } }, ir: { ex: compartir, tr: { en: share } } }
+          - { level: A1, ar: { ex: tomar, tr: { en: take / drink } }, er: { ex: deber, tr: { en: must / owe } }, ir: { ex: describir, tr: { en: describe } } }
+          - { level: A1, ar: { ex: cocinar, tr: { en: cook } }, er: { ex: creer, tr: { en: believe } }, ir: { ex: asistir (a), tr: { en: attend } } }
+          - { level: A1, ar: { ex: viajar, tr: { en: travel } }, er: { ex: responder, tr: { en: answer } }, ir: { ex: permitir, tr: { en: allow } } }
+          - { level: A1, ar: { ex: llegar, tr: { en: arrive } }, er: { ex: romper, tr: { en: break } }, ir: { ex: discutir, tr: { en: argue / discuss } } }
+          - { level: A1, ar: { ex: necesitar, tr: { en: need } }, er: { ex: prometer, tr: { en: promise } }, ir: { ex: cubrir, tr: { en: cover } } }
+          - { level: A1, ar: { ex: ayudar, tr: { en: help } }, er: "", ir: "" }
+          - { level: A1, ar: { ex: esperar, tr: { en: wait / hope } }, er: "", ir: "" }
+          - { level: A1, ar: { ex: pagar, tr: { en: pay } }, er: "", ir: "" }
+          - { level: A1, ar: { ex: terminar, tr: { en: finish } }, er: "", ir: "" }
+          - { level: A1, ar: { ex: caminar, tr: { en: walk } }, er: "", ir: "" }
+          - { level: A1, ar: { ex: desayunar, tr: { en: have breakfast } }, er: "", ir: "" }
+          - { level: A1, ar: { ex: cenar, tr: { en: have dinner } }, er: "", ir: "" }
 
   - title: { en: "Compare: one Spanish form, several English forms" }
-    level: A1-A2
     for: [en]
     content:
       - type: text
+        level: A1
         text: { en: "The Spanish present covers the English present simple, the present continuous and some future uses." }
       - type: table
         columns:
           - { key: example, label: Spanish }
         rows:
-          - { example: "**Trabajo** en un banco.", tr: { en: "I **work** in a bank." } }
-          - { example: "Ahora **trabajo** en casa.", tr: { en: "I'**m working** at home now." } }
-          - { example: "Sí, **trabajo** los sábados.", tr: { en: "Yes, I **do work** on Saturdays." } }
+          - { level: A1, example: "**Trabajo** en un banco.", tr: { en: "I **work** in a bank." } }
+          - { level: A1, example: "Ahora **trabajo** en casa.", tr: { en: "I'**m working** at home now." } }
+          - { level: A1, example: "Sí, **trabajo** los sábados.", tr: { en: "Yes, I **do work** on Saturdays." } }
           - { level: A2, example: "¿**Trabajas** mañana?", tr: { en: "**Are** you **working** tomorrow?" } }
       - type: bullets
         items:
-          - text: { en: "**estar + gerundio** stresses an action in progress:" }
+          - level: A1
+            text: { en: "**estar + gerundio** stresses an action in progress:" }
             ex: "**Estoy trabajando**."
             tr: { en: "I'm working (right now)." }
-          - { en: "See [estar + gerundio](id:es.tenses-moods.estar-gerundio)." }
+          - { level: A1, text: { en: "See [estar + gerundio](id:es.tenses-moods.estar-gerundio)." } }
 
   - title: { es: "Comparación: presente y estar + gerundio" }
-    level: A1
     for: [es]
     content:
       - type: table
@@ -303,26 +318,25 @@ sections:
           - { key: present, label: Presente }
           - { key: progressive, label: estar + gerundio }
         rows:
-          - { present: { es: "hábitos, hechos, estados; también acciones de ahora" }, progressive: { es: "acción en curso, destacada" } }
-          - { present: "**Trabajo** en un banco.", progressive: "**Estoy trabajando**, te llamo luego." }
-          - { present: "Ahora **trabajo** en casa.", progressive: "Ahora mismo **estoy trabajando** en casa." }
-          - { present: "¿Qué **haces**? (= profesión o ahora)", progressive: "¿Qué **estás haciendo**? (= en este momento)" }
+          - { level: A1, present: { es: "hábitos, hechos, estados; también acciones de ahora" }, progressive: { es: "acción en curso, destacada" } }
+          - { level: A1, present: "**Trabajo** en un banco.", progressive: "**Estoy trabajando**, te llamo luego." }
+          - { level: A1, present: "Ahora **trabajo** en casa.", progressive: "Ahora mismo **estoy trabajando** en casa." }
+          - { level: A1, present: "¿Qué **haces**? (= profesión o ahora)", progressive: "¿Qué **estás haciendo**? (= en este momento)" }
       - type: bullets
         items:
-          - { es: "Ver [estar + gerundio](id:es.tenses-moods.estar-gerundio)." }
+          - { level: A1, text: { es: "Ver [estar + gerundio](id:es.tenses-moods.estar-gerundio)." } }
 
   - title: { en: Typical errors, es: Errores típicos }
-    level: A1-A2
     content:
       - type: errors
         audience: true
         rows:
-          - { wrong: Yo hablar español., right: "Yo **hablo** español.", rule: { en: conjugate the verb, es: el verbo se conjuga } }
-          - { for: [en], wrong: ¿Dónde Ana vive?, right: "¿Dónde **vive** Ana?", rule: { en: question word + verb + subject } }
+          - { level: A1, wrong: Yo hablar español., right: "Yo **hablo** español.", rule: { en: conjugate the verb, es: el verbo se conjuga } }
+          - { level: A1, for: [en], wrong: ¿Dónde Ana vive?, right: "¿Dónde **vive** Ana?", rule: { en: question word + verb + subject } }
           - { for: [en], level: A2, wrong: Estudio español por dos años., right: "Estudio español **desde hace** dos años.", rule: { en: duration up to now → desde hace } }
-          - { wrong: Ella vivo en Roma., right: "Ella **vive** en Roma.", rule: { en: the ending matches the person, es: la terminación concuerda con la persona } }
-          - { wrong: Nosotros vivemos aquí., right: "Nosotros **vivimos** aquí.", rule: "-ir: nosotros → -imos" }
-          - { wrong: Vosotros hablais inglés., right: "Vosotros **habláis** inglés.", rule: { en: vosotros forms carry an accent, es: las formas de vosotros llevan tilde } }
-          - { wrong: Hablo no francés., right: "**No** hablo francés.", rule: { en: no goes before the verb, es: no va delante del verbo } }
-          - { wrong: Hablas español?, right: "**¿**Hablas español?", rule: { en: questions open with ¿, es: la pregunta empieza con ¿ } }
-          - { wrong: Mi familia viven en Lima., right: "Mi familia **vive** en Lima.", rule: { en: "familia, gente → singular verb", es: "familia, gente → verbo en singular" } }
+          - { level: A1, wrong: Ella vivo en Roma., right: "Ella **vive** en Roma.", rule: { en: the ending matches the person, es: la terminación concuerda con la persona } }
+          - { level: A1, wrong: Nosotros vivemos aquí., right: "Nosotros **vivimos** aquí.", rule: "-ir: nosotros → -imos" }
+          - { level: A1, wrong: Vosotros hablais inglés., right: "Vosotros **habláis** inglés.", rule: { en: vosotros forms carry an accent, es: las formas de vosotros llevan tilde } }
+          - { level: A1, wrong: Hablo no francés., right: "**No** hablo francés.", rule: { en: no goes before the verb, es: no va delante del verbo } }
+          - { level: A1, wrong: Hablas español?, right: "**¿**Hablas español?", rule: { en: questions open with ¿, es: la pregunta empieza con ¿ } }
+          - { level: A1, wrong: Mi familia viven en Lima., right: "Mi familia **vive** en Lima.", rule: { en: "familia, gente → singular verb", es: "familia, gente → verbo en singular" } }

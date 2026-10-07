@@ -2,7 +2,6 @@
 id: en.verbs.have-have-got
 lang: en
 kind: grammar
-levels: [A1]
 tags: [verbs, have, possession]
 concepts: [have]
 related: [en.verbs.to-be, en.tenses.simple-tenses, en.verbs.there-is-are, en.nouns-determiners.possessive-s, en.sentence-building.questions-negatives]
@@ -14,7 +13,6 @@ summary:
   es: "Have y have got para posesión, familia y rasgos; have solo para acciones cotidianas. Tener es have o have got, pero las acciones llevan solo have: I **have got** a dog. I **have** breakfast."
 
 cheatsheet:
-  level: A1
   content:
     - type: table
       columns:
@@ -22,25 +20,27 @@ cheatsheet:
         - { key: have, label: have }
         - { key: got, label: have got }
       rows:
-        - { form: { en: Affirmative, es: Afirmativa }, have: "I **have** a car.", got: "I'**ve got** a car." }
-        - { form: { en: Negative, es: Negativa }, have: "I **don't have** a car.", got: "I **haven't got** a car." }
-        - { form: { en: Question, es: Pregunta }, have: "**Do** you **have** a car?", got: "**Have** you **got** a car?" }
-        - { form: { en: Short answer, es: Respuesta corta }, have: "Yes, I **do**. / No, I **don't**.", got: "Yes, I **have**. / No, I **haven't**." }
+        - { level: A1, form: { en: Affirmative, es: Afirmativa }, have: "I **have** a car.", got: "I'**ve got** a car." }
+        - { level: A1, form: { en: Negative, es: Negativa }, have: "I **don't have** a car.", got: "I **haven't got** a car." }
+        - { level: A1, form: { en: Question, es: Pregunta }, have: "**Do** you **have** a car?", got: "**Have** you **got** a car?" }
+        - { level: A1, form: { en: Short answer, es: Respuesta corta }, have: "Yes, I **do**. / No, I **don't**.", got: "Yes, I **have**. / No, I **haven't**." }
 
 sections:
   - title: { en: Overview, es: Resumen }
-    level: A1
     content:
       - type: bullets
         items:
-          - en: "**have** and **have got** have the same meaning for possession, family and features."
-            es: "**have** y **have got** significan lo mismo para posesión, familia y rasgos."
-          - en: "Actions (have breakfast, have a shower) take only **have**."
-            es: "Las acciones (have breakfast, have a shower) llevan solo **have**."
-          - { for: [es], text: { es: "**have** = *tener*. Las acciones de la vida diaria también llevan **have**: *desayunar* = have breakfast." } }
+          - level: A1
+            text:
+              en: "**have** and **have got** have the same meaning for possession, family and features."
+              es: "**have** y **have got** significan lo mismo para posesión, familia y rasgos."
+          - level: A1
+            text:
+              en: "Actions (have breakfast, have a shower) take only **have**."
+              es: "Las acciones (have breakfast, have a shower) llevan solo **have**."
+          - { level: A1, for: [es], text: { es: "**have** = *tener*. Las acciones de la vida diaria también llevan **have**: *desayunar* = have breakfast." } }
 
   - title: { en: "Form: affirmative", es: "Forma: afirmativa" }
-    level: A1
     content:
       - type: table
         columns:
@@ -48,18 +48,21 @@ sections:
           - { key: have, label: have }
           - { key: got, label: have got }
         rows:
-          - { subject: I / you / we / they, have: "They **have** two children.", got: "They'**ve got** two children.", tr: { es: Tienen dos hijos. } }
-          - { subject: he / she / it, have: "She **has** a brother.", got: "She'**s got** a brother.", tr: { es: Tiene un hermano. } }
+          - { level: A1, subject: I / you / we / they, have: "They **have** two children.", got: "They'**ve got** two children.", tr: { es: Tienen dos hijos. } }
+          - { level: A1, subject: he / she / it, have: "She **has** a brother.", got: "She'**s got** a brother.", tr: { es: Tiene un hermano. } }
       - type: bullets
         items:
-          - en: "he / she / it takes **has**: She **has** a dog."
-            es: "he / she / it lleva **has**: She **has** a dog."
-          - en: "Speech and messages use the short forms **'ve got** and **'s got**."
-            es: "En la conversación y en los mensajes se usan las formas cortas **'ve got** y **'s got**."
-          - { for: [es], text: { es: "El sujeto siempre aparece: *Tiene un perro.* → **She** has a dog." } }
+          - level: A1
+            text:
+              en: "he / she / it takes **has**: She **has** a dog."
+              es: "he / she / it lleva **has**: She **has** a dog."
+          - level: A1
+            text:
+              en: "Speech and messages use the short forms **'ve got** and **'s got**."
+              es: "En la conversación y en los mensajes se usan las formas cortas **'ve got** y **'s got**."
+          - { level: A1, for: [es], text: { es: "El sujeto siempre aparece: *Tiene un perro.* → **She** has a dog." } }
 
   - title: { en: "Form: negative", es: "Forma: negativa" }
-    level: A1
     content:
       - type: table
         columns:
@@ -67,17 +70,20 @@ sections:
           - { key: have, label: have }
           - { key: got, label: have got }
         rows:
-          - { subject: I / you / we / they, have: "I **don't have** a car.", got: "I **haven't got** a car.", tr: { es: No tengo coche. } }
-          - { subject: he / she / it, have: "He **doesn't have** a car.", got: "He **hasn't got** a car.", tr: { es: No tiene coche. } }
+          - { level: A1, subject: I / you / we / they, have: "I **don't have** a car.", got: "I **haven't got** a car.", tr: { es: No tengo coche. } }
+          - { level: A1, subject: he / she / it, have: "He **doesn't have** a car.", got: "He **hasn't got** a car.", tr: { es: No tiene coche. } }
       - type: bullets
         items:
-          - en: "**have** makes the negative with **don't / doesn't** and the base form: He doesn't **have**."
-            es: "**have** forma la negativa con **don't / doesn't** y la forma base: He doesn't **have**."
-          - en: "**have got** makes the negative with **haven't / hasn't** before **got**."
-            es: "**have got** forma la negativa con **haven't / hasn't** delante de **got**."
+          - level: A1
+            text:
+              en: "**have** makes the negative with **don't / doesn't** and the base form: He doesn't **have**."
+              es: "**have** forma la negativa con **don't / doesn't** y la forma base: He doesn't **have**."
+          - level: A1
+            text:
+              en: "**have got** makes the negative with **haven't / hasn't** before **got**."
+              es: "**have got** forma la negativa con **haven't / hasn't** delante de **got**."
 
   - title: { en: "Form: questions", es: "Forma: preguntas" }
-    level: A1
     content:
       - type: table
         columns:
@@ -85,15 +91,16 @@ sections:
           - { key: have, label: have }
           - { key: got, label: have got }
         rows:
-          - { subject: I / you / we / they, have: "**Do** you **have** a pen?", got: "**Have** you **got** a pen?", tr: { es: ¿Tienes un bolígrafo? } }
-          - { subject: he / she / it, have: "**Does** she **have** a pen?", got: "**Has** she **got** a pen?", tr: { es: ¿Tiene un bolígrafo? } }
+          - { level: A1, subject: I / you / we / they, have: "**Do** you **have** a pen?", got: "**Have** you **got** a pen?", tr: { es: ¿Tienes un bolígrafo? } }
+          - { level: A1, subject: he / she / it, have: "**Does** she **have** a pen?", got: "**Has** she **got** a pen?", tr: { es: ¿Tiene un bolígrafo? } }
       - type: bullets
         items:
-          - en: "Wh-questions put the wh-word first: How many brothers **do** you **have**? / What **have** you **got**?"
-            es: "Las preguntas con wh- empiezan por la palabra interrogativa: How many brothers **do** you **have**? / What **have** you **got**?"
+          - level: A1
+            text:
+              en: "Wh-questions put the wh-word first: How many brothers **do** you **have**? / What **have** you **got**?"
+              es: "Las preguntas con wh- empiezan por la palabra interrogativa: How many brothers **do** you **have**? / What **have** you **got**?"
 
   - title: { en: "Form: short answers", es: "Forma: respuestas cortas" }
-    level: A1
     content:
       - type: table
         columns:
@@ -101,56 +108,56 @@ sections:
           - { key: "yes", label: { en: "Yes", es: Sí } }
           - { key: "no", label: { en: "No", es: "No" } }
         rows:
-          - { question: Do you have a bike?, "yes": "Yes, I **do**.", "no": "No, I **don't**.", tr: { es: ¿Tienes bici? } }
-          - { question: Does she have a bike?, "yes": "Yes, she **does**.", "no": "No, she **doesn't**.", tr: { es: ¿Tiene bici? } }
-          - { question: Have you got a bike?, "yes": "Yes, I **have**.", "no": "No, I **haven't**.", tr: { es: ¿Tienes bici? } }
-          - { question: Has she got a bike?, "yes": "Yes, she **has**.", "no": "No, she **hasn't**.", tr: { es: ¿Tiene bici? } }
+          - { level: A1, question: Do you have a bike?, "yes": "Yes, I **do**.", "no": "No, I **don't**.", tr: { es: ¿Tienes bici? } }
+          - { level: A1, question: Does she have a bike?, "yes": "Yes, she **does**.", "no": "No, she **doesn't**.", tr: { es: ¿Tiene bici? } }
+          - { level: A1, question: Have you got a bike?, "yes": "Yes, I **have**.", "no": "No, I **haven't**.", tr: { es: ¿Tienes bici? } }
+          - { level: A1, question: Has she got a bike?, "yes": "Yes, she **has**.", "no": "No, she **hasn't**.", tr: { es: ¿Tiene bici? } }
       - type: bullets
         items:
-          - en: "A short answer ends with the auxiliary from the question: do / does or have / has."
-            es: "La respuesta corta termina con el auxiliar de la pregunta: do / does o have / has."
+          - level: A1
+            text:
+              en: "A short answer ends with the auxiliary from the question: do / does or have / has."
+              es: "La respuesta corta termina con el auxiliar de la pregunta: do / does o have / has."
 
   - title: { en: Use, es: Uso }
-    level: A1
     content:
       - type: table
         columns:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { use: { en: Possession, es: Posesión }, example: "I **have** a new phone.", tr: { es: Tengo un móvil nuevo. } }
-          - { use: { en: Family and friends, es: Familia y amigos }, example: "She'**s got** two sisters.", tr: { es: Tiene dos hermanas. } }
-          - { use: { en: "Features, appearance", es: "Rasgos, aspecto" }, example: "He **has** blue eyes. / My flat **has** a balcony.", tr: { es: Tiene los ojos azules. / Mi piso tiene balcón. } }
-          - { use: { en: "Illness, pain", es: "Enfermedad, dolor" }, example: "I'**ve got** a headache.", tr: { es: Tengo dolor de cabeza. } }
-          - { use: { en: "Work, appointments", es: "Trabajo, citas" }, example: "I'**ve got** a meeting at 3.", tr: { es: Tengo una reunión a las 3. } }
+          - { level: A1, use: { en: Possession, es: Posesión }, example: "I **have** a new phone.", tr: { es: Tengo un móvil nuevo. } }
+          - { level: A1, use: { en: Family and friends, es: Familia y amigos }, example: "She'**s got** two sisters.", tr: { es: Tiene dos hermanas. } }
+          - { level: A1, use: { en: "Features, appearance", es: "Rasgos, aspecto" }, example: "He **has** blue eyes. / My flat **has** a balcony.", tr: { es: Tiene los ojos azules. / Mi piso tiene balcón. } }
+          - { level: A1, use: { en: "Illness, pain", es: "Enfermedad, dolor" }, example: "I'**ve got** a headache.", tr: { es: Tengo dolor de cabeza. } }
+          - { level: A1, use: { en: "Work, appointments", es: "Trabajo, citas" }, example: "I'**ve got** a meeting at 3.", tr: { es: Tengo una reunión a las 3. } }
       - type: bullets
         items:
-          - { for: [es], text: { es: "Edad, hambre, sed, frío y calor llevan **be**: I am 20 / hungry. Ver [To be](id:en.verbs.to-be)." } }
-          - { for: [es], text: { es: "*Hay* = there is / there are: *Hay un parque.* → There is a park. Ver [There is / there are](id:en.verbs.there-is-are)." } }
+          - { level: A1, for: [es], text: { es: "Edad, hambre, sed, frío y calor llevan **be**: I am 20 / hungry. Ver [To be](id:en.verbs.to-be)." } }
+          - { level: A1, for: [es], text: { es: "*Hay* = there is / there are: *Hay un parque.* → There is a park. Ver [There is / there are](id:en.verbs.there-is-are)." } }
 
   - title: { en: "Have for actions", es: "Have para acciones" }
-    level: A1
     content:
       - type: table
         columns:
           - { key: group, label: { en: Group, es: Grupo } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { group: { en: Meals and drinks, es: Comidas y bebidas }, example: "I **have** breakfast at 8. / Let's **have** a coffee.", tr: { es: Desayuno a las 8. / Tomemos un café. } }
-          - { group: { en: Washing, es: Aseo }, example: "She **has** a shower every morning.", tr: { es: Se ducha todas las mañanas. } }
-          - { group: { en: "Rest, fun", es: "Descanso, ocio" }, example: "We **have** a rest. / They **have** a party.", tr: { es: Descansamos. / Hacen una fiesta. } }
-          - { group: { en: Talking, es: Conversación }, example: "I **have** a chat with Tom.", tr: { es: Charlo con Tom. } }
+          - { level: A1, group: { en: Meals and drinks, es: Comidas y bebidas }, example: "I **have** breakfast at 8. / Let's **have** a coffee.", tr: { es: Desayuno a las 8. / Tomemos un café. } }
+          - { level: A1, group: { en: Washing, es: Aseo }, example: "She **has** a shower every morning.", tr: { es: Se ducha todas las mañanas. } }
+          - { level: A1, group: { en: "Rest, fun", es: "Descanso, ocio" }, example: "We **have** a rest. / They **have** a party.", tr: { es: Descansamos. / Hacen una fiesta. } }
+          - { level: A1, group: { en: Talking, es: Conversación }, example: "I **have** a chat with Tom.", tr: { es: Charlo con Tom. } }
       - type: bullets
         items:
-          - text:
+          - level: A1
+            text:
               en: "In this use **have** is a main verb, so questions and negatives take **do / does**:"
               es: "En este uso **have** es verbo principal, así que las preguntas y negativas llevan **do / does**:"
             ex: "What time **do** you **have** lunch? / I **don't have** breakfast."
             tr: { es: ¿A qué hora comes? / No desayuno. }
-          - { for: [es], text: { es: "Una ducha, un café o una comida se *toman* o se *hacen*; en inglés es siempre **have**." } }
+          - { level: A1, for: [es], text: { es: "Una ducha, un café o una comida se *toman* o se *hacen*; en inglés es siempre **have**." } }
 
   - title: { en: "Compare: have and have got", es: "Comparación: have y have got" }
-    level: A1
     content:
       - type: table
         columns:
@@ -158,23 +165,22 @@ sections:
           - { key: have, label: have }
           - { key: got, label: have got }
         rows:
-          - { point: { en: Style, es: Estilo }, have: { en: "neutral, also in writing", es: "neutro, también en textos escritos" }, got: { en: "informal, mostly speech", es: "informal, sobre todo oral" } }
-          - { point: { en: Region, es: Región }, have: { en: "US: the usual form", es: "EE. UU.: la forma habitual" }, got: { en: "common in British English", es: "frecuente en inglés británico" } }
-          - { point: { en: Example, es: Ejemplo }, have: { ex: "Do you **have** a pen?", tr: { es: ¿Tienes un bolígrafo? } }, got: { ex: "**Have** you **got** a pen?", tr: { es: ¿Tienes un bolígrafo? } } }
+          - { level: A1, point: { en: Style, es: Estilo }, have: { en: "neutral, also in writing", es: "neutro, también en textos escritos" }, got: { en: "informal, mostly speech", es: "informal, sobre todo oral" } }
+          - { level: A1, point: { en: Region, es: Región }, have: { en: "US: the usual form", es: "EE. UU.: la forma habitual" }, got: { en: "common in British English", es: "frecuente en inglés británico" } }
+          - { level: A1, point: { en: Example, es: Ejemplo }, have: { ex: "Do you **have** a pen?", tr: { es: ¿Tienes un bolígrafo? } }, got: { ex: "**Have** you **got** a pen?", tr: { es: ¿Tienes un bolígrafo? } } }
 
   - title: { en: Typical errors, es: Errores típicos }
-    level: A1
     content:
       - type: errors
         audience: true
         rows:
-          - { wrong: She have a dog., right: "She **has** a dog.", rule: { en: he / she / it → has, es: he / she / it → has } }
-          - { for: [es], wrong: Have a dog., right: "**She** has a dog.", rule: { es: el sujeto siempre aparece } }
-          - { for: [es], wrong: I no have a car., right: "I **don't have** a car.", rule: { es: "negativa: don't / doesn't + have" } }
-          - { wrong: Do you have got a car?, right: "**Do** you **have** a car? / **Have** you **got** a car?", rule: { en: "do goes with have, not with have got", es: "do va con have, no con have got" } }
-          - { wrong: I don't have got a car., right: "I **haven't got** a car. / I **don't have** a car.", rule: { en: "choose one pattern: have or have got", es: "un solo modelo: have o have got" } }
-          - { for: [en], wrong: Does she has a car?, right: "Does she **have** a car?", rule: { en: does + base verb } }
-          - { wrong: She don't have a car., right: "She **doesn't have** a car.", rule: { en: he / she / it → doesn't, es: he / she / it → doesn't } }
-          - { for: [es], wrong: I have 20 years., right: "I **am** 20.", rule: { es: la edad se dice con be } }
-          - { for: [es], wrong: I take a shower. / I make a shower., right: "I **have** a shower.", rule: { es: "*tomar / hacer una ducha* = have a shower" } }
-          - { wrong: I have got breakfast at 8., right: "I **have** breakfast at 8.", rule: { en: "actions take have only", es: "las acciones llevan solo have" } }
+          - { level: A1, wrong: She have a dog., right: "She **has** a dog.", rule: { en: he / she / it → has, es: he / she / it → has } }
+          - { level: A1, for: [es], wrong: Have a dog., right: "**She** has a dog.", rule: { es: el sujeto siempre aparece } }
+          - { level: A1, for: [es], wrong: I no have a car., right: "I **don't have** a car.", rule: { es: "negativa: don't / doesn't + have" } }
+          - { level: A1, wrong: Do you have got a car?, right: "**Do** you **have** a car? / **Have** you **got** a car?", rule: { en: "do goes with have, not with have got", es: "do va con have, no con have got" } }
+          - { level: A1, wrong: I don't have got a car., right: "I **haven't got** a car. / I **don't have** a car.", rule: { en: "choose one pattern: have or have got", es: "un solo modelo: have o have got" } }
+          - { level: A1, for: [en], wrong: Does she has a car?, right: "Does she **have** a car?", rule: { en: does + base verb } }
+          - { level: A1, wrong: She don't have a car., right: "She **doesn't have** a car.", rule: { en: he / she / it → doesn't, es: he / she / it → doesn't } }
+          - { level: A1, for: [es], wrong: I have 20 years., right: "I **am** 20.", rule: { es: la edad se dice con be } }
+          - { level: A1, for: [es], wrong: I take a shower. / I make a shower., right: "I **have** a shower.", rule: { es: "*tomar / hacer una ducha* = have a shower" } }
+          - { level: A1, wrong: I have got breakfast at 8., right: "I **have** breakfast at 8.", rule: { en: "actions take have only", es: "las acciones llevan solo have" } }

@@ -1,12 +1,12 @@
 // Table layout: merged cells down merge columns, and a header with a second row when columns
 // carry a group: neighbouring columns of one group share a title above their own. A gap column
 // separates two groups; a gap row separates the blocks of a merged first column.
-import { lv } from "../../scripts/lib.ts";
+import { type Level, lv } from "../../scripts/lib.ts";
 
 export const classAttr = (names: string[]): string => (names.length > 0 ? ` class="${names.join(" ")}"` : "");
 
 // Rows that open a new block of a merged first column: merges stop there and a gap row comes first.
-export function blockStarts(grid: string[][], levels: (string | undefined)[], mergeFirst: boolean): Set<number> {
+export function blockStarts(grid: string[][], levels: Level[], mergeFirst: boolean): Set<number> {
   const starts = new Set<number>();
   if (!mergeFirst) return starts;
   for (let r = 1; r < grid.length; r++) {
@@ -18,7 +18,7 @@ export function blockStarts(grid: string[][], levels: (string | undefined)[], me
 // Row spans for merge columns: a cell joins the one above when both read the same, the rows share a
 // level and no block starts between them, so the level filter hides whole merged cells. A span of
 // 0 marks a joined cell.
-export function spans(grid: string[][], levels: (string | undefined)[], merge: boolean[], starts: Set<number>): number[][] {
+export function spans(grid: string[][], levels: Level[], merge: boolean[], starts: Set<number>): number[][] {
   const out = grid.map((cells) => cells.map(() => 1));
   merge.forEach((on, c) => {
     if (!on) return;
@@ -39,8 +39,7 @@ export const gapsAfter = (groups: (string | undefined)[]): boolean[] =>
   groups.map((g, n) => g !== undefined && groups[n + 1] !== undefined && groups[n + 1] !== g);
 
 // A gap row takes the higher level of the blocks around it, so it hides along with either.
-export const gapLevel = (above: string | undefined, below: string | undefined): string | undefined =>
-  lv(above ?? null) >= lv(below ?? null) ? above : below;
+export const gapLevel = (above: Level, below: Level): Level => (lv(above) >= lv(below) ? above : below);
 
 export const GAP_CELL = '<td class="gap"></td>';
 

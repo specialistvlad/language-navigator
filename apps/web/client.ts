@@ -1,5 +1,7 @@
-// Progressive enhancement for the static pages: level filter, view, theme, menu, sidebar scroll, on-this-page highlight, lanes, live reload.
-// The build turns it into client.js for the browser.
+// Progressive enhancement for the static pages: level filter and badges, view, theme, menu, sidebar scroll, on-this-page highlight, lanes, live reload.
+// The build bundles it with its modules into client.js for the browser.
+import { trimBadges } from "./client-levels.ts";
+
 (() => {
   "use strict";
   const root = document.documentElement;
@@ -28,6 +30,7 @@
     document.querySelectorAll<HTMLElement>("[data-set-view]").forEach((b) => {
       b.classList.toggle("on", b.dataset["setView"] === root.dataset["view"]);
     });
+    trimBadges(root);
   }
 
   const THEMES = ["auto", "light", "dark"];

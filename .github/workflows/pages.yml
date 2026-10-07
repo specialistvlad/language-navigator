@@ -47,6 +47,10 @@ jobs:
         if: steps.tag.outputs.deploy == 'true'
         run: bun install --frozen-lockfile
 
+      - name: Install Chromium for the browser tests
+        if: steps.tag.outputs.deploy == 'true'
+        run: bunx playwright install --with-deps chromium
+
       - name: Verify code and content
         if: steps.tag.outputs.deploy == 'true'
         run: bun run verify

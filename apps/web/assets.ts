@@ -13,25 +13,44 @@ export async function styleCss(): Promise<string> {
   return parts.join("\n");
 }
 
-// The browser script: client.ts with its types stripped.
+// The browser script: client.ts and its modules bundled, types stripped.
 export async function clientJs(): Promise<string> {
-  const source = await Bun.file(join(APP, "client.ts")).text();
-  return new Bun.Transpiler({ loader: "ts", target: "browser" }).transformSync(source);
+  const out = await Bun.build({ entrypoints: [join(APP, "client.ts")], target: "browser", format: "iife" });
+  const [file] = out.outputs;
+  if (!out.success || file === undefined) throw new Error(`client.ts does not build: ${out.logs.map((l) => l.message).join("\n")}`);
+  return file.text();
 }
 
-// Level colours from languages/levels.yaml in both themes, with each level's badge and chip.
+// Everything about levels that depends on the scale in languages/levels.yaml: each level's colour,
+// defined once per theme, and the level filter. An element's data-level is its lowest level; it
+// hides while the filter (data-level on <html>) sits below it. The rail keeps its entries and greys
+// them out; a view whose content all sits above the filter shows its note instead.
 export function levelsCss(): string {
+  const codes = LEVEL_INFO.map((l) => l.code);
   const vars = (theme: "light" | "dark"): string => LEVEL_INFO.map((l) => `--lvl-${l.code}: ${l.color[theme]};`).join(" ");
-  const rules = LEVEL_INFO.map(
-    ({ code }) =>
-      `.lvl-${code} { background: var(--lvl-${code}); }\n.c-${code} { background: color-mix(in srgb, var(--lvl-${code}) 16%, transparent); color: var(--lvl-${code}); }`,
-  );
+  const colours = codes.map((code) => `.lvl-${code} { --lvl: var(--lvl-${code}); }`);
+  const filter = codes.flatMap((code, i) => {
+    const above = codes.slice(i + 1).map((c) => `[data-level="${c}"]`);
+    if (above.length === 0) return [];
+    const at = `html[data-level="${code}"]`;
+    const list = `:is(${above.join(", ")})`;
+    const needs = `:is(${codes
+      .slice(i + 1)
+      .map((c) => `[data-needs="${c}"]`)
+      .join(", ")})`;
+    return [
+      `${at}:is([data-page="topic"], [data-page="track"]) ${list}:not(.toc > li) { display: none !important; }`,
+      `${at}[data-page="topic"] .toc > li${list} { opacity: 0.4; pointer-events: none; }`,
+      `${at} .filter-empty${needs} { display: block; }`,
+    ];
+  });
   return (
     [
       `:root { ${vars("light")} }`,
       `@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { ${vars("dark")} } }`,
       `:root[data-theme="dark"] { ${vars("dark")} }`,
-      ...rules,
+      ...colours,
+      ...filter,
     ].join("\n") + "\n"
   );
 }

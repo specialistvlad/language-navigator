@@ -29,7 +29,10 @@ export interface LanguageNavigatorCurriculum {
        */
       topics: {
         slug: string;
-        levels: string;
+        /**
+         * Planned range of a topic without a topic file; a written topic takes its range from its data.
+         */
+        levels?: string;
         title?: Localized;
       }[];
     }[];

@@ -3,7 +3,7 @@ import type { Explain } from "../../../scripts/lib.ts";
 import { alternates, readChoices, type Track } from "../context.ts";
 import { controls, page } from "../layout.ts";
 import { navHome } from "../nav.ts";
-import { rangeBadge } from "../parts.ts";
+import { badge } from "../parts.ts";
 import { escapeHtml } from "../render.ts";
 import { sheetsUrl, sheetUrl, trackUrl } from "../urls.ts";
 import { type Sheet, sheetsOf } from "./sheet-content.ts";
@@ -38,7 +38,7 @@ export function sheetPages(track: Track): void {
       const list = sheets.filter((s) => s.group === g);
       if (list.length === 0) return "";
       return `<section class="part"><h2>${escapeHtml(groups[g])}</h2><ul class="topic-list">${list
-        .map((s) => `<li><a href="${sheetUrl(explain, lang, s.id)}">${escapeHtml(s.label)}</a> ${rangeBadge(s.range)}</li>`)
+        .map((s) => `<li><a href="${sheetUrl(explain, lang, s.id)}">${escapeHtml(s.label)}</a> ${badge(s.range)}</li>`)
         .join("")}</ul></section>`;
     })
     .join("");

@@ -2,7 +2,6 @@
 id: en.foundations.alphabet-spelling
 lang: en
 kind: foundations
-levels: [A0]
 tags: [alphabet, letters]
 concepts: [alphabet]
 related: [en.foundations.pronunciation-ipa, en.foundations.numbers, en.nouns-determiners.articles-a-an-the]
@@ -14,7 +13,6 @@ summary:
   es: "Las 26 letras del alfabeto inglés y sus nombres, para deletrear en voz alta. G, J y W tienen nombres propios del inglés: **G** se dice /dʒiː/ (*yi*), **J** /dʒeɪ/ (*yei*), **W** *double U*."
 
 cheatsheet:
-  level: A0
   content:
     - type: table
       columns:
@@ -22,18 +20,18 @@ cheatsheet:
         - { key: rule, label: { en: Rule, es: Regla } }
         - { key: example, label: { en: Example, es: Ejemplo } }
       rows:
-        - { point: { en: Letters, es: Letras }, rule: { en: "26 letters; vowels a, e, i, o, u; the other 21 are consonants; y works as both", es: "26 letras; vocales a, e, i, o, u; las otras 21 son consonantes; y funciona como las dos" }, example: "**y**es / m**y**", tr: { es: sí / mi } }
-        - { point: { en: Vowel names, es: Nombres de las vocales }, rule: { en: "A /eɪ/, E /iː/, I /aɪ/, O /əʊ/, U /juː/", es: "A /eɪ/, E /iː/, I /aɪ/, O /əʊ/, U /juː/" }, example: "**e**gg / **i**ce" , tr: { es: huevo / hielo } }
-        - { point: { en: G and J, es: G y J }, rule: { en: "G /dʒiː/, J /dʒeɪ/", es: "G /dʒiː/ (*yi*), J /dʒeɪ/ (*yei*)" }, example: "**g**irl / **j**ob", tr: { es: chica / trabajo } }
-        - { point: { en: W and Z, es: W y Z }, rule: { en: "W is *double U* /ˈdʌbəljuː/; Z is /zed/", es: "W es *double U* /ˈdʌbəljuː/; Z es /zed/, con s sonora" }, example: "**w**ater / **z**oo", tr: { es: agua / zoo } }
-        - { point: { en: Name and sound, es: Nombre y sonido }, rule: { en: "a letter's name and its sound in a word can differ: A is /eɪ/", es: "el nombre de una letra y su sonido pueden ser distintos: A es /eɪ/" }, example: "**a**pple /æ/", tr: { es: manzana } }
-        - { point: US, rule: { en: "Z is /ziː/ and R is /ɑːr/", es: "Z es /ziː/ y R es /ɑːr/" }, example: "Z /ziː/" }
+        - { level: A0, point: { en: Letters, es: Letras }, rule: { en: "26 letters; vowels a, e, i, o, u; the other 21 are consonants; y works as both", es: "26 letras; vocales a, e, i, o, u; las otras 21 son consonantes; y funciona como las dos" }, example: "**y**es / m**y**", tr: { es: sí / mi } }
+        - { level: A0, point: { en: Vowel names, es: Nombres de las vocales }, rule: { en: "A /eɪ/, E /iː/, I /aɪ/, O /əʊ/, U /juː/", es: "A /eɪ/, E /iː/, I /aɪ/, O /əʊ/, U /juː/" }, example: "**e**gg / **i**ce", tr: { es: huevo / hielo } }
+        - { level: A0, point: { en: G and J, es: G y J }, rule: { en: "G /dʒiː/, J /dʒeɪ/", es: "G /dʒiː/ (*yi*), J /dʒeɪ/ (*yei*)" }, example: "**g**irl / **j**ob", tr: { es: chica / trabajo } }
+        - { level: A0, point: { en: W and Z, es: W y Z }, rule: { en: "W is *double U* /ˈdʌbəljuː/; Z is /zed/", es: "W es *double U* /ˈdʌbəljuː/; Z es /zed/, con s sonora" }, example: "**w**ater / **z**oo", tr: { es: agua / zoo } }
+        - { level: A0, point: { en: Name and sound, es: Nombre y sonido }, rule: { en: "a letter's name and its sound in a word can differ: A is /eɪ/", es: "el nombre de una letra y su sonido pueden ser distintos: A es /eɪ/" }, example: "**a**pple /æ/", tr: { es: manzana } }
+        - { level: A0, point: US, rule: { en: "Z is /ziː/ and R is /ɑːr/", es: "Z es /ziː/ y R es /ɑːr/" }, example: "Z /ziː/" }
 
 sections:
   - title: { en: The alphabet, es: El alfabeto }
-    level: A0
     content:
       - type: text
+        level: A0
         text:
           en: "26 letters. Vowels: **a, e, i, o, u**. The other 21 are consonants; **y** works as both (*yes*, *my*)."
           es: "26 letras. Vocales: **a, e, i, o, u**. Las otras 21 son consonantes; **y** funciona como las dos (*yes*, *my*)."
@@ -44,36 +42,40 @@ sections:
           - { key: like, label: { es: Suena como }, for: [es] }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { letter: A a, name: /eɪ/, like: { es: «ei» }, example: { ex: "**a**pple", tr: { es: manzana } } }
-          - { letter: B b, name: /biː/, like: { es: «bi» }, example: { ex: "**b**ook", tr: { es: libro } } }
-          - { letter: C c, name: /siː/, like: { es: «si» }, example: { ex: "**c**at", tr: { es: gato } } }
-          - { letter: D d, name: /diː/, like: { es: «di» }, example: { ex: "**d**og", tr: { es: perro } } }
-          - { letter: E e, name: /iː/, like: { es: «i» }, example: { ex: "**e**gg", tr: { es: huevo } } }
-          - { letter: F f, name: /ef/, like: { es: «ef» }, example: { ex: "**f**ish", tr: { es: pez } } }
-          - { letter: G g, name: /dʒiː/, like: { es: «yi» }, example: { ex: "**g**irl", tr: { es: chica } } }
-          - { letter: H h, name: /eɪtʃ/, like: { es: «eich» }, example: { ex: "**h**ouse", tr: { es: casa } } }
-          - { letter: I i, name: /aɪ/, like: { es: «ai» }, example: { ex: "**i**ce", tr: { es: hielo } } }
-          - { letter: J j, name: /dʒeɪ/, like: { es: «yei» }, example: { ex: "**j**ob", tr: { es: trabajo } } }
-          - { letter: K k, name: /keɪ/, like: { es: «kei» }, example: { ex: "**k**ey", tr: { es: llave } } }
-          - { letter: L l, name: /el/, like: { es: «el» }, example: { ex: "**l**emon", tr: { es: limón } } }
-          - { letter: M m, name: /em/, like: { es: «em» }, example: { ex: "**m**ilk", tr: { es: leche } } }
-          - { letter: N n, name: /en/, like: { es: «en» }, example: { ex: "**n**ame", tr: { es: nombre } } }
-          - { letter: O o, name: /əʊ/, like: { es: «ou» }, example: { ex: "**o**range", tr: { es: naranja } } }
-          - { letter: P p, name: /piː/, like: { es: «pi» }, example: { ex: "**p**en", tr: { es: bolígrafo } } }
-          - { letter: Q q, name: /kjuː/, like: { es: «kiu» }, example: { ex: "**q**ueen", tr: { es: reina } } }
-          - { letter: R r, name: /ɑː/, like: { es: «a» larga }, example: { ex: "**r**ed", tr: { es: rojo } } }
-          - { letter: S s, name: /es/, like: { es: «es» }, example: { ex: "**s**un", tr: { es: sol } } }
-          - { letter: T t, name: /tiː/, like: { es: «ti» }, example: { ex: "**t**ea", tr: { es: té } } }
-          - { letter: U u, name: /juː/, like: { es: «iu» }, example: { ex: "**u**mbrella", tr: { es: paraguas } } }
-          - { letter: V v, name: /viː/, like: { es: «vi» }, example: { ex: "**v**an", tr: { es: furgoneta } } }
-          - { letter: W w, name: /ˈdʌbəljuː/, like: { es: «dábliu» }, example: { ex: "**w**ater", tr: { es: agua } } }
-          - { letter: X x, name: /eks/, like: { es: «eks» }, example: { ex: "bo**x**", tr: { es: caja } } }
-          - { letter: Y y, name: /waɪ/, like: { es: «uai» }, example: { ex: "**y**es", tr: { es: sí } } }
-          - { letter: Z z, name: /zed/, like: { es: «sed» }, example: { ex: "**z**oo", tr: { es: zoo } } }
+          - { level: A0, letter: A a, name: /eɪ/, like: { es: «ei» }, example: { ex: "**a**pple", tr: { es: manzana } } }
+          - { level: A0, letter: B b, name: /biː/, like: { es: «bi» }, example: { ex: "**b**ook", tr: { es: libro } } }
+          - { level: A0, letter: C c, name: /siː/, like: { es: «si» }, example: { ex: "**c**at", tr: { es: gato } } }
+          - { level: A0, letter: D d, name: /diː/, like: { es: «di» }, example: { ex: "**d**og", tr: { es: perro } } }
+          - { level: A0, letter: E e, name: /iː/, like: { es: «i» }, example: { ex: "**e**gg", tr: { es: huevo } } }
+          - { level: A0, letter: F f, name: /ef/, like: { es: «ef» }, example: { ex: "**f**ish", tr: { es: pez } } }
+          - { level: A0, letter: G g, name: /dʒiː/, like: { es: «yi» }, example: { ex: "**g**irl", tr: { es: chica } } }
+          - { level: A0, letter: H h, name: /eɪtʃ/, like: { es: «eich» }, example: { ex: "**h**ouse", tr: { es: casa } } }
+          - { level: A0, letter: I i, name: /aɪ/, like: { es: «ai» }, example: { ex: "**i**ce", tr: { es: hielo } } }
+          - { level: A0, letter: J j, name: /dʒeɪ/, like: { es: «yei» }, example: { ex: "**j**ob", tr: { es: trabajo } } }
+          - { level: A0, letter: K k, name: /keɪ/, like: { es: «kei» }, example: { ex: "**k**ey", tr: { es: llave } } }
+          - { level: A0, letter: L l, name: /el/, like: { es: «el» }, example: { ex: "**l**emon", tr: { es: limón } } }
+          - { level: A0, letter: M m, name: /em/, like: { es: «em» }, example: { ex: "**m**ilk", tr: { es: leche } } }
+          - { level: A0, letter: N n, name: /en/, like: { es: «en» }, example: { ex: "**n**ame", tr: { es: nombre } } }
+          - { level: A0, letter: O o, name: /əʊ/, like: { es: «ou» }, example: { ex: "**o**range", tr: { es: naranja } } }
+          - { level: A0, letter: P p, name: /piː/, like: { es: «pi» }, example: { ex: "**p**en", tr: { es: bolígrafo } } }
+          - { level: A0, letter: Q q, name: /kjuː/, like: { es: «kiu» }, example: { ex: "**q**ueen", tr: { es: reina } } }
+          - { level: A0, letter: R r, name: /ɑː/, like: { es: «a» larga }, example: { ex: "**r**ed", tr: { es: rojo } } }
+          - { level: A0, letter: S s, name: /es/, like: { es: «es» }, example: { ex: "**s**un", tr: { es: sol } } }
+          - { level: A0, letter: T t, name: /tiː/, like: { es: «ti» }, example: { ex: "**t**ea", tr: { es: té } } }
+          - { level: A0, letter: U u, name: /juː/, like: { es: «iu» }, example: { ex: "**u**mbrella", tr: { es: paraguas } } }
+          - { level: A0, letter: V v, name: /viː/, like: { es: «vi» }, example: { ex: "**v**an", tr: { es: furgoneta } } }
+          - { level: A0, letter: W w, name: /ˈdʌbəljuː/, like: { es: «dábliu» }, example: { ex: "**w**ater", tr: { es: agua } } }
+          - { level: A0, letter: X x, name: /eks/, like: { es: «eks» }, example: { ex: "bo**x**", tr: { es: caja } } }
+          - { level: A0, letter: Y y, name: /waɪ/, like: { es: «uai» }, example: { ex: "**y**es", tr: { es: sí } } }
+          - { level: A0, letter: Z z, name: /zed/, like: { es: «sed» }, example: { ex: "**z**oo", tr: { es: zoo } } }
       - type: bullets
         items:
-          - en: "A letter's name and its sound in a word can differ: A is /eɪ/, but **a**pple starts with /æ/."
-            es: "El nombre de una letra y su sonido pueden ser distintos: A se llama /eɪ/, pero **a**pple empieza con /æ/."
-          - { for: [es], text: { es: "«Suena como» es una aproximación con sonidos del español. En «sed», la s es sonora: /z/." } }
-          - en: "US: Z is /ziː/ (*zee*) and R is /ɑːr/."
-            es: "US: Z se dice /ziː/ (*zee*) y R se dice /ɑːr/."
+          - level: A0
+            text:
+              en: "A letter's name and its sound in a word can differ: A is /eɪ/, but **a**pple starts with /æ/."
+              es: "El nombre de una letra y su sonido pueden ser distintos: A se llama /eɪ/, pero **a**pple empieza con /æ/."
+          - { level: A0, for: [es], text: { es: "«Suena como» es una aproximación con sonidos del español. En «sed», la s es sonora: /z/." } }
+          - level: A0
+            text:
+              en: "US: Z is /ziː/ (*zee*) and R is /ɑːr/."
+              es: "US: Z se dice /ziː/ (*zee*) y R se dice /ɑːr/."

@@ -2,7 +2,6 @@
 id: en.sentence-building.word-order
 lang: en
 kind: grammar
-levels: [A0, A1]
 tags: [word-order, sentences, syntax]
 concepts: [word-order]
 related: [en.sentence-building.questions-negatives, en.adjectives-adverbs.adjective-order, en.adjectives-adverbs.adverbs-frequency-manner, en.tenses.simple-tenses]
@@ -14,70 +13,77 @@ summary:
   es: "El orden del sujeto, el verbo, el objeto, los adjetivos y los adverbios en la frase inglesa. En inglés el sujeto siempre aparece y el adjetivo va antes del sustantivo: **It** is cold. I have a **red car**."
 
 cheatsheet:
-  level: A0-A1
   content:
     - type: table
       columns:
         - { key: part, label: { en: Part, es: Parte } }
         - { key: example, label: { en: Example, es: Ejemplo } }
       rows:
-        - { part: { en: 1. Subject, es: 1. Sujeto }, example: "**My sister** buys bread in the shop every day.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
-        - { part: { en: 2. Verb, es: 2. Verbo }, example: "My sister **buys** bread in the shop every day.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
-        - { part: { en: 3. Object, es: 3. Objeto }, example: "My sister buys **bread** in the shop every day.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
+        - { level: A0, part: { en: 1. Subject, es: 1. Sujeto }, example: "**My sister** buys bread in the shop every day.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
+        - { level: A0, part: { en: 2. Verb, es: 2. Verbo }, example: "My sister **buys** bread in the shop every day.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
+        - { level: A0, part: { en: 3. Object, es: 3. Objeto }, example: "My sister buys **bread** in the shop every day.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
         - { level: A1, part: { en: 4. Place, es: 4. Lugar }, example: "My sister buys bread **in the shop** every day.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
         - { level: A1, part: { en: 5. Time, es: 5. Tiempo }, example: "My sister buys bread in the shop **every day**.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
 
 sections:
   - title: { en: Overview, es: Resumen }
-    level: A0
     content:
       - type: bullets
         items:
-          - en: "The order is subject, verb, object (SVO), then place, then time."
-            es: "El orden es sujeto, verbo, objeto (SVO), después lugar y después tiempo."
-          - for: [es]
+          - level: A0
+            text:
+              en: "The order is subject, verb, object (SVO), then place, then time."
+              es: "El orden es sujeto, verbo, objeto (SVO), después lugar y después tiempo."
+          - level: A0
+            for: [es]
             text: { es: "El español admite más órdenes: *Me gusta mucho el café.* El inglés fija uno: I like coffee very much." }
-          - en: "Questions change the order. See [Questions and negatives](id:en.sentence-building.questions-negatives)."
-            es: "Las preguntas cambian el orden. Ver [Preguntas y negativas](id:en.sentence-building.questions-negatives)."
+          - level: A0
+            text:
+              en: "Questions change the order. See [Questions and negatives](id:en.sentence-building.questions-negatives)."
+              es: "Las preguntas cambian el orden. Ver [Preguntas y negativas](id:en.sentence-building.questions-negatives)."
 
   - title: { en: "Form: statements", es: "Forma: afirmaciones" }
-    level: A0
     content:
       - type: table
         columns:
           - { key: rule, label: { en: Rule, es: Regla } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { rule: { en: "The subject is always present.", es: "El sujeto siempre aparece." }, example: "**It** is cold. / **She** lives in Madrid.", tr: { es: Hace frío. / Vive en Madrid. } }
-          - { rule: { en: "The verb comes right after the subject.", es: "El verbo va justo después del sujeto." }, example: "My friend **came** early.", tr: { es: Mi amigo llegó pronto. } }
-          - { rule: { en: "The object comes right after the verb.", es: "El objeto va justo después del verbo." }, example: "I **drink tea** at night.", tr: { es: Bebo té por la noche. } }
-          - { rule: { en: "An adjective comes before the noun.", es: "El adjetivo va antes del sustantivo." }, example: "I have a **red car**.", tr: { es: Tengo un coche rojo. } }
+          - { level: A0, rule: { en: "The subject is always present.", es: "El sujeto siempre aparece." }, example: "**It** is cold. / **She** lives in Madrid.", tr: { es: Hace frío. / Vive en Madrid. } }
+          - { level: A0, rule: { en: "The verb comes right after the subject.", es: "El verbo va justo después del sujeto." }, example: "My friend **came** early.", tr: { es: Mi amigo llegó pronto. } }
+          - { level: A0, rule: { en: "The object comes right after the verb.", es: "El objeto va justo después del verbo." }, example: "I **drink tea** at night.", tr: { es: Bebo té por la noche. } }
+          - { level: A0, rule: { en: "An adjective comes before the noun.", es: "El adjetivo va antes del sustantivo." }, example: "I have a **red car**.", tr: { es: Tengo un coche rojo. } }
       - type: bullets
         items:
-          - en: "For two or more adjectives, see [Adjective order](id:en.adjectives-adverbs.adjective-order)."
-            es: "Para dos o más adjetivos, ver [Orden de los adjetivos](id:en.adjectives-adverbs.adjective-order)."
-          - for: [es]
+          - level: A0
+            text:
+              en: "For two or more adjectives, see [Adjective order](id:en.adjectives-adverbs.adjective-order)."
+              es: "Para dos o más adjetivos, ver [Orden de los adjetivos](id:en.adjectives-adverbs.adjective-order)."
+          - level: A0
+            for: [es]
             text: { es: "En español el sujeto puede ir detrás del verbo: *Llegó mi amigo.* En inglés va delante: My friend **arrived**." }
 
   - title: { en: Place and time, es: Lugar y tiempo }
-    level: A1
     content:
       - type: table
         columns:
           - { key: rule, label: { en: Rule, es: Regla } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { rule: { en: "Place comes before time.", es: "El lugar va antes del tiempo." }, example: "I went **to London** **last year**.", tr: { es: Fui a Londres el año pasado. } }
-          - { rule: { en: "A time word can also start the sentence.", es: "Una expresión de tiempo también puede ir al principio." }, example: "**Last year** I went to London.", tr: { es: El año pasado fui a Londres. } }
+          - { level: A1, rule: { en: "Place comes before time.", es: "El lugar va antes del tiempo." }, example: "I went **to London** **last year**.", tr: { es: Fui a Londres el año pasado. } }
+          - { level: A1, rule: { en: "A time word can also start the sentence.", es: "Una expresión de tiempo también puede ir al principio." }, example: "**Last year** I went to London.", tr: { es: El año pasado fui a Londres. } }
       - type: bullets
         items:
-          - en: "A time phrase at the start often takes a comma: **Last summer**, we went to Italy."
-            es: "Una expresión de tiempo al principio suele llevar coma: **Last summer**, we went to Italy."
-          - en: "A place or time word follows the object: I met **Ana** in the park."
-            es: "Un complemento de lugar o de tiempo va después del objeto: I met **Ana** in the park."
+          - level: A1
+            text:
+              en: "A time phrase at the start often takes a comma: **Last summer**, we went to Italy."
+              es: "Una expresión de tiempo al principio suele llevar coma: **Last summer**, we went to Italy."
+          - level: A1
+            text:
+              en: "A place or time word follows the object: I met **Ana** in the park."
+              es: "Un complemento de lugar o de tiempo va después del objeto: I met **Ana** in the park."
 
   - title: { en: Adverbs, es: Adverbios }
-    level: A1
     content:
       - type: table
         columns:
@@ -85,26 +91,28 @@ sections:
           - { key: position, label: { en: Position, es: Posición } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { adverb: always, position: { en: "before the main verb, after be", es: "antes del verbo principal, después de be" }, example: "I **always** eat breakfast. / She is **always** late.", tr: { es: Siempre desayuno. / Siempre llega tarde. } }
-          - { adverb: really, position: { en: "before the main verb", es: "antes del verbo principal" }, example: "I **really** like jazz.", tr: { es: Me gusta mucho el jazz. } }
-          - { adverb: "very much / a lot", position: { en: "at the end, after the object", es: "al final, después del objeto" }, example: "I like coffee **very much**.", tr: { es: Me gusta mucho el café. } }
+          - { level: A1, adverb: always, position: { en: "before the main verb, after be", es: "antes del verbo principal, después de be" }, example: "I **always** eat breakfast. / She is **always** late.", tr: { es: Siempre desayuno. / Siempre llega tarde. } }
+          - { level: A1, adverb: really, position: { en: "before the main verb", es: "antes del verbo principal" }, example: "I **really** like jazz.", tr: { es: Me gusta mucho el jazz. } }
+          - { level: A1, adverb: "very much / a lot", position: { en: "at the end, after the object", es: "al final, después del objeto" }, example: "I like coffee **very much**.", tr: { es: Me gusta mucho el café. } }
       - type: bullets
         items:
-          - en: "More on frequency adverbs: [Adverbs of frequency and manner](id:en.adjectives-adverbs.adverbs-frequency-manner)."
-            es: "Más sobre los adverbios de frecuencia: [Adverbios de frecuencia y modo](id:en.adjectives-adverbs.adverbs-frequency-manner)."
-          - for: [es]
+          - level: A1
+            text:
+              en: "More on frequency adverbs: [Adverbs of frequency and manner](id:en.adjectives-adverbs.adverbs-frequency-manner)."
+              es: "Más sobre los adverbios de frecuencia: [Adverbios de frecuencia y modo](id:en.adjectives-adverbs.adverbs-frequency-manner)."
+          - level: A1
+            for: [es]
             text: { es: "*Me gusta mucho el café.* → I like coffee **very much**, con very much al final." }
 
   - title: { en: Typical errors, es: Errores típicos }
-    level: A0-A1
     content:
       - type: errors
         audience: true
         rows:
-          - { for: [es], wrong: Is cold., right: "**It** is cold.", rule: { es: "el sujeto siempre aparece, también it" } }
-          - { for: [es], wrong: Lives in Madrid., right: "**She** lives in Madrid.", rule: { es: el sujeto siempre aparece } }
-          - { for: [es], wrong: I have a car red., right: "I have a **red car**.", rule: { es: el adjetivo va antes del sustantivo } }
-          - { for: [es], wrong: Arrived my friend., right: "**My friend** arrived.", rule: { es: el sujeto va antes del verbo } }
+          - { level: A0, for: [es], wrong: Is cold., right: "**It** is cold.", rule: { es: "el sujeto siempre aparece, también it" } }
+          - { level: A0, for: [es], wrong: Lives in Madrid., right: "**She** lives in Madrid.", rule: { es: el sujeto siempre aparece } }
+          - { level: A0, for: [es], wrong: I have a car red., right: "I have a **red car**.", rule: { es: el adjetivo va antes del sustantivo } }
+          - { level: A0, for: [es], wrong: Arrived my friend., right: "**My friend** arrived.", rule: { es: el sujeto va antes del verbo } }
           - { for: [es], level: A1, wrong: I like very much coffee., right: "I like coffee **very much**.", rule: { es: "very much va al final, después del objeto" } }
           - { level: A1, wrong: I went yesterday to London., right: "I went **to London yesterday**.", rule: { en: place before time, es: lugar antes del tiempo } }
           - { level: A1, wrong: I eat always breakfast., right: "I **always eat** breakfast.", rule: { en: frequency adverbs go before the main verb, es: el adverbio de frecuencia va antes del verbo principal } }

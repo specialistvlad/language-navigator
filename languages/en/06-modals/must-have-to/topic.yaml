@@ -2,7 +2,6 @@
 id: en.modals.must-have-to
 lang: en
 kind: grammar
-levels: [A2]
 tags: [verbs, modals, obligation]
 concepts: [obligation]
 related: [en.modals.should, en.modals.can-could, en.modals.may-might, en.tenses.simple-tenses, en.sentence-building.questions-negatives]
@@ -14,7 +13,6 @@ summary:
   es: "Must y have to para obligación; mustn't para prohibición; don't have to para falta de obligación. Mustn't prohíbe y don't have to significa que no hace falta: *no tienes que pagar* es You **don't have to** pay."
 
 cheatsheet:
-  level: A2
   content:
     - type: table
       columns:
@@ -22,22 +20,20 @@ cheatsheet:
         - { key: form, label: { en: Form, es: Forma } }
         - { key: example, label: { en: Example, es: Ejemplo } }
       rows:
-        - { meaning: { en: "strong personal obligation, rules", es: "obligación personal fuerte, normas" }, form: must + V, example: "I **must** call my mum.", tr: { es: Tengo que llamar a mi madre. } }
-        - { meaning: { en: "obligation from outside", es: "obligación externa" }, form: have to + V, example: "I **have to** wear a uniform.", tr: { es: Tengo que llevar uniforme. } }
-        - { meaning: { en: prohibition, es: prohibición }, form: mustn't + V, example: "You **mustn't** park here.", tr: { es: No debes aparcar aquí. } }
-        - { meaning: { en: "no obligation", es: "sin obligación" }, form: don't have to + V, example: "You **don't have to** pay.", tr: { es: No hace falta que pagues. } }
-        - { meaning: { en: "past obligation", es: "obligación en pasado" }, form: had to + V, example: "I **had to** work late.", tr: { es: Tuve que trabajar hasta tarde. } }
+        - { level: A2, meaning: { en: "strong personal obligation, rules", es: "obligación personal fuerte, normas" }, form: must + V, example: "I **must** call my mum.", tr: { es: Tengo que llamar a mi madre. } }
+        - { level: A2, meaning: { en: "obligation from outside", es: "obligación externa" }, form: have to + V, example: "I **have to** wear a uniform.", tr: { es: Tengo que llevar uniforme. } }
+        - { level: A2, meaning: { en: prohibition, es: prohibición }, form: mustn't + V, example: "You **mustn't** park here.", tr: { es: No debes aparcar aquí. } }
+        - { level: A2, meaning: { en: "no obligation", es: "sin obligación" }, form: don't have to + V, example: "You **don't have to** pay.", tr: { es: No hace falta que pagues. } }
+        - { level: A2, meaning: { en: "past obligation", es: "obligación en pasado" }, form: had to + V, example: "I **had to** work late.", tr: { es: Tuve que trabajar hasta tarde. } }
 
 sections:
   - title: { en: Overview, es: Resumen }
-    level: A2
     content:
       - type: bullets
         items:
-          - { for: [es], text: { es: "*tener que* = have to. *deber* = must. *No tienes que* = don't have to; *no debes* = mustn't." } }
+          - { level: A2, for: [es], text: { es: "*tener que* = have to. *deber* = must. *No tienes que* = don't have to; *no debes* = mustn't." } }
 
   - title: { en: "Form: must", es: "Forma: must" }
-    level: A2
     content:
       - type: table
         columns:
@@ -45,20 +41,25 @@ sections:
           - { key: pattern, label: { en: Pattern, es: Estructura } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { form: { en: Affirmative, es: Afirmativa }, pattern: subject + must + V, example: "She **must** study.", tr: { es: Debe estudiar. } }
-          - { form: { en: Negative, es: Negativa }, pattern: subject + mustn't + V, example: "You **mustn't** touch it.", tr: { es: No debes tocarlo. } }
-          - { form: { en: Question, es: Pregunta }, pattern: Must + subject + V, example: "**Must** I go now?", tr: { es: "¿Debo irme ya?" } }
+          - { level: A2, form: { en: Affirmative, es: Afirmativa }, pattern: subject + must + V, example: "She **must** study.", tr: { es: Debe estudiar. } }
+          - { level: A2, form: { en: Negative, es: Negativa }, pattern: subject + mustn't + V, example: "You **mustn't** touch it.", tr: { es: No debes tocarlo. } }
+          - { level: A2, form: { en: Question, es: Pregunta }, pattern: Must + subject + V, example: "**Must** I go now?", tr: { es: "¿Debo irme ya?" } }
       - type: bullets
         items:
-          - en: "**must** has one form for every subject and takes the base verb: She must **study**."
-            es: "**must** tiene una sola forma para todos los sujetos y lleva el verbo en forma base: She must **study**."
-          - en: "**must** has no past form. The past is **had to**."
-            es: "**must** no tiene pasado. El pasado es **had to**."
-          - en: "Questions with **must** are formal and rare. Speech prefers **Do I have to…?**"
-            es: "Las preguntas con **must** son formales y poco frecuentes. En conversación se usa **Do I have to…?**"
+          - level: A2
+            text:
+              en: "**must** has one form for every subject and takes the base verb: She must **study**."
+              es: "**must** tiene una sola forma para todos los sujetos y lleva el verbo en forma base: She must **study**."
+          - level: A2
+            text:
+              en: "**must** has no past form. The past is **had to**."
+              es: "**must** no tiene pasado. El pasado es **had to**."
+          - level: A2
+            text:
+              en: "Questions with **must** are formal and rare. Speech prefers **Do I have to…?**"
+              es: "Las preguntas con **must** son formales y poco frecuentes. En conversación se usa **Do I have to…?**"
 
   - title: { en: "Form: have to", es: "Forma: have to" }
-    level: A2
     content:
       - type: table
         columns:
@@ -66,21 +67,24 @@ sections:
           - { key: pattern, label: { en: Pattern, es: Estructura } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { form: { en: "Affirmative (I / you / we / they)", es: "Afirmativa (I / you / we / they)" }, pattern: have to + V, example: "We **have to** leave.", tr: { es: Tenemos que irnos. } }
-          - { form: { en: "Affirmative (he / she / it)", es: "Afirmativa (he / she / it)" }, pattern: has to + V, example: "He **has to** leave.", tr: { es: Tiene que irse. } }
-          - { form: { en: Negative, es: Negativa }, pattern: don't / doesn't have to + V, example: "She **doesn't have to** leave.", tr: { es: No tiene que irse. } }
-          - { form: { en: Question, es: Pregunta }, pattern: Do / Does + subject + have to + V, example: "**Do** you **have to** leave?", tr: { es: "¿Tienes que irte?" } }
-          - { form: { en: Past, es: Pasado }, pattern: had to + V, example: "I **had to** leave.", tr: { es: Tuve que irme. } }
-          - { form: { en: "Past negative and question", es: "Pasado: negativa y pregunta" }, pattern: didn't have to / Did … have to, example: "**Did** you **have to** pay?", tr: { es: "¿Tuviste que pagar?" } }
+          - { level: A2, form: { en: "Affirmative (I / you / we / they)", es: "Afirmativa (I / you / we / they)" }, pattern: have to + V, example: "We **have to** leave.", tr: { es: Tenemos que irnos. } }
+          - { level: A2, form: { en: "Affirmative (he / she / it)", es: "Afirmativa (he / she / it)" }, pattern: has to + V, example: "He **has to** leave.", tr: { es: Tiene que irse. } }
+          - { level: A2, form: { en: Negative, es: Negativa }, pattern: don't / doesn't have to + V, example: "She **doesn't have to** leave.", tr: { es: No tiene que irse. } }
+          - { level: A2, form: { en: Question, es: Pregunta }, pattern: Do / Does + subject + have to + V, example: "**Do** you **have to** leave?", tr: { es: "¿Tienes que irte?" } }
+          - { level: A2, form: { en: Past, es: Pasado }, pattern: had to + V, example: "I **had to** leave.", tr: { es: Tuve que irme. } }
+          - { level: A2, form: { en: "Past negative and question", es: "Pasado: negativa y pregunta" }, pattern: didn't have to / Did … have to, example: "**Did** you **have to** pay?", tr: { es: "¿Tuviste que pagar?" } }
       - type: bullets
         items:
-          - en: "**have to** works like a main verb: it takes **do / does / did** in questions and negatives."
-            es: "**have to** funciona como un verbo normal: lleva **do / does / did** en preguntas y negativas."
-          - en: "After **do / does / did** the verb is in the base form: Does she **have** to leave?"
-            es: "Después de **do / does / did** el verbo va en forma base: Does she **have** to leave?"
+          - level: A2
+            text:
+              en: "**have to** works like a main verb: it takes **do / does / did** in questions and negatives."
+              es: "**have to** funciona como un verbo normal: lleva **do / does / did** en preguntas y negativas."
+          - level: A2
+            text:
+              en: "After **do / does / did** the verb is in the base form: Does she **have** to leave?"
+              es: "Después de **do / does / did** el verbo va en forma base: Does she **have** to leave?"
 
   - title: { en: "Pronunciation: have to and must", es: "Pronunciación: have to y must" }
-    level: A2
     content:
       - type: table
         columns:
@@ -88,43 +92,51 @@ sections:
           - { key: sound, label: { en: Sound, es: Sonido } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { form: have to, sound: /ˈhæf tə/, example: "I **have to** go. /aɪ ˈhæf tə ɡəʊ/", tr: { es: Tengo que irme. } }
-          - { form: has to, sound: /ˈhæs tə/, example: "She **has to** go. /ʃi ˈhæs tə ɡəʊ/", tr: { es: Tiene que irse. } }
-          - { form: had to, sound: /ˈhæd tə/, example: "We **had to** go. /wi ˈhæd tə ɡəʊ/", tr: { es: Tuvimos que irnos. } }
-          - { form: mustn't, sound: /ˈmʌsnt/, example: "You **mustn't** go. /juː ˈmʌsnt ɡəʊ/", tr: { es: No debes irte. } }
+          - { level: A2, form: have to, sound: /ˈhæf tə/, example: "I **have to** go. /aɪ ˈhæf tə ɡəʊ/", tr: { es: Tengo que irme. } }
+          - { level: A2, form: has to, sound: /ˈhæs tə/, example: "She **has to** go. /ʃi ˈhæs tə ɡəʊ/", tr: { es: Tiene que irse. } }
+          - { level: A2, form: had to, sound: /ˈhæd tə/, example: "We **had to** go. /wi ˈhæd tə ɡəʊ/", tr: { es: Tuvimos que irnos. } }
+          - { level: A2, form: mustn't, sound: /ˈmʌsnt/, example: "You **mustn't** go. /juː ˈmʌsnt ɡəʊ/", tr: { es: No debes irte. } }
       - type: bullets
         items:
-          - en: "Before **to** the final sound of **have** changes to /f/, **has** to /s/ and **had** stays /d/."
-            es: "Delante de **to**, la última consonante de **have** pasa a /f/ y la de **has** a /s/. **had** mantiene /d/."
-          - en: "The first **t** of **mustn't** is silent."
-            es: "La primera **t** de **mustn't** no se pronuncia."
+          - level: A2
+            text:
+              en: "Before **to** the final sound of **have** changes to /f/, **has** to /s/ and **had** stays /d/."
+              es: "Delante de **to**, la última consonante de **have** pasa a /f/ y la de **has** a /s/. **had** mantiene /d/."
+          - level: A2
+            text:
+              en: "The first **t** of **mustn't** is silent."
+              es: "La primera **t** de **mustn't** no se pronuncia."
 
   - title: { en: Use, es: Uso }
-    level: A2
     content:
       - type: table
         columns:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { use: { en: "Personal obligation: the speaker decides (must)", es: "Obligación personal: decide el hablante (must)" }, example: "I **must** save more money.", tr: { es: Debo ahorrar más dinero. } }
-          - { use: { en: "Written rules and signs (must)", es: "Normas escritas y carteles (must)" }, example: "Visitors **must** sign in.", tr: { es: Los visitantes deben registrarse. } }
-          - { use: { en: "Strong recommendation (must)", es: "Recomendación fuerte (must)" }, example: "You **must** try this cake!", tr: { es: "¡Tienes que probar esta tarta!" } }
-          - { use: { en: "Obligation from the situation or another person (have to)", es: "Obligación de la situación o de otra persona (have to)" }, example: "I **have to** get up at six for work.", tr: { es: Tengo que levantarme a las seis para ir a trabajar. } }
-          - { use: { en: "Prohibition (mustn't)", es: "Prohibición (mustn't)" }, example: "You **mustn't** use your phone here.", tr: { es: No debes usar el móvil aquí. } }
-          - { use: { en: "No obligation: it is not necessary (don't have to)", es: "Sin obligación: no es necesario (don't have to)" }, example: "You **don't have to** come.", tr: { es: No hace falta que vengas. } }
-          - { use: { en: "Past obligation (had to)", es: "Obligación en pasado (had to)" }, example: "I **had to** work on Saturday.", tr: { es: Tuve que trabajar el sábado. } }
+          - { level: A2, use: { en: "Personal obligation: the speaker decides (must)", es: "Obligación personal: decide el hablante (must)" }, example: "I **must** save more money.", tr: { es: Debo ahorrar más dinero. } }
+          - { level: A2, use: { en: "Written rules and signs (must)", es: "Normas escritas y carteles (must)" }, example: "Visitors **must** sign in.", tr: { es: Los visitantes deben registrarse. } }
+          - { level: A2, use: { en: "Strong recommendation (must)", es: "Recomendación fuerte (must)" }, example: "You **must** try this cake!", tr: { es: "¡Tienes que probar esta tarta!" } }
+          - { level: A2, use: { en: "Obligation from the situation or another person (have to)", es: "Obligación de la situación o de otra persona (have to)" }, example: "I **have to** get up at six for work.", tr: { es: Tengo que levantarme a las seis para ir a trabajar. } }
+          - { level: A2, use: { en: "Prohibition (mustn't)", es: "Prohibición (mustn't)" }, example: "You **mustn't** use your phone here.", tr: { es: No debes usar el móvil aquí. } }
+          - { level: A2, use: { en: "No obligation: it is not necessary (don't have to)", es: "Sin obligación: no es necesario (don't have to)" }, example: "You **don't have to** come.", tr: { es: No hace falta que vengas. } }
+          - { level: A2, use: { en: "Past obligation (had to)", es: "Obligación en pasado (had to)" }, example: "I **had to** work on Saturday.", tr: { es: Tuve que trabajar el sábado. } }
       - type: bullets
         items:
-          - en: "**must** expresses the speaker's own view or a written rule; **have to** expresses facts outside the speaker."
-            es: "**must** expresa la opinión del hablante o una norma escrita; **have to** expresa hechos ajenos al hablante."
-          - en: "In everyday speech **have to** is more common than **must**."
-            es: "En la conversación diaria **have to** es más frecuente que **must**."
-          - en: "For advice that is not an obligation see [Should](id:en.modals.should)."
-            es: "Para consejos que no son una obligación ver [Should](id:en.modals.should)."
+          - level: A2
+            text:
+              en: "**must** expresses the speaker's own view or a written rule; **have to** expresses facts outside the speaker."
+              es: "**must** expresa la opinión del hablante o una norma escrita; **have to** expresa hechos ajenos al hablante."
+          - level: A2
+            text:
+              en: "In everyday speech **have to** is more common than **must**."
+              es: "En la conversación diaria **have to** es más frecuente que **must**."
+          - level: A2
+            text:
+              en: "For advice that is not an obligation see [Should](id:en.modals.should)."
+              es: "Para consejos que no son una obligación ver [Should](id:en.modals.should)."
 
   - title: { en: "Compare: mustn't and don't have to", es: "Comparación: mustn't y don't have to" }
-    level: A2
     content:
       - type: table
         columns:
@@ -132,31 +144,33 @@ sections:
           - { key: mustnt, label: mustn't }
           - { key: dont, label: don't have to }
         rows:
-          - row: { en: Meaning, es: Significado }
+          - level: A2
+            row: { en: Meaning, es: Significado }
             mustnt: { en: "forbidden", es: "prohibido" }
             dont: { en: "not necessary: you can choose", es: "no es necesario: puedes elegir" }
-          - row: { en: Example, es: Ejemplo }
+          - level: A2
+            row: { en: Example, es: Ejemplo }
             mustnt: { ex: "You **mustn't** tell Ana. It's a secret.", tr: { es: No debes contárselo a Ana. Es un secreto. } }
             dont: { ex: "You **don't have to** tell Ana. I can do it.", tr: { es: No hace falta que se lo cuentes a Ana. Lo hago yo. } }
-          - row: { en: Example, es: Ejemplo }
+          - level: A2
+            row: { en: Example, es: Ejemplo }
             mustnt: { ex: "Children **mustn't** cross alone.", tr: { es: Los niños no deben cruzar solos. } }
             dont: { ex: "Children **don't have to** wear a uniform.", tr: { es: Los niños no tienen que llevar uniforme. } }
       - type: bullets
         items:
-          - { for: [es], text: { es: "*No tienes que ir* = You **don't have to** go (libre). *No debes ir* = You **mustn't** go (prohibido)." } }
+          - { level: A2, for: [es], text: { es: "*No tienes que ir* = You **don't have to** go (libre). *No debes ir* = You **mustn't** go (prohibido)." } }
 
   - title: { en: Typical errors, es: Errores típicos }
-    level: A2
     content:
       - type: errors
         audience: true
         rows:
-          - { for: [es], wrong: "You mustn't bring food. We have plenty.", right: "You **don't have to** bring food.", rule: { es: "*no tienes que* = don't have to; mustn't es prohibición" } }
-          - { wrong: "You don't must smoke here.", right: "You **mustn't** smoke here.", rule: { en: "negative of must = mustn't", es: "la negativa de must es mustn't" } }
-          - { wrong: "She musts go.", right: "She **must** go.", rule: { en: "must has no -s", es: "must no lleva -s" } }
-          - { wrong: "She must to go.", right: "She must **go**.", rule: { en: "must + base verb; no to", es: "must + forma base, sin to" } }
-          - { wrong: "He have to work.", right: "He **has to** work.", rule: { en: "he / she / it → has to", es: "he / she / it → has to" } }
-          - { wrong: "Do I must go?", right: "**Do** I **have to** go? / **Must** I go?", rule: { en: "have to takes do; must forms its own question", es: "have to lleva do; must forma la pregunta por sí mismo" } }
-          - { for: [en], wrong: "She doesn't has to work.", right: "She doesn't **have to** work.", rule: { en: "doesn't + base form" } }
-          - { wrong: "I must work yesterday.", right: "I **had to** work yesterday.", rule: { en: "past of must → had to", es: "el pasado de must es had to" } }
-          - { for: [es], wrong: "I haven't to go.", right: "I **don't have to** go.", rule: { es: "negativa de have to: don't / doesn't have to" } }
+          - { level: A2, for: [es], wrong: "You mustn't bring food. We have plenty.", right: "You **don't have to** bring food.", rule: { es: "*no tienes que* = don't have to; mustn't es prohibición" } }
+          - { level: A2, wrong: "You don't must smoke here.", right: "You **mustn't** smoke here.", rule: { en: "negative of must = mustn't", es: "la negativa de must es mustn't" } }
+          - { level: A2, wrong: "She musts go.", right: "She **must** go.", rule: { en: "must has no -s", es: "must no lleva -s" } }
+          - { level: A2, wrong: "She must to go.", right: "She must **go**.", rule: { en: "must + base verb; no to", es: "must + forma base, sin to" } }
+          - { level: A2, wrong: "He have to work.", right: "He **has to** work.", rule: { en: "he / she / it → has to", es: "he / she / it → has to" } }
+          - { level: A2, wrong: "Do I must go?", right: "**Do** I **have to** go? / **Must** I go?", rule: { en: "have to takes do; must forms its own question", es: "have to lleva do; must forma la pregunta por sí mismo" } }
+          - { level: A2, for: [en], wrong: "She doesn't has to work.", right: "She doesn't **have to** work.", rule: { en: "doesn't + base form" } }
+          - { level: A2, wrong: "I must work yesterday.", right: "I **had to** work yesterday.", rule: { en: "past of must → had to", es: "el pasado de must es had to" } }
+          - { level: A2, for: [es], wrong: "I haven't to go.", right: "I **don't have to** go.", rule: { es: "negativa de have to: don't / doesn't have to" } }

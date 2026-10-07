@@ -26,3 +26,21 @@ levels:
       en: handle travel situations, describe experiences, give reasons and opinions
       es: se desenvuelve en viajes, describe experiencias y da razones y opiniones
     color: { light: "#7b3fc4", dark: "#b88cff" }
+  - code: B2
+    name: { en: Upper intermediate, es: Intermedio alto }
+    description:
+      en: follow complex texts, talk fluently with native speakers and argue a point of view
+      es: sigue textos complejos, habla con fluidez con nativos y defiende un punto de vista
+    color: { light: "#b5530f", dark: "#ff9f5a" }
+  - code: C1
+    name: { en: Advanced, es: Avanzado }
+    description:
+      en: understand long, demanding texts and use the language flexibly at work and in study
+      es: entiende textos largos y exigentes y usa el idioma con flexibilidad en el trabajo y los estudios
+    color: { light: "#c0264d", dark: "#ff7a9a" }
+  - code: C2
+    name: { en: Proficiency, es: Maestría }
+    description:
+      en: understand virtually everything and express fine shades of meaning
+      es: entiende prácticamente todo y expresa matices sutiles de significado
+    color: { light: "#0f7f86", dark: "#4fd1d9" }
