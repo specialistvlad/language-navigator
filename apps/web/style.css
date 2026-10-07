@@ -255,6 +255,8 @@ td .lvl, li > .lvl, p > .lvl { margin: 0 6px 0 0; }
 .doc-head .actions { display: flex; gap: 6px; }
 .doc-head .tool { display: inline-flex; align-items: center; justify-content: center; color: var(--muted); }
 .doc-head .tool:hover { color: var(--text); background: var(--surface-2); }
+.doc-head .tool.edit { width: auto; gap: 7px; padding: 0 11px; font-size: 13px; font-weight: 550; text-decoration: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
 .doc > blockquote:first-of-type {
   margin: 0 0 28px;
