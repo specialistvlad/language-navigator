@@ -739,7 +739,7 @@ html[data-page="topic"]:not([data-view="essentials"]) .sections > section.block 
 
 /* Lanes: a page reads in one 820px column; once the content area is 1200px wide, its lanes take
    the full width and hold as many columns of at least --lane as fit. Each block goes, in order, to
-   the top of the shortest column (grid-lanes; client.js lays out the same placement on a grid of
+   the top of the shortest column (grid-lanes; client.ts lays out the same placement on a grid of
    4px rows where grid-lanes is missing). --lane-gap spaces blocks within a column. */
 .doc {
   max-width: 820px;

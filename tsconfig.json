@@ -7,6 +7,7 @@
     "types": ["bun"],
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
     "noEmit": true,
     "allowJs": true,
     "checkJs": true,
@@ -24,5 +25,5 @@
     "allowUnreachableCode": false,
     "allowUnusedLabels": false
   },
-  "include": ["apps/**/*.ts", "apps/**/*.js", "scripts/**/*.ts", "types/**/*.d.ts", "*.config.js"]
+  "include": ["apps/**/*.ts", "scripts/**/*.ts", "types/**/*.d.ts", "*.config.js"]
 }

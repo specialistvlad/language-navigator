@@ -79,6 +79,12 @@ const slugify = (text: string): string =>
 const chips = (levels: readonly string[]): string =>
   `<span class="chips">${levels.map((l) => `<span class="chip c-${l}">${l}</span>`).join("")}</span>`;
 
+// The browser script: client.ts with its types stripped.
+async function clientJs(): Promise<string> {
+  const source = await Bun.file(join(APP, "client.ts")).text();
+  return new Bun.Transpiler({ loader: "ts", target: "browser" }).transformSync(source);
+}
+
 // Level colours from languages/levels.yaml in both themes, with each level's badge and chip.
 function levelsCss(): string {
   const vars = (theme: "light" | "dark"): string => LEVEL_INFO.map((l) => `--lvl-${l.code}: ${l.color[theme]};`).join(" ");
@@ -544,7 +550,7 @@ ${pages
   await Bun.write(join(tmp, "robots.txt"), robots);
   await cp(join(APP, "style.css"), join(tmp, "style.css"));
   await Bun.write(join(tmp, "levels.css"), levelsCss());
-  await cp(join(APP, "client.js"), join(tmp, "client.js"));
+  await Bun.write(join(tmp, "client.js"), await clientJs());
   await rm(old, { recursive: true, force: true });
   await rename(o.outDir, old).catch(() => {
     // No earlier build to move aside.

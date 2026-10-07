@@ -26,5 +26,5 @@ export default defineConfig(
       "object-shorthand": "error",
     },
   },
-  { files: ["apps/web/client.js"], languageOptions: { globals: globals.browser } },
+  { files: ["apps/web/client.ts"], languageOptions: { globals: globals.browser } },
 );

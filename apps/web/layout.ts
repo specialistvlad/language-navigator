@@ -118,7 +118,7 @@ export interface PageOptions {
 const PREFS = `try{var d=document.documentElement,s=localStorage;d.dataset.level=s.getItem("ln-level")||"${LEVELS.at(-1) ?? ""}";d.dataset.view=s.getItem("ln-view")||"guide";var t=s.getItem("ln-theme");if(t&&t!=="auto")d.dataset.theme=t}catch(e){}`;
 
 // Runs right after the sidebar, before first paint: restores the scroll position the same menu had on
-// the previous page (client.js saves it on leaving), then brings the current page's entry into view.
+// the previous page (client.ts saves it on leaving), then brings the current page's entry into view.
 const NAV_SCROLL = `(function(){var n=document.getElementById("sidebar"),k=n.querySelector(".nav-track").getAttribute("href")+"#"+n.childElementCount;n.dataset.key=k;try{var v=JSON.parse(sessionStorage.getItem("ln-nav"));if(v&&v.k===k)n.scrollTop=v.t}catch(e){}var c=n.querySelector("[aria-current=page]");if(c){var r=c.getBoundingClientRect(),b=n.getBoundingClientRect();if(r.top<b.top||r.bottom>b.bottom)n.scrollTop+=r.top-b.top-(b.height-r.height)/2}})()`;
 
 export function page(o: PageOptions): string {
