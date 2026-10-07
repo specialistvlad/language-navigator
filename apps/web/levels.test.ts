@@ -9,7 +9,7 @@ import { SITE_DIR, testSite } from "./test-site.ts";
 
 const pages = await testSite();
 const read = async (path: string): Promise<Document> => parseHTML(await Bun.file(join(SITE_DIR, path)).text()).document;
-const topicPages = pages.filter((p) => /^(en|es)\/\w+\/[\w-]+\/[\w-]+\/index\.html$/.test(p) && !p.includes("/cheatsheets/"));
+const topicPages = pages.filter((p) => /^en\/\w+\/[\w-]+\/[\w-]+\/index\.html$/.test(p) && !p.includes("/cheatsheets/"));
 const levelled = (el: Element): Element[] => [...el.querySelectorAll("[data-level]")];
 const from = (el: Element): string => el.getAttribute("data-level") ?? "";
 const to = (el: Element): string => el.getAttribute("data-to") ?? "";
@@ -24,7 +24,7 @@ function rangeOf(els: Element[]): string {
 const ownBadge = (el: Element, selector: string): Element | null => el.querySelector(`:scope > ${selector} .lvl, :scope > ${selector}.lvl`);
 
 test("the site builds with topic pages", () => {
-  expect(topicPages.length).toBeGreaterThan(80);
+  expect(topicPages.length).toBeGreaterThan(40);
 });
 
 describe.each(topicPages)("%s", (path) => {

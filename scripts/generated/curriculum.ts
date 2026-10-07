@@ -8,7 +8,7 @@ export interface LanguageNavigatorCurriculum {
    * @minItems 1
    */
   languages: {
-    code: "en" | "es";
+    code: "en";
     /**
      * false keeps the language from readers; its data stays and is still checked
      */
@@ -40,5 +40,4 @@ export interface LanguageNavigatorCurriculum {
 }
 export interface Localized {
   en: string;
-  es: string;
 }

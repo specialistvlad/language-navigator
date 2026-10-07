@@ -1,6 +1,6 @@
 // Generated from languages/schema/site.schema.json by npm run types. Edit the schema, then regenerate.
 
-export type Explain = "en" | "es";
+export type Explain = "en";
 
 export interface SiteIdentityAndExplanationLanguages {
   name: string;
@@ -28,5 +28,4 @@ export interface SiteIdentityAndExplanationLanguages {
  */
 export interface Localized {
   en: string;
-  es: string;
 }

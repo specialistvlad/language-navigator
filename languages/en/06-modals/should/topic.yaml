@@ -5,118 +5,107 @@ kind: grammar
 tags: [verbs, modals, advice, opinions]
 concepts: [advice]
 related: [en.modals.must-have-to, en.modals.can-could, en.modals.would, en.sentence-building.conditionals-0-1-2, en.sentence-building.questions-negatives]
-status: { en: draft, es: draft }
+status: { en: draft }
 
-title: { en: Should, es: Should }
+title: { en: Should }
 summary:
   en: "Should and shouldn't for advice and opinions. Should takes the base verb with every subject and needs no do in questions: You **should** go. **Should** I go?"
-  es: "Should y shouldn't para consejos y opiniones. Should lleva el verbo base sin -s, sin to y sin do: *debería ir* es She **should** go, y *¿debo ir?* es **Should** I go?"
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: form, label: { en: Form, es: Forma } }
-        - { key: example, label: { en: Example, es: Ejemplo } }
+        - { key: form, label: { en: Form } }
+        - { key: example, label: { en: Example } }
       rows:
-        - { level: A2, form: { en: Affirmative, es: Afirmativa }, example: "You **should** see a doctor.", tr: { es: Deberías ir al médico. } }
-        - { level: A2, form: { en: Negative, es: Negativa }, example: "You **shouldn't** work so late.", tr: { es: No deberías trabajar tan tarde. } }
-        - { level: A2, form: { en: Question, es: Pregunta }, example: "**Should** I take the bus?", tr: { es: "¿Debería coger el autobús?" } }
-        - { level: A2, form: { en: Short answer, es: Respuesta corta }, example: "Yes, you **should**. / No, you **shouldn't**.", tr: { es: Sí. / No. } }
-        - { level: A2, form: { en: Opinion, es: Opinión }, example: "I **think** you **should** call her.", tr: { es: Creo que deberías llamarla. } }
-        - { level: A2, form: { en: Negative opinion, es: Opinión negativa }, example: "I **don't think** you **should** go.", tr: { es: No creo que debas ir. } }
+        - { level: A2, form: { en: Affirmative }, example: "You **should** see a doctor." }
+        - { level: A2, form: { en: Negative }, example: "You **shouldn't** work so late." }
+        - { level: A2, form: { en: Question }, example: "**Should** I take the bus?" }
+        - { level: A2, form: { en: Short answer }, example: "Yes, you **should**. / No, you **shouldn't**." }
+        - { level: A2, form: { en: Opinion }, example: "I **think** you **should** call her." }
+        - { level: A2, form: { en: Negative opinion }, example: "I **don't think** you **should** go." }
 
 sections:
-  - title: { en: Overview, es: Resumen }
+  - title: { en: Overview }
     content:
       - type: bullets
         items:
           - level: A2
             text:
               en: "**should** has one form for every subject: I should, she should."
-              es: "**should** tiene una sola forma para todos los sujetos: I should, she should."
           - level: A2
             text:
               en: "The verb after **should** is in the base form: You should **rest**."
-              es: "El verbo después de **should** va en forma base: You should **rest**."
           - level: A2
             text:
               en: "Questions and negatives need no **do**: **Should** I go? / You **shouldn't** go."
-              es: "Las preguntas y las negativas no llevan **do**: **Should** I go? / You **shouldn't** go."
           - level: A2
             text:
               en: "The negative opinion puts **don't** on **think**: I **don't think** you should go."
-              es: "En la opinión negativa **don't** va con **think**: I **don't think** you should go."
-          - { level: A2, for: [es], text: { es: "*Deberías* = you should. *Debes* = you must (obligación más fuerte)." } }
 
-  - title: { en: "Pronunciation: should and shouldn't", es: "Pronunciación: should y shouldn't" }
+  - title: { en: "Pronunciation: should and shouldn't" }
     content:
       - type: table
         columns:
-          - { key: form, label: { en: Form, es: Forma } }
-          - { key: sound, label: { en: Sound, es: Sonido } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: form, label: { en: Form } }
+          - { key: sound, label: { en: Sound } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A2, form: { en: "should (weak, in a sentence)", es: "should (débil, dentro de la frase)" }, sound: /ʃəd/, example: "You **should** rest. /juː ʃəd ˈrest/", tr: { es: Deberías descansar. } }
-          - { level: A2, form: { en: "should (strong, at the end)", es: "should (fuerte, al final)" }, sound: /ʃʊd/, example: "Yes, you **should**. /jes juː ˈʃʊd/", tr: { es: "Sí, deberías." } }
-          - { level: A2, form: shouldn't, sound: /ˈʃʊdnt/, example: "You **shouldn't** go. /juː ˈʃʊdnt ɡəʊ/", tr: { es: No deberías ir. } }
+          - { level: A2, form: { en: "should (weak, in a sentence)" }, sound: /ʃəd/, example: "You **should** rest. /juː ʃəd ˈrest/" }
+          - { level: A2, form: { en: "should (strong, at the end)" }, sound: /ʃʊd/, example: "Yes, you **should**. /jes juː ˈʃʊd/" }
+          - { level: A2, form: shouldn't, sound: /ˈʃʊdnt/, example: "You **shouldn't** go. /juː ˈʃʊdnt ɡəʊ/" }
       - type: bullets
         items:
           - level: A2
             text:
               en: "The **l** in should and shouldn't is silent: should is /ʃʊd/ when strong."
-              es: "La **l** de should y shouldn't no se pronuncia: should suena /ʃʊd/ en su forma fuerte."
 
-  - title: { en: Use, es: Uso }
+  - title: { en: Use }
     content:
       - type: table
         columns:
-          - { key: use, label: { en: Use, es: Uso } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: use, label: { en: Use } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A2, use: { en: "Advice: a good idea", es: "Consejo: una buena idea" }, example: "You **should** drink more water.", tr: { es: Deberías beber más agua. } }
-          - { level: A2, use: { en: "Advice against: a bad idea", es: "Consejo en contra: una mala idea" }, example: "You **shouldn't** eat so much sugar.", tr: { es: No deberías comer tanto azúcar. } }
-          - { level: A2, use: { en: "Asking for advice", es: "Pedir consejo" }, example: "What **should** I do?", tr: { es: "¿Qué debería hacer?" } }
-          - { level: A2, use: { en: "Giving an opinion", es: "Dar una opinión" }, example: "I think the government **should** build more parks.", tr: { es: Creo que el gobierno debería construir más parques. } }
-          - { level: A2, use: { en: "A mild duty", es: "Una obligación suave" }, example: "We **should** leave now. It's late.", tr: { es: Deberíamos irnos ya. Es tarde. } }
+          - { level: A2, use: { en: "Advice: a good idea" }, example: "You **should** drink more water." }
+          - { level: A2, use: { en: "Advice against: a bad idea" }, example: "You **shouldn't** eat so much sugar." }
+          - { level: A2, use: { en: "Asking for advice" }, example: "What **should** I do?" }
+          - { level: A2, use: { en: "Giving an opinion" }, example: "I think the government **should** build more parks." }
+          - { level: A2, use: { en: "A mild duty" }, example: "We **should** leave now. It's late." }
       - type: bullets
         items:
           - level: A2
             text:
               en: "**should** gives advice and opinions; the listener decides whether to follow them."
-              es: "**should** da consejos y opiniones; el oyente decide si los sigue."
 
-  - title: { en: "Compare: should and must", es: "Comparación: should y must" }
+  - title: { en: "Compare: should and must" }
     content:
       - type: table
         columns:
-          - { key: row, label: { en: Point, es: Punto } }
+          - { key: row, label: { en: Point } }
           - { key: should, label: should }
           - { key: must, label: must }
         rows:
           - level: A2
-            row: { en: Meaning, es: Significado }
-            should: { en: "advice, a good idea", es: "consejo, una buena idea" }
-            must: { en: "strong obligation, a rule", es: "obligación fuerte, una norma" }
+            row: { en: Meaning }
+            should: { en: "advice, a good idea" }
+            must: { en: "strong obligation, a rule" }
           - level: A2
-            row: { en: Example, es: Ejemplo }
-            should: { ex: "You **should** wear a coat.", tr: { es: Deberías ponerte un abrigo. } }
-            must: { ex: "You **must** wear a seat belt.", tr: { es: Debes llevar puesto el cinturón de seguridad. } }
+            row: { en: Example }
+            should: { ex: "You **should** wear a coat." }
+            must: { ex: "You **must** wear a seat belt." }
       - type: bullets
         items:
           - level: A2
             text:
               en: "See [Must and Have To](id:en.modals.must-have-to)."
-              es: "Ver [Must y have to](id:en.modals.must-have-to)."
 
-  - title: { en: Typical errors, es: Errores típicos }
+  - title: { en: Typical errors }
     content:
       - type: errors
-        audience: true
         rows:
-          - { level: A2, wrong: "She shoulds go.", right: "She **should** go.", rule: { en: "should has no -s", es: "should no lleva -s" } }
-          - { level: A2, wrong: "You should to see a doctor.", right: "You should **see** a doctor.", rule: { en: "should + base verb; no to", es: "should + forma base, sin to" } }
-          - { level: A2, wrong: "Do I should go?", right: "**Should** I go?", rule: { en: "questions with should need no do", es: "la pregunta con should no lleva do" } }
-          - { level: A2, wrong: "I think you don't should go.", right: "I **don't think** you should go.", rule: { en: "negative opinion: I don't think + should", es: "opinión negativa: I don't think + should" } }
-          - { level: A2, for: [es], wrong: "What I should do?", right: "What **should** I do?", rule: { es: "should va delante del sujeto en la pregunta" } }
-          - { level: A2, for: [en], wrong: "Should he goes?", right: "Should he **go**?", rule: { en: "should + base verb" } }
+          - { level: A2, wrong: "She shoulds go.", right: "She **should** go.", rule: { en: "should has no -s" } }
+          - { level: A2, wrong: "You should to see a doctor.", right: "You should **see** a doctor.", rule: { en: "should + base verb; no to" } }
+          - { level: A2, wrong: "Do I should go?", right: "**Should** I go?", rule: { en: "questions with should need no do" } }
+          - { level: A2, wrong: "I think you don't should go.", right: "I **don't think** you should go.", rule: { en: "negative opinion: I don't think + should" } }
+          - { level: A2, wrong: "Should he goes?", right: "Should he **go**?", rule: { en: "should + base verb" } }

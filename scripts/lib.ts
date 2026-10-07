@@ -35,7 +35,7 @@ export const LEVELS: readonly Level[] = LEVEL_INFO.map((l) => l.code);
 export const isLevel = (value: string): value is Level => (LEVELS as readonly string[]).includes(value);
 // Explanation language codes in site.yaml order.
 export const EXPLAIN_CODES: Explain[] = SITE.explain.map((e) => e.code);
-// Explanation languages, each under its own name: { en: "English", es: "Español" }.
+// Explanation languages, each under its own name: { en: "English" }.
 // A missing own name falls back to the code here; npm run check reports it.
 export const EXPLAIN: Partial<Record<Explain, string>> = Object.fromEntries(SITE.explain.map((e) => [e.code, e.name[e.code]]));
 
@@ -107,7 +107,7 @@ export const topicId = (lang: string, dir: string, slug: string): string => `${l
 
 export interface TopicRef {
   id: string;
-  lang: Explain;
+  lang: string;
   section: CurriculumSection;
   entry: CurriculumTopic;
   order: number;

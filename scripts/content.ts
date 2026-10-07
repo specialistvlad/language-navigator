@@ -12,7 +12,7 @@ export interface TableShape {
   width: number;
 }
 
-export function tableShape(block: TableBlock, explain: Explain, lang: Explain): TableShape {
+export function tableShape(block: TableBlock, explain: Explain, lang: string): TableShape {
   const columns = block.columns.filter((c) => shows(c, explain));
   const rows = block.rows.filter((r) => shows(r, explain));
   const translation = explain !== lang && rows.some((r) => filled(r.tr?.[explain]));
@@ -20,4 +20,4 @@ export function tableShape(block: TableBlock, explain: Explain, lang: Explain): 
 }
 
 // The first sentence of a summary stands alone: cards and the meta description show only it.
-export const lead = (text: string): string => /^.*?[.!?](?=\s+[A-ZÁÉÍÓÚÑ¿¡]|$)/.exec(text)?.[0] ?? text;
+export const lead = (text: string): string => /^.*?[.!?](?=\s+[A-Z]|$)/.exec(text)?.[0] ?? text;

@@ -44,7 +44,10 @@ export function homeLanguage(): Explain {
   return home;
 }
 
-export const readChoices = (explain: Explain, pathFor: (e: Explain) => string): Choice[] =>
-  EXPLAINS.map((e) => ({ label: explainName(e), href: pathFor(e), on: e === explain }));
+// The choice whose link leads to this page is on.
+export function readChoices(explain: Explain, pathFor: (e: Explain) => string): Choice[] {
+  const here = pathFor(explain);
+  return EXPLAINS.map((e) => ({ label: explainName(e), href: pathFor(e), on: pathFor(e) === here }));
+}
 export const alternates = (pathFor: (e: Explain) => string): { lang: Explain; path: string }[] =>
   EXPLAINS.map((e) => ({ lang: e, path: pathFor(e) }));

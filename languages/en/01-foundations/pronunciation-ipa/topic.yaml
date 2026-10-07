@@ -5,154 +5,139 @@ kind: foundations
 tags: [pronunciation, sounds, ipa, stress]
 concepts: [pronunciation]
 related: [en.foundations.alphabet-spelling]
-status: { en: draft, es: draft }
+status: { en: draft }
 
-title: { en: Sounds and IPA, es: Los sonidos y el AFI }
+title: { en: Sounds and IPA }
 summary:
   en: "The sounds of English, how to read them in IPA, and word stress. IPA gives every sound one symbol between slashes, so it shows how a word sounds whatever its spelling: **ship** /ʃɪp/, **sheep** /ʃiːp/."
-  es: "Los sonidos del inglés, cómo leerlos en el AFI (IPA) y el acento de las palabras. El AFI da un símbolo a cada sonido, y la vocal corta /ɪ/ no es la larga /iː/: **ship** /ʃɪp/ es *barco*, **sheep** /ʃiːp/ es *oveja*."
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: point, label: { en: Point, es: Punto } }
-        - { key: rule, label: { en: Rule, es: Regla } }
-        - { key: example, label: { en: Example, es: Ejemplo } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
+        - { key: example, label: { en: Example } }
       rows:
-        - { level: A0, point: IPA, rule: { en: "one symbol for each sound, written between slashes", es: "un símbolo por sonido, escrito entre barras" }, example: "book /bʊk/" }
-        - { level: A0, point: { en: Spelling and sound, es: Ortografía y sonido }, rule: { en: "spelling and sound often differ", es: "la ortografía y el sonido suelen ser distintos" }, example: "*photo* /ˈfəʊtəʊ/", tr: { es: foto (sin /p/ ni /h/) } }
-        - { level: A0, point: "ː  ˈ", rule: { en: "ː makes a vowel long; ˈ comes before the stressed syllable", es: "ː alarga la vocal; ˈ va delante de la sílaba acentuada" }, example: "f**oo**d /fuːd/, teacher /ˈtiːtʃə/" }
-        - { level: A0, point: { en: Short and long, es: Corta y larga }, rule: { en: "short /ɪ/ is not long /iː/", es: "/ɪ/ corta no es /iː/ larga" }, example: "**ship** /ʃɪp/ · **sheep** /ʃiːp/", tr: { es: barco · oveja } }
-        - { level: A0, point: th, rule: { en: "th is /θ/ or /ð/", es: "th es /θ/ o /ð/" }, example: "**th**ink /θɪŋk/ · **th**is /ðɪs/", tr: { es: pensar · esto } }
-        - { level: A0, for: [es], point: { es: Sonidos nuevos }, rule: { es: "/v/, /z/, /ʃ/, /dʒ/ y /ɜː/ no existen en español" }, example: "**v**an, **z**oo, **sh**op, **j**ob, b**ir**d", tr: { es: "furgoneta, zoo, tienda, trabajo, pájaro" } }
-        - { level: A0, for: [es], point: Spain, rule: { es: "sin «e» delante de s + consonante" }, example: "Spain /speɪn/" }
-        - { level: A0, point: US, rule: { en: "/ɒ/ becomes /ɑː/, /əʊ/ becomes /oʊ/, and /r/ is pronounced after vowels", es: "/ɒ/ pasa a /ɑː/, /əʊ/ pasa a /oʊ/ y la /r/ se pronuncia detrás de vocal" }, example: "hot /hɑːt/, car /kɑːr/" }
-        - { level: A1, point: { en: Stress in two syllables, es: Acento en dos sílabas }, rule: { en: "most nouns and adjectives: first syllable; many verbs: second", es: "casi todos los sustantivos y adjetivos: la primera; muchos verbos: la segunda" }, example: "**ˈtea**cher / be**ˈgin**", tr: { es: profesor / empezar } }
-        - { level: A1, point: -tion  -sion  -ic, rule: { en: "stress the syllable before the ending", es: "se acentúa la sílaba anterior a la terminación" }, example: "infor**ˈma**tion / fan**ˈtas**tic", tr: { es: información / fantástico } }
-        - { level: A1, point: { en: Weak vowel, es: Vocal débil }, rule: { en: "unstressed vowels are often the weak /ə/", es: "las vocales sin acento suelen ser la /ə/ débil" }, example: "about /əˈbaʊt/", tr: { es: sobre } }
+        - { level: A0, point: IPA, rule: { en: "one symbol for each sound, written between slashes" }, example: "book /bʊk/" }
+        - { level: A0, point: { en: Spelling and sound }, rule: { en: "spelling and sound often differ" }, example: "*photo* /ˈfəʊtəʊ/" }
+        - { level: A0, point: "ː  ˈ", rule: { en: "ː makes a vowel long; ˈ comes before the stressed syllable" }, example: "f**oo**d /fuːd/, teacher /ˈtiːtʃə/" }
+        - { level: A0, point: { en: Short and long }, rule: { en: "short /ɪ/ is not long /iː/" }, example: "**ship** /ʃɪp/ · **sheep** /ʃiːp/" }
+        - { level: A0, point: th, rule: { en: "th is /θ/ or /ð/" }, example: "**th**ink /θɪŋk/ · **th**is /ðɪs/" }
+        - { level: A0, point: US, rule: { en: "/ɒ/ becomes /ɑː/, /əʊ/ becomes /oʊ/, and /r/ is pronounced after vowels" }, example: "hot /hɑːt/, car /kɑːr/" }
+        - { level: A1, point: { en: Stress in two syllables }, rule: { en: "most nouns and adjectives: first syllable; many verbs: second" }, example: "**ˈtea**cher / be**ˈgin**" }
+        - { level: A1, point: -tion  -sion  -ic, rule: { en: "stress the syllable before the ending" }, example: "infor**ˈma**tion / fan**ˈtas**tic" }
+        - { level: A1, point: { en: Weak vowel }, rule: { en: "unstressed vowels are often the weak /ə/" }, example: "about /əˈbaʊt/" }
 
 sections:
-  - title: { en: How IPA works, es: Cómo funciona el AFI }
+  - title: { en: How IPA works }
     content:
       - type: bullets
         items:
           - level: A0
             text:
               en: "IPA writes sounds, one symbol for each sound. Dictionaries put it between slashes: book /bʊk/."
-              es: "El AFI (IPA en inglés) escribe sonidos, un símbolo por sonido. Los diccionarios lo ponen entre barras: book /bʊk/."
           - level: A0
             text:
               en: "Spelling and sound often differ: *photo* /ˈfəʊtəʊ/ has no /p/ and no /h/."
-              es: "La ortografía y el sonido suelen ser distintos: *photo* /ˈfəʊtəʊ/ no tiene /p/ ni /h/."
           - level: A0
             text:
               en: "**ː** makes a vowel long: /uː/ in *food*."
-              es: "**ː** alarga la vocal: /uː/ en *food*."
           - level: A0
             text:
               en: "**ˈ** comes before the stressed syllable: teacher /ˈtiːtʃə/."
-              es: "**ˈ** va delante de la sílaba acentuada: teacher /ˈtiːtʃə/."
 
-  - title: { en: Consonant sounds, es: Consonantes }
+  - title: { en: Consonant sounds }
     content:
       - type: table
         columns:
-          - { key: sound, label: { en: Sound, es: Sonido } }
-          - { key: spelling, label: { en: Spelling, es: Se escribe } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-          - { key: like, label: { es: Suena como }, for: [es] }
+          - { key: sound, label: { en: Sound } }
+          - { key: spelling, label: { en: Spelling } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A0, sound: /p/, spelling: p, example: { ex: "**p**en", tr: { es: bolígrafo } }, like: { es: «p» } }
-          - { level: A0, sound: /b/, spelling: b, example: { ex: "**b**ed", tr: { es: cama } }, like: { es: «b» de *bote* } }
-          - { level: A0, sound: /t/, spelling: t, example: { ex: "**t**en", tr: { es: diez } }, like: { es: «t» } }
-          - { level: A0, sound: /d/, spelling: d, example: { ex: "**d**og", tr: { es: perro } }, like: { es: «d» de *dedo* } }
-          - { level: A0, sound: /k/, spelling: "c / k / ck", example: { ex: "**c**at / ba**ck**", tr: { es: gato / atrás } }, like: { es: «k» } }
-          - { level: A0, sound: /g/, spelling: g, example: { ex: "**g**o", tr: { es: ir } }, like: { es: «g» de *gato* } }
-          - { level: A0, sound: /f/, spelling: "f / ph", example: { ex: "**f**ish / **ph**one", tr: { es: pez / teléfono } }, like: { es: «f» } }
-          - { level: A0, sound: /v/, spelling: v, example: { ex: "**v**an", tr: { es: furgoneta } }, like: { es: "dientes sobre el labio inferior; no existe en español" } }
-          - { level: A0, sound: /θ/, spelling: th, example: { ex: "**th**ink", tr: { es: pensar } }, like: { es: "«z» de *zapato* (España); LatAm: sin equivalente" } }
-          - { level: A0, sound: /ð/, spelling: th, example: { ex: "**th**is", tr: { es: esto } }, like: { es: "«d» suave de *cada*" } }
-          - { level: A0, sound: /s/, spelling: "s / c", example: { ex: "**s**un / **c**ity", tr: { es: sol / ciudad } }, like: { es: «s» } }
-          - { level: A0, sound: /z/, spelling: "z / s", example: { ex: "**z**oo / i**s**", tr: { es: zoo / es } }, like: { es: "«s» sonora, con zumbido; no existe en español" } }
-          - { level: A0, sound: /ʃ/, spelling: sh, example: { ex: "**sh**op", tr: { es: tienda } }, like: { es: "«sh» de pedir silencio; no existe en español" } }
-          - { level: A0, sound: /ʒ/, spelling: s, example: { ex: "televi**s**ion", tr: { es: televisión } }, like: { es: "«y» rioplatense de *yo*" } }
-          - { level: A0, sound: /h/, spelling: h, example: { ex: "**h**at", tr: { es: sombrero } }, like: { es: "«j» muy suave, solo aire" } }
-          - { level: A0, sound: /tʃ/, spelling: ch, example: { ex: "**ch**air", tr: { es: silla } }, like: { es: «ch» de *chico* } }
-          - { level: A0, sound: /dʒ/, spelling: "j / g", example: { ex: "**j**ob / a**g**e", tr: { es: trabajo / edad } }, like: { es: "«ch» sonora; no existe en español" } }
-          - { level: A0, sound: /m/, spelling: m, example: { ex: "**m**an", tr: { es: hombre } }, like: { es: «m» } }
-          - { level: A0, sound: /n/, spelling: n, example: { ex: "**n**o", tr: { es: "no" } }, like: { es: «n» } }
-          - { level: A0, sound: /ŋ/, spelling: ng, example: { ex: "si**ng**", tr: { es: cantar } }, like: { es: "«n» de *tengo*, sin «g»" } }
-          - { level: A0, sound: /l/, spelling: l, example: { ex: "**l**eg", tr: { es: pierna } }, like: { es: «l» } }
-          - { level: A0, sound: /r/, spelling: r, example: { ex: "**r**ed", tr: { es: rojo } }, like: { es: "«r» suave: la lengua no toca ni vibra" } }
-          - { level: A0, sound: /w/, spelling: w, example: { ex: "**w**ater", tr: { es: agua } }, like: { es: «u» de *hueso* } }
-          - { level: A0, sound: /j/, spelling: y, example: { ex: "**y**es", tr: { es: sí } }, like: { es: «i» de *hielo* } }
+          - { level: A0, sound: /p/, spelling: p, example: { ex: "**p**en" } }
+          - { level: A0, sound: /b/, spelling: b, example: { ex: "**b**ed" } }
+          - { level: A0, sound: /t/, spelling: t, example: { ex: "**t**en" } }
+          - { level: A0, sound: /d/, spelling: d, example: { ex: "**d**og" } }
+          - { level: A0, sound: /k/, spelling: "c / k / ck", example: { ex: "**c**at / ba**ck**" } }
+          - { level: A0, sound: /g/, spelling: g, example: { ex: "**g**o" } }
+          - { level: A0, sound: /f/, spelling: "f / ph", example: { ex: "**f**ish / **ph**one" } }
+          - { level: A0, sound: /v/, spelling: v, example: { ex: "**v**an" } }
+          - { level: A0, sound: /θ/, spelling: th, example: { ex: "**th**ink" } }
+          - { level: A0, sound: /ð/, spelling: th, example: { ex: "**th**is" } }
+          - { level: A0, sound: /s/, spelling: "s / c", example: { ex: "**s**un / **c**ity" } }
+          - { level: A0, sound: /z/, spelling: "z / s", example: { ex: "**z**oo / i**s**" } }
+          - { level: A0, sound: /ʃ/, spelling: sh, example: { ex: "**sh**op" } }
+          - { level: A0, sound: /ʒ/, spelling: s, example: { ex: "televi**s**ion" } }
+          - { level: A0, sound: /h/, spelling: h, example: { ex: "**h**at" } }
+          - { level: A0, sound: /tʃ/, spelling: ch, example: { ex: "**ch**air" } }
+          - { level: A0, sound: /dʒ/, spelling: "j / g", example: { ex: "**j**ob / a**g**e" } }
+          - { level: A0, sound: /m/, spelling: m, example: { ex: "**m**an" } }
+          - { level: A0, sound: /n/, spelling: n, example: { ex: "**n**o" } }
+          - { level: A0, sound: /ŋ/, spelling: ng, example: { ex: "si**ng**" } }
+          - { level: A0, sound: /l/, spelling: l, example: { ex: "**l**eg" } }
+          - { level: A0, sound: /r/, spelling: r, example: { ex: "**r**ed" } }
+          - { level: A0, sound: /w/, spelling: w, example: { ex: "**w**ater" } }
+          - { level: A0, sound: /j/, spelling: y, example: { ex: "**y**es" } }
 
-  - title: { en: Vowel sounds, es: Vocales }
+  - title: { en: Vowel sounds }
     content:
       - type: table
         columns:
-          - { key: sound, label: { en: Sound, es: Sonido } }
-          - { key: type, label: { en: Type, es: Tipo } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-          - { key: like, label: { es: Suena como }, for: [es] }
+          - { key: sound, label: { en: Sound } }
+          - { key: type, label: { en: Type } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A0, sound: /ɪ/, type: { en: short, es: corta }, example: { ex: "sh**i**p", tr: { es: barco } }, like: { es: "«i» corta y relajada, casi «e»" } }
-          - { level: A0, sound: /iː/, type: { en: long, es: larga }, example: { ex: "sh**ee**p", tr: { es: oveja } }, like: { es: «i» larga } }
-          - { level: A0, sound: /e/, type: { en: short, es: corta }, example: { ex: "b**e**d", tr: { es: cama } }, like: { es: «e» } }
-          - { level: A0, sound: /æ/, type: { en: short, es: corta }, example: { ex: "c**a**t", tr: { es: gato } }, like: { es: "entre «a» y «e», boca abierta" } }
-          - { level: A0, sound: /ʌ/, type: { en: short, es: corta }, example: { ex: "c**u**p", tr: { es: taza } }, like: { es: «a» corta } }
-          - { level: A0, sound: /ɑː/, type: { en: long, es: larga }, example: { ex: "c**ar**", tr: { es: coche } }, like: { es: «a» larga } }
-          - { level: A0, sound: /ɒ/, type: { en: short, es: corta }, example: { ex: "h**o**t", tr: { es: caliente } }, like: { es: "«o» corta, boca abierta" } }
-          - { level: A0, sound: /ɔː/, type: { en: long, es: larga }, example: { ex: "d**oor**", tr: { es: puerta } }, like: { es: «o» larga } }
-          - { level: A0, sound: /ʊ/, type: { en: short, es: corta }, example: { ex: "b**oo**k", tr: { es: libro } }, like: { es: "«u» corta y relajada" } }
-          - { level: A0, sound: /uː/, type: { en: long, es: larga }, example: { ex: "f**oo**d", tr: { es: comida } }, like: { es: «u» larga } }
-          - { level: A0, sound: /ɜː/, type: { en: long, es: larga }, example: { ex: "b**ir**d", tr: { es: pájaro } }, like: { es: "«e» larga con los labios relajados; no existe en español" } }
-          - { level: A0, sound: /ə/, type: { en: "short, weak", es: "corta, débil" }, example: { ex: "**a**bout", tr: { es: sobre } }, like: { es: "«e» muy débil, siempre sin acento" } }
-          - { level: A0, sound: /eɪ/, type: { en: diphthong, es: diptongo }, example: { ex: "d**ay**", tr: { es: día } }, like: { es: «ei» } }
-          - { level: A0, sound: /aɪ/, type: { en: diphthong, es: diptongo }, example: { ex: "m**y**", tr: { es: mi } }, like: { es: «ai» } }
-          - { level: A0, sound: /ɔɪ/, type: { en: diphthong, es: diptongo }, example: { ex: "b**oy**", tr: { es: chico } }, like: { es: «oi» } }
-          - { level: A0, sound: /əʊ/, type: { en: diphthong, es: diptongo }, example: { ex: "g**o**", tr: { es: ir } }, like: { es: «ou» } }
-          - { level: A0, sound: /aʊ/, type: { en: diphthong, es: diptongo }, example: { ex: "n**ow**", tr: { es: ahora } }, like: { es: «au» } }
-          - { level: A0, sound: /ɪə/, type: { en: diphthong, es: diptongo }, example: { ex: "h**ere**", tr: { es: aquí } }, like: { es: «ia» } }
-          - { level: A0, sound: /eə/, type: { en: diphthong, es: diptongo }, example: { ex: "h**air**", tr: { es: pelo } }, like: { es: «ea» } }
-          - { level: A0, sound: /ʊə/, type: { en: diphthong, es: diptongo }, example: { ex: "t**our**", tr: { es: gira } }, like: { es: «ua» } }
+          - { level: A0, sound: /ɪ/, type: { en: short }, example: { ex: "sh**i**p" } }
+          - { level: A0, sound: /iː/, type: { en: long }, example: { ex: "sh**ee**p" } }
+          - { level: A0, sound: /e/, type: { en: short }, example: { ex: "b**e**d" } }
+          - { level: A0, sound: /æ/, type: { en: short }, example: { ex: "c**a**t" } }
+          - { level: A0, sound: /ʌ/, type: { en: short }, example: { ex: "c**u**p" } }
+          - { level: A0, sound: /ɑː/, type: { en: long }, example: { ex: "c**ar**" } }
+          - { level: A0, sound: /ɒ/, type: { en: short }, example: { ex: "h**o**t" } }
+          - { level: A0, sound: /ɔː/, type: { en: long }, example: { ex: "d**oor**" } }
+          - { level: A0, sound: /ʊ/, type: { en: short }, example: { ex: "b**oo**k" } }
+          - { level: A0, sound: /uː/, type: { en: long }, example: { ex: "f**oo**d" } }
+          - { level: A0, sound: /ɜː/, type: { en: long }, example: { ex: "b**ir**d" } }
+          - { level: A0, sound: /ə/, type: { en: "short, weak" }, example: { ex: "**a**bout" } }
+          - { level: A0, sound: /eɪ/, type: { en: diphthong }, example: { ex: "d**ay**" } }
+          - { level: A0, sound: /aɪ/, type: { en: diphthong }, example: { ex: "m**y**" } }
+          - { level: A0, sound: /ɔɪ/, type: { en: diphthong }, example: { ex: "b**oy**" } }
+          - { level: A0, sound: /əʊ/, type: { en: diphthong }, example: { ex: "g**o**" } }
+          - { level: A0, sound: /aʊ/, type: { en: diphthong }, example: { ex: "n**ow**" } }
+          - { level: A0, sound: /ɪə/, type: { en: diphthong }, example: { ex: "h**ere**" } }
+          - { level: A0, sound: /eə/, type: { en: diphthong }, example: { ex: "h**air**" } }
+          - { level: A0, sound: /ʊə/, type: { en: diphthong }, example: { ex: "t**our**" } }
       - type: bullets
         items:
           - level: A0
             text:
               en: "US: /ɒ/ becomes /ɑː/ (*hot* /hɑːt/), /əʊ/ becomes /oʊ/, and /r/ is pronounced after vowels (*car* /kɑːr/)."
-              es: "US: /ɒ/ pasa a /ɑː/ (*hot* /hɑːt/), /əʊ/ pasa a /oʊ/ y la /r/ se pronuncia detrás de vocal (*car* /kɑːr/)."
 
-  - title: { en: Word stress, es: Acento de palabra }
+  - title: { en: Word stress }
     content:
       - type: text
         level: A1
         text:
           en: "In a word of two or more syllables, one syllable is stronger and longer."
-          es: "En una palabra de dos o más sílabas, una sílaba es más fuerte y más larga."
       - type: table
         columns:
-          - { key: pattern, label: { en: Pattern, es: Patrón } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: pattern, label: { en: Pattern } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A1, pattern: { en: "Most two-syllable nouns and adjectives: first syllable", es: "Casi todos los sustantivos y adjetivos de dos sílabas: la primera" }, example: { ex: "**ˈtea**cher / **ˈhap**py", tr: { es: profesor / feliz } } }
-          - { level: A1, pattern: { en: "Many two-syllable verbs: second syllable", es: "Muchos verbos de dos sílabas: la segunda" }, example: { ex: "be**ˈgin** / de**ˈcide**", tr: { es: empezar / decidir } } }
-          - { level: A1, pattern: { en: "Words ending in -tion, -sion, -ic: the syllable before the ending", es: "Palabras en -tion, -sion, -ic: la sílaba anterior a la terminación" }, example: { ex: "infor**ˈma**tion / fan**ˈtas**tic", tr: { es: información / fantástico } } }
+          - { level: A1, pattern: { en: "Most two-syllable nouns and adjectives: first syllable" }, example: { ex: "**ˈtea**cher / **ˈhap**py" } }
+          - { level: A1, pattern: { en: "Many two-syllable verbs: second syllable" }, example: { ex: "be**ˈgin** / de**ˈcide**" } }
+          - { level: A1, pattern: { en: "Words ending in -tion, -sion, -ic: the syllable before the ending" }, example: { ex: "infor**ˈma**tion / fan**ˈtas**tic" } }
       - type: bullets
         items:
           - level: A1
             text:
               en: "Unstressed vowels are often the weak /ə/: banana /bəˈnɑːnə/, about /əˈbaʊt/."
-              es: "Las vocales sin acento suelen ser la /ə/ débil: banana /bəˈnɑːnə/, about /əˈbaʊt/."
 
-  - title: { en: Typical errors, es: Errores típicos }
+  - title: { en: Typical errors }
     content:
       - type: errors
-        audience: true
         rows:
-          - { level: A0, for: [es], wrong: Spain /esˈpeɪn/, right: "Spain **/speɪn/**", rule: { es: "sin «e» delante de s + consonante" } }
-          - { level: A0, wrong: ship /ʃiːp/, right: "ship **/ʃɪp/** · sheep /ʃiːp/", rule: { en: "short /ɪ/ ≠ long /iː/", es: "/ɪ/ corta ≠ /iː/ larga" } }
-          - { level: A0, wrong: think /sɪŋk/ · this /dɪs/, right: "think **/θɪŋk/** · this **/ðɪs/**", rule: { en: "th = /θ/ or /ð/", es: "th = /θ/ o /ð/" } }
-          - { level: A0, for: [es], wrong: very /ˈberi/, right: "very **/ˈveri/**", rule: { es: "/v/: dientes sobre el labio inferior" } }
-          - { level: A1, wrong: comˈfortable, right: "**ˈcom**fortable /ˈkʌmftəbl/", rule: { en: "stress on the first syllable", es: "acento en la primera sílaba" } }
+          - { level: A0, wrong: ship /ʃiːp/, right: "ship **/ʃɪp/** · sheep /ʃiːp/", rule: { en: "short /ɪ/ ≠ long /iː/" } }
+          - { level: A0, wrong: think /sɪŋk/ · this /dɪs/, right: "think **/θɪŋk/** · this **/ðɪs/**", rule: { en: "th = /θ/ or /ð/" } }
+          - { level: A1, wrong: comˈfortable, right: "**ˈcom**fortable /ˈkʌmftəbl/", rule: { en: "stress on the first syllable" } }

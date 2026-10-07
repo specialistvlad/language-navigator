@@ -17,7 +17,7 @@ export type { BuildOptions } from "./context.ts";
 export async function build(o: BuildOptions): Promise<number> {
   const curriculum = await loadCurriculum();
   const refs = await loadTopics(curriculum);
-  const langs = new Map(curriculum.languages.map((l) => [l.code, l]));
+  const langs = new Map<string, CurriculumLanguage>(curriculum.languages.map((l) => [l.code, l]));
   const langOf = (ref: TopicRef): CurriculumLanguage => {
     const lang = langs.get(ref.lang);
     if (lang === undefined) throw new Error(`${ref.id}: language "${ref.lang}" is not in curriculum.yaml`);

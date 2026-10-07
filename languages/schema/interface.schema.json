@@ -4,8 +4,7 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "text",
-    "errorsAudience"
+    "text"
   ],
   "properties": {
     "text": {
@@ -17,19 +16,6 @@
       "additionalProperties": {
         "$ref": "#/definitions/localized"
       }
-    },
-    "errorsAudience": {
-      "description": "Line above a Typical errors table: by explanation language, then by language being learned.",
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "en": {
-          "$ref": "#/definitions/someLanguages"
-        },
-        "es": {
-          "$ref": "#/definitions/someLanguages"
-        }
-      }
     }
   },
   "definitions": {
@@ -38,31 +24,10 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "en",
-        "es"
+        "en"
       ],
       "properties": {
         "en": {
-          "type": "string",
-          "minLength": 1
-        },
-        "es": {
-          "type": "string",
-          "minLength": 1
-        }
-      }
-    },
-    "someLanguages": {
-      "description": "Text in some explanation languages.",
-      "type": "object",
-      "additionalProperties": false,
-      "minProperties": 1,
-      "properties": {
-        "en": {
-          "type": "string",
-          "minLength": 1
-        },
-        "es": {
           "type": "string",
           "minLength": 1
         }

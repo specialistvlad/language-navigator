@@ -18,8 +18,8 @@
     "localized": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["en", "es"],
-      "properties": { "en": { "type": "string" }, "es": { "type": "string" } }
+      "required": ["en"],
+      "properties": { "en": { "type": "string" } }
     }
   }
 }

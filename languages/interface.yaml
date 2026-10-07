@@ -4,56 +4,46 @@
 
 text:
   # Home
-  homeTitle: { en: "{site} — {languages}, {from} to {to}", es: "{site} — {languages}, de {from} a {to}" }
+  homeTitle: { en: "{site} — {languages}, {from} to {to}" }
   homeDescription:
     en: "Reference guides and cheatsheets for learners of {languages} from {from} to {to}, explained {explain}."
-    es: "Guías de referencia y chuletas para estudiantes de {languages} de {from} a {to}, explicadas {explain}."
-  tagline: { en: "{languages}, {from}–{to}, explained {explain}.", es: "{languages}, {from}–{to}, explicado {explain}." }
-  explainedIn: { en: "in {name}", es: "en {name:lower}" }
-  written: { en: "{n} of {total} topics written", es: "{n} de {total} temas escritos" }
+  tagline: { en: "{languages}, {from}–{to}, explained {explain}." }
+  explainedIn: { en: "in {name}" }
+  written: { en: "{n} of {total} topics written" }
 
   # A track: one language being learned, explained in one language
-  track: { en: "Learn {name}", es: "Aprende {name:lower}" }
-  explained: { en: "explained in {name}", es: "explicado en {name:lower}" }
-  index: { en: Index, es: Índice }
-  chooseLanguage: { en: Choose language, es: Elegir idioma }
+  track: { en: "Learn {name}" }
+  explained: { en: "explained in {name}" }
+  index: { en: Index }
+  chooseLanguage: { en: Choose language }
   trackIntro:
     en: Topics in study order. Choose your level to hide what comes later.
-    es: Temas en orden de estudio. Elige tu nivel para ocultar lo que viene después.
 
   # Controls
-  read: { en: Read in, es: Leer en }
-  level: { en: Level, es: Nivel }
-  view: { en: View, es: Vista }
-  extended: { en: Extended, es: Ampliada }
-  upTo: { en: Up to, es: Hasta }
+  read: { en: Read in }
+  level: { en: Level }
+  view: { en: View }
+  extended: { en: Extended }
+  upTo: { en: Up to }
 
   # A topic
-  onThisPage: { en: On this page, es: En esta página }
+  onThisPage: { en: On this page }
   filterEmpty:
     en: "No information at the current level. This view starts at {level}: choose {level} or a higher level."
-    es: "No hay información en el nivel actual. Esta vista empieza en {level}: elige {level} o un nivel superior."
-  showLevel: { en: "Show {level}", es: "Ver {level}" }
-  upNext: { en: Up next, es: A continuación }
-  ruleColumn: { en: Rule, es: Regla }
+  showLevel: { en: "Show {level}" }
+  upNext: { en: Up next }
+  ruleColumn: { en: Rule }
 
   # Cheatsheets
-  sheets: { en: Cheatsheets, es: Chuletas }
-  sheet: { en: Cheatsheet, es: Chuleta }
+  sheets: { en: Cheatsheets }
+  sheet: { en: Cheatsheet }
   sheetsIntro:
     en: A level sheet holds the cheatsheets of that level's topics; a progressive sheet holds every topic up to its level.
-    es: Una chuleta por nivel reúne las chuletas de los temas de ese nivel; una progresiva, todos los temas hasta su nivel.
-  levels: { en: Levels, es: Niveles }
-  progressive: { en: Progressive, es: Progresivas }
-  sections: { en: Sections, es: Secciones }
-  topics: { en: Topics, es: Temas }
+  levels: { en: Levels }
+  progressive: { en: Progressive }
+  sections: { en: Sections }
+  topics: { en: Topics }
 
   # Missing page
-  notFound: { en: Page not found, es: Página no encontrada }
-  backHome: { en: Go to the home page, es: Ir a la página principal }
-
-# The line above a Typical errors table, by explanation language, then by language being learned:
-# who makes these errors.
-errorsAudience:
-  en: { es: "Errors common among English speakers:" }
-  es: { en: "Errores frecuentes de hispanohablantes:" }
+  notFound: { en: Page not found }
+  backHome: { en: Go to the home page }

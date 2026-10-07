@@ -5,94 +5,86 @@ kind: grammar
 tags: [reported-speech, backshift, say, tell]
 concepts: [reported-speech]
 related: [en.sentence-building.questions-negatives, en.sentence-building.word-order, en.tenses.perfect-tenses, en.verbs.gerund-vs-infinitive]
-status: { en: draft, es: draft }
+status: { en: draft }
 
-title: { en: Reported Speech, es: Estilo indirecto }
+title: { en: Reported Speech }
 summary:
   en: "Reported speech tells what someone said without quoting it, with say, tell and ask. After a past verb the tense moves one step back and questions take statement order: She asked where I **lived**."
-  es: "El estilo indirecto cuenta lo que alguien dijo, con say, tell y ask. Tras un verbo en pasado el tiempo retrocede un paso, y tell lleva persona: me dijo que vendría es He **told** me he **would** come."
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: point, label: { en: Point, es: Punto } }
-        - { key: rule, label: { en: Rule, es: Regla } }
-        - { key: example, label: { en: Example, es: Ejemplo } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
+        - { key: example, label: { en: Example } }
       rows:
-        - { level: B1, point: say, rule: { en: "say + (that) + clause; no person, or to + person", es: "say + (that) + oración; sin persona, o to + persona" }, example: "She **said** (that) she was tired.", tr: { es: Dijo que estaba cansada. } }
-        - { level: B1, point: tell, rule: { en: "tell + person + (that) + clause", es: "tell + persona + (that) + oración" }, example: "She **told me** (that) she was tired.", tr: { es: Me dijo que estaba cansada. } }
-        - { level: B1, point: present simple, rule: → past simple, example: "He said he **worked** there.", tr: { es: Dijo que trabajaba allí. } }
-        - { level: B1, point: present continuous, rule: → past continuous, example: "She said she **was waiting**.", tr: { es: Dijo que estaba esperando. } }
-        - { level: B1, point: past simple / present perfect, rule: → past perfect, example: "He said he **had left**.", tr: { es: Dijo que se había ido. } }
-        - { level: B1, point: will / can / must, rule: → would / could / had to, example: "He said he **would call**.", tr: { es: Dijo que llamaría. } }
-        - { level: B1, point: { en: No change, es: Sin cambio }, rule: { en: "would, could, should, might; a fact still true; after says (present)", es: "would, could, should, might; un hecho que sigue siendo cierto; tras says (presente)" }, example: "She says she **is** tired.", tr: { es: Dice que está cansada. } }
-        - { level: B1, point: { en: Pronouns and time, es: Pronombres y tiempo }, rule: { en: "pronouns follow the speaker; today → that day, tomorrow → the next day, yesterday → the day before", es: "los pronombres siguen a quien habla; today → that day, tomorrow → the next day, yesterday → the day before" }, example: "Anna said **she** was tired.", tr: { es: Anna dijo que estaba cansada. } }
-        - { level: B1, point: { en: Questions, es: Preguntas }, rule: { en: "if / whether or a wh-word + statement order; no do / does / did", es: "if / whether o una palabra wh- + orden de frase afirmativa; sin do / does / did" }, example: "She asked **where** I **lived**.", tr: { es: Me preguntó dónde vivía. } }
-        - { level: B1, point: { en: Commands, es: Órdenes }, rule: told / asked + person + (not) to + V, example: "He **told us not to be** late.", tr: { es: Nos dijo que no llegáramos tarde. } }
+        - { level: B1, point: say, rule: { en: "say + (that) + clause; no person, or to + person" }, example: "She **said** (that) she was tired." }
+        - { level: B1, point: tell, rule: { en: "tell + person + (that) + clause" }, example: "She **told me** (that) she was tired." }
+        - { level: B1, point: present simple, rule: → past simple, example: "He said he **worked** there." }
+        - { level: B1, point: present continuous, rule: → past continuous, example: "She said she **was waiting**." }
+        - { level: B1, point: past simple / present perfect, rule: → past perfect, example: "He said he **had left**." }
+        - { level: B1, point: will / can / must, rule: → would / could / had to, example: "He said he **would call**." }
+        - { level: B1, point: { en: No change }, rule: { en: "would, could, should, might; a fact still true; after says (present)" }, example: "She says she **is** tired." }
+        - { level: B1, point: { en: Pronouns and time }, rule: { en: "pronouns follow the speaker; today → that day, tomorrow → the next day, yesterday → the day before" }, example: "Anna said **she** was tired." }
+        - { level: B1, point: { en: Questions }, rule: { en: "if / whether or a wh-word + statement order; no do / does / did" }, example: "She asked **where** I **lived**." }
+        - { level: B1, point: { en: Commands }, rule: told / asked + person + (not) to + V, example: "He **told us not to be** late." }
 
 sections:
-  - title: { en: "Form: say and tell", es: "Forma: say y tell" }
+  - title: { en: "Form: say and tell" }
     content:
       - type: table
         columns:
-          - { key: verb, label: { en: Verb, es: Verbo } }
-          - { key: pattern, label: { en: Pattern, es: Estructura } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: verb, label: { en: Verb } }
+          - { key: pattern, label: { en: Pattern } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: B1, verb: say, pattern: say + (that) + clause, example: "She **said** (that) she was tired.", tr: { es: Dijo que estaba cansada. } }
-          - { level: B1, verb: tell, pattern: tell + person + (that) + clause, example: "She **told me** (that) she was tired.", tr: { es: Me dijo que estaba cansada. } }
-          - { level: B1, verb: say, pattern: say + to + person, example: "She **said to me** that she was tired.", tr: { es: Me dijo que estaba cansada. } }
+          - { level: B1, verb: say, pattern: say + (that) + clause, example: "She **said** (that) she was tired." }
+          - { level: B1, verb: tell, pattern: tell + person + (that) + clause, example: "She **told me** (that) she was tired." }
+          - { level: B1, verb: say, pattern: say + to + person, example: "She **said to me** that she was tired." }
       - type: bullets
         items:
           - level: B1
             text:
               en: "**tell** always has a person after it. **say** has no person, or **to** + person."
-              es: "**tell** siempre lleva una persona detrás. **say** no la lleva, o lleva **to** + persona."
-          - { level: B1, for: [es], text: { es: "*decir* se traduce por say o tell: *me dijo* → she **told** me." } }
 
-  - title: { en: "Form: backshift", es: "Forma: cambio de tiempo" }
+  - title: { en: "Form: backshift" }
     content:
       - type: text
         level: B1
         text:
           en: "After a past reporting verb (said, told, asked), the tense usually moves one step back."
-          es: "Después de un verbo de comunicación en pasado (said, told, asked), el tiempo suele retroceder un paso."
       - type: table
         columns:
-          - { key: direct, label: { en: Direct speech, es: Estilo directo } }
-          - { key: reported, label: { en: Reported speech, es: Estilo indirecto } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: direct, label: { en: Direct speech } }
+          - { key: reported, label: { en: Reported speech } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: B1, direct: present simple, reported: past simple, example: { ex: "“I **work** here.” → He said he **worked** there.", tr: { es: Dijo que trabajaba allí. } } }
-          - { level: B1, direct: present continuous, reported: past continuous, example: { ex: "“I'**m waiting**.” → She said she **was waiting**.", tr: { es: Dijo que estaba esperando. } } }
-          - { level: B1, direct: past simple, reported: past perfect, example: { ex: "“I **left**.” → He said he **had left**.", tr: { es: Dijo que se había ido. } } }
-          - { level: B1, direct: present perfect, reported: past perfect, example: { ex: "“I'**ve finished**.” → She said she **had finished**.", tr: { es: Dijo que había terminado. } } }
-          - { level: B1, direct: will, reported: would, example: { ex: "“I'**ll call**.” → He said he **would call**.", tr: { es: Dijo que llamaría. } } }
-          - { level: B1, direct: must, reported: had to, example: { ex: "“I **must** go.” → She said she **had to** go.", tr: { es: Dijo que tenía que irse. } } }
-          - { level: B1, direct: can, reported: could, example: { ex: "“I **can** swim.” → She said she **could** swim.", tr: { es: Dijo que sabía nadar. } } }
+          - { level: B1, direct: present simple, reported: past simple, example: { ex: "“I **work** here.” → He said he **worked** there." } }
+          - { level: B1, direct: present continuous, reported: past continuous, example: { ex: "“I'**m waiting**.” → She said she **was waiting**." } }
+          - { level: B1, direct: past simple, reported: past perfect, example: { ex: "“I **left**.” → He said he **had left**." } }
+          - { level: B1, direct: present perfect, reported: past perfect, example: { ex: "“I'**ve finished**.” → She said she **had finished**." } }
+          - { level: B1, direct: will, reported: would, example: { ex: "“I'**ll call**.” → He said he **would call**." } }
+          - { level: B1, direct: must, reported: had to, example: { ex: "“I **must** go.” → She said she **had to** go." } }
+          - { level: B1, direct: can, reported: could, example: { ex: "“I **can** swim.” → She said she **could** swim." } }
       - type: bullets
         items:
           - level: B1
             text:
               en: "**would**, **could**, **should** and **might** stay the same."
-              es: "**would**, **could**, **should** y **might** no cambian."
           - level: B1
             text:
               en: "The tense can stay when the fact is still true: She said she **lives** in Paris."
-              es: "El tiempo puede quedarse igual si el hecho sigue siendo cierto: She said she **lives** in Paris."
           - level: B1
             text:
               en: "After **says** (present) the tense stays: She says she **is** tired."
-              es: "Después de **says** (presente) el tiempo se mantiene: She says she **is** tired."
-          - { level: B1, for: [es], text: { es: "El español hace el mismo retroceso: *dijo que trabajaba* → he said he **worked**." } }
 
-  - title: { en: "Form: pronouns and time words", es: "Forma: pronombres y expresiones de tiempo" }
+  - title: { en: "Form: pronouns and time words" }
     content:
       - type: table
         columns:
-          - { key: direct, label: { en: Direct, es: Directo } }
-          - { key: reported, label: { en: Reported, es: Indirecto } }
+          - { key: direct, label: { en: Direct } }
+          - { key: reported, label: { en: Reported } }
         rows:
           - { level: B1, direct: I / my, reported: he / she / his / her }
           - { level: B1, direct: we / our, reported: they / their }
@@ -110,63 +102,52 @@ sections:
           - level: B1
             text:
               en: "Pronouns follow the speaker: “I'm tired,” said Anna → Anna said **she** was tired."
-              es: "Los pronombres siguen a quien habla: “I'm tired,” said Anna → Anna said **she** was tired."
           - level: B1
             text:
               en: "Time words stay the same when the report is made on the same day."
-              es: "Las expresiones de tiempo no cambian si se cuenta el mismo día."
 
-  - title: { en: "Form: reported questions", es: "Forma: preguntas indirectas" }
+  - title: { en: "Form: reported questions" }
     content:
       - type: table
         columns:
-          - { key: type, label: { en: Question, es: Pregunta } }
-          - { key: direct, label: { en: Direct, es: Directa } }
-          - { key: reported, label: { en: Reported, es: Indirecta } }
+          - { key: type, label: { en: Question } }
+          - { key: direct, label: { en: Direct } }
+          - { key: reported, label: { en: Reported } }
         rows:
-          - { level: B1, type: Yes / no, direct: { ex: "“Do you like tea?”", tr: { es: ¿Te gusta el té? } }, reported: { ex: "She asked **if** I **liked** tea.", tr: { es: Me preguntó si me gustaba el té. } } }
-          - { level: B1, type: Wh-, direct: { ex: "“Where do you live?”", tr: { es: ¿Dónde vives? } }, reported: { ex: "She asked **where** I **lived**.", tr: { es: Me preguntó dónde vivía. } } }
-          - { level: B1, type: Wh-, direct: { ex: "“What is your name?”", tr: { es: ¿Cómo te llamas? } }, reported: { ex: "She asked **what** my name **was**.", tr: { es: Me preguntó cómo me llamaba. } } }
+          - { level: B1, type: Yes / no, direct: { ex: "“Do you like tea?”" }, reported: { ex: "She asked **if** I **liked** tea." } }
+          - { level: B1, type: Wh-, direct: { ex: "“Where do you live?”" }, reported: { ex: "She asked **where** I **lived**." } }
+          - { level: B1, type: Wh-, direct: { ex: "“What is your name?”" }, reported: { ex: "She asked **what** my name **was**." } }
       - type: bullets
         items:
           - level: B1
             text:
               en: "A reported question has statement order: subject + verb, with no do / does / did."
-              es: "La pregunta indirecta tiene orden de frase afirmativa: sujeto + verbo, sin do / does / did."
           - level: B1
             text:
               en: "Yes / no questions take **if** or **whether**. The sentence ends with a full stop."
-              es: "Las preguntas de sí o no llevan **if** o **whether**. La frase termina en punto."
           - level: B1
             text:
               en: "Tenses and pronouns change as in statements."
-              es: "Los tiempos y los pronombres cambian igual que en las afirmaciones."
 
-  - title: { en: "Form: reported commands", es: "Forma: órdenes indirectas" }
+  - title: { en: "Form: reported commands" }
     content:
       - type: table
         columns:
-          - { key: type, label: { en: Type, es: Tipo } }
-          - { key: pattern, label: { en: Pattern, es: Estructura } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: type, label: { en: Type } }
+          - { key: pattern, label: { en: Pattern } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: B1, type: { en: Command, es: Orden }, pattern: told + person + to + V, example: "“Sit down.” → He **told me to sit** down.", tr: { es: Me dijo que me sentara. } }
-          - { level: B1, type: { en: Request, es: Petición }, pattern: asked + person + to + V, example: "“Please help.” → She **asked me to help**.", tr: { es: Me pidió que ayudara. } }
-          - { level: B1, type: { en: Negative, es: Negativa }, pattern: told + person + not to + V, example: "“Don't be late.” → He **told us not to be** late.", tr: { es: Nos dijo que no llegáramos tarde. } }
-      - type: bullets
-        items:
-          - { level: B1, for: [es], text: { es: "En español va una oración con subjuntivo (*que me sentara*). En inglés va **to** + infinitivo." } }
+          - { level: B1, type: { en: Command }, pattern: told + person + to + V, example: "“Sit down.” → He **told me to sit** down." }
+          - { level: B1, type: { en: Request }, pattern: asked + person + to + V, example: "“Please help.” → She **asked me to help**." }
+          - { level: B1, type: { en: Negative }, pattern: told + person + not to + V, example: "“Don't be late.” → He **told us not to be** late." }
 
-  - title: { en: Typical errors, es: Errores típicos }
+  - title: { en: Typical errors }
     content:
       - type: errors
-        audience: true
         rows:
-          - { level: B1, wrong: She said me that she was tired., right: "She **told** me that she was tired. / She **said** that she was tired.", rule: { en: "say has no person; tell needs one", es: "say no lleva persona; tell sí" } }
-          - { level: B1, wrong: He told that he was late., right: "He **said** that he was late.", rule: { en: "tell needs a person", es: "tell necesita una persona" } }
-          - { level: B1, wrong: She asked me where did I live., right: "She asked me where I **lived**.", rule: { en: "reported questions use statement order", es: "la pregunta indirecta usa el orden de la frase afirmativa" } }
-          - { level: B1, wrong: He asked me do I like tea., right: "He asked me **if** I liked tea.", rule: { en: "yes / no questions → if / whether", es: "preguntas de sí o no → if / whether" } }
-          - { level: B1, wrong: He said me to sit down., right: "He **told** me **to sit** down.", rule: { en: "told + person + to + V", es: "told + persona + to + V" } }
-          - { level: B1, for: [es], wrong: He told me that I sit down., right: "He told me **to sit** down.", rule: { es: "*me dijo que me sentara* → told me to + V" } }
-          - { level: B1, wrong: He said he will come., right: "He said he **would** come.", rule: { en: "will → would after a past verb", es: "will → would tras un verbo en pasado" } }
-          - { level: B1, for: [es], wrong: She asked me if did I like it., right: "She asked me if I **liked** it.", rule: { es: "tras if va el orden de la frase afirmativa" } }
+          - { level: B1, wrong: She said me that she was tired., right: "She **told** me that she was tired. / She **said** that she was tired.", rule: { en: "say has no person; tell needs one" } }
+          - { level: B1, wrong: He told that he was late., right: "He **said** that he was late.", rule: { en: "tell needs a person" } }
+          - { level: B1, wrong: She asked me where did I live., right: "She asked me where I **lived**.", rule: { en: "reported questions use statement order" } }
+          - { level: B1, wrong: He asked me do I like tea., right: "He asked me **if** I liked tea.", rule: { en: "yes / no questions → if / whether" } }
+          - { level: B1, wrong: He said me to sit down., right: "He **told** me **to sit** down.", rule: { en: "told + person + to + V" } }
+          - { level: B1, wrong: He said he will come., right: "He said he **would** come.", rule: { en: "will → would after a past verb" } }

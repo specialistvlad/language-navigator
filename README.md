@@ -1,13 +1,12 @@
 # Language Navigator
 
-A reference library for learners of **English** and **Spanish** from level **A0 to B1**.
-Every topic is explained in English and in Spanish.
+A reference library for learners of **English** from level **A0 to B1**.
+Every topic is explained in English.
 
 **Live site:** https://specialistvlad.github.io/language-navigator/
 
 The source is structured data: one `topic.yaml` per topic holds a **cheatsheet** (the whole topic
-in one table) and the full reference (tables, rules, examples, typical errors) in both explanation
-languages. JSON Schemas define and validate every file. The web pages and cheatsheets are rendered
+in one table) and the full reference (tables, rules, examples, typical errors). JSON Schemas define and validate every file. The web pages and cheatsheets are rendered
 straight from the data.
 
 **The data names meaning; the renderer decides how it looks.** Each field says what a piece of
@@ -24,7 +23,7 @@ level.
 - Every page is rendered to static HTML, so search engines index all content.
 - Every page has a dynamic layout: below 860 px the sidebar becomes a slide-out menu and the
   controls stack; wide tables scroll inside their box, never the page.
-- Every page has a clean, stable, named URL, for example `/es/english/tenses/simple-tenses/`
+- Every page has a clean, stable, named URL, for example `/en/english/tenses/simple-tenses/`
   (rules in [languages/CONVENTIONS.md](languages/CONVENTIONS.md) §10).
 - `npm start` rebuilds on every change and reloads the browser.
 
@@ -63,8 +62,7 @@ language-navigator/
 │   ├── concepts.yaml          concept keys that pair topics across languages
 │   ├── schema/                JSON Schemas
 │   ├── templates/topic.yaml   skeleton for a new topic
-│   ├── en/                    English topics: {NN-section}/{topic}/topic.yaml
-│   └── es/                    Spanish topics
+│   └── en/                    English topics: {NN-section}/{topic}/topic.yaml
 ├── apps/
 │   └── web/                   web app
 ├── scripts/                   shared tooling: data loading, schema types, checks

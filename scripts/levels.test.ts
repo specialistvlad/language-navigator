@@ -8,7 +8,7 @@ const table: Block = {
   columns: [{ key: "form", label: "Form" }],
   rows: [
     { level: "A1", form: "a" },
-    { level: "B1", form: "b", for: ["es"] },
+    { level: "B1", form: "b", for: ["en"] },
     { level: "A2", form: "c" },
   ],
 };
@@ -50,18 +50,17 @@ describe("ranges", () => {
 describe("leaves decide every range above them", () => {
   test("a block covers the leaves its reader sees", () => {
     expect(blockRange(table)).toEqual({ from: "A1", to: "B1" });
-    expect(blockRange(table, "en")).toEqual({ from: "A1", to: "A2" });
-    expect(blockRange(table, "es")).toEqual({ from: "A1", to: "B1" });
-    expect(blockRange(text, "es")).toBeNull();
+    expect(blockRange(table, "en")).toEqual({ from: "A1", to: "B1" });
+    expect(blockRange(text, "en")).toEqual({ from: "C1", to: "C1" });
   });
   test("a section and a topic cover their blocks", () => {
     const [one, two] = topic.sections;
     if (!one || !two) throw new Error("fixture");
     expect(sectionRange(one)).toEqual({ from: "A1", to: "B2" });
-    expect(sectionRange(two, "es")).toBeNull();
-    expect(contentRange(topic.cheatsheet.content, "en")).toEqual({ from: "A1", to: "A2" });
+    expect(sectionRange(two, "en")).toEqual({ from: "C1", to: "C1" });
+    expect(contentRange(topic.cheatsheet.content, "en")).toEqual({ from: "A1", to: "B1" });
     expect(topicRange(topic)).toEqual({ from: "A1", to: "C1" });
-    expect(topicRange(topic, "es")).toEqual({ from: "A1", to: "B2" });
+    expect(topicRange(topic, "en")).toEqual({ from: "A1", to: "C1" });
   });
   test("a written topic takes its range from its data, a planned one from its entry", () => {
     const written = { topic, entry: { slug: "x", levels: "A0" } } as unknown as TopicRef;

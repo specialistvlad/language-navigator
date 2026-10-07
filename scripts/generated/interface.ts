@@ -7,25 +7,10 @@ export interface InterfaceWording {
   text: {
     [k: string]: Localized;
   };
-  /**
-   * Line above a Typical errors table: by explanation language, then by language being learned.
-   */
-  errorsAudience: {
-    en?: SomeLanguages;
-    es?: SomeLanguages;
-  };
 }
 /**
  * Text in every explanation language.
  */
 export interface Localized {
   en: string;
-  es: string;
-}
-/**
- * Text in some explanation languages.
- */
-export interface SomeLanguages {
-  en?: string;
-  es?: string;
 }

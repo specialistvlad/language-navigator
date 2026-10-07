@@ -1,6 +1,6 @@
 // Generated from languages/schema/topic.schema.json by npm run types. Edit the schema, then regenerate.
 
-export type Explain = "en" | "es";
+export type Explain = "en";
 export type TopicId = string;
 export type Status = "draft" | "approved";
 export type Block = TextBlock | BulletsBlock | TableBlock | ErrorsBlock;
@@ -68,7 +68,6 @@ export interface LanguageNavigatorTopic {
   related: TopicId[];
   status: {
     en: Status;
-    es: Status;
   };
   title: Localized;
   summary: Localized;
@@ -88,7 +87,6 @@ export interface LanguageNavigatorTopic {
  */
 export interface Localized {
   en?: string;
-  es?: string;
 }
 export interface Section {
   title: Localized;
@@ -151,10 +149,6 @@ export interface Example {
 }
 export interface ErrorsBlock {
   type: "errors";
-  /**
-   * Print the audience line when the explanation language differs from the language being learned.
-   */
-  audience?: boolean;
   /**
    * @minItems 1
    */

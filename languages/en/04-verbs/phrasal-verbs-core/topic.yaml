@@ -5,173 +5,159 @@ kind: grammar
 tags: [phrasal-verbs, verbs, particles]
 concepts: [phrasal-verbs]
 related: [en.prepositions.place-movement, en.prepositions.time-in-on-at, en.pronouns.personal-pronouns]
-status: { en: draft, es: draft }
+status: { en: draft }
 
-title: { en: "Phrasal Verbs: Core", es: "Verbos frasales básicos" }
+title: { en: "Phrasal Verbs: Core" }
 summary:
   en: "Verb + particle with a new meaning: get up, turn it off, look for, run out of. A pronoun goes between the verb and the particle of a separable verb: **Turn it off.** **Pick it up.**"
-  es: "Verbo + partícula con un significado nuevo: get up, turn it off, look for, run out of. En un verbo separable el pronombre va en medio: **turn it off**, **pick it up**; en uno inseparable el complemento va después: **look after** them."
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: verb, label: { en: Verb alone, es: Verbo solo } }
-        - { key: phrasal, label: { en: Phrasal verb, es: Verbo frasal } }
+        - { key: verb, label: { en: Verb alone } }
+        - { key: phrasal, label: { en: Phrasal verb } }
       rows:
-        - { level: A2, verb: { ex: "I **look** at the map.", tr: { es: Miro el mapa. } }, phrasal: { ex: "I **look for** my keys.", tr: { es: Busco mis llaves. } } }
-        - { level: A2, verb: { ex: "She **gives** me a book.", tr: { es: Me da un libro. } }, phrasal: { ex: "He never **gives up**.", tr: { es: Nunca se rinde. } } }
-        - { level: A2, verb: { ex: "I **turn** left here.", tr: { es: Giro a la izquierda aquí. } }, phrasal: { ex: "**Turn off** the light.", tr: { es: Apaga la luz. } } }
+        - { level: A2, verb: { ex: "I **look** at the map." }, phrasal: { ex: "I **look for** my keys." } }
+        - { level: A2, verb: { ex: "She **gives** me a book." }, phrasal: { ex: "He never **gives up**." } }
+        - { level: A2, verb: { ex: "I **turn** left here." }, phrasal: { ex: "**Turn off** the light." } }
 
 sections:
-  - title: { en: Overview, es: Resumen }
+  - title: { en: Overview }
     content:
       - type: bullets
         items:
           - level: A2
             text:
               en: "A phrasal verb is a verb + a particle: get + up, turn + off, look + for."
-              es: "Un verbo frasal es un verbo + una partícula: get + up, turn + off, look + for."
           - level: A2
             text:
               en: "The particle (up, off, on, out, back, down, in, for, after) gives the verb a new meaning."
-              es: "La partícula (up, off, on, out, back, down, in, for, after) da al verbo un significado nuevo."
           - level: A2
             text:
               en: "Phrasal verbs are very common in everyday speech."
-              es: "Los verbos frasales son muy frecuentes en el habla cotidiana."
-          - { level: A2, for: [es], text: { es: "Un verbo frasal se traduce por un solo verbo: *get up* = *levantarse*, *turn off* = *apagar*." } }
 
-  - title: { en: "Form: with an object", es: "Forma: con complemento" }
+  - title: { en: "Form: with an object" }
     content:
       - type: table
         columns:
-          - { key: kind, label: { en: Type, es: Tipo } }
-          - { key: noun, label: { en: With a noun, es: Con un sustantivo } }
-          - { key: pronoun, label: { en: With a pronoun, es: Con un pronombre } }
+          - { key: kind, label: { en: Type } }
+          - { key: noun, label: { en: With a noun } }
+          - { key: pronoun, label: { en: With a pronoun } }
         rows:
-          - { level: A2, kind: { en: Separable, es: Separable }, noun: "Turn **off** the light. / Turn the light **off**.", pronoun: "Turn **it** off.", tr: { es: Apaga la luz. / Apágala. } }
-          - { level: A2, kind: { en: Inseparable, es: Inseparable }, noun: "Look **after** the baby.", pronoun: "Look after **him**.", tr: { es: Cuida al bebé. / Cuídalo. } }
-          - { level: A2, kind: { en: No object, es: Sin complemento }, noun: "Sit **down**, please.", pronoun: "-", tr: { es: "Siéntate, por favor." } }
+          - { level: A2, kind: { en: Separable }, noun: "Turn **off** the light. / Turn the light **off**.", pronoun: "Turn **it** off." }
+          - { level: A2, kind: { en: Inseparable }, noun: "Look **after** the baby.", pronoun: "Look after **him**." }
+          - { level: A2, kind: { en: No object }, noun: "Sit **down**, please.", pronoun: "-" }
       - type: table
         columns:
-          - { key: kind, label: { en: Type, es: Tipo } }
-          - { key: verbs, label: { en: Verbs, es: Verbos } }
+          - { key: kind, label: { en: Type } }
+          - { key: verbs, label: { en: Verbs } }
         rows:
-          - { level: A2, kind: { en: Separable, es: Separable }, verbs: "wake sb up, put on, take off, turn on, turn off, try on, pick up, drop off, look up, fill in, write down, work out, give up" }
-          - { level: A2, kind: { en: Inseparable, es: Inseparable }, verbs: "look for, look after, get on with, look forward to, run out of" }
-          - { level: A2, kind: { en: No object, es: Sin complemento }, verbs: "wake up, get up, sit down, stand up, go out, come in, come back, set off, grow up, go on, carry on" }
+          - { level: A2, kind: { en: Separable }, verbs: "wake sb up, put on, take off, turn on, turn off, try on, pick up, drop off, look up, fill in, write down, work out, give up" }
+          - { level: A2, kind: { en: Inseparable }, verbs: "look for, look after, get on with, look forward to, run out of" }
+          - { level: A2, kind: { en: No object }, verbs: "wake up, get up, sit down, stand up, go out, come in, come back, set off, grow up, go on, carry on" }
       - type: bullets
         items:
           - level: A2
             text:
               en: "With a separable verb, a pronoun goes between the verb and the particle: pick **it** up."
-              es: "Con un verbo separable, el pronombre va entre el verbo y la partícula: pick **it** up."
           - level: A2
             text:
               en: "A noun goes before or after the particle: pick up the bag / pick the bag up."
-              es: "El sustantivo va antes o después de la partícula: pick up the bag / pick the bag up."
           - level: A2
             text:
               en: "With an inseparable verb, the object always follows the particle: look after **them**."
-              es: "Con un verbo inseparable, el complemento siempre va después de la partícula: look after **them**."
           - level: A2
             text:
               en: "**find out** usually takes its object after the particle: find out the price."
-              es: "**find out** suele llevar el complemento después de la partícula: find out the price."
           - level: B1
             text:
               en: "**look forward to** and **give up** are followed by a noun or the -ing form:"
-              es: "**look forward to** y **give up** van seguidos de un sustantivo o de la forma -ing:"
             ex: "I look forward to **seeing** you. / He gave up **smoking**."
-            tr: { es: Tengo ganas de verte. / Dejó de fumar. }
 
-  - title: { en: "Pronunciation: stress", es: "Pronunciación: acento" }
+  - title: { en: "Pronunciation: stress" }
     content:
       - type: table
         columns:
-          - { key: kind, label: { en: Type, es: Tipo } }
-          - { key: stress, label: { en: Stress, es: Acento } }
-          - { key: examples, label: { en: Examples, es: Ejemplos } }
+          - { key: kind, label: { en: Type } }
+          - { key: stress, label: { en: Stress } }
+          - { key: examples, label: { en: Examples } }
         rows:
-          - { level: A2, kind: { en: "Particle with its own meaning", es: "Partícula con significado propio" }, stress: { en: "on the particle", es: "en la partícula" }, examples: "get up /ˌɡet ˈʌp/ / turn off /ˌtɜːn ˈɒf/ / pick up /ˌpɪk ˈʌp/" }
-          - { level: A2, kind: { en: "Verb + preposition", es: "Verbo + preposición" }, stress: { en: "on the verb", es: "en el verbo" }, examples: "look for /ˈlʊk fə/ / look after /ˈlʊk ˌɑːftə/" }
+          - { level: A2, kind: { en: "Particle with its own meaning" }, stress: { en: "on the particle" }, examples: "get up /ˌɡet ˈʌp/ / turn off /ˌtɜːn ˈɒf/ / pick up /ˌpɪk ˈʌp/" }
+          - { level: A2, kind: { en: "Verb + preposition" }, stress: { en: "on the verb" }, examples: "look for /ˈlʊk fə/ / look after /ˈlʊk ˌɑːftə/" }
 
-  - title: { en: "Daily routine", es: "Rutina diaria" }
+  - title: { en: "Daily routine" }
     content:
       - type: table
         columns:
-          - { key: verb, label: { en: Phrasal verb, es: Verbo frasal } }
-          - { key: meaning, label: { en: Meaning, es: Significado } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: verb, label: { en: Phrasal verb } }
+          - { key: meaning, label: { en: Meaning } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A2, verb: wake up, meaning: { en: stop sleeping, es: despertarse }, example: { ex: "I **wake up** at six.", tr: { es: Me despierto a las seis. } } }
-          - { level: A2, verb: get up, meaning: { en: leave your bed, es: levantarse de la cama }, example: { ex: "We **get up** at seven.", tr: { es: Nos levantamos a las siete. } } }
-          - { level: A2, verb: put on, meaning: { en: start wearing clothes, es: ponerse (ropa) }, example: { ex: "She **puts on** her coat.", tr: { es: Se pone el abrigo. } } }
-          - { level: A2, verb: take off, meaning: { en: remove clothes, es: quitarse (ropa) }, example: { ex: "He **takes off** his shoes.", tr: { es: Se quita los zapatos. } } }
-          - { level: A2, verb: try on, meaning: { en: wear clothes to check them, es: probarse (ropa) }, example: { ex: "Can I **try on** this jacket?", tr: { es: ¿Puedo probarme esta chaqueta? } } }
-          - { level: A2, verb: turn on, meaning: { en: start a light or a machine, es: encender }, example: { ex: "**Turn on** the TV.", tr: { es: Enciende la tele. } } }
-          - { level: A2, verb: turn off, meaning: { en: stop a light or a machine, es: apagar }, example: { ex: "**Turn** the light **off**.", tr: { es: Apaga la luz. } } }
-          - { level: A2, verb: sit down, meaning: { en: move to a seat, es: sentarse }, example: { ex: "Please **sit down**.", tr: { es: "Siéntate, por favor." } } }
-          - { level: A2, verb: stand up, meaning: { en: move to your feet, es: ponerse de pie }, example: { ex: "Everyone **stands up**.", tr: { es: Todos se ponen de pie. } } }
+          - { level: A2, verb: wake up, meaning: { en: stop sleeping }, example: { ex: "I **wake up** at six." } }
+          - { level: A2, verb: get up, meaning: { en: leave your bed }, example: { ex: "We **get up** at seven." } }
+          - { level: A2, verb: put on, meaning: { en: start wearing clothes }, example: { ex: "She **puts on** her coat." } }
+          - { level: A2, verb: take off, meaning: { en: remove clothes }, example: { ex: "He **takes off** his shoes." } }
+          - { level: A2, verb: try on, meaning: { en: wear clothes to check them }, example: { ex: "Can I **try on** this jacket?" } }
+          - { level: A2, verb: turn on, meaning: { en: start a light or a machine }, example: { ex: "**Turn on** the TV." } }
+          - { level: A2, verb: turn off, meaning: { en: stop a light or a machine }, example: { ex: "**Turn** the light **off**." } }
+          - { level: A2, verb: sit down, meaning: { en: move to a seat }, example: { ex: "Please **sit down**." } }
+          - { level: A2, verb: stand up, meaning: { en: move to your feet }, example: { ex: "Everyone **stands up**." } }
 
-  - title: { en: "Going and coming", es: "Ir y venir" }
+  - title: { en: "Going and coming" }
     content:
       - type: table
         columns:
-          - { key: verb, label: { en: Phrasal verb, es: Verbo frasal } }
-          - { key: meaning, label: { en: Meaning, es: Significado } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: verb, label: { en: Phrasal verb } }
+          - { key: meaning, label: { en: Meaning } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A2, verb: go out, meaning: { en: leave home to do something, es: salir }, example: { ex: "We **go out** on Fridays.", tr: { es: Salimos los viernes. } } }
-          - { level: A2, verb: come in, meaning: { en: enter, es: entrar }, example: { ex: "**Come in**, please.", tr: { es: "Pasa, por favor." } } }
-          - { level: A2, verb: come back, meaning: { en: return, es: volver }, example: { ex: "I **come back** at six.", tr: { es: Vuelvo a las seis. } } }
-          - { level: A2, verb: pick up, meaning: { en: collect a person or a thing, es: recoger }, example: { ex: "I **pick up** the children at three.", tr: { es: Recojo a los niños a las tres. } } }
-          - { level: B1, verb: set off, meaning: { en: start a journey, es: ponerse en camino }, example: { ex: "We **set off** at eight.", tr: { es: Salimos de viaje a las ocho. } } }
-          - { level: B1, verb: drop off, meaning: { en: leave a person or a thing somewhere, es: dejar (en un sitio) }, example: { ex: "I **drop** the kids **off** at school.", tr: { es: Dejo a los niños en el colegio. } } }
-          - { level: B1, verb: grow up, meaning: { en: become an adult, es: "crecer, criarse" }, example: { ex: "She **grew up** in Leeds.", tr: { es: Se crió en Leeds. } } }
+          - { level: A2, verb: go out, meaning: { en: leave home to do something }, example: { ex: "We **go out** on Fridays." } }
+          - { level: A2, verb: come in, meaning: { en: enter }, example: { ex: "**Come in**, please." } }
+          - { level: A2, verb: come back, meaning: { en: return }, example: { ex: "I **come back** at six." } }
+          - { level: A2, verb: pick up, meaning: { en: collect a person or a thing }, example: { ex: "I **pick up** the children at three." } }
+          - { level: B1, verb: set off, meaning: { en: start a journey }, example: { ex: "We **set off** at eight." } }
+          - { level: B1, verb: drop off, meaning: { en: leave a person or a thing somewhere }, example: { ex: "I **drop** the kids **off** at school." } }
+          - { level: B1, verb: grow up, meaning: { en: become an adult }, example: { ex: "She **grew up** in Leeds." } }
 
-  - title: { en: "Looking and finding out", es: "Buscar y averiguar" }
+  - title: { en: "Looking and finding out" }
     content:
       - type: table
         columns:
-          - { key: verb, label: { en: Phrasal verb, es: Verbo frasal } }
-          - { key: meaning, label: { en: Meaning, es: Significado } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: verb, label: { en: Phrasal verb } }
+          - { key: meaning, label: { en: Meaning } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A2, verb: look for, meaning: { en: try to find, es: buscar }, example: { ex: "I'm **looking for** my keys.", tr: { es: Estoy buscando mis llaves. } } }
-          - { level: A2, verb: look after, meaning: { en: take care of, es: cuidar }, example: { ex: "She **looks after** her gran.", tr: { es: Cuida de su abuela. } } }
-          - { level: A2, verb: look up, meaning: { en: search in a dictionary or online, es: buscar (en un diccionario) }, example: { ex: "**Look up** the word.", tr: { es: Busca la palabra. } } }
-          - { level: A2, verb: find out, meaning: { en: learn a fact, es: averiguar }, example: { ex: "I want to **find out** the price.", tr: { es: Quiero averiguar el precio. } } }
-          - { level: A2, verb: fill in, meaning: { en: write information on a form, es: rellenar }, example: { ex: "**Fill in** this form. (US: **fill out**)", tr: { es: Rellena este formulario. } } }
-          - { level: A2, verb: write down, meaning: { en: put on paper, es: apuntar }, example: { ex: "**Write down** my number.", tr: { es: Apunta mi número. } } }
-          - { level: B1, verb: work out, meaning: { en: solve or calculate, es: "resolver, calcular" }, example: { ex: "I can't **work out** the answer.", tr: { es: No consigo resolver la respuesta. } } }
+          - { level: A2, verb: look for, meaning: { en: try to find }, example: { ex: "I'm **looking for** my keys." } }
+          - { level: A2, verb: look after, meaning: { en: take care of }, example: { ex: "She **looks after** her gran." } }
+          - { level: A2, verb: look up, meaning: { en: search in a dictionary or online }, example: { ex: "**Look up** the word." } }
+          - { level: A2, verb: find out, meaning: { en: learn a fact }, example: { ex: "I want to **find out** the price." } }
+          - { level: A2, verb: fill in, meaning: { en: write information on a form }, example: { ex: "**Fill in** this form. (US: **fill out**)" } }
+          - { level: A2, verb: write down, meaning: { en: put on paper }, example: { ex: "**Write down** my number." } }
+          - { level: B1, verb: work out, meaning: { en: solve or calculate }, example: { ex: "I can't **work out** the answer." } }
 
-  - title: { en: "Continuing and stopping", es: "Continuar y parar" }
+  - title: { en: "Continuing and stopping" }
     content:
       - type: table
         columns:
-          - { key: verb, label: { en: Phrasal verb, es: Verbo frasal } }
-          - { key: meaning, label: { en: Meaning, es: Significado } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: verb, label: { en: Phrasal verb } }
+          - { key: meaning, label: { en: Meaning } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A2, verb: go on, meaning: { en: continue, es: "seguir, continuar" }, example: { ex: "Please **go on**.", tr: { es: "Por favor, continúa." } } }
-          - { level: A2, verb: give up, meaning: { en: stop trying or stop a habit, es: "rendirse, dejar (un hábito)" }, example: { ex: "I **give up**! / He **gave up** smoking.", tr: { es: "¡Me rindo! / Dejó de fumar." } } }
-          - { level: B1, verb: carry on, meaning: { en: continue, es: seguir }, example: { ex: "**Carry on** working.", tr: { es: Sigue trabajando. } } }
-          - { level: B1, verb: run out of, meaning: { en: have no more, es: quedarse sin }, example: { ex: "We **ran out of** milk.", tr: { es: Nos quedamos sin leche. } } }
-          - { level: B1, verb: look forward to, meaning: { en: wait for with pleasure, es: tener ganas de }, example: { ex: "I **look forward to** the weekend.", tr: { es: Tengo ganas de que llegue el fin de semana. } } }
-          - { level: B1, verb: get on with, meaning: { en: have a good relationship with, es: llevarse bien con }, example: { ex: "I **get on with** my sister.", tr: { es: Me llevo bien con mi hermana. } } }
+          - { level: A2, verb: go on, meaning: { en: continue }, example: { ex: "Please **go on**." } }
+          - { level: A2, verb: give up, meaning: { en: stop trying or stop a habit }, example: { ex: "I **give up**! / He **gave up** smoking." } }
+          - { level: B1, verb: carry on, meaning: { en: continue }, example: { ex: "**Carry on** working." } }
+          - { level: B1, verb: run out of, meaning: { en: have no more }, example: { ex: "We **ran out of** milk." } }
+          - { level: B1, verb: look forward to, meaning: { en: wait for with pleasure }, example: { ex: "I **look forward to** the weekend." } }
+          - { level: B1, verb: get on with, meaning: { en: have a good relationship with }, example: { ex: "I **get on with** my sister." } }
 
-  - title: { en: Typical errors, es: Errores típicos }
+  - title: { en: Typical errors }
     content:
       - type: errors
-        audience: true
         rows:
-          - { level: A2, wrong: Turn off it., right: "**Turn it off.**", rule: { en: "separable verb + pronoun: the pronoun goes in the middle", es: "verbo separable + pronombre: el pronombre va en medio" } }
-          - { level: A2, wrong: Can you wake up me at seven?, right: "Can you **wake me up** at seven?", rule: { en: "the pronoun goes between wake and up", es: "el pronombre va entre wake y up" } }
-          - { level: A2, wrong: She looks them after., right: "She **looks after them**.", rule: { en: "inseparable verb: the object follows the particle", es: "verbo inseparable: el complemento va después de la partícula" } }
-          - { level: A2, for: [es], wrong: I look my keys., right: "I'm **looking for** my keys.", rule: { es: "buscar = look for; look solo = mirar" } }
-          - { level: A2, for: [es], wrong: I can't find out my keys., right: "I can't **find** my keys.", rule: { es: "encontrar un objeto = find; find out = averiguar" } }
-          - { level: B1, wrong: We ran out milk., right: "We ran out **of** milk.", rule: { en: run out of needs of, es: "run out of lleva of" } }
-          - { level: B1, wrong: I look forward to see you., right: "I look forward to **seeing** you.", rule: { en: "to is a preposition: noun or -ing", es: "to es una preposición: sustantivo o -ing" } }
-          - { for: [en], level: B1, wrong: He gave up to smoke., right: "He gave up **smoking**.", rule: { en: "give up + -ing" } }
+          - { level: A2, wrong: Turn off it., right: "**Turn it off.**", rule: { en: "separable verb + pronoun: the pronoun goes in the middle" } }
+          - { level: A2, wrong: Can you wake up me at seven?, right: "Can you **wake me up** at seven?", rule: { en: "the pronoun goes between wake and up" } }
+          - { level: A2, wrong: She looks them after., right: "She **looks after them**.", rule: { en: "inseparable verb: the object follows the particle" } }
+          - { level: B1, wrong: We ran out milk., right: "We ran out **of** milk.", rule: { en: run out of needs of } }
+          - { level: B1, wrong: I look forward to see you., right: "I look forward to **seeing** you.", rule: { en: "to is a preposition: noun or -ing" } }
+          - { level: B1, wrong: He gave up to smoke., right: "He gave up **smoking**.", rule: { en: "give up + -ing" } }

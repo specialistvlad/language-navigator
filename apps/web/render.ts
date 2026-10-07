@@ -10,7 +10,6 @@ import {
   type Explain,
   explainName,
   filled,
-  INTERFACE,
   type Item,
   type Level,
   lv,
@@ -148,14 +147,8 @@ function errorsHtml(block: ErrorsBlock, ctx: Ctx, from: Level): string {
   const body = rows.map((r) =>
     row(r.level, from, [inline(r.wrong, ctx), inline(r.right, ctx), ...(withRule ? [inline(text(r.rule, ctx), ctx)] : [])]),
   );
-  const audience =
-    block.audience === true && ctx.explain !== ctx.ref.lang ? INTERFACE.errorsAudience[ctx.explain]?.[ctx.ref.lang] : undefined;
-  const intro = filled(audience) ? `<p>${inline(audience, ctx)}</p>` : "";
-  return (
-    intro +
-    wrap(
-      `<table class="errors">${headHtml(titles.map((title) => ({ title, group: undefined, center: false })))}<tbody>${body.join("")}</tbody></table>`,
-    )
+  return wrap(
+    `<table class="errors">${headHtml(titles.map((title) => ({ title, group: undefined, center: false })))}<tbody>${body.join("")}</tbody></table>`,
   );
 }
 

@@ -33,7 +33,6 @@ interface WebText {
 }
 const WEB: Partial<Record<Explain, WebText>> = {
   en: { print: "Print", editOn: "Edit on", editTitle: "Edit this topic on GitHub" },
-  es: { print: "Imprimir", editOn: "Editar en", editTitle: "Editar este tema en GitHub" },
 };
 
 export type Ui = Record<(typeof TEXT_KEYS)[number], string> &

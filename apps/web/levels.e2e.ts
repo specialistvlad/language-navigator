@@ -9,7 +9,7 @@ import { LEVELS } from "../../scripts/lib.ts";
 import { SITE_DIR, testSite } from "./test-site.ts";
 
 const pages = (await testSite()).filter(
-  (p) => /^(en|es)\/\w+\/(index\.html|[\w-]+\/[\w-]+\/index\.html)$/.test(p) && !p.includes("cheatsheets"),
+  (p) => /^en\/\w+\/(index\.html|[\w-]+\/[\w-]+\/index\.html)$/.test(p) && !p.includes("cheatsheets"),
 );
 const server = Bun.serve({
   port: 0,

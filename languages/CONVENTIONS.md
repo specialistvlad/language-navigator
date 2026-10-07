@@ -10,15 +10,12 @@ every level. §12 holds the vocabulary and the move to it.
 
 ## 1. Languages and variants
 
-- Two languages are covered, each learned and each used for explanations: English (`en`) and
-  Spanish (`es`).
-- Every topic exists in every explanation language. With `en` and `es` that makes 4 learning
-  tracks: en explained in en, en explained in es, es explained in en, es explained in es.
+- English (`en`) is the language being learned and the explanation language: one learning
+  track, English explained in English.
+- Every topic exists in every explanation language.
 - Explanations use short sentences, present tense and plain words.
 - **English** topics use British spelling and British IPA. US differences appear inline, prefixed
   `US:`, for example *at the weekend (US: on the weekend)*.
-- **Spanish** topics use Peninsular Spanish, with `vosotros` in every verb table. Latin American
-  differences appear inline, prefixed `LatAm:`.
 
 ## 2. Data files
 
@@ -33,8 +30,7 @@ languages/
 ├── concepts.yaml                   concept keys that pair topics across languages
 ├── schema/                         JSON Schemas for every file type
 ├── templates/topic.yaml            skeleton for a new topic
-├── en/05-tenses/simple-tenses/topic.yaml
-└── es/02-conjugation/presente-regular/topic.yaml
+└── en/05-tenses/simple-tenses/topic.yaml
 ```
 
 | File | Schema | Holds |
@@ -50,11 +46,10 @@ languages/
 (`site.yaml`) keeps it from readers; its data stays and `npm run check` still validates it.
 
 - Each language has its own sections, following that language's learning path. The hardest
-  foundation of a language gets its own early section (Spanish: `02-conjugation`).
+  foundation of a language gets its own early section.
 - `NN-section`: a two-digit number plus a slug. The number sets the study order of sections
   within the language; the order of `topics` in `curriculum.yaml` sets the order inside a section.
-- `topic`: kebab-case ASCII, meaning lowercase letters, digits and hyphens. Spanish slugs drop
-  accents and ñ: `preterito-indefinido`.
+- `topic`: kebab-case ASCII, meaning lowercase letters, digits and hyphens.
 - **ID**: `{lang}.{section slug without number}.{topic}`, for example `en.tenses.simple-tenses`.
 - A topic file starts with `# yaml-language-server: $schema=../../../schema/topic.schema.json`,
   which gives editors validation and completion.
@@ -107,8 +102,8 @@ section in the menu.
 | Type | Form | Use |
 |---|---|---|
 | plain | `"I **live** in Madrid."` | same in every explanation language: examples, forms, symbols |
-| localized | `{ en: "…", es: "…" }` | explanation text |
-| example | `{ ex: "Vivo aquí.", tr: { en: "I live here." } }` | an example with its translations |
+| localized | `{ en: "…" }` | explanation text |
+| example | `{ ex: "I **live** here.", tr: { … } }` | an example with its translations (§6) |
 | item | `{ level, text, ex, tr, for }` | a bullet: explanation, example or both, with its level |
 
 - Inline formatting inside strings: `**bold**` marks the target form, `*italic*` marks a gloss.
@@ -117,7 +112,7 @@ section in the menu.
   each meaning its own mark.
 - Links point to topic IDs: `[To be](id:en.verbs.to-be)`. The renderer turns them into page
   links in the reader's explanation language.
-- `for: [es]` limits an element to the listed explanation languages. Use it for notes,
+- `for: [en]` limits an element to the listed explanation languages. Use it for notes,
   sections or error rows that serve one group of readers.
 - A localized value carries every explanation language that renders it.
 
@@ -143,7 +138,7 @@ show its first sentence. It is two sentences, at most 50 words:
 
 Both sentences talk about the language itself. The rail lists the sections and the badges show the
 levels, so each sentence opens with a form, a meaning or a rule. Each explanation language has its
-own summary for its readers: the Spanish one gives the rule that matters most to Spanish speakers.
+own summary, written for its readers.
 `npm run check` enforces the length, the capital letter, and sentences free of page tours, level
 codes and openers such as "You need it to…".
 
@@ -160,17 +155,17 @@ topic with one strong section is complete.
 
 Grammar sections:
 
-| # | Title `en` | Title `es` | Content |
-|---|---|---|---|
-| 1 | Overview | Resumen | the rules that hold across the whole topic |
-| 2 | Form: … | Forma: … | one section per form: affirmative, negative, questions… |
-| 3 | Spelling: … | Ortografía: … | spelling rules for the forms |
-| 4 | Pronunciation: … | Pronunciación: … | sound rules, with IPA |
-| 5 | Use | Uso | table: use, example, row levels |
-| 6 | Signal words | Palabras clave | time words, frequency words, typical companions |
-| 7 | (topic-specific) | (topic-specific) | anything the topic needs (e.g. Stative verbs) |
-| 8 | Compare: … | Comparación: … | the closest related topic, side by side |
-| 9 | Typical errors | Errores típicos | an `errors` block with `audience: true`, when the subject has characteristic errors |
+| # | Title | Content |
+|---|---|---|
+| 1 | Overview | the rules that hold across the whole topic |
+| 2 | Form: … | one section per form: affirmative, negative, questions… |
+| 3 | Spelling: … | spelling rules for the forms |
+| 4 | Pronunciation: … | sound rules, with IPA |
+| 5 | Use | table: use, example, row levels |
+| 6 | Signal words | time words, frequency words, typical companions |
+| 7 | (topic-specific) | anything the topic needs (e.g. Stative verbs) |
+| 8 | Compare: … | the closest related topic, side by side |
+| 9 | Typical errors | an `errors` block, when the subject has characteristic errors |
 
 `related` lists related topics by ID; guides carry no links section.
 
@@ -184,7 +179,7 @@ Block types inside `content`:
 | `text` | `level`, `text`, `ex`, `tr` | a paragraph |
 | `bullets` | `items`, each an item with its `level` | a bullet list |
 | `table` | `columns` (`key`, `label`, `group`, `merge`, `center`, `for`), `rows` (cells by key, `level`, `tr`, `for`) | a table; `\n` in a cell starts a new line; a row without a key leaves that cell empty |
-| `errors` | `rows` (`level`, `wrong`, `right`, `rule`, `for`), `audience` | a ✗ / ✓ / rule table |
+| `errors` | `rows` (`level`, `wrong`, `right`, `rule`, `for`) | a ✗ / ✓ / rule table |
 
 §12 names the blocks the data moves to: each names its content, and the renderer picks its
 layout.
@@ -192,14 +187,14 @@ layout.
 ## 6. Translations and readers
 
 - When the explanation language differs from the language being learned, every example carries
-  a translation into it: `tr` on a row adds an `English` / `Español` column; `tr` on an item or an
+  a translation into it: `tr` on a row adds a column named after the explanation language; `tr` on an item or an
   example cell renders as *— translation* after the example.
 - When the two languages are the same, examples stand alone.
 - A form grid or a slot table (§7) stands alone in every track: it shows the pattern, and the
   examples below it carry the translations.
 - Typical errors match the readers. When the explanation language differs from the language
-  being learned, rows list errors typical of speakers of the explanation language, and the
-  table opens with an audience line. Rows with `for` serve one group; rows without serve all.
+  being learned, rows list errors typical of speakers of the explanation language. Rows with
+  `for` serve one group; rows without serve all.
 
 ## 7. Tables and writing style
 
@@ -229,7 +224,7 @@ the sentence. The tense cheatsheets use one: Tense, then Question (Helper, Subje
 - State the correct form. Incorrect forms appear only in `errors` blocks.
 - Examples use everyday vocabulary at or below the section's level.
 - Pronunciation is in IPA between slashes: /wɜːks/.
-- Form placeholders: `V` = base verb, `V-s`, `V-ing`, `V-ed`. Spanish: stem + ending, `habl-` + `-o`.
+- Form placeholders: `V` = base verb, `V-s`, `V-ing`, `V-ed`.
 
 | Symbol | Meaning |
 |---|---|
@@ -239,7 +234,7 @@ the sentence. The tense cheatsheets use one: Tense, then Question (Helper, Subje
 | / | alternative |
 | ( ) | optional part |
 | … | the list continues |
-| `US:` `LatAm:` | variant note |
+| `US:` | variant note |
 
 Where →, / or — joins two examples or forms, §12 writes the pair as a field: `mapping`,
 `alternatives` or `exchange`.
@@ -255,7 +250,7 @@ Every topic has one `cheatsheet`: the whole topic in one table, on one screen. E
 - On a topic page it is section **00 Cheatsheet**. The View switch shows it alone (**Cheatsheet**)
   or followed by sections 01 onwards (**Extended**).
 
-**Generated sets** — for each of the 4 tracks:
+**Generated sets** — for each track:
 
 | Set | Content |
 |---|---|
@@ -283,9 +278,9 @@ Every page has a clean, stable, named URL.
 
 | Segment | Value | Example |
 |---|---|---|
-| `{explain}` | explanation language code | `en`, `es` |
-| `{language}` | `slug` of the learned language in `curriculum.yaml` | `english`, `spanish` |
-| `{section}` | section slug, without its number | `tenses`, `conjugation` |
+| `{explain}` | explanation language code | `en` |
+| `{language}` | `slug` of the learned language in `curriculum.yaml` | `english` |
+| `{section}` | section slug, without its number | `tenses`, `foundations` |
 | `{topic}` | topic slug | `simple-tenses` |
 | `{sheet}` | `a0`…`c2` (level), `a0-a1`…`a0-c2` (progressive), up to the highest level the topics reach; `{section}`, `{section}/{topic}` | `a0-b1` |
 
@@ -302,12 +297,12 @@ Every page has a clean, stable, named URL.
 
 Topics are written one at a time. The next topic starts only after the current one is approved.
 
-1. Copy `templates/topic.yaml` into the topic folder and write it in both explanation languages,
-   with its cheatsheet; set `status` to `draft` for both.
+1. Copy `templates/topic.yaml` into the topic folder and write it in every explanation language,
+   with its cheatsheet; set `status` to `draft` for each.
 2. Run `npm run check` until it reports no problems.
 3. Hand the topic to the owner for review in the web app (`npm start`).
 4. Apply the requested changes; repeat until the owner approves.
-5. Set `status` to `approved` for both explanation languages.
+5. Set `status` to `approved` for every explanation language.
 6. Move to the next topic in `curriculum.yaml` order.
 
 ## 12. Semantic data
@@ -341,8 +336,8 @@ lands. A topic keeps the forms of §4–§8 until it moves.
 | `interrogativity` | `decl`, `int` |
 | `politeness` | `infm`, `form` |
 
-A question, a statement and a negative differ in interrogativity and polarity. *Vosotros* is
-person `2`, number `pl`; *usted* is person `3`, number `sg`, politeness `form`.
+A question, a statement and a negative differ in interrogativity and polarity. *We* is person
+`1`, number `pl`; *she* is person `3`, number `sg`.
 
 **Topic and sections**
 
@@ -380,10 +375,10 @@ person `2`, number `pl`; *usted* is person `3`, number `sg`, politeness `form`.
 | `aux` | a helper verb | Does she work? | Does |
 | `subj`, `verb` | the subject and the main verb of a pattern sentence | Does she work? | she, work |
 | `ending` | an ending added to a stem | works | s |
-| `stress` | the stressed syllable | hablo | ha |
-| `term` | a word of the language being learned, discussed in an explanation | *yet* va al final | yet |
-| `gloss` | a meaning in the reader's language | tomar: take / grab | take / grab |
-| `l1` | a phrase in the reader's first language | me robaron la bici | me robaron la bici |
+| `stress` | the stressed syllable | photograph | pho |
+| `term` | a word of the language being learned, discussed in an explanation | *yet* goes at the end | yet |
+| `gloss` | a meaning in the reader's language | fortnight: two weeks | two weeks |
+| `l1` | a phrase in the reader's first language | a note's phrase in the reader's language | the whole phrase |
 | `sound` | a pronunciation respelling | used to sounds like use-ta | use-ta |
 | `ipa` | an IPA transcription | /ˈjuːst tə/ | ˈjuːst tə |
 | `date` | a date, with its ISO 8601 value: `2026-07-03`, `--07-03`, `2026` | the third of July | the third of July = `--07-03` |

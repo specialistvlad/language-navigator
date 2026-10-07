@@ -6,8 +6,8 @@ import type { Report } from "./report.ts";
 const LEAD_CHARS = 160;
 const WORDS = 50;
 // The rail lists the sections and the badges show the levels; these phrases restate them or only announce.
-const PAGE = /\b(the|this) (page|topic)\b|\b(la|esta) página\b|\beste tema\b/i;
-const OPENER = /(^|[.!?]\s+)(you need|use it|a learner needs|necesitas|sirve para|se usa para)\b/i;
+const PAGE = /\b(the|this) (page|topic)\b/i;
+const OPENER = /(^|[.!?]\s+)(you need|use it|a learner needs)\b/i;
 const LEVEL = new RegExp(`\\b(${LEVELS.join("|")})\\b`);
 
 // The text a reader sees: link labels without their targets, no emphasis marks.
@@ -21,7 +21,7 @@ export function checkSummary(topic: Topic, where: string, report: Report): void 
     const all = plain(text);
     const first = plain(lead(text));
     if (first.length > LEAD_CHARS) report(where, `${path} first sentence has ${first.length} characters (max ${LEAD_CHARS})`);
-    if (!/^[\p{Lu}¿¡]/u.test(first)) report(where, `${path} starts with a lowercase letter`);
+    if (!/^\p{Lu}/u.test(first)) report(where, `${path} starts with a lowercase letter`);
     const words = all.split(/\s+/).length;
     if (words > WORDS) report(where, `${path} has ${words} words (max ${WORDS})`);
     const page = PAGE.exec(all);
