@@ -10,6 +10,11 @@ in one table) and the full reference (tables, rules, examples, typical errors) i
 languages. JSON Schemas define and validate every file. The web pages and cheatsheets are rendered
 straight from the data.
 
+**The data names meaning; the renderer decides how it looks.** Each field says what a piece of
+content is: a paradigm, a helper verb, an ending, a date, a typical error. The renderer lays it out
+for every view: wide and narrow screens, Cheatsheet and Extended, every level
+([languages/CONVENTIONS.md](languages/CONVENTIONS.md) §12).
+
 Each topic page opens with its cheatsheet as section 00; the View switch shows it alone or with the
 full guide. Cheatsheet pages gather the cheatsheets per topic, per section, per level and up to a
 level.
@@ -25,7 +30,7 @@ level.
 
 ## Levels
 
-Defined in `languages/levels.yaml`, which every app reads.
+Defined in `languages/levels.yaml`, which the site reads.
 
 | Level | Name | The learner can… |
 |---|---|---|
@@ -51,7 +56,7 @@ language-navigator/
 │   ├── CONVENTIONS.md         rules for the data
 │   ├── site.yaml              product name, URLs, explanation languages
 │   ├── levels.yaml            level scale: names, descriptions, colours
-│   ├── interface.yaml         interface wording every app shares
+│   ├── interface.yaml         interface wording of the site
 │   ├── curriculum.yaml        every planned topic, in study order
 │   ├── concepts.yaml          concept keys that pair topics across languages
 │   ├── schema/                JSON Schemas

@@ -3,6 +3,11 @@
 Rules for all language data. They keep the library consistent for readers, for the build
 scripts and for the web app. `npm run check` enforces them.
 
+**The data names meaning; the renderer decides how it looks.** Every field, block, mark and
+attribute says what a piece of content is: a paradigm cell, a helper verb, an ending, a typical
+error. The renderer lays it out for every view: wide and narrow screens, Cheatsheet and Extended,
+every level. §12 holds the vocabulary and the move to it.
+
 ## 1. Languages and variants
 
 - Two languages are covered, each learned and each used for explanations: English (`en`) and
@@ -23,7 +28,7 @@ Structured YAML is the source; the web pages are rendered from it.
 languages/
 ├── site.yaml                       product name, URLs, explanation languages
 ├── levels.yaml                     level scale: names, descriptions, colours
-├── interface.yaml                  interface wording every app shares
+├── interface.yaml                  interface wording of the site
 ├── curriculum.yaml                 every planned topic, in study order
 ├── concepts.yaml                   concept keys that pair topics across languages
 ├── schema/                         JSON Schemas for every file type
@@ -38,11 +43,11 @@ languages/
 | `levels.yaml` | `schema/levels.schema.json` | the level scale: code, name, description, colour per level |
 | `interface.yaml` | `schema/interface.schema.json` | interface wording by key, per explanation language; block headings and column titles the generator writes |
 | `curriculum.yaml` | `schema/curriculum.schema.json` | languages (with an `enabled` switch) → sections → topics (slug, optional title, levels of a planned topic) |
-
-`enabled: false` on a language being learned (`curriculum.yaml`) or an explanation language
-(`site.yaml`) keeps it from readers in every app; its data stays and `npm run check` still validates it.
 | `concepts.yaml` | `schema/concepts.schema.json` | concept key → title, description |
 | `{lang}/{NN-section}/{topic}/topic.yaml` | `schema/topic.schema.json` | one topic, all explanation languages |
+
+`enabled: false` on a language being learned (`curriculum.yaml`) or an explanation language
+(`site.yaml`) keeps it from readers; its data stays and `npm run check` still validates it.
 
 - Each language has its own sections, following that language's learning path. The hardest
   foundation of a language gets its own early section (Spanish: `02-conjugation`).
@@ -100,8 +105,11 @@ section in the menu.
 | item | `{ level, text, ex, tr, for }` | a bullet: explanation, example or both, with its level |
 
 - Inline formatting inside strings: `**bold**` marks the target form, `*italic*` marks a gloss.
-- Links point to topic IDs: `[To be](id:en.verbs.to-be)`. The renderers turn them into
-  page or file links in the reader's explanation language.
+  Bold also carries helpers, endings, stressed syllables, corrections and words under
+  discussion, and italic carries phrases in the reader's language and respellings; §12 gives
+  each meaning its own mark.
+- Links point to topic IDs: `[To be](id:en.verbs.to-be)`. The renderer turns them into page
+  links in the reader's explanation language.
 - `for: [es]` limits an element to the listed explanation languages. Use it for notes,
   sections or error rows that serve one group of readers.
 - A localized value carries every explanation language that renders it.
@@ -171,6 +179,9 @@ Block types inside `content`:
 | `table` | `columns` (`key`, `label`, `group`, `merge`, `center`, `for`), `rows` (cells by key, `level`, `tr`, `for`) | a table; `\n` in a cell starts a new line; a row without a key leaves that cell empty |
 | `errors` | `rows` (`level`, `wrong`, `right`, `rule`, `for`), `audience` | a ✗ / ✓ / rule table |
 
+§12 names the blocks the data moves to: each names its content, and the renderer picks its
+layout.
+
 ## 6. Translations and readers
 
 - When the explanation language differs from the language being learned, every example carries
@@ -199,6 +210,8 @@ the sentence. The tense cheatsheets use one: Tense, then Question (Helper, Subje
   inside a block. A table with a `merge` column renders with compact rows.
 - `center` centres a column's cells and title both ways; slot columns use it, Subject stays left.
 - A slot with nothing in it, such as the helper of a present statement, is a key the row leaves out.
+- `group`, `merge` and `center` move to the renderer: §12 holds a slot table as a `paradigm`
+  whose sentences mark their slots, and the renderer builds the columns from the marks.
 - Subjects are one per row, lowercase after a helper and capitalised at the start of a sentence.
 - The first column holds the key: person, form, use or rule.
 - Each fact appears once in the sections. A topic is a short path through its sections, not a
@@ -220,6 +233,9 @@ the sentence. The tense cheatsheets use one: Tense, then Question (Helper, Subje
 | ( ) | optional part |
 | … | the list continues |
 | `US:` `LatAm:` | variant note |
+
+Where →, / or — joins two examples or forms, §12 writes the pair as a field: `mapping`,
+`alternatives` or `exchange`.
 
 ## 8. Cheatsheets
 
@@ -248,7 +264,7 @@ Topics in different languages pair through shared `concepts` keys. Every key liv
 
 ## 10. URLs
 
-Every page has a clean, stable, named URL. This is a requirement for every app and output.
+Every page has a clean, stable, named URL.
 
 ```
 /                                              home
@@ -286,3 +302,97 @@ Topics are written one at a time. The next topic starts only after the current o
 4. Apply the requested changes; repeat until the owner approves.
 5. Set `status` to `approved` for both explanation languages.
 6. Move to the next topic in `curriculum.yaml` order.
+
+## 12. Semantic data
+
+The data says what each piece of content is; the renderer decides how it looks. Topics move to the
+vocabulary below one at a time (ROADMAP phase 4), and `npm run check` enforces each name once it
+lands. A topic keeps the forms of §4–§8 until it moves.
+
+**Rules**
+
+1. Fields name content. The renderer picks the layout and the views that show it: merged cells,
+   column groups, centring, line breaks, the Cheatsheet and Extended views, wide and narrow
+   screens.
+2. One name, one meaning. Every field, block, mark and attribute comes from this section.
+3. A string holds one piece of text. Lists, alternatives, patterns, exchanges and mappings are
+   fields of their own.
+4. Each fact lives in one place, and the build derives what follows from it: the translation
+   column, the cheatsheet sets.
+5. Text in the language being learned keeps its written form: it is the lesson. A mark adds what
+   the text means, such as the date "the third of July" names.
+6. Grammar carries features from one list, after the UniMorph schema:
+
+| Feature | Values |
+|---|---|
+| `person` | `1`, `2`, `3` |
+| `number` | `sg`, `pl` |
+| `tense` | `prs`, `pst`, `fut` |
+| `aspect` | `prog`, `prf` |
+| `mood` | `ind`, `imp`, `sbjv`, `cond` |
+| `polarity` | `pos`, `neg` |
+| `interrogativity` | `decl`, `int` |
+| `politeness` | `infm`, `form` |
+
+A question, a statement and a negative differ in interrogativity and polarity. *Vosotros* is
+person `2`, number `pl`; *usted* is person `3`, number `sg`, politeness `form`.
+
+**Topic and sections**
+
+| Field | Holds | Replaces |
+|---|---|---|
+| `summary.lead`, `summary.rule` | the two sentences of the summary (§5), one field each | one string, the lead cut at its first full stop |
+| section `role` | the section's place in the §5 menu: `overview`, `form`, `spelling`, `pronunciation`, `use`, `signals`, `own`, `compare`, `errors` | the role read from the title |
+
+**Blocks**
+
+| Block | Holds | Replaces |
+|---|---|---|
+| `paradigm` | cells labelled with features, each a form or a sentence | slot tables, form grids, principal parts |
+| `usage` | uses or rules, each with its examples | `use · example`, `point · rule · example`, `pattern · example` tables |
+| `comparison` | items side by side under named columns | the other tables |
+| `list` | items typed `rule`, `note` or `example` | `bullets` |
+| `prose` | a paragraph | `text` |
+| `errors` | wrong, right, rule | `errors`, as it is |
+
+**Examples**
+
+| Field | Holds | Replaces |
+|---|---|---|
+| `ex`, `tr` | an example and its translations | `ex`, `tr`, as they are |
+| `alternatives` | forms or examples that each work | " / " between them |
+| `exchange` | a question and its answer | " — " between them |
+| `mapping` | a form and what it becomes | "→" between them |
+| `pattern` | the slots of a sentence pattern, in order | "wh-word + do / does + subject + verb" |
+
+**Inline marks**
+
+| Mark | Marks | Example | Marked part |
+|---|---|---|---|
+| `target` | the form the topic teaches; in an error, the corrected part | I used to play football. | used to play |
+| `aux` | a helper verb | Does she work? | Does |
+| `subj`, `verb` | the subject and the main verb of a pattern sentence | Does she work? | she, work |
+| `ending` | an ending added to a stem | works | s |
+| `stress` | the stressed syllable | hablo | ha |
+| `term` | a word of the language being learned, discussed in an explanation | *yet* va al final | yet |
+| `gloss` | a meaning in the reader's language | tomar: take / grab | take / grab |
+| `l1` | a phrase in the reader's first language | me robaron la bici | me robaron la bici |
+| `sound` | a pronunciation respelling | used to sounds like use-ta | use-ta |
+| `ipa` | an IPA transcription | /ˈjuːst tə/ | ˈjuːst tə |
+| `date` | a date, with its ISO 8601 value: `2026-07-03`, `--07-03`, `2026` | the third of July | the third of July = `--07-03` |
+| `weekday` | a day of the week, with its ISO 8601 number, Monday `1` | on Monday | Monday = `1` |
+| `time` | a clock time, with its 24-hour value | half past ten | half past ten = `10:30` |
+| `number` | a number, with its value in digits | two hundred | two hundred = `200` |
+| `link` | another topic, by ID | see To be | To be = `en.verbs.to-be` |
+
+The value of a `date`, `weekday`, `time` or `number` mark is the same in every language: the
+renderer can show it in the reader's language beside the lesson's written form. The syntax of
+every mark follows the source format the phase 4 spike settles.
+
+**Attributes**
+
+| Attribute | Holds | Replaces |
+|---|---|---|
+| `level` | the item's level (§3) | `level`, as it is |
+| `readers` | the explanation languages an element serves | `for` on notes, sections and columns |
+| `l1` | the speakers an error is typical for | `for` on error rows |
