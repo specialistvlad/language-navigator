@@ -49,7 +49,7 @@ sections:
           - en: "Contraction: I**'d**, she**'d**, they**'d**. Speech and messages use it."
             es: "Contracción: I**'d**, she**'d**, they**'d**. Se usa en conversación y mensajes."
           - en: "Regular verbs take -ed; irregular participles are in the [Irregular verbs table](id:en.verbs-core.irregular-verbs-table)."
-            es: "Los regulares llevan -ed; los participios irregulares están en la [Tabla de verbos irregulares](id:en.verbs-core.irregular-verbs-table)."
+            es: "Los regulares llevan -ed; los participios irregulares están en la [Tabla de verbos irregulares (irregular verbs table)](id:en.verbs-core.irregular-verbs-table)."
 
   - title: { en: "Form: negative", es: "Forma: negativa" }
     level: B1
@@ -137,7 +137,7 @@ sections:
           - en: "With **after** and **before** the order is clear, so the past simple is common: After she **left**, I slept."
             es: "Con **after** y **before** el orden es claro, y el past simple es frecuente: After she **left**, I slept."
           - en: "See [Past Simple](id:en.tenses.past-simple)."
-            es: "Ver [Pasado simple](id:en.tenses.past-simple)."
+            es: "Ver [Pasado simple (past simple)](id:en.tenses.past-simple)."
 
   - title: { en: Typical errors, es: Errores típicos }
     level: B1
@@ -145,13 +145,13 @@ sections:
       - type: errors
         audience: true
         rows:
-          - { wrong: "When I arrived, the film already started.", right: "When I arrived, the film **had** already **started**.", rule: { en: "earlier action → had + participle", es: "acción anterior → had + participio" } }
-          - { for: [es], wrong: I didn't know that she left., right: "I didn't know that she **had left**.", rule: { es: "el pluscuamperfecto español (*se había ido*) pide had + participio" } }
-          - { for: [en], wrong: She had went home., right: "She had **gone** home.", rule: { en: "had + past participle, not the past simple form" } }
+          - { wrong: "When I arrived, the film has already started.", right: "When I arrived, the film **had** already **started**.", rule: { en: "earlier action → had + participle", es: "acción anterior → had + participio" } }
+          - { for: [es], wrong: I didn't know that she has left., right: "I didn't know that she **had left**.", rule: { es: "*se había ido* → had + participio" } }
+          - { for: [en], wrong: She had went home., right: "She had **gone** home.", rule: { en: "had + past participle" } }
           - { for: [en], wrong: Had you saw him?, right: "Had you **seen** him?", rule: { en: "after had use the past participle" } }
           - { wrong: "After I had finished, I had gone home.", right: "After I had finished, I **went** home.", rule: { en: "the later action takes the past simple", es: "la acción posterior lleva past simple" } }
           - { for: [es], wrong: I hadn't never been there., right: "I **had never** been there.", rule: { es: "never ya es negativo; had never + participio" } }
-          - { wrong: "By the time we got there, the shop closed.", right: "By the time we got there, the shop **had closed**.", rule: { en: "by the time + earlier action → past perfect", es: "by the time + acción anterior → past perfect" } }
+          - { wrong: "By the time we got there, the shop has closed.", right: "By the time we got there, the shop **had closed**.", rule: { en: "by the time + earlier action → past perfect", es: "by the time + acción anterior → past perfect" } }
 
 essentials:
   - level: B1
@@ -191,8 +191,8 @@ essentials:
         content:
           - type: errors
             rows:
-              - { wrong: "When I arrived, the film already started.", right: "When I arrived, the film **had** already **started**." }
-              - { for: [es], wrong: I didn't know that she left., right: "I didn't know that she **had left**." }
+              - { wrong: "When I arrived, the film has already started.", right: "When I arrived, the film **had** already **started**." }
+              - { for: [es], wrong: I didn't know that she has left., right: "I didn't know that she **had left**." }
               - { for: [en], wrong: She had went home., right: "She had **gone** home." }
               - { wrong: "After I had finished, I had gone home.", right: "After I had finished, I **went** home." }
 
@@ -201,5 +201,5 @@ reminders:
     items:
       - en: "The earlier action takes **had + participle**; the later action takes the past simple."
         es: "La acción anterior lleva **had + participio**; la posterior lleva past simple."
-      - en: "had + past participle: She had **gone**, not She had went."
-        es: "had + participio: She had **gone**, no She had went."
+      - en: "had + past participle: She had **gone**."
+        es: "had + participio: She had **gone**."

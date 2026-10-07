@@ -173,7 +173,7 @@ sections:
           - { wrong: What you were doing?, right: "What **were you** doing?", rule: { en: "be goes before the subject", es: "be va antes del sujeto: wh-word + was / were + sujeto + V-ing" } }
           - { for: [en], wrong: Did you were sleeping?, right: "**Were** you sleeping?", rule: { en: "questions start with was / were" } }
           - { wrong: "When I was walking home, I was seeing an accident.", right: "…I **saw** an accident.", rule: { en: "short interrupting action → past simple", es: "acción corta que interrumpe → past simple" } }
-          - { for: [es], wrong: I was working when the phone was ringing., right: "…when the phone **rang**.", rule: { es: "el hecho puntual va en past simple (*sonó*)" } }
+          - { for: [es], wrong: "When I was a child, I was playing outside every day.", right: "…I **played** outside every day.", rule: { es: "hábito pasado → past simple o used to, no past continuous" } }
           - { wrong: I was knowing the answer., right: "I **knew** the answer.", rule: { en: "stative verbs → past simple", es: "verbos de estado → past simple" } }
           - { for: [en], wrong: We was playing., right: "We **were** playing.", rule: { en: "you / we / they → were" } }
 

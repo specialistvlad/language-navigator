@@ -76,7 +76,7 @@ sections:
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
           - { base: go, past: went, example: "We **went** home.", tr: { es: "Fuimos a casa." } }
-          - { base: have, past: had, example: "I **had** lunch.", tr: { es: "Comí." } }
+          - { base: have, past: had, example: "I **had** lunch.", tr: { es: "Almorcé." } }
           - { base: do, past: did, example: "She **did** her homework.", tr: { es: "Hizo los deberes." } }
           - { base: see, past: saw, example: "I **saw** Tom.", tr: { es: "Vi a Tom." } }
           - { base: get, past: got, example: "He **got** a letter.", tr: { es: "Recibió una carta." } }
@@ -106,7 +106,7 @@ sections:
         items:
           - en: "After **didn't** the verb is in the base form: She didn't **call**."
             es: "Después de **didn't** el verbo va en forma base: She didn't **call**."
-          - { for: [es], text: { es: "El pasado está en **didn't**; el verbo principal no cambia: *No fui* → I **didn't go**." } }
+          - { for: [es], text: { es: "**didn't** lleva el pasado y el verbo principal queda en forma base: *No fui* → I **didn't go**." } }
 
   - title: { en: "Form: questions", es: "Forma: preguntas" }
     level: A1-A2
@@ -184,14 +184,14 @@ sections:
           - { key: after, label: { en: After, es: Después de } }
           - { key: examples, label: { en: Examples, es: Ejemplos } }
         rows:
-          - { sound: /t/, after: { en: voiceless sounds /p k f s ʃ tʃ/, es: sonidos sordos /p k f s ʃ tʃ/ }, examples: stopped /stɒpt/ / worked /wɜːkt/ / watched /wɒtʃt/ }
+          - { sound: /t/, after: { en: voiceless sounds /p k f s ʃ tʃ θ/, es: sonidos sordos /p k f s ʃ tʃ θ/ }, examples: stopped /stɒpt/ / worked /wɜːkt/ / watched /wɒtʃt/ }
           - { sound: /d/, after: { en: voiced sounds and vowels, es: sonidos sonoros y vocales }, examples: lived /lɪvd/ / played /pleɪd/ / opened /ˈəʊpənd/ }
           - { sound: /ɪd/, after: /t d/, examples: wanted /ˈwɒntɪd/ / needed /ˈniːdɪd/ / visited /ˈvɪzɪtɪd/ }
       - type: bullets
         items:
           - en: "The ending adds a syllable only after /t/ and /d/: wanted has 2 syllables, worked has 1."
             es: "La terminación añade una sílaba solo tras /t/ y /d/: wanted tiene 2 sílabas, worked tiene 1."
-          - { for: [es], text: { es: "La **e** de -ed no se pronuncia: worked /wɜːkt/, no */wɜːkɪd/*." } }
+          - { for: [es], text: { es: "La **e** de -ed es muda: worked /wɜːkt/ tiene una sílaba." } }
 
   - title: { en: Use, es: Uso }
     level: A1-A2
@@ -312,7 +312,7 @@ essentials:
           - { key: rule, label: { en: Rule, es: Regla } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { point: { en: -ed sound, es: Sonido de -ed }, rule: { en: "/t/ after /p k f s ʃ tʃ/ · /d/ after voiced sounds · /ɪd/ after /t d/", es: "/t/ tras /p k f s ʃ tʃ/ · /d/ tras sonidos sonoros · /ɪd/ tras /t d/" }, example: worked / played / wanted }
+          - { point: { en: -ed sound, es: Sonido de -ed }, rule: { en: "/t/ after /p k f s ʃ tʃ θ/ · /d/ after voiced sounds · /ɪd/ after /t d/", es: "/t/ tras /p k f s ʃ tʃ θ/ · /d/ tras sonidos sonoros · /ɪd/ tras /t d/" }, example: worked / played / wanted }
           - { point: { en: Subject questions, es: Preguntas de sujeto }, rule: { en: "who / what as subject + past verb, no did", es: "who / what como sujeto + verbo en pasado, sin did" }, example: "Who **called** you?" }
           - { point: { en: Past habits, es: Hábitos del pasado }, rule: { en: "past simple with a time expression, or used to", es: "past simple con expresión de tiempo, o used to" }, example: "I **played** outside every day." }
 

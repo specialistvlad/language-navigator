@@ -113,7 +113,7 @@ sections:
           - { question: Are they working?, "yes": "Yes, they **are**.", "no": "No, they **aren't**." }
       - type: bullets
         items:
-          - en: "A short answer repeats am / is / are from the question. The positive answer has no contraction."
+          - en: "A short answer repeats am / is / are from the question. The positive answer takes the full form."
             es: "La respuesta corta repite am / is / are de la pregunta: *¿Estás trabajando? — Sí.* → Yes, I **am**."
 
   - title: { en: "Spelling: -ing", es: "Ortografía: -ing" }
@@ -147,7 +147,7 @@ sections:
         items:
           - en: "Plans and arrangements for the future: see [Future forms](id:en.tenses.future-forms)."
             es: "Planes y citas acordadas para el futuro: ver [Formas de futuro (future forms)](id:en.tenses.future-forms)."
-          - { for: [es], text: { es: "El español usa el presente simple más que el gerundio: *Llueve* = It's raining. *Salgo ahora* = I'm leaving now." } }
+          - { for: [es], text: { es: "El español usa el presente más que el gerundio: *Llueve* = It's raining. *Salgo ahora* = I'm leaving now." } }
 
   - title: { en: Signal words, es: Palabras clave }
     level: A1
@@ -206,7 +206,7 @@ sections:
         rows:
           - { wrong: She working now., right: "She **is working** now.", rule: { en: "be is required: am / is / are + V-ing", es: "be es obligatorio: am / is / are + V-ing" } }
           - { wrong: I am work now., right: "I'm **working** now.", rule: { en: "be + V-ing", es: "be + V-ing" } }
-          - { for: [es], wrong: Now I work in the kitchen., right: "Now I'**m working** in the kitchen.", rule: { es: "ahora → present continuous, no el presente simple" } }
+          - { for: [es], wrong: Be quiet! The baby sleeps., right: "Be quiet! The baby **is sleeping**.", rule: { es: "acción en curso ahora → present continuous" } }
           - { for: [es], wrong: I no am working., right: "I'**m not** working.", rule: { es: "negativa: be + not + V-ing" } }
           - { wrong: What you are doing?, right: "What **are you** doing?", rule: { en: "be goes before the subject", es: "be va antes del sujeto: wh-word + be + sujeto + V-ing" } }
           - { for: [en], wrong: Does she working?, right: "**Is** she working?", rule: { en: "questions start with am / is / are" } }
@@ -214,7 +214,7 @@ sections:
           - { for: [en], wrong: She is makeing tea., right: "She is **making** tea.", rule: { en: "drop -e before -ing" } }
           - { for: [es], wrong: "Are you working? — Yes, I'm.", right: "Yes, I **am**.", rule: { es: "la respuesta corta afirmativa usa la forma completa" } }
           - { wrong: I am knowing the answer., right: "I **know** the answer.", rule: { en: "stative verbs → present simple", es: "verbos de estado → presente simple" } }
-          - { wrong: I'm going to the gym every Monday., right: "I **go** to the gym every Monday.", rule: { en: "habits → present simple", es: "hábitos → presente simple" } }
+          - { wrong: Water is boiling at 100 °C., right: "Water **boils** at 100 °C.", rule: { en: "habits → present simple", es: "hábitos → presente simple" } }
 
 essentials:
   - level: A1
@@ -257,7 +257,7 @@ essentials:
           - type: errors
             rows:
               - { wrong: She working now., right: "She **is working** now." }
-              - { for: [es], wrong: Now I work in the kitchen., right: "Now I'**m working** in the kitchen." }
+              - { for: [es], wrong: Be quiet! The baby sleeps., right: "Be quiet! The baby **is sleeping**." }
               - { wrong: What you are doing?, right: "What **are you** doing?" }
               - { wrong: I am knowing the answer., right: "I **know** the answer." }
 

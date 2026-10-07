@@ -43,7 +43,7 @@ sections:
             es: "La forma es la misma para todos los sujetos: I / he / they **used to** live here."
           - en: "**used to** is followed by the base verb: used to **play**."
             es: "Después de **used to** va el verbo en forma base: used to **play**."
-          - en: "**used to** has only a past form. It has no present form."
+          - en: "**used to** exists only in the past."
             es: "**used to** solo existe en pasado."
 
   - title: { en: "Form: negative", es: "Forma: negativa" }
@@ -96,7 +96,7 @@ sections:
         items:
           - en: "The **d** is silent in speech: used to sounds like *use-ta*."
             es: "La **d** no se oye al hablar: used to suena como *yus-ta*."
-          - { for: [es], text: { es: "La **s** suena /s/, no /z/: /ˈjuːst/." } }
+          - { for: [es], text: { es: "La **s** suena /s/, como en *casa*: /ˈjuːst/." } }
 
   - title: { en: Use, es: Uso }
     level: A2
@@ -113,8 +113,6 @@ sections:
         items:
           - en: "The habit or state is over now. The speaker compares past and present."
             es: "El hábito o el estado ya terminó. Se contrapone el pasado al presente."
-          - en: "**used to** has no number of times and no length of time."
-            es: "**used to** no lleva número de veces ni duración."
           - { for: [es], text: { es: "*Solía jugar*, *antes jugaba* → I **used to play**. El imperfecto español sirve para más casos." } }
 
   - title: { en: Signal words, es: Palabras clave }
@@ -151,8 +149,8 @@ sections:
         items:
           - en: "A single event takes the past simple: I **visited** Rome in May."
             es: "Un hecho único va en past simple: I **visited** Rome in May."
-          - en: "A habit takes either form: I **played** football every Saturday."
-            es: "Un hábito admite las dos formas: I **played** football every Saturday."
+          - en: "A habit with a time expression takes either form: I **played** football every Saturday."
+            es: "Un hábito con expresión de tiempo admite las dos formas: I **played** football every Saturday."
           - en: "See [Past simple](id:en.tenses.past-simple)."
             es: "Ver [Pasado simple (past simple)](id:en.tenses.past-simple)."
 
@@ -170,7 +168,6 @@ sections:
           - { for: [es], wrong: I used to visit Paris three times., right: "I **visited** Paris three times.", rule: { es: "con número de veces → past simple" } }
           - { for: [es], wrong: I use to play football now., right: "I **play** football now.", rule: { es: "used to solo expresa pasado; el presente es el presente simple" } }
           - { for: [es], wrong: I no used to smoke., right: "I **didn't use to** smoke.", rule: { es: "negativa: didn't use to + V" } }
-          - { for: [es], wrong: Used you to play?, right: "**Did** you **use to** play?", rule: { es: "pregunta: Did + sujeto + use to + V" } }
 
 essentials:
   - level: A2
