@@ -158,19 +158,13 @@ sections:
   - title: { en: "Past simple: form", es: "Pasado simple: forma" }
     level: A1-A2
     content:
-      - type: text
-        text:
-          en: "**be** has two past forms and needs no helper:"
-          es: "**be** tiene dos formas de pasado y no necesita auxiliar:"
-      - type: table
-        columns:
-          - { key: form, label: { en: Form, es: Forma } }
-          - { key: singular, label: I / he / she / it }
-          - { key: plural, label: you / we / they }
-        rows:
-          - { form: +, singular: { ex: "I **was** at home.", tr: { es: "Estaba en casa." } }, plural: { ex: "We **were** at home.", tr: { es: "Estábamos en casa." } } }
-          - { form: −, singular: { ex: "She **wasn't** at home.", tr: { es: "No estaba en casa." } }, plural: { ex: "They **weren't** at home.", tr: { es: "No estaban en casa." } } }
-          - { form: "?", singular: { ex: "**Was** he at home?", tr: { es: "¿Estaba en casa?" } }, plural: { ex: "**Were** you at home?", tr: { es: "¿Estabas en casa?" } } }
+      - type: bullets
+        items:
+          - text:
+              en: "**be** has its own past, with no helper: was / were. See [To be](id:en.verbs.to-be)."
+              es: "**be** tiene su propio pasado, sin auxiliar: was / were. Ver [To be](id:en.verbs.to-be)."
+            ex: "I **was** at home. / **Were** you there?"
+            tr: { es: "Estaba en casa. / ¿Estabas allí?" }
       - type: text
         text:
           en: "Every other verb has one past form for every person:"

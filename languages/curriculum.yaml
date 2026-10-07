@@ -33,7 +33,7 @@ languages:
       - dir: 04-verbs
         title: { en: Verbs, es: Verbos }
         topics:
-          - { slug: to-be, levels: A0, title: { en: "To be", es: "To be (ser / estar)" } }
+          - { slug: to-be, levels: A0-A2, title: { en: "To be", es: "To be (ser / estar)" } }
           - { slug: have-have-got, levels: A1 }
           - { slug: there-is-are, levels: A1 }
           - { slug: imperative, levels: A1 }

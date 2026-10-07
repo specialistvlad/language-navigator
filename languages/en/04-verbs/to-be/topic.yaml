@@ -2,42 +2,55 @@
 id: en.verbs.to-be
 lang: en
 kind: grammar
-levels: [A0]
-tags: [verbs, be, present]
+levels: [A0, A1, A2]
+tags: [verbs, be, present, past, future]
 concepts: [be]
 related: [en.pronouns.personal-pronouns, en.tenses.simple-tenses, en.verbs.there-is-are, en.verbs.have-have-got]
 status: { en: draft, es: draft }
 
 title: { en: "To be", es: "To be (ser / estar)" }
 summary:
-  en: "am / is / are: name, age, nationality, job, feelings and place; contractions, negatives, questions and short answers. You need it from the first lesson to introduce yourself and describe people and things. The page gives the affirmative, negative, question and short-answer forms, then use, and typical errors. The key point is that English always needs a subject and a form of be: \"I am 20\", \"She is a teacher\"."
-  es: "am / is / are: nombre, edad, nacionalidad, profesión, sentimientos y lugar; contracciones, negativas, preguntas y respuestas cortas. Se necesita desde la primera clase para presentarse y describir personas y cosas. La página da las formas afirmativa, negativa, interrogativa y las respuestas cortas, y después el uso y los errores típicos. Lo esencial es que el inglés siempre necesita un sujeto y una forma de be: \"I am 20\", \"She is a teacher\". El inglés usa be para la edad y los sentimientos (I am cold), donde el español usa tener (tengo frío)."
+  en: "am, is, are, was, were and will be: the verb for name, age, nationality, job, feelings and place. You need it from the first lesson to introduce yourself and describe people and things. Be needs no helper: it goes before the subject in questions and takes not in negatives, in every tense. The page opens with one grid that shows every form for every person, then covers the present with its short forms, was and were, will be, the uses and typical errors. At A0 it covers the present; A1 adds was and were, and A2 will be. The key point is that English always needs a subject and a form of be: I am 20, She is a teacher."
+  es: "am, is, are, was, were y will be: el verbo para el nombre, la edad, la nacionalidad, la profesión, los sentimientos y el lugar. Se necesita desde la primera clase para presentarse y describir personas y cosas. Be no necesita auxiliar: va delante del sujeto en las preguntas y lleva not en las negativas, en todos los tiempos. La página empieza con una tabla que muestra todas las formas para todas las personas y después trata el presente con sus formas cortas, was y were, will be, los usos y los errores típicos. En A0 trata el presente; A1 añade was y were, y A2 will be. Lo esencial es que el inglés siempre necesita un sujeto y una forma de be: I am 20, She is a teacher. Be cubre ser y estar, y se usa para la edad y los sentimientos (I am cold), donde el español usa tener (tengo frío)."
 
 sections:
   - title: { en: Overview, es: Resumen }
-    level: A0
+    level: A0-A2
     content:
+      - type: text
+        text:
+          en: "**be** has its own form in each tense: **will be** for the future, **am / is / are** for the present, **was / were** for the past."
+          es: "**be** tiene su propia forma en cada tiempo: **will be** para el futuro, **am / is / are** para el presente y **was / were** para el pasado."
       - type: table
         columns:
-          - { key: subject, label: { en: Subject, es: Sujeto } }
-          - { key: aff, label: { en: Affirmative, es: Afirmativa } }
-          - { key: neg, label: { en: Negative, es: Negativa } }
-          - { key: q, label: { en: Question, es: Pregunta } }
+          - { key: tense, label: { en: Tense, es: Tiempo } }
+          - { key: question, label: { en: Question, es: Pregunta } }
+          - { key: statement, label: { en: Statement, es: Afirmación } }
+          - { key: negative, label: { en: Negative, es: Negativa } }
         rows:
-          - { subject: I, aff: "I **am** / I'**m**", neg: "I'**m not**", q: "**Am** I…?" }
-          - { subject: you, aff: "you **are** / you'**re**", neg: "you **aren't**", q: "**Are** you…?" }
-          - { subject: he / she / it, aff: "she **is** / she'**s**", neg: "she **isn't**", q: "**Is** she…?" }
-          - { subject: we, aff: "we **are** / we'**re**", neg: "we **aren't**", q: "**Are** we…?" }
-          - { subject: they, aff: "they **are** / they'**re**", neg: "they **aren't**", q: "**Are** they…?" }
+          - tense: { en: "**Future**\nwill be", es: "**Futuro**\nwill be" }
+            question: "**Will** I **be** late?\n**Will** you **be** late?\n**Will** he **be** late?\n**Will** she **be** late?\n**Will** it **be** late?\n**Will** we **be** late?\n**Will** they **be** late?"
+            statement: "I **will be** late.\nYou **will be** late.\nHe **will be** late.\nShe **will be** late.\nIt **will be** late.\nWe **will be** late.\nThey **will be** late."
+            negative: "I **won't be** late.\nYou **won't be** late.\nHe **won't be** late.\nShe **won't be** late.\nIt **won't be** late.\nWe **won't be** late.\nThey **won't be** late."
+          - tense: { en: "**Present**\nam / is / are", es: "**Presente**\nam / is / are" }
+            question: "**Am** I late?\n**Are** you late?\n**Is** he late?\n**Is** she late?\n**Is** it late?\n**Are** we late?\n**Are** they late?"
+            statement: "I **am** late.\nYou **are** late.\nHe **is** late.\nShe **is** late.\nIt **is** late.\nWe **are** late.\nThey **are** late."
+            negative: "I'**m not** late.\nYou **aren't** late.\nHe **isn't** late.\nShe **isn't** late.\nIt **isn't** late.\nWe **aren't** late.\nThey **aren't** late."
+          - tense: { en: "**Past**\nwas / were", es: "**Pasado**\nwas / were" }
+            question: "**Was** I late?\n**Were** you late?\n**Was** he late?\n**Was** she late?\n**Was** it late?\n**Were** we late?\n**Were** they late?"
+            statement: "I **was** late.\nYou **were** late.\nHe **was** late.\nShe **was** late.\nIt **was** late.\nWe **were** late.\nThey **were** late."
+            negative: "I **wasn't** late.\nYou **weren't** late.\nHe **wasn't** late.\nShe **wasn't** late.\nIt **wasn't** late.\nWe **weren't** late.\nThey **weren't** late."
       - type: bullets
         items:
-          - en: "**be** takes the place of the main verb: no do / does in questions and negatives."
-            es: "**be** es el verbo principal: no lleva do / does en preguntas ni negativas."
-          - { for: [es], text: { es: "**be** = *ser* y *estar*. El contexto decide cuál de los dos significa." } }
-          - en: "The past forms **was / were** belong to [Past simple](id:en.tenses.simple-tenses)."
-            es: "Las formas de pasado **was / were** pertenecen a [Pasado simple](id:en.tenses.simple-tenses)."
+          - en: "be needs no helper: in questions it goes before the subject, in negatives it takes **not**."
+            es: "be no necesita auxiliar: en las preguntas va delante del sujeto y en las negativas lleva **not**."
+          - en: "Present and past forms change with the person; **will be** is the same for everyone."
+            es: "Las formas de presente y pasado cambian con la persona; **will be** es igual para todos."
+          - en: "**you** takes **are** and **were**, for one person and for many."
+            es: "**you** lleva **are** y **were**, para una persona y para varias."
+          - { for: [es], text: { es: "**be** = *ser* y *estar*. El sujeto siempre aparece: *Es alta.* → **She** is tall." } }
 
-  - title: { en: "Form: affirmative", es: "Forma: afirmativa" }
+  - title: { en: "Present: short forms", es: "Presente: formas cortas" }
     level: A0
     content:
       - type: table
@@ -55,36 +68,14 @@ sections:
           - { subject: they, full: "They **are** teachers.", short: "They'**re** teachers.", tr: { es: "Son profesores." } }
       - type: bullets
         items:
-          - en: "Speech and messages use the short forms: I'm, you're, he's, she's, it's, we're, they're."
-            es: "En la conversación y en los mensajes se usan las formas cortas: I'm, you're, he's, she's, it's, we're, they're."
-          - en: "A noun subject takes **is** (singular) or **are** (plural): My sister **is** a nurse. / My parents **are** doctors."
-            es: "Un sustantivo sujeto lleva **is** (singular) o **are** (plural): My sister **is** a nurse. / My parents **are** doctors."
-          - en: "The pronoun **you** takes **are**, for one person and for many."
-            es: "El pronombre **you** lleva **are**, para una persona y para varias."
-          - { for: [es], text: { es: "El sujeto siempre aparece: *Es alta.* → **She** is tall." } }
+          - en: "Speech and messages use the short forms."
+            es: "En la conversación y en los mensajes se usan las formas cortas."
+          - en: "Negatives: **isn't** and **aren't** are usual; **I'm not** is the only short form with I."
+            es: "Negativas: **isn't** y **aren't** son las habituales; **I'm not** es la única forma corta con I."
+          - en: "A noun subject takes **is** (singular) or **are** (plural): My parents **are** doctors."
+            es: "Un sustantivo sujeto lleva **is** (singular) o **are** (plural): My parents **are** doctors."
 
-  - title: { en: "Form: negative", es: "Forma: negativa" }
-    level: A0
-    content:
-      - type: table
-        columns:
-          - { key: subject, label: { en: Subject, es: Sujeto } }
-          - { key: form, label: { en: Form, es: Forma } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { subject: I, form: "I'm not", example: "I'**m not** tired.", tr: { es: "No estoy cansado." } }
-          - { subject: you / we / they, form: "aren't / 're not", example: "They **aren't** here.", tr: { es: "No están aquí." } }
-          - { subject: he / she / it, form: "isn't / 's not", example: "She **isn't** a doctor.", tr: { es: "No es médica." } }
-      - type: bullets
-        items:
-          - en: "The negative is **be + not**: the word **not** follows am, is or are."
-            es: "La negativa es **be + not**: **not** va detrás de am, is o are."
-          - en: "**isn't** and **aren't** are the usual short forms. **'s not** and **'re not** add emphasis."
-            es: "**isn't** y **aren't** son las formas cortas habituales. **'s not** y **'re not** dan más énfasis."
-          - en: "**I'm not** is the only short form with **I**."
-            es: "**I'm not** es la única forma corta con **I**."
-
-  - title: { en: "Form: questions", es: "Forma: preguntas" }
+  - title: { en: "Present: questions and short answers", es: "Presente: preguntas y respuestas cortas" }
     level: A0
     content:
       - type: table
@@ -92,37 +83,64 @@ sections:
           - { key: form, label: { en: Form, es: Forma } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { form: "Be + subject", example: "**Are** you a student?", tr: { es: "¿Eres estudiante?" } }
-          - { form: "Be + subject", example: "**Is** she at work?", tr: { es: "¿Está en el trabajo?" } }
-          - { form: "Wh-word + be + subject", example: "Where **are** you from?", tr: { es: "¿De dónde eres?" } }
-          - { form: "Wh-word + be + subject", example: "What **is** your name?", tr: { es: "¿Cómo te llamas?" } }
-          - { form: "Wh-word + be + subject", example: "How old **are** you?", tr: { es: "¿Cuántos años tienes?" } }
-          - { form: "Wh-word + be + subject", example: "How **are** you?", tr: { es: "¿Cómo estás?" } }
+          - { form: "be + subject", example: "**Are** you a student?", tr: { es: "¿Eres estudiante?" } }
+          - { form: "wh-word + be + subject", example: "Where **are** you from?", tr: { es: "¿De dónde eres?" } }
+          - { form: "wh-word + be + subject", example: "What **is** your name?", tr: { es: "¿Cómo te llamas?" } }
+          - { form: "wh-word + be + subject", example: "How old **are** you?", tr: { es: "¿Cuántos años tienes?" } }
+          - { form: "wh-word + be + subject", example: "How **are** you?", tr: { es: "¿Cómo estás?" } }
       - type: bullets
         items:
-          - en: "The verb **be** comes before the subject: You are → **Are** you?"
-            es: "El verbo **be** va delante del sujeto: You are → **Are** you?"
-          - en: "In a wh-question the wh-word comes first: **Where is** the station?"
-            es: "En una pregunta con wh- va primero la palabra interrogativa: **Where is** the station?"
+          - text:
+              en: "A short answer repeats be; the positive answer takes the full form:"
+              es: "La respuesta corta repite be; la afirmativa lleva la forma completa:"
+            ex: "Are you tired? — Yes, I **am**. / No, I'**m not**."
+            tr: { es: "¿Estás cansado? — Sí. / No." }
 
-  - title: { en: "Form: short answers", es: "Forma: respuestas cortas" }
-    level: A0
+  - title: { en: "Past: was and were", es: "Pasado: was y were" }
+    level: A1
     content:
       - type: table
         columns:
-          - { key: question, label: { en: Question, es: Pregunta } }
-          - { key: "yes", label: { en: "Yes", es: Sí } }
-          - { key: "no", label: { en: "No", es: "No" } }
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: singular, label: I / he / she / it }
+          - { key: plural, label: you / we / they }
         rows:
-          - { question: Are you a student?, "yes": "Yes, I **am**.", "no": "No, I'**m not**.", tr: { es: "¿Eres estudiante?" } }
-          - { question: Is she at work?, "yes": "Yes, she **is**.", "no": "No, she **isn't**.", tr: { es: "¿Está en el trabajo?" } }
-          - { question: Are they here?, "yes": "Yes, they **are**.", "no": "No, they **aren't**.", tr: { es: "¿Están aquí?" } }
+          - { form: +, singular: { ex: "I **was** at home.", tr: { es: "Estaba en casa." } }, plural: { ex: "We **were** at home.", tr: { es: "Estábamos en casa." } } }
+          - { form: −, singular: { ex: "She **wasn't** at home.", tr: { es: "No estaba en casa." } }, plural: { ex: "They **weren't** at home.", tr: { es: "No estaban en casa." } } }
+          - { form: "?", singular: { ex: "**Was** he at home?", tr: { es: "¿Estaba en casa?" } }, plural: { ex: "**Were** you at home?", tr: { es: "¿Estabas en casa?" } } }
       - type: bullets
         items:
-          - en: "A short answer repeats **be** from the question."
-            es: "La respuesta corta repite **be** de la pregunta: *¿Eres estudiante? — Sí.* → Yes, I **am**."
-          - en: "A positive short answer has the full form: Yes, I **am**."
-            es: "La respuesta corta afirmativa lleva la forma completa: Yes, I **am**."
+          - text:
+              en: "A short answer repeats was / were:"
+              es: "La respuesta corta repite was / were:"
+            ex: "Were you there? — Yes, I **was**. / No, I **wasn't**."
+            tr: { es: "¿Estuviste allí? — Sí. / No." }
+          - text:
+              en: "Birth takes **was / were born**:"
+              es: "El nacimiento se dice con **was / were born**:"
+            ex: "I **was born** in 1995."
+            tr: { es: "Nací en 1995." }
+          - en: "Time words: yesterday, last night, last week, in 2010."
+            es: "Expresiones de tiempo: yesterday, last night, last week, in 2010."
+          - { for: [es], text: { es: "was / were traduce *era, estaba, fue, estuvo*: un solo verbo con dos formas." } }
+
+  - title: { en: "Future: will be", es: "Futuro: will be" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { use: { en: A future state or place, es: Un estado o un lugar en el futuro }, example: "I'**ll be** at home tomorrow.", tr: { es: "Mañana estaré en casa." } }
+          - { use: { en: Predictions, es: Predicciones }, example: "It **will be** sunny at the weekend.", tr: { es: "El fin de semana hará sol." } }
+          - { use: { en: Questions about the future, es: Preguntas sobre el futuro }, example: "**Will** you **be** there?", tr: { es: "¿Estarás allí?" } }
+      - type: bullets
+        items:
+          - en: "Short forms: I'll be, she'll be, won't be."
+            es: "Formas cortas: I'll be, she'll be, won't be."
+          - en: "More about will: [Simple Tenses](id:en.tenses.simple-tenses)."
+            es: "Más sobre will: [Tiempos simples](id:en.tenses.simple-tenses)."
 
   - title: { en: Use, es: Uso }
     level: A0
@@ -151,22 +169,25 @@ sections:
             es: "El tiempo y la hora llevan el sujeto **it**: **It** is cold. Para *hay*, ver [There is / there are](id:en.verbs.there-is-are)."
 
   - title: { en: Typical errors, es: Errores típicos }
-    level: A0
+    level: A0-A2
     content:
       - type: errors
         audience: true
         rows:
-          - { for: [es], wrong: I have 20 years., right: "I **am** 20.", rule: { es: "la edad se dice con be, no con have (*tener años*)" } }
-          - { for: [es], wrong: I am agree., right: "I **agree**.", rule: { es: "*estar de acuerdo* = agree, un solo verbo, sin be" } }
+          - { for: [es], wrong: I have 20 years., right: "I **am** 20.", rule: { es: "la edad se dice con be (*tener años*)" } }
+          - { for: [es], wrong: I am agree., right: "I **agree**.", rule: { es: "*estar de acuerdo* = agree, un solo verbo" } }
           - { for: [es], wrong: I have hungry., right: "I **am** hungry.", rule: { es: "hambre, sed, frío, calor = be + adjetivo" } }
           - { for: [es], wrong: Is a doctor., right: "**She** is a doctor.", rule: { es: "el sujeto siempre aparece" } }
           - { for: [es], wrong: Is cold today., right: "**It** is cold today.", rule: { es: "el tiempo lleva el sujeto it" } }
           - { for: [es], wrong: She is teacher., right: "She is **a** teacher.", rule: { es: "la profesión lleva a / an" } }
           - { for: [es], wrong: He no is here., right: "He **isn't** here.", rule: { es: "negativa: be + not" } }
-          - { for: [es], wrong: "Are you tired? — Yes, I'm.", right: "Yes, I **am**.", rule: { es: "la respuesta corta afirmativa no se contrae" } }
-          - { wrong: Do you be a student?, right: "**Are** you a student?", rule: { en: "be makes questions without do / does", es: "be forma preguntas sin do / does" } }
+          - { for: [es], wrong: "Are you tired? — Yes, I'm.", right: "Yes, I **am**.", rule: { es: "la respuesta corta afirmativa va con la forma completa" } }
+          - { wrong: Do you be a student?, right: "**Are** you a student?", rule: { en: "be makes questions by itself", es: "be forma la pregunta por sí solo" } }
           - { wrong: She are happy., right: "She **is** happy.", rule: { en: "he / she / it → is", es: "he / she / it → is" } }
-          - { for: [en], wrong: They is at school., right: "They **are** at school.", rule: { en: "we / you / they → are" } }
+          - { wrong: We was at home., right: "We **were** at home.", rule: { en: "you / we / they → were", es: "you / we / they → were" } }
+          - { wrong: Did you be at home?, right: "**Were** you at home?", rule: { en: "be makes past questions by itself", es: "be forma la pregunta en pasado por sí solo" } }
+          - { for: [es], wrong: I born in 1995., right: "I **was born** in 1995.", rule: { es: "*nací* = I was born" } }
+          - { for: [en], wrong: I will at home tomorrow., right: "I **will be** at home tomorrow.", rule: { en: "will + be" } }
 
 essentials:
   - level: A0
@@ -187,8 +208,8 @@ essentials:
         content:
           - type: bullets
             items:
-              - en: "Questions and negatives need no do / does: **Are** you…? / She **isn't**…"
-                es: "Las preguntas y negativas no llevan do / does: **Are** you…? / She **isn't**…"
+              - en: "be needs no helper: **Are** you…? / She **isn't**…"
+                es: "be no necesita auxiliar: **Are** you…? / She **isn't**…"
               - en: "A short answer repeats be: Yes, I **am**. / No, she **isn't**."
                 es: "La respuesta corta repite be: Yes, I **am**. / No, she **isn't**."
               - en: "The subject is always in the sentence: **It** is cold."
@@ -210,9 +231,26 @@ essentials:
               - { for: [es], wrong: I have 20 years., right: "I **am** 20." }
               - { for: [es], wrong: I am agree., right: "I **agree**." }
               - { for: [es], wrong: Is cold today., right: "**It** is cold today." }
-              - { for: [es], wrong: She is teacher., right: "She is **a** teacher." }
-              - { for: [es], wrong: "Are you tired? — Yes, I'm.", right: "Yes, I **am**." }
               - { wrong: Do you be a student?, right: "**Are** you a student?" }
+  - level: A1
+    content:
+      - type: table
+        columns:
+          - { key: point, label: { en: Point, es: Punto } }
+          - { key: rule, label: { en: Rule, es: Regla } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { point: { en: Past, es: Pasado }, rule: { en: "I / he / she / it → was; you / we / they → were", es: "I / he / she / it → was; you / we / they → were" }, example: "We **were** at home." }
+          - { point: { en: Birth, es: Nacimiento }, rule: { en: "was / were born", es: "was / were born" }, example: "I **was born** in 1995." }
+  - level: A2
+    content:
+      - type: table
+        columns:
+          - { key: point, label: { en: Point, es: Punto } }
+          - { key: rule, label: { en: Rule, es: Regla } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { point: { en: Future, es: Futuro }, rule: { en: "will be / won't be, the same for everyone", es: "will be / won't be, igual para todos" }, example: "I'**ll be** at home tomorrow." }
 
 reminders:
   - level: A0
@@ -221,3 +259,7 @@ reminders:
       - { for: [es], text: { es: "Siempre con sujeto: **It** is cold. / **She** is a doctor." } }
       - en: "Short answers repeat be: Yes, I **am**."
         es: "La respuesta corta repite be: Yes, I **am**."
+  - level: A1
+    items:
+      - { en: "you / we / they → **were**: We **were** at home.", es: "you / we / they → **were**: We **were** at home." }
+      - { for: [es], text: { es: "*Nací* → I **was born**." } }
