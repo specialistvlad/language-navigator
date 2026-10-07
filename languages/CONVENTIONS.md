@@ -71,6 +71,8 @@ languages/
 | item | `{ text, ex, tr, level, for }` | a bullet or paragraph combining explanation and example |
 
 - Inline formatting inside strings: `**bold**` marks the target form, `*italic*` marks a gloss.
+- Bold opens at the start of a word or right after an apostrophe, and closes at the end of a word or
+  after punctuation: `I'**m**`, `work**s**`, `**If it rains,** we'll…`.
 - Links point to topic IDs: `[To be](id:en.verbs.to-be)`. The renderers turn them into
   page or file links in the reader's explanation language.
 - `for: [es]` limits an element to the listed explanation languages. Use it for notes,
@@ -124,7 +126,7 @@ Block types inside `content`:
 |---|---|---|
 | `text` | `text`, `ex`, `tr` | a paragraph |
 | `bullets` | `items` | a bullet list |
-| `table` | `columns` (`key`, `label`), `rows` (cells by key, `level`, `tr`, `for`) | a table |
+| `table` | `columns` (`key`, `label`), `rows` (cells by key, `level`, `tr`, `for`) | a table; `\n` in a cell starts a new line |
 | `errors` | `rows` (`wrong`, `right`, `rule`, `for`), `audience` | a ✗ / ✓ / rule table |
 
 ## 6. Translations and readers
@@ -133,6 +135,8 @@ Block types inside `content`:
   a translation into it: `tr` on a row adds an `English` / `Español` column; `tr` on an item or an
   example cell renders as *— translation* after the example.
 - When the two languages are the same, examples stand alone.
+- A form grid (one cell lists the form for every person, one per line) stands alone in every track:
+  it shows the pattern, and the examples below it carry the translations.
 - Typical errors match the readers. When the explanation language differs from the language
   being learned, rows list errors typical of speakers of the explanation language, and the
   table opens with an audience line. Rows with `for` serve one group; rows without serve all.

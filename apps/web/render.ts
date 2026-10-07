@@ -127,6 +127,19 @@ export function createRenderer(): MarkdownIt {
         }
       }
 
+      // <br> inside a table cell (escaped text, since raw HTML is off) becomes a line break.
+      if (token.type === "inline" && token.children?.some((c) => c.type === "text" && c.content.includes("<br>"))) {
+        token.children = token.children.flatMap((c) =>
+          c.type === "text" && c.content.includes("<br>")
+            ? c.content.split("<br>").flatMap((part, n) => {
+                const t = new state.Token("text", "", 0);
+                t.content = part;
+                return n === 0 ? [t] : [html("<br>"), t];
+              })
+            : [c],
+        );
+      }
+
       // Links to topics without a page yet ("#missing") become plain marked text.
       if (token.type === "inline" && token.children) {
         const children = token.children;

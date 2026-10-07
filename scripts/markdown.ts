@@ -98,7 +98,8 @@ function renderTable(block: TableBlock, ctx: Ctx): string {
     const cells = shape.columns.map((c) => renderCell(row[c.key], ctx));
     if (shape.translation) cells.push(row.tr?.[ctx.explain] ?? "");
     if (shape.level) cells.push(row.level ?? "");
-    lines.push(`| ${cells.map((c) => cellEscape(resolveLinks(c, ctx))).join(" | ")} |`);
+    // A line break inside a cell becomes <br>: one cell can list a form for every person.
+    lines.push(`| ${cells.map((c) => cellEscape(resolveLinks(c, ctx)).replace(/\n/g, "<br>")).join(" | ")} |`);
   }
   return lines.join("\n");
 }
