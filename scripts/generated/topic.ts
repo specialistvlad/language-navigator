@@ -123,7 +123,7 @@ export interface TableBlock {
   type: "table";
   /**
    * @minItems 1
-   * @maxItems 4
+   * @maxItems 10
    */
   columns: Column[];
   /**
@@ -135,6 +135,18 @@ export interface TableBlock {
 export interface Column {
   key: string;
   label: Text;
+  /**
+   * A cell joins the cell above it when both read the same and their rows share a level.
+   */
+  merge?: boolean;
+  /**
+   * A plain string (identical in every explanation language) or localized text.
+   */
+  group?: string | Localized;
+  /**
+   * The column's cells and title are centred horizontally and vertically.
+   */
+  center?: boolean;
   for?: For;
 }
 /**

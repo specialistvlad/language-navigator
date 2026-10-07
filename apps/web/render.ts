@@ -1,6 +1,7 @@
 // Topic content (topic.yaml) → HTML: blocks with level badges, error tables, scrollable table
 // wrappers, and the inline marks of the data: **bold**, *italic*, [label](id:topic) and line breaks.
 import { isLocalized, shows, tableShape } from "../../scripts/content.ts";
+import { blockStarts, classAttr, GAP_CELL, gapLevel, gapsAfter, headHtml, spans } from "./table.ts";
 import {
   type Block,
   type ErrorsBlock,
@@ -98,21 +99,50 @@ function cell(value: Row[string], ctx: Ctx): string {
 }
 
 const wrap = (inner: string): string => `<div class="table-wrap">${inner}</div>`;
-// A row's level shows as a badge at the start of its first cell.
-const row = (level: string | undefined, cells: string[]): string =>
-  `<tr${levelAttr(level)}>${cells.map((c, n) => `<td>${n === 0 ? badge(level) : ""}${c}</td>`).join("")}</tr>`;
-const head = (cells: string[]): string => `<thead><tr>${cells.map((c) => `<th>${c}</th>`).join("")}</tr></thead>`;
+// A row's level shows as a badge at the start of its first cell. A span of 0 leaves the cell to
+// the merged cell above it; a span above 1 covers the rows below. A center column centres its
+// cells both ways; an end cell reaches the table's bottom edge.
+interface Layout {
+  span?: number[] | undefined;
+  center?: boolean[];
+  gaps?: boolean[];
+  end?: boolean[] | undefined;
+}
+const td = (n: number, span: number, names: string[], content: string): string =>
+  span === 0 ? "" : `<td${classAttr([...(n === 0 ? ["key"] : []), ...names])}${span > 1 ? ` rowspan="${span}"` : ""}>${content}</td>`;
+const row = (level: string | undefined, cells: string[], layout: Layout = {}): string =>
+  `<tr${levelAttr(level)}>${cells
+    .map((c, n) => {
+      const names = [...(layout.center?.[n] === true ? ["center"] : []), ...(layout.end?.[n] === true ? ["end"] : [])];
+      return td(n, layout.span?.[n] ?? 1, names, (n === 0 ? badge(level) : "") + c) + (layout.gaps?.[n] === true ? GAP_CELL : "");
+    })
+    .join("")}</tr>`;
 
 function tableHtml(block: TableBlock, ctx: Ctx): string {
   const shape = tableShape(block, ctx.explain, ctx.ref.lang);
   const titles = shape.columns.map((c) => inline(text(c.label, ctx), ctx));
   if (shape.translation) titles.push(escapeHtml(explainName(ctx.explain)));
-  const rows = shape.rows.map((r) => {
+  const grid = shape.rows.map((r) => {
     const cells = shape.columns.map((c) => cell(r[c.key], ctx));
     if (shape.translation) cells.push(inline(r.tr?.[ctx.explain] ?? "", ctx));
-    return row(r.level, cells);
+    return cells;
   });
-  return wrap(`<table>${head(titles)}<tbody>${rows.join("")}</tbody></table>`);
+  const levels = shape.rows.map((r) => r.level);
+  const starts = blockStarts(grid, levels, shape.columns[0]?.merge === true);
+  const span = spans(grid, levels, [...shape.columns.map((c) => c.merge === true), false], starts);
+  const center = shape.columns.map((c) => c.center === true);
+  const groups = shape.columns.map((c) => (c.group === undefined ? undefined : inline(text(c.group, ctx), ctx)));
+  const gaps = gapsAfter(groups);
+  const width = grid[0]?.length ?? 0;
+  const spacer = (n: number): string =>
+    `<tr class="gap-row"${levelAttr(gapLevel(levels[n - 1], levels[n]))}><td colspan="${width + gaps.filter(Boolean).length}"></td></tr>`;
+  const end = (n: number): boolean[] | undefined => span[n]?.map((s) => n + s === grid.length);
+  const rows = grid.map(
+    (cells, n) => (starts.has(n) ? spacer(n) : "") + row(levels[n], cells, { span: span[n], center, gaps, end: end(n) }),
+  );
+  const header = headHtml(titles.map((title, n) => ({ title, group: groups[n], center: center[n] === true })));
+  const compact = shape.columns.some((c) => c.merge === true) ? ' class="compact"' : "";
+  return wrap(`<table${compact}>${header}<tbody>${rows.join("")}</tbody></table>`);
 }
 
 function errorsHtml(block: ErrorsBlock, ctx: Ctx): string {
@@ -125,7 +155,12 @@ function errorsHtml(block: ErrorsBlock, ctx: Ctx): string {
   const audience =
     block.audience === true && ctx.explain !== ctx.ref.lang ? INTERFACE.errorsAudience[ctx.explain]?.[ctx.ref.lang] : undefined;
   const intro = filled(audience) ? `<p>${inline(audience, ctx)}</p>` : "";
-  return intro + wrap(`<table class="errors">${head(titles)}<tbody>${body.join("")}</tbody></table>`);
+  return (
+    intro +
+    wrap(
+      `<table class="errors">${headHtml(titles.map((title) => ({ title, group: undefined, center: false })))}<tbody>${body.join("")}</tbody></table>`,
+    )
+  );
 }
 
 function blockHtml(b: Block, ctx: Ctx): string | null {

@@ -156,7 +156,7 @@ Block types inside `content`:
 |---|---|---|
 | `text` | `text`, `ex`, `tr` | a paragraph |
 | `bullets` | `items` | a bullet list |
-| `table` | `columns` (`key`, `label`), `rows` (cells by key, `level`, `tr`, `for`) | a table; `\n` in a cell starts a new line |
+| `table` | `columns` (`key`, `label`, `group`, `merge`, `center`, `for`), `rows` (cells by key, `level`, `tr`, `for`) | a table; `\n` in a cell starts a new line; a row without a key leaves that cell empty |
 | `errors` | `rows` (`wrong`, `right`, `rule`, `for`), `audience` | a ✗ / ✓ / rule table |
 
 ## 6. Translations and readers
@@ -165,8 +165,8 @@ Block types inside `content`:
   a translation into it: `tr` on a row adds an `English` / `Español` column; `tr` on an item or an
   example cell renders as *— translation* after the example.
 - When the two languages are the same, examples stand alone.
-- A form grid (one cell lists the form for every person, one per line) stands alone in every track:
-  it shows the pattern, and the examples below it carry the translations.
+- A form grid or a slot table (§7) stands alone in every track: it shows the pattern, and the
+  examples below it carry the translations.
 - Typical errors match the readers. When the explanation language differs from the language
   being learned, rows list errors typical of speakers of the explanation language, and the
   table opens with an audience line. Rows with `for` serve one group; rows without serve all.
@@ -174,7 +174,20 @@ Block types inside `content`:
 ## 7. Tables and writing style
 
 - A rendered table has at most 4 columns, counting the generated translation column,
-  so it fits A4 portrait, a tablet and a phone screen.
+  so it fits A4 portrait, a tablet and a phone screen. A slot table has at most 10.
+
+**Slot tables** lay a sentence out word by word, one column per slot, so a row reads across as
+the sentence. The tense Overviews use one: Tense, then Question (Helper, Subject, Verb), Statement
+(Subject, Helper, Verb) and Negative (Subject, Helper, Verb), one row per person.
+
+- `group` titles neighbouring columns in a second header row: Question, Statement, Negative. An
+  empty column separates two groups.
+- `merge` joins a cell to the one above when both read the same and their rows share a level.
+  A merged first column splits the table into blocks with an empty row between them; merges stay
+  inside a block. A table with a `merge` column renders with compact rows.
+- `center` centres a column's cells and title both ways; slot columns use it, Subject stays left.
+- A slot with nothing in it, such as the helper of a present statement, is a key the row leaves out.
+- Subjects are one per row, lowercase after a helper and capitalised at the start of a sentence.
 - The first column holds the key: person, form, use or rule.
 - Each fact appears once in the sections. A topic is a short path through its sections, not a
   set of overlapping views: regroupings, highlight lists and summaries of data shown in another

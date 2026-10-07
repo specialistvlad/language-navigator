@@ -297,6 +297,18 @@
         "label": {
           "$ref": "#/definitions/text"
         },
+        "merge": {
+          "description": "A cell joins the cell above it when both read the same and their rows share a level.",
+          "type": "boolean"
+        },
+        "group": {
+          "description": "A title shared with the neighbouring columns of the same group, in a header row above their own.",
+          "$ref": "#/definitions/text"
+        },
+        "center": {
+          "description": "The column's cells and title are centred horizontally and vertically.",
+          "type": "boolean"
+        },
         "for": {
           "$ref": "#/definitions/for"
         }
@@ -338,7 +350,7 @@
             "$ref": "#/definitions/column"
           },
           "minItems": 1,
-          "maxItems": 4
+          "maxItems": 10
         },
         "rows": {
           "type": "array",

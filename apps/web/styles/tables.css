@@ -32,8 +32,66 @@
 .doc tr:last-child td {
   border-bottom: 0;
 }
-.doc td:first-child {
+.doc td.key {
   font-weight: 550;
+}
+.doc th.group,
+.doc th.group-start {
+  border-left: 1px solid var(--border);
+}
+.doc thead tr:first-child th[rowspan],
+.doc th.group {
+  border-bottom: 1px solid var(--border);
+}
+.doc thead th[rowspan] {
+  vertical-align: middle;
+}
+/* Tables with merged cells list one word per row: tight rows keep each list together. */
+.doc table.compact :is(th, td):not(.gap) {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.doc table.compact td.center {
+  white-space: nowrap;
+}
+.doc table.compact td {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  line-height: 1.35;
+}
+/* Every column after the first has a line on its left; a merged cell at the bottom edge leaves it to the box. */
+.doc table.compact td:not(.key),
+.doc table.compact thead tr + tr th,
+.doc table.compact th.group {
+  border-left: 1px solid var(--border);
+}
+.doc table.compact td.end {
+  border-bottom: 0;
+}
+/* Gaps: an empty column between groups, an empty row between blocks; their edges close the boxes around them. */
+.doc :is(th, td).gap,
+.doc tr.gap-row td {
+  padding: 0;
+  background: var(--bg);
+}
+.doc :is(th, td).gap {
+  width: 12px;
+  min-width: 12px;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+.doc tr.gap-row td {
+  height: 12px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.doc :is(th, td).center {
+  text-align: center;
+  vertical-align: middle;
 }
 
 .doc table.errors td:nth-child(1) {

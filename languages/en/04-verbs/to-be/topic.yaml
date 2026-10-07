@@ -23,25 +23,38 @@ sections:
           es: "**be** tiene su propia forma en cada tiempo: **will be** para el futuro, **am / is / are** para el presente y **was / were** para el pasado."
       - type: table
         columns:
-          - { key: tense, label: { en: Tense, es: Tiempo } }
-          - { key: question, label: { en: Question, es: Pregunta } }
-          - { key: statement, label: { en: Statement, es: Afirmación } }
-          - { key: negative, label: { en: Negative, es: Negativa } }
+          - { key: tense, label: { en: Tense, es: Tiempo }, merge: true, center: true }
+          - { key: qh, group: { en: Question, es: Pregunta }, label: { en: Verb, es: Verbo }, merge: true, center: true }
+          - { key: qs, group: { en: Question, es: Pregunta }, label: { en: Subject, es: Sujeto } }
+          - { key: qv, group: { en: Question, es: Pregunta }, label: { en: Rest, es: Resto }, merge: true, center: true }
+          - { key: ss, group: { en: Statement, es: Afirmación }, label: { en: Subject, es: Sujeto } }
+          - { key: sh, group: { en: Statement, es: Afirmación }, label: { en: Verb, es: Verbo }, merge: true, center: true }
+          - { key: sv, group: { en: Statement, es: Afirmación }, label: { en: Rest, es: Resto }, merge: true, center: true }
+          - { key: ns, group: { en: Negative, es: Negativa }, label: { en: Subject, es: Sujeto } }
+          - { key: nh, group: { en: Negative, es: Negativa }, label: { en: Verb, es: Verbo }, merge: true, center: true }
+          - { key: nv, group: { en: Negative, es: Negativa }, label: { en: Rest, es: Resto }, merge: true, center: true }
         rows:
-          - tense: { en: "**Future**\nwill be", es: "**Futuro**\nwill be" }
-            level: A2
-            question: "**Will** I **be** late?\n**Will** you **be** late?\n**Will** he **be** late?\n**Will** she **be** late?\n**Will** it **be** late?\n**Will** we **be** late?\n**Will** they **be** late?"
-            statement: "I **will be** late.\nYou **will be** late.\nHe **will be** late.\nShe **will be** late.\nIt **will be** late.\nWe **will be** late.\nThey **will be** late."
-            negative: "I **won't be** late.\nYou **won't be** late.\nHe **won't be** late.\nShe **won't be** late.\nIt **won't be** late.\nWe **won't be** late.\nThey **won't be** late."
-          - tense: { en: "**Present**\nam / is / are", es: "**Presente**\nam / is / are" }
-            question: "**Am** I late?\n**Are** you late?\n**Is** he late?\n**Is** she late?\n**Is** it late?\n**Are** we late?\n**Are** they late?"
-            statement: "I **am** late.\nYou **are** late.\nHe **is** late.\nShe **is** late.\nIt **is** late.\nWe **are** late.\nThey **are** late."
-            negative: "I'**m not** late.\nYou **aren't** late.\nHe **isn't** late.\nShe **isn't** late.\nIt **isn't** late.\nWe **aren't** late.\nThey **aren't** late."
-          - tense: { en: "**Past**\nwas / were", es: "**Pasado**\nwas / were" }
-            level: A1
-            question: "**Was** I late?\n**Were** you late?\n**Was** he late?\n**Was** she late?\n**Was** it late?\n**Were** we late?\n**Were** they late?"
-            statement: "I **was** late.\nYou **were** late.\nHe **was** late.\nShe **was** late.\nIt **was** late.\nWe **were** late.\nThey **were** late."
-            negative: "I **wasn't** late.\nYou **weren't** late.\nHe **wasn't** late.\nShe **wasn't** late.\nIt **wasn't** late.\nWe **weren't** late.\nThey **weren't** late."
+          - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "I", qv: "**be** late?", ss: "I", sh: "**will be**", sv: "late.", ns: "I", nh: "**won't be**", nv: "late." }
+          - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "you", qv: "**be** late?", ss: "You", sh: "**will be**", sv: "late.", ns: "You", nh: "**won't be**", nv: "late." }
+          - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "he", qv: "**be** late?", ss: "He", sh: "**will be**", sv: "late.", ns: "He", nh: "**won't be**", nv: "late." }
+          - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "she", qv: "**be** late?", ss: "She", sh: "**will be**", sv: "late.", ns: "She", nh: "**won't be**", nv: "late." }
+          - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "it", qv: "**be** late?", ss: "It", sh: "**will be**", sv: "late.", ns: "It", nh: "**won't be**", nv: "late." }
+          - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "we", qv: "**be** late?", ss: "We", sh: "**will be**", sv: "late.", ns: "We", nh: "**won't be**", nv: "late." }
+          - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "they", qv: "**be** late?", ss: "They", sh: "**will be**", sv: "late.", ns: "They", nh: "**won't be**", nv: "late." }
+          - { tense: { en: Present, es: Presente }, qh: "**Am**", qs: "I", qv: "late?", ss: "I", sh: "**am**", sv: "late.", ns: "I", nh: "**am not**", nv: "late." }
+          - { tense: { en: Present, es: Presente }, qh: "**Are**", qs: "you", qv: "late?", ss: "You", sh: "**are**", sv: "late.", ns: "You", nh: "**aren't**", nv: "late." }
+          - { tense: { en: Present, es: Presente }, qh: "**Is**", qs: "he", qv: "late?", ss: "He", sh: "**is**", sv: "late.", ns: "He", nh: "**isn't**", nv: "late." }
+          - { tense: { en: Present, es: Presente }, qh: "**Is**", qs: "she", qv: "late?", ss: "She", sh: "**is**", sv: "late.", ns: "She", nh: "**isn't**", nv: "late." }
+          - { tense: { en: Present, es: Presente }, qh: "**Is**", qs: "it", qv: "late?", ss: "It", sh: "**is**", sv: "late.", ns: "It", nh: "**isn't**", nv: "late." }
+          - { tense: { en: Present, es: Presente }, qh: "**Are**", qs: "we", qv: "late?", ss: "We", sh: "**are**", sv: "late.", ns: "We", nh: "**aren't**", nv: "late." }
+          - { tense: { en: Present, es: Presente }, qh: "**Are**", qs: "they", qv: "late?", ss: "They", sh: "**are**", sv: "late.", ns: "They", nh: "**aren't**", nv: "late." }
+          - { level: A1, tense: { en: Past, es: Pasado }, qh: "**Was**", qs: "I", qv: "late?", ss: "I", sh: "**was**", sv: "late.", ns: "I", nh: "**wasn't**", nv: "late." }
+          - { level: A1, tense: { en: Past, es: Pasado }, qh: "**Were**", qs: "you", qv: "late?", ss: "You", sh: "**were**", sv: "late.", ns: "You", nh: "**weren't**", nv: "late." }
+          - { level: A1, tense: { en: Past, es: Pasado }, qh: "**Was**", qs: "he", qv: "late?", ss: "He", sh: "**was**", sv: "late.", ns: "He", nh: "**wasn't**", nv: "late." }
+          - { level: A1, tense: { en: Past, es: Pasado }, qh: "**Was**", qs: "she", qv: "late?", ss: "She", sh: "**was**", sv: "late.", ns: "She", nh: "**wasn't**", nv: "late." }
+          - { level: A1, tense: { en: Past, es: Pasado }, qh: "**Was**", qs: "it", qv: "late?", ss: "It", sh: "**was**", sv: "late.", ns: "It", nh: "**wasn't**", nv: "late." }
+          - { level: A1, tense: { en: Past, es: Pasado }, qh: "**Were**", qs: "we", qv: "late?", ss: "We", sh: "**were**", sv: "late.", ns: "We", nh: "**weren't**", nv: "late." }
+          - { level: A1, tense: { en: Past, es: Pasado }, qh: "**Were**", qs: "they", qv: "late?", ss: "They", sh: "**were**", sv: "late.", ns: "They", nh: "**weren't**", nv: "late." }
       - type: bullets
         items:
           - en: "be needs no helper: in questions it goes before the subject, in negatives it takes **not**."

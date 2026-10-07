@@ -23,20 +23,31 @@ sections:
           es: "Cada tiempo perfecto es **have** + participio pasado: **have / has** para el presente y **had** para el pasado."
       - type: table
         columns:
-          - { key: tense, label: { en: Tense, es: Tiempo } }
-          - { key: question, label: { en: Question, es: Pregunta } }
-          - { key: statement, label: { en: Statement, es: Afirmación } }
-          - { key: negative, label: { en: Negative, es: Negativa } }
+          - { key: tense, label: { en: Tense, es: Tiempo }, merge: true, center: true }
+          - { key: qh, group: { en: Question, es: Pregunta }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
+          - { key: qs, group: { en: Question, es: Pregunta }, label: { en: Subject, es: Sujeto } }
+          - { key: qv, group: { en: Question, es: Pregunta }, label: { en: Verb, es: Verbo }, merge: true, center: true }
+          - { key: ss, group: { en: Statement, es: Afirmación }, label: { en: Subject, es: Sujeto } }
+          - { key: sh, group: { en: Statement, es: Afirmación }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
+          - { key: sv, group: { en: Statement, es: Afirmación }, label: { en: Verb, es: Verbo }, merge: true, center: true }
+          - { key: ns, group: { en: Negative, es: Negativa }, label: { en: Subject, es: Sujeto } }
+          - { key: nh, group: { en: Negative, es: Negativa }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
+          - { key: nv, group: { en: Negative, es: Negativa }, label: { en: Verb, es: Verbo }, merge: true, center: true }
         rows:
-          - tense: { en: "**Present perfect**\nhave / has", es: "**Present perfect**\nhave / has" }
-            question: "**Have** I work**ed**?\n**Have** you work**ed**?\n**Has** he work**ed**?\n**Has** she work**ed**?\n**Has** it work**ed**?\n**Have** we work**ed**?\n**Have** they work**ed**?"
-            statement: "I **have** work**ed**.\nYou **have** work**ed**.\nHe **has** work**ed**.\nShe **has** work**ed**.\nIt **has** work**ed**.\nWe **have** work**ed**.\nThey **have** work**ed**."
-            negative: "I **haven't** work**ed**.\nYou **haven't** work**ed**.\nHe **hasn't** work**ed**.\nShe **hasn't** work**ed**.\nIt **hasn't** work**ed**.\nWe **haven't** work**ed**.\nThey **haven't** work**ed**."
-          - tense: { en: "**Past perfect**\nhad", es: "**Past perfect**\nhad" }
-            level: B1
-            question: "**Had** I work**ed**?\n**Had** you work**ed**?\n**Had** he work**ed**?\n**Had** she work**ed**?\n**Had** it work**ed**?\n**Had** we work**ed**?\n**Had** they work**ed**?"
-            statement: "I **had** work**ed**.\nYou **had** work**ed**.\nHe **had** work**ed**.\nShe **had** work**ed**.\nIt **had** work**ed**.\nWe **had** work**ed**.\nThey **had** work**ed**."
-            negative: "I **hadn't** work**ed**.\nYou **hadn't** work**ed**.\nHe **hadn't** work**ed**.\nShe **hadn't** work**ed**.\nIt **hadn't** work**ed**.\nWe **hadn't** work**ed**.\nThey **hadn't** work**ed**."
+          - { tense: { en: Present perfect, es: Present perfect }, qh: "**Have**", qs: "I", qv: "work**ed**?", ss: "I", sh: "**have**", sv: "work**ed**.", ns: "I", nh: "**haven't**", nv: "work**ed**." }
+          - { tense: { en: Present perfect, es: Present perfect }, qh: "**Have**", qs: "you", qv: "work**ed**?", ss: "You", sh: "**have**", sv: "work**ed**.", ns: "You", nh: "**haven't**", nv: "work**ed**." }
+          - { tense: { en: Present perfect, es: Present perfect }, qh: "**Has**", qs: "he", qv: "work**ed**?", ss: "He", sh: "**has**", sv: "work**ed**.", ns: "He", nh: "**hasn't**", nv: "work**ed**." }
+          - { tense: { en: Present perfect, es: Present perfect }, qh: "**Has**", qs: "she", qv: "work**ed**?", ss: "She", sh: "**has**", sv: "work**ed**.", ns: "She", nh: "**hasn't**", nv: "work**ed**." }
+          - { tense: { en: Present perfect, es: Present perfect }, qh: "**Has**", qs: "it", qv: "work**ed**?", ss: "It", sh: "**has**", sv: "work**ed**.", ns: "It", nh: "**hasn't**", nv: "work**ed**." }
+          - { tense: { en: Present perfect, es: Present perfect }, qh: "**Have**", qs: "we", qv: "work**ed**?", ss: "We", sh: "**have**", sv: "work**ed**.", ns: "We", nh: "**haven't**", nv: "work**ed**." }
+          - { tense: { en: Present perfect, es: Present perfect }, qh: "**Have**", qs: "they", qv: "work**ed**?", ss: "They", sh: "**have**", sv: "work**ed**.", ns: "They", nh: "**haven't**", nv: "work**ed**." }
+          - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "I", qv: "work**ed**?", ss: "I", sh: "**had**", sv: "work**ed**.", ns: "I", nh: "**hadn't**", nv: "work**ed**." }
+          - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "you", qv: "work**ed**?", ss: "You", sh: "**had**", sv: "work**ed**.", ns: "You", nh: "**hadn't**", nv: "work**ed**." }
+          - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "he", qv: "work**ed**?", ss: "He", sh: "**had**", sv: "work**ed**.", ns: "He", nh: "**hadn't**", nv: "work**ed**." }
+          - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "she", qv: "work**ed**?", ss: "She", sh: "**had**", sv: "work**ed**.", ns: "She", nh: "**hadn't**", nv: "work**ed**." }
+          - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "it", qv: "work**ed**?", ss: "It", sh: "**had**", sv: "work**ed**.", ns: "It", nh: "**hadn't**", nv: "work**ed**." }
+          - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "we", qv: "work**ed**?", ss: "We", sh: "**had**", sv: "work**ed**.", ns: "We", nh: "**hadn't**", nv: "work**ed**." }
+          - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "they", qv: "work**ed**?", ss: "They", sh: "**had**", sv: "work**ed**.", ns: "They", nh: "**hadn't**", nv: "work**ed**." }
       - type: bullets
         items:
           - en: "In questions the helper goes before the subject; in negatives it takes **not**: haven't, hasn't, hadn't."

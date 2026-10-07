@@ -35,6 +35,7 @@ export function checkLanguages(topic: Topic, where: string, report: Report): voi
       if (block.type === "table") {
         block.columns.forEach((c) => {
           need(c.label, `${p}.columns.${c.key}`, scope(c, inner));
+          need(c.group, `${p}.columns.${c.key}.group`, scope(c, inner));
         });
         block.rows.forEach((row, k) => {
           const rowLangs = scope(row, inner);
@@ -42,7 +43,9 @@ export function checkLanguages(topic: Topic, where: string, report: Report): voi
         });
         for (const l of inner) {
           const shape = tableShape(block, l, topic.lang);
-          if (shape.width > 4) report(where, `${p} renders ${shape.width} columns in "${l}" (max 4)`);
+          // A slot table (merge columns) lays a sentence out word by word, so it may run to 10.
+          const max = block.columns.some((c) => c.merge === true) ? 10 : 4;
+          if (shape.width > max) report(where, `${p} renders ${shape.width} columns in "${l}" (max ${max})`);
         }
       }
       if (block.type === "errors") {
