@@ -3,7 +3,9 @@
   "title": "Level scale",
   "type": "object",
   "additionalProperties": false,
-  "required": ["levels"],
+  "required": [
+    "levels"
+  ],
   "properties": {
     "levels": {
       "description": "Levels, lowest first.",
@@ -12,18 +14,36 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["code", "name", "description", "color"],
+        "required": [
+          "code",
+          "name",
+          "description",
+          "color"
+        ],
         "properties": {
-          "code": { "type": "string", "pattern": "^[A-Z][0-9]$" },
-          "name": { "$ref": "#/definitions/localized" },
-          "description": { "description": "What a learner at this level can do.", "$ref": "#/definitions/localized" },
+          "code": {
+            "$ref": "#/definitions/level"
+          },
+          "name": {
+            "$ref": "#/definitions/localized"
+          },
+          "description": {
+            "$ref": "#/definitions/localized"
+          },
           "color": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["light", "dark"],
+            "required": [
+              "light",
+              "dark"
+            ],
             "properties": {
-              "light": { "$ref": "#/definitions/color" },
-              "dark": { "$ref": "#/definitions/color" }
+              "light": {
+                "$ref": "#/definitions/color"
+              },
+              "dark": {
+                "$ref": "#/definitions/color"
+              }
             }
           }
         }
@@ -32,10 +52,35 @@
   },
   "definitions": {
     "localized": {
+      "description": "Text in every explanation language.",
       "type": "object",
-      "minProperties": 1,
-      "additionalProperties": { "type": "string" }
+      "additionalProperties": false,
+      "required": [
+        "en",
+        "es"
+      ],
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "es": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
     },
-    "color": { "type": "string", "pattern": "^#[0-9a-f]{6}$" }
+    "color": {
+      "type": "string",
+      "pattern": "^#[0-9a-f]{6}$"
+    },
+    "level": {
+      "enum": [
+        "A0",
+        "A1",
+        "A2",
+        "B1"
+      ]
+    }
   }
 }

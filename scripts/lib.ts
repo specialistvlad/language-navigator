@@ -36,7 +36,8 @@ export const SITE = siteFile as Site;
 export const LEVEL_INFO = (levelsFile as { levels: LevelInfo[] }).levels;
 export const LEVELS: readonly Level[] = LEVEL_INFO.map((l) => l.code);
 // Explanation languages, each under its own name: { en: "English", es: "Español" }.
-export const EXPLAIN: Record<Explain, string> = Object.fromEntries(SITE.explain.map((e) => [e.code, localize(e.name, e.code)]));
+// A missing own name falls back to the code here; npm run check reports it.
+export const EXPLAIN: Record<Explain, string> = Object.fromEntries(SITE.explain.map((e) => [e.code, e.name[e.code] ?? e.code]));
 
 export const explainName = (explain: Explain): string => localize(EXPLAIN, explain);
 // A non-empty string: the test text values pass before they are shown.

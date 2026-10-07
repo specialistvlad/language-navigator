@@ -55,21 +55,10 @@ console.log("site.yaml, levels.yaml, interface.yaml");
 schemaErrors(await schema("site"), SITE, "site.yaml");
 schemaErrors(await schema("levels"), { levels: LEVEL_INFO }, "levels.yaml");
 schemaErrors(await schema("interface"), INTERFACE, "interface.yaml");
-for (const l of LEVEL_INFO) {
-  for (const e of ALL) {
-    if (!filled(l.name[e]) || !filled(l.description[e])) fail("levels.yaml", `${l.code} has no "${e}" name or description`);
-  }
-}
-for (const s of SITE.explain) {
-  for (const e of ALL) if (!filled(s.name[e])) fail("site.yaml", `${s.code} has no "${e}" name`);
-}
 if (!SITE.explain.some((e) => e.enabled)) fail("site.yaml", "no explanation language is enabled");
-for (const [key, text] of Object.entries(INTERFACE.text)) {
-  for (const e of ALL) if (!filled(text[e])) fail("interface.yaml", `${key} has no "${e}" text`);
-}
 const codes = ALL.join("|");
 const levelCodes = LEVELS.join("|");
-for (const name of ["curriculum", "concepts", "topic"]) {
+for (const name of ["site", "levels", "interface", "curriculum", "concepts", "topic"]) {
   const text = await Bun.file(join(CONTENT, "schema", `${name}.schema.json`)).text();
   const json = JSON.parse(text) as SchemaFile;
   for (const [, list] of text.matchAll(/\(((?:[A-Z][0-9]\|)+[A-Z][0-9])\)/g)) {

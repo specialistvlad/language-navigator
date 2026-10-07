@@ -3,11 +3,25 @@
   "title": "Site identity and explanation languages",
   "type": "object",
   "additionalProperties": false,
-  "required": ["name", "url", "repository", "explain"],
+  "required": [
+    "name",
+    "url",
+    "repository",
+    "explain"
+  ],
   "properties": {
-    "name": { "type": "string" },
-    "url": { "description": "Public URL, without a trailing slash.", "type": "string", "pattern": "^https://[^ ]+[^/]$" },
-    "repository": { "type": "string", "pattern": "^https://[^ ]+[^/]$" },
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "description": "Public URL, without a trailing slash.",
+      "type": "string",
+      "pattern": "^https://[^ ]+[^/]$"
+    },
+    "repository": {
+      "type": "string",
+      "pattern": "^https://[^ ]+[^/]$"
+    },
     "explain": {
       "description": "Explanation languages, in display order.",
       "type": "array",
@@ -15,16 +29,49 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["code", "enabled", "name"],
+        "required": [
+          "code",
+          "enabled",
+          "name"
+        ],
         "properties": {
-          "code": { "type": "string", "pattern": "^[a-z]{2}$" },
-          "enabled": { "description": "false keeps the language from readers; its data stays and is still checked.", "type": "boolean" },
+          "code": {
+            "$ref": "#/definitions/explain"
+          },
+          "enabled": {
+            "description": "false keeps the language from readers; its data stays and is still checked.",
+            "type": "boolean"
+          },
           "name": {
-            "description": "The language's name in every explanation language; name[code] is its own name.",
-            "type": "object",
-            "minProperties": 1,
-            "additionalProperties": { "type": "string" }
+            "$ref": "#/definitions/localized"
           }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "explain": {
+      "enum": [
+        "en",
+        "es"
+      ]
+    },
+    "localized": {
+      "description": "Text in every explanation language.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "en",
+        "es"
+      ],
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "es": {
+          "type": "string",
+          "minLength": 1
         }
       }
     }
