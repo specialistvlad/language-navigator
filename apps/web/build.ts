@@ -100,8 +100,6 @@ export async function build(o: BuildOptions): Promise<number> {
 
   // ---------- Shared pieces ----------
 
-  const learnChoices = (explain: Explain, current: string): Choice[] =>
-    curriculum.languages.map((l) => ({ label: l.name[explain], href: trackUrl(explain, l), on: l.code === current }));
   const readChoices = (explain: Explain, pathFor: (e: Explain) => string): Choice[] =>
     EXPLAINS.map((e) => ({ label: EXPLAIN[e], href: pathFor(e), on: e === explain }));
   const alternates = (pathFor: (e: Explain) => string) => EXPLAINS.map((e) => ({ lang: e, path: pathFor(e) }));
@@ -194,7 +192,6 @@ export async function build(o: BuildOptions): Promise<number> {
           alternates: alternates((e) => trackUrl(e, lang)),
           controls: controls({
             explain,
-            learn: learnChoices(explain, lang.code),
             read: readChoices(explain, (e) => trackUrl(e, lang)),
             level: true,
             sheets: sheetsChoice(false),
@@ -236,7 +233,6 @@ export async function build(o: BuildOptions): Promise<number> {
             alternates: alternates((e) => topicUrl(e, lang, ref)),
             controls: controls({
               explain,
-              learn: learnChoices(explain, lang.code),
               read: readChoices(explain, (e) => topicUrl(e, lang, ref)),
               level: true,
               view: true,
@@ -324,7 +320,7 @@ export async function build(o: BuildOptions): Promise<number> {
         ].join("\n");
 
       const sheetControls = (pathFor: (e: Explain) => string) =>
-        controls({ explain, learn: learnChoices(explain, lang.code), read: readChoices(explain, pathFor), sheets: sheetsChoice(true) });
+        controls({ explain, read: readChoices(explain, pathFor), sheets: sheetsChoice(true) });
 
       const indexHtml = (Object.keys(groups) as (keyof typeof groups)[])
         .map((g) => {

@@ -4,7 +4,6 @@ import { escapeHtml } from "./render.ts";
 
 export const UI = {
   en: {
-    learn: "Learn",
     read: "Read in",
     level: "Level",
     view: "View",
@@ -30,7 +29,6 @@ export const UI = {
     backHome: "Go to the home page",
   },
   es: {
-    learn: "Aprender",
     read: "Leer en",
     level: "Nivel",
     view: "Vista",
@@ -69,7 +67,6 @@ const linkSeg = (label: string, choices: Choice[]) =>
 
 export interface ControlsOptions {
   explain: Explain;
-  learn: Choice[];
   read: Choice[];
   level?: boolean;
   view?: boolean;
@@ -78,7 +75,7 @@ export interface ControlsOptions {
 
 export function controls(o: ControlsOptions): string {
   const t = UI[o.explain];
-  const parts = [linkSeg(t.learn, o.learn), linkSeg(t.read, o.read)];
+  const parts = [linkSeg(t.read, o.read)];
   if (o.level) parts.push(seg(t.level, LEVELS.map((l) => `<button type="button" data-set-level="${l}">${l}</button>`).join("")));
   if (o.view) {
     parts.push(
