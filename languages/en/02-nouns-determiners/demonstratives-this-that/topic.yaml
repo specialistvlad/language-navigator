@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: "This, That, These, Those", es: "Demostrativos: this, that, these, those" }
 summary:
-  en: Words that point to things near or far, one or many.
-  es: Palabras que señalan cosas cercanas o lejanas, una o varias.
+  en: "Words that point to things near or far, one or many. A learner needs this, that, these and those to show and identify things in the room or in the conversation. The page starts with an overview, then covers the forms before a noun or alone, the pronunciation of this and these, and the use. It ends with typical errors. This and these point to things near, that and those to things far. This and that go with one thing, these and those with many: this book, these books."
+  es: "Palabras que señalan cosas cercanas o lejanas, una o varias. This, that, these y those sirven para mostrar e identificar cosas en la habitación o en la conversación. La página empieza con un resumen y trata las formas delante de un sustantivo o solas, la pronunciación de this y these y el uso, y termina con los errores típicos. This y these señalan lo cercano, that y those lo lejano. This y that van con una sola cosa, these y those con varias: this book, these books. Contraste con el español: el inglés distingue dos grados (cerca y lejos) y no tiene un tercero como aquel, y el demostrativo concuerda en número con el sustantivo."
 
 sections:
   - title: { en: Overview, es: Resumen }

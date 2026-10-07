@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Sounds and IPA, es: Los sonidos y el AFI }
 summary:
-  en: The sounds of English, how to read them in IPA, and word stress.
-  es: Los sonidos del inglés, cómo leerlos en el AFI (IPA) y el acento de las palabras.
+  en: "The sounds of English, how to read them in IPA, and word stress. A learner needs it to find the pronunciation of any word in a dictionary and to say new words correctly. The page explains how IPA works, then covers the consonant sounds, the vowel sounds and word stress, and ends with typical errors. IPA gives every sound one symbol, so it shows how a word sounds, whatever its spelling. At A1 it adds word stress and the weak vowel /ə/. Learn the sounds that English has and your first language lacks, such as /θ/, /ð/ and /ɪ/ against /iː/."
+  es: "Los sonidos del inglés, cómo leerlos en el AFI (IPA) y el acento de las palabras. Sirve para saber cómo se pronuncia cualquier palabra en un diccionario y para decir palabras nuevas con corrección. La página explica cómo funciona el AFI, repasa las consonantes y las vocales, trata el acento de palabra y termina con los errores típicos. El AFI da un símbolo a cada sonido, así que muestra cómo suena una palabra, sea cual sea su ortografía. En A1 añade el acento de palabra y la vocal débil /ə/. Lo más importante son los sonidos que el español no tiene, como /ʃ/, /ɪ/ frente a /iː/ y la s seguida de consonante: en Spain se dice /speɪn/, sin e delante."
 
 sections:
   - title: { en: How IPA works, es: Cómo funciona el AFI }

@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: "Days, Months and Dates", es: "Días, meses y fechas" }
 summary:
-  en: The days of the week, the months, and how to say and write dates and years.
-  es: Los días de la semana, los meses y cómo decir y escribir fechas y años.
+  en: "The days of the week, the months, and how to say and write dates and years. A learner needs them to talk about plans, birthdays and appointments. The page covers the days, the months, dates with ordinal numbers, and years, and ends with typical errors. Days and months always start with a capital letter. British dates run day, month, year, and US dates run month, day, year. Say the day as an ordinal: the third of July."
+  es: "Los días de la semana, los meses y cómo decir y escribir fechas y años. Hacen falta para hablar de planes, cumpleaños y citas. La página recorre los días, los meses, las fechas con números ordinales y los años, y termina con los errores típicos. Los días y los meses se escriben siempre con mayúscula inicial, a diferencia del español. En el inglés británico las fechas van en el orden día, mes, año; en el estadounidense, mes, día, año. El día se dice con número ordinal: the third of July."
 
 sections:
   - title: { en: Days of the week, es: Los días de la semana }

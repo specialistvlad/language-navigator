@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Plurals, es: "El plural" }
 summary:
-  en: How nouns form the plural, how to spell and say it, and the irregular plurals.
-  es: Cómo forman el plural los sustantivos, cómo se escribe y se pronuncia, y los plurales irregulares.
+  en: "How nouns form the plural, how to spell and say it, and the irregular plurals. A learner needs plurals to talk about more than one thing. The page covers the regular plural, the spelling of -s and -es, and the three pronunciations of the -s ending. It then covers irregular plurals, nouns with the same form in singular and plural, and nouns that only have a plural, and ends with typical errors. Most nouns add -s. At A1 it adds nouns in -o and -f, the three sounds of -s, more irregular plurals and plural-only nouns. Learn the common irregular plurals by heart: children, people, men, women, feet."
+  es: "Cómo forman el plural los sustantivos, cómo se escribe y se pronuncia, y los plurales irregulares. El plural hace falta para hablar de más de una cosa. La página trata el plural regular, la ortografía de -s y -es y las tres pronunciaciones de la terminación -s. Después presenta los plurales irregulares, los sustantivos con la misma forma en singular y plural y los que solo existen en plural, y termina con los errores típicos. La mayoría de los sustantivos añaden -s. En A1 añade los sustantivos en -o y -f, los tres sonidos de -s, más plurales irregulares y los sustantivos que solo existen en plural. Contraste con el español: el adjetivo inglés no cambia en plural (two red cars). Hay que aprender de memoria los irregulares frecuentes: children, people, men, women, feet."
 
 sections:
   - title: { en: "Form: regular plurals", es: "Forma: plurales regulares" }

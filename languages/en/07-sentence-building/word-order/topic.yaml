@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Word Order, es: Orden de las palabras }
 summary:
-  en: The fixed order of subject, verb, object, place and time in an English sentence.
-  es: El orden fijo de sujeto, verbo, objeto, lugar y tiempo en una frase inglesa.
+  en: "The fixed order of subject, verb, object, place and time in an English sentence. You need it from your first sentences, because English shows meaning by position. The page opens with an overview, then covers statements, place and time, and adverbs. The thing to get right is that the subject is always present and the object comes right after the verb: I like coffee very much. Place comes before time at the end of the sentence."
+  es: "El orden fijo de sujeto, verbo, objeto, lugar y tiempo en una frase inglesa. Se necesita desde las primeras frases, porque en inglés el significado depende de la posición. La página empieza con un resumen y cubre las afirmaciones, el lugar y el tiempo, y los adverbios. Lo más importante es que el sujeto siempre aparece y el objeto va justo después del verbo: I like coffee very much. El lugar va antes que el tiempo al final de la frase. En español se puede omitir el sujeto (Hace frío) y mover más las palabras; en inglés no (It is cold)."
 
 sections:
   - title: { en: Overview, es: Resumen }
