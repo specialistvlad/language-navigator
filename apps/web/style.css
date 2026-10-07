@@ -425,7 +425,7 @@ html:is([data-page="topic"], [data-page="track"])[data-level="A2"] [data-level="
   display: none !important;
 }
 
-html[data-page="topic"][data-view="essentials"] .sections > section:is(.part, .links) { display: none; }
+html[data-page="topic"][data-view="essentials"] .sections > section.part { display: none; }
 
 /* Sidebar level badges */
 

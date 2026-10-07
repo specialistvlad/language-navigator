@@ -1,65 +1,29 @@
 // Page shell, controls and interface text for the static site.
-import { EXPLAIN, type Explain, LEVELS, SITE } from "../../scripts/lib.ts";
+import { EXPLAIN, type Explain, INTERFACE, LEVELS, SITE, say } from "../../scripts/lib.ts";
 import { escapeHtml } from "./render.ts";
 
-export const UI = {
-  en: {
-    read: "Read in",
-    level: "Level",
-    view: "View",
-    full: "Full",
-    keyPoints: "Key points",
-    onThisPage: "On this page",
-    upNext: "Up next",
-    sheets: "Cheatsheets",
-    sheet: "Cheatsheet",
-    levels: "Levels",
-    progressive: "Progressive",
-    sections: "Sections",
-    topics: "Topics",
-    track: (name: string) => `Learn ${name}`,
-    index: "Index",
-    chooseLanguage: "Choose language",
-    explained: "explained in English",
-    trackIntro: "Topics in study order. Choose your level to hide what comes later.",
-    sheetsIntro: "Level sheets hold one level; progressive sheets add the reminders of every level below.",
-    print: "Print",
-    editOn: "Edit on",
-    editTitle: "Edit this topic on GitHub",
-    upTo: "Up to",
-    written: (n: number, total: number) => `${n} of ${total} topics written`,
-    notFound: "Page not found",
-    backHome: "Go to the home page",
-  },
-  es: {
-    read: "Leer en",
-    level: "Nivel",
-    view: "Vista",
-    full: "Completo",
-    keyPoints: "Puntos clave",
-    onThisPage: "En esta página",
-    upNext: "A continuación",
-    sheets: "Chuletas",
-    sheet: "Chuleta",
-    levels: "Niveles",
-    progressive: "Progresivas",
-    sections: "Secciones",
-    topics: "Temas",
-    track: (name: string) => `Aprende ${name.toLowerCase()}`,
-    index: "Índice",
-    chooseLanguage: "Elegir idioma",
-    explained: "explicado en español",
-    trackIntro: "Temas en orden de estudio. Elige tu nivel para ocultar lo que viene después.",
-    sheetsIntro: "Las chuletas por nivel recogen un nivel; las progresivas añaden los recordatorios de los niveles anteriores.",
-    print: "Imprimir",
-    editOn: "Editar en",
-    editTitle: "Editar este tema en GitHub",
-    upTo: "Hasta",
-    written: (n: number, total: number) => `${n} de ${total} temas escritos`,
-    notFound: "Página no encontrada",
-    backHome: "Ir a la página principal",
-  },
-} as const;
+// Web-only wording: actions this app offers.
+const WEB: Record<Explain, { print: string; editOn: string; editTitle: string }> = {
+  en: { print: "Print", editOn: "Edit on", editTitle: "Edit this topic on GitHub" },
+  es: { print: "Imprimir", editOn: "Editar en", editTitle: "Editar este tema en GitHub" },
+};
+
+// Interface wording per explanation language: languages/interface.yaml plus the web-only actions.
+export const UI = Object.fromEntries(
+  Object.keys(EXPLAIN).map((e) => {
+    const text = Object.fromEntries(Object.keys(INTERFACE.text).map((key) => [key, say(key, e)]));
+    return [
+      e,
+      {
+        ...text,
+        ...WEB[e],
+        explained: say("explained", e, { name: EXPLAIN[e] }),
+        track: (name: string) => say("track", e, { name }),
+        written: (n: number, total: number) => say("written", e, { n, total }),
+      },
+    ];
+  }),
+) as Record<Explain, Record<string, string> & (typeof WEB)[Explain] & { track: (name: string) => string; written: (n: number, total: number) => string }>;
 
 export interface Choice {
   label: string;

@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Interface wording",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["text", "errorsAudience"],
+  "properties": {
+    "text": {
+      "description": "Wording by key, one string per explanation language.",
+      "type": "object",
+      "propertyNames": { "pattern": "^[a-z][A-Za-z]*$" },
+      "additionalProperties": { "$ref": "#/definitions/localized" }
+    },
+    "errorsAudience": {
+      "description": "Line above a Typical errors table: by explanation language, then by language being learned.",
+      "type": "object",
+      "additionalProperties": { "$ref": "#/definitions/localized" }
+    }
+  },
+  "definitions": {
+    "localized": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string" }
+    }
+  }
+}

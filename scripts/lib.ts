@@ -1,12 +1,13 @@
 // Shared data access: configuration, curriculum, concepts and topics.
 import { join } from "node:path";
+import interfaceFile from "../languages/interface.yaml";
 import levelsFile from "../languages/levels.yaml";
 import siteFile from "../languages/site.yaml";
 
 export const ROOT = join(import.meta.dir, "..");
 export const CONTENT = join(ROOT, "languages");
 
-// ---------- Configuration (languages/site.yaml, languages/levels.yaml) ----------
+// ---------- Configuration (languages/site.yaml, levels.yaml, interface.yaml) ----------
 
 export type Explain = string;
 export type Level = string;
@@ -36,6 +37,25 @@ export const levelRange = (range: string) => {
   return LEVELS.filter((l) => lv(l) >= lv(from) && lv(l) <= lv(to));
 };
 export const levelName = (level: Level, explain: Explain) => LEVEL_INFO.find((l) => l.code === level)?.name[explain] ?? level;
+
+export interface Interface {
+  text: Record<string, Record<Explain, string>>;
+  errorsAudience: Record<Explain, Record<Explain, string>>;
+}
+export const INTERFACE = interfaceFile as Interface;
+
+// Interface wording in an explanation language: {key} placeholders take values, {key:lower} lowercased.
+export function say(key: string, explain: Explain, values: Record<string, string | number> = {}): string {
+  const template = INTERFACE.text[key]?.[explain];
+  if (template === undefined) throw new Error(`interface.yaml has no "${key}" in "${explain}"`);
+  return template.replace(/\{(\w+)(:lower)?\}/g, (_, name: string, lower?: string) => {
+    const value = String(values[name] ?? `{${name}}`);
+    return lower ? value.toLowerCase() : value;
+  });
+}
+
+// "A and B", "A, B and C" in an explanation language.
+export const listOf = (items: string[], explain: Explain) => new Intl.ListFormat(explain, { type: "conjunction" }).format(items);
 
 // ---------- Data model (mirrors languages/schema/*.schema.json) ----------
 

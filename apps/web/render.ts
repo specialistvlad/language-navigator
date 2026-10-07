@@ -1,13 +1,18 @@
 // Markdown → HTML for guides: level badges, level attributes on rows and bullets,
 // error tables, scrollable table wrappers and links to unwritten topics.
 import MarkdownIt from "markdown-it";
-import { LEVELS } from "../../scripts/lib.ts";
+import { INTERFACE, LEVELS } from "../../scripts/lib.ts";
 
 const CODE = `(${LEVELS.join("|")})`;
 const TAG = new RegExp(`\\s*\\[${CODE}(?:-${CODE})?\\]\\s*$`);
 const BULLET_TAG = new RegExp(`^\\[${CODE}\\]\\s*`);
+// Headings and column titles the generator writes, in every explanation language (interface.yaml).
+const wording = (key: string) => Object.values(INTERFACE.text[key]);
+const ESSENTIALS = wording("essentials");
+const REMINDER = wording("reminder");
+const LEVEL_COLUMN = wording("levelColumn");
 
-export type SectionKind = "essentials" | "reminder" | "links" | "body";
+export type SectionKind = "essentials" | "reminder" | "body";
 
 export interface DocSection {
   heading: string;
@@ -43,13 +48,7 @@ export function splitDoc(text: string): Doc {
       const heading = line.slice(3);
       const title = heading.replace(TAG, "");
       const m = heading.match(TAG);
-      const kind: SectionKind = /^(Essentials|Lo esencial)$/.test(title)
-        ? "essentials"
-        : /^(Reminder|Recordatorio)$/.test(title)
-          ? "reminder"
-          : /^(See also|Ver también)$/.test(title)
-            ? "links"
-            : "body";
+      const kind: SectionKind = ESSENTIALS.includes(title) ? "essentials" : REMINDER.includes(title) ? "reminder" : "body";
       current = { heading, title, from: m ? m[1] : null, to: m ? (m[2] ?? m[1]) : null, kind, lines: [] };
       sections.push(current);
     } else if (current) current.lines.push(line);
@@ -84,7 +83,7 @@ export function createRenderer(): MarkdownIt {
         }
       }
 
-      // Tables: ✗ tables get the errors class; a Level / Nivel column tags each row.
+      // Tables: ✗ tables get the errors class; a level column tags each row.
       if (token.type === "table_open") {
         const heads: string[] = [];
         let j = i;
@@ -93,7 +92,7 @@ export function createRenderer(): MarkdownIt {
           j++;
         }
         if (heads[0] === "✗") token.attrJoin("class", "errors");
-        const col = heads.findIndex((h) => h === "Level" || h === "Nivel");
+        const col = heads.findIndex((h) => LEVEL_COLUMN.includes(h));
         if (col >= 0) {
           let row: (typeof tokens)[number] | null = null;
           let cell = -1;

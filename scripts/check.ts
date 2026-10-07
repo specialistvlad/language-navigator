@@ -7,6 +7,7 @@ import {
   CONTENT,
   EXPLAIN,
   type Explain,
+  INTERFACE,
   type Item,
   LEVEL_INFO,
   LEVELS,
@@ -40,9 +41,13 @@ function schemaErrors(validate: ValidateFunction, data: unknown, where: string) 
 
 // Configuration: each file against its schema, and every data schema lists exactly the configured
 // levels and explanation languages.
-console.log("site.yaml, levels.yaml");
+console.log("site.yaml, levels.yaml, interface.yaml");
 schemaErrors(await schema("site"), SITE, "site.yaml");
 schemaErrors(await schema("levels"), { levels: LEVEL_INFO }, "levels.yaml");
+schemaErrors(await schema("interface"), INTERFACE, "interface.yaml");
+for (const l of LEVEL_INFO) for (const e of ALL) if (!l.name[e] || !l.description[e]) fail("levels.yaml", `${l.code} has no "${e}" name or description`);
+for (const s of SITE.explain) for (const e of ALL) if (!s.name[e]) fail("site.yaml", `${s.code} has no "${e}" name`);
+for (const [key, text] of Object.entries(INTERFACE.text)) for (const e of ALL) if (!text[e]) fail("interface.yaml", `${key} has no "${e}" text`);
 const codes = ALL.join("|");
 const levelCodes = LEVELS.join("|");
 for (const name of ["curriculum", "concepts", "topic"]) {

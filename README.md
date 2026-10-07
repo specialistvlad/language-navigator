@@ -43,6 +43,7 @@ language-navigator/
 │   ├── CONVENTIONS.md         rules for the data
 │   ├── site.yaml              product name, URLs, explanation languages
 │   ├── levels.yaml            level scale: names, descriptions, colours
+│   ├── interface.yaml         interface wording every app shares
 │   ├── curriculum.yaml        every planned topic, in study order
 │   ├── concepts.yaml          concept keys that pair topics across languages
 │   ├── schema/                JSON Schemas

@@ -23,6 +23,7 @@ Structured YAML is the source; Markdown and HTML are generated from it.
 languages/
 ├── site.yaml                       product name, URLs, explanation languages
 ├── levels.yaml                     level scale: names, descriptions, colours
+├── interface.yaml                  interface wording every app shares
 ├── curriculum.yaml                 every planned topic, in study order
 ├── concepts.yaml                   concept keys that pair topics across languages
 ├── schema/                         JSON Schemas for every file type
@@ -35,6 +36,7 @@ languages/
 |---|---|---|
 | `site.yaml` | `schema/site.schema.json` | product name, URLs, explanation languages and their names |
 | `levels.yaml` | `schema/levels.schema.json` | the level scale: code, name, description, colour per level |
+| `interface.yaml` | `schema/interface.schema.json` | interface wording by key, per explanation language; block headings and column titles the generator writes |
 | `curriculum.yaml` | `schema/curriculum.schema.json` | languages → sections → topics (slug, levels, optional title) |
 | `concepts.yaml` | `schema/concepts.schema.json` | concept key → title, description |
 | `{lang}/{NN-section}/{topic}/topic.yaml` | `schema/topic.schema.json` | one topic, all explanation languages |

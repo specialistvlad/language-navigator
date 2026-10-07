@@ -11,20 +11,12 @@ import {
   type TableBlock,
   type Text,
   type TopicRef,
+  EXPLAIN,
   guidePath,
+  INTERFACE,
   LEVELS,
+  say,
 } from "./lib.ts";
-
-const LABELS: Record<Explain, Record<string, string>> = {
-  en: { level: "Level", rule: "Rule", essentials: "Essentials", reminder: "Reminder", translation: "English" },
-  es: { level: "Nivel", rule: "Regla", essentials: "Lo esencial", reminder: "Recordatorio", translation: "Español" },
-};
-
-// Audience line of a Typical errors table: AUDIENCE[explain][lang being learned].
-const AUDIENCE: Record<Explain, Partial<Record<Explain, string>>> = {
-  en: { es: "Errors common among English speakers:" },
-  es: { en: "Errores frecuentes de hispanohablantes:" },
-};
 
 // Turns a topic ID into a link target; null marks a topic without a page yet.
 export type LinkFn = (target: TopicRef | undefined, explain: Explain, from: TopicRef) => string | null;
@@ -91,8 +83,8 @@ export function tableShape(block: TableBlock, explain: Explain, lang: Explain) {
 function renderTable(block: TableBlock, ctx: Ctx): string {
   const shape = tableShape(block, ctx.explain, ctx.ref.lang);
   const header = shape.columns.map((c) => text(c.label, ctx));
-  if (shape.translation) header.push(LABELS[ctx.explain].translation);
-  if (shape.level) header.push(LABELS[ctx.explain].level);
+  if (shape.translation) header.push(EXPLAIN[ctx.explain]);
+  if (shape.level) header.push(say("levelColumn", ctx.explain));
   const lines = [`| ${header.map(cellEscape).join(" | ")} |`, `|${header.map(() => "---").join("|")}|`];
   for (const row of shape.rows) {
     const cells = shape.columns.map((c) => renderCell(row[c.key], ctx));
@@ -107,13 +99,13 @@ function renderTable(block: TableBlock, ctx: Ctx): string {
 function renderErrors(block: ErrorsBlock, ctx: Ctx): string {
   const rows = block.rows.filter((r) => shows(r, ctx.explain));
   const withRule = rows.some((r) => r.rule);
-  const header = ["✗", "✓", ...(withRule ? [LABELS[ctx.explain].rule] : [])];
+  const header = ["✗", "✓", ...(withRule ? [say("ruleColumn", ctx.explain)] : [])];
   const lines = [`| ${header.join(" | ")} |`, `|${header.map(() => "---").join("|")}|`];
   for (const row of rows) {
     const cells = [row.wrong, row.right, ...(withRule ? [text(row.rule, ctx)] : [])];
     lines.push(`| ${cells.map(cellEscape).join(" | ")} |`);
   }
-  const audience = block.audience && needsTranslation(ctx) ? AUDIENCE[ctx.explain][ctx.ref.lang] : undefined;
+  const audience = block.audience && needsTranslation(ctx) ? INTERFACE.errorsAudience[ctx.explain]?.[ctx.ref.lang] : undefined;
   return (audience ? `${audience}\n\n` : "") + lines.join("\n");
 }
 
@@ -138,8 +130,6 @@ const renderContent = (blocks: Block[], ctx: Ctx) =>
     .map((b) => renderBlock(b, ctx))
     .filter((b): b is string => !!b)
     .join("\n\n");
-
-export const LEVEL_HEADINGS = { essentials: { en: "Essentials", es: "Lo esencial" }, reminder: { en: "Reminder", es: "Recordatorio" } } as const;
 
 // Essentials of one level as Markdown; parts get headings of the given depth.
 export function essentialsMarkdown(ref: TopicRef, explain: Explain, refs: TopicRef[], level: string, depth = 3, link: LinkFn = markdownLinks): string | null {
@@ -166,7 +156,6 @@ export function renderGuide(ref: TopicRef, explain: Explain, refs: TopicRef[], l
   const topic = ref.topic;
   if (!topic) throw new Error(`No topic data for ${ref.id}`);
   const ctx: Ctx = { ref, explain, refs, link };
-  const L = LABELS[explain];
   const title = topic.title[explain] ?? "";
   const out: string[] = [];
 
@@ -199,9 +188,9 @@ export function renderGuide(ref: TopicRef, explain: Explain, refs: TopicRef[], l
 
   for (const level of LEVELS) {
     const essentials = essentialsMarkdown(ref, explain, refs, level, 3, link);
-    if (essentials) out.push(`## ${L.essentials} [${level}]`, essentials);
+    if (essentials) out.push(`## ${say("essentials", explain)} [${level}]`, essentials);
     const reminder = reminderMarkdown(ref, explain, refs, level, link);
-    if (reminder) out.push(`## ${L.reminder} [${level}]`, reminder);
+    if (reminder) out.push(`## ${say("reminder", explain)} [${level}]`, reminder);
   }
 
   return out.filter((block) => block !== "").join("\n\n") + "\n";

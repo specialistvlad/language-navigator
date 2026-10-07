@@ -11,7 +11,9 @@ import {
   LEVELS,
   levelName,
   levelRange,
+  listOf,
   lv,
+  say,
   SITE,
   loadCurriculum,
   loadTopics,
@@ -19,7 +21,7 @@ import {
   topicTitle,
   type TopicRef,
 } from "../../scripts/lib.ts";
-import { essentialsMarkdown, LEVEL_HEADINGS, type LinkFn, reminderMarkdown, renderGuide } from "../../scripts/markdown.ts";
+import { essentialsMarkdown, type LinkFn, reminderMarkdown, renderGuide } from "../../scripts/markdown.ts";
 import { type Choice, controls, page, UI } from "./layout.ts";
 import { createRenderer, escapeHtml, levelBadge, splitDoc } from "./render.ts";
 import {
@@ -157,6 +159,15 @@ export async function build(o: BuildOptions): Promise<number> {
 
   // ---------- Home ----------
 
+  // The home page speaks the first explanation language and names every language in it.
+  const home = EXPLAINS[0];
+  const homeValues = {
+    site: SITE.name,
+    languages: listOf(curriculum.languages.map((l) => l.name[home]), home),
+    from: LEVELS[0],
+    to: LEVELS.at(-1)!,
+    explain: listOf(SITE.explain.map((e) => say("explainedIn", home, { name: e.name[home] })), home),
+  };
   const cards = curriculum.languages
     .map((lang) => {
       const total = refs.filter((r) => r.lang === lang.code).length;
@@ -165,18 +176,18 @@ export async function build(o: BuildOptions): Promise<number> {
         (e) =>
           `<a class="track-link" href="${trackUrl(e, lang)}" hreflang="${e}"><strong>${escapeHtml(UI[e].track(lang.name[e]))}</strong><span>${escapeHtml(UI[e].explained)}</span></a>`,
       ).join("");
-      return `<section class="card"><h2>${escapeHtml(lang.name.en)} · ${escapeHtml(lang.name.es)}</h2><p class="muted">${UI.en.written(written, total)}</p>${links}</section>`;
+      return `<section class="card"><h2>${EXPLAINS.map((e) => escapeHtml(lang.name[e])).join(" · ")}</h2><p class="muted">${UI[home].written(written, total)}</p>${links}</section>`;
     })
     .join("");
   add(
     homeUrl(),
     page({
       kind: "home",
-      lang: "en",
-      title: `${SITE.name} — English and Spanish, A0 to B1`,
-      description: "Reference guides and cheatsheets for learners of English and Spanish from A0 to B1, explained in English and in Spanish.",
+      lang: home,
+      title: say("homeTitle", home, homeValues),
+      description: say("homeDescription", home, homeValues),
       path: homeUrl(),
-      main: `<article class="doc home"><h1>${escapeHtml(SITE.name)}</h1><blockquote><p>English and Spanish, A0–B1, explained in English and in Spanish.</p></blockquote><div class="cards">${cards}</div></article>`,
+      main: `<article class="doc home"><h1>${escapeHtml(SITE.name)}</h1><blockquote><p>${escapeHtml(say("tagline", home, homeValues))}</p></blockquote><div class="cards">${cards}</div></article>`,
       dev: o.dev,
       siteUrl: o.siteUrl,
     }),
@@ -250,7 +261,7 @@ export async function build(o: BuildOptions): Promise<number> {
         );
         const sections = doc.sections
           .map((s) => {
-            const cls = s.kind === "essentials" || s.kind === "reminder" ? `block ${s.kind}` : s.kind === "links" ? "links" : "part";
+            const cls = s.kind === "body" ? "part" : `block ${s.kind}`;
             const level = s.from ? ` data-level="${s.from}"` : "";
             const id = idOf.has(s) ? ` id="${idOf.get(s)}"` : "";
             return `<section class="${cls}"${id}${level}>${md.render(`## ${s.heading}\n${s.lines.join("\n")}`)}</section>`;
@@ -316,7 +327,7 @@ export async function build(o: BuildOptions): Promise<number> {
                 p.kind === "essentials"
                   ? essentialsMarkdown(ref, explain, refs, p.level, 5, link)
                   : reminderMarkdown(ref, explain, refs, p.level, link);
-              return body ? `#### ${LEVEL_HEADINGS[p.kind][explain]} [${p.level}]\n\n${body}` : null;
+              return body ? `#### ${say(p.kind, explain)} [${p.level}]\n\n${body}` : null;
             })
             .filter((p): p is string => !!p);
           if (!parts.length) continue;
@@ -432,11 +443,11 @@ export async function build(o: BuildOptions): Promise<number> {
     "/404.html",
     page({
       kind: "404",
-      lang: "en",
-      title: `Page not found — ${SITE.name}`,
-      description: UI.en.notFound,
+      lang: home,
+      title: `${UI[home].notFound} — ${SITE.name}`,
+      description: UI[home].notFound,
       path: "/404.html",
-      main: `<article class="doc"><h1>${UI.en.notFound} · ${UI.es.notFound}</h1><p><a href="/">${UI.en.backHome}</a> · <a href="/">${UI.es.backHome}</a></p></article>`,
+      main: `<article class="doc"><h1>${EXPLAINS.map((e) => UI[e].notFound).join(" · ")}</h1><p>${EXPLAINS.map((e) => `<a href="/">${UI[e].backHome}</a>`).join(" · ")}</p></article>`,
       dev: o.dev,
       siteUrl: o.siteUrl,
     }),
