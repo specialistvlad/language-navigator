@@ -1,0 +1,205 @@
+# yaml-language-server: $schema=../../../schema/topic.schema.json
+id: en.tenses.past-perfect
+lang: en
+kind: grammar
+levels: [B1]
+tags: [verbs, tenses, past, perfect]
+concepts: [past-perfect]
+related: [en.tenses.past-simple, en.tenses.present-perfect, en.tenses.past-continuous, en.tenses.tense-map, en.verbs-core.irregular-verbs-table]
+status: { en: draft, es: draft }
+
+title: { en: Past Perfect, es: Pluscuamperfecto (past perfect) }
+summary:
+  en: An action that happened before another action or time in the past.
+  es: Una acción que ocurrió antes de otra acción o de un momento del pasado.
+
+sections:
+  - title: { en: Overview, es: Resumen }
+    level: B1
+    content:
+      - type: table
+        columns:
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { form: { en: Affirmative, es: Afirmativa }, example: "When I arrived, the film **had started**.", tr: { es: "Cuando llegué, la película había empezado." } }
+          - { form: { en: Negative, es: Negativa }, example: "She **hadn't eaten** all day.", tr: { es: No había comido en todo el día. } }
+          - { form: { en: Question, es: Pregunta }, example: "**Had** they **left** by then?", tr: { es: "¿Ya se habían ido para entonces?" } }
+          - { form: { en: Short answer, es: Respuesta corta }, example: "Yes, they **had**. / No, they **hadn't**.", tr: { es: Sí. / No. } }
+      - type: bullets
+        items:
+          - en: "Form: **had + past participle**, the same for every person."
+            es: "Forma: **had + participio pasado**, igual para todas las personas."
+          - for: [es]
+            text:
+              es: "Corresponde al pluscuamperfecto español: *había salido* = I **had left**."
+
+  - title: { en: "Form: affirmative", es: "Forma: afirmativa" }
+    level: B1
+    content:
+      - type: table
+        columns:
+          - { key: subject, label: { en: Subject, es: Sujeto } }
+          - { key: aux, label: { en: Auxiliary + participle, es: Auxiliar + participio } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { subject: I / you / he / she / it / we / they, aux: had + V-ed, example: "She **had finished** before me.", tr: { es: Había terminado antes que yo. } }
+      - type: bullets
+        items:
+          - en: "Contraction: I**'d**, she**'d**, they**'d**. Speech and messages use it."
+            es: "Contracción: I**'d**, she**'d**, they**'d**. Se usa en conversación y mensajes."
+          - en: "Regular verbs take -ed; irregular participles are in the [Irregular verbs table](id:en.verbs-core.irregular-verbs-table)."
+            es: "Los regulares llevan -ed; los participios irregulares están en la [Tabla de verbos irregulares](id:en.verbs-core.irregular-verbs-table)."
+
+  - title: { en: "Form: negative", es: "Forma: negativa" }
+    level: B1
+    content:
+      - type: table
+        columns:
+          - { key: subject, label: { en: Subject, es: Sujeto } }
+          - { key: aux, label: { en: Auxiliary + participle, es: Auxiliar + participio } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { subject: I / you / he / she / it / we / they, aux: hadn't + V-ed, example: "We **hadn't booked** a table.", tr: { es: No habíamos reservado mesa. } }
+      - type: bullets
+        items:
+          - en: "**never** replaces **not**: I **had never seen** the sea before."
+            es: "**never** sustituye a **not**: I **had never seen** the sea before."
+
+  - title: { en: "Form: questions and short answers", es: "Forma: preguntas y respuestas cortas" }
+    level: B1
+    content:
+      - type: table
+        columns:
+          - { key: question, label: { en: Question, es: Pregunta } }
+          - { key: answer, label: { en: Short answer, es: Respuesta corta } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { question: Had + subject + V-ed?, answer: "Yes, he **had**. / No, he **hadn't**.", example: "**Had** he **gone** home?", tr: { es: "¿Se había ido a casa?" } }
+      - type: bullets
+        items:
+          - en: "A question starts with **had**: auxiliary + subject + participle."
+            es: "La pregunta empieza con **had**: auxiliar + sujeto + participio."
+          - en: "Wh-questions put the wh-word first: What **had** you **done**?"
+            es: "Con wh- la palabra interrogativa va primero: What **had** you **done**?"
+
+  - title: { en: Use, es: Uso }
+    level: B1
+    content:
+      - type: table
+        columns:
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { use: { en: "An action before another past action", es: "Una acción antes de otra acción pasada" }, example: "When I got home, she **had** already **cooked**.", tr: { es: "Cuando llegué a casa, ella ya había cocinado." } }
+          - { use: { en: "An action before a past time", es: "Una acción antes de un momento del pasado" }, example: "By 8 o'clock he **had left**.", tr: { es: A las 8 ya se había ido. } }
+          - { use: { en: "The reason for a past situation", es: "La causa de una situación pasada" }, example: "He was tired. He **had worked** all night.", tr: { es: Estaba cansado. Había trabajado toda la noche. } }
+          - { use: { en: "Experience up to a past moment", es: "Experiencia hasta un momento del pasado" }, example: "I **had never flown** before that trip.", tr: { es: No había volado nunca antes de ese viaje. } }
+      - type: bullets
+        items:
+          - en: "The past perfect looks back from a point in the past; the story itself uses the past simple."
+            es: "El past perfect mira atrás desde un punto del pasado; la historia en sí va en past simple."
+
+  - title: { en: Signal words, es: Palabras clave }
+    level: B1
+    content:
+      - type: table
+        columns:
+          - { key: word, label: { en: Word, es: Palabra } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { word: when, example: "When we arrived, the bus **had gone**.", tr: { es: "Cuando llegamos, el autobús se había ido." } }
+          - { word: after, example: "After she **had eaten**, she went out.", tr: { es: "Después de haber comido, salió." } }
+          - { word: before, example: "He left before I **had finished**.", tr: { es: Se fue antes de que yo terminara. } }
+          - { word: by the time, example: "By the time I got there, it **had closed**.", tr: { es: "Para cuando llegué, ya había cerrado." } }
+          - { word: already / just, example: "I'd **already** seen it.", tr: { es: Ya la había visto. } }
+          - { word: never ... before, example: "I'**d never** met her **before**.", tr: { es: No la había conocido antes. } }
+      - type: bullets
+        items:
+          - en: "**already**, **just** and **never** go between **had** and the participle."
+            es: "**already**, **just** y **never** van entre **had** y el participio."
+
+  - title: { en: "Compare: past perfect and past simple", es: "Comparación: past perfect y past simple" }
+    level: B1
+    content:
+      - type: table
+        columns:
+          - { key: perfect, label: Past perfect }
+          - { key: simple, label: Past simple }
+        rows:
+          - { perfect: { en: "the earlier action", es: "la acción anterior" }, simple: { en: "the later action, or a story in order", es: "la acción posterior, o una historia en orden" } }
+          - { perfect: { ex: "When I arrived, the film **had started**.", tr: { es: "Cuando llegué, la película ya había empezado." } }, simple: { ex: "When I arrived, the film **started**.", tr: { es: "Cuando llegué, empezó la película." } } }
+          - { perfect: { ex: "She **had eaten** and then she went out.", tr: { es: Había comido y luego salió. } }, simple: { ex: "She **ate** and then she **went** out.", tr: { es: Comió y luego salió. } } }
+      - type: bullets
+        items:
+          - en: "Events told in the order they happen take the past simple only."
+            es: "Los hechos contados en el orden en que ocurren llevan solo past simple."
+          - en: "With **after** and **before** the order is clear, so the past simple is common: After she **left**, I slept."
+            es: "Con **after** y **before** el orden es claro, y el past simple es frecuente: After she **left**, I slept."
+          - en: "See [Past Simple](id:en.tenses.past-simple)."
+            es: "Ver [Pasado simple](id:en.tenses.past-simple)."
+
+  - title: { en: Typical errors, es: Errores típicos }
+    level: B1
+    content:
+      - type: errors
+        audience: true
+        rows:
+          - { wrong: "When I arrived, the film already started.", right: "When I arrived, the film **had** already **started**.", rule: { en: "earlier action → had + participle", es: "acción anterior → had + participio" } }
+          - { for: [es], wrong: I didn't know that she left., right: "I didn't know that she **had left**.", rule: { es: "el pluscuamperfecto español (*se había ido*) pide had + participio" } }
+          - { for: [en], wrong: She had went home., right: "She had **gone** home.", rule: { en: "had + past participle, not the past simple form" } }
+          - { for: [en], wrong: Had you saw him?, right: "Had you **seen** him?", rule: { en: "after had use the past participle" } }
+          - { wrong: "After I had finished, I had gone home.", right: "After I had finished, I **went** home.", rule: { en: "the later action takes the past simple", es: "la acción posterior lleva past simple" } }
+          - { for: [es], wrong: I hadn't never been there., right: "I **had never** been there.", rule: { es: "never ya es negativo; had never + participio" } }
+          - { wrong: "By the time we got there, the shop closed.", right: "By the time we got there, the shop **had closed**.", rule: { en: "by the time + earlier action → past perfect", es: "by the time + acción anterior → past perfect" } }
+
+essentials:
+  - level: B1
+    parts:
+      - title: { en: Form, es: Forma }
+        content:
+          - type: table
+            columns:
+              - { key: form, label: { en: Form, es: Forma } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { form: +, example: "She **had left**." }
+              - { form: −, example: "She **hadn't left**." }
+              - { form: "?", example: "**Had** she **left**?" }
+              - { form: { en: Short answer, es: Respuesta corta }, example: "Yes, she **had**. / No, she **hadn't**." }
+      - title: { en: Key rules, es: Reglas clave }
+        content:
+          - type: bullets
+            items:
+              - en: "had + **past participle**, the same for every person; contraction **'d**."
+                es: "had + **participio pasado**, igual para todas las personas; contracción **'d**."
+              - en: "**already**, **just**, **never** go between had and the participle."
+                es: "**already**, **just**, **never** van entre had y el participio."
+              - en: "Events in order of happening take the past simple only."
+                es: "Los hechos en orden cronológico llevan solo past simple."
+      - title: { en: Use, es: Uso }
+        content:
+          - type: table
+            columns:
+              - { key: use, label: { en: Use, es: Uso } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { use: { en: "before another past action", es: "antes de otra acción pasada" }, example: "When I got home, she **had** already **cooked**.", tr: { es: "Cuando llegué a casa, ella ya había cocinado." } }
+              - { use: { en: "before a past time", es: "antes de un momento del pasado" }, example: "By 8 o'clock he **had left**.", tr: { es: A las 8 ya se había ido. } }
+              - { use: { en: "reason for a past situation", es: "causa de una situación pasada" }, example: "He **had worked** all night.", tr: { es: Había trabajado toda la noche. } }
+      - title: { en: Top errors, es: Errores principales }
+        content:
+          - type: errors
+            rows:
+              - { wrong: "When I arrived, the film already started.", right: "When I arrived, the film **had** already **started**." }
+              - { for: [es], wrong: I didn't know that she left., right: "I didn't know that she **had left**." }
+              - { for: [en], wrong: She had went home., right: "She had **gone** home." }
+              - { wrong: "After I had finished, I had gone home.", right: "After I had finished, I **went** home." }
+
+reminders:
+  - level: B1
+    items:
+      - en: "The earlier action takes **had + participle**; the later action takes the past simple."
+        es: "La acción anterior lleva **had + participio**; la posterior lleva past simple."
+      - en: "had + past participle: She had **gone**, not She had went."
+        es: "had + participio: She had **gone**, no She had went."

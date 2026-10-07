@@ -1,0 +1,244 @@
+# yaml-language-server: $schema=../../../schema/topic.schema.json
+id: en.adjectives-adverbs.adverbs-frequency-manner
+lang: en
+kind: grammar
+levels: [A1, A2]
+tags: [adverbs, frequency, manner]
+concepts: [adverbs]
+related: [en.tenses.present-simple, en.adjectives-adverbs.adjective-order, en.verbs-core.to-be, en.sentence-building.word-order]
+status: { en: draft, es: draft }
+
+title: { en: "Adverbs of frequency and manner", es: "Adverbios de frecuencia y modo" }
+summary:
+  en: "How often things happen (always, never) and how they happen (slowly, well)."
+  es: "Con qué frecuencia ocurren las cosas (always, never) y cómo ocurren (slowly, well)."
+
+sections:
+  - title: { en: Overview, es: Resumen }
+    level: A1-A2
+    content:
+      - type: table
+        columns:
+          - { key: type, label: { en: Type, es: Tipo } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { type: { en: "frequency: how often", es: "frecuencia: con qué frecuencia" }, example: "I **always** walk to work.", tr: { es: Siempre voy andando al trabajo. } }
+          - { level: A2, type: { en: "manner: how", es: "modo: cómo" }, example: "She drives **carefully**.", tr: { es: Conduce con cuidado. } }
+
+  - title: { en: "Form: frequency adverbs", es: "Forma: adverbios de frecuencia" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: adverb, label: { en: Adverb, es: Adverbio } }
+          - { key: often, label: { en: How often, es: Frecuencia } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { adverb: always, often: 100%, example: "I **always** walk to work.", tr: { es: siempre } }
+          - { adverb: usually, often: ≈ 90%, example: "She **usually** has toast.", tr: { es: normalmente } }
+          - { adverb: often, often: ≈ 70%, example: "We **often** eat out.", tr: { es: a menudo } }
+          - { adverb: sometimes, often: ≈ 50%, example: "They **sometimes** call me.", tr: { es: a veces } }
+          - { adverb: rarely, often: ≈ 10%, example: "He **rarely** drives.", tr: { es: rara vez } }
+          - { adverb: never, often: 0%, example: "I **never** drink coffee.", tr: { es: nunca } }
+      - type: bullets
+        items:
+          - level: A2
+            text:
+              en: "**hardly ever** (≈ 5%) is close to never:"
+              es: "**hardly ever** (≈ 5%) equivale casi a never:"
+            ex: "We **hardly ever** go out."
+            tr: { es: Casi nunca salimos. }
+          - { for: [es], text: { es: "**never** ya es negativo: *no bebo nunca café* → I **never** drink coffee." } }
+
+  - title: { en: "Form: position of frequency adverbs", es: "Forma: posición de los adverbios de frecuencia" }
+    level: A1-A2
+    content:
+      - type: table
+        columns:
+          - { key: position, label: { en: Position, es: Posición } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { level: A1, position: { en: "before the main verb", es: "antes del verbo principal" }, example: "I **often** walk.", tr: { es: A menudo voy andando. } }
+          - { level: A1, position: { en: "after be", es: "después de be" }, example: "She is **always** late.", tr: { es: Siempre llega tarde. } }
+          - { level: A2, position: { en: "between auxiliary and main verb", es: "entre el auxiliar y el verbo principal" }, example: "I can **never** find my keys.", tr: { es: Nunca encuentro las llaves. } }
+          - { level: A2, position: { en: "after don't / doesn't", es: "después de don't / doesn't" }, example: "He doesn't **always** call.", tr: { es: No siempre llama. } }
+      - type: bullets
+        items:
+          - text:
+              en: "**sometimes** also goes at the start:"
+              es: "**sometimes** también va al principio:"
+            ex: "**Sometimes** I work from home."
+            tr: { es: A veces trabajo desde casa. }
+          - { for: [es], text: { es: "El adverbio no va entre el verbo y su objeto: *Siempre como pan* → I **always** eat bread." } }
+
+  - title: { en: "Form: how often?", es: "Forma: ¿con qué frecuencia?" }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: question, label: { en: Question, es: Pregunta } }
+          - { key: answer, label: { en: Answer, es: Respuesta } }
+        rows:
+          - { question: "How often do you swim?", answer: "I swim **every day**.", tr: { es: "¿Con qué frecuencia nadas? / Nado todos los días." } }
+          - { question: "How often does she cook?", answer: "She cooks **once a week**.", tr: { es: "¿Con qué frecuencia cocina? / Cocina una vez a la semana." } }
+          - { question: "How often do they visit you?", answer: "They visit **twice a month**.", tr: { es: "¿Con qué frecuencia os visitan? / Nos visitan dos veces al mes." } }
+      - type: bullets
+        items:
+          - en: "Frequency expressions go at the end: every day, once a week, three times a year."
+            es: "Las expresiones de frecuencia van al final: every day, once a week, three times a year."
+          - { for: [es], text: { es: "*Una vez **por** semana* → once **a** week." } }
+
+  - title: { en: "Form: manner adverbs", es: "Forma: adverbios de modo" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: adjective, label: { en: Adjective, es: Adjetivo } }
+          - { key: adverb, label: { en: Adverb, es: Adverbio } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { adjective: slow, adverb: slowly, example: "He walks **slowly**.", tr: { es: Camina despacio. } }
+          - { adjective: careful, adverb: carefully, example: "Drive **carefully**.", tr: { es: Conduce con cuidado. } }
+          - { adjective: quiet, adverb: quietly, example: "They talk **quietly**.", tr: { es: Hablan en voz baja. } }
+      - type: bullets
+        items:
+          - en: "A manner adverb says how someone does something. Most are adjective + **-ly**."
+            es: "El adverbio de modo dice cómo se hace algo. La mayoría son adjetivo + **-ly**."
+          - { for: [es], text: { es: "-ly corresponde a *-mente*: *lentamente* → slow**ly**." } }
+
+  - title: { en: "Spelling: -ly", es: "Ortografía: -ly" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: ending, label: { en: Ending, es: Terminación } }
+          - { key: rule, label: { en: Rule, es: Regla } }
+          - { key: examples, label: { en: Examples, es: Ejemplos } }
+        rows:
+          - { ending: { en: consonant + y, es: consonante + y }, rule: "y → ily", examples: "happy → happily / easy → easily" }
+          - { ending: "-le", rule: "-le → ly", examples: "simple → simply / terrible → terribly" }
+          - { ending: "-ic", rule: "+ ally", examples: "basic → basically" }
+          - { ending: "-ue", rule: "-ue → uly", examples: "true → truly" }
+
+  - title: { en: "Form: irregular manner adverbs", es: "Forma: adverbios de modo irregulares" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: adjective, label: { en: Adjective, es: Adjetivo } }
+          - { key: adverb, label: { en: Adverb, es: Adverbio } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { adjective: good, adverb: well, example: "She sings **well**.", tr: { es: Canta bien. } }
+          - { adjective: fast, adverb: fast, example: "He runs **fast**.", tr: { es: Corre rápido. } }
+          - { adjective: hard, adverb: hard, example: "They work **hard**.", tr: { es: Trabajan duro. } }
+          - { adjective: late, adverb: late, example: "I arrived **late**.", tr: { es: Llegué tarde. } }
+          - { adjective: early, adverb: early, example: "We got up **early**.", tr: { es: Nos levantamos temprano. } }
+      - type: bullets
+        items:
+          - en: "**hardly** means almost not, and **lately** means recently: She **hardly** speaks."
+            es: "**hardly** significa casi no y **lately** significa últimamente: She **hardly** speaks."
+
+  - title: { en: "Form: position of manner adverbs", es: "Forma: posición de los adverbios de modo" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: position, label: { en: Position, es: Posición } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { position: { en: "after the verb", es: "después del verbo" }, example: "She sings **beautifully**.", tr: { es: Canta de maravilla. } }
+          - { position: { en: "after the object", es: "después del objeto" }, example: "He opened the door **slowly**.", tr: { es: Abrió la puerta despacio. } }
+      - type: bullets
+        items:
+          - { for: [es], text: { es: "*Habla bien inglés* → She speaks English **well**: el objeto va pegado al verbo." } }
+
+  - title: { en: "Compare: good and well", es: "Comparación: good y well" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: good, label: { en: "good (adjective)", es: "good (adjetivo)" } }
+          - { key: well, label: { en: "well (adverb)", es: "well (adverbio)" } }
+        rows:
+          - { good: { en: "describes a noun", es: "describe un sustantivo" }, well: { en: "describes a verb", es: "describe un verbo" } }
+          - { good: { ex: "She is a **good** singer.", tr: { es: Es una buena cantante. } }, well: { ex: "She sings **well**.", tr: { es: Canta bien. } } }
+          - { good: { ex: "The food is **good**.", tr: { es: La comida está buena. } }, well: { ex: "He speaks English **well**.", tr: { es: Habla bien inglés. } } }
+
+  - title: { en: Typical errors, es: Errores típicos }
+    level: A1-A2
+    content:
+      - type: errors
+        audience: true
+        rows:
+          - { for: [es], wrong: I go always to school., right: "I **always** go to school.", rule: { es: "el adverbio va antes del verbo" } }
+          - { for: [es], wrong: I always am tired., right: "I am **always** tired.", rule: { es: "el adverbio va después de be" } }
+          - { for: [es], wrong: I don't never drink coffee., right: "I **never** drink coffee.", rule: { es: "never ya es negativo: sin don't" } }
+          - { for: [es], wrong: How much often do you swim?, right: "**How often** do you swim?", rule: { es: "*¿con qué frecuencia?* = How often" } }
+          - { for: [es], wrong: I swim every days., right: "I swim **every day**.", rule: { es: "every + singular" } }
+          - { for: [es], wrong: She goes there three times by week., right: "She goes there three times **a** week.", rule: { es: "*por semana* = a week" } }
+          - { for: [es], wrong: She speaks well English., right: "She speaks English **well**.", rule: { es: "el objeto va pegado al verbo" } }
+          - { wrong: She sings good., right: "She sings **well**.", rule: { en: "good + noun, well + verb", es: "good + sustantivo; well + verbo" } }
+          - { wrong: He drives slow., right: "He drives **slowly**.", rule: { en: "manner adverb = adjective + -ly", es: "adverbio de modo = adjetivo + -ly" } }
+          - { wrong: They work hardly., right: "They work **hard**.", rule: { en: "hard = hard; hardly = almost not", es: "hard = duro; hardly = casi no" } }
+
+essentials:
+  - level: A1
+    parts:
+      - title: { en: Form, es: Forma }
+        content:
+          - type: table
+            columns:
+              - { key: adverb, label: { en: Adverb, es: Adverbio } }
+              - { key: often, label: { en: How often, es: Frecuencia } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { adverb: always, often: 100%, example: "I **always** walk." }
+              - { adverb: usually, often: ≈ 90%, example: "She **usually** has toast." }
+              - { adverb: often, often: ≈ 70%, example: "We **often** eat out." }
+              - { adverb: sometimes, often: ≈ 50%, example: "They **sometimes** call." }
+              - { adverb: rarely, often: ≈ 10%, example: "He **rarely** drives." }
+              - { adverb: never, often: 0%, example: "I **never** drink coffee." }
+      - title: { en: Key rules, es: Reglas clave }
+        content:
+          - type: bullets
+            items:
+              - en: "Before the main verb: I **often** walk."
+                es: "Antes del verbo principal: I **often** walk."
+              - en: "After be: She is **always** late."
+                es: "Después de be: She is **always** late."
+              - en: "**never** takes an affirmative verb: I **never** drink coffee."
+                es: "**never** va con el verbo en afirmativa: I **never** drink coffee."
+              - en: "How often…? Answer: every day, once a week, twice a month."
+                es: "How often…? Respuesta: every day, once a week, twice a month."
+      - title: { en: Top errors, es: Errores principales }
+        content:
+          - type: errors
+            rows:
+              - { for: [es], wrong: I go always to school., right: "I **always** go to school." }
+              - { for: [es], wrong: I always am tired., right: "I am **always** tired." }
+              - { for: [es], wrong: I don't never drink coffee., right: "I **never** drink coffee." }
+              - { for: [es], wrong: I swim every days., right: "I swim **every day**." }
+  - level: A2
+    content:
+      - type: table
+        columns:
+          - { key: point, label: { en: Point, es: Punto } }
+          - { key: rule, label: { en: Rule, es: Regla } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { point: { en: Manner, es: Modo }, rule: { en: "adjective + -ly (y → ily, -le → ly)", es: "adjetivo + -ly (y → ily, -le → ly)" }, example: "slow → **slowly** / happy → **happily**" }
+          - { point: { en: Irregular, es: Irregulares }, rule: { en: "good → well; fast, hard, late, early stay the same", es: "good → well; fast, hard, late, early no cambian" }, example: "She sings **well**. / He works **hard**." }
+          - { point: { en: Position, es: Posición }, rule: { en: "after the verb or the object", es: "después del verbo o del objeto" }, example: "He opened the door **slowly**." }
+          - { point: { en: With auxiliary, es: Con auxiliar }, rule: { en: "frequency adverb between auxiliary and verb", es: "adverbio de frecuencia entre auxiliar y verbo" }, example: "I can **never** find it." }
+          - { point: hardly ever, rule: { en: "≈ 5%, almost never", es: "≈ 5%, casi nunca" }, example: "We **hardly ever** go out." }
+
+reminders:
+  - level: A1
+    items:
+      - { en: "Frequency adverb: before the main verb, after be: I **always** go. / I am **always** late.", es: "Adverbio de frecuencia: antes del verbo principal, después de be: I **always** go. / I am **always** late." }
+      - { for: [es], text: { es: "**never** sin don't: I **never** drink coffee." } }
+  - level: A2
+    items:
+      - { en: "good + noun, well + verb: a **good** singer / She sings **well**.", es: "good + sustantivo, well + verbo: a **good** singer / She sings **well**." }
+      - { en: "Manner adverb after the verb or object: She speaks English **well**.", es: "El adverbio de modo va después del verbo o del objeto: She speaks English **well**." }

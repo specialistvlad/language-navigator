@@ -1,0 +1,147 @@
+# yaml-language-server: $schema=../../../schema/topic.schema.json
+id: en.adjectives-adverbs.too-enough-so-such
+lang: en
+kind: grammar
+levels: [B1]
+tags: [adjectives, adverbs, degree]
+concepts: [degree]
+related: [en.adjectives-adverbs.comparatives-superlatives, en.adjectives-adverbs.adjective-order, en.nouns-determiners.quantifiers-some-any-much-many]
+status: { en: draft, es: draft }
+
+title: { en: "Too, Enough, So and Such", es: "Too, enough, so y such (demasiado, suficiente, tan)" }
+summary:
+  en: "How much of a quality: too hot, hot enough, so hot, such a hot day."
+  es: "Cuánto de una cualidad: too hot, hot enough, so hot, such a hot day."
+
+sections:
+  - title: { en: Overview, es: Resumen }
+    level: B1
+    content:
+      - type: table
+        columns:
+          - { key: word, label: { en: Word, es: Palabra } }
+          - { key: pattern, label: { en: Pattern, es: Patrón } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { word: too, pattern: "too + adjective / adverb (+ to + V)", example: "It's **too** hot to walk.", tr: { es: Hace demasiado calor para caminar. } }
+          - { word: enough, pattern: "adjective + enough / enough + noun", example: "It's warm **enough**. / We have **enough** time.", tr: { es: Hace suficiente calor. / Tenemos tiempo suficiente. } }
+          - { word: so, pattern: "so + adjective / adverb (+ that)", example: "It's **so** hot that I can't sleep.", tr: { es: Hace tanto calor que no puedo dormir. } }
+          - { word: such, pattern: "such (a) + adjective + noun (+ that)", example: "It's **such** a hot day.", tr: { es: Es un día muy caluroso. } }
+
+  - title: { en: "Form: too and enough", es: "Forma: too y enough" }
+    level: B1
+    content:
+      - type: table
+        columns:
+          - { key: pattern, label: { en: Pattern, es: Patrón } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { pattern: "too + adjective / adverb", example: "This coffee is **too** hot.", tr: { es: Este café está demasiado caliente. } }
+          - { pattern: "too + adjective + (for person) + to + V", example: "The box is **too** heavy **for me to** lift.", tr: { es: La caja pesa demasiado para que yo la levante. } }
+          - { pattern: "too much / too many + noun", example: "There are **too many** people.", tr: { es: Hay demasiada gente. } }
+          - { pattern: "adjective / adverb + enough", example: "She is old **enough** to drive.", tr: { es: Tiene edad suficiente para conducir. } }
+          - { pattern: "enough + noun", example: "We have **enough** chairs.", tr: { es: Tenemos sillas suficientes. } }
+          - { pattern: "not + adjective + enough", example: "The room isn't big **enough**.", tr: { es: La habitación no es lo bastante grande. } }
+      - type: bullets
+        items:
+          - en: "**too** means more than is good. It has a negative result."
+            es: "**too** significa más de lo conveniente. Tiene un resultado negativo."
+          - en: "**enough** follows an adjective or adverb and comes before a noun."
+            es: "**enough** va detrás de un adjetivo o adverbio y delante de un sustantivo."
+          - { for: [es], text: { es: "*demasiado caro* → **too** expensive. *demasiada gente* → **too many** people." } }
+          - { for: [es], text: { es: "*lo bastante grande* → big **enough**: enough va detrás del adjetivo." } }
+
+  - title: { en: "Form: so and such", es: "Forma: so y such" }
+    level: B1
+    content:
+      - type: table
+        columns:
+          - { key: pattern, label: { en: Pattern, es: Patrón } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { pattern: "so + adjective", example: "The film is **so** good.", tr: { es: La película es buenísima. } }
+          - { pattern: "so + adverb", example: "He speaks **so** quickly.", tr: { es: Habla tan rápido. } }
+          - { pattern: "so many / so much + noun", example: "I have **so many** friends.", tr: { es: Tengo tantos amigos. } }
+          - { pattern: "such a / an + adjective + singular noun", example: "It's **such a** good film.", tr: { es: Es una película tan buena. } }
+          - { pattern: "such + adjective + plural / uncountable noun", example: "They are **such** nice people.", tr: { es: Son gente tan simpática. } }
+          - { pattern: "so / such … that + result", example: "I was **so** tired **that** I fell asleep.", tr: { es: Estaba tan cansado que me quedé dormido. } }
+      - type: bullets
+        items:
+          - en: "**such** goes with a noun: such a day. **so** goes with an adjective or adverb: so hot."
+            es: "**such** va con un sustantivo: such a day. **so** va con un adjetivo o adverbio: so hot."
+          - en: "**a / an** comes after such: such **a** big house."
+            es: "**a / an** va después de such: such **a** big house."
+          - { for: [es], text: { es: "*tan… que* → **so… that** / **such… that**. *Es un libro tan bueno* → It's **such a** good book." } }
+
+  - title: { en: "Compare: very and too", es: "Comparación: very y too" }
+    level: B1
+    content:
+      - type: table
+        columns:
+          - { key: very, label: very }
+          - { key: too, label: too }
+        rows:
+          - { very: { en: "a high degree, no problem", es: "un grado alto, sin problema" }, too: { en: "more than is good, a problem", es: "más de lo conveniente, un problema" } }
+          - { very: { ex: "It's **very** hot, but I like it.", tr: { es: "Hace mucho calor, pero me gusta." } }, too: { ex: "It's **too** hot. I can't sit outside.", tr: { es: Hace demasiado calor. No puedo sentarme fuera. } } }
+          - { very: { ex: "The bag is **very** heavy, but I can lift it.", tr: { es: "La bolsa pesa mucho, pero puedo levantarla." } }, too: { ex: "The bag is **too** heavy to lift.", tr: { es: La bolsa pesa demasiado para levantarla. } } }
+      - type: bullets
+        items:
+          - { for: [es], text: { es: "*muy* → **very**. *demasiado* → **too**. Con adjetivos, **too much** no existe: **too** expensive." } }
+
+  - title: { en: Typical errors, es: Errores típicos }
+    level: B1
+    content:
+      - type: errors
+        audience: true
+        rows:
+          - { for: [es], wrong: It is too much expensive., right: "It is **too** expensive.", rule: { es: "demasiado + adjetivo = too, sin much" } }
+          - { for: [es], wrong: There are too much people., right: "There are **too many** people.", rule: { es: "demasiada gente = too many people" } }
+          - { for: [es], wrong: The room is enough big., right: "The room is big **enough**.", rule: { es: "enough va detrás del adjetivo" } }
+          - { wrong: We have not enough time., right: "We **don't have enough** time.", rule: { en: "negative: don't have enough", es: "negativa: don't have enough" } }
+          - { wrong: The room is not enough big., right: "The room is **not big enough**.", rule: { en: "not + adjective + enough", es: "not + adjetivo + enough" } }
+          - { for: [es], wrong: It is very hot to go out., right: "It is **too** hot to go out.", rule: { es: "resultado negativo = too, no very" } }
+          - { for: [es], wrong: It is so a nice day., right: "It is **such a** nice day.", rule: { es: "sustantivo → such a" } }
+          - { for: [es], wrong: She is such nice., right: "She is **so** nice.", rule: { es: "sin sustantivo → so" } }
+          - { for: [es], wrong: I was so tired than I slept., right: "I was so tired **that** I slept.", rule: { es: "*tan… que* = so… that" } }
+          - { wrong: I have so much friends., right: "I have **so many** friends.", rule: { en: "many + plural noun", es: "many + sustantivo plural" } }
+
+essentials:
+  - level: B1
+    parts:
+      - title: { en: Form, es: Forma }
+        content:
+          - type: table
+            columns:
+              - { key: pattern, label: { en: Pattern, es: Patrón } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { pattern: "too + adjective (+ to + V)", example: "It's **too** hot to walk." }
+              - { pattern: "adjective + enough", example: "She is old **enough**." }
+              - { pattern: "enough + noun", example: "We have **enough** time." }
+              - { pattern: "so + adjective / adverb (+ that)", example: "It's **so** hot that I can't sleep." }
+              - { pattern: "such (a) + adjective + noun (+ that)", example: "It's **such a** hot day." }
+      - title: { en: Key rules, es: Reglas clave }
+        content:
+          - type: bullets
+            items:
+              - en: "**enough** follows an adjective and comes before a noun."
+                es: "**enough** va detrás de un adjetivo y delante de un sustantivo."
+              - en: "**too** means more than is good; **very** means a high degree."
+                es: "**too** significa más de lo conveniente; **very** significa un grado alto."
+              - en: "**so** goes with an adjective or adverb; **such** goes with a noun."
+                es: "**so** va con un adjetivo o adverbio; **such** va con un sustantivo."
+      - title: { en: Top errors, es: Errores principales }
+        content:
+          - type: errors
+            rows:
+              - { for: [es], wrong: It is too much expensive., right: "It is **too** expensive." }
+              - { for: [es], wrong: The room is enough big., right: "The room is big **enough**." }
+              - { for: [es], wrong: It is so a nice day., right: "It is **such a** nice day." }
+              - { for: [es], wrong: I was so tired than I slept., right: "I was so tired **that** I slept." }
+
+reminders:
+  - level: B1
+    items:
+      - { en: "big **enough**, **enough** time: enough follows an adjective and comes before a noun.", es: "big **enough**, **enough** time: enough va detrás del adjetivo y delante del sustantivo." }
+      - { en: "**so** + adjective, **such a** + adjective + noun.", es: "**so** + adjetivo, **such a** + adjetivo + sustantivo." }
+      - { for: [es], text: { es: "*demasiado caro* → **too** expensive, sin much." } }

@@ -1,0 +1,300 @@
+# yaml-language-server: $schema=../../../schema/topic.schema.json
+id: en.tenses.present-perfect
+lang: en
+kind: grammar
+levels: [A2, B1]
+tags: [verbs, tenses, present, perfect]
+concepts: [present-perfect]
+related: [en.tenses.past-simple, en.tenses.present-simple, en.tenses.present-continuous, en.tenses.past-perfect, en.verbs-core.irregular-verbs-table, en.tenses.tense-map]
+status: { en: draft, es: draft }
+
+title: { en: Present Perfect, es: Presente perfecto (present perfect) }
+summary:
+  en: Past events that matter now - experience, recent news, unfinished time, and states up to now.
+  es: Hechos pasados que importan ahora - experiencias, noticias recientes, tiempo sin terminar y estados hasta hoy.
+
+sections:
+  - title: { en: Overview, es: Resumen }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { form: { en: Affirmative, es: Afirmativa }, example: "I **have seen** that film.", tr: { es: He visto esa película. } }
+          - { form: { en: Negative, es: Negativa }, example: "She **hasn't called** yet.", tr: { es: Todavía no ha llamado. } }
+          - { form: { en: Question, es: Pregunta }, example: "**Have** you ever **been** to Rome?", tr: { es: "¿Has estado alguna vez en Roma?" } }
+          - { form: { en: Short answer, es: Respuesta corta }, example: "Yes, I **have**. / No, I **haven't**.", tr: { es: Sí. / No. } }
+      - type: bullets
+        items:
+          - en: "Form: **have / has + past participle**. The time of the event is open or not given."
+            es: "Forma: **have / has + participio pasado**. El momento del hecho es abierto o no se dice."
+
+  - title: { en: "Form: affirmative", es: "Forma: afirmativa" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: subject, label: { en: Subject, es: Sujeto } }
+          - { key: aux, label: { en: Auxiliary + participle, es: Auxiliar + participio } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { subject: I / you / we / they, aux: have + V-ed, example: "We **have lived** here for years.", tr: { es: Vivimos aquí desde hace años. } }
+          - { subject: he / she / it, aux: has + V-ed, example: "She **has finished** her work.", tr: { es: Ha terminado su trabajo. } }
+      - type: bullets
+        items:
+          - en: "Contractions: I**'ve** / you**'ve** / we**'ve** / they**'ve** and he**'s** / she**'s** / it**'s**."
+            es: "Contracciones: I**'ve** / you**'ve** / we**'ve** / they**'ve** y he**'s** / she**'s** / it**'s**."
+          - en: "Speech and messages use the contracted forms."
+            es: "En la conversación y en los mensajes se usan las formas contraídas."
+          - for: [es]
+            text:
+              es: "Tiene un solo auxiliar, *haber* = **have / has**, nunca *be*."
+            ex: "Hemos llegado. → We**'ve** arrived."
+
+  - title: { en: "Form: past participle", es: "Forma: participio pasado" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: type, label: { en: Type, es: Tipo } }
+          - { key: rule, label: { en: Rule, es: Regla } }
+          - { key: examples, label: { en: Examples, es: Ejemplos } }
+        rows:
+          - { type: { en: regular verbs, es: verbos regulares }, rule: "V + -ed", examples: work → worked / live → lived / study → studied }
+          - { type: { en: irregular verbs, es: verbos irregulares }, rule: { en: "its own form: learn each one", es: "forma propia: se aprende cada una" }, examples: see → seen / write → written / eat → eaten / do → done / make → made }
+          - { type: { en: "irregular, same as past simple", es: "irregulares, igual que el past simple" }, rule: { en: "participle = past simple form", es: "participio = forma del past simple" }, examples: have → had / buy → bought / meet → met }
+          - { type: { en: "go and be", es: "go y be" }, rule: { en: "go has two participles", es: "go tiene dos participios" }, examples: go → gone / been / be → been }
+      - type: bullets
+        items:
+          - en: "The -ed spelling rules are the same as in [Past Simple](id:en.tenses.past-simple)."
+            es: "Las reglas de ortografía de -ed son las de [Pasado simple](id:en.tenses.past-simple)."
+          - en: "All irregular forms are in the [Irregular verbs table](id:en.verbs-core.irregular-verbs-table)."
+            es: "Todas las formas irregulares están en la [Tabla de verbos irregulares](id:en.verbs-core.irregular-verbs-table)."
+
+  - title: { en: "Form: negative", es: "Forma: negativa" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: subject, label: { en: Subject, es: Sujeto } }
+          - { key: aux, label: { en: Auxiliary + participle, es: Auxiliar + participio } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { subject: I / you / we / they, aux: haven't + V-ed, example: "I **haven't seen** him today.", tr: { es: Hoy no lo he visto. } }
+          - { subject: he / she / it, aux: hasn't + V-ed, example: "He **hasn't eaten** yet.", tr: { es: Todavía no ha comido. } }
+      - type: bullets
+        items:
+          - en: "**not** follows have / has: I have **not** finished. Speech uses **haven't / hasn't**."
+            es: "**not** va después de have / has: I have **not** finished. En conversación: **haven't / hasn't**."
+          - en: "**never** replaces **not** and keeps an affirmative auxiliary: I **have never** been to Japan."
+            es: "**never** sustituye a **not** y el auxiliar va en afirmativa: I **have never** been to Japan."
+
+  - title: { en: "Form: questions and short answers", es: "Forma: preguntas y respuestas cortas" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: question, label: { en: Question, es: Pregunta } }
+          - { key: answer, label: { en: Short answer, es: Respuesta corta } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { question: Have + I / you / we / they + V-ed?, answer: "Yes, I **have**. / No, I **haven't**.", example: "**Have** you **met** Tom?", tr: { es: "¿Has conocido a Tom?" } }
+          - { question: Has + he / she / it + V-ed?, answer: "Yes, she **has**. / No, she **hasn't**.", example: "**Has** she **called**?", tr: { es: "¿Ha llamado?" } }
+      - type: bullets
+        items:
+          - en: "A question starts with **have / has**: auxiliary + subject + participle."
+            es: "La pregunta empieza con **have / has**: auxiliar + sujeto + participio."
+          - en: "Wh-questions put the wh-word first: What **have** you **done**?"
+            es: "Con wh- la palabra interrogativa va primero: What **have** you **done**?"
+          - level: B1
+            text:
+              en: "**How long** asks about the length of a state up to now:"
+              es: "**How long** pregunta por la duración de un estado hasta ahora:"
+            ex: "How long **have** you **lived** here?"
+            tr: { es: "¿Cuánto tiempo llevas viviendo aquí?" }
+
+  - title: { en: Use, es: Uso }
+    level: A2-B1
+    content:
+      - type: table
+        columns:
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { level: A2, use: { en: "Life experience, no time given", es: "Experiencia de vida, sin decir cuándo" }, example: "I'**ve been** to Paris twice.", tr: { es: He estado en París dos veces. } }
+          - { level: A2, use: { en: "Recent past news", es: "Noticias del pasado reciente" }, example: "I'**ve just seen** Anna.", tr: { es: Acabo de ver a Anna. } }
+          - { level: A2, use: { en: "Result visible now", es: "Resultado visible ahora" }, example: "I'**ve lost** my keys.", tr: { es: He perdido las llaves. } }
+          - { level: A2, use: { en: "Unfinished time period (today, this week)", es: "Periodo de tiempo sin terminar (hoy, esta semana)" }, example: "I'**ve had** three coffees today.", tr: { es: Hoy me he tomado tres cafés. } }
+          - { level: B1, use: { en: "A state that began in the past and continues now", es: "Un estado que empezó en el pasado y sigue ahora" }, example: "She'**s lived** here since 2019.", tr: { es: Vive aquí desde 2019. } }
+      - type: bullets
+        items:
+          - en: "The event is past; the connection to now is the point."
+            es: "El hecho es pasado; lo importante es su conexión con el presente."
+          - level: B1
+            text:
+              en: "An activity that continues up to now often takes the present perfect continuous:"
+              es: "Una actividad que continúa hasta ahora suele ir en present perfect continuous:"
+            ex: "I'**ve been waiting** for an hour."
+            tr: { es: Llevo una hora esperando. }
+
+  - title: { en: Signal words, es: Palabras clave }
+    level: A2-B1
+    content:
+      - type: table
+        columns:
+          - { key: word, label: { en: Word, es: Palabra } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { level: A2, word: ever, example: "**Have** you **ever** **eaten** sushi?", tr: { es: "¿Has comido sushi alguna vez?" } }
+          - { level: A2, word: never, example: "I'**ve never** **seen** snow.", tr: { es: Nunca he visto la nieve. } }
+          - { level: A2, word: just, example: "He'**s just** **left**.", tr: { es: Se acaba de ir. } }
+          - { level: A2, word: already, example: "I'**ve already** **eaten**.", tr: { es: Ya he comido. } }
+          - { level: A2, word: yet, example: "Have you **finished** **yet**?", tr: { es: "¿Has terminado ya?" } }
+          - { level: A2, word: "so far / today / this week", example: "We'**ve** **sold** ten **so far**.", tr: { es: Hemos vendido diez hasta ahora. } }
+          - { level: B1, word: for + period, example: "I'**ve known** her **for** ten years.", tr: { es: La conozco desde hace diez años. } }
+          - { level: B1, word: since + start point, example: "I'**ve known** her **since** 2015.", tr: { es: La conozco desde 2015. } }
+      - type: bullets
+        items:
+          - en: "**ever**, **never**, **just** and **already** go between have / has and the participle."
+            es: "**ever**, **never**, **just** y **already** van entre have / has y el participio."
+          - en: "**yet** goes at the end, in negatives and questions: I haven't finished **yet**."
+            es: "**yet** va al final, en negativas y preguntas: I haven't finished **yet**."
+          - level: B1
+            text:
+              en: "**for** takes a length of time; **since** takes a starting point."
+              es: "**for** lleva una duración; **since** lleva un punto de partida."
+          - level: B1
+            for: [es]
+            text:
+              es: "*Desde hace* y *desde* se traducen por **for** y **since**; el verbo va en present perfect, no en presente."
+
+  - title: { en: "Been and gone", es: "Been y gone" }
+    level: A2
+    content:
+      - type: table
+        columns:
+          - { key: form, label: { en: Form, es: Forma } }
+          - { key: meaning, label: { en: Meaning, es: Significado } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { form: has / have been, meaning: { en: "went and came back; visited", es: "fue y volvió; visitó" }, example: "She'**s been** to Spain.", tr: { es: Ha estado en España. } }
+          - { form: has / have gone, meaning: { en: "went and is still there", es: "fue y sigue allí" }, example: "She'**s gone** to Spain.", tr: { es: Se ha ido a España. } }
+
+  - title: { en: "Compare: present perfect and past simple", es: "Comparación: present perfect y past simple" }
+    level: A2-B1
+    content:
+      - type: table
+        columns:
+          - { key: perfect, label: Present perfect }
+          - { key: simple, label: Past simple }
+        rows:
+          - { perfect: { en: "time not given, or unfinished", es: "momento no dicho, o sin terminar" }, simple: { en: "finished time, stated or known", es: "momento terminado, dicho o conocido" } }
+          - { perfect: { ex: "I'**ve seen** that film.", tr: { es: He visto esa película. } }, simple: { ex: "I **saw** that film last night.", tr: { es: Vi esa película anoche. } } }
+          - { perfect: { ex: "I'**ve had** two coffees today.", tr: { es: Hoy me he tomado dos cafés. } }, simple: { ex: "I **had** two coffees this morning. (it is now afternoon)", tr: { es: Esta mañana me tomé dos cafés. } } }
+          - { perfect: { ex: "She'**s lived** here since 2019.", tr: { es: Vive aquí desde 2019. } }, simple: { ex: "She **lived** here from 2015 to 2019.", tr: { es: Vivió aquí de 2015 a 2019. } } }
+      - type: bullets
+        items:
+          - en: "A finished-time word (yesterday, last week, in 2020, ago) always takes the past simple."
+            es: "Una palabra de tiempo terminado (yesterday, last week, in 2020, ago) lleva siempre past simple."
+          - en: "**When** questions about a finished time take the past simple: When **did** you arrive?"
+            es: "Las preguntas con **when** sobre un tiempo terminado llevan past simple: When **did** you arrive?"
+          - en: "US: the past simple is common with just, already and yet: I **just ate**. / Did you finish **yet**?"
+            es: "US: el past simple es habitual con just, already y yet: I **just ate**. / Did you finish **yet**?"
+          - for: [es]
+            text:
+              es: "El pretérito perfecto español cubre ambos: *He comido a las dos* = I **ate** at two. Decide la expresión de tiempo."
+          - en: "See [Past Simple](id:en.tenses.past-simple)."
+            es: "Ver [Pasado simple](id:en.tenses.past-simple)."
+
+  - title: { en: Typical errors, es: Errores típicos }
+    level: A2-B1
+    content:
+      - type: errors
+        audience: true
+        rows:
+          - { wrong: I have seen him yesterday., right: "I **saw** him yesterday.", rule: { en: "finished time (yesterday, last week, ago) → past simple", es: "tiempo terminado (yesterday, last week, ago) → past simple" } }
+          - { for: [es], wrong: I have eaten at two o'clock., right: "I **ate** at two o'clock.", rule: { es: "con una hora concreta, past simple, aunque en español sea *he comido*" } }
+          - { wrong: I live here since 2010., right: "I **have lived** here since 2010.", rule: { en: "since / for + state up to now → present perfect", es: "since / for + estado hasta ahora → present perfect, no presente" } }
+          - { for: [en], wrong: I have lived here for 2010., right: "I have lived here **since** 2010.", rule: { en: "for + length of time; since + starting point" } }
+          - { wrong: Did you ever eat sushi?, right: "**Have** you ever **eaten** sushi?", rule: { en: "BrE: experience up to now → present perfect (US: Did you ever…? is also used)", es: "BrE: experiencia hasta ahora → present perfect (US: también Did you ever…?)" } }
+          - { for: [en], wrong: She has went home., right: "She has **gone** home.", rule: { en: "has / have + past participle, not the past simple form" } }
+          - { for: [en], wrong: She have lost her keys., right: "She **has** lost her keys.", rule: { en: "he / she / it → has" } }
+          - { for: [en], wrong: Have you ever ate sushi?, right: "Have you ever **eaten** sushi?", rule: { en: "after have / has use the past participle" } }
+          - { wrong: I didn't finish yet., right: "I **haven't finished** yet.", rule: { en: "BrE: yet with an unfinished action → present perfect", es: "BrE: yet con una acción sin terminar → present perfect" } }
+          - { wrong: I have gone to Paris twice., right: "I have **been** to Paris twice.", rule: { en: "a visit and return → been", es: "una visita con vuelta → been; gone = sigue allí" } }
+          - { for: [es], wrong: Have you finished already?, right: "Have you **finished yet**?", rule: { es: "*ya* en preguntas = yet; already va en afirmativas" } }
+
+essentials:
+  - level: A2
+    parts:
+      - title: { en: Form, es: Forma }
+        content:
+          - type: table
+            columns:
+              - { key: form, label: { en: Form, es: Forma } }
+              - { key: plural, label: I / you / we / they }
+              - { key: third, label: he / she / it }
+            rows:
+              - { form: +, plural: "I **have seen** it.", third: "She **has seen** it." }
+              - { form: −, plural: "I **haven't seen** it.", third: "She **hasn't seen** it." }
+              - { form: "?", plural: "**Have** you **seen** it?", third: "**Has** she **seen** it?" }
+              - { form: { en: Short answer, es: Respuesta corta }, plural: "Yes, I have. / No, I haven't.", third: "Yes, she has. / No, she hasn't." }
+      - title: { en: Key rules, es: Reglas clave }
+        content:
+          - type: bullets
+            items:
+              - en: "have / has + **past participle**: regular V-ed, irregular forms to learn (seen, been, done)."
+                es: "have / has + **participio pasado**: regular V-ed, irregulares que se aprenden (seen, been, done)."
+              - en: "Contractions: I**'ve**, she**'s**, haven't, hasn't."
+                es: "Contracciones: I**'ve**, she**'s**, haven't, hasn't."
+              - en: "**ever**, **never**, **just**, **already** go before the participle; **yet** goes at the end."
+                es: "**ever**, **never**, **just**, **already** van antes del participio; **yet** va al final."
+              - en: "A finished-time word (yesterday, last week, ago) takes the past simple."
+                es: "Una palabra de tiempo terminado (yesterday, last week, ago) lleva past simple."
+              - en: "**been** = visited and came back; **gone** = went and is still there."
+                es: "**been** = fue y volvió; **gone** = fue y sigue allí."
+      - title: { en: Use, es: Uso }
+        content:
+          - type: table
+            columns:
+              - { key: use, label: { en: Use, es: Uso } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { use: { en: "experience", es: "experiencia" }, example: "I've **never been** to Rome.", tr: { es: Nunca he estado en Roma. } }
+              - { use: { en: "recent news", es: "noticias recientes" }, example: "I've **just seen** Anna.", tr: { es: Acabo de ver a Anna. } }
+              - { use: { en: "result now", es: "resultado ahora" }, example: "I've **lost** my keys.", tr: { es: He perdido las llaves. } }
+              - { use: { en: "unfinished time", es: "tiempo sin terminar" }, example: "I've **had** three coffees today.", tr: { es: Hoy me he tomado tres cafés. } }
+      - title: { en: Top errors, es: Errores principales }
+        content:
+          - type: errors
+            rows:
+              - { wrong: I have seen him yesterday., right: "I **saw** him yesterday." }
+              - { for: [es], wrong: I have eaten at two o'clock., right: "I **ate** at two o'clock." }
+              - { for: [en], wrong: She has went home., right: "She has **gone** home." }
+              - { wrong: I didn't finish yet., right: "I **haven't finished** yet." }
+  - level: B1
+    content:
+      - type: table
+        columns:
+          - { key: point, label: { en: Point, es: Punto } }
+          - { key: rule, label: { en: Rule, es: Regla } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { point: for / since, rule: { en: "for + length of time; since + starting point", es: "for + duración; since + punto de partida" }, example: "I've lived here **for** five years / **since** 2020." }
+          - { point: How long, rule: { en: "length of a state up to now", es: "duración de un estado hasta ahora" }, example: "How long **have** you **lived** here?" }
+          - { point: { en: States up to now, es: Estados hasta ahora }, rule: { en: "present perfect, not present simple", es: "present perfect, no presente simple" }, example: "I **have known** her since 2015." }
+          - { point: { en: Continuous, es: Continuo }, rule: { en: "activities up to now: have been + V-ing", es: "actividades hasta ahora: have been + V-ing" }, example: "I've **been waiting** for an hour." }
+
+reminders:
+  - level: A2
+    items:
+      - en: "Finished-time words (yesterday, last week, ago) take the past simple: I **saw** him yesterday."
+        es: "Las palabras de tiempo terminado (yesterday, last week, ago) llevan past simple: I **saw** him yesterday."
+      - en: "have / has + past participle: She has **gone**, not She has went."
+        es: "have / has + participio: She has **gone**, no She has went."
+  - level: B1
+    items:
+      - en: "since / for + a state up to now takes the present perfect: I **have lived** here since 2010."
+        es: "since / for + estado hasta ahora lleva present perfect: I **have lived** here since 2010."
