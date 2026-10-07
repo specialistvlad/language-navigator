@@ -13,6 +13,28 @@ summary:
   en: "Question tags are short questions added to a statement to check or confirm it. A positive statement takes a negative tag and a negative statement a positive tag, with the same auxiliary: It's cold, **isn't it**?"
   es: "Las coletillas son preguntas cortas al final de una frase para comprobar o confirmar. Equivalen a \"¿verdad?\" o \"¿no?\", pero cambian según la frase: invierten la polaridad y repiten el auxiliar: She works, **doesn't she**?"
 
+cheatsheet:
+  level: B1
+  content:
+    - type: table
+      columns:
+        - { key: point, label: { en: Point, es: Punto } }
+        - { key: rule, label: { en: Tag, es: Coletilla } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { point: { en: Positive statement, es: Frase afirmativa }, rule: { en: negative tag, es: coletilla negativa }, example: "It's cold, **isn't it**?", tr: { es: "Hace frío, ¿verdad?" } }
+        - { point: { en: Negative statement, es: Frase negativa }, rule: { en: positive tag, es: coletilla afirmativa }, example: "It isn't cold, **is it**?", tr: { es: "No hace frío, ¿verdad?" } }
+        - { point: be, rule: "isn't / aren't / wasn't / weren't", example: "They **were** late, **weren't they**?", tr: { es: "Llegaron tarde, ¿verdad?" } }
+        - { point: Present simple, rule: don't / doesn't, example: "She **works** here, **doesn't she**?", tr: { es: "Trabaja aquí, ¿verdad?" } }
+        - { point: Past simple, rule: didn't, example: "He **left** early, **didn't he**?", tr: { es: "Se fue temprano, ¿verdad?" } }
+        - { point: { en: "have, modals", es: "have, modales" }, rule: { en: "repeat the auxiliary or modal", es: "repite el auxiliar o el modal" }, example: "You **can** swim, **can't you**?", tr: { es: "Sabes nadar, ¿verdad?" } }
+        - { point: { en: Pronoun, es: Pronombre }, rule: { en: "the tag ends with a pronoun that replaces the subject", es: "la coletilla acaba con un pronombre que sustituye al sujeto" }, example: "Tom is late, **isn't he**?", tr: { es: "Tom llega tarde, ¿verdad?" } }
+        - { point: I am, rule: aren't I, example: "I'**m** right, **aren't I**?", tr: { es: "Tengo razón, ¿verdad?" } }
+        - { point: Let's, rule: shall we, example: "**Let's** go, **shall we**?", tr: { es: "Vamos, ¿vale?" } }
+        - { point: { en: Command, es: Orden }, rule: will you, example: "**Open** the door, **will you**?", tr: { es: "Abre la puerta, ¿quieres?" } }
+        - { point: "nobody, nothing, never", rule: { en: "the statement is negative, so the tag is positive", es: "la frase es negativa, así que la coletilla es afirmativa" }, example: "**Nobody** called, **did they**?", tr: { es: "No llamó nadie, ¿verdad?" } }
+        - { point: { en: Intonation, es: Entonación }, rule: { en: "falling ↘ = you are sure; rising ↗ = a real question", es: "descendente ↘ = estás seguro; ascendente ↗ = pregunta de verdad" }, example: "You haven't seen my keys, **have you**? ↗", tr: { es: "No has visto mis llaves, ¿verdad?" } }
+
 sections:
   - title: { en: "Form: auxiliary and pronoun", es: "Forma: auxiliar y pronombre" }
     level: B1
@@ -124,45 +146,3 @@ sections:
           - { for: [en], wrong: "Tom is late, isn't Tom?", right: "Tom is late, isn't **he**?", rule: { en: "the tag uses a pronoun" } }
           - { wrong: "Nobody called, didn't they?", right: "Nobody called, **did they**?", rule: { en: "nobody is negative → positive tag", es: "nobody es negativo → coletilla afirmativa" } }
           - { for: [es], wrong: "She works here, true?", right: "She works here, **doesn't she**?", rule: { es: "*¿verdad?* → auxiliar + pronombre" } }
-
-essentials:
-  - level: B1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: statement, label: { en: Statement, es: Frase } }
-              - { key: tag, label: { en: Tag, es: Coletilla } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { statement: +, tag: "−", example: "It's cold, **isn't it**?" }
-              - { statement: "−", tag: +, example: "It isn't cold, **is it**?" }
-              - { statement: present simple, tag: don't / doesn't, example: "She works, **doesn't she**?" }
-              - { statement: past simple, tag: didn't, example: "He left, **didn't he**?" }
-              - { statement: I am, tag: aren't I, example: "I'm right, **aren't I**?" }
-              - { statement: Let's, tag: shall we, example: "Let's go, **shall we**?" }
-              - { statement: command, tag: will you, example: "Open it, **will you**?" }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "Positive statement → negative tag; negative statement → positive tag.", es: "Frase afirmativa → coletilla negativa; frase negativa → coletilla afirmativa." }
-              - { en: "The tag repeats the auxiliary or modal; with no auxiliary it uses do / does / did.", es: "La coletilla repite el auxiliar o el modal; si no hay auxiliar usa do / does / did." }
-              - { en: "The tag ends with a pronoun: isn't **he**?", es: "La coletilla acaba con un pronombre: isn't **he**?" }
-              - { en: "Falling voice ↘ = checking. Rising voice ↗ = real question.", es: "Voz descendente ↘ = comprobar. Voz ascendente ↗ = pregunta de verdad." }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { wrong: "You like tea, aren't you?", right: "You like tea, **don't you**?" }
-              - { for: [es], wrong: "It's cold, no?", right: "It's cold, **isn't it**?" }
-              - { wrong: "Open the door, don't you?", right: "Open the door, **will you**?" }
-              - { wrong: "Let's go, will we?", right: "Let's go, **shall we**?" }
-
-reminders:
-  - level: B1
-    items:
-      - { en: "The tag flips the polarity and matches the verb: likes → doesn't she?", es: "La coletilla invierte la polaridad y concuerda con el verbo: likes → doesn't she?" }
-      - { en: "I am → **aren't I**? / Let's → **shall we**?", es: "I am → **aren't I**? / Let's → **shall we**?" }
-      - { for: [es], text: { es: "*¿verdad?* / *¿no?* → isn't it? / don't you? según la frase." } }

@@ -13,6 +13,27 @@ summary:
   en: "Numbers from 0 to a million, and the ordinals first, second, third. Numbers in -teen stress the end and numbers in -ty the start: thir**teen** is 13, **thir**ty is 30."
   es: "Los números del 0 al millón y los ordinales first, second, third. Hundred, thousand y million quedan en singular detrás de un número: two **hundred**, three **thousand**."
 
+cheatsheet:
+  level: A0
+  content:
+    - type: table
+      columns:
+        - { key: point, label: { en: Point, es: Punto } }
+        - { key: rule, label: { en: Rule, es: Regla } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { point: -teen, rule: { en: "13–19 add -teen and stress it; 13, 15 and 18 change their first part", es: "del 13 al 19 se añade -teen, que lleva el acento; 13, 15 y 18 cambian la primera parte" }, example: "thir**teen** /θɜːˈtiːn/, **fif**teen, **eigh**teen" }
+        - { point: -ty, rule: { en: "tens end in -ty and the stress is on the first part; forty has no u", es: "las decenas acaban en -ty y el acento va en la primera parte; forty no lleva u" }, example: "**thir**ty /ˈθɜːti/, **for**ty" }
+        - { point: { en: 21–99, es: 21–99 }, rule: { en: "ten + hyphen + unit", es: "decena + guion + unidad" }, example: "twenty-one, forty-five" }
+        - { point: and, rule: { en: "and comes after hundred (US: three hundred five)", es: "and va detrás de hundred (US: three hundred five)" }, example: "two hundred **and** fifty" }
+        - { point: "hundred, thousand, million", rule: { en: "stay singular after a number", es: "quedan en singular detrás de un número" }, example: "two **hundred**, five **million**" }
+        - { point: { en: Comma and point, es: Coma y punto }, rule: { en: "a comma separates thousands; a point separates decimals", es: "la coma separa los miles y el punto los decimales, al revés que en español" }, example: "1,500 · 2.5 (two **point** five)" }
+        - { point: { en: Phone numbers, es: Teléfonos }, rule: { en: "say each digit; 0 is oh; two equal digits are double", es: "se dice cada cifra; 0 es oh; dos cifras iguales son double" }, example: "077 → oh double seven" }
+        - { point: { en: Ordinals, es: Ordinales }, rule: { en: "first, second, third; from 4 add -th", es: "first, second, third; desde el 4 se añade -th" }, example: "four**th**, six**th**" }
+        - { point: { en: Ordinal spelling, es: Ortografía de los ordinales }, rule: { en: "five, nine, twelve and twenty change their spelling", es: "five, nine, twelve y twenty cambian la ortografía" }, example: "fi**f**th, nin**th**, twel**f**th, twent**ie**th" }
+        - { point: { en: Short ordinals, es: Ordinales abreviados }, rule: { en: "number + the last two letters of the word", es: "número + las dos últimas letras de la palabra" }, example: "1**st**, 2**nd**, 3**rd**, 4**th**" }
+        - { point: { en: Compound ordinals, es: Ordinales compuestos }, rule: { en: "only the last word changes", es: "solo cambia la última palabra" }, example: "twenty-**first**, a hundred and **second**" }
+
 sections:
   - title: { en: 0 to 12, es: Del 0 al 12 }
     level: A0
@@ -159,30 +180,3 @@ sections:
           - { wrong: 1th · 2th · 3th, right: "1**st** · 2**nd** · 3**rd**", rule: { en: "last two letters of the word", es: "las dos últimas letras de la palabra" } }
           - { wrong: nineth · twelveth, right: "**ninth** · **twelfth**", rule: { en: "the spelling changes", es: "cambia la ortografía" } }
           - { for: [es], wrong: "2,5 = two comma five", right: "**2.5** = two **point** five", rule: { es: "punto decimal" } }
-
-essentials:
-  - level: A0
-    parts:
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "-teen is stressed, -ty is not: thir**teen** ≠ **thir**ty.", es: "-teen lleva el acento, -ty no: thir**teen** ≠ **thir**ty." }
-              - { en: "21–99 take a hyphen: twenty-one, forty-five.", es: "Del 21 al 99 con guion: twenty-one, forty-five." }
-              - { en: "two **hundred** **and** five: no -s, and after hundred.", es: "two **hundred** **and** five: sin -s, and detrás de hundred." }
-              - { en: "first, second, third; then -th: fourth, fifth. Written: 1st, 2nd, 3rd, 4th.", es: "first, second, third; después -th: fourth, fifth. Abreviado: 1st, 2nd, 3rd, 4th." }
-              - { for: [es], text: { es: "Coma para los miles, punto para los decimales: 1,500 · 2.5." } }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: two hundreds, right: "two **hundred**" }
-              - { wrong: fourty, right: "**forty**" }
-              - { wrong: 3th, right: "3**rd**" }
-
-reminders:
-  - level: A0
-    items:
-      - { en: "thir**teen** /θɜːˈtiːn/ ≠ **thir**ty /ˈθɜːti/.", es: "thir**teen** /θɜːˈtiːn/ ≠ **thir**ty /ˈθɜːti/." }
-      - { en: "two **hundred**, five **million**: no -s.", es: "two **hundred**, five **million**: sin -s." }
-      - { for: [es], text: { es: "Decimales con punto: 2.5 = *two point five*." } }

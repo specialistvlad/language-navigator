@@ -71,7 +71,6 @@ it, and the schemas list exactly its codes (`npm run check` compares them).
 - An item (table row, errors row, bullet, text) is at the section's base unless it carries its own
   `level`; it carries one only when it is above the base, and within the range.
 - The range ends at the highest level an item carries, and at least one item stays at the base.
-- Essentials and reminders hold one level each, so their items carry no `level`.
 - Every level in `levels` is covered by at least one section.
 - A marked item renders with a level badge at its start: in the first cell of a table row, at the
   start of a bullet. A topic at a single level shows its level once, in the header.
@@ -100,9 +99,8 @@ it, and the schemas list exactly its codes (`npm run check` compares them).
 | `id`, `lang`, `kind`, `levels`, `tags`, `concepts`, `related` | identity and links |
 | `status` | `draft` or `approved`, per explanation language |
 | `title`, `summary` | localized; the summary follows the rules below |
+| `cheatsheet` | `level` and `content`: the whole topic in one table, section 00 (§8) |
 | `sections` | the full guide, in order |
-| `essentials` | one entry per level: the cheatsheet source (§8) |
-| `reminders` | per level: the traps that persist at higher levels (§8) |
 
 **The summary.** The page shows the summary above the guide; topic cards and the meta description
 show its first sentence. It is two sentences, at most 50 words:
@@ -135,7 +133,7 @@ Grammar sections:
 
 | # | Title `en` | Title `es` | Content |
 |---|---|---|---|
-| 1 | Overview | Resumen | one table showing the whole topic at once |
+| 1 | Overview | Resumen | the rules that hold across the whole topic |
 | 2 | Form: … | Forma: … | one section per form: affirmative, negative, questions… |
 | 3 | Spelling: … | Ortografía: … | spelling rules for the forms |
 | 4 | Pronunciation: … | Pronunciación: … | sound rules, with IPA |
@@ -177,7 +175,7 @@ Block types inside `content`:
   so it fits A4 portrait, a tablet and a phone screen. A slot table has at most 10.
 
 **Slot tables** lay a sentence out word by word, one column per slot, so a row reads across as
-the sentence. The tense Overviews use one: Tense, then Question (Helper, Subject, Verb), Statement
+the sentence. The tense cheatsheets use one: Tense, then Question (Helper, Subject, Verb), Statement
 (Subject, Helper, Verb) and Negative (Subject, Helper, Verb), one row per person.
 
 - `group` titles neighbouring columns in a second header row: Question, Statement, Negative. An
@@ -191,7 +189,7 @@ the sentence. The tense Overviews use one: Tense, then Question (Helper, Subject
 - The first column holds the key: person, form, use or rule.
 - Each fact appears once in the sections. A topic is a short path through its sections, not a
   set of overlapping views: regroupings, highlight lists and summaries of data shown in another
-  section stay out of the guide. Summaries belong in Essentials and Reminders (§8).
+  section stay out of the guide. The summary of the whole topic is its cheatsheet (§8).
 - Tables first. Use text only for a rule that a table cannot hold.
 - One rule per bullet, at most 20 words.
 - State the correct form. Incorrect forms appear only in `errors` blocks.
@@ -209,34 +207,26 @@ the sentence. The tense Overviews use one: Tense, then Question (Helper, Subject
 | … | the list continues |
 | `US:` `LatAm:` | variant note |
 
-## 8. Essentials, reminders and cheatsheets
+## 8. Cheatsheets
 
-Cheatsheets are generated from the `essentials` and `reminders` of the topics. On the web, the
-Guide view shows the sections; Essentials and Reminders appear in the Essentials view and in the
-cheatsheets.
+Every topic has one `cheatsheet`: the whole topic in one table, on one screen. Its `level` runs
+from the topic's base level to the highest level a row carries, and a row above the base carries
+its own `level`, as in a section (§3).
 
-**Essentials** — one entry for each level in `levels`:
-
-- Self-contained: it reads correctly on its own.
-- `parts`, in this order: Form / Forma → Key rules / Reglas clave → Use / Uso →
-  Top errors / Errores principales.
-- A level that adds a few points uses `content` with one table instead: Point, Rule, Example.
 - Every fact in it appears in the sections.
-
-**Reminders** — for a level, the distilled essence: only the traps that still catch learners at
-higher levels. A level with nothing that qualifies has no reminder.
+- One table: forms and patterns, the key rules and the top traps. A topic built on a verb pattern
+  uses a slot table (§7).
+- On a topic page it is section **00 Cheatsheet**. The View switch shows it alone (**Cheatsheet**)
+  or followed by sections 01 onwards (**Extended**).
 
 **Generated sets** — for each of the 4 tracks:
 
 | Set | Content |
 |---|---|
-| Per level: A0, A1, A2, B1 | that level's Essentials |
-| Progressive: A0–A1, A0–A2, A0–B1 | the top level's Essentials + the Reminders of every level below |
-| Per topic | one topic, all its levels |
-| Per section | one section, in topic order |
-
-The higher a progressive sheet reaches, the more material it covers and the more concentrated
-it is; A0–B1 is the essence of all levels together.
+| Per level: A0, A1, A2, B1 | the cheatsheets of the topics at that level, rows up to that level |
+| Progressive: A0–A1, A0–A2, A0–B1 | the cheatsheets of every topic up to the top level, rows up to that level |
+| Per topic | one topic's cheatsheet |
+| Per section | one section's cheatsheets, in topic order |
 
 ## 9. Concepts
 
@@ -265,8 +255,11 @@ Every page has a clean, stable, named URL. This is a requirement for every app a
 
 - URLs use lowercase ASCII letters, digits, hyphens and slashes, and end with `/`.
 - URLs come from slugs, never from titles. A published slug stays fixed.
-- Page state never travels in percent-encoded text, query strings or fragments. Viewer
-  preferences (level filter, view, theme) live in the browser.
+- A page carries the choice of each switch it has in query parameters, so a shared link opens the
+  same state: `?level=a0`…`?level=b1` on topic and track pages, `?view=cheatsheet` or
+  `?view=extended` on topic pages. A page opened without them takes the reader's last choice, and
+  the highest level and Extended the first time. The theme lives in the browser.
+- Page state never travels in percent-encoded text or fragments.
 - Section slugs are unique within a language; topic slugs are unique within a section.
 
 ## 11. Workflow per topic
@@ -274,7 +267,7 @@ Every page has a clean, stable, named URL. This is a requirement for every app a
 Topics are written one at a time. The next topic starts only after the current one is approved.
 
 1. Copy `templates/topic.yaml` into the topic folder and write it in both explanation languages,
-   with its essentials and reminders; set `status` to `draft` for both.
+   with its cheatsheet; set `status` to `draft` for both.
 2. Run `npm run check` until it reports no problems.
 3. Hand the topic to the owner for review in the web app (`npm start`).
 4. Apply the requested changes; repeat until the owner approves.

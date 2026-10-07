@@ -13,18 +13,22 @@ summary:
   en: "Might and may for possibility; may for formal permission. Might and may take no -s, no to and no do, and the negative is might not: She **might** come. He **might not** come."
   es: "Might y may para posibilidad; may para permiso formal. Quizás + subjuntivo es might + verbo base, sin to y sin do: *quizás llueva* es It **might** rain."
 
+cheatsheet:
+  level: A2-B1
+  content:
+    - type: table
+      columns:
+        - { key: form, label: { en: Form, es: Forma } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { form: { en: Affirmative, es: Afirmativa }, example: "It **might** rain. / It **may** rain.", tr: { es: Puede que llueva. } }
+        - { form: { en: Negative, es: Negativa }, example: "It **might not** rain. / It **may not** rain.", tr: { es: Puede que no llueva. } }
+        - { level: B1, form: { en: "Question (permission)", es: "Pregunta (permiso)" }, example: "**May** I come in?", tr: { es: "¿Puedo pasar?" } }
+
 sections:
   - title: { en: Overview, es: Resumen }
     level: A2-B1
     content:
-      - type: table
-        columns:
-          - { key: form, label: { en: Form, es: Forma } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { form: { en: Affirmative, es: Afirmativa }, example: "It **might** rain. / It **may** rain.", tr: { es: Puede que llueva. } }
-          - { form: { en: Negative, es: Negativa }, example: "It **might not** rain. / It **may not** rain.", tr: { es: Puede que no llueva. } }
-          - { level: B1, form: { en: "Question (permission)", es: "Pregunta (permiso)" }, example: "**May** I come in?", tr: { es: "¿Puedo pasar?" } }
       - type: bullets
         items:
           - en: "**might** and **may** have one form for every subject: she might, she may."
@@ -130,70 +134,3 @@ sections:
           - { wrong: "He maybe at home.", right: "He **may be** at home. / **Maybe** he is at home.", rule: { en: "may be after the subject; maybe at the start", es: "may be después del sujeto; maybe al principio" } }
           - { wrong: "She might will come.", right: "She **might** come.", rule: { en: "a modal verb takes no second modal", es: "un modal no lleva otro modal detrás" } }
           - { for: [es], wrong: "Maybe it rain tomorrow.", right: "**Maybe** it will rain tomorrow. / It **might rain**.", rule: { es: "no hay subjuntivo: maybe + will, o might + forma base" } }
-
-essentials:
-  - level: A2
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: form, label: { en: Form, es: Forma } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { form: +, example: "It **might** rain. / It **may** rain." }
-              - { form: −, example: "It **might not** rain. / It **may not** rain." }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - en: "One form for every subject; base verb after it; no do."
-                es: "Una sola forma para todos los sujetos; forma base después; sin do."
-              - en: "A question about possibility: Do you think it **will** rain?"
-                es: "Pregunta sobre posibilidad: Do you think it **will** rain?"
-              - en: "**maybe** starts a clause; **may be** follows the subject."
-                es: "**maybe** empieza la frase; **may be** va después del sujeto."
-              - en: "might /maɪt/: the gh is silent."
-                es: "might /maɪt/: la gh no se pronuncia."
-      - title: { en: Use, es: Uso }
-        content:
-          - type: table
-            columns:
-              - { key: use, label: { en: Use, es: Uso } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { use: { en: "possibility now", es: "posibilidad ahora" }, example: "She **might** be at home.", tr: { es: Puede que esté en casa. } }
-              - { use: { en: "possibility in the future", es: "posibilidad en el futuro" }, example: "We **might** go to the beach.", tr: { es: Puede que vayamos a la playa. } }
-              - { use: { en: "maybe, perhaps, probably", es: "maybe, perhaps, probably" }, example: "**Maybe** she is busy.", tr: { es: Quizás esté ocupada. } }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { wrong: "It mights rain.", right: "It **might** rain." }
-              - { wrong: "It might to rain.", right: "It might **rain**." }
-              - { wrong: "I don't might go.", right: "I **might not** go." }
-              - { wrong: "He maybe at home.", right: "He **may be** at home." }
-              - { for: [es], wrong: "Maybe it rain tomorrow.", right: "**Maybe** it will rain tomorrow." }
-  - level: B1
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: Formal permission, es: Permiso formal }, rule: May I + V?, example: "**May** I sit here?" }
-          - { point: { en: Formal rules, es: Normas formales }, rule: may + V, example: "Guests **may** use the pool." }
-          - { point: { en: Certainty, es: Seguridad }, rule: { en: "will = sure; probably = very likely; may / might = not sure", es: "will = seguro; probably = muy probable; may / might = no seguro" }, example: "She **might** come." }
-
-reminders:
-  - level: A2
-    items:
-      - en: "might / may + base verb, no -s, no do: It **might** rain."
-        es: "might / may + forma base, sin -s ni do: It **might** rain."
-      - en: "**maybe** (one word) starts a clause; He **may be** (two words) late."
-        es: "**maybe** (una palabra) empieza la frase; He **may be** (dos palabras) late."
-  - level: B1
-    items:
-      - en: "**will** = sure; **may / might** = not sure."
-        es: "**will** = seguro; **may / might** = no seguro."

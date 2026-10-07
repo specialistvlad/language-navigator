@@ -1,4 +1,4 @@
-/* Tables, Essentials and Reminder blocks, cheatsheets */
+/* Tables and cheatsheet pages */
 
 .table-wrap {
   overflow-x: auto;
@@ -102,27 +102,6 @@
 }
 .doc table.errors td:nth-child(2) {
   background: var(--good-soft);
-}
-
-.block {
-  margin: 28px 0;
-  padding: 2px 20px 12px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-}
-
-.block.essentials {
-  border-left: 4px solid var(--accent);
-}
-.block.reminder {
-  border-left: 4px solid var(--warn);
-  background: var(--warn-soft);
-}
-.block > h2 {
-  border-top: 0;
-  margin-top: 14px;
-  padding-top: 0;
 }
 
 .empty {

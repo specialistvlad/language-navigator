@@ -13,6 +13,27 @@ summary:
   en: "The passive (be + past participle) puts the receiver of the action first, for an unknown or unimportant doer, a process or formal writing. Be changes with the tense and the participle stays: English **is spoken** here."
   es: "La pasiva (be + participio) pone primero a quien recibe la acción, cuando el autor se desconoce o no importa. La pasiva con se se dice con be + participio: *se habla inglés* es English **is spoken** here."
 
+cheatsheet:
+  level: B1
+  content:
+    - type: table
+      columns:
+        - { key: point, label: { en: Point, es: Punto } }
+        - { key: rule, label: { en: Rule, es: Regla } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { point: { en: Active → passive, es: De activa a pasiva }, rule: { en: "the object becomes the subject; be in the tense of the active verb + past participle", es: "el objeto pasa a ser sujeto; be en el tiempo del verbo activo + participio" }, example: "Shakespeare wrote Hamlet. → Hamlet **was written** by Shakespeare.", tr: { es: Hamlet fue escrito por Shakespeare. } }
+        - { point: Present simple, rule: am / is / are + V-ed, example: "English **is spoken** here.", tr: { es: Aquí se habla inglés. } }
+        - { point: Past simple, rule: was / were + V-ed, example: "The bridge **was built** in 1990.", tr: { es: El puente se construyó en 1990. } }
+        - { point: Present perfect, rule: has / have been + V-ed, example: "The window **has been broken**.", tr: { es: La ventana se ha roto. } }
+        - { point: "will, can, must", rule: will / can / must be + V-ed, example: "The results **will be sent** tomorrow.", tr: { es: Los resultados se enviarán mañana. } }
+        - { point: { en: Negative, es: Negativa }, rule: be + not + V-ed, example: "The room **wasn't cleaned**.", tr: { es: La habitación no se limpió. } }
+        - { point: { en: Question, es: Pregunta }, rule: be + subject + V-ed, example: "**Was** the room **cleaned**?", tr: { es: ¿Se limpió la habitación? } }
+        - { point: by / with, rule: { en: "by = the doer, added only when it is new or important; with = a tool", es: "by = quien hace la acción, solo si es información nueva o importante; with = un instrumento" }, example: "The song **was written by** Adele.", tr: { es: La canción fue escrita por Adele. } }
+        - { point: { en: Use, es: Uso }, rule: { en: "unknown or unimportant doer, processes, news and formal writing", es: "autor desconocido o sin importancia, procesos, noticias y textos formales" }, example: "Wine **is made** from grapes.", tr: { es: El vino se hace con uvas. } }
+        - { point: { en: Trap, es: Trampa }, rule: { en: "only verbs with an object have a passive: happen, arrive and die have none", es: "solo los verbos con objeto tienen pasiva: happen, arrive y die no la tienen" }, example: "The accident **happened** yesterday.", tr: { es: El accidente ocurrió ayer. } }
+        - { for: [es], point: se + verbo, rule: { es: "*se venden pisos* = be + participio, con concordancia" }, example: "Flats **are sold**.", tr: { es: Se venden pisos. } }
+
 sections:
   - title: { en: "Form: active to passive", es: "Forma: de activa a pasiva" }
     level: B1
@@ -135,53 +156,3 @@ sections:
           - { wrong: The book was written from Orwell., right: "The book was written **by** Orwell.", rule: { en: "agent → by", es: "agente → by" } }
           - { for: [es], wrong: My bike was stolen by someone., right: "My bike **was stolen**.", rule: { es: "un agente desconocido no se menciona (*me robaron la bici*)" } }
           - { wrong: "Was the room cleaned? — Yes, it cleaned.", right: "Yes, it **was**.", rule: { en: "the short answer repeats be", es: "la respuesta corta repite be" } }
-
-essentials:
-  - level: B1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: tense, label: { en: Tense, es: Tiempo } }
-              - { key: form, label: { en: Form, es: Forma } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { tense: Present simple, form: am / is / are + V-ed, example: "English **is spoken** here." }
-              - { tense: Past simple, form: was / were + V-ed, example: "The bridge **was built** in 1990." }
-              - { tense: Present perfect, form: has / have been + V-ed, example: "The window **has been broken**." }
-              - { tense: will, form: will be + V-ed, example: "The results **will be sent**." }
-              - { tense: { en: Question, es: Pregunta }, form: be + subject + V-ed, example: "**Was** the room **cleaned**?" }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "The object of the active sentence becomes the subject.", es: "El objeto de la activa pasa a ser el sujeto." }
-              - { en: "be changes with the tense; the participle stays: is made / was made / has been made.", es: "be cambia con el tiempo; el participio no: is made / was made / has been made." }
-              - { en: "Only verbs with an object have a passive: happen, arrive and die have none.", es: "Solo los verbos con objeto tienen pasiva: happen, arrive y die no la tienen." }
-              - { en: "Add **by** + agent only when it is new or important.", es: "Se añade **by** + agente solo si es nuevo o importante." }
-      - title: { en: Use, es: Uso }
-        content:
-          - type: table
-            columns:
-              - { key: use, label: { en: Use, es: Uso } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { use: { en: "unknown or unimportant doer", es: "quien lo hace es desconocido o no importa" }, example: "My bike **was stolen**." }
-              - { use: { en: process, es: proceso }, example: "Wine **is made** from grapes." }
-              - { use: { en: "news and formal writing", es: "noticias y textos formales" }, example: "Two people **were arrested**." }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: Here speaks English., right: "English **is spoken** here." }
-              - { wrong: The bridge built in 1990., right: "The bridge **was built** in 1990." }
-              - { wrong: The window was broke., right: "The window was **broken**." }
-              - { wrong: The accident was happened., right: "The accident **happened**." }
-
-reminders:
-  - level: B1
-    items:
-      - { en: "be + **past participle**: The window was **broken**.", es: "be + **participio**: The window was **broken**." }
-      - { en: "happen, arrive, die: no passive.", es: "happen, arrive, die: sin pasiva." }
-      - { for: [es], text: { es: "*se habla inglés* → English **is spoken**: be + participio." } }

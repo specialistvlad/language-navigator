@@ -13,6 +13,27 @@ summary:
   en: "Most nouns add -s (books), nouns ending in s, sh, ch or x add -es, and consonant + y becomes -ies. Irregular plurals take no -s and people takes a plural verb: three **children**, The **people are** nice."
   es: "El plural regular añade -s o -es (books, boxes), consonante + y pasa a -ies y hay plurales irregulares (children, people). El adjetivo inglés no tiene plural y people lleva verbo en plural: two **red** cars, The **people are** nice."
 
+cheatsheet:
+  level: A0-A1
+  content:
+    - type: table
+      columns:
+        - { key: point, label: { en: Point, es: Punto } }
+        - { key: rule, label: { en: Rule, es: Regla } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { point: { en: most nouns, es: la mayoría }, rule: + s, example: "two **books**" }
+        - { point: "-s, -ss, -sh, -ch, -x, -z", rule: + es, example: "bus → **buses** / box → **boxes**" }
+        - { point: { en: consonant + y, es: consonante + y }, rule: y → ies, example: "city → **cities**" }
+        - { point: { en: vowel + y, es: vocal + y }, rule: + s, example: "boy → **boys**" }
+        - { point: { en: irregular, es: irregulares }, rule: { en: "no -s: man, woman, child, person", es: "sin -s: man, woman, child, person" }, example: "three **children**" }
+        - { point: people, rule: { en: "plural, takes a plural verb", es: "plural, lleva verbo en plural" }, example: "The people **are** nice.", tr: { es: La gente es simpática. } }
+        - { point: { en: adjectives, es: adjetivos }, rule: { en: stay the same, es: no cambian }, example: "two **red** cars", tr: { es: dos coches rojos } }
+        - { level: A1, point: { en: "-o, -f / -fe", es: "-o, -f / -fe" }, rule: { en: "some + es; -f / -fe → ves", es: "algunos + es; -f / -fe → ves" }, example: "potato → **potatoes** / knife → **knives**" }
+        - { level: A1, point: { en: "foot, tooth, mouse", es: "foot, tooth, mouse" }, rule: { en: irregular, es: irregulares }, example: "**feet** / **teeth** / **mice**" }
+        - { level: A1, point: { en: "sheep, fish", es: "sheep, fish" }, rule: { en: same form, es: igual en plural }, example: "two **sheep**", tr: { es: dos ovejas } }
+        - { level: A1, point: "jeans, trousers, glasses", rule: { en: "plural only, plural verb", es: "solo plural, verbo en plural" }, example: "My jeans **are** new.", tr: { es: Mis vaqueros son nuevos. } }
+
 sections:
   - title: { en: "Form: regular plurals", es: "Forma: plurales regulares" }
     level: A0
@@ -141,55 +162,3 @@ sections:
           - { wrong: two babys · two boxs, right: "two **babies** · two **boxes**", rule: { en: "consonant + y → ies · -x → -es", es: "consonante + y → ies · -x → -es" } }
           - { level: A1, wrong: two sheeps, right: "two **sheep**", rule: { en: sheep has the same form, es: sheep no cambia } }
           - { for: [es], level: A1, wrong: My trousers is black., right: "My trousers **are** black.", rule: { es: "trousers es plural" } }
-
-essentials:
-  - level: A0
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: singular, label: { en: Singular, es: Singular } }
-              - { key: plural, label: { en: Plural, es: Plural } }
-            rows:
-              - { singular: book, plural: "book**s**" }
-              - { singular: bus / box / watch, plural: "bus**es** / box**es** / watch**es**" }
-              - { singular: city, plural: "cit**ies**" }
-              - { singular: man / woman / child / person, plural: "**men** / **women** / **children** / **people**" }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "Most nouns + **-s**; -s, -sh, -ch, -x + **-es**.", es: "La mayoría + **-s**; -s, -sh, -ch, -x + **-es**." }
-              - { en: "Consonant + y → **-ies**; vowel + y → -s: cities, days.", es: "Consonante + y → **-ies**; vocal + y → -s: cities, days." }
-              - { en: "Adjectives stay the same: two **red** cars.", es: "Los adjetivos no cambian: two **red** cars." }
-              - { en: "Plural subject → plural verb: The people **are** nice.", es: "Sujeto plural → verbo plural: The people **are** nice." }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: two reds cars, right: "two **red** cars" }
-              - { wrong: three childs, right: "three **children**" }
-              - { for: [es], wrong: many peoples, right: "many **people**" }
-  - level: A1
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: -s sound, es: Sonido de -s }, rule: { en: "/s/ after /p t k f θ/ · /z/ after voiced sounds · /ɪz/ after /s z ʃ tʃ dʒ/", es: "/s/ tras /p t k f θ/ · /z/ tras sonidos sonoros · /ɪz/ tras /s z ʃ tʃ dʒ/" }, example: cups / dogs / buses }
-          - { point: -f / -fe, rule: → ves, example: knife → knives }
-          - { point: { en: Irregular, es: Irregulares }, rule: foot → feet · tooth → teeth · mouse → mice, example: "two **feet**" }
-          - { point: { en: Same form, es: Misma forma }, rule: "sheep, fish", example: "two **sheep**" }
-          - { point: { en: Plural only, es: Solo plural }, rule: { en: "trousers, jeans, glasses, scissors + plural verb", es: "trousers, jeans, glasses, scissors + verbo en plural" }, example: "a pair of jeans" }
-
-reminders:
-  - level: A0
-    items:
-      - { en: "No -s on irregular plurals: **children**, **people**, **men**, **women**.", es: "Sin -s en los plurales irregulares: **children**, **people**, **men**, **women**." }
-      - { for: [es], text: { es: "El adjetivo no tiene plural: two **red** cars." } }
-  - level: A1
-    items:
-      - { en: "trousers, jeans, glasses + plural verb: My jeans **are** new.", es: "trousers, jeans, glasses + verbo en plural: My jeans **are** new." }

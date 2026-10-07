@@ -13,20 +13,20 @@ summary:
   en: "Plans, arrangements, decisions, offers and predictions with going to, the present continuous, will and the present simple. A plan made before speaking takes going to, a decision made while speaking takes will: **I'm going to** visit Ana. **I'll** open the door."
   es: "Planes, citas, decisiones, ofrecimientos y predicciones con going to, el presente continuo, will y el presente simple. Hablaré se dice de dos maneras: un plan decidido antes lleva going to y una decisión tomada al hablar lleva will: **I'm going to** study. **I'll** help you."
 
-sections:
-  - title: { en: Overview, es: Resumen }
-    level: A1-A2
-    content:
-      - type: table
-        columns:
-          - { key: form, label: { en: Form, es: Forma } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { form: be going to + V, example: "I'**m going to** buy a car.", tr: { es: Voy a comprar un coche. } }
-          - { form: be + V-ing, example: "I'**m meeting** Ana at six.", tr: { es: He quedado con Ana a las seis. } }
-          - { level: A2, form: will + V, example: "I'**ll** carry that bag.", tr: { es: Yo llevo esa bolsa. } }
-          - { level: A2, form: V / V-s, example: "The film **starts** at nine.", tr: { es: La película empieza a las nueve. } }
+cheatsheet:
+  level: A1-A2
+  content:
+    - type: table
+      columns:
+        - { key: form, label: { en: Form, es: Forma } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { form: be going to + V, example: "I'**m going to** buy a car.", tr: { es: Voy a comprar un coche. } }
+        - { form: be + V-ing, example: "I'**m meeting** Ana at six.", tr: { es: He quedado con Ana a las seis. } }
+        - { level: A2, form: will + V, example: "I'**ll** carry that bag.", tr: { es: Yo llevo esa bolsa. } }
+        - { level: A2, form: V / V-s, example: "The film **starts** at nine.", tr: { es: La película empieza a las nueve. } }
 
+sections:
   - title: { en: "Form: be going to", es: "Forma: be going to" }
     level: A1
     content:
@@ -172,82 +172,3 @@ sections:
           - { level: A2, wrong: Do you will come?, right: "**Will** you come?", rule: { en: "will makes questions by itself", es: "will forma preguntas sin do" } }
           - { for: [es], level: A2, wrong: I don't will go., right: "I **won't go**.", rule: { es: "negativa: won't + verbo" } }
           - { for: [es], level: A2, wrong: I think it rains tomorrow., right: "I think it **will rain** tomorrow.", rule: { es: "predicción con *creo que* → will + verbo" } }
-
-essentials:
-  - level: A1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: form, label: { en: Form, es: Forma } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { form: +, example: "I'**m going to** work." }
-              - { form: −, example: "She **isn't going to** work." }
-              - { form: "?", example: "**Are** you **going to** work?" }
-              - { form: { en: arrangement, es: cita acordada }, example: "I'**m meeting** Ana at six." }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - en: "am / is / are + **going to** + base verb. Only **be** changes."
-                es: "am / is / are + **going to** + forma base. Solo cambia **be**."
-              - en: "Write **going to**; **gonna** is informal speech."
-                es: "Se escribe **going to**; **gonna** es habla informal."
-              - { for: [es], text: { es: "*Ir a* + infinitivo = **going to** + verbo." } }
-      - title: { en: Use, es: Uso }
-        content:
-          - type: table
-            columns:
-              - { key: use, label: { en: Use, es: Uso } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { use: { en: plan, es: plan }, example: "We'**re going to** visit Granada.", tr: { es: Vamos a visitar Granada. } }
-              - { use: { en: "prediction with evidence", es: "predicción con pruebas" }, example: "It'**s going to** rain.", tr: { es: Va a llover. } }
-              - { use: { en: "fixed arrangement", es: "cita acordada" }, example: "I'**m seeing** the dentist on Friday.", tr: { es: El viernes voy al dentista. } }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: Tomorrow I go to the cinema., right: "Tomorrow I'**m going** to the cinema." }
-              - { for: [en], wrong: I'm going to to travel., right: "I'm going to **travel**." }
-              - { wrong: She is going to goes., right: "She is going to **go**." }
-  - level: A2
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: will, rule: { en: "will / 'll / won't + base verb, same for every person", es: "will / 'll / won't + forma base, igual para todas las personas" }, example: "She **will come**." }
-          - { point: { en: Timetables, es: Horarios }, rule: { en: "present simple", es: "presente simple" }, example: "The train **leaves** at 6:15." }
-          - { point: { en: Decision now, es: Decisión ahora }, rule: { en: "decision at the moment of speaking", es: "decisión en el momento de hablar" }, example: "It's cold. I'**ll close** the window." }
-          - { point: { en: Offers and promises, es: Ofrecimientos y promesas }, rule: { en: "will", es: "will" }, example: "I'**ll carry** your bag. / I **won't tell**." }
-          - { point: { en: Opinions, es: Opiniones }, rule: { en: "I think + will", es: "I think + will" }, example: "I think she'**ll** win." }
-          - { point: { en: Questions, es: Preguntas }, rule: { en: "Will + subject + V, no do", es: "Will + sujeto + V, sin do" }, example: "**Will** you **call** me?" }
-  - level: B1
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: will vs going to, es: will y going to }, rule: { en: "opinion → will; evidence now → going to", es: "opinión → will; pruebas ahora → going to" }, example: "I think it'**ll** be fine. / Watch out! You'**re going to** fall." }
-
-reminders:
-  - level: A1
-    items:
-      - en: "going to + **base verb**: She is going to **go**."
-        es: "going to + **forma base**: She is going to **go**."
-      - { for: [es], text: { es: "Un plan en inglés: going to o presente continuo con tiempo futuro, no solo el presente." } }
-  - level: A2
-    items:
-      - en: "Decision at the moment of speaking → **will**: I'**ll answer** it."
-        es: "Decisión en el momento de hablar → **will**: I'**ll answer** it."
-  - level: B1
-    items:
-      - en: "Evidence now → **going to**: It's **going to** rain."
-        es: "Pruebas ahora → **going to**: It's **going to** rain."

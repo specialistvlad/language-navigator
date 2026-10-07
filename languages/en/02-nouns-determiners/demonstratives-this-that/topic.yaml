@@ -13,18 +13,22 @@ summary:
   en: "This and these point to things near you; that and those point to things far away, in the singular and the plural. These and those go with plural nouns and are: **These** are my keys. **Those** shoes **are** nice."
   es: "This y these señalan cosas cercanas; that y those, cosas lejanas, en singular y en plural. El inglés distingue solo cerca y lejos, así que *ese* y *aquel* son los dos **that**: **That** is my bag. **Those** are my shoes."
 
+cheatsheet:
+  level: A0
+  content:
+    - type: table
+      columns:
+        - { key: where, label: { en: Distance, es: Distancia } }
+        - { key: singular, label: { en: Singular, es: Singular } }
+        - { key: plural, label: { en: Plural, es: Plural } }
+      rows:
+        - { where: { en: "near: here", es: "cerca: aquí" }, singular: "**this** book", plural: "**these** books", tr: { es: este libro / estos libros } }
+        - { where: { en: "far: there", es: "lejos: ahí, allí" }, singular: "**that** book", plural: "**those** books", tr: { es: ese libro / esos libros } }
+
 sections:
   - title: { en: Overview, es: Resumen }
     level: A0
     content:
-      - type: table
-        columns:
-          - { key: where, label: { en: Distance, es: Distancia } }
-          - { key: singular, label: { en: Singular, es: Singular } }
-          - { key: plural, label: { en: Plural, es: Plural } }
-        rows:
-          - { where: { en: "near: here", es: "cerca: aquí" }, singular: "**this** book", plural: "**these** books", tr: { es: este libro / estos libros } }
-          - { where: { en: "far: there", es: "lejos: ahí, allí" }, singular: "**that** book", plural: "**those** books", tr: { es: ese libro / esos libros } }
       - type: bullets
         items:
           - { for: [es], text: { es: "*ese* y *aquel* son los dos **that**; *esos* y *aquellos*, **those**." } }
@@ -95,48 +99,3 @@ sections:
           - { wrong: These is my keys., right: "These **are** my keys.", rule: { en: "these / those + are", es: "these / those + are" } }
           - { for: [es], wrong: these /ðɪs/, right: "these **/ðiːz/**", rule: { es: "/iː/ larga y /z/ final" } }
           - { for: [es], wrong: "Hello, I am Tom. (on the phone)", right: "Hello, **this is** Tom.", rule: { es: "al teléfono: this is" } }
-
-essentials:
-  - level: A0
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: where, label: { en: Distance, es: Distancia } }
-              - { key: singular, label: { en: Singular, es: Singular } }
-              - { key: plural, label: { en: Plural, es: Plural } }
-            rows:
-              - { where: { en: near, es: cerca }, singular: "**this** book is", plural: "**these** books are" }
-              - { where: { en: far, es: lejos }, singular: "**that** book is", plural: "**those** books are" }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "Before a noun or alone: **This** bag is new. / **This** is my bag.", es: "Delante de un sustantivo o solo: **This** bag is new. / **This** is my bag." }
-              - { en: "this /ðɪs/ ≠ these /ðiːz/.", es: "this /ðɪs/ ≠ these /ðiːz/." }
-              - { en: "Introductions and phone: **This is** Ana. / Hi, **this is** Tom.", es: "Presentaciones y teléfono: **This is** Ana. / Hi, **this is** Tom." }
-              - { for: [es], text: { es: "*ese* y *aquel* → **that**." } }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { wrong: this books, right: "**these** books" }
-              - { wrong: These is my keys., right: "These **are** my keys." }
-  - level: A1
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: this one / that one, rule: { en: "one replaces a known singular noun", es: "one sustituye a un sustantivo singular conocido" }, example: "I like **that one**." }
-          - { point: { en: Time, es: Tiempo }, rule: { en: "this = now · that = then", es: "this = ahora · that = entonces" }, example: "**this** morning / **that** day" }
-          - { point: { en: Reaction, es: Reacción }, rule: { en: "that = what was just said", es: "that = lo que se acaba de decir" }, example: "**That's** great!" }
-
-reminders:
-  - level: A0
-    items:
-      - { en: "these / those + plural noun + **are**.", es: "these / those + sustantivo plural + **are**." }
-      - { for: [es], text: { es: "this /ðɪs/ ≠ these /ðiːz/." } }

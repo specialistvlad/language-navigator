@@ -15,6 +15,18 @@ summary:
   en: "The present tense of regular -ar, -er and -ir verbs: habits, facts, current states and actions now. The ending shows the person, so the pronoun is optional: **hablo**, **hablas**, **habla**."
   es: "El presente de los verbos regulares en -ar, -er e -ir: hábitos y hechos. -er e -ir solo se distinguen en nosotros y vosotros: **comemos**, **vivimos**; **coméis**, **vivís**."
 
+cheatsheet:
+  level: A1
+  content:
+    - type: table
+      columns:
+        - { key: step, label: { en: Step, es: Paso } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { step: { en: 1. Take the infinitive, es: 1. Tomar el infinitivo }, example: hablar }
+        - { step: { en: 2. Remove -ar / -er / -ir → stem, es: 2. Quitar -ar / -er / -ir → raíz }, example: habl- }
+        - { step: { en: 3. Add the ending for the person, es: 3. Añadir la terminación de la persona }, example: "habl- + -o → **hablo**" }
+
 sections:
   - title: { en: Overview, es: Resumen }
     level: A1
@@ -23,14 +35,6 @@ sections:
         text:
           en: "Every Spanish infinitive ends in **-ar**, **-er** or **-ir**."
           es: "Todo infinitivo español termina en **-ar**, **-er** o **-ir**."
-      - type: table
-        columns:
-          - { key: step, label: { en: Step, es: Paso } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { step: { en: 1. Take the infinitive, es: 1. Tomar el infinitivo }, example: hablar }
-          - { step: { en: 2. Remove -ar / -er / -ir → stem, es: 2. Quitar -ar / -er / -ir → raíz }, example: habl- }
-          - { step: { en: 3. Add the ending for the person, es: 3. Añadir la terminación de la persona }, example: "habl- + -o → **hablo**" }
 
   - title: { en: "Form: endings", es: "Forma: terminaciones" }
     level: A1
@@ -322,75 +326,3 @@ sections:
           - { wrong: Hablo no francés., right: "**No** hablo francés.", rule: { en: no goes before the verb, es: no va delante del verbo } }
           - { wrong: Hablas español?, right: "**¿**Hablas español?", rule: { en: questions open with ¿, es: la pregunta empieza con ¿ } }
           - { wrong: Mi familia viven en Lima., right: "Mi familia **vive** en Lima.", rule: { en: "familia, gente → singular verb", es: "familia, gente → verbo en singular" } }
-
-essentials:
-  - level: A1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: person, label: { en: Person, es: Persona } }
-              - { key: hablar, label: { en: hablar (speak), es: hablar } }
-              - { key: comer, label: { en: comer (eat), es: comer } }
-              - { key: vivir, label: { en: vivir (live), es: vivir } }
-            rows:
-              - { person: yo, hablar: "habl**o**", comer: "com**o**", vivir: "viv**o**" }
-              - { person: tú, hablar: "habl**as**", comer: "com**es**", vivir: "viv**es**" }
-              - { person: él / ella / usted, hablar: "habl**a**", comer: "com**e**", vivir: "viv**e**" }
-              - { person: nosotros / nosotras, hablar: "habl**amos**", comer: "com**emos**", vivir: "viv**imos**" }
-              - { person: vosotros / vosotras, hablar: "habl**áis**", comer: "com**éis**", vivir: "viv**ís**" }
-              - { person: ellos / ellas / ustedes, hablar: "habl**an**", comer: "com**en**", vivir: "viv**en**" }
-          - type: bullets
-            items:
-              - { en: "LatAm: **ustedes** is the only plural *you*.", es: "LatAm: **ustedes** es la única forma de plural para hablar a varias personas." }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "Infinitive minus -ar / -er / -ir = stem: habl-ar → **habl-**.", es: "Infinitivo menos -ar / -er / -ir = raíz: habl-ar → **habl-**." }
-              - { en: "-er and -ir differ only in nosotros (-emos / -imos) and vosotros (-éis / -ís).", es: "-er e -ir solo se distinguen en nosotros (-emos / -imos) y vosotros (-éis / -ís)." }
-              - { en: "The ending shows the person; the pronoun is optional: **Hablo** inglés.", es: "La terminación indica la persona; el pronombre es opcional: **Hablo** inglés." }
-              - { en: "Negative: **no** + verb: **No** hablo francés.", es: "Negativa: **no** + verbo: **No** hablo francés." }
-              - { en: "Question: same form between ¿ ?: ¿**Hablas** español? / ¿Dónde **vive** Ana?", es: "Pregunta: la misma forma entre ¿ ?: ¿**Hablas** español? / ¿Dónde **vive** Ana?" }
-      - title: { en: Use, es: Uso }
-        content:
-          - type: table
-            columns:
-              - { key: use, label: { en: Use, es: Uso } }
-              - { key: example, label: { en: Spanish, es: Ejemplo } }
-            rows:
-              - { use: { en: habit, es: hábito }, example: "**Desayuno** a las ocho.", tr: { en: I have breakfast at eight. } }
-              - { use: { en: state, es: estado }, example: "**Vivo** en Valencia.", tr: { en: I live in Valencia. } }
-              - { use: { en: now, es: ahora }, example: "Ahora **trabajo** en casa.", tr: { en: "I'm working at home now." } }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { wrong: Yo hablar español., right: "Yo **hablo** español." }
-              - { for: [en], wrong: ¿Dónde Ana vive?, right: "¿Dónde **vive** Ana?" }
-              - { for: [es], wrong: Nosotros vivemos aquí., right: "Nosotros **vivimos** aquí." }
-              - { wrong: Hablas español?, right: "**¿**Hablas español?" }
-  - level: A2
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: yo-form spelling, es: Ortografía de yo }, rule: { en: "-ger / -gir → -jo · consonant + -cer → -zo · -guir → -go", es: "-ger / -gir → -jo · consonante + -cer → -zo · -guir → -go" }, example: recojo / convenzo / distingo }
-          - { point: { en: Near future, es: Futuro próximo }, rule: { en: present + time word, es: presente + marcador temporal }, example: { ex: "Mañana **trabajo** en casa.", tr: { en: "I'm working at home tomorrow." } } }
-          - { point: { en: Requests, es: Peticiones }, rule: { en: present as a question, es: presente en forma de pregunta }, example: { ex: "¿Me **pasas** la sal?", tr: { en: Can you pass me the salt? } } }
-          - { point: { en: Duration up to now, es: Duración hasta ahora }, rule: { en: present + desde hace, es: presente + desde hace }, example: { ex: "**Estudio** español desde hace dos años.", tr: { en: "I've been studying Spanish for two years." } } }
-
-reminders:
-  - level: A1
-    items:
-      - { for: [en], text: { en: "One form covers *I speak* and *I'm speaking*: **Hablo**." } }
-      - { en: "-er and -ir differ only in nosotros (-emos / -imos) and vosotros (-éis / -ís).", es: "-er e -ir solo se distinguen en nosotros (-emos / -imos) y vosotros (-éis / -ís)." }
-      - { for: [es], text: { es: "Las formas de vosotros llevan tilde: habl**áis**, com**éis**, viv**ís**." } }
-  - level: A2
-    items:
-      - en: "Duration up to now → present + **desde hace**: Estudio español **desde hace** dos años."
-        es: "Duración hasta ahora → presente + **desde hace**: Estudio español **desde hace** dos años."

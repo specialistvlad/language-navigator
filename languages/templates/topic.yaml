@@ -14,16 +14,22 @@ summary:
   en: "{Lead: the forms and what they do, at most 160 characters.} {The rule to get right, with a **bold** example.}"
   es: "{Entrada: las formas y para qué sirven, como máximo 160 caracteres.} {La regla clave, con un ejemplo en **negrita**.}"
 
+cheatsheet:
+  level: "{A1-A2}"
+  content:
+    - type: table
+      columns:
+        - { key: form, label: { en: Form, es: Forma }, merge: true, center: true }
+        - { key: rule, label: { en: Rule, es: Regla } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { form: { en: "{form}", es: "{forma}" }, rule: { en: "{rule}", es: "{regla}" }, example: "{example with **target** in bold}", tr: { es: "{traducción}" } }
+        - { level: "{A2}", form: { en: "{form}", es: "{forma}" }, rule: { en: "{rule}", es: "{regla}" }, example: "{example}", tr: { es: "{traducción}" } }
+
 sections:
   - title: { en: Overview, es: Resumen }
     level: "{A1}"
     content:
-      - type: table
-        columns:
-          - { key: form, label: { en: Form, es: Forma } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { form: { en: "{form}", es: "{forma}" }, example: "{example with **target** in bold}", tr: { es: "{traducción}" } }
       - type: bullets
         items:
           - { en: "{Rule.}", es: "{Regla.}" }
@@ -46,38 +52,3 @@ sections:
         audience: true
         rows:
           - { wrong: "{wrong}", right: "{right with **fix** in bold}", rule: { en: "{rule}", es: "{regla}" } }
-
-essentials:
-  - level: "{A1}"
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: form, label: { en: Form, es: Forma } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { form: "{form}", example: "{example}" }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "{Rule.}", es: "{Regla.}" }
-      - title: { en: Use, es: Uso }
-        content:
-          - type: table
-            columns:
-              - { key: use, label: { en: Use, es: Uso } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { use: { en: "{use}", es: "{uso}" }, example: "{example}" }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { wrong: "{wrong}", right: "{right}" }
-
-reminders:
-  - level: "{A1}"
-    items:
-      - { en: "{Trap that still catches learners at higher levels.}", es: "{Trampa que sigue presente en niveles superiores.}" }

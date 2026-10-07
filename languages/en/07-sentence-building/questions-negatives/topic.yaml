@@ -13,28 +13,32 @@ summary:
   en: "Yes/no questions, wh-questions, short answers and negatives, with be, modals and every other verb. Be and modals invert or take not; other verbs use do, does or did with the base verb: **Do** you **like** tea?"
   es: "Preguntas, respuestas cortas y negativas con be, modales y los demás verbos. En inglés la pregunta y la negativa de un verbo normal llevan do, does o did, y el sujeto siempre aparece: **Do** you **like** tea? I **don't like** tea."
 
+cheatsheet:
+  level: A1
+  content:
+    - type: table
+      columns:
+        - { key: form, label: { en: Form, es: Forma } }
+        - { key: be, label: { en: "be and modals", es: "be y modales" } }
+        - { key: other, label: { en: Other verbs, es: Otros verbos } }
+      rows:
+        - form: { en: Affirmative, es: Afirmativa }
+          be: { ex: "She **is** here. / She **can** swim.", tr: { es: Está aquí. / Sabe nadar. } }
+          other: { ex: "She **likes** tea.", tr: { es: Le gusta el té. } }
+        - form: { en: Negative, es: Negativa }
+          be: { ex: "She **isn't** here. / She **can't** swim.", tr: { es: No está aquí. / No sabe nadar. } }
+          other: { ex: "She **doesn't like** tea.", tr: { es: No le gusta el té. } }
+        - form: { en: Question, es: Pregunta }
+          be: { ex: "**Is** she here? / **Can** she swim?", tr: { es: "¿Está aquí? / ¿Sabe nadar?" } }
+          other: { ex: "**Does** she **like** tea?", tr: { es: "¿Le gusta el té?" } }
+        - form: { en: Short answer, es: Respuesta corta }
+          be: { ex: "Yes, she **is**. / No, she **can't**.", tr: { es: Sí. / No. } }
+          other: { ex: "Yes, she **does**. / No, she **doesn't**.", tr: { es: Sí. / No. } }
+
 sections:
   - title: { en: Overview, es: Resumen }
     level: A1
     content:
-      - type: table
-        columns:
-          - { key: form, label: { en: Form, es: Forma } }
-          - { key: be, label: { en: "be and modals", es: "be y modales" } }
-          - { key: other, label: { en: Other verbs, es: Otros verbos } }
-        rows:
-          - form: { en: Affirmative, es: Afirmativa }
-            be: { ex: "She **is** here. / She **can** swim.", tr: { es: Está aquí. / Sabe nadar. } }
-            other: { ex: "She **likes** tea.", tr: { es: Le gusta el té. } }
-          - form: { en: Negative, es: Negativa }
-            be: { ex: "She **isn't** here. / She **can't** swim.", tr: { es: No está aquí. / No sabe nadar. } }
-            other: { ex: "She **doesn't like** tea.", tr: { es: No le gusta el té. } }
-          - form: { en: Question, es: Pregunta }
-            be: { ex: "**Is** she here? / **Can** she swim?", tr: { es: "¿Está aquí? / ¿Sabe nadar?" } }
-            other: { ex: "**Does** she **like** tea?", tr: { es: "¿Le gusta el té?" } }
-          - form: { en: Short answer, es: Respuesta corta }
-            be: { ex: "Yes, she **is**. / No, she **can't**.", tr: { es: Sí. / No. } }
-            other: { ex: "Yes, she **does**. / No, she **doesn't**.", tr: { es: Sí. / No. } }
       - type: bullets
         items:
           - en: "**be** and modal verbs invert with the subject or take **not**. Other verbs use **do / does / did**."
@@ -217,66 +221,3 @@ sections:
           - { wrong: Did you went?, right: "Did you **go**?", rule: { en: after did the verb is in the base form, es: después de did el verbo va en forma base } }
           - { wrong: Who did call you?, right: "**Who called** you?", rule: { en: a subject question has no did, es: la pregunta de sujeto no lleva did } }
           - { for: [en], wrong: Do she like tea?, right: "**Does** she like tea?", rule: { en: he / she / it → does } }
-
-essentials:
-  - level: A1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: form, label: { en: Form, es: Forma } }
-              - { key: be, label: { en: "be and modals", es: "be y modales" } }
-              - { key: other, label: { en: Other verbs, es: Otros verbos } }
-            rows:
-              - { form: "−", be: "She **isn't** here. / She **can't** swim.", other: "She **doesn't like** tea." }
-              - { form: "?", be: "**Is** she here? / **Can** she swim?", other: "**Does** she **like** tea?" }
-              - { form: { en: Short answer, es: Respuesta corta }, be: "Yes, she **is**. / No, she **can't**.", other: "Yes, she **does**." }
-              - { form: { en: Wh-question, es: Con wh- }, be: "**Where is** she?", other: "**Where does** she **live**?" }
-              - { form: { en: Subject question, es: De sujeto }, be: "**Who is** here?", other: "**Who lives** here?" }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - en: "**be** and modals invert or take **not**. Other verbs use **do / does / did**."
-                es: "**be** y los modales se invierten o llevan **not**. Los demás verbos usan **do / does / did**."
-              - en: "After do / does / did the verb is in the base form."
-                es: "Después de do / does / did el verbo va en forma base."
-              - en: "Wh-word + auxiliary + subject + verb: **Where do** you **live**?"
-                es: "wh-word + auxiliar + sujeto + verbo: **Where do** you **live**?"
-              - en: "Subject questions have no do / does / did: **Who called**?"
-                es: "Las preguntas de sujeto no llevan do / does / did: **Who called**?"
-              - en: "A short answer repeats the auxiliary: Yes, I **do**."
-                es: "La respuesta corta repite el auxiliar: Yes, I **do**."
-      - title: { en: Use, es: Uso }
-        content:
-          - type: table
-            columns:
-              - { key: word, label: { en: Wh-word, es: Palabra } }
-              - { key: asks, label: { en: Asks about, es: Pregunta por } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { word: what / who, asks: { en: thing / person, es: cosa / persona }, example: "**What** do you want?" }
-              - { word: where / when, asks: { en: place / time, es: lugar / tiempo }, example: "**When** is the party?" }
-              - { word: why / how, asks: { en: reason / way, es: razón / manera }, example: "**Why** are you late?" }
-              - { word: which / whose, asks: { en: choice / owner, es: elección / dueño }, example: "**Whose** keys are these?" }
-              - { word: how much / many, asks: { en: amount / number, es: cantidad / número }, example: "**How many** brothers have you got?" }
-              - { word: how often / old / long, asks: { en: frequency / age / duration, es: frecuencia / edad / duración }, example: "**How often** do you swim?" }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: Where you live?, right: "Where **do** you live?" }
-              - { for: [es], wrong: I no like coffee., right: "I **don't like** coffee." }
-              - { for: [es], wrong: I don't know nothing., right: "I don't know **anything**." }
-              - { wrong: Did you went?, right: "Did you **go**?" }
-              - { wrong: Who did call you?, right: "**Who called** you?" }
-
-reminders:
-  - level: A1
-    items:
-      - en: "do / does / did + base verb: Did you **go**? / She doesn't **like** tea."
-        es: "do / does / did + forma base: Did you **go**? / She doesn't **like** tea."
-      - en: "Subject questions have no auxiliary: **Who called** you?"
-        es: "Las preguntas de sujeto no llevan auxiliar: **Who called** you?"
-      - { for: [es], text: { es: "Una sola palabra negativa: I don't know **anything**." } }

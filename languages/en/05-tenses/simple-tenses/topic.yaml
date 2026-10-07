@@ -13,48 +13,52 @@ summary:
   en: "Past, present and future simple: do or does, did and will make questions and negatives, and the main verb stays in its base form. Once a helper appears, the main verb loses -s and -ed: She **doesn't like** tea. **Did** he **go**?"
   es: "Presente, pasado y futuro simple: do o does, did y will forman preguntas y negativas, y el verbo principal queda en forma base. El sujeto siempre aparece y, con auxiliar, el verbo pierde la -s y la -ed: **Does** she **like** tea? She **didn't go**."
 
+cheatsheet:
+  level: A1-A2
+  content:
+    - type: table
+      columns:
+        - { key: tense, label: { en: Tense, es: Tiempo }, merge: true, center: true }
+        - { key: qh, group: { en: Question, es: Pregunta }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
+        - { key: qs, group: { en: Question, es: Pregunta }, label: { en: Subject, es: Sujeto } }
+        - { key: qv, group: { en: Question, es: Pregunta }, label: { en: Verb, es: Verbo }, merge: true, center: true }
+        - { key: ss, group: { en: Statement, es: Afirmación }, label: { en: Subject, es: Sujeto } }
+        - { key: sh, group: { en: Statement, es: Afirmación }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
+        - { key: sv, group: { en: Statement, es: Afirmación }, label: { en: Verb, es: Verbo }, merge: true, center: true }
+        - { key: ns, group: { en: Negative, es: Negativa }, label: { en: Subject, es: Sujeto } }
+        - { key: nh, group: { en: Negative, es: Negativa }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
+        - { key: nv, group: { en: Negative, es: Negativa }, label: { en: Verb, es: Verbo }, merge: true, center: true }
+      rows:
+        - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "I", qv: "work?", ss: "I", sh: "**will**", sv: "work.", ns: "I", nh: "**won't**", nv: "work." }
+        - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "you", qv: "work?", ss: "You", sh: "**will**", sv: "work.", ns: "You", nh: "**won't**", nv: "work." }
+        - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "he", qv: "work?", ss: "He", sh: "**will**", sv: "work.", ns: "He", nh: "**won't**", nv: "work." }
+        - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "she", qv: "work?", ss: "She", sh: "**will**", sv: "work.", ns: "She", nh: "**won't**", nv: "work." }
+        - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "it", qv: "work?", ss: "It", sh: "**will**", sv: "work.", ns: "It", nh: "**won't**", nv: "work." }
+        - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "we", qv: "work?", ss: "We", sh: "**will**", sv: "work.", ns: "We", nh: "**won't**", nv: "work." }
+        - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "they", qv: "work?", ss: "They", sh: "**will**", sv: "work.", ns: "They", nh: "**won't**", nv: "work." }
+        - { tense: { en: Present, es: Presente }, qh: "**Do**", qs: "I", qv: "work?", ss: "I", sv: "work.", ns: "I", nh: "**don't**", nv: "work." }
+        - { tense: { en: Present, es: Presente }, qh: "**Do**", qs: "you", qv: "work?", ss: "You", sv: "work.", ns: "You", nh: "**don't**", nv: "work." }
+        - { tense: { en: Present, es: Presente }, qh: "**Does**", qs: "he", qv: "work?", ss: "He", sv: "work**s**.", ns: "He", nh: "**doesn't**", nv: "work." }
+        - { tense: { en: Present, es: Presente }, qh: "**Does**", qs: "she", qv: "work?", ss: "She", sv: "work**s**.", ns: "She", nh: "**doesn't**", nv: "work." }
+        - { tense: { en: Present, es: Presente }, qh: "**Does**", qs: "it", qv: "work?", ss: "It", sv: "work**s**.", ns: "It", nh: "**doesn't**", nv: "work." }
+        - { tense: { en: Present, es: Presente }, qh: "**Do**", qs: "we", qv: "work?", ss: "We", sv: "work.", ns: "We", nh: "**don't**", nv: "work." }
+        - { tense: { en: Present, es: Presente }, qh: "**Do**", qs: "they", qv: "work?", ss: "They", sv: "work.", ns: "They", nh: "**don't**", nv: "work." }
+        - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "I", qv: "work?", ss: "I", sv: "work**ed**.", ns: "I", nh: "**didn't**", nv: "work." }
+        - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "you", qv: "work?", ss: "You", sv: "work**ed**.", ns: "You", nh: "**didn't**", nv: "work." }
+        - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "he", qv: "work?", ss: "He", sv: "work**ed**.", ns: "He", nh: "**didn't**", nv: "work." }
+        - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "she", qv: "work?", ss: "She", sv: "work**ed**.", ns: "She", nh: "**didn't**", nv: "work." }
+        - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "it", qv: "work?", ss: "It", sv: "work**ed**.", ns: "It", nh: "**didn't**", nv: "work." }
+        - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "we", qv: "work?", ss: "We", sv: "work**ed**.", ns: "We", nh: "**didn't**", nv: "work." }
+        - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "they", qv: "work?", ss: "They", sv: "work**ed**.", ns: "They", nh: "**didn't**", nv: "work." }
+
 sections:
   - title: { en: Overview, es: Resumen }
-    level: A1-A2
+    level: A1
     content:
       - type: text
         text:
           en: "Each simple tense has a helper verb: **will** for the future, **do / does** for the present, **did** for the past."
           es: "Cada tiempo simple tiene un verbo auxiliar: **will** para el futuro, **do / does** para el presente y **did** para el pasado."
-      - type: table
-        columns:
-          - { key: tense, label: { en: Tense, es: Tiempo }, merge: true, center: true }
-          - { key: qh, group: { en: Question, es: Pregunta }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
-          - { key: qs, group: { en: Question, es: Pregunta }, label: { en: Subject, es: Sujeto } }
-          - { key: qv, group: { en: Question, es: Pregunta }, label: { en: Verb, es: Verbo }, merge: true, center: true }
-          - { key: ss, group: { en: Statement, es: Afirmación }, label: { en: Subject, es: Sujeto } }
-          - { key: sh, group: { en: Statement, es: Afirmación }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
-          - { key: sv, group: { en: Statement, es: Afirmación }, label: { en: Verb, es: Verbo }, merge: true, center: true }
-          - { key: ns, group: { en: Negative, es: Negativa }, label: { en: Subject, es: Sujeto } }
-          - { key: nh, group: { en: Negative, es: Negativa }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
-          - { key: nv, group: { en: Negative, es: Negativa }, label: { en: Verb, es: Verbo }, merge: true, center: true }
-        rows:
-          - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "I", qv: "work?", ss: "I", sh: "**will**", sv: "work.", ns: "I", nh: "**won't**", nv: "work." }
-          - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "you", qv: "work?", ss: "You", sh: "**will**", sv: "work.", ns: "You", nh: "**won't**", nv: "work." }
-          - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "he", qv: "work?", ss: "He", sh: "**will**", sv: "work.", ns: "He", nh: "**won't**", nv: "work." }
-          - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "she", qv: "work?", ss: "She", sh: "**will**", sv: "work.", ns: "She", nh: "**won't**", nv: "work." }
-          - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "it", qv: "work?", ss: "It", sh: "**will**", sv: "work.", ns: "It", nh: "**won't**", nv: "work." }
-          - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "we", qv: "work?", ss: "We", sh: "**will**", sv: "work.", ns: "We", nh: "**won't**", nv: "work." }
-          - { level: A2, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "they", qv: "work?", ss: "They", sh: "**will**", sv: "work.", ns: "They", nh: "**won't**", nv: "work." }
-          - { tense: { en: Present, es: Presente }, qh: "**Do**", qs: "I", qv: "work?", ss: "I", sv: "work.", ns: "I", nh: "**don't**", nv: "work." }
-          - { tense: { en: Present, es: Presente }, qh: "**Do**", qs: "you", qv: "work?", ss: "You", sv: "work.", ns: "You", nh: "**don't**", nv: "work." }
-          - { tense: { en: Present, es: Presente }, qh: "**Does**", qs: "he", qv: "work?", ss: "He", sv: "work**s**.", ns: "He", nh: "**doesn't**", nv: "work." }
-          - { tense: { en: Present, es: Presente }, qh: "**Does**", qs: "she", qv: "work?", ss: "She", sv: "work**s**.", ns: "She", nh: "**doesn't**", nv: "work." }
-          - { tense: { en: Present, es: Presente }, qh: "**Does**", qs: "it", qv: "work?", ss: "It", sv: "work**s**.", ns: "It", nh: "**doesn't**", nv: "work." }
-          - { tense: { en: Present, es: Presente }, qh: "**Do**", qs: "we", qv: "work?", ss: "We", sv: "work.", ns: "We", nh: "**don't**", nv: "work." }
-          - { tense: { en: Present, es: Presente }, qh: "**Do**", qs: "they", qv: "work?", ss: "They", sv: "work.", ns: "They", nh: "**don't**", nv: "work." }
-          - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "I", qv: "work?", ss: "I", sv: "work**ed**.", ns: "I", nh: "**didn't**", nv: "work." }
-          - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "you", qv: "work?", ss: "You", sv: "work**ed**.", ns: "You", nh: "**didn't**", nv: "work." }
-          - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "he", qv: "work?", ss: "He", sv: "work**ed**.", ns: "He", nh: "**didn't**", nv: "work." }
-          - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "she", qv: "work?", ss: "She", sv: "work**ed**.", ns: "She", nh: "**didn't**", nv: "work." }
-          - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "it", qv: "work?", ss: "It", sv: "work**ed**.", ns: "It", nh: "**didn't**", nv: "work." }
-          - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "we", qv: "work?", ss: "We", sv: "work**ed**.", ns: "We", nh: "**didn't**", nv: "work." }
-          - { tense: { en: Past, es: Pasado }, qh: "**Did**", qs: "they", qv: "work?", ss: "They", sv: "work**ed**.", ns: "They", nh: "**didn't**", nv: "work." }
       - type: bullets
         items:
           - en: "In questions the helper goes before the subject; in negatives it takes **not**: don't, doesn't, didn't, won't."
@@ -377,66 +381,3 @@ sections:
           - { for: [es], level: A2, wrong: I will to help you., right: "I **will help** you.", rule: { es: "will va directamente con el verbo" } }
           - { level: A2, wrong: Do you will come?, right: "**Will** you come?", rule: { en: "will makes questions by itself", es: "will forma la pregunta por sí solo" } }
           - { for: [es], level: A2, wrong: I think it rains tomorrow., right: "I think it **will rain** tomorrow.", rule: { es: "predicción con *creo que* → will + verbo" } }
-
-essentials:
-  - level: A1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: tense, label: { en: Tense, es: Tiempo } }
-              - { key: statement, label: { en: Statement, es: Afirmación } }
-              - { key: negative, label: { en: Negative, es: Negativa } }
-              - { key: question, label: { en: Question, es: Pregunta } }
-            rows:
-              - { tense: { en: Present, es: Presente }, statement: "I **work**. / She **works**.", negative: "I **don't** work. / She **doesn't** work.", question: "**Do** you work? / **Does** she work?" }
-              - { tense: { en: Past, es: Pasado }, statement: "I **worked**. / I **went**.", negative: "I **didn't** work.", question: "**Did** you work?" }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "Helpers: **do / does** for the present, **did** for the past.", es: "Auxiliares: **do / does** para el presente, **did** para el pasado." }
-              - { en: "he / she / it → verb + **-s**: works, watches, studies, has.", es: "he / she / it → verbo + **-s**: works, watches, studies, has." }
-              - { en: "After the helper, the base verb: Does she **work**? / She didn't **go**.", es: "Tras el auxiliar, la forma base: Does she **work**? / She didn't **go**." }
-              - { en: "Past: regular verbs + **-ed**; irregular verbs have their own form (went, saw).", es: "Pasado: verbos regulares + **-ed**; los irregulares tienen forma propia (went, saw)." }
-              - { for: [es], text: { es: "El sujeto siempre aparece: **She** works. **I** went." } }
-      - title: { en: Use, es: Uso }
-        content:
-          - type: table
-            columns:
-              - { key: use, label: { en: Use, es: Uso } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { use: { en: "present: habits, facts, states", es: "presente: hábitos, hechos, estados" }, example: "I **get up** at 7.", tr: { es: Me levanto a las 7. } }
-              - { use: { en: "past: finished action at a stated time", es: "pasado: acción terminada en un momento concreto" }, example: "I **visited** Paris last year.", tr: { es: "Visité París el año pasado." } }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { wrong: She work here., right: "She **works** here." }
-              - { wrong: He doesn't works., right: "He doesn't **work**." }
-              - { wrong: Did you went there?, right: "Did you **go** there?" }
-              - { for: [es], wrong: He no works., right: "He **doesn't work**." }
-  - level: A2
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: Future, es: Futuro }, rule: { en: "will / 'll / won't + base verb, same for every person", es: "will / 'll / won't + forma base, igual para todas las personas" }, example: "She'**ll come**. / She **won't come**." }
-          - { point: { en: Uses of will, es: Usos de will }, rule: { en: "decisions now, offers, promises, opinions (I think)", es: "decisiones al momento, ofrecimientos, promesas, opiniones (I think)" }, example: "I'**ll carry** your bag." }
-          - { point: { en: "-s and -ed sounds", es: "Sonidos de -s y -ed" }, rule: { en: "-s: /s/ /z/ /ɪz/ · -ed: /t/ /d/ /ɪd/", es: "-s: /s/ /z/ /ɪz/ · -ed: /t/ /d/ /ɪd/" }, example: "works / plays / watches · worked / played / wanted" }
-          - { point: { en: Timetables, es: Horarios }, rule: { en: "present simple for a scheduled future", es: "presente simple para un futuro programado" }, example: "The train **leaves** at 6:15." }
-          - { point: { en: Subject questions, es: Preguntas de sujeto }, rule: { en: "who / what as subject: no helper", es: "who / what como sujeto: sin auxiliar" }, example: "Who **lives** here? / What **happened**?" }
-
-reminders:
-  - level: A1
-    items:
-      - { en: "he / she / it + **-s**: She **works**.", es: "he / she / it + **-s**, con el sujeto siempre presente: **She works**." }
-      - { en: "Helper + base verb: **Does** she **work**? / She **didn't go**.", es: "Auxiliar + forma base: **Does** she **work**? / She **didn't go**." }
-  - level: A2
-    items:
-      - { en: "will + base verb, no to: I'**ll help** you.", es: "will + forma base, sin to: I'**ll help** you." }

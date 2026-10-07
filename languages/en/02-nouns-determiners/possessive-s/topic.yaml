@@ -13,6 +13,25 @@ summary:
   en: "Noun + 's shows who something belongs to, and ' alone follows a plural in -s. The owner comes first and the thing after it takes no article: **Ana's** car, my **parents'** house, the **children's** room."
   es: "Sustantivo + 's indica de quién es algo, y detrás de un plural en -s basta el apóstrofo. El inglés pone primero al poseedor con 's, sin of y sin artículo: *el coche de Ana* es **Ana's** car."
 
+cheatsheet:
+  level: A1
+  content:
+    - type: table
+      columns:
+        - { key: point, label: { en: Point, es: Punto } }
+        - { key: rule, label: { en: Rule, es: Regla } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { point: { en: singular noun, es: sustantivo singular }, rule: "+ 's", example: "**Ana's** car", tr: { es: el coche de Ana } }
+        - { point: { en: plural in -s, es: plural en -s }, rule: "+ '", example: "my **parents**' house", tr: { es: la casa de mis padres } }
+        - { point: { en: irregular plural, es: plural irregular }, rule: "+ 's", example: "the **children's** room", tr: { es: la habitación de los niños } }
+        - { point: { en: two owners, es: dos poseedores }, rule: { en: "'s on the last name", es: "'s en el último nombre" }, example: "Tom and **Ana's** flat", tr: { es: el piso de Tom y Ana } }
+        - { point: { en: word order, es: orden }, rule: { en: "owner first, thing after, no article", es: "primero el poseedor, después la cosa, sin artículo" }, example: "**my sister's** phone", tr: { es: el móvil de mi hermana } }
+        - { point: { en: "'s or of", es: "'s o of" }, rule: { en: "'s for people and animals, of for things", es: "'s para personas y animales, of para cosas" }, example: "the end **of** the film", tr: { es: el final de la película } }
+        - { point: Whose, rule: { en: "asks about the owner", es: "pregunta por el dueño" }, example: "**Whose** bag is this?", tr: { es: ¿De quién es esta bolsa? } }
+        - { point: "Who's", rule: { en: "= who is, not the owner", es: "= who is, no el poseedor" }, example: "**Whose** bag? ≠ **Who's** there?", tr: { es: ¿De quién es la bolsa? ≠ ¿Quién está ahí? } }
+        - { for: [es], point: { es: "de + persona" }, rule: { es: "poseedor + 's, sin of ni the" }, example: "**Ana's** car", tr: { es: el coche de Ana } }
+
 sections:
   - title: { en: "Form: 's and '", es: "Forma: 's y '" }
     level: A1
@@ -99,38 +118,3 @@ sections:
           - { wrong: my parents's house, right: "my **parents**' house", rule: { en: "plural in -s → + '", es: "plural en -s → + '" } }
           - { wrong: the childrens' room, right: "the **children's** room", rule: { en: "irregular plural → + 's", es: "plural irregular → + 's" } }
           - { wrong: Who's bag is this?, right: "**Whose** bag is this?", rule: { en: "who's = who is", es: "who's = who is" } }
-
-essentials:
-  - level: A1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: owner, label: { en: Owner, es: Poseedor } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { owner: { en: "singular / irregular plural + 's", es: "singular / plural irregular + 's" }, example: "Ana's car / the children's room" }
-              - { owner: { en: "plural in -s + '", es: "plural en -s + '" }, example: "my parents' house" }
-              - { owner: { en: "two owners: 's on the last", es: "dos poseedores: 's en el último" }, example: "Tom and Ana's flat" }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "Owner + 's + thing, no article: Ana's car.", es: "Poseedor + 's + cosa, sin artículo: Ana's car." }
-              - { en: "'s for people and animals; of for things: the end of the film.", es: "'s para personas y animales; of para cosas: the end of the film." }
-              - { en: "Whose + noun asks about the owner: Whose bag is this?", es: "Whose + sustantivo pregunta por el dueño: Whose bag is this?" }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: the car of Ana, right: "**Ana's** car" }
-              - { wrong: my parents's house, right: "my **parents**' house" }
-              - { wrong: Who's bag is this?, right: "**Whose** bag is this?" }
-
-reminders:
-  - level: A1
-    items:
-      - { en: "Plural in -s + ': my **parents**' house.", es: "Plural en -s + ': my **parents**' house." }
-      - { en: "**Whose** bag? ≠ **Who's** (= who is) there?", es: "**Whose** bag? ≠ **Who's** (= who is) there?" }
-      - { for: [es], text: { es: "*El coche de Ana* → **Ana's** car." } }

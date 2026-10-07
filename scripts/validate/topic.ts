@@ -13,11 +13,8 @@ export function checkTopic(ref: TopicRef, topic: Topic, ids: Set<string>, concep
   if (planned.join() !== [...topic.levels].sort((a, b) => lv(a) - lv(b)).join()) {
     report(where, `levels [${topic.levels.join(",")}] differ from curriculum ${ref.entry.levels}`);
   }
-  for (const level of topic.levels) {
-    if (!topic.essentials.some((e) => e.level === level)) report(where, `no essentials for ${level}`);
-  }
-  for (const e of [...topic.essentials, ...(topic.reminders ?? [])]) {
-    if (!topic.levels.includes(e.level)) report(where, `essentials / reminder level ${e.level} outside topic levels`);
+  for (const level of levelRange(topic.cheatsheet.level)) {
+    if (!topic.levels.includes(level)) report(where, `cheatsheet level ${topic.cheatsheet.level} outside topic levels`);
   }
   for (const section of topic.sections) {
     for (const level of levelRange(section.level)) {

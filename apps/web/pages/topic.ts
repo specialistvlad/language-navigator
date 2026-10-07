@@ -1,4 +1,4 @@
-// Topic pages: the guide in numbered sections, the Key points view, and the rail beside them.
+// Topic pages: the cheatsheet as section 00, the guide in numbered sections, and the rail beside them.
 import { levelRange, topicTitle, type TopicRef } from "../../../scripts/lib.ts";
 import { alternates, readChoices, type Track } from "../context.ts";
 import { type GuideSection, guideSections } from "../guide.ts";
@@ -32,25 +32,23 @@ export function topicPages(track: Track): void {
     if (topic === null) continue;
     const rctx = { ref, explain, refs: ctx.refs, link: ctx.link };
     const all = guideSections(rctx);
-    const parts = all.filter((s) => s.kind === "body");
-    const idOf = anchors(parts);
+    const idOf = anchors(all);
     const sections = all
       .map((s) => {
-        const cls = s.kind === "body" ? "part" : `block ${s.kind}`;
+        const cls = s.kind === "cheatsheet" ? "part cheatsheet" : "part";
         const anchor = idOf.get(s);
         const id = anchor === undefined ? "" : ` id="${anchor}"`;
         return `<section class="${cls}"${id} data-level="${s.from}"><h2>${inline(s.title, rctx)}${levelBadge(s.from, s.to)}</h2>${s.html}</section>`;
       })
       .join("\n");
 
-    // Rail: the guide sections with their levels, the Essentials view, and the next topic.
-    const tocItems = parts.map((s) => {
+    // Rail: the cheatsheet, then the guide sections with their levels, which the Extended view
+    // lists, and the next topic.
+    const tocItems = all.map((s) => {
       const levels = chips(levelRange(`${s.from}-${s.to}`));
-      return `<li data-level="${s.from}"><a href="#${idOf.get(s) ?? ""}" data-view="guide"><span class="name">${escapeHtml(s.title)}</span>${levels}</a></li>`;
+      const guide = s.kind === "cheatsheet" ? "" : ' class="guide"';
+      return `<li${guide} data-level="${s.from}"><a href="#${idOf.get(s) ?? ""}"><span class="name">${escapeHtml(s.title)}</span>${levels}</a></li>`;
     });
-    tocItems.push(
-      `<li><button type="button" data-view="essentials"><span class="name">${escapeHtml(t.keyPoints)}</span>${chips(topic.levels)}</button></li>`,
-    );
     const rail = `<h4>${escapeHtml(t.onThisPage)}</h4><ol class="toc">${tocItems.join("")}</ol>${upNext(track, written.slice(index + 1), ref)}`;
     const actions = [
       `<a class="tool edit" href="${editUrl(ref.path)}" rel="noopener" title="${escapeHtml(t.editTitle)}">${escapeHtml(t.editOn)}${GITHUB_ICON}<span class="sr-only">GitHub</span></a>`,

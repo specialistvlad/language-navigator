@@ -13,41 +13,45 @@ summary:
   en: "Present perfect and past perfect: have, has or had plus the past participle for an earlier event seen from a later point. A finished time such as yesterday or ago takes the past simple: I **saw** her yesterday. I **have seen** her today."
   es: "Present perfect y past perfect: have, has o had más el participio pasado para un hecho anterior visto desde un momento posterior. Un momento terminado como yesterday o ago pide past simple, aunque en español se diga he visto: I **saw** her yesterday. I **have seen** her today."
 
+cheatsheet:
+  level: A2-B1
+  content:
+    - type: table
+      columns:
+        - { key: tense, label: { en: Tense, es: Tiempo }, merge: true, center: true }
+        - { key: qh, group: { en: Question, es: Pregunta }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
+        - { key: qs, group: { en: Question, es: Pregunta }, label: { en: Subject, es: Sujeto } }
+        - { key: qv, group: { en: Question, es: Pregunta }, label: { en: Verb, es: Verbo }, merge: true, center: true }
+        - { key: ss, group: { en: Statement, es: Afirmación }, label: { en: Subject, es: Sujeto } }
+        - { key: sh, group: { en: Statement, es: Afirmación }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
+        - { key: sv, group: { en: Statement, es: Afirmación }, label: { en: Verb, es: Verbo }, merge: true, center: true }
+        - { key: ns, group: { en: Negative, es: Negativa }, label: { en: Subject, es: Sujeto } }
+        - { key: nh, group: { en: Negative, es: Negativa }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
+        - { key: nv, group: { en: Negative, es: Negativa }, label: { en: Verb, es: Verbo }, merge: true, center: true }
+      rows:
+        - { tense: { en: Present perfect, es: Present perfect }, qh: "**Have**", qs: "I", qv: "work**ed**?", ss: "I", sh: "**have**", sv: "work**ed**.", ns: "I", nh: "**haven't**", nv: "work**ed**." }
+        - { tense: { en: Present perfect, es: Present perfect }, qh: "**Have**", qs: "you", qv: "work**ed**?", ss: "You", sh: "**have**", sv: "work**ed**.", ns: "You", nh: "**haven't**", nv: "work**ed**." }
+        - { tense: { en: Present perfect, es: Present perfect }, qh: "**Has**", qs: "he", qv: "work**ed**?", ss: "He", sh: "**has**", sv: "work**ed**.", ns: "He", nh: "**hasn't**", nv: "work**ed**." }
+        - { tense: { en: Present perfect, es: Present perfect }, qh: "**Has**", qs: "she", qv: "work**ed**?", ss: "She", sh: "**has**", sv: "work**ed**.", ns: "She", nh: "**hasn't**", nv: "work**ed**." }
+        - { tense: { en: Present perfect, es: Present perfect }, qh: "**Has**", qs: "it", qv: "work**ed**?", ss: "It", sh: "**has**", sv: "work**ed**.", ns: "It", nh: "**hasn't**", nv: "work**ed**." }
+        - { tense: { en: Present perfect, es: Present perfect }, qh: "**Have**", qs: "we", qv: "work**ed**?", ss: "We", sh: "**have**", sv: "work**ed**.", ns: "We", nh: "**haven't**", nv: "work**ed**." }
+        - { tense: { en: Present perfect, es: Present perfect }, qh: "**Have**", qs: "they", qv: "work**ed**?", ss: "They", sh: "**have**", sv: "work**ed**.", ns: "They", nh: "**haven't**", nv: "work**ed**." }
+        - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "I", qv: "work**ed**?", ss: "I", sh: "**had**", sv: "work**ed**.", ns: "I", nh: "**hadn't**", nv: "work**ed**." }
+        - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "you", qv: "work**ed**?", ss: "You", sh: "**had**", sv: "work**ed**.", ns: "You", nh: "**hadn't**", nv: "work**ed**." }
+        - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "he", qv: "work**ed**?", ss: "He", sh: "**had**", sv: "work**ed**.", ns: "He", nh: "**hadn't**", nv: "work**ed**." }
+        - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "she", qv: "work**ed**?", ss: "She", sh: "**had**", sv: "work**ed**.", ns: "She", nh: "**hadn't**", nv: "work**ed**." }
+        - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "it", qv: "work**ed**?", ss: "It", sh: "**had**", sv: "work**ed**.", ns: "It", nh: "**hadn't**", nv: "work**ed**." }
+        - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "we", qv: "work**ed**?", ss: "We", sh: "**had**", sv: "work**ed**.", ns: "We", nh: "**hadn't**", nv: "work**ed**." }
+        - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "they", qv: "work**ed**?", ss: "They", sh: "**had**", sv: "work**ed**.", ns: "They", nh: "**hadn't**", nv: "work**ed**." }
+
 sections:
   - title: { en: Overview, es: Resumen }
-    level: A2-B1
+    level: A2
     content:
       - type: text
         text:
           en: "Each perfect tense is **have** + past participle: **have / has** for the present, **had** for the past."
           es: "Cada tiempo perfecto es **have** + participio pasado: **have / has** para el presente y **had** para el pasado."
-      - type: table
-        columns:
-          - { key: tense, label: { en: Tense, es: Tiempo }, merge: true, center: true }
-          - { key: qh, group: { en: Question, es: Pregunta }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
-          - { key: qs, group: { en: Question, es: Pregunta }, label: { en: Subject, es: Sujeto } }
-          - { key: qv, group: { en: Question, es: Pregunta }, label: { en: Verb, es: Verbo }, merge: true, center: true }
-          - { key: ss, group: { en: Statement, es: Afirmación }, label: { en: Subject, es: Sujeto } }
-          - { key: sh, group: { en: Statement, es: Afirmación }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
-          - { key: sv, group: { en: Statement, es: Afirmación }, label: { en: Verb, es: Verbo }, merge: true, center: true }
-          - { key: ns, group: { en: Negative, es: Negativa }, label: { en: Subject, es: Sujeto } }
-          - { key: nh, group: { en: Negative, es: Negativa }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
-          - { key: nv, group: { en: Negative, es: Negativa }, label: { en: Verb, es: Verbo }, merge: true, center: true }
-        rows:
-          - { tense: { en: Present perfect, es: Present perfect }, qh: "**Have**", qs: "I", qv: "work**ed**?", ss: "I", sh: "**have**", sv: "work**ed**.", ns: "I", nh: "**haven't**", nv: "work**ed**." }
-          - { tense: { en: Present perfect, es: Present perfect }, qh: "**Have**", qs: "you", qv: "work**ed**?", ss: "You", sh: "**have**", sv: "work**ed**.", ns: "You", nh: "**haven't**", nv: "work**ed**." }
-          - { tense: { en: Present perfect, es: Present perfect }, qh: "**Has**", qs: "he", qv: "work**ed**?", ss: "He", sh: "**has**", sv: "work**ed**.", ns: "He", nh: "**hasn't**", nv: "work**ed**." }
-          - { tense: { en: Present perfect, es: Present perfect }, qh: "**Has**", qs: "she", qv: "work**ed**?", ss: "She", sh: "**has**", sv: "work**ed**.", ns: "She", nh: "**hasn't**", nv: "work**ed**." }
-          - { tense: { en: Present perfect, es: Present perfect }, qh: "**Has**", qs: "it", qv: "work**ed**?", ss: "It", sh: "**has**", sv: "work**ed**.", ns: "It", nh: "**hasn't**", nv: "work**ed**." }
-          - { tense: { en: Present perfect, es: Present perfect }, qh: "**Have**", qs: "we", qv: "work**ed**?", ss: "We", sh: "**have**", sv: "work**ed**.", ns: "We", nh: "**haven't**", nv: "work**ed**." }
-          - { tense: { en: Present perfect, es: Present perfect }, qh: "**Have**", qs: "they", qv: "work**ed**?", ss: "They", sh: "**have**", sv: "work**ed**.", ns: "They", nh: "**haven't**", nv: "work**ed**." }
-          - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "I", qv: "work**ed**?", ss: "I", sh: "**had**", sv: "work**ed**.", ns: "I", nh: "**hadn't**", nv: "work**ed**." }
-          - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "you", qv: "work**ed**?", ss: "You", sh: "**had**", sv: "work**ed**.", ns: "You", nh: "**hadn't**", nv: "work**ed**." }
-          - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "he", qv: "work**ed**?", ss: "He", sh: "**had**", sv: "work**ed**.", ns: "He", nh: "**hadn't**", nv: "work**ed**." }
-          - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "she", qv: "work**ed**?", ss: "She", sh: "**had**", sv: "work**ed**.", ns: "She", nh: "**hadn't**", nv: "work**ed**." }
-          - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "it", qv: "work**ed**?", ss: "It", sh: "**had**", sv: "work**ed**.", ns: "It", nh: "**hadn't**", nv: "work**ed**." }
-          - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "we", qv: "work**ed**?", ss: "We", sh: "**had**", sv: "work**ed**.", ns: "We", nh: "**hadn't**", nv: "work**ed**." }
-          - { level: B1, tense: { en: Past perfect, es: Past perfect }, qh: "**Had**", qs: "they", qv: "work**ed**?", ss: "They", sh: "**had**", sv: "work**ed**.", ns: "They", nh: "**hadn't**", nv: "work**ed**." }
       - type: bullets
         items:
           - en: "In questions the helper goes before the subject; in negatives it takes **not**: haven't, hasn't, hadn't."
@@ -207,51 +211,3 @@ sections:
           - { level: B1, wrong: "When I arrived, the film has already started.", right: "When I arrived, the film **had** already **started**.", rule: { en: "earlier past action → had + participle", es: "acción pasada anterior → had + participio" } }
           - { for: [en], level: B1, wrong: Had you saw him?, right: "Had you **seen** him?", rule: { en: "after had use the past participle" } }
           - { for: [es], level: B1, wrong: I hadn't never been there., right: "I **had never** been there.", rule: { es: "never ya es negativo: had never + participio" } }
-
-essentials:
-  - level: A2
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: form, label: { en: Form, es: Forma } }
-              - { key: plural, label: I / you / we / they }
-              - { key: third, label: he / she / it }
-            rows:
-              - { form: +, plural: "I **have seen** it.", third: "She **has seen** it." }
-              - { form: −, plural: "I **haven't seen** it.", third: "She **hasn't seen** it." }
-              - { form: "?", plural: "**Have** you **seen** it?", third: "**Has** she **seen** it?" }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "have / has + past participle: worked, seen, gone.", es: "have / has + participio pasado: worked, seen, gone." }
-              - { en: "Time not given or unfinished → present perfect; finished time → past simple.", es: "Momento no dicho o sin terminar → present perfect; momento terminado → pasado simple." }
-              - { en: "ever, never, just, already before the participle; yet at the end.", es: "ever, never, just, already delante del participio; yet al final." }
-              - { en: "been = went and came back; gone = still there.", es: "been = fue y volvió; gone = sigue allí." }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { wrong: I have seen him yesterday., right: "I **saw** him yesterday." }
-              - { wrong: I have gone to Paris twice., right: "I have **been** to Paris twice." }
-              - { for: [es], wrong: I have eaten at two o'clock., right: "I **ate** at two o'clock." }
-  - level: B1
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: for / since, rule: { en: "state up to now: for + length, since + start", es: "estado hasta ahora: for + duración, since + inicio" }, example: "I've lived here **since** 2019." }
-          - { point: { en: Past perfect, es: Past perfect }, rule: { en: "had + participle: the earlier of two past events", es: "had + participio: el anterior de dos hechos pasados" }, example: "When I arrived, the film **had started**." }
-
-reminders:
-  - level: A2
-    items:
-      - { en: "Finished time → past simple: I **saw** him yesterday.", es: "Tiempo terminado → pasado simple: I **saw** him yesterday." }
-  - level: B1
-    items:
-      - { en: "State up to now → present perfect: I'**ve lived** here since 2019.", es: "Estado hasta ahora → present perfect: I'**ve lived** here since 2019." }

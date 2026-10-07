@@ -1,4 +1,4 @@
-/* Level filter (topic and track pages) and Essentials view */
+/* Level filter (topic and track pages) and the Cheatsheet view */
 
 html:is([data-page="topic"], [data-page="track"])[data-level="A0"] :is([data-level="A1"], [data-level="A2"], [data-level="B1"]),
 html:is([data-page="topic"], [data-page="track"])[data-level="A1"] :is([data-level="A2"], [data-level="B1"]),
@@ -6,7 +6,8 @@ html:is([data-page="topic"], [data-page="track"])[data-level="A2"] [data-level="
   display: none !important;
 }
 
-html[data-page="topic"][data-view="essentials"] .sections > section.part {
+/* Cheatsheet view: section 00 alone, in the page and in the rail */
+html[data-page="topic"][data-view="cheatsheet"] :is(.sections > section.part:not(.cheatsheet), .toc li.guide) {
   display: none;
 }
 
@@ -60,11 +61,6 @@ html[data-page="topic"][data-view="essentials"] .sections > section.part {
   .doc li {
     overflow-wrap: anywhere;
   }
-}
-
-/* Guide view shows the guide; Essentials and Reminders live in the Essentials view and cheatsheets */
-html[data-page="topic"]:not([data-view="essentials"]) .sections > section.block {
-  display: none;
 }
 
 /* A topic at a single level shows its level once, in the header */

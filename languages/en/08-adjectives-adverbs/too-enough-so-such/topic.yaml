@@ -13,21 +13,21 @@ summary:
   en: "Too, enough, so and such say how much of a quality: too hot, hot enough, so hot, such a hot day. Enough follows the adjective, so goes with an adjective and such with a noun: big **enough**, **so** nice, **such a** nice day."
   es: "Too, enough, so y such dicen cuánto hay de una cualidad: too hot, hot enough, so hot, such a hot day. Demasiado + adjetivo es too sin much, y enough va detrás del adjetivo: *demasiado caliente* es **too** hot y *bastante grande* es big **enough**."
 
-sections:
-  - title: { en: Overview, es: Resumen }
-    level: B1
-    content:
-      - type: table
-        columns:
-          - { key: word, label: { en: Word, es: Palabra } }
-          - { key: pattern, label: { en: Pattern, es: Patrón } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { word: too, pattern: "too + adjective / adverb (+ to + V)", example: "It's **too** hot to walk.", tr: { es: Hace demasiado calor para caminar. } }
-          - { word: enough, pattern: "adjective + enough / enough + noun", example: "It's warm **enough**. / We have **enough** time.", tr: { es: Hace suficiente calor. / Tenemos tiempo suficiente. } }
-          - { word: so, pattern: "so + adjective / adverb (+ that)", example: "It's **so** hot that I can't sleep.", tr: { es: Hace tanto calor que no puedo dormir. } }
-          - { word: such, pattern: "such (a) + adjective + noun (+ that)", example: "It's **such** a hot day.", tr: { es: Es un día muy caluroso. } }
+cheatsheet:
+  level: B1
+  content:
+    - type: table
+      columns:
+        - { key: word, label: { en: Word, es: Palabra } }
+        - { key: pattern, label: { en: Pattern, es: Patrón } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { word: too, pattern: "too + adjective / adverb (+ to + V)", example: "It's **too** hot to walk.", tr: { es: Hace demasiado calor para caminar. } }
+        - { word: enough, pattern: "adjective + enough / enough + noun", example: "It's warm **enough**. / We have **enough** time.", tr: { es: Hace suficiente calor. / Tenemos tiempo suficiente. } }
+        - { word: so, pattern: "so + adjective / adverb (+ that)", example: "It's **so** hot that I can't sleep.", tr: { es: Hace tanto calor que no puedo dormir. } }
+        - { word: such, pattern: "such (a) + adjective + noun (+ that)", example: "It's **such** a hot day.", tr: { es: Es un día muy caluroso. } }
 
+sections:
   - title: { en: "Form: too and enough", es: "Forma: too y enough" }
     level: B1
     content:
@@ -103,44 +103,3 @@ sections:
           - { for: [es], wrong: She is such nice., right: "She is **so** nice.", rule: { es: "sin sustantivo → so" } }
           - { for: [es], wrong: I was so tired than I slept., right: "I was so tired **that** I slept.", rule: { es: "*tan… que* = so… that" } }
           - { wrong: I have so much friends., right: "I have **so many** friends.", rule: { en: "many + plural noun", es: "many + sustantivo plural" } }
-
-essentials:
-  - level: B1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: pattern, label: { en: Pattern, es: Patrón } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { pattern: "too + adjective (+ to + V)", example: "It's **too** hot to walk." }
-              - { pattern: "adjective + enough", example: "She is old **enough**." }
-              - { pattern: "enough + noun", example: "We have **enough** time." }
-              - { pattern: "so + adjective / adverb (+ that)", example: "It's **so** hot that I can't sleep." }
-              - { pattern: "such (a) + adjective + noun (+ that)", example: "It's **such a** hot day." }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - en: "**enough** follows an adjective and comes before a noun."
-                es: "**enough** va detrás de un adjetivo y delante de un sustantivo."
-              - en: "**too** means more than is good; **very** means a high degree."
-                es: "**too** significa más de lo conveniente; **very** significa un grado alto."
-              - en: "**so** goes with an adjective or adverb; **such** goes with a noun."
-                es: "**so** va con un adjetivo o adverbio; **such** va con un sustantivo."
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: It is too much expensive., right: "It is **too** expensive." }
-              - { for: [es], wrong: The room is enough big., right: "The room is big **enough**." }
-              - { for: [es], wrong: It is so a nice day., right: "It is **such a** nice day." }
-              - { for: [es], wrong: I was so tired than I slept., right: "I was so tired **that** I slept." }
-
-reminders:
-  - level: B1
-    items:
-      - { en: "big **enough**, **enough** time: enough follows an adjective and comes before a noun.", es: "big **enough**, **enough** time: enough va detrás del adjetivo y delante del sustantivo." }
-      - { en: "**so** + adjective, **such a** + adjective + noun.", es: "**so** + adjetivo, **such a** + adjetivo + sustantivo." }
-      - { for: [es], text: { es: "*demasiado caro* → **too** expensive, sin much." } }

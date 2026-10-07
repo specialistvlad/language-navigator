@@ -16,8 +16,8 @@
     "status",
     "title",
     "summary",
-    "sections",
-    "essentials"
+    "cheatsheet",
+    "sections"
   ],
   "properties": {
     "id": {
@@ -90,17 +90,21 @@
       },
       "minItems": 1
     },
-    "essentials": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/essentials"
-      },
-      "minItems": 1
-    },
-    "reminders": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/reminder"
+    "cheatsheet": {
+      "description": "Section 00: the whole topic in one table, shown in both the Cheatsheet and the Extended view.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "content"
+      ],
+      "properties": {
+        "level": {
+          "$ref": "#/definitions/levelRange"
+        },
+        "content": {
+          "$ref": "#/definitions/content"
+        }
       }
     }
   },
@@ -208,8 +212,22 @@
           "type": "object",
           "additionalProperties": false,
           "anyOf": [
-            { "properties": { "text": true }, "required": ["text"] },
-            { "properties": { "ex": true }, "required": ["ex"] }
+            {
+              "properties": {
+                "text": true
+              },
+              "required": [
+                "text"
+              ]
+            },
+            {
+              "properties": {
+                "ex": true
+              },
+              "required": [
+                "ex"
+              ]
+            }
           ],
           "properties": {
             "text": {
@@ -238,8 +256,22 @@
         "type"
       ],
       "anyOf": [
-        { "properties": { "text": true }, "required": ["text"] },
-        { "properties": { "ex": true }, "required": ["ex"] }
+        {
+          "properties": {
+            "text": true
+          },
+          "required": [
+            "text"
+          ]
+        },
+        {
+          "properties": {
+            "ex": true
+          },
+          "required": [
+            "ex"
+          ]
+        }
       ],
       "properties": {
         "type": {
@@ -459,68 +491,6 @@
         },
         "for": {
           "$ref": "#/definitions/for"
-        }
-      }
-    },
-    "part": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "title",
-        "content"
-      ],
-      "properties": {
-        "title": {
-          "$ref": "#/definitions/localized"
-        },
-        "content": {
-          "$ref": "#/definitions/content"
-        }
-      }
-    },
-    "essentials": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "level"
-      ],
-      "oneOf": [
-        { "properties": { "parts": true }, "required": ["parts"] },
-        { "properties": { "content": true }, "required": ["content"] }
-      ],
-      "properties": {
-        "level": {
-          "$ref": "#/definitions/level"
-        },
-        "parts": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/part"
-          },
-          "minItems": 1
-        },
-        "content": {
-          "$ref": "#/definitions/content"
-        }
-      }
-    },
-    "reminder": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "level",
-        "items"
-      ],
-      "properties": {
-        "level": {
-          "$ref": "#/definitions/level"
-        },
-        "items": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/item"
-          },
-          "minItems": 1
         }
       }
     }

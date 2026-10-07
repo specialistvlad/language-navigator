@@ -52,21 +52,6 @@ export type Cell = string | Localized | Example;
  * @minItems 1
  */
 export type Content = Block[];
-export type Essentials = {
-  level: Level;
-  /**
-   * @minItems 1
-   */
-  parts?: Part[];
-  content?: Content;
-} & Essentials1;
-export type Essentials1 =
-  | {
-      parts: unknown;
-    }
-  | {
-      content: unknown;
-    };
 
 /**
  * One topic of one language being learned, explained in every explanation language.
@@ -93,10 +78,12 @@ export interface LanguageNavigatorTopic {
    */
   sections: Section[];
   /**
-   * @minItems 1
+   * Section 00: the whole topic in one table, shown in both the Cheatsheet and the Extended view.
    */
-  essentials: Essentials[];
-  reminders?: Reminder[];
+  cheatsheet: {
+    level: LevelRange;
+    content: Content;
+  };
 }
 /**
  * Explanation text, one string per explanation language.
@@ -183,15 +170,4 @@ export interface ErrorRow {
   rule?: Text;
   level?: Level;
   for?: For;
-}
-export interface Part {
-  title: Localized;
-  content: Content;
-}
-export interface Reminder {
-  level: Level;
-  /**
-   * @minItems 1
-   */
-  items: Item[];
 }

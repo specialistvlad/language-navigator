@@ -13,18 +13,22 @@ summary:
   en: "Verb + particle with a new meaning: get up, turn it off, look for, run out of. A pronoun goes between the verb and the particle of a separable verb: **Turn it off.** **Pick it up.**"
   es: "Verbo + partícula con un significado nuevo: get up, turn it off, look for, run out of. En un verbo separable el pronombre va en medio: **turn it off**, **pick it up**; en uno inseparable el complemento va después: **look after** them."
 
+cheatsheet:
+  level: A2
+  content:
+    - type: table
+      columns:
+        - { key: verb, label: { en: Verb alone, es: Verbo solo } }
+        - { key: phrasal, label: { en: Phrasal verb, es: Verbo frasal } }
+      rows:
+        - { verb: { ex: "I **look** at the map.", tr: { es: Miro el mapa. } }, phrasal: { ex: "I **look for** my keys.", tr: { es: Busco mis llaves. } } }
+        - { verb: { ex: "She **gives** me a book.", tr: { es: Me da un libro. } }, phrasal: { ex: "He never **gives up**.", tr: { es: Nunca se rinde. } } }
+        - { verb: { ex: "I **turn** left here.", tr: { es: Giro a la izquierda aquí. } }, phrasal: { ex: "**Turn off** the light.", tr: { es: Apaga la luz. } } }
+
 sections:
   - title: { en: Overview, es: Resumen }
     level: A2
     content:
-      - type: table
-        columns:
-          - { key: verb, label: { en: Verb alone, es: Verbo solo } }
-          - { key: phrasal, label: { en: Phrasal verb, es: Verbo frasal } }
-        rows:
-          - { verb: { ex: "I **look** at the map.", tr: { es: Miro el mapa. } }, phrasal: { ex: "I **look for** my keys.", tr: { es: Busco mis llaves. } } }
-          - { verb: { ex: "She **gives** me a book.", tr: { es: Me da un libro. } }, phrasal: { ex: "He never **gives up**.", tr: { es: Nunca se rinde. } } }
-          - { verb: { ex: "I **turn** left here.", tr: { es: Giro a la izquierda aquí. } }, phrasal: { ex: "**Turn off** the light.", tr: { es: Apaga la luz. } } }
       - type: bullets
         items:
           - en: "A phrasal verb is a verb + a particle: get + up, turn + off, look + for."
@@ -167,66 +171,3 @@ sections:
           - { level: B1, wrong: We ran out milk., right: "We ran out **of** milk.", rule: { en: run out of needs of, es: "run out of lleva of" } }
           - { level: B1, wrong: I look forward to see you., right: "I look forward to **seeing** you.", rule: { en: "to is a preposition: noun or -ing", es: "to es una preposición: sustantivo o -ing" } }
           - { for: [en], level: B1, wrong: He gave up to smoke., right: "He gave up **smoking**.", rule: { en: "give up + -ing" } }
-
-essentials:
-  - level: A2
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: kind, label: { en: Type, es: Tipo } }
-              - { key: noun, label: { en: With a noun, es: Con un sustantivo } }
-              - { key: pronoun, label: { en: With a pronoun, es: Con un pronombre } }
-            rows:
-              - { kind: { en: Separable, es: Separable }, noun: "Turn **off** the light. / Turn the light **off**.", pronoun: "Turn **it** off." }
-              - { kind: { en: Inseparable, es: Inseparable }, noun: "Look **after** the baby.", pronoun: "Look after **him**." }
-              - { kind: { en: No object, es: Sin complemento }, noun: "Sit **down**.", pronoun: "-" }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "A phrasal verb = verb + particle, with a new meaning: look for.", es: "Verbo frasal = verbo + partícula, con un significado nuevo: look for." }
-              - { en: "Separable verb + pronoun: the pronoun goes in the middle: pick it up.", es: "Verbo separable + pronombre: el pronombre va en medio: pick it up." }
-              - { en: "Inseparable verb: the object follows the particle: look after them.", es: "Verbo inseparable: el complemento va después de la partícula: look after them." }
-              - { en: "Stress the particle: get UP, turn OFF.", es: "El acento va en la partícula: get UP, turn OFF." }
-      - title: { en: Use, es: Uso }
-        content:
-          - type: table
-            columns:
-              - { key: group, label: { en: Group, es: Grupo } }
-              - { key: verbs, label: { en: Verbs, es: Verbos } }
-            rows:
-              - { group: { en: Daily routine, es: Rutina diaria }, verbs: "wake up, get up, put on, take off, try on, turn on, turn off, sit down, stand up" }
-              - { group: { en: Going and coming, es: Ir y venir }, verbs: "go out, come in, come back, pick up" }
-              - { group: { en: Looking and finding out, es: Buscar y averiguar }, verbs: "look for, look after, look up, find out, fill in, write down" }
-              - { group: { en: Continuing and stopping, es: Continuar y parar }, verbs: "go on, give up" }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { wrong: Turn off it., right: "**Turn it off.**" }
-              - { wrong: She looks them after., right: "She **looks after them**." }
-              - { for: [es], wrong: I look my keys., right: "I'm **looking for** my keys." }
-  - level: B1
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: "Going and coming", es: "Ir y venir" }, rule: "set off, drop off, grow up", example: "We **set off** at eight." }
-          - { point: { en: "Finding out", es: "Averiguar" }, rule: "work out", example: "I can't **work out** the answer." }
-          - { point: { en: "Continuing", es: "Continuar" }, rule: "carry on, run out of", example: "We **ran out of** milk." }
-          - { point: { en: "People", es: "Personas" }, rule: "get on with, look forward to", example: "I **get on with** my sister." }
-          - { point: "look forward to / give up + -ing", rule: { en: "followed by a noun or -ing", es: "seguido de sustantivo o -ing" }, example: "I look forward to **seeing** you." }
-
-reminders:
-  - level: A2
-    items:
-      - { en: "Separable verb + pronoun: **turn it off**, **pick it up**.", es: "Verbo separable + pronombre: **turn it off**, **pick it up**." }
-      - { for: [es], text: { es: "Buscar = **look for**; encontrar un objeto = **find**." } }
-  - level: B1
-    items:
-      - { en: "**look forward to** + noun or -ing: I look forward to **seeing** you.", es: "**look forward to** + sustantivo o -ing: I look forward to **seeing** you." }

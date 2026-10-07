@@ -13,21 +13,21 @@ summary:
   en: "Would like for offers and wants; would for polite requests, imagined situations and past habits. Would has one form for every subject and takes the base verb: **Would** you like a coffee? I **would** like tea."
   es: "Would like para ofrecer y desear; would para peticiones corteses, situaciones imaginadas y hábitos del pasado. El condicional español (-ría) es would + verbo base, igual para todos los sujetos: *viajaría* es I **would** travel."
 
-sections:
-  - title: { en: Overview, es: Resumen }
-    level: B1
-    content:
-      - type: table
-        columns:
-          - { key: use, label: { en: Use, es: Uso } }
-          - { key: pattern, label: { en: Pattern, es: Estructura } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { use: { en: "wants and offers", es: "deseos y ofrecimientos" }, pattern: would like, example: "I'**d like** a coffee.", tr: { es: Quisiera un café. } }
-          - { use: { en: "polite requests", es: "peticiones corteses" }, pattern: Would you + V…?, example: "**Would** you **help** me?", tr: { es: "¿Me ayudarías?" } }
-          - { use: { en: "imagined situations", es: "situaciones imaginadas" }, pattern: would + V, example: "I **would** travel more.", tr: { es: Viajaría más. } }
-          - { use: { en: "past habits", es: "hábitos del pasado" }, pattern: would + V, example: "We **would** swim every summer.", tr: { es: Nos bañábamos cada verano. } }
+cheatsheet:
+  level: B1
+  content:
+    - type: table
+      columns:
+        - { key: use, label: { en: Use, es: Uso } }
+        - { key: pattern, label: { en: Pattern, es: Estructura } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { use: { en: "wants and offers", es: "deseos y ofrecimientos" }, pattern: would like, example: "I'**d like** a coffee.", tr: { es: Quisiera un café. } }
+        - { use: { en: "polite requests", es: "peticiones corteses" }, pattern: Would you + V…?, example: "**Would** you **help** me?", tr: { es: "¿Me ayudarías?" } }
+        - { use: { en: "imagined situations", es: "situaciones imaginadas" }, pattern: would + V, example: "I **would** travel more.", tr: { es: Viajaría más. } }
+        - { use: { en: "past habits", es: "hábitos del pasado" }, pattern: would + V, example: "We **would** swim every summer.", tr: { es: Nos bañábamos cada verano. } }
 
+sections:
   - title: { en: "Form: would", es: "Forma: would" }
     level: B1
     content:
@@ -156,64 +156,3 @@ sections:
           - { for: [es], wrong: "I would a coffee.", right: "I'd **like** a coffee.", rule: { es: "*quisiera un café* = I would like; like no se omite" } }
           - { for: [es], wrong: "If I would have time, I would travel.", right: "If I **had** time, I **would** travel.", rule: { es: "*si tuviera* = if + pasado simple; would solo en la otra parte" } }
           - { for: [es], wrong: "Would you like that I help you?", right: "Would you like **me to help** you?", rule: { es: "*¿Quieres que te ayude?* = would you like me to help" } }
-
-essentials:
-  - level: B1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: form, label: { en: Form, es: Forma } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { form: +, example: "She **would** help. / She'**d** help." }
-              - { form: −, example: "I **wouldn't** go." }
-              - { form: "?", example: "**Would** you like tea?" }
-              - { form: { en: Short answer, es: Respuesta corta }, example: "Yes, I **would**. / No, I **wouldn't**." }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - en: "One form for every subject; base verb after would; no do."
-                es: "Una sola forma para todos los sujetos; forma base después de would; sin do."
-              - en: "would like + noun, or would like + **to** + base verb."
-                es: "would like + nombre, o would like + **to** + forma base."
-              - en: "'d + base verb = would; 'd + past participle = had."
-                es: "'d + forma base = would; 'd + participio pasado = had."
-              - en: "Imagined situation with if: if + past simple, would + base verb."
-                es: "Situación imaginada con if: if + pasado simple, would + forma base."
-              - en: "Past states take used to: I used to live in Leeds."
-                es: "Los estados del pasado llevan used to: I used to live in Leeds."
-              - en: "would /wəd/ is weak in a sentence; the l is silent."
-                es: "would /wəd/ es débil dentro de la frase; la l no se pronuncia."
-      - title: { en: Use, es: Uso }
-        content:
-          - type: table
-            columns:
-              - { key: use, label: { en: Use, es: Uso } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { use: { en: "a polite want", es: "un deseo cortés" }, example: "I'**d like** a coffee, please.", tr: { es: "Quisiera un café, por favor." } }
-              - { use: { en: "offer, invitation", es: "ofrecimiento, invitación" }, example: "**Would** you **like** some cake?", tr: { es: "¿Te apetece un poco de tarta?" } }
-              - { use: { en: "polite request", es: "petición cortés" }, example: "**Would** you pass the salt, please?", tr: { es: "¿Me pasarías la sal, por favor?" } }
-              - { use: { en: "imagined situation", es: "situación imaginada" }, example: "I **would** buy a boat.", tr: { es: Me compraría un barco. } }
-              - { use: { en: "past habit", es: "hábito del pasado" }, example: "We **would** play outside every day.", tr: { es: Jugábamos fuera todos los días. } }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { wrong: "Do you would like a coffee?", right: "**Would** you like a coffee?" }
-              - { wrong: "I would like going.", right: "I'd like **to go**." }
-              - { for: [es], wrong: "If I would have time, I would travel.", right: "If I **had** time, I **would** travel." }
-              - { for: [es], wrong: "Would you like that I help you?", right: "Would you like **me to help** you?" }
-
-reminders:
-  - level: B1
-    items:
-      - en: "would like + noun, or + **to** + base verb: I'd like **to go**."
-        es: "would like + nombre, o + **to** + forma base: I'd like **to go**."
-      - en: "If + past simple, **would** + base verb: If I **had** time, I **would** go."
-        es: "If + pasado simple, **would** + forma base: If I **had** time, I **would** go."
-      - en: "Past states take **used to**, not would."
-        es: "Los estados del pasado llevan **used to**, no would."

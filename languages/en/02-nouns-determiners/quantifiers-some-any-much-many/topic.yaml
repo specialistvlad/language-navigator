@@ -13,20 +13,24 @@ summary:
   en: "Some, any, much, many, a lot of, a few and a little say how much or how many without an exact number. Some goes in affirmative sentences, and any in negatives and questions: I have **some** milk but I don't have **any** eggs."
   es: "Some, any, much, many, a lot of, a few y a little indican cuánto o cuántos sin dar un número exacto. Una frase inglesa lleva una sola negación: *No tengo dinero* es I don't have **any** money o I have **no** money."
 
+cheatsheet:
+  level: A1
+  content:
+    - type: table
+      columns:
+        - { key: form, label: { en: Sentence, es: Frase } }
+        - { key: countable, label: { en: Plural countable noun, es: Sustantivo contable en plural } }
+        - { key: uncountable, label: { en: Uncountable noun, es: Sustantivo incontable } }
+      rows:
+        - { form: { en: Affirmative, es: Afirmativa }, countable: "**some** apples / **a lot of** apples", uncountable: "**some** milk / **a lot of** milk" }
+        - { form: { en: Negative, es: Negativa }, countable: "not **any** apples / not **many** apples", uncountable: "not **any** milk / not **much** milk" }
+        - { form: { en: Question, es: Pregunta }, countable: "**any** apples? / **many** apples?", uncountable: "**any** milk? / **much** milk?" }
+        - { form: How…?, countable: "**How many** apples?", uncountable: "**How much** milk?" }
+
 sections:
   - title: { en: Overview, es: Resumen }
     level: A1
     content:
-      - type: table
-        columns:
-          - { key: form, label: { en: Sentence, es: Frase } }
-          - { key: countable, label: { en: Plural countable noun, es: Sustantivo contable en plural } }
-          - { key: uncountable, label: { en: Uncountable noun, es: Sustantivo incontable } }
-        rows:
-          - { form: { en: Affirmative, es: Afirmativa }, countable: "**some** apples / **a lot of** apples", uncountable: "**some** milk / **a lot of** milk" }
-          - { form: { en: Negative, es: Negativa }, countable: "not **any** apples / not **many** apples", uncountable: "not **any** milk / not **much** milk" }
-          - { form: { en: Question, es: Pregunta }, countable: "**any** apples? / **many** apples?", uncountable: "**any** milk? / **much** milk?" }
-          - { form: How…?, countable: "**How many** apples?", uncountable: "**How much** milk?" }
       - type: bullets
         items:
           - en: "Which nouns are countable: [Countable and uncountable nouns](id:en.nouns-determiners.countable-uncountable)."
@@ -135,70 +139,3 @@ sections:
           - { for: [es], wrong: many money, right: "**much** money / **a lot of** money", rule: { es: money es incontable } }
           - { for: [es], wrong: I have much friends., right: "I have **a lot of** friends.", rule: { es: "afirmativa: a lot of" } }
           - { for: [es], level: A2, wrong: a little friends, right: "**a few** friends", rule: { es: a few + plural } }
-
-essentials:
-  - level: A1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: form, label: { en: Sentence, es: Frase } }
-              - { key: countable, label: { en: Plural countable, es: Contable en plural } }
-              - { key: uncountable, label: { en: Uncountable, es: Incontable } }
-            rows:
-              - { form: +, countable: "**some** / **a lot of** apples", uncountable: "**some** / **a lot of** milk" }
-              - { form: −, countable: "not **any** / not **many** apples", uncountable: "not **any** / not **much** milk" }
-              - { form: "?", countable: "**any** / **many** apples?", uncountable: "**any** / **much** milk?" }
-              - { form: How…?, countable: "**How many** apples?", uncountable: "**How much** milk?" }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "**some** in affirmatives; **any** in negatives and questions.", es: "**some** en afirmativa; **any** en negativa y pregunta." }
-              - { en: "**many** + plural, **much** + uncountable: in negatives and questions.", es: "**many** + plural, **much** + incontable: en negativa y pregunta." }
-              - { en: "Affirmative: **a lot of** with both: a lot of friends / time.", es: "Afirmativa: **a lot of** con los dos: a lot of friends / time." }
-              - { for: [es], text: { es: "some y any a menudo no se traducen: *¿Hay azúcar?* → Is there **any** sugar?" } }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { wrong: There isn't some milk., right: "There isn't **any** milk." }
-              - { for: [es], wrong: I don't have no money., right: "I don't have **any** money." }
-              - { for: [es], wrong: How much apples?, right: "**How many** apples?" }
-              - { for: [es], wrong: I have much friends., right: "I have **a lot of** friends." }
-  - level: A2
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: Offers and requests, es: Ofrecimientos y peticiones }, rule: { en: some in the question, es: some en la pregunta }, example: "Would you like **some** tea?" }
-          - { point: a few / a little, rule: { en: "a few + plural · a little + uncountable", es: "a few + plural · a little + incontable" }, example: "**a few** friends / **a little** milk" }
-          - { point: no, rule: { en: "no + noun = not any; affirmative verb", es: "no + sustantivo = not any; verbo en afirmativa" }, example: "There's **no** milk." }
-  - level: B1
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: few / little, rule: { en: "not much, not enough", es: "poco, no suficiente" }, example: "**Few** people came." }
-          - { point: any, rule: { en: "affirmative: it doesn't matter which", es: "afirmativa: no importa cuál" }, example: "Take **any** seat." }
-          - { point: none, rule: { en: "no noun after it, or none of + the / my…", es: "sin sustantivo, o none of + the / my…" }, example: "**None of** my friends came." }
-
-reminders:
-  - level: A1
-    items:
-      - en: "Negative → **any**: I don't have **any** money."
-        es: "Una sola negación: I don't have **any** money / I have **no** money."
-      - { en: "**How many** + plural · **How much** + uncountable.", es: "**How many** + plural · **How much** + incontable." }
-  - level: A2
-    items:
-      - { en: "**a few** friends · **a little** milk.", es: "**a few** friends · **a little** milk." }
-  - level: B1
-    items:
-      - { en: "**a few** = some · **few** = not enough.", es: "**a few** = algunos · **few** = pocos, no suficientes." }

@@ -13,19 +13,23 @@ summary:
   en: "A and an for one thing, the for a thing both people know, and no article for things in general. The first sound decides a or an (**an** hour, **a** university), and general plurals and uncountable nouns take no article: I like **dogs**."
   es: "A y an para una cosa, the para algo que los dos conocen y sin artículo para las cosas en general. Al hablar en general, el inglés va sin artículo: *Me gustan los perros* es I like **dogs**."
 
+cheatsheet:
+  level: A1
+  content:
+    - type: table
+      columns:
+        - { key: article, label: { en: Article, es: Artículo } }
+        - { key: meaning, label: { en: Meaning, es: Significado } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { article: a / an, meaning: { en: "one, any one", es: "uno, uno cualquiera" }, example: "I need **a** pen.", tr: { es: "Necesito un bolígrafo." } }
+        - { article: the, meaning: { en: "the one we both know", es: "el que los dos conocemos" }, example: "Pass me **the** pen.", tr: { es: "Pásame el bolígrafo." } }
+        - { article: "—", meaning: { en: "things in general", es: "cosas en general" }, example: "**Pens** are cheap.", tr: { es: "Los bolígrafos son baratos." } }
+
 sections:
   - title: { en: Overview, es: Resumen }
     level: A1
     content:
-      - type: table
-        columns:
-          - { key: article, label: { en: Article, es: Artículo } }
-          - { key: meaning, label: { en: Meaning, es: Significado } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { article: a / an, meaning: { en: "one, any one", es: "uno, uno cualquiera" }, example: "I need **a** pen.", tr: { es: "Necesito un bolígrafo." } }
-          - { article: the, meaning: { en: "the one we both know", es: "el que los dos conocemos" }, example: "Pass me **the** pen.", tr: { es: "Pásame el bolígrafo." } }
-          - { article: "—", meaning: { en: "things in general", es: "cosas en general" }, example: "**Pens** are cheap.", tr: { es: "Los bolígrafos son baratos." } }
       - type: bullets
         items:
           - en: "a / an go only with singular countable nouns. See [Countable and uncountable](id:en.nouns-determiners.countable-uncountable)."
@@ -143,77 +147,3 @@ sections:
           - { for: [es], wrong: The Mr Smith is here., right: "**Mr Smith** is here.", rule: { es: "nombres y títulos: sin artículo" } }
           - { for: [es], level: A2, wrong: I go to the home., right: "I go **home**.", rule: { es: "go home: sin to y sin the" } }
           - { for: [en], wrong: I live in the Spain., right: "I live in **Spain**.", rule: { en: "most countries: no article" } }
-
-essentials:
-  - level: A1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: article, label: { en: Article, es: Artículo } }
-              - { key: before, label: { en: Before, es: Delante de } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { article: a /ə/, before: { en: consonant sound, es: sonido consonante }, example: "**a** book / **a** university" }
-              - { article: an /ən/, before: { en: vowel sound, es: sonido vocal }, example: "**an** apple / **an** hour" }
-              - { article: the, before: { en: any noun, es: cualquier sustantivo }, example: "**the** book / **the** books / **the** water" }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "a / an: singular countable nouns only.", es: "a / an: solo con contables en singular." }
-              - { en: "The first sound decides: **an** hour, **a** university.", es: "Decide el primer sonido: **an** hour, **a** university." }
-              - { en: "First mention a / an, then the: There's **a** cat. **The** cat is black.", es: "Primera mención a / an, después the: There's **a** cat. **The** cat is black." }
-              - { en: "General plural or uncountable: no article: I like **dogs**.", es: "Plural o incontable en general: sin artículo: I like **dogs**." }
-      - title: { en: Use, es: Uso }
-        content:
-          - type: table
-            columns:
-              - { key: use, label: { en: Use, es: Uso } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { use: { en: "a / an: one, any one, jobs", es: "a / an: uno, uno cualquiera, profesiones" }, example: "She's **a** doctor.", tr: { es: "Es médica." } }
-              - { use: { en: "the: known, the only one, superlatives", es: "the: conocido, único, superlativos" }, example: "**the** sun / **the** best", tr: { es: "el sol / el mejor" } }
-              - { use: { en: "no article: general, meals, languages, sports, names", es: "sin artículo: en general, comidas, idiomas, deportes, nombres" }, example: "I play **football**.", tr: { es: "Juego al fútbol." } }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { wrong: a apple, right: "**an** apple" }
-              - { for: [es], wrong: She is doctor., right: "She's **a** doctor." }
-              - { for: [es], wrong: The life is hard., right: "**Life** is hard." }
-              - { for: [es], wrong: I like the dogs., right: "I like **dogs**." }
-  - level: A2
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: Rate, es: Proporción }, rule: { en: "a / an = per", es: "a / an = por" }, example: "twice **a** week" }
-          - { point: { en: Instruments, es: Instrumentos }, rule: the, example: "play **the** piano" }
-          - { point: { en: Geography, es: Geografía }, rule: { en: "the + rivers, seas, mountain ranges, the UK / USA", es: "the + ríos, mares, cordilleras, the UK / USA" }, example: "**the** Thames / **the** Alps" }
-          - { point: { en: Places, es: Lugares }, rule: { en: "no article: home, work, school, bed", es: "sin artículo: home, work, school, bed" }, example: "go **home** / at **work**" }
-          - { point: { en: Transport, es: Transporte }, rule: { en: "by + no article", es: "by + sin artículo" }, example: "by **bus**" }
-  - level: B1
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: Groups, es: Grupos }, rule: { en: "the + adjective = a group of people", es: "the + adjetivo = un grupo de personas" }, example: "**the** rich" }
-          - { point: { en: Purpose, es: Función }, rule: { en: "no article: hospital, prison, church, university for their purpose", es: "sin artículo: hospital, prison, church, university por su función" }, example: "He's in **hospital**." }
-          - { point: { en: Building, es: Edificio }, rule: { en: "the: the building itself", es: "the: el edificio en sí" }, example: "I went to **the** hospital to visit him." }
-
-reminders:
-  - level: A1
-    items:
-      - { en: "General plural or uncountable: no article: **Life** is hard. I like **dogs**.", es: "En general, sin artículo: **Life** is hard. I like **dogs**." }
-      - { en: "Jobs take a / an: She's **a** doctor.", es: "Profesiones con a / an: She's **a** doctor." }
-  - level: A2
-    items:
-      - { en: "go **home**: no to, no the.", es: "go **home**: sin to y sin the." }

@@ -13,24 +13,28 @@ summary:
   en: "Subject, object and possessive forms of the personal pronouns: I, me, my, mine. English always states the subject, even with weather and time: **It** is cold."
   es: "Pronombres sujeto, objeto y posesivos: I, me, my, mine. En inglés el sujeto siempre aparece, también con el tiempo y la hora: **It** is cold (*hace frío*), **I** am tired (*estoy cansado*)."
 
+cheatsheet:
+  level: A1
+  content:
+    - type: table
+      columns:
+        - { key: subject, label: { en: Subject, es: Sujeto } }
+        - { key: object, label: { en: Object, es: Objeto } }
+        - { key: det, label: { en: Possessive + noun, es: Posesivo + sustantivo } }
+        - { key: alone, label: { en: Possessive alone, es: Posesivo solo } }
+      rows:
+        - { subject: I, object: me, det: my, alone: mine }
+        - { subject: you, object: you, det: your, alone: yours }
+        - { subject: he, object: him, det: his, alone: his }
+        - { subject: she, object: her, det: her, alone: hers }
+        - { subject: it, object: it, det: its, alone: "—" }
+        - { subject: we, object: us, det: our, alone: ours }
+        - { subject: they, object: them, det: their, alone: theirs }
+
 sections:
   - title: { en: Overview, es: Resumen }
     level: A1
     content:
-      - type: table
-        columns:
-          - { key: subject, label: { en: Subject, es: Sujeto } }
-          - { key: object, label: { en: Object, es: Objeto } }
-          - { key: det, label: { en: Possessive + noun, es: Posesivo + sustantivo } }
-          - { key: alone, label: { en: Possessive alone, es: Posesivo solo } }
-        rows:
-          - { subject: I, object: me, det: my, alone: mine }
-          - { subject: you, object: you, det: your, alone: yours }
-          - { subject: he, object: him, det: his, alone: his }
-          - { subject: she, object: her, det: her, alone: hers }
-          - { subject: it, object: it, det: its, alone: "—" }
-          - { subject: we, object: us, det: our, alone: ours }
-          - { subject: they, object: them, det: their, alone: theirs }
       - type: text
         text:
           en: "Subject before the verb, object after it, possessive before a noun or alone:"
@@ -197,61 +201,3 @@ sections:
           - { for: [es], level: A1, wrong: It's the mine., right: "It's **mine**.", rule: { es: "mine, yours…: sin artículo" } }
           - { level: A1, wrong: Is this your's?, right: "Is this **yours**?", rule: { en: "no apostrophe", es: "sin apóstrofo" } }
           - { for: [es], level: A1, wrong: Ana is a my friend., right: "Ana is **a friend of mine**.", rule: { es: "*una amiga mía* = a friend of mine" } }
-
-essentials:
-  - level: A0
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: subject, label: { en: Subject, es: Sujeto } }
-              - { key: possessive, label: { en: Possessive + noun, es: Posesivo + sustantivo } }
-            rows:
-              - { subject: I, possessive: my }
-              - { subject: you, possessive: your }
-              - { subject: he, possessive: his }
-              - { subject: she, possessive: her }
-              - { subject: it, possessive: its }
-              - { subject: we, possessive: our }
-              - { subject: they, possessive: their }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { for: [es], text: { es: "El sujeto siempre aparece: **He**'s a doctor. **It**'s cold." } }
-              - { en: "**I** is always a capital letter.", es: "**I** siempre con mayúscula." }
-              - { en: "**you** = one or many people.", es: "**you** = tú, usted, vosotros, vosotras, ustedes." }
-              - { en: "**his** / **her** depends on the owner: Ana and **her** brother.", es: "**his** / **her** según el poseedor: Ana and **her** brother." }
-              - { en: "Possessives never change: **my** book, **my** books.", es: "El posesivo no cambia: **my** book, **my** books." }
-              - { en: "Weather, time, dates: **It**'s cold. **It**'s five o'clock.", es: "Tiempo, hora, fechas: **It**'s cold. **It**'s five o'clock." }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: Is cold today., right: "**It**'s cold today." }
-              - { for: [es], wrong: Ana and his brother, right: "Ana and **her** brother" }
-              - { wrong: The dog wants it's food., right: "The dog wants **its** food." }
-  - level: A1
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: Object, es: Objeto }, rule: { en: "me, you, him, her, it, us, them: after a verb or preposition", es: "me, you, him, her, it, us, them: detrás del verbo o de una preposición" }, example: "I love **you**. / with **us**" }
-          - { point: { en: Possessive alone, es: Posesivo solo }, rule: { en: "mine, yours, his, hers, ours, theirs: no noun, no article", es: "mine, yours, his, hers, ours, theirs: sin sustantivo ni artículo" }, example: "It's **mine**." }
-          - { point: of mine, rule: { en: "= one of my", es: "= uno de mis" }, example: "a friend **of mine**" }
-          - { point: { en: Body parts, es: Partes del cuerpo }, rule: { en: possessive, es: posesivo }, example: "I wash **my** hands." }
-          - { point: it, rule: { en: "distance; it + be + adjective + to + V", es: "distancia; it + be + adjetivo + to + V" }, example: "**It**'s easy to cook pasta." }
-
-reminders:
-  - level: A0
-    items:
-      - { for: [es], text: { es: "El sujeto siempre aparece: **It**'s cold. **He**'s a doctor." } }
-      - { en: "**his** / **her** = the owner: Ana and **her** brother.", es: "**his** / **her** según el poseedor: Ana and **her** brother." }
-  - level: A1
-    items:
-      - { en: "No apostrophe: **its**, **yours**, **hers**. it's = it is.", es: "Sin apóstrofo: **its**, **yours**, **hers**. it's = it is." }
-      - { for: [es], text: { es: "Posesivo con partes del cuerpo: I wash **my** hands." } }

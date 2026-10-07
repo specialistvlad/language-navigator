@@ -13,33 +13,37 @@ summary:
   en: "Somebody, anything, nowhere and everyone name unknown or general people, things and places, in four families: some-, any-, no- and every-. English uses one negative word per clause: I don't know **anything**, or I know **nothing**."
   es: "Somebody, anything, nowhere y everyone nombran personas, cosas y lugares sin concretar, en cuatro familias: some-, any-, no- y every-. La frase lleva una sola palabra negativa: I don't know **anything** (*no sé nada*), I know **nothing**."
 
+cheatsheet:
+  level: A2
+  content:
+    - type: table
+      columns:
+        - { key: start, label: { en: Start, es: Inicio } }
+        - { key: people, label: { en: People, es: Personas } }
+        - { key: things, label: { en: Things, es: Cosas } }
+        - { key: places, label: { en: Places, es: Lugares } }
+      rows:
+        - start: some-
+          people: { ex: "**some**body / **some**one", tr: { es: alguien } }
+          things: { ex: "**some**thing", tr: { es: algo } }
+          places: { ex: "**some**where", tr: { es: en algún sitio } }
+        - start: any-
+          people: { ex: "**any**body / **any**one", tr: { es: alguien / nadie } }
+          things: { ex: "**any**thing", tr: { es: algo / nada } }
+          places: { ex: "**any**where", tr: { es: en algún sitio / en ningún sitio } }
+        - start: no-
+          people: { ex: "**no**body / **no** one", tr: { es: nadie } }
+          things: { ex: "**no**thing", tr: { es: nada } }
+          places: { ex: "**no**where", tr: { es: en ningún sitio } }
+        - start: every-
+          people: { ex: "**every**body / **every**one", tr: { es: todo el mundo } }
+          things: { ex: "**every**thing", tr: { es: todo } }
+          places: { ex: "**every**where", tr: { es: en todas partes } }
+
 sections:
   - title: { en: Overview, es: Resumen }
     level: A2
     content:
-      - type: table
-        columns:
-          - { key: start, label: { en: Start, es: Inicio } }
-          - { key: people, label: { en: People, es: Personas } }
-          - { key: things, label: { en: Things, es: Cosas } }
-          - { key: places, label: { en: Places, es: Lugares } }
-        rows:
-          - start: some-
-            people: { ex: "**some**body / **some**one", tr: { es: alguien } }
-            things: { ex: "**some**thing", tr: { es: algo } }
-            places: { ex: "**some**where", tr: { es: en algún sitio } }
-          - start: any-
-            people: { ex: "**any**body / **any**one", tr: { es: alguien / nadie } }
-            things: { ex: "**any**thing", tr: { es: algo / nada } }
-            places: { ex: "**any**where", tr: { es: en algún sitio / en ningún sitio } }
-          - start: no-
-            people: { ex: "**no**body / **no** one", tr: { es: nadie } }
-            things: { ex: "**no**thing", tr: { es: nada } }
-            places: { ex: "**no**where", tr: { es: en ningún sitio } }
-          - start: every-
-            people: { ex: "**every**body / **every**one", tr: { es: todo el mundo } }
-            things: { ex: "**every**thing", tr: { es: todo } }
-            places: { ex: "**every**where", tr: { es: en todas partes } }
       - type: bullets
         items:
           - en: "-body and -one mean the same: somebody = someone."
@@ -134,42 +138,3 @@ sections:
           - { wrong: Everybody are here., right: "Everybody **is** here.", rule: { en: "singular verb", es: "verbo en singular" } }
           - { for: [es], wrong: I want other thing., right: "I want **something else**.", rule: { es: "*otra cosa* = something else" } }
           - { for: [es], wrong: anything /ˈaniθɪŋ/, right: "anything **/ˈeniθɪŋ/**", rule: { es: "any = /ˈeni/" } }
-
-essentials:
-  - level: A2
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: start, label: { en: Start, es: Inicio } }
-              - { key: people, label: { en: People, es: Personas } }
-              - { key: things, label: { en: Things, es: Cosas } }
-              - { key: places, label: { en: Places, es: Lugares } }
-            rows:
-              - { start: some-, people: somebody / someone, things: something, places: somewhere }
-              - { start: any-, people: anybody / anyone, things: anything, places: anywhere }
-              - { start: no-, people: nobody / no one, things: nothing, places: nowhere }
-              - { start: every-, people: everybody / everyone, things: everything, places: everywhere }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "**some-** in affirmatives, offers and requests; **any-** in negatives and questions.", es: "**some-** en afirmativa, ofrecimientos y peticiones; **any-** en negativa y pregunta." }
-              - { en: "One negative only: I didn't see **anybody**. / I saw **nobody**.", es: "Una sola negación: I didn't see **anybody**. / I saw **nobody**." }
-              - { en: "Singular verb: Everybody **is** here. Refer back with **their**: Somebody left **their** bag.", es: "Verbo en singular: Everybody **is** here. Se retoma con **their**: Somebody left **their** bag." }
-              - { en: "Adjectives and else go after: something **new**, somebody **else**.", es: "Adjetivos y else detrás: something **new**, somebody **else**." }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: I didn't see nobody., right: "I didn't see **anybody**." }
-              - { wrong: Everybody are here., right: "Everybody **is** here." }
-              - { for: [es], wrong: I want other thing., right: "I want **something else**." }
-
-reminders:
-  - level: A2
-    items:
-      - { en: "One negative: I didn't see **anybody**. / I saw **nobody**.", es: "Una sola negación: I didn't see **anybody**. / I saw **nobody**." }
-      - { en: "Everybody **is**: singular verb.", es: "Everybody **is**: verbo en singular." }
-      - { for: [es], text: { es: "*otra cosa* → something **else**." } }

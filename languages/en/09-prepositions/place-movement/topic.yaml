@@ -13,6 +13,28 @@ summary:
   en: "In, on, at and under say where something is; to, into, out of and through say where it goes. In is inside a space, on touches a surface and at is a point: **in** the bag, **on** the table, **at** the door."
   es: "In, on, at y under dicen dónde está algo; to, into, out of y through, adónde va. El español dice *en* en los tres casos; el inglés elige in (dentro), on (superficie) o at (punto): **in** the bag, **on** the table, **at** the door."
 
+cheatsheet:
+  level: A1-A2
+  content:
+    - type: table
+      columns:
+        - { key: point, label: { en: Point, es: Punto } }
+        - { key: rule, label: { en: Rule, es: Regla } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { point: in, rule: { en: "inside a space, town, country", es: "dentro de un espacio, ciudad, país" }, example: "**in** the bag / **in** Madrid", tr: { es: en el bolso / en Madrid } }
+        - { point: on, rule: { en: "touching a surface", es: "en contacto con una superficie" }, example: "**on** the table / **on** the wall", tr: { es: sobre la mesa / en la pared } }
+        - { point: at, rule: { en: "a point or a place for its purpose", es: "un punto o un lugar por su función" }, example: "**at** the door / **at** home", tr: { es: en la puerta / en casa } }
+        - { point: { en: fixed phrases, es: expresiones fijas }, rule: { en: "at home, at work, at school, in bed: no the", es: "at home, at work, at school, in bed: sin the" }, example: "She's **at** work.", tr: { es: Está en el trabajo. } }
+        - { point: "behind, near", rule: { en: "no of", es: "sin of" }, example: "I live **near** the park.", tr: { es: Vivo cerca del parque. } }
+        - { point: "next to, in front of", rule: { en: "keep to and of", es: "llevan to y of" }, example: "**next to** the café / **in front of** the school", tr: { es: al lado del café / delante del colegio } }
+        - { point: "to / from", rule: { en: "movement to and from a place", es: "movimiento hacia y desde un lugar" }, example: "We go **to** the beach.", tr: { es: Vamos a la playa. } }
+        - { point: home, rule: { en: "go home: no to", es: "go home: sin to" }, example: "I go **home**.", tr: { es: Voy a casa. } }
+        - { level: A2, point: "in → into · on → onto · at → to", rule: { en: "place becomes movement", es: "de lugar a movimiento" }, example: "She goes **into** the kitchen.", tr: { es: Entra en la cocina. } }
+        - { level: A2, point: opposite, rule: { en: "facing, no of", es: "enfrente, sin of" }, example: "The hotel is **opposite** the station.", tr: { es: El hotel está enfrente de la estación. } }
+        - { level: A2, point: arrive, rule: { en: "in a city or country · at a building", es: "in ciudad o país · at edificio" }, example: "We arrive **in** Paris.", tr: { es: Llegamos a París. } }
+        - { level: A2, point: { en: transport, es: transporte }, rule: { en: "bus, train, plane, bike → on · car, taxi → in", es: "bus, train, plane, bike → on · car, taxi → in" }, example: "I get **on** the bus.", tr: { es: Subo al autobús. } }
+
 sections:
   - title: { en: "Place: where something is", es: "Lugar: dónde está algo" }
     level: A1-A2
@@ -137,59 +159,3 @@ sections:
           - { for: [es], level: A2, wrong: We arrive to London., right: "We arrive **in** London.", rule: { es: "llegar a = arrive in / arrive at" } }
           - { level: A2, wrong: I get in the bus., right: "I get **on** the bus.", rule: { en: "bus, train, plane → get on", es: "bus, train, plane → get on" } }
           - { for: [en], level: A2, wrong: She gets on the taxi., right: "She gets **in** the taxi.", rule: { en: "car, taxi → get in / out of" } }
-
-essentials:
-  - level: A1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: prep, label: { en: Preposition, es: Preposición } }
-              - { key: use, label: { en: Use, es: Uso } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { prep: in, use: "inside a space, town, country", example: "**in** the bag / **in** Madrid / **in** bed" }
-              - { prep: on, use: "on a surface", example: "**on** the table / **on** the wall" }
-              - { prep: at, use: "point, place for its purpose", example: "**at** home / **at** work / **at** the door" }
-              - { prep: "under / behind", use: "below / at the back", example: "**under** the chair / **behind** the house" }
-              - { prep: "next to / between", use: "beside / in the middle of two", example: "**next to** the bank / **between** the bank and the café" }
-              - { prep: "in front of / near", use: "front / close", example: "**in front of** the school / **near** the park" }
-              - { prep: "to / from", use: "movement to a place / from a place", example: "go **to** the beach / **from** Italy" }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "at home, at work, at school, in bed: no the.", es: "at home, at work, at school, in bed: sin the." }
-              - { en: "behind, opposite, near: no of.", es: "behind, opposite, near: sin of." }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: in home, right: "**at** home" }
-              - { for: [es], wrong: near of the park, right: "**near** the park" }
-              - { for: [es], wrong: next the café, right: "**next to** the café" }
-  - level: A2
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: Movement, es: Movimiento }, rule: { en: "into, out of, onto, up, down, along, across, through, past, towards", es: "into, out of, onto, up, down, along, across, through, past, towards" }, example: "He walks **into** the room." }
-          - { point: { en: "Place → movement", es: "Lugar → movimiento" }, rule: { en: "in → into · on → onto · at → to", es: "in → into · on → onto · at → to" }, example: "She goes **to** school." }
-          - { point: opposite, rule: { en: "facing: opposite the station", es: "enfrente: opposite the station" }, example: "The hotel is **opposite** the station." }
-          - { point: home, rule: { en: "go home: no to", es: "go home: sin to" }, example: "I go **home**." }
-          - { point: arrive, rule: { en: "in a city or country · at a building", es: "in + ciudad o país · at + edificio" }, example: "We arrive **in** Paris." }
-          - { point: { en: Transport, es: Transporte }, rule: { en: "bus, train, plane, bike → on · car, taxi → in", es: "bus, train, plane, bike → on · car, taxi → in" }, example: "I get **on** the bus." }
-
-reminders:
-  - level: A1
-    items:
-      - { en: "**at** home, **at** work, **in** bed: no *the*.", es: "**at** home, **at** work, **in** bed: sin *the*." }
-      - { for: [es], text: { es: "**near**, **behind**, **opposite**: sin *of*." } }
-  - level: A2
-    items:
-      - { en: "go **home**: no *to*. arrive **in** a city, **at** a building.", es: "go **home**: sin *to*. arrive **in** una ciudad, **at** un edificio." }
-      - { en: "get **on** a bus, get **in** a car.", es: "get **on** a bus, get **in** a car." }

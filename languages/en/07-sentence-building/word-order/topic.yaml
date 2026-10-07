@@ -13,20 +13,24 @@ summary:
   en: "The order of subject, verb, object, adjectives and adverbs in an English sentence. The subject is always present and the adjective comes before the noun: **It** is cold. I have a **red car**."
   es: "El orden del sujeto, el verbo, el objeto, los adjetivos y los adverbios en la frase inglesa. En inglés el sujeto siempre aparece y el adjetivo va antes del sustantivo: **It** is cold. I have a **red car**."
 
+cheatsheet:
+  level: A0-A1
+  content:
+    - type: table
+      columns:
+        - { key: part, label: { en: Part, es: Parte } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { part: { en: 1. Subject, es: 1. Sujeto }, example: "**My sister** buys bread in the shop every day.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
+        - { part: { en: 2. Verb, es: 2. Verbo }, example: "My sister **buys** bread in the shop every day.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
+        - { part: { en: 3. Object, es: 3. Objeto }, example: "My sister buys **bread** in the shop every day.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
+        - { level: A1, part: { en: 4. Place, es: 4. Lugar }, example: "My sister buys bread **in the shop** every day.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
+        - { level: A1, part: { en: 5. Time, es: 5. Tiempo }, example: "My sister buys bread in the shop **every day**.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
+
 sections:
   - title: { en: Overview, es: Resumen }
-    level: A0-A1
+    level: A0
     content:
-      - type: table
-        columns:
-          - { key: part, label: { en: Part, es: Parte } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { part: { en: 1. Subject, es: 1. Sujeto }, example: "**My sister** buys bread in the shop every day.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
-          - { part: { en: 2. Verb, es: 2. Verbo }, example: "My sister **buys** bread in the shop every day.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
-          - { part: { en: 3. Object, es: 3. Objeto }, example: "My sister buys **bread** in the shop every day.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
-          - { level: A1, part: { en: 4. Place, es: 4. Lugar }, example: "My sister buys bread **in the shop** every day.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
-          - { level: A1, part: { en: 5. Time, es: 5. Tiempo }, example: "My sister buys bread in the shop **every day**.", tr: { es: "Mi hermana compra pan en la tienda todos los días." } }
       - type: bullets
         items:
           - en: "The order is subject, verb, object (SVO), then place, then time."
@@ -105,57 +109,3 @@ sections:
           - { level: A1, wrong: I went yesterday to London., right: "I went **to London yesterday**.", rule: { en: place before time, es: lugar antes del tiempo } }
           - { level: A1, wrong: I eat always breakfast., right: "I **always eat** breakfast.", rule: { en: frequency adverbs go before the main verb, es: el adverbio de frecuencia va antes del verbo principal } }
           - { level: A1, wrong: She always is late., right: "She **is always** late.", rule: { en: frequency adverbs go after be, es: el adverbio de frecuencia va después de be } }
-
-essentials:
-  - level: A0
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: pattern, label: { en: Pattern, es: Patrón } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { pattern: "Subject + verb", example: "I **sleep**." }
-              - { pattern: "Subject + verb + object", example: "I **drink tea**." }
-              - { pattern: "Adjective + noun", example: "a **red car**" }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - en: "The subject is always present: **It** is cold."
-                es: "El sujeto siempre aparece: **It** is cold."
-              - en: "The object comes right after the verb."
-                es: "El objeto va justo después del verbo."
-              - en: "An adjective comes before the noun."
-                es: "El adjetivo va antes del sustantivo."
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: Is cold., right: "**It** is cold." }
-              - { for: [es], wrong: I have a car red., right: "I have a **red car**." }
-              - { for: [es], wrong: Arrived my friend., right: "**My friend** arrived." }
-  - level: A1
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: Place and time, es: Lugar y tiempo }, rule: { en: place before time, es: lugar antes del tiempo }, example: "I went to London **last year**." }
-          - { point: { en: Frequency adverbs, es: Adverbios de frecuencia }, rule: { en: "before the main verb, after be", es: "antes del verbo principal, después de be" }, example: "I **always** eat. / She is **always** late." }
-          - { point: { en: very much, es: very much }, rule: { en: at the end of the clause, es: al final de la frase }, example: "I like coffee **very much**." }
-
-reminders:
-  - level: A0
-    items:
-      - en: "The subject is always present: **It** is cold."
-        es: "El sujeto siempre aparece: **It** is cold."
-  - level: A1
-    items:
-      - en: "The object comes right after the verb: I like coffee **very much**."
-        es: "El objeto va justo después del verbo: I like coffee **very much**."
-      - en: "Place before time: I went **to London last year**."
-        es: "Lugar antes del tiempo: I went **to London last year**."

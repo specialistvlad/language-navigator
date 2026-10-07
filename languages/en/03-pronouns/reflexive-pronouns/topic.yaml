@@ -13,23 +13,27 @@ summary:
   en: "Reflexive pronouns (myself, yourself, themselves) show that the subject and the object are the same person. Routine verbs such as get up and get dressed take no reflexive: I **get up**, I **get dressed**."
   es: "Los pronombres reflexivos (myself, yourself, themselves) indican que el sujeto y el objeto son la misma persona. Los verbos de rutina que en español son pronominales van sin reflexivo en inglés: I **get up** (*me levanto*), I **get dressed** (*me visto*)."
 
+cheatsheet:
+  level: A2
+  content:
+    - type: table
+      columns:
+        - { key: subject, label: { en: Subject, es: Sujeto } }
+        - { key: reflexive, label: { en: Reflexive, es: Reflexivo } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { subject: I, reflexive: myself, example: "I cut **myself**.", tr: { es: Me corté. } }
+        - { subject: you, reflexive: yourself / yourselves, example: "Help **yourself**. / Help **yourselves**.", tr: { es: Sírvete. / Servíos. } }
+        - { subject: he, reflexive: himself, example: "He hurt **himself**.", tr: { es: Se hizo daño. } }
+        - { subject: she, reflexive: herself, example: "She taught **herself** French.", tr: { es: Aprendió francés sola. } }
+        - { subject: it, reflexive: itself, example: "The door closes by **itself**.", tr: { es: La puerta se cierra sola. } }
+        - { subject: we, reflexive: ourselves, example: "We enjoyed **ourselves**.", tr: { es: Lo pasamos bien. } }
+        - { subject: they, reflexive: themselves, example: "They looked at **themselves** in the mirror.", tr: { es: Se miraron en el espejo. } }
+
 sections:
   - title: { en: Overview, es: Resumen }
     level: A2
     content:
-      - type: table
-        columns:
-          - { key: subject, label: { en: Subject, es: Sujeto } }
-          - { key: reflexive, label: { en: Reflexive, es: Reflexivo } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { subject: I, reflexive: myself, example: "I cut **myself**.", tr: { es: Me corté. } }
-          - { subject: you, reflexive: yourself / yourselves, example: "Help **yourself**. / Help **yourselves**.", tr: { es: Sírvete. / Servíos. } }
-          - { subject: he, reflexive: himself, example: "He hurt **himself**.", tr: { es: Se hizo daño. } }
-          - { subject: she, reflexive: herself, example: "She taught **herself** French.", tr: { es: Aprendió francés sola. } }
-          - { subject: it, reflexive: itself, example: "The door closes by **itself**.", tr: { es: La puerta se cierra sola. } }
-          - { subject: we, reflexive: ourselves, example: "We enjoyed **ourselves**.", tr: { es: Lo pasamos bien. } }
-          - { subject: they, reflexive: themselves, example: "They looked at **themselves** in the mirror.", tr: { es: Se miraron en el espejo. } }
       - type: bullets
         items:
           - en: "Singular forms end in **-self**; plural forms end in **-selves**."
@@ -106,38 +110,3 @@ sections:
           - { for: [es], wrong: We relax ourselves at the weekend., right: "We **relax** at the weekend.", rule: { es: "*relajarse* = relax, el verbo solo" } }
           - { for: [es], wrong: We met ourselves in 2019., right: "We **met** in 2019.", rule: { es: "*conocerse* = meet" } }
           - { for: [es], wrong: They love themselves., right: "They love **each other**.", rule: { es: "*se* recíproco = each other" } }
-
-essentials:
-  - level: A2
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: subject, label: { en: Subject, es: Sujeto } }
-              - { key: reflexive, label: { en: Reflexive, es: Reflexivo } }
-            rows:
-              - { subject: I / you, reflexive: myself / yourself }
-              - { subject: he / she / it, reflexive: himself / herself / itself }
-              - { subject: we / you / they, reflexive: ourselves / yourselves / themselves }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "Object = subject → reflexive: He hurt **himself**.", es: "Objeto = sujeto → reflexivo: He hurt **himself**." }
-              - { en: "by + reflexive = alone: He lives **by himself**.", es: "by + reflexivo = solo: He lives **by himself**." }
-              - { en: "get up, feel, relax, meet, worry: the verb alone.", es: "get up, feel, relax, meet, worry: el verbo solo." }
-              - { en: "Two people, each to the other: **each other**.", es: "*se* recíproco = **each other**: They love **each other**." }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { wrong: He hurt hisself., right: "He hurt **himself**." }
-              - { for: [es], wrong: I feel myself tired., right: "I **feel** tired." }
-              - { for: [es], wrong: They love themselves., right: "They love **each other**." }
-
-reminders:
-  - level: A2
-    items:
-      - { en: "get up, feel, relax, meet: the verb alone. I **feel** tired.", es: "get up, feel, relax, meet: el verbo solo. I **feel** tired." }
-      - { for: [es], text: { es: "*se* recíproco = **each other**: They love **each other**." } }

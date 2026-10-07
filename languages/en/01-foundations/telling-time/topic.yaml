@@ -13,6 +13,26 @@ summary:
   en: "How to ask the time and say it in numbers, and with past and to. Say the hour first, then the minutes: 7:05 is **seven oh five**, and o'clock follows only a full hour: **seven o'clock**."
   es: "Cómo preguntar la hora y decirla con números y con past y to. La hora se dice con It's y los números, sin artículo: **It's** seven thirty (*son las siete y media*)."
 
+cheatsheet:
+  level: A0-A1
+  content:
+    - type: table
+      columns:
+        - { key: point, label: { en: Point, es: Punto } }
+        - { key: rule, label: { en: Rule, es: Regla } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { point: { en: Asking, es: Preguntar }, rule: { en: "ask What time is it? and answer with It's + the time", es: "se pregunta What time is it? y se responde con It's + la hora" }, example: "**It's** seven thirty.", tr: { es: Son las siete y media. } }
+        - { point: { en: Numbers, es: Números }, rule: { en: "say the hour, then the minutes; 1–9 minutes take oh", es: "se dice la hora y después los minutos; de 1 a 9 minutos se añade oh" }, example: "7:05 → seven **oh** five" }
+        - { point: o'clock, rule: { en: "o'clock goes only with full hours", es: "o'clock va solo con horas en punto" }, example: "seven **o'clock**" }
+        - { for: [es], point: { es: Sin artículo }, rule: { es: "la hora es *time*, y se dice sin *the*" }, example: "What **time** is it? / It's **three**.", tr: { es: ¿Qué hora es? / Son las tres. } }
+        - { level: A1, point: past, rule: { en: "minutes 1–30: past the hour", es: "minutos 1–30: past la hora" }, example: "(a) **quarter past** three", tr: { es: las tres y cuarto } }
+        - { level: A1, point: to, rule: { en: "minutes 31–59: to the next hour; say the minutes first", es: "minutos 31–59: to la hora siguiente; primero los minutos" }, example: "twenty **to** four", tr: { es: las cuatro menos veinte } }
+        - { level: A1, point: minutes, rule: { en: "minutes that are not 5, 10, 15… add minutes", es: "los minutos que no son 5, 10, 15… llevan minutes" }, example: "three **minutes** past six" }
+        - { level: A1, point: a.m. / p.m., rule: { en: "a.m. is midnight to midday; p.m. is midday to midnight", es: "a.m. es de medianoche a mediodía; p.m. es de mediodía a medianoche" }, example: "seven **a.m.** / three **p.m.**" }
+        - { level: A1, point: { en: 24 hours, es: 24 horas }, rule: { en: "timetables use the 24-hour clock", es: "los horarios usan el reloj de 24 horas" }, example: "19:30 → nineteen thirty" }
+        - { level: A1, point: US, rule: { en: "after for past, of for to", es: "after por past, of por to" }, example: "a quarter **after** three" }
+
 sections:
   - title: { en: The time in numbers, es: La hora con números }
     level: A0
@@ -99,39 +119,3 @@ sections:
           - { wrong: seven o'clock fifteen, right: "seven **fifteen**", rule: { en: "o'clock only with full hours", es: "o'clock solo con horas en punto" } }
           - { for: [es], level: A1, wrong: three and a quarter, right: "(a) **quarter past** three", rule: { es: "y cuarto = quarter past" } }
           - { for: [es], level: A1, wrong: four less twenty, right: "twenty **to** four", rule: { es: "menos = *to*, los minutos primero" } }
-
-essentials:
-  - level: A0
-    parts:
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "What time is it? → It's seven thirty.", es: "What time is it? → It's seven thirty." }
-              - { en: "Hour, then minutes: 7:05 *seven oh five*.", es: "Hora y después minutos: 7:05 *seven oh five*." }
-              - { en: "o'clock only with full hours: seven o'clock.", es: "o'clock solo con horas en punto: seven o'clock." }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: What hour is it?, right: "What **time** is it?" }
-              - { wrong: seven o'clock fifteen, right: "seven **fifteen**" }
-  - level: A1
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: Past, es: Past }, rule: { en: "minutes 1–30", es: "minutos 1–30" }, example: "(a) quarter past three" }
-          - { point: { en: To, es: To }, rule: { en: "minutes 31–59, next hour", es: "minutos 31–59, hora siguiente" }, example: "twenty to four" }
-          - { point: a.m. / p.m., rule: { en: "before / after midday", es: "antes / después de mediodía" }, example: "three p.m." }
-
-reminders:
-  - level: A0
-    items:
-      - { for: [es], text: { es: "La hora = *time*: What **time** is it?" } }
-  - level: A1
-    items:
-      - { en: "twenty **to** four = 3:40: minutes first, then the next hour.", es: "twenty **to** four = 3:40: primero los minutos, después la hora siguiente." }

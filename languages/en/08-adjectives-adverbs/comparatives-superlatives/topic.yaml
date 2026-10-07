@@ -13,20 +13,20 @@ summary:
   en: "Comparatives and superlatives compare things: taller than, the tallest, as tall as. Short adjectives add -er and -est, and long adjectives take more and the most: She is **taller** than me. This bag is **more expensive**."
   es: "Comparativos y superlativos para comparar cosas: taller than, the tallest, as tall as. Cada adjetivo lleva -er o more, uno solo: *más alto* es **taller** y *más caro* es **more expensive**."
 
-sections:
-  - title: { en: Overview, es: Resumen }
-    level: A2
-    content:
-      - type: table
-        columns:
-          - { key: pattern, label: { en: Pattern, es: Patrón } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { pattern: "comparative + than", example: "My bag is **heavier than** yours.", tr: { es: Mi bolsa pesa más que la tuya. } }
-          - { pattern: "the + superlative + in / of", example: "She is **the tallest** in the class.", tr: { es: Es la más alta de la clase. } }
-          - { pattern: "as + adjective + as", example: "He is **as tall as** me.", tr: { es: Es tan alto como yo. } }
-          - { pattern: "not as + adjective + as", example: "I'm **not as tall as** him.", tr: { es: No soy tan alto como él. } }
+cheatsheet:
+  level: A2
+  content:
+    - type: table
+      columns:
+        - { key: pattern, label: { en: Pattern, es: Patrón } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { pattern: "comparative + than", example: "My bag is **heavier than** yours.", tr: { es: Mi bolsa pesa más que la tuya. } }
+        - { pattern: "the + superlative + in / of", example: "She is **the tallest** in the class.", tr: { es: Es la más alta de la clase. } }
+        - { pattern: "as + adjective + as", example: "He is **as tall as** me.", tr: { es: Es tan alto como yo. } }
+        - { pattern: "not as + adjective + as", example: "I'm **not as tall as** him.", tr: { es: No soy tan alto como él. } }
 
+sections:
   - title: { en: "Form: comparative and superlative", es: "Forma: comparativo y superlativo" }
     level: A2
     content:
@@ -125,49 +125,3 @@ sections:
           - { wrong: He is the most tall., right: "He is **the tallest**.", rule: { en: "three or more: the + -est", es: "tres o más: the + -est" } }
           - { wrong: the best of the world, right: "the best **in** the world", rule: { en: "in + place or group", es: "in + lugar o grupo" } }
           - { wrong: This is expensiver., right: "This is **more expensive**.", rule: { en: "long adjectives take more", es: "los adjetivos largos llevan more" } }
-
-essentials:
-  - level: A2
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: adjective, label: { en: Adjective, es: Adjetivo } }
-              - { key: comparative, label: { en: Comparative, es: Comparativo } }
-              - { key: superlative, label: { en: Superlative, es: Superlativo } }
-            rows:
-              - { adjective: cheap, comparative: cheaper, superlative: the cheapest }
-              - { adjective: easy, comparative: easier, superlative: the easiest }
-              - { adjective: expensive, comparative: more expensive, superlative: the most expensive }
-              - { adjective: big, comparative: bigger, superlative: the biggest }
-              - { adjective: good, comparative: better, superlative: the best }
-              - { adjective: bad, comparative: worse, superlative: the worst }
-              - { adjective: far, comparative: further, superlative: the furthest }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - en: "One syllable and -y adjectives take -er / the -est; longer adjectives take more / the most."
-                es: "Los adjetivos de una sílaba y los acabados en -y llevan -er / the -est; los más largos, more / the most."
-              - en: "Spelling: nice → nicer, happy → happier, big → bigger."
-                es: "Ortografía: nice → nicer, happy → happier, big → bigger."
-              - en: "Comparative + **than**; the + superlative + **in** a place or group, **of** a number."
-                es: "Comparativo + **than**; the + superlativo + **in** con un lugar o grupo, **of** con un número."
-              - en: "as + adjective + as: equal. not as + adjective + as: not equal."
-                es: "as + adjetivo + as: igualdad. not as + adjetivo + as: desigualdad."
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: This bag is more big., right: "This bag is **bigger**." }
-              - { for: [es], wrong: He is taller that me., right: "He is taller **than** me." }
-              - { wrong: This is more better., right: "This is **better**." }
-              - { wrong: the best of the world, right: "the best **in** the world" }
-
-reminders:
-  - level: A2
-    items:
-      - { en: "Short adjectives: -er / the -est. Long adjectives: more / the most. Never both.", es: "Adjetivos cortos: -er / the -est. Largos: more / the most. Nunca las dos formas." }
-      - { for: [es], text: { es: "*Más grande que* → **bigger than**, no *more big that*." } }
-      - { en: "the best **in** the world, the best **of** the three.", es: "the best **in** the world, the best **of** the three." }

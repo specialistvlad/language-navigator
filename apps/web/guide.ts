@@ -1,11 +1,11 @@
-// A topic's guide as HTML pieces: its sections, then the essentials and reminder of each level.
+// A topic's guide as HTML pieces: its cheatsheet as section 00, then its sections.
 import { shows } from "../../scripts/content.ts";
-import { filled, LEVELS, localize, say } from "../../scripts/lib.ts";
-import { blocksHtml, type Ctx, inline, list } from "./render.ts";
+import { type Block, filled, localize, lv, say, type Topic } from "../../scripts/lib.ts";
+import { blocksHtml, type Ctx } from "./render.ts";
 
-export type SectionKind = "essentials" | "reminder" | "body";
+export type SectionKind = "cheatsheet" | "body";
 
-// A guide section, essentials entry or reminder, ready to wrap in a <section>.
+// A guide section ready to wrap in a <section>.
 export interface GuideSection {
   title: string;
   from: string;
@@ -14,41 +14,37 @@ export interface GuideSection {
   html: string;
 }
 
-// Essentials of one level; part titles get headings of the given depth.
-export function essentialsHtml(ctx: Ctx, level: string, depth: number): string | null {
-  const essentials = ctx.ref.topic?.essentials.find((e) => e.level === level);
-  if (!essentials) return null;
-  const h = `h${String(depth)}`;
-  if (essentials.parts) {
-    return essentials.parts
-      .map((part) => `<${h}>${inline(localize(part.title, ctx.explain), ctx)}</${h}>${blocksHtml(part.content, ctx)}`)
-      .join("\n");
-  }
-  return essentials.content ? blocksHtml(essentials.content, ctx) : null;
+// A cheatsheet's blocks with the rows and items above a level left out; an item without its own
+// level sits at the cheatsheet's base.
+function upTo(blocks: Block[], level: string): Block[] {
+  const fits = (it: unknown): boolean =>
+    typeof it !== "object" || it === null || !("level" in it) || !filled(it.level as string) || lv(it.level as string) <= lv(level);
+  return blocks.map((b) => {
+    if (b.type === "table") return { ...b, rows: b.rows.filter(fits) };
+    if (b.type === "errors") return { ...b, rows: b.rows.filter(fits) };
+    if (b.type === "bullets") return { ...b, items: b.items.filter(fits) };
+    return b;
+  });
 }
 
-// Reminder of one level as a bullet list.
-export function reminderHtml(ctx: Ctx, level: string): string | null {
-  const reminder = ctx.ref.topic?.reminders?.find((r) => r.level === level);
-  return reminder ? list(reminder.items, ctx) : null;
+// A topic's cheatsheet, whole or up to a level; null when the cheatsheet starts above that level.
+export function cheatsheetHtml(ctx: Ctx, level?: string): string | null {
+  const sheet: Topic["cheatsheet"] | undefined = ctx.ref.topic?.cheatsheet;
+  if (!sheet) return null;
+  if (level === undefined) return blocksHtml(sheet.content, ctx);
+  const base = sheet.level.split("-")[0] ?? sheet.level;
+  return lv(base) > lv(level) ? null : blocksHtml(upTo(sheet.content, level), ctx);
 }
 
 export function guideSections(ctx: Ctx): GuideSection[] {
   const topic = ctx.ref.topic;
   if (!topic) return [];
-  const out: GuideSection[] = [];
+  const [from = topic.cheatsheet.level, to = from] = topic.cheatsheet.level.split("-");
+  const out: GuideSection[] = [{ title: say("sheet", ctx.explain), from, to, kind: "cheatsheet", html: cheatsheetHtml(ctx) ?? "" }];
   for (const section of topic.sections) {
     if (!shows(section, ctx.explain)) continue;
-    const [from = section.level, to = from] = section.level.split("-");
-    out.push({ title: localize(section.title, ctx.explain), from, to, kind: "body", html: blocksHtml(section.content, ctx) });
-  }
-  for (const level of LEVELS) {
-    const essentials = essentialsHtml(ctx, level, 3);
-    if (filled(essentials)) {
-      out.push({ title: say("essentials", ctx.explain), from: level, to: level, kind: "essentials", html: essentials });
-    }
-    const reminder = reminderHtml(ctx, level);
-    if (filled(reminder)) out.push({ title: say("reminder", ctx.explain), from: level, to: level, kind: "reminder", html: reminder });
+    const [sFrom = section.level, sTo = sFrom] = section.level.split("-");
+    out.push({ title: localize(section.title, ctx.explain), from: sFrom, to: sTo, kind: "body", html: blocksHtml(section.content, ctx) });
   }
   return out;
 }

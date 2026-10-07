@@ -6,6 +6,10 @@
 .sections > .part {
   counter-increment: part;
 }
+/* The cheatsheet comes first as 00; the sections count on from 01. */
+.sections > .part.cheatsheet {
+  counter-increment: none;
+}
 .sections > .part > h2::before {
   content: counter(part, decimal-leading-zero);
   margin-right: 12px;

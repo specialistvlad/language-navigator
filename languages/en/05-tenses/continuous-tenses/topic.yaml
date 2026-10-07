@@ -13,48 +13,52 @@ summary:
   en: "Present, past and future continuous: be plus the verb with -ing for actions in progress at a moment. Every continuous form needs be before the -ing verb: She **is reading** now. **Was** she **reading**?"
   es: "Presente, pasado y futuro continuo: be más el verbo con -ing para acciones en curso en un momento. Estar + gerundio es be + verbo con -ing, y be nunca se omite: I **am reading** now. They **were playing** outside."
 
+cheatsheet:
+  level: A1-B1
+  content:
+    - type: table
+      columns:
+        - { key: tense, label: { en: Tense, es: Tiempo }, merge: true, center: true }
+        - { key: qh, group: { en: Question, es: Pregunta }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
+        - { key: qs, group: { en: Question, es: Pregunta }, label: { en: Subject, es: Sujeto } }
+        - { key: qv, group: { en: Question, es: Pregunta }, label: { en: Verb, es: Verbo }, merge: true, center: true }
+        - { key: ss, group: { en: Statement, es: Afirmación }, label: { en: Subject, es: Sujeto } }
+        - { key: sh, group: { en: Statement, es: Afirmación }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
+        - { key: sv, group: { en: Statement, es: Afirmación }, label: { en: Verb, es: Verbo }, merge: true, center: true }
+        - { key: ns, group: { en: Negative, es: Negativa }, label: { en: Subject, es: Sujeto } }
+        - { key: nh, group: { en: Negative, es: Negativa }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
+        - { key: nv, group: { en: Negative, es: Negativa }, label: { en: Verb, es: Verbo }, merge: true, center: true }
+      rows:
+        - { level: B1, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "I", qv: "**be** work**ing**?", ss: "I", sh: "**will be**", sv: "work**ing**.", ns: "I", nh: "**won't be**", nv: "work**ing**." }
+        - { level: B1, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "you", qv: "**be** work**ing**?", ss: "You", sh: "**will be**", sv: "work**ing**.", ns: "You", nh: "**won't be**", nv: "work**ing**." }
+        - { level: B1, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "he", qv: "**be** work**ing**?", ss: "He", sh: "**will be**", sv: "work**ing**.", ns: "He", nh: "**won't be**", nv: "work**ing**." }
+        - { level: B1, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "she", qv: "**be** work**ing**?", ss: "She", sh: "**will be**", sv: "work**ing**.", ns: "She", nh: "**won't be**", nv: "work**ing**." }
+        - { level: B1, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "it", qv: "**be** work**ing**?", ss: "It", sh: "**will be**", sv: "work**ing**.", ns: "It", nh: "**won't be**", nv: "work**ing**." }
+        - { level: B1, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "we", qv: "**be** work**ing**?", ss: "We", sh: "**will be**", sv: "work**ing**.", ns: "We", nh: "**won't be**", nv: "work**ing**." }
+        - { level: B1, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "they", qv: "**be** work**ing**?", ss: "They", sh: "**will be**", sv: "work**ing**.", ns: "They", nh: "**won't be**", nv: "work**ing**." }
+        - { tense: { en: Present, es: Presente }, qh: "**Am**", qs: "I", qv: "work**ing**?", ss: "I", sh: "**am**", sv: "work**ing**.", ns: "I", nh: "**am not**", nv: "work**ing**." }
+        - { tense: { en: Present, es: Presente }, qh: "**Are**", qs: "you", qv: "work**ing**?", ss: "You", sh: "**are**", sv: "work**ing**.", ns: "You", nh: "**aren't**", nv: "work**ing**." }
+        - { tense: { en: Present, es: Presente }, qh: "**Is**", qs: "he", qv: "work**ing**?", ss: "He", sh: "**is**", sv: "work**ing**.", ns: "He", nh: "**isn't**", nv: "work**ing**." }
+        - { tense: { en: Present, es: Presente }, qh: "**Is**", qs: "she", qv: "work**ing**?", ss: "She", sh: "**is**", sv: "work**ing**.", ns: "She", nh: "**isn't**", nv: "work**ing**." }
+        - { tense: { en: Present, es: Presente }, qh: "**Is**", qs: "it", qv: "work**ing**?", ss: "It", sh: "**is**", sv: "work**ing**.", ns: "It", nh: "**isn't**", nv: "work**ing**." }
+        - { tense: { en: Present, es: Presente }, qh: "**Are**", qs: "we", qv: "work**ing**?", ss: "We", sh: "**are**", sv: "work**ing**.", ns: "We", nh: "**aren't**", nv: "work**ing**." }
+        - { tense: { en: Present, es: Presente }, qh: "**Are**", qs: "they", qv: "work**ing**?", ss: "They", sh: "**are**", sv: "work**ing**.", ns: "They", nh: "**aren't**", nv: "work**ing**." }
+        - { level: A2, tense: { en: Past, es: Pasado }, qh: "**Was**", qs: "I", qv: "work**ing**?", ss: "I", sh: "**was**", sv: "work**ing**.", ns: "I", nh: "**wasn't**", nv: "work**ing**." }
+        - { level: A2, tense: { en: Past, es: Pasado }, qh: "**Were**", qs: "you", qv: "work**ing**?", ss: "You", sh: "**were**", sv: "work**ing**.", ns: "You", nh: "**weren't**", nv: "work**ing**." }
+        - { level: A2, tense: { en: Past, es: Pasado }, qh: "**Was**", qs: "he", qv: "work**ing**?", ss: "He", sh: "**was**", sv: "work**ing**.", ns: "He", nh: "**wasn't**", nv: "work**ing**." }
+        - { level: A2, tense: { en: Past, es: Pasado }, qh: "**Was**", qs: "she", qv: "work**ing**?", ss: "She", sh: "**was**", sv: "work**ing**.", ns: "She", nh: "**wasn't**", nv: "work**ing**." }
+        - { level: A2, tense: { en: Past, es: Pasado }, qh: "**Was**", qs: "it", qv: "work**ing**?", ss: "It", sh: "**was**", sv: "work**ing**.", ns: "It", nh: "**wasn't**", nv: "work**ing**." }
+        - { level: A2, tense: { en: Past, es: Pasado }, qh: "**Were**", qs: "we", qv: "work**ing**?", ss: "We", sh: "**were**", sv: "work**ing**.", ns: "We", nh: "**weren't**", nv: "work**ing**." }
+        - { level: A2, tense: { en: Past, es: Pasado }, qh: "**Were**", qs: "they", qv: "work**ing**?", ss: "They", sh: "**were**", sv: "work**ing**.", ns: "They", nh: "**weren't**", nv: "work**ing**." }
+
 sections:
   - title: { en: Overview, es: Resumen }
-    level: A1-B1
+    level: A1
     content:
       - type: text
         text:
           en: "Each continuous tense is **be** + verb + **-ing**: **will be** for the future, **am / is / are** for the present, **was / were** for the past."
           es: "Cada tiempo continuo es **be** + verbo + **-ing**: **will be** para el futuro, **am / is / are** para el presente y **was / were** para el pasado."
-      - type: table
-        columns:
-          - { key: tense, label: { en: Tense, es: Tiempo }, merge: true, center: true }
-          - { key: qh, group: { en: Question, es: Pregunta }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
-          - { key: qs, group: { en: Question, es: Pregunta }, label: { en: Subject, es: Sujeto } }
-          - { key: qv, group: { en: Question, es: Pregunta }, label: { en: Verb, es: Verbo }, merge: true, center: true }
-          - { key: ss, group: { en: Statement, es: Afirmación }, label: { en: Subject, es: Sujeto } }
-          - { key: sh, group: { en: Statement, es: Afirmación }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
-          - { key: sv, group: { en: Statement, es: Afirmación }, label: { en: Verb, es: Verbo }, merge: true, center: true }
-          - { key: ns, group: { en: Negative, es: Negativa }, label: { en: Subject, es: Sujeto } }
-          - { key: nh, group: { en: Negative, es: Negativa }, label: { en: Helper, es: Auxiliar }, merge: true, center: true }
-          - { key: nv, group: { en: Negative, es: Negativa }, label: { en: Verb, es: Verbo }, merge: true, center: true }
-        rows:
-          - { level: B1, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "I", qv: "**be** work**ing**?", ss: "I", sh: "**will be**", sv: "work**ing**.", ns: "I", nh: "**won't be**", nv: "work**ing**." }
-          - { level: B1, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "you", qv: "**be** work**ing**?", ss: "You", sh: "**will be**", sv: "work**ing**.", ns: "You", nh: "**won't be**", nv: "work**ing**." }
-          - { level: B1, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "he", qv: "**be** work**ing**?", ss: "He", sh: "**will be**", sv: "work**ing**.", ns: "He", nh: "**won't be**", nv: "work**ing**." }
-          - { level: B1, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "she", qv: "**be** work**ing**?", ss: "She", sh: "**will be**", sv: "work**ing**.", ns: "She", nh: "**won't be**", nv: "work**ing**." }
-          - { level: B1, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "it", qv: "**be** work**ing**?", ss: "It", sh: "**will be**", sv: "work**ing**.", ns: "It", nh: "**won't be**", nv: "work**ing**." }
-          - { level: B1, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "we", qv: "**be** work**ing**?", ss: "We", sh: "**will be**", sv: "work**ing**.", ns: "We", nh: "**won't be**", nv: "work**ing**." }
-          - { level: B1, tense: { en: Future, es: Futuro }, qh: "**Will**", qs: "they", qv: "**be** work**ing**?", ss: "They", sh: "**will be**", sv: "work**ing**.", ns: "They", nh: "**won't be**", nv: "work**ing**." }
-          - { tense: { en: Present, es: Presente }, qh: "**Am**", qs: "I", qv: "work**ing**?", ss: "I", sh: "**am**", sv: "work**ing**.", ns: "I", nh: "**am not**", nv: "work**ing**." }
-          - { tense: { en: Present, es: Presente }, qh: "**Are**", qs: "you", qv: "work**ing**?", ss: "You", sh: "**are**", sv: "work**ing**.", ns: "You", nh: "**aren't**", nv: "work**ing**." }
-          - { tense: { en: Present, es: Presente }, qh: "**Is**", qs: "he", qv: "work**ing**?", ss: "He", sh: "**is**", sv: "work**ing**.", ns: "He", nh: "**isn't**", nv: "work**ing**." }
-          - { tense: { en: Present, es: Presente }, qh: "**Is**", qs: "she", qv: "work**ing**?", ss: "She", sh: "**is**", sv: "work**ing**.", ns: "She", nh: "**isn't**", nv: "work**ing**." }
-          - { tense: { en: Present, es: Presente }, qh: "**Is**", qs: "it", qv: "work**ing**?", ss: "It", sh: "**is**", sv: "work**ing**.", ns: "It", nh: "**isn't**", nv: "work**ing**." }
-          - { tense: { en: Present, es: Presente }, qh: "**Are**", qs: "we", qv: "work**ing**?", ss: "We", sh: "**are**", sv: "work**ing**.", ns: "We", nh: "**aren't**", nv: "work**ing**." }
-          - { tense: { en: Present, es: Presente }, qh: "**Are**", qs: "they", qv: "work**ing**?", ss: "They", sh: "**are**", sv: "work**ing**.", ns: "They", nh: "**aren't**", nv: "work**ing**." }
-          - { level: A2, tense: { en: Past, es: Pasado }, qh: "**Was**", qs: "I", qv: "work**ing**?", ss: "I", sh: "**was**", sv: "work**ing**.", ns: "I", nh: "**wasn't**", nv: "work**ing**." }
-          - { level: A2, tense: { en: Past, es: Pasado }, qh: "**Were**", qs: "you", qv: "work**ing**?", ss: "You", sh: "**were**", sv: "work**ing**.", ns: "You", nh: "**weren't**", nv: "work**ing**." }
-          - { level: A2, tense: { en: Past, es: Pasado }, qh: "**Was**", qs: "he", qv: "work**ing**?", ss: "He", sh: "**was**", sv: "work**ing**.", ns: "He", nh: "**wasn't**", nv: "work**ing**." }
-          - { level: A2, tense: { en: Past, es: Pasado }, qh: "**Was**", qs: "she", qv: "work**ing**?", ss: "She", sh: "**was**", sv: "work**ing**.", ns: "She", nh: "**wasn't**", nv: "work**ing**." }
-          - { level: A2, tense: { en: Past, es: Pasado }, qh: "**Was**", qs: "it", qv: "work**ing**?", ss: "It", sh: "**was**", sv: "work**ing**.", ns: "It", nh: "**wasn't**", nv: "work**ing**." }
-          - { level: A2, tense: { en: Past, es: Pasado }, qh: "**Were**", qs: "we", qv: "work**ing**?", ss: "We", sh: "**were**", sv: "work**ing**.", ns: "We", nh: "**weren't**", nv: "work**ing**." }
-          - { level: A2, tense: { en: Past, es: Pasado }, qh: "**Were**", qs: "they", qv: "work**ing**?", ss: "They", sh: "**were**", sv: "work**ing**.", ns: "They", nh: "**weren't**", nv: "work**ing**." }
       - type: bullets
         items:
           - en: "In questions be goes before the subject; in negatives it takes **not**: isn't, wasn't, won't be."
@@ -243,68 +247,3 @@ sections:
           - { for: [es], level: A2, wrong: "When I was a child, I was playing outside every day.", right: "…I **played** outside every day.", rule: { es: "hábito pasado → past simple o used to" } }
           - { for: [en], level: A2, wrong: We was playing., right: "We **were** playing.", rule: { en: "you / we / they → were" } }
           - { for: [en], level: B1, wrong: I will flying tomorrow., right: "I **will be flying** tomorrow.", rule: { en: "will be + V-ing" } }
-
-essentials:
-  - level: A1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: form, label: { en: Form, es: Forma } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { form: +, example: "I'**m working**. / She **is working**. / They **are working**." }
-              - { form: −, example: "I'**m not working**. / She **isn't working**." }
-              - { form: "?", example: "**Is** she **working**? / What **are** you **doing**?" }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "am / is / are + **V-ing**. Be always appears.", es: "am / is / are + **V-ing**. Be siempre aparece." }
-              - { en: "Spelling: make → making, run → running, lie → lying.", es: "Ortografía: make → making, run → running, lie → lying." }
-              - { en: "Stative verbs take the simple tenses: I **know**. / I **want** a coffee.", es: "Los verbos de estado van en tiempos simples: I **know**. / I **want** a coffee." }
-      - title: { en: Use, es: Uso }
-        content:
-          - type: table
-            columns:
-              - { key: use, label: { en: Use, es: Uso } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { use: { en: "now", es: "ahora" }, example: "I'**m cooking** dinner.", tr: { es: "Estoy preparando la cena." } }
-              - { use: { en: "temporary", es: "temporal" }, example: "I'**m staying** with my sister.", tr: { es: "Me alojo en casa de mi hermana." } }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { wrong: She working now., right: "She **is working** now." }
-              - { wrong: What you are doing?, right: "What **are you** doing?" }
-              - { wrong: I am knowing the answer., right: "I **know** the answer." }
-  - level: A2
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: Past continuous, es: Pasado continuo }, rule: { en: "was / were + V-ing", es: "was / were + V-ing" }, example: "I **was cooking**." }
-          - { point: when / while, rule: { en: "long action → past continuous; short action → past simple", es: "acción larga → past continuous; acción corta → past simple" }, example: "I **was cooking** when the phone **rang**." }
-  - level: B1
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: Future continuous, es: Futuro continuo }, rule: { en: "will be + V-ing: in progress at a future moment", es: "will be + V-ing: en curso en un momento futuro" }, example: "This time tomorrow I'**ll be flying**." }
-
-reminders:
-  - level: A1
-    items:
-      - { en: "be + V-ing: She **is working**.", es: "be + V-ing: She **is working**." }
-      - { en: "Stative verbs take the simple tenses: I **know**.", es: "Los verbos de estado van en tiempos simples: I **know**." }
-  - level: A2
-    items:
-      - { en: "Long action **was / were + -ing**, short action past simple: I **was cooking** when he **called**.", es: "Acción larga **was / were + -ing**, corta en past simple: I **was cooking** when he **called**." }

@@ -13,6 +13,26 @@ summary:
   en: "Verbs followed by -ing, verbs followed by to + infinitive, and verbs that take both with a change of meaning. The verb before decides the form: I **enjoy cooking**, I **want to cook**."
   es: "Verbos seguidos de -ing, verbos seguidos de to + infinitivo y verbos que admiten ambas formas con cambio de significado. Tras una preposición va la forma -ing: **before leaving**, **interested in learning**."
 
+cheatsheet:
+  level: B1
+  content:
+    - type: table
+      columns:
+        - { key: pattern, label: { en: Pattern, es: Estructura } }
+        - { key: verbs, label: { en: Verbs, es: Verbos } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { pattern: verb + -ing, verbs: "enjoy, finish, mind, avoid, suggest, keep", example: "I **enjoy cooking**.", tr: { es: Disfruto cocinando. } }
+        - { pattern: verb + to + V, verbs: "want, decide, hope, plan, need, would like", example: "They **decided to move**.", tr: { es: Decidieron mudarse. } }
+        - { pattern: want / need / would like + person + to + V, verbs: "want, need, would like", example: "I **want you to come**.", tr: { es: Quiero que vengas. } }
+        - { pattern: preposition + -ing, verbs: "interested in, before, without", example: "Wash your hands **before eating**.", tr: { es: Lávate las manos antes de comer. } }
+        - { pattern: -ing as subject, verbs: "—", example: "**Swimming** is good for you.", tr: { es: Nadar es bueno para ti. } }
+        - { pattern: look forward to + -ing, verbs: "to is a preposition", example: "I look forward to **seeing** you.", tr: { es: Tengo ganas de verte. } }
+        - { pattern: stop + -ing / to + V, verbs: stop, example: "He **stopped smoking**. / He **stopped to smoke**.", tr: { es: Dejó de fumar. / Se paró a fumar. } }
+        - { pattern: remember + -ing / to + V, verbs: remember, example: "I **remember locking** it. / **Remember to lock** it.", tr: { es: Recuerdo haber cerrado. / Acuérdate de cerrar. } }
+        - { pattern: try + -ing / to + V, verbs: try, example: "**Try adding** salt. / I **tried to open** it.", tr: { es: Prueba a echarle sal. / Intenté abrirlo. } }
+        - { pattern: either form, verbs: "like, love, hate, prefer", example: "I **like** swimming. / I **like** to swim.", tr: { es: Me gusta nadar. } }
+
 sections:
   - title: { en: "Form: verb + -ing", es: "Forma: verbo + -ing" }
     level: B1
@@ -117,41 +137,3 @@ sections:
           - { wrong: He suggested to go by train., right: "He suggested **going** by train.", rule: { en: "suggest + -ing", es: "suggest + -ing" } }
           - { wrong: I look forward to see you., right: "I look forward to **seeing** you.", rule: { en: "to is a preposition here → -ing", es: "to es una preposición aquí → -ing" } }
           - { for: [es], wrong: She keeps to ask questions., right: "She keeps **asking** questions.", rule: { es: "*no deja de preguntar* → keep + -ing" } }
-
-essentials:
-  - level: B1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: pattern, label: { en: Pattern, es: Estructura } }
-              - { key: verbs, label: { en: Verbs, es: Verbos } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { pattern: verb + -ing, verbs: "enjoy, finish, mind, avoid, suggest, keep", example: "I **enjoy cooking**." }
-              - { pattern: verb + to + V, verbs: "want, decide, hope, plan, need, would like", example: "They **decided to move**." }
-              - { pattern: preposition + -ing, verbs: "interested in, before, without", example: "**before eating**" }
-              - { pattern: -ing as subject, verbs: "—", example: "**Swimming** is fun." }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "After a preposition the verb takes **-ing**: look forward to **seeing**.", es: "Tras una preposición el verbo lleva **-ing**: look forward to **seeing**." }
-              - { en: "want / need / would like + person + to + V: I want **you to come**.", es: "want / need / would like + persona + to + V: I want **you to come**." }
-              - { en: "stop, remember and try change meaning: stop smoking (quit) / stop to smoke (pause).", es: "stop, remember y try cambian de significado: stop smoking (dejar de) / stop to smoke (pararse a)." }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { wrong: I enjoy to cook., right: "I enjoy **cooking**." }
-              - { wrong: She decided going home., right: "She decided **to go** home." }
-              - { for: [es], wrong: "Before to leave, call me.", right: "Before **leaving**, call me." }
-              - { for: [es], wrong: I want that you come., right: "I want **you to come**." }
-
-reminders:
-  - level: B1
-    items:
-      - { en: "enjoy / avoid / suggest + **-ing**; want / decide / hope + **to** + V.", es: "enjoy / avoid / suggest + **-ing**; want / decide / hope + **to** + V." }
-      - { en: "Preposition + **-ing**: interested in learning, before leaving.", es: "Preposición + **-ing**: interested in learning, before leaving." }
-      - { for: [es], text: { es: "*quiero que vengas* → I want **you to come**." } }

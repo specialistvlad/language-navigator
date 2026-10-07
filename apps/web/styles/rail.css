@@ -27,29 +27,22 @@
   margin: 0 0 28px;
   padding: 0;
 }
-.toc a,
-.toc button {
+.toc a {
   display: flex;
   align-items: center;
   gap: 10px;
   width: 100%;
   padding: 7px 12px;
-  border: 0;
   border-radius: 10px;
-  background: none;
   color: var(--text);
   font-size: 14px;
   line-height: 1.35;
-  text-align: left;
   text-decoration: none;
-  cursor: pointer;
 }
-.toc a:hover,
-.toc button:hover {
+.toc a:hover {
   background: var(--surface-2);
 }
-.toc a.on,
-html[data-view="essentials"] .toc [data-view="essentials"] {
+.toc a.on {
   background: var(--accent-soft);
   color: var(--accent);
   font-weight: 600;

@@ -13,20 +13,24 @@ summary:
   en: "There is and there are say that something exists or is in a place, with a / some / any / numbers. There is goes with singular and uncountable nouns, there are with plural nouns: **There is** a park. **There are** two beds."
   es: "There is y there are dicen que algo existe o está en un lugar, con a / some / any / números. Hay se dice there is o there are, según el sustantivo: **There is** a park. **There are** two cats."
 
+cheatsheet:
+  level: A1
+  content:
+    - type: table
+      columns:
+        - { key: form, label: { en: Form, es: Forma } }
+        - { key: singular, label: { en: Singular, es: Singular } }
+        - { key: plural, label: { en: Plural, es: Plural } }
+      rows:
+        - { form: { en: Affirmative, es: Afirmativa }, singular: "There **is** a park.", plural: "There **are** two parks." }
+        - { form: { en: Negative, es: Negativa }, singular: "There **isn't** a park.", plural: "There **aren't** any parks." }
+        - { form: { en: Question, es: Pregunta }, singular: "**Is there** a park?", plural: "**Are there** any parks?" }
+        - { form: { en: Short answer, es: Respuesta corta }, singular: "Yes, there **is**. / No, there **isn't**.", plural: "Yes, there **are**. / No, there **aren't**." }
+
 sections:
   - title: { en: Overview, es: Resumen }
     level: A1
     content:
-      - type: table
-        columns:
-          - { key: form, label: { en: Form, es: Forma } }
-          - { key: singular, label: { en: Singular, es: Singular } }
-          - { key: plural, label: { en: Plural, es: Plural } }
-        rows:
-          - { form: { en: Affirmative, es: Afirmativa }, singular: "There **is** a park.", plural: "There **are** two parks." }
-          - { form: { en: Negative, es: Negativa }, singular: "There **isn't** a park.", plural: "There **aren't** any parks." }
-          - { form: { en: Question, es: Pregunta }, singular: "**Is there** a park?", plural: "**Are there** any parks?" }
-          - { form: { en: Short answer, es: Respuesta corta }, singular: "Yes, there **is**. / No, there **isn't**.", plural: "Yes, there **are**. / No, there **aren't**." }
       - type: bullets
         items:
           - en: "**there** is the subject. The verb **be** agrees with the noun that follows."
@@ -174,56 +178,3 @@ sections:
           - { for: [es], wrong: How many people there are?, right: "How many people **are there**?", rule: { es: "pregunta: be + there" } }
           - { for: [es], wrong: "Is there a bank? — Yes, there's.", right: "Yes, there **is**.", rule: { es: "la respuesta corta afirmativa no se contrae" } }
           - { for: [es], wrong: "Is there a bank? — Yes, is.", right: "Yes, there **is**.", rule: { es: "la respuesta corta lleva there + be" } }
-
-essentials:
-  - level: A1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: form, label: { en: Form, es: Forma } }
-              - { key: singular, label: { en: Singular, es: Singular } }
-              - { key: plural, label: { en: Plural, es: Plural } }
-            rows:
-              - { form: +, singular: "There **is** a park.", plural: "There **are** two parks." }
-              - { form: −, singular: "There **isn't** a park.", plural: "There **aren't any** parks." }
-              - { form: "?", singular: "**Is there** a park?", plural: "**Are there any** parks?" }
-              - { form: { en: Short answer, es: Respuesta corta }, singular: "Yes, there **is**.", plural: "No, there **aren't**." }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - en: "**is** with singular and uncountable nouns, **are** with plural nouns."
-                es: "**is** con singulares e incontables, **are** con plurales."
-              - en: "**a / an** with singular nouns, **some** in +, **any** in − and ?, numbers with plural nouns."
-                es: "**a / an** con singulares, **some** en +, **any** en − y ?, números con plurales."
-              - en: "How many + plural noun + are there? / How much + uncountable noun + is there?"
-                es: "How many + plural + are there? / How much + incontable + is there?"
-      - title: { en: Use, es: Uso }
-        content:
-          - type: table
-            columns:
-              - { key: use, label: { en: Use, es: Uso } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { use: { en: "something exists", es: "algo existe" }, example: "There **is** a cinema in my town." }
-              - { use: { en: "what is in a place", es: "qué hay en un lugar" }, example: "There **are** two beds in the room." }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: Have a park near my house., right: "**There is** a park near my house." }
-              - { for: [es], wrong: Is a park near here., right: "**There is** a park near here." }
-              - { wrong: There is two cats., right: "There **are** two cats." }
-              - { wrong: There isn't some milk., right: "There isn't **any** milk." }
-              - { for: [es], wrong: "Is there a bank? — Yes, there's.", right: "Yes, there **is**." }
-
-reminders:
-  - level: A1
-    items:
-      - en: "Existence = **there is / there are**: There **is** a park."
-        es: "Existencia = **there is / there are**: There **is** a park."
-      - en: "Plural noun → **there are**; negatives and questions take **any**."
-        es: "Sustantivo plural → **there are**; negativas y preguntas llevan **any**."
-      - { for: [es], text: { es: "Siempre con there: **There** is a park. Respuesta corta: Yes, there **is**." } }

@@ -81,8 +81,6 @@ export type {
   Example,
   Item,
   Localized,
-  Part,
-  Reminder,
   Row,
   Section,
   TableBlock,
@@ -90,7 +88,6 @@ export type {
   TextBlock,
 } from "./generated/topic.ts";
 export type Topic = TopicFile;
-export type Essentials = TopicFile["essentials"][number];
 // An item written as an object: text or an example, with optional translation, level and languages.
 export type ItemObject = Exclude<Item, string | Localized>;
 

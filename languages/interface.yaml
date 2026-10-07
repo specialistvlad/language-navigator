@@ -25,23 +25,20 @@ text:
   read: { en: Read in, es: Leer en }
   level: { en: Level, es: Nivel }
   view: { en: View, es: Vista }
-  full: { en: Full, es: Completo }
-  keyPoints: { en: Key points, es: Puntos clave }
+  extended: { en: Extended, es: Ampliada }
   upTo: { en: Up to, es: Hasta }
 
   # A topic
   onThisPage: { en: On this page, es: En esta página }
   upNext: { en: Up next, es: A continuación }
-  essentials: { en: Essentials, es: Lo esencial }
-  reminder: { en: Reminder, es: Recordatorio }
   ruleColumn: { en: Rule, es: Regla }
 
   # Cheatsheets
   sheets: { en: Cheatsheets, es: Chuletas }
   sheet: { en: Cheatsheet, es: Chuleta }
   sheetsIntro:
-    en: Level sheets hold one level; progressive sheets add the reminders of every level below.
-    es: Las chuletas por nivel recogen un nivel; las progresivas añaden los recordatorios de los niveles anteriores.
+    en: A level sheet holds the cheatsheets of that level's topics; a progressive sheet holds every topic up to its level.
+    es: Una chuleta por nivel reúne las chuletas de los temas de ese nivel; una progresiva, todos los temas hasta su nivel.
   levels: { en: Levels, es: Niveles }
   progressive: { en: Progressive, es: Progresivas }
   sections: { en: Sections, es: Secciones }

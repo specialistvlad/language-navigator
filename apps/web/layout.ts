@@ -7,8 +7,7 @@ const TEXT_KEYS = [
   "read",
   "level",
   "view",
-  "full",
-  "keyPoints",
+  "extended",
   "upTo",
   "index",
   "chooseLanguage",
@@ -92,7 +91,7 @@ export function controls(o: ControlsOptions): string {
     parts.push(
       seg(
         t.view,
-        `<button type="button" data-set-view="guide">${t.full}</button><button type="button" data-set-view="essentials">${t.keyPoints}</button>`,
+        `<button type="button" data-set-view="cheatsheet">${t.sheet}</button><button type="button" data-set-view="extended">${t.extended}</button>`,
       ),
     );
   }
@@ -115,7 +114,7 @@ export interface PageOptions {
 }
 
 // Applies saved viewer preferences before first paint.
-const PREFS = `try{var d=document.documentElement,s=localStorage;d.dataset.level=s.getItem("ln-level")||"${LEVELS.at(-1) ?? ""}";d.dataset.view=s.getItem("ln-view")||"guide";var t=s.getItem("ln-theme");if(t&&t!=="auto")d.dataset.theme=t}catch(e){}`;
+const PREFS = `try{var d=document.documentElement,p=new URLSearchParams(location.search),s=localStorage,l=(p.get("level")||"").toUpperCase(),v=p.get("view");if(${JSON.stringify(LEVELS)}.indexOf(l)>=0)s.setItem("ln-level",l);if(v==="cheatsheet"||v==="extended")s.setItem("ln-view",v);d.dataset.level=s.getItem("ln-level")||"${LEVELS.at(-1) ?? ""}";d.dataset.view=s.getItem("ln-view")==="cheatsheet"?"cheatsheet":"extended";var t=s.getItem("ln-theme");if(t&&t!=="auto")d.dataset.theme=t}catch(e){}`;
 
 // Runs right after the sidebar, before first paint: restores the scroll position the same menu had on
 // the previous page (client.ts saves it on leaving), then brings the current page's entry into view.

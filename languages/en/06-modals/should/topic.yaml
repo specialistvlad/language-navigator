@@ -13,21 +13,25 @@ summary:
   en: "Should and shouldn't for advice and opinions. Should takes the base verb with every subject and needs no do in questions: You **should** go. **Should** I go?"
   es: "Should y shouldn't para consejos y opiniones. Should lleva el verbo base sin -s, sin to y sin do: *debería ir* es She **should** go, y *¿debo ir?* es **Should** I go?"
 
+cheatsheet:
+  level: A2
+  content:
+    - type: table
+      columns:
+        - { key: form, label: { en: Form, es: Forma } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { form: { en: Affirmative, es: Afirmativa }, example: "You **should** see a doctor.", tr: { es: Deberías ir al médico. } }
+        - { form: { en: Negative, es: Negativa }, example: "You **shouldn't** work so late.", tr: { es: No deberías trabajar tan tarde. } }
+        - { form: { en: Question, es: Pregunta }, example: "**Should** I take the bus?", tr: { es: "¿Debería coger el autobús?" } }
+        - { form: { en: Short answer, es: Respuesta corta }, example: "Yes, you **should**. / No, you **shouldn't**.", tr: { es: Sí. / No. } }
+        - { form: { en: Opinion, es: Opinión }, example: "I **think** you **should** call her.", tr: { es: Creo que deberías llamarla. } }
+        - { form: { en: Negative opinion, es: Opinión negativa }, example: "I **don't think** you **should** go.", tr: { es: No creo que debas ir. } }
+
 sections:
   - title: { en: Overview, es: Resumen }
     level: A2
     content:
-      - type: table
-        columns:
-          - { key: form, label: { en: Form, es: Forma } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { form: { en: Affirmative, es: Afirmativa }, example: "You **should** see a doctor.", tr: { es: Deberías ir al médico. } }
-          - { form: { en: Negative, es: Negativa }, example: "You **shouldn't** work so late.", tr: { es: No deberías trabajar tan tarde. } }
-          - { form: { en: Question, es: Pregunta }, example: "**Should** I take the bus?", tr: { es: "¿Debería coger el autobús?" } }
-          - { form: { en: Short answer, es: Respuesta corta }, example: "Yes, you **should**. / No, you **shouldn't**.", tr: { es: Sí. / No. } }
-          - { form: { en: Opinion, es: Opinión }, example: "I **think** you **should** call her.", tr: { es: Creo que deberías llamarla. } }
-          - { form: { en: Negative opinion, es: Opinión negativa }, example: "I **don't think** you **should** go.", tr: { es: No creo que debas ir. } }
       - type: bullets
         items:
           - en: "**should** has one form for every subject: I should, she should."
@@ -107,56 +111,3 @@ sections:
           - { wrong: "I think you don't should go.", right: "I **don't think** you should go.", rule: { en: "negative opinion: I don't think + should", es: "opinión negativa: I don't think + should" } }
           - { for: [es], wrong: "What I should do?", right: "What **should** I do?", rule: { es: "should va delante del sujeto en la pregunta" } }
           - { for: [en], wrong: "Should he goes?", right: "Should he **go**?", rule: { en: "should + base verb" } }
-
-essentials:
-  - level: A2
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: form, label: { en: Form, es: Forma } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { form: +, example: "You **should** see a doctor." }
-              - { form: −, example: "You **shouldn't** work so late." }
-              - { form: "?", example: "**Should** I take the bus?" }
-              - { form: { en: Opinion, es: Opinión }, example: "I **think** you **should** call her." }
-              - { form: { en: Negative opinion, es: Opinión negativa }, example: "I **don't think** you **should** go." }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - en: "One form for every subject; base verb after should; no do."
-                es: "Una sola forma para todos los sujetos; forma base después de should; sin do."
-              - en: "Negative opinion: **don't think** + should."
-                es: "Opinión negativa: **don't think** + should."
-              - en: "should /ʃəd/ is weak in a sentence; the l is silent."
-                es: "should /ʃəd/ es débil dentro de la frase; la l no se pronuncia."
-      - title: { en: Use, es: Uso }
-        content:
-          - type: table
-            columns:
-              - { key: use, label: { en: Use, es: Uso } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { use: { en: advice, es: consejo }, example: "You **should** drink more water.", tr: { es: Deberías beber más agua. } }
-              - { use: { en: asking for advice, es: pedir consejo }, example: "What **should** I do?", tr: { es: "¿Qué debería hacer?" } }
-              - { use: { en: opinion, es: opinión }, example: "I think we **should** leave.", tr: { es: Creo que deberíamos irnos. } }
-              - { use: { en: "advice, not a rule", es: "consejo, no norma" }, example: "You **should** wear a coat. (must = rule)", tr: { es: Deberías ponerte un abrigo. (must = norma) } }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { wrong: "You should to see a doctor.", right: "You should **see** a doctor." }
-              - { wrong: "Do I should go?", right: "**Should** I go?" }
-              - { wrong: "I think you don't should go.", right: "I **don't think** you should go." }
-              - { for: [es], wrong: "What I should do?", right: "What **should** I do?" }
-
-reminders:
-  - level: A2
-    items:
-      - en: "should + base verb; no do, no to: **Should** I go?"
-        es: "should + forma base; sin do ni to: **Should** I go?"
-      - en: "Negative opinion: I **don't think** you should go."
-        es: "Opinión negativa: I **don't think** you should go."

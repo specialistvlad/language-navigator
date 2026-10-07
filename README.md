@@ -5,13 +5,14 @@ Every topic is explained in English and in Spanish.
 
 **Live site:** https://specialistvlad.github.io/language-navigator/
 
-The source is structured data: one `topic.yaml` per topic holds the full reference (tables,
-rules, examples, typical errors) in both explanation languages, plus an **Essentials** block and
-a **Reminder** block for each level. JSON Schemas define and validate every file. The web pages and
-cheatsheets are rendered straight from the data.
+The source is structured data: one `topic.yaml` per topic holds a **cheatsheet** (the whole topic
+in one table) and the full reference (tables, rules, examples, typical errors) in both explanation
+languages. JSON Schemas define and validate every file. The web pages and cheatsheets are rendered
+straight from the data.
 
-Cheatsheets come per topic, per section, per level and progressive across levels. The higher a
-progressive sheet reaches, the more material it covers and the more concentrated it is.
+Each topic page opens with its cheatsheet as section 00; the View switch shows it alone or with the
+full guide. Cheatsheet pages gather the cheatsheets per topic, per section, per level and up to a
+level.
 
 ## Web requirements
 

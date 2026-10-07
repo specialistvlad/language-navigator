@@ -13,21 +13,25 @@ summary:
   en: "Must and have to for obligation; mustn't for prohibition; don't have to for no obligation. Mustn't forbids and don't have to means it is not necessary: You **mustn't** park here. You **don't have to** pay."
   es: "Must y have to para obligación; mustn't para prohibición; don't have to para falta de obligación. Mustn't prohíbe y don't have to significa que no hace falta: *no tienes que pagar* es You **don't have to** pay."
 
+cheatsheet:
+  level: A2
+  content:
+    - type: table
+      columns:
+        - { key: meaning, label: { en: Meaning, es: Significado } }
+        - { key: form, label: { en: Form, es: Forma } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { meaning: { en: "strong personal obligation, rules", es: "obligación personal fuerte, normas" }, form: must + V, example: "I **must** call my mum.", tr: { es: Tengo que llamar a mi madre. } }
+        - { meaning: { en: "obligation from outside", es: "obligación externa" }, form: have to + V, example: "I **have to** wear a uniform.", tr: { es: Tengo que llevar uniforme. } }
+        - { meaning: { en: prohibition, es: prohibición }, form: mustn't + V, example: "You **mustn't** park here.", tr: { es: No debes aparcar aquí. } }
+        - { meaning: { en: "no obligation", es: "sin obligación" }, form: don't have to + V, example: "You **don't have to** pay.", tr: { es: No hace falta que pagues. } }
+        - { meaning: { en: "past obligation", es: "obligación en pasado" }, form: had to + V, example: "I **had to** work late.", tr: { es: Tuve que trabajar hasta tarde. } }
+
 sections:
   - title: { en: Overview, es: Resumen }
     level: A2
     content:
-      - type: table
-        columns:
-          - { key: meaning, label: { en: Meaning, es: Significado } }
-          - { key: form, label: { en: Form, es: Forma } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { meaning: { en: "strong personal obligation, rules", es: "obligación personal fuerte, normas" }, form: must + V, example: "I **must** call my mum.", tr: { es: Tengo que llamar a mi madre. } }
-          - { meaning: { en: "obligation from outside", es: "obligación externa" }, form: have to + V, example: "I **have to** wear a uniform.", tr: { es: Tengo que llevar uniforme. } }
-          - { meaning: { en: prohibition, es: prohibición }, form: mustn't + V, example: "You **mustn't** park here.", tr: { es: No debes aparcar aquí. } }
-          - { meaning: { en: "no obligation", es: "sin obligación" }, form: don't have to + V, example: "You **don't have to** pay.", tr: { es: No hace falta que pagues. } }
-          - { meaning: { en: "past obligation", es: "obligación en pasado" }, form: had to + V, example: "I **had to** work late.", tr: { es: Tuve que trabajar hasta tarde. } }
       - type: bullets
         items:
           - { for: [es], text: { es: "*tener que* = have to. *deber* = must. *No tienes que* = don't have to; *no debes* = mustn't." } }
@@ -156,60 +160,3 @@ sections:
           - { for: [en], wrong: "She doesn't has to work.", right: "She doesn't **have to** work.", rule: { en: "doesn't + base form" } }
           - { wrong: "I must work yesterday.", right: "I **had to** work yesterday.", rule: { en: "past of must → had to", es: "el pasado de must es had to" } }
           - { for: [es], wrong: "I haven't to go.", right: "I **don't have to** go.", rule: { es: "negativa de have to: don't / doesn't have to" } }
-
-essentials:
-  - level: A2
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: meaning, label: { en: Meaning, es: Significado } }
-              - { key: form, label: { en: Form, es: Forma } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { meaning: { en: "strong obligation, rules", es: "obligación fuerte, normas" }, form: must + V, example: "I **must** call my mum." }
-              - { meaning: { en: "outside obligation", es: "obligación externa" }, form: have to / has to + V, example: "She **has to** wear a uniform." }
-              - { meaning: { en: prohibition, es: prohibición }, form: mustn't + V, example: "You **mustn't** park here." }
-              - { meaning: { en: "no obligation", es: "sin obligación" }, form: don't / doesn't have to + V, example: "You **don't have to** pay." }
-              - { meaning: { en: past, es: pasado }, form: had to + V, example: "I **had to** work late." }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - en: "must: one form for every subject, base verb after it, no past form."
-                es: "must: una sola forma para todos los sujetos, verbo en forma base, sin pasado."
-              - en: "have to: do / does / did in questions and negatives."
-                es: "have to: do / does / did en preguntas y negativas."
-              - en: "Speech prefers **have to** and **Do I have to…?** to **must**."
-                es: "En conversación se prefiere **have to** y **Do I have to…?** a **must**."
-              - en: "have to /ˈhæf tə/, has to /ˈhæs tə/; the first t of mustn't /ˈmʌsnt/ is silent."
-                es: "have to /ˈhæf tə/, has to /ˈhæs tə/; la primera t de mustn't /ˈmʌsnt/ no se pronuncia."
-      - title: { en: Use, es: Uso }
-        content:
-          - type: table
-            columns:
-              - { key: use, label: { en: Use, es: Uso } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { use: { en: "my own obligation, rules (must)", es: "mi obligación, normas (must)" }, example: "Visitors **must** sign in.", tr: { es: Los visitantes deben registrarse. } }
-              - { use: { en: "outside obligation (have to)", es: "obligación externa (have to)" }, example: "I **have to** get up at six.", tr: { es: Tengo que levantarme a las seis. } }
-              - { use: { en: "forbidden (mustn't)", es: "prohibido (mustn't)" }, example: "You **mustn't** use your phone here.", tr: { es: No debes usar el móvil aquí. } }
-              - { use: { en: "not necessary (don't have to)", es: "no necesario (don't have to)" }, example: "You **don't have to** come.", tr: { es: No hace falta que vengas. } }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: "You mustn't bring food. We have plenty.", right: "You **don't have to** bring food." }
-              - { wrong: "You don't must smoke here.", right: "You **mustn't** smoke here." }
-              - { wrong: "He have to work.", right: "He **has to** work." }
-              - { wrong: "I must work yesterday.", right: "I **had to** work yesterday." }
-
-reminders:
-  - level: A2
-    items:
-      - en: "**mustn't** = forbidden; **don't have to** = not necessary."
-        es: "**mustn't** = prohibido; **don't have to** = no es necesario."
-      - { for: [es], text: { es: "*No tienes que* = don't have to. *No debes* = mustn't." } }
-      - en: "Past obligation = **had to**: I **had to** work late."
-        es: "Obligación en pasado = **had to**: I **had to** work late."

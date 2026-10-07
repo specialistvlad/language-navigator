@@ -20,19 +20,13 @@
     },
   };
 
+  // Start-up fills in the level and view, so the buttons only follow them.
   function mark(): void {
-    const chosen = root.dataset["level"];
-    const level =
-      chosen !== undefined && chosen !== ""
-        ? chosen
-        : document.querySelector<HTMLElement>("[data-set-level]:last-child")?.dataset["setLevel"];
-    const shown = root.dataset["view"];
-    const view = shown !== undefined && shown !== "" ? shown : "guide";
     document.querySelectorAll<HTMLElement>("[data-set-level]").forEach((b) => {
-      b.classList.toggle("on", b.dataset["setLevel"] === level);
+      b.classList.toggle("on", b.dataset["setLevel"] === root.dataset["level"]);
     });
     document.querySelectorAll<HTMLElement>("[data-set-view]").forEach((b) => {
-      b.classList.toggle("on", b.dataset["setView"] === view);
+      b.classList.toggle("on", b.dataset["setView"] === root.dataset["view"]);
     });
   }
 
@@ -54,16 +48,11 @@
     if (level !== undefined) {
       root.dataset["level"] = level;
       store.set("ln-level", level);
+      showState();
       refresh();
     }
     const view = target.closest<HTMLElement>("[data-set-view]")?.dataset["setView"];
     if (view !== undefined) setView(view);
-    // On this page: a section link opens the Guide view, the Essentials entry opens its view at the top.
-    const entry = target.closest<HTMLElement>(".toc [data-view]")?.dataset["view"];
-    if (entry !== undefined) {
-      setView(entry);
-      if (entry === "essentials") scrollTo({ top: 0 });
-    }
     if (target.closest("#print")) window.print();
     if (target.closest("#menu")) document.body.classList.toggle("nav-open");
     if (target.closest("#theme")) {
@@ -73,9 +62,21 @@
     }
   });
 
+  // A page carries the choice of each switch it has in its address, ?level=a1 and ?view=cheatsheet,
+  // so a shared link opens the same state.
+  function showState(): void {
+    const url = new URL(location.href);
+    const level = root.dataset["level"];
+    if (filled(level) && document.querySelector("[data-set-level]")) url.searchParams.set("level", level.toLowerCase());
+    if (document.querySelector("[data-set-view]")) url.searchParams.set("view", root.dataset["view"] ?? "extended");
+    if (url.href !== location.href) history.replaceState(history.state, "", url);
+  }
+  const filled = (value: string | undefined): value is string => value !== undefined && value !== "";
+
   function setView(view: string): void {
     root.dataset["view"] = view;
     store.set("ln-view", view);
+    showState();
     refresh();
   }
 
@@ -85,6 +86,17 @@
     spy();
   }
 
+  // The address wins over the stored choices, also where storage is off.
+  const params = new URL(location.href).searchParams;
+  const askedLevel = (params.get("level") ?? "").toUpperCase();
+  if (document.querySelector(`[data-set-level="${askedLevel}"]`)) root.dataset["level"] = askedLevel;
+  const askedView = params.get("view");
+  if (askedView === "cheatsheet" || askedView === "extended") root.dataset["view"] = askedView;
+  if (!filled(root.dataset["view"])) root.dataset["view"] = "extended";
+  if (!filled(root.dataset["level"])) {
+    root.dataset["level"] = document.querySelector<HTMLElement>("[data-set-level]:last-child")?.dataset["setLevel"] ?? "";
+  }
+  showState();
   mark();
 
   // On this page: highlights the section being read, the lowest section top above 30% of the window

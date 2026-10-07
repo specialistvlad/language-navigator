@@ -13,21 +13,21 @@ summary:
   en: "Where adjectives go, their fixed order, and -ed and -ing adjectives. Adjectives go before a noun, take no plural -s, and put size before colour and age before material: a **big red** bag, an **old wooden** table."
   es: "Dónde van los adjetivos, su orden fijo y los adjetivos en -ed y en -ing. El adjetivo va delante del sustantivo y no lleva -s en plural: *dos coches rojos* es two **red** cars."
 
-sections:
-  - title: { en: Overview, es: Resumen }
-    level: A1-A2
-    content:
-      - type: table
-        columns:
-          - { key: pattern, label: { en: Pattern, es: Patrón } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { pattern: adjective + noun, example: "a **red** car", tr: { es: un coche rojo } }
-          - { pattern: be / look / feel + adjective, example: "The car is **red**.", tr: { es: El coche es rojo. } }
-          - { pattern: adjective + plural noun, example: "two **red** cars", tr: { es: dos coches rojos } }
-          - { level: A2, pattern: { en: "opinion, size, age, shape, colour, origin, material + noun", es: "opinión, tamaño, edad, forma, color, origen, material + sustantivo" }, example: "a **lovely small old** house", tr: { es: "una casa preciosa, pequeña y antigua" } }
-          - { level: A2, pattern: "-ed / -ing", example: "I'm **bored**. / It's **boring**.", tr: { es: Estoy aburrido. / Es aburrido. } }
+cheatsheet:
+  level: A1-A2
+  content:
+    - type: table
+      columns:
+        - { key: pattern, label: { en: Pattern, es: Patrón } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { pattern: adjective + noun, example: "a **red** car", tr: { es: un coche rojo } }
+        - { pattern: be / look / feel + adjective, example: "The car is **red**.", tr: { es: El coche es rojo. } }
+        - { pattern: adjective + plural noun, example: "two **red** cars", tr: { es: dos coches rojos } }
+        - { level: A2, pattern: { en: "opinion, size, age, shape, colour, origin, material + noun", es: "opinión, tamaño, edad, forma, color, origen, material + sustantivo" }, example: "a **lovely small old** house", tr: { es: "una casa preciosa, pequeña y antigua" } }
+        - { level: A2, pattern: "-ed / -ing", example: "I'm **bored**. / It's **boring**.", tr: { es: Estoy aburrido. / Es aburrido. } }
 
+sections:
   - title: { en: "Form: position and agreement", es: "Forma: posición y concordancia" }
     level: A1
     content:
@@ -122,53 +122,3 @@ sections:
           - { level: A2, wrong: a red big bag, right: "a **big red** bag", rule: { en: size before colour, es: el tamaño va antes que el color } }
           - { for: [es], level: A2, wrong: I am boring., right: "I'm **bored**.", rule: { es: "*estoy aburrido* = I'm bored; boring describe lo que aburre" } }
           - { level: A2, wrong: The film is bored., right: "The film is **boring**.", rule: { en: the cause takes -ing, es: la causa lleva -ing } }
-
-essentials:
-  - level: A1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: position, label: { en: Position, es: Posición } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { position: adjective + noun, example: "a **new** phone / two **new** phones" }
-              - { position: be + adjective, example: "My phone **is new**." }
-              - { position: look / feel + adjective, example: "You **look tired**." }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - en: "The adjective goes before the noun."
-                es: "El adjetivo va delante del sustantivo: a **red** car."
-              - en: "The adjective has one form: no plural -s."
-                es: "El adjetivo tiene una sola forma: sin -s ni género."
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: She has a car red., right: "She has a **red car**." }
-              - { wrong: two reds cars, right: "two **red** cars" }
-              - { wrong: You look tiredly., right: "You look **tired**." }
-  - level: A2
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: Order, es: Orden }, rule: { en: "opinion, size, age, shape, colour, origin, material, purpose + noun", es: "opinión, tamaño, edad, forma, color, origen, material, finalidad + sustantivo" }, example: "a **nice old wooden** chair" }
-          - { point: { en: After be, es: Después de be }, rule: { en: adjectives joined with and, es: adjetivos unidos con and }, example: "The room is **big and bright**." }
-          - { point: -ed, rule: { en: how a person feels, es: cómo se siente alguien }, example: "I'm **bored**." }
-          - { point: -ing, rule: { en: what causes the feeling, es: qué causa el sentimiento }, example: "The film is **boring**." }
-
-reminders:
-  - level: A1
-    items:
-      - { en: "Adjective before the noun, no plural -s: two **red** cars.", es: "Adjetivo delante del sustantivo, sin -s: two **red** cars." }
-  - level: A2
-    items:
-      - { en: "Order: opinion, size, age, shape, colour, origin, material: a **big old** car.", es: "Orden: opinión, tamaño, edad, forma, color, origen, material: a **big old** car." }
-      - { en: "I'm **bored** (feeling). The film is **boring** (cause).", es: "I'm **bored** (lo que siento). The film is **boring** (la causa)." }

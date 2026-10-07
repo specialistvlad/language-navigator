@@ -64,16 +64,5 @@ export function checkLanguages(topic: Topic, where: string, report: Report): voi
     need(s.title, `sections[${i}].title`, langs);
     blocks(s.content, `sections[${i}].content`, langs);
   });
-  topic.essentials.forEach((e, i) => {
-    e.parts?.forEach((part, k) => {
-      need(part.title, `essentials[${i}].parts[${k}].title`, all);
-      blocks(part.content, `essentials[${i}].parts[${k}].content`, all);
-    });
-    if (e.content) blocks(e.content, `essentials[${i}].content`, all);
-  });
-  topic.reminders?.forEach((r, i) => {
-    r.items.forEach((it, k) => {
-      item(it, `reminders[${i}].items[${k}]`, all);
-    });
-  });
+  blocks(topic.cheatsheet.content, "cheatsheet.content", all);
 }

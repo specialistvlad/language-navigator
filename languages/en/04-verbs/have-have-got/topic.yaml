@@ -13,20 +13,24 @@ summary:
   en: "Have and have got for possession, family and features; have alone for everyday actions. Have takes do / does and have got takes have / has: I **don't have** a car. I **haven't got** a car."
   es: "Have y have got para posesión, familia y rasgos; have solo para acciones cotidianas. Tener es have o have got, pero las acciones llevan solo have: I **have got** a dog. I **have** breakfast."
 
+cheatsheet:
+  level: A1
+  content:
+    - type: table
+      columns:
+        - { key: form, label: { en: Form, es: Forma } }
+        - { key: have, label: have }
+        - { key: got, label: have got }
+      rows:
+        - { form: { en: Affirmative, es: Afirmativa }, have: "I **have** a car.", got: "I'**ve got** a car." }
+        - { form: { en: Negative, es: Negativa }, have: "I **don't have** a car.", got: "I **haven't got** a car." }
+        - { form: { en: Question, es: Pregunta }, have: "**Do** you **have** a car?", got: "**Have** you **got** a car?" }
+        - { form: { en: Short answer, es: Respuesta corta }, have: "Yes, I **do**. / No, I **don't**.", got: "Yes, I **have**. / No, I **haven't**." }
+
 sections:
   - title: { en: Overview, es: Resumen }
     level: A1
     content:
-      - type: table
-        columns:
-          - { key: form, label: { en: Form, es: Forma } }
-          - { key: have, label: have }
-          - { key: got, label: have got }
-        rows:
-          - { form: { en: Affirmative, es: Afirmativa }, have: "I **have** a car.", got: "I'**ve got** a car." }
-          - { form: { en: Negative, es: Negativa }, have: "I **don't have** a car.", got: "I **haven't got** a car." }
-          - { form: { en: Question, es: Pregunta }, have: "**Do** you **have** a car?", got: "**Have** you **got** a car?" }
-          - { form: { en: Short answer, es: Respuesta corta }, have: "Yes, I **do**. / No, I **don't**.", got: "Yes, I **have**. / No, I **haven't**." }
       - type: bullets
         items:
           - en: "**have** and **have got** have the same meaning for possession, family and features."
@@ -174,59 +178,3 @@ sections:
           - { for: [es], wrong: I have 20 years., right: "I **am** 20.", rule: { es: la edad se dice con be } }
           - { for: [es], wrong: I take a shower. / I make a shower., right: "I **have** a shower.", rule: { es: "*tomar / hacer una ducha* = have a shower" } }
           - { wrong: I have got breakfast at 8., right: "I **have** breakfast at 8.", rule: { en: "actions take have only", es: "las acciones llevan solo have" } }
-
-essentials:
-  - level: A1
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: form, label: { en: Form, es: Forma } }
-              - { key: have, label: have }
-              - { key: got, label: have got }
-            rows:
-              - { form: +, have: "I / they **have**. / She **has**.", got: "I'**ve got** / She'**s got**." }
-              - { form: −, have: "I **don't have**. / She **doesn't have**.", got: "I **haven't got**. / She **hasn't got**." }
-              - { form: "?", have: "**Do** you **have**…? / **Does** she **have**…?", got: "**Have** you **got**…? / **Has** she **got**…?" }
-              - { form: { en: Short answer, es: Respuesta corta }, have: "Yes, I **do**. / No, she **doesn't**.", got: "Yes, I **have**. / No, she **hasn't**." }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - en: "he / she / it → **has**: She **has** a dog."
-                es: "he / she / it → **has**: She **has** a dog."
-              - en: "**have** takes do / does; **have got** takes have / has. Each pattern keeps its own auxiliary."
-                es: "**have** lleva do / does; **have got** lleva have / has. Cada modelo mantiene su auxiliar."
-              - en: "A short answer ends with the auxiliary: Yes, I **have**. / Yes, I **do**."
-                es: "La respuesta corta termina con el auxiliar: Yes, I **have**. / Yes, I **do**."
-              - en: "Actions take only **have**: I **have** breakfast. / I **don't have** lunch."
-                es: "Las acciones llevan solo **have**: I **have** breakfast. / I **don't have** lunch."
-      - title: { en: Use, es: Uso }
-        content:
-          - type: table
-            columns:
-              - { key: use, label: { en: Use, es: Uso } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { use: { en: possession, es: posesión }, example: "I **have** a new phone." }
-              - { use: { en: "family, features", es: "familia, rasgos" }, example: "She'**s got** two sisters. / He **has** blue eyes." }
-              - { use: { en: "actions", es: "acciones" }, example: "I **have** a shower. / We **have** lunch." }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { wrong: She have a dog., right: "She **has** a dog." }
-              - { wrong: Do you have got a car?, right: "**Have** you **got** a car?" }
-              - { wrong: She don't have a car., right: "She **doesn't have** a car." }
-              - { for: [es], wrong: I have 20 years., right: "I **am** 20." }
-              - { wrong: I have got breakfast at 8., right: "I **have** breakfast at 8." }
-
-reminders:
-  - level: A1
-    items:
-      - en: "he / she / it → **has**: She **has** a dog."
-        es: "he / she / it → **has**: She **has** a dog."
-      - en: "Each pattern keeps its auxiliary: **Do** you **have**…? / **Have** you **got**…?"
-        es: "Cada modelo con su auxiliar: **Do** you **have**…? / **Have** you **got**…?"
-      - { for: [es], text: { es: "Edad con be: I **am** 20." } }

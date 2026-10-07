@@ -13,6 +13,27 @@ summary:
   en: "The sounds of English, how to read them in IPA, and word stress. IPA gives every sound one symbol between slashes, so it shows how a word sounds whatever its spelling: **ship** /ʃɪp/, **sheep** /ʃiːp/."
   es: "Los sonidos del inglés, cómo leerlos en el AFI (IPA) y el acento de las palabras. El AFI da un símbolo a cada sonido, y la vocal corta /ɪ/ no es la larga /iː/: **ship** /ʃɪp/ es *barco*, **sheep** /ʃiːp/ es *oveja*."
 
+cheatsheet:
+  level: A0-A1
+  content:
+    - type: table
+      columns:
+        - { key: point, label: { en: Point, es: Punto } }
+        - { key: rule, label: { en: Rule, es: Regla } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { point: IPA, rule: { en: "one symbol for each sound, written between slashes", es: "un símbolo por sonido, escrito entre barras" }, example: "book /bʊk/" }
+        - { point: { en: Spelling and sound, es: Ortografía y sonido }, rule: { en: "spelling and sound often differ", es: "la ortografía y el sonido suelen ser distintos" }, example: "*photo* /ˈfəʊtəʊ/", tr: { es: foto (sin /p/ ni /h/) } }
+        - { point: "ː  ˈ", rule: { en: "ː makes a vowel long; ˈ comes before the stressed syllable", es: "ː alarga la vocal; ˈ va delante de la sílaba acentuada" }, example: "f**oo**d /fuːd/, teacher /ˈtiːtʃə/" }
+        - { point: { en: Short and long, es: Corta y larga }, rule: { en: "short /ɪ/ is not long /iː/", es: "/ɪ/ corta no es /iː/ larga" }, example: "**ship** /ʃɪp/ · **sheep** /ʃiːp/", tr: { es: barco · oveja } }
+        - { point: th, rule: { en: "th is /θ/ or /ð/", es: "th es /θ/ o /ð/" }, example: "**th**ink /θɪŋk/ · **th**is /ðɪs/", tr: { es: pensar · esto } }
+        - { for: [es], point: { es: Sonidos nuevos }, rule: { es: "/v/, /z/, /ʃ/, /dʒ/ y /ɜː/ no existen en español" }, example: "**v**an, **z**oo, **sh**op, **j**ob, b**ir**d", tr: { es: "furgoneta, zoo, tienda, trabajo, pájaro" } }
+        - { for: [es], point: Spain, rule: { es: "sin «e» delante de s + consonante" }, example: "Spain /speɪn/" }
+        - { point: US, rule: { en: "/ɒ/ becomes /ɑː/, /əʊ/ becomes /oʊ/, and /r/ is pronounced after vowels", es: "/ɒ/ pasa a /ɑː/, /əʊ/ pasa a /oʊ/ y la /r/ se pronuncia detrás de vocal" }, example: "hot /hɑːt/, car /kɑːr/" }
+        - { level: A1, point: { en: Stress in two syllables, es: Acento en dos sílabas }, rule: { en: "most nouns and adjectives: first syllable; many verbs: second", es: "casi todos los sustantivos y adjetivos: la primera; muchos verbos: la segunda" }, example: "**ˈtea**cher / be**ˈgin**", tr: { es: profesor / empezar } }
+        - { level: A1, point: -tion  -sion  -ic, rule: { en: "stress the syllable before the ending", es: "se acentúa la sílaba anterior a la terminación" }, example: "infor**ˈma**tion / fan**ˈtas**tic", tr: { es: información / fantástico } }
+        - { level: A1, point: { en: Weak vowel, es: Vocal débil }, rule: { en: "unstressed vowels are often the weak /ə/", es: "las vocales sin acento suelen ser la /ə/ débil" }, example: "about /əˈbaʊt/", tr: { es: sobre } }
+
 sections:
   - title: { en: How IPA works, es: Cómo funciona el AFI }
     level: A0
@@ -129,42 +150,3 @@ sections:
           - { wrong: think /sɪŋk/ · this /dɪs/, right: "think **/θɪŋk/** · this **/ðɪs/**", rule: { en: "th = /θ/ or /ð/", es: "th = /θ/ o /ð/" } }
           - { for: [es], wrong: very /ˈberi/, right: "very **/ˈveri/**", rule: { es: "/v/: dientes sobre el labio inferior" } }
           - { level: A1, wrong: comˈfortable, right: "**ˈcom**fortable /ˈkʌmftəbl/", rule: { en: "stress on the first syllable", es: "acento en la primera sílaba" } }
-
-essentials:
-  - level: A0
-    parts:
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - { en: "IPA: one symbol per sound, between slashes. ː = long, ˈ = stressed syllable.", es: "AFI: un símbolo por sonido, entre barras. ː = larga, ˈ = sílaba acentuada." }
-              - { en: "Short ≠ long: ship /ɪ/ ≠ sheep /iː/, book /ʊ/ ≠ food /uː/.", es: "Corta ≠ larga: ship /ɪ/ ≠ sheep /iː/, book /ʊ/ ≠ food /uː/." }
-              - { en: "th has two sounds: /θ/ *think*, /ð/ *this*.", es: "th tiene dos sonidos: /θ/ *think*, /ð/ *this*." }
-              - { for: [es], text: { es: "Sonidos nuevos para hispanohablantes: /v/, /z/, /ʃ/, /dʒ/, /æ/, /ɜː/, /ə/." } }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: Spain /esˈpeɪn/, right: "Spain **/speɪn/**" }
-              - { wrong: ship /ʃiːp/, right: "ship **/ʃɪp/**" }
-              - { wrong: think /sɪŋk/, right: "think **/θɪŋk/**" }
-  - level: A1
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: Word stress, es: Acento }, rule: { en: "nouns: first syllable · verbs: often second", es: "sustantivos: primera sílaba · verbos: a menudo la segunda" }, example: "**ˈtea**cher / be**ˈgin**" }
-          - { point: { en: Weak vowel, es: Vocal débil }, rule: { en: "unstressed vowels → /ə/", es: "vocal sin acento → /ə/" }, example: "about /əˈbaʊt/" }
-
-reminders:
-  - level: A0
-    items:
-      - { en: "ː = long: sheep /iː/ ≠ ship /ɪ/.", es: "ː = larga: sheep /iː/ ≠ ship /ɪ/." }
-      - { en: "th = /θ/ *think*, /ð/ *this*.", es: "th = /θ/ *think*, /ð/ *this*." }
-      - { for: [es], text: { es: "Spain /speɪn/: sin «e» al principio." } }
-  - level: A1
-    items:
-      - { en: "Unstressed vowels → /ə/: about /əˈbaʊt/.", es: "Vocal sin acento → /ə/: about /əˈbaʊt/." }

@@ -13,18 +13,22 @@ summary:
   en: "If-sentences for facts (zero), real possibilities (first) and imagined situations (second). After if the verb is in the present simple, even for the future: If it **rains**, we'll stay in."
   es: "Frases con if para hechos, posibilidades reales y situaciones imaginadas. Tras if el presente simple expresa el futuro, sin will: If it **rains**, we'll stay in."
 
+cheatsheet:
+  level: A2-B1
+  content:
+    - type: table
+      columns:
+        - { key: type, label: { en: Type, es: Tipo } }
+        - { key: example, label: { en: Example, es: Ejemplo } }
+      rows:
+        - { type: "Zero: if + present, present", example: "If you **heat** ice, it **melts**.", tr: { es: "Si calientas hielo, se derrite." } }
+        - { type: "First: if + present, will + V", example: "If it **rains**, we'**ll stay** in.", tr: { es: "Si llueve, nos quedaremos en casa." } }
+        - { level: B1, type: "Second: if + past, would + V", example: "If I **had** more time, I'**d learn** Spanish.", tr: { es: "Si tuviera más tiempo, aprendería español." } }
+
 sections:
   - title: { en: Overview, es: Resumen }
-    level: A2-B1
+    level: A2
     content:
-      - type: table
-        columns:
-          - { key: type, label: { en: Type, es: Tipo } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { type: "Zero: if + present, present", example: "If you **heat** ice, it **melts**.", tr: { es: "Si calientas hielo, se derrite." } }
-          - { type: "First: if + present, will + V", example: "If it **rains**, we'**ll stay** in.", tr: { es: "Si llueve, nos quedaremos en casa." } }
-          - { level: B1, type: "Second: if + past, would + V", example: "If I **had** more time, I'**d learn** Spanish.", tr: { es: "Si tuviera más tiempo, aprendería español." } }
       - type: bullets
         items:
           - en: "Zero and first conditionals talk about real situations. The second talks about imagined ones."
@@ -142,63 +146,3 @@ sections:
           - { wrong: If it rains we'll stay in., right: "**If it rains,** we'll stay in.", rule: { en: comma after an if-clause at the start, es: coma tras la oración con if al principio } }
           - { level: B1, wrong: "Unless you don't hurry, you'll miss the bus.", right: "**Unless** you hurry, you'll miss the bus.", rule: { en: unless already means if … not, es: unless ya significa if … not } }
           - { for: [en], wrong: "If she come, I'll call you.", right: "If she **comes**, I'll call you.", rule: { en: she / he / it → V-s in the if-clause } }
-
-essentials:
-  - level: A2
-    parts:
-      - title: { en: Form, es: Forma }
-        content:
-          - type: table
-            columns:
-              - { key: type, label: { en: Type, es: Tipo } }
-              - { key: pattern, label: { en: Pattern, es: Patrón } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { type: { en: Zero, es: Cero }, pattern: "if + present, present", example: "If you **heat** ice, it **melts**." }
-              - { type: { en: First, es: Primero }, pattern: "if + present, will + V", example: "If it **rains**, we'**ll stay** in." }
-      - title: { en: Key rules, es: Reglas clave }
-        content:
-          - type: bullets
-            items:
-              - en: "After **if** the verb is in the present simple, also for the future."
-                es: "Tras **if** el verbo va en presente simple, también para el futuro."
-              - en: "If-clause first: comma. If-clause second: no comma."
-                es: "Oración con if primero: coma. Oración con if después: sin coma."
-      - title: { en: Use, es: Uso }
-        content:
-          - type: table
-            columns:
-              - { key: use, label: { en: Use, es: Uso } }
-              - { key: example, label: { en: Example, es: Ejemplo } }
-            rows:
-              - { use: { en: "facts (zero)", es: "hechos (cero)" }, example: "If you **press** this button, the door **opens**." }
-              - { use: { en: "real possibility (first)", es: "posibilidad real (primero)" }, example: "If I **see** Ana, I'**ll tell** her." }
-      - title: { en: Top errors, es: Errores principales }
-        content:
-          - type: errors
-            rows:
-              - { for: [es], wrong: "If it will rain, we'll stay in.", right: "If it **rains**, we'll stay in." }
-  - level: B1
-    content:
-      - type: table
-        columns:
-          - { key: point, label: { en: Point, es: Punto } }
-          - { key: rule, label: { en: Rule, es: Regla } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
-        rows:
-          - { point: { en: Second conditional, es: Segundo condicional }, rule: "if + past simple, would + V", example: "If I **won**, I'**d buy** a house." }
-          - { point: If I were you, rule: { en: "were for every person; gives advice", es: "were para todas las personas; da consejos" }, example: "If I **were** you, I'**d go**." }
-          - { point: { en: First or second, es: Primero o segundo }, rule: { en: "possible → will; unlikely → would", es: "posible → will; improbable → would" }, example: "If I **win**, I'**ll** … / If I **won**, I'**d** …" }
-          - { point: unless, rule: "= if … not", example: "**Unless** you hurry, you'll miss it." }
-
-reminders:
-  - level: A2
-    items:
-      - en: "After **if** the present simple stands for the future: If it **rains**, we'll stay in."
-        es: "Tras **if** el presente simple expresa el futuro: If it **rains**, we'll stay in."
-  - level: B1
-    items:
-      - en: "After **if** the past simple stands for the imagined present: If I **had** time, I'd help."
-        es: "Tras **if** el pasado simple expresa el presente imaginado: If I **had** time, I'd help."
-      - en: "**unless** = if … not: **Unless** it rains."
-        es: "**unless** = if … not: **Unless** it rains."
