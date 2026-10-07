@@ -1,0 +1,122 @@
+/* Document */
+
+.doc h1 {
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+}
+
+.doc-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+  margin-bottom: 10px;
+}
+
+.doc-head h1 {
+  margin: 0;
+}
+.doc-head h1 .lvl {
+  margin-left: 12px;
+  font-size: 12px;
+  padding: 2px 9px;
+  position: relative;
+  top: -3px;
+}
+.doc-head .actions {
+  display: flex;
+  gap: 6px;
+}
+.doc-head .tool {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+}
+.doc-head .tool:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+.doc-head .tool.edit {
+  width: auto;
+  gap: 7px;
+  padding: 0 11px;
+  font-size: 13px;
+  font-weight: 550;
+  text-decoration: none;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.doc > blockquote:first-of-type {
+  margin: 0 0 28px;
+  padding: 0;
+  border: 0;
+  font-size: 17px;
+  color: var(--muted);
+}
+
+.doc h2 {
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  margin: 40px 0 12px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.doc h3 {
+  font-size: 16px;
+  margin: 24px 0 8px;
+}
+.doc h4 {
+  font-size: 14px;
+  margin: 18px 0 6px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.doc h5 {
+  font-size: 13px;
+  margin: 14px 0 6px;
+}
+
+.doc p,
+.doc ul {
+  margin: 8px 0;
+}
+.doc ul {
+  padding-left: 20px;
+}
+.doc li {
+  margin: 3px 0;
+}
+.doc strong {
+  color: var(--accent);
+  font-weight: 650;
+}
+.doc em {
+  color: var(--muted);
+}
+.doc a {
+  color: var(--accent);
+}
+.doc a.missing {
+  color: var(--muted);
+  text-decoration: underline dotted;
+  cursor: help;
+}
+.doc code {
+  font: 13px var(--mono);
+  background: var(--surface-2);
+  padding: 1px 5px;
+  border-radius: 4px;
+}

@@ -1,0 +1,124 @@
+/* Guide sections are numbered in reading order, in the index card style; sections the level
+   filter hides take no number. */
+.sections {
+  counter-reset: part;
+}
+.sections > .part {
+  counter-increment: part;
+}
+.sections > .part > h2::before {
+  content: counter(part, decimal-leading-zero);
+  margin-right: 12px;
+  font: 600 1em var(--mono);
+  letter-spacing: -0.02em;
+  color: var(--muted);
+}
+.sheet-index {
+  --lane: 320px;
+}
+
+/* Track index: header, one card per section */
+
+.index-head {
+  margin-bottom: 28px;
+}
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.doc .index-head h1 {
+  font-size: 34px;
+  margin: 0 0 8px;
+}
+.index-head .lead {
+  margin: 0;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.index-grid {
+  --lane: 360px;
+  --lane-gap: 16px;
+  --lane-col-gap: 16px;
+}
+
+.index-card {
+  padding: 14px 8px 8px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.index-card > header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0 0 6px;
+  padding: 0 10px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.index-card .num {
+  font: 600 17px var(--mono);
+  color: var(--muted);
+  letter-spacing: -0.02em;
+}
+.doc .index-card h2 {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 17px;
+}
+.index-card .count {
+  font-size: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.doc .index-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.doc .index-list li {
+  margin: 0;
+}
+.doc .index-list a,
+.doc .index-list .row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  color: var(--text);
+  text-decoration: none;
+}
+.doc .index-list a:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.doc .index-list .name {
+  flex: 1;
+  min-width: 0;
+}
+.doc .index-list .todo .row {
+  color: var(--muted);
+}
+.doc .index-list .lvl {
+  margin: 0;
+}
+.doc .index-list .todo .lvl {
+  opacity: 0.5;
+}
+
+@media (max-width: 860px) {
+  .doc .index-head h1 {
+    font-size: 28px;
+  }
+}

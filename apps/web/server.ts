@@ -59,7 +59,8 @@ const changed = new Set<string>();
 watch(ROOT, { recursive: true }, (_event, filename) => {
   if (filename === null) return;
   const file = filename;
-  const relevant = (file.startsWith("languages/") && /\.(ya?ml|json)$/.test(file)) || /^apps\/web\/(style\.css|client\.ts)$/.test(file);
+  const relevant =
+    (file.startsWith("languages/") && /\.(ya?ml|json)$/.test(file)) || /^apps\/web\/(styles\/[\w-]+\.css|client\.ts)$/.test(file);
   if (!relevant) return;
   changed.add(file);
   clearTimeout(timer);

@@ -1,8 +1,17 @@
-// Files every page loads besides style.css: the browser script and the level colours.
+// Files every page loads: the stylesheet, the browser script and the level colours.
 import { join } from "node:path";
 import { LEVEL_INFO } from "../../scripts/lib.ts";
 
 const APP = import.meta.dir;
+
+// The stylesheet's parts in cascade order; each stays under 200 lines (npm run lint).
+const STYLES = ["base", "topbar", "layout", "document", "tables", "media", "static-pages", "views", "rail", "index"];
+
+// style.css: the parts of apps/web/styles/ joined in order.
+export async function styleCss(): Promise<string> {
+  const parts = await Promise.all(STYLES.map((name) => Bun.file(join(APP, "styles", `${name}.css`)).text()));
+  return parts.join("\n");
+}
 
 // The browser script: client.ts with its types stripped.
 export async function clientJs(): Promise<string> {

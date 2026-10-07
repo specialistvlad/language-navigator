@@ -12,7 +12,7 @@
     "check": "bun run scripts/check.ts",
     "md": "bun run scripts/export-md.ts",
     "typecheck": "tsc -p .",
-    "lint": "eslint .",
+    "lint": "eslint . && bun run scripts/lint-css.ts",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "verify": "bun run scripts/schema-types.ts --check && bun run typecheck && bun run lint && bun run format:check && bun run check",
