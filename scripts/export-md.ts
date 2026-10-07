@@ -3,7 +3,7 @@
 import { rm } from "node:fs/promises";
 import { join } from "node:path";
 import { EXPLAIN_CODES, loadTopics, ROOT } from "./lib.ts";
-import { renderGuide } from "./markdown.ts";
+import { renderGuide } from "./guide.ts";
 
 const OUT = join(ROOT, "build/md");
 await rm(OUT, { recursive: true, force: true });

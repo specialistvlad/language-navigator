@@ -24,6 +24,8 @@ export default defineConfig(
       "no-param-reassign": "error",
       "prefer-const": "error",
       "object-shorthand": "error",
+      // Small files keep the structure readable: split a module before it passes 200 lines.
+      "max-lines": ["error", { max: 200 }],
     },
   },
   { files: ["apps/web/client.ts"], languageOptions: { globals: globals.browser } },

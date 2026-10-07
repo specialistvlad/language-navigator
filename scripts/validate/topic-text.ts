@@ -1,6 +1,6 @@
 // Every localized text in a topic carries each explanation language that renders it.
 import { type Block, EXPLAIN_CODES, type Explain, filled, type Item, type Topic } from "../lib.ts";
-import { isLocalized, tableShape } from "../markdown.ts";
+import { isLocalized, tableShape } from "../content.ts";
 import type { Report } from "./report.ts";
 
 // The explanation languages an element renders in: all, or the ones its `for` lists.

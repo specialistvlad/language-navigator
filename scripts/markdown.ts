@@ -1,8 +1,8 @@
-// Renders a topic (topic.yaml) into a Markdown guide for one explanation language.
+// Renders topic content (topic.yaml blocks) as Markdown for one explanation language.
 import { dirname, relative } from "node:path";
+import { isLocalized, shows, tableShape } from "./content.ts";
 import {
   type Block,
-  type Column,
   type ErrorsBlock,
   type Explain,
   type Item,
@@ -11,20 +11,17 @@ import {
   type TableBlock,
   type Text,
   type TopicRef,
-  EXPLAIN,
   explainName,
   filled,
   guidePath,
   INTERFACE,
-  LEVELS,
-  localize,
   say,
 } from "./lib.ts";
 
 // Turns a topic ID into a link target; null marks a topic without a page yet.
 export type LinkFn = (target: TopicRef | undefined, explain: Explain, from: TopicRef) => string | null;
 
-interface Ctx {
+export interface Ctx {
   ref: TopicRef;
   explain: Explain;
   refs: TopicRef[];
@@ -39,8 +36,6 @@ export const markdownLinks: LinkFn = (target, explain, from) => {
   return relative(dirname(a), b);
 };
 
-export const isLocalized = (value: object): value is Localized => Object.keys(value).every((k) => k in EXPLAIN);
-const shows = (el: { for?: Explain[] | undefined }, explain: Explain): boolean => !el.for || el.for.includes(explain);
 const needsTranslation = (ctx: Ctx) => ctx.explain !== ctx.ref.lang;
 const text = (value: Text | undefined, ctx: Ctx) => (typeof value === "string" ? value : (value?.[ctx.explain] ?? ""));
 const cellEscape = (value: string) => value.replace(/\|/g, "\\|");
@@ -64,7 +59,7 @@ function withTranslation(base: string, tr: Localized | undefined, ctx: Ctx): str
   return filled(translation) ? `${base} — *${translation}*` : base;
 }
 
-function renderItem(item: Item, ctx: Ctx): string | null {
+export function renderItem(item: Item, ctx: Ctx): string | null {
   if (typeof item === "string") return resolveLinks(item, ctx);
   if (isLocalized(item)) {
     const own = item[ctx.explain];
@@ -86,20 +81,6 @@ function renderCell(cell: Row[string], ctx: Ctx): string {
   if (typeof cell === "string") return cell;
   if (!isLocalized(cell)) return withTranslation(cell.ex, cell.tr, ctx);
   return cell[ctx.explain] ?? "";
-}
-
-export interface TableShape {
-  columns: Column[];
-  rows: Row[];
-  translation: boolean;
-  width: number;
-}
-
-export function tableShape(block: TableBlock, explain: Explain, lang: Explain): TableShape {
-  const columns = block.columns.filter((c) => shows(c, explain));
-  const rows = block.rows.filter((r) => shows(r, explain));
-  const translation = explain !== lang && rows.some((r) => filled(r.tr?.[explain]));
-  return { columns, rows, translation, width: columns.length + (translation ? 1 : 0) };
 }
 
 function renderTable(block: TableBlock, ctx: Ctx): string {
@@ -148,86 +129,8 @@ function renderBlock(block: Block, ctx: Ctx): string | null {
   }
 }
 
-const renderContent = (blocks: Block[], ctx: Ctx): string =>
+export const renderContent = (blocks: Block[], ctx: Ctx): string =>
   blocks
     .map((b) => renderBlock(b, ctx))
     .filter(filled)
     .join("\n\n");
-
-// Essentials of one level as Markdown; parts get headings of the given depth.
-export function essentialsMarkdown(
-  ref: TopicRef,
-  explain: Explain,
-  refs: TopicRef[],
-  level: string,
-  depth = 3,
-  link: LinkFn = markdownLinks,
-): string | null {
-  const essentials = ref.topic?.essentials.find((e) => e.level === level);
-  if (!essentials) return null;
-  const ctx: Ctx = { ref, explain, refs, link };
-  const hashes = "#".repeat(depth);
-  if (essentials.parts) {
-    return essentials.parts.map((part) => `${hashes} ${localize(part.title, explain)}\n\n${renderContent(part.content, ctx)}`).join("\n\n");
-  }
-  return essentials.content ? renderContent(essentials.content, ctx) : null;
-}
-
-// Reminder of one level as a Markdown bullet list.
-export function reminderMarkdown(
-  ref: TopicRef,
-  explain: Explain,
-  refs: TopicRef[],
-  level: string,
-  link: LinkFn = markdownLinks,
-): string | null {
-  const reminder = ref.topic?.reminders?.find((r) => r.level === level);
-  if (!reminder) return null;
-  const ctx: Ctx = { ref, explain, refs, link };
-  const items = reminder.items.map((i) => renderItem(i, ctx)).filter(filled);
-  return items.length > 0 ? items.map((i) => `- ${i}`).join("\n") : null;
-}
-
-export function renderGuide(ref: TopicRef, explain: Explain, refs: TopicRef[], link: LinkFn = markdownLinks): string {
-  const topic = ref.topic;
-  if (!topic) throw new Error(`No topic data for ${ref.id}`);
-  const ctx: Ctx = { ref, explain, refs, link };
-  const title = topic.title[explain] ?? "";
-  const out: string[] = [];
-
-  out.push(
-    [
-      "---",
-      `id: ${topic.id}`,
-      `lang: ${topic.lang}`,
-      `explain: ${explain}`,
-      "type: guide",
-      `kind: ${topic.kind}`,
-      `title: ${JSON.stringify(title)}`,
-      `levels: [${topic.levels.join(", ")}]`,
-      `section: ${ref.section.dir}`,
-      `order: ${ref.order}`,
-      `tags: [${topic.tags.join(", ")}]`,
-      `concepts: [${topic.concepts.join(", ")}]`,
-      `related: [${topic.related.join(", ")}]`,
-      `status: ${topic.status[explain]}`,
-      `source: ${ref.path}`,
-      "---",
-    ].join("\n"),
-  );
-  out.push(`# ${title}`, `> ${topic.summary[explain] ?? ""}`);
-
-  for (const section of topic.sections) {
-    if (!shows(section, explain)) continue;
-    out.push(`## ${localize(section.title, explain)} [${section.level}]`, renderContent(section.content, ctx));
-  }
-
-  for (const level of LEVELS) {
-    const essentials = essentialsMarkdown(ref, explain, refs, level, 3, link);
-    if (filled(essentials)) out.push(`## ${say("essentials", explain)} [${level}]`, essentials);
-    const reminder = reminderMarkdown(ref, explain, refs, level, link);
-    if (filled(reminder)) out.push(`## ${say("reminder", explain)} [${level}]`, reminder);
-  }
-
-  return out.filter((block) => block !== "").join("\n\n") + "\n";
-}

@@ -1,7 +1,7 @@
 // Levels inside a topic. A section's range runs from its base level to the highest level marked inside
 // it; an item carries a level only when it is above the base, so unmarked items are at the base.
 import { type Block, filled, levelRange, lv, type Topic } from "../lib.ts";
-import { isLocalized } from "../markdown.ts";
+import { isLocalized } from "../content.ts";
 import type { Report } from "./report.ts";
 
 // The levels items carry in a list of blocks, and how many items carry none.
