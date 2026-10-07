@@ -8,7 +8,7 @@ concepts: [past-tense]
 related: [en.tenses.past-continuous, en.tenses.used-to, en.tenses.present-perfect, en.verbs.to-be, en.verbs.irregular-verbs-table, en.sentence-building.questions-negatives, en.tenses.tense-map]
 status: { en: draft, es: draft }
 
-title: { en: Past Simple, es: Pasado simple (past simple) }
+title: { en: Past Simple, es: Pasado simple }
 summary:
   en: Finished actions and states at a stated time in the past, and sequences of events.
   es: Acciones y estados terminados en un momento del pasado, y secuencias de hechos.
@@ -90,7 +90,7 @@ sections:
       - type: bullets
         items:
           - en: "More verbs are in the [Irregular verbs table](id:en.verbs.irregular-verbs-table)."
-            es: "Más verbos en la [Tabla de verbos irregulares (irregular verbs table)](id:en.verbs.irregular-verbs-table)."
+            es: "Más verbos en la [Tabla de verbos irregulares](id:en.verbs.irregular-verbs-table)."
 
   - title: { en: "Form: negative", es: "Forma: negativa" }
     level: A1
@@ -210,7 +210,7 @@ sections:
           - level: A2
             text:
               en: "Past habits with *used to*: see [Used to](id:en.tenses.used-to)."
-              es: "Hábitos del pasado con *used to*: ver [Hábitos del pasado (used to)](id:en.tenses.used-to)."
+              es: "Hábitos del pasado con *used to*: ver [Used to](id:en.tenses.used-to)."
           - { for: [es], text: { es: "El past simple cubre el indefinido (*fui, comí*) y muchos casos del imperfecto (*era, vivía*)." } }
           - { for: [es], text: { es: "El imperfecto de hábito (*jugaba cada día*) pide *used to* o el past simple con una expresión de tiempo." } }
 

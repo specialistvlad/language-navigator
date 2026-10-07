@@ -8,7 +8,7 @@ concepts: [conditional-mood, past-habits]
 related: [en.sentence-building.conditionals-0-1-2, en.tenses.used-to, en.modals.can-could, en.modals.should, en.tenses.past-perfect]
 status: { en: draft, es: draft }
 
-title: { en: Would, es: Condicional y cortesía con would (would) }
+title: { en: Would, es: Would }
 summary:
   en: Offers and wants with would like, polite requests, imagined situations and past habits.
   es: Ofrecimientos y deseos con would like, peticiones corteses, situaciones imaginadas y hábitos del pasado.
@@ -141,7 +141,7 @@ sections:
       - type: bullets
         items:
           - en: "A past state (live, be, have, know) takes **used to**. See [Used to](id:en.tenses.used-to)."
-            es: "Un estado del pasado (live, be, have, know) lleva **used to**. Ver [Hábitos del pasado](id:en.tenses.used-to)."
+            es: "Un estado del pasado (live, be, have, know) lleva **used to**. Ver [Used to](id:en.tenses.used-to)."
 
   - title: { en: Typical errors, es: Errores típicos }
     level: B1

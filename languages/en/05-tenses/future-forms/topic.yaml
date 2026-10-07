@@ -8,7 +8,7 @@ concepts: [future]
 related: [en.tenses.present-continuous, en.tenses.present-simple, en.tenses.tense-map, en.sentence-building.conditionals-0-1-2]
 status: { en: draft, es: draft }
 
-title: { en: Future Forms, es: Formas de futuro (future forms) }
+title: { en: Future Forms, es: Formas de futuro }
 summary:
   en: Plans, arrangements, decisions, offers and predictions with going to, the present continuous, will and the present simple.
   es: Planes, citas, decisiones, ofrecimientos y predicciones con going to, el presente continuo, will y el presente simple.
@@ -112,7 +112,7 @@ sections:
           - en: "The present continuous needs a future time and a plan with a fixed person or place."
             es: "El presente continuo necesita un tiempo futuro y un plan con persona o lugar fijados."
           - en: "See [Present continuous](id:en.tenses.present-continuous) and [Present simple](id:en.tenses.present-simple)."
-            es: "Ver [Presente continuo (present continuous)](id:en.tenses.present-continuous) y [Presente simple (present simple)](id:en.tenses.present-simple)."
+            es: "Ver [Presente continuo](id:en.tenses.present-continuous) y [Presente simple](id:en.tenses.present-simple)."
           - for: [es]
             text:
               es: "El presente español vale para el futuro; en inglés se elige: *Mañana voy* → **I'm going** tomorrow."

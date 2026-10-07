@@ -8,7 +8,7 @@ concepts: [present-tense, continuous]
 related: [en.tenses.present-simple, en.verbs.to-be, en.tenses.future-forms, en.sentence-building.questions-negatives, en.tenses.tense-map]
 status: { en: draft, es: draft }
 
-title: { en: Present Continuous, es: Presente continuo (present continuous) }
+title: { en: Present Continuous, es: Presente continuo }
 summary:
   en: Actions happening now, temporary situations and changes around now.
   es: Acciones que ocurren ahora, situaciones temporales y cambios en curso.
@@ -146,7 +146,7 @@ sections:
       - type: bullets
         items:
           - en: "Plans and arrangements for the future: see [Future forms](id:en.tenses.future-forms)."
-            es: "Planes y citas acordadas para el futuro: ver [Formas de futuro (future forms)](id:en.tenses.future-forms)."
+            es: "Planes y citas acordadas para el futuro: ver [Formas de futuro](id:en.tenses.future-forms)."
           - { for: [es], text: { es: "El español usa el presente más que el gerundio: *Llueve* = It's raining. *Salgo ahora* = I'm leaving now." } }
 
   - title: { en: Signal words, es: Palabras clave }
@@ -178,7 +178,7 @@ sections:
             ex: "I **want** a coffee. / She **knows** the answer."
             tr: { es: "Quiero un café. / Sabe la respuesta." }
           - en: "The full list is in [Present simple](id:en.tenses.present-simple)."
-            es: "La lista completa está en [Presente simple (present simple)](id:en.tenses.present-simple)."
+            es: "La lista completa está en [Presente simple](id:en.tenses.present-simple)."
 
   - title: { en: "Compare: present continuous vs present simple", es: "Comparación: present continuous y present simple" }
     level: A1
@@ -196,7 +196,7 @@ sections:
         items:
           - { for: [es], text: { es: "El presente español cubre los dos: *trabajo* = I work / I'm working." } }
           - en: "See [Present simple](id:en.tenses.present-simple)."
-            es: "Ver [Presente simple (present simple)](id:en.tenses.present-simple)."
+            es: "Ver [Presente simple](id:en.tenses.present-simple)."
 
   - title: { en: Typical errors, es: Errores típicos }
     level: A1

@@ -8,7 +8,7 @@ concepts: [past-habits, past-tense]
 related: [en.tenses.past-simple, en.tenses.past-continuous, en.sentence-building.questions-negatives, en.tenses.tense-map]
 status: { en: draft, es: draft }
 
-title: { en: Used to, es: Hábitos del pasado (used to) }
+title: { en: Used to, es: Used to }
 summary:
   en: Past habits and states that are over now.
   es: Hábitos y estados del pasado que ya terminaron.
@@ -152,7 +152,7 @@ sections:
           - en: "A habit with a time expression takes either form: I **played** football every Saturday."
             es: "Un hábito con expresión de tiempo admite las dos formas: I **played** football every Saturday."
           - en: "See [Past simple](id:en.tenses.past-simple)."
-            es: "Ver [Pasado simple (past simple)](id:en.tenses.past-simple)."
+            es: "Ver [Pasado simple](id:en.tenses.past-simple)."
 
   - title: { en: Typical errors, es: Errores típicos }
     level: A2

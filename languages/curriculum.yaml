@@ -10,14 +10,14 @@ languages:
         title: { en: Foundations, es: Fundamentos }
         topics:
           - { slug: alphabet-spelling, levels: A0 }
-          - { slug: pronunciation-ipa, levels: A0-A1, title: { en: "Sounds and IPA", es: "Los sonidos y el AFI (sounds and IPA)" } }
-          - { slug: numbers, levels: A0, title: { en: "Numbers", es: "Los números (numbers)" } }
+          - { slug: pronunciation-ipa, levels: A0-A1, title: { en: "Sounds and IPA", es: "Los sonidos y el AFI" } }
+          - { slug: numbers, levels: A0, title: { en: "Numbers", es: "Los números" } }
           - { slug: days-months-dates, levels: A0 }
           - { slug: telling-time, levels: A0-A1 }
       - dir: 02-nouns-determiners
         title: { en: Nouns and determiners, es: Sustantivos y determinantes }
         topics:
-          - { slug: articles-a-an-the, levels: A1-B1, title: { en: "Articles: a, an, the", es: "Artículos: a, an, the (articles)" } }
+          - { slug: articles-a-an-the, levels: A1-B1, title: { en: "Articles: a, an, the", es: "Artículos: a, an, the" } }
           - { slug: plurals, levels: A0-A1 }
           - { slug: countable-uncountable, levels: A1-A2 }
           - { slug: quantifiers-some-any-much-many, levels: A1-B1 }
@@ -42,8 +42,8 @@ languages:
       - dir: 05-tenses
         title: { en: Tenses, es: Tiempos verbales }
         topics:
-          - { slug: present-simple, levels: A1-A2, title: { en: "Present Simple", es: "Presente simple (present simple)" } }
-          - { slug: present-continuous, levels: A1, title: { en: "Present Continuous", es: "Presente continuo (present continuous)" } }
+          - { slug: present-simple, levels: A1-A2, title: { en: "Present Simple", es: "Presente simple" } }
+          - { slug: present-continuous, levels: A1, title: { en: "Present Continuous", es: "Presente continuo" } }
           - { slug: past-simple, levels: A1-A2 }
           - { slug: past-continuous, levels: A2 }
           - { slug: present-perfect, levels: A2-B1 }

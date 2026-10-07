@@ -8,7 +8,7 @@ concepts: [past-tense, continuous]
 related: [en.tenses.past-simple, en.tenses.present-continuous, en.tenses.used-to, en.verbs.to-be, en.tenses.tense-map]
 status: { en: draft, es: draft }
 
-title: { en: Past Continuous, es: Pasado continuo (past continuous) }
+title: { en: Past Continuous, es: Pasado continuo }
 summary:
   en: Actions in progress at a moment in the past, background and interrupted actions.
   es: Acciones en curso en un momento del pasado, escenario de una historia y acciones interrumpidas.
@@ -44,7 +44,7 @@ sections:
       - type: bullets
         items:
           - en: "V-ing = base verb + -ing. The spelling rules are in [Present continuous](id:en.tenses.present-continuous)."
-            es: "V-ing = verbo base + -ing. Las reglas de ortografía están en [Presente continuo (present continuous)](id:en.tenses.present-continuous)."
+            es: "V-ing = verbo base + -ing. Las reglas de ortografía están en [Presente continuo](id:en.tenses.present-continuous)."
           - { for: [es], text: { es: "*Estaba leyendo* → She was reading. Los dos verbos aparecen: was / were + V-ing." } }
 
   - title: { en: "Form: negative", es: "Forma: negativa" }
@@ -159,7 +159,7 @@ sections:
             es: "La acción larga va en past continuous. La acción corta que la interrumpe va en past simple."
           - { for: [es], text: { es: "*Llovía cuando salí* = imperfecto + indefinido → It was raining when I left." } }
           - en: "See [Past simple](id:en.tenses.past-simple)."
-            es: "Ver [Pasado simple (past simple)](id:en.tenses.past-simple)."
+            es: "Ver [Pasado simple](id:en.tenses.past-simple)."
 
   - title: { en: Typical errors, es: Errores típicos }
     level: A2

@@ -8,7 +8,7 @@ concepts: [past-perfect]
 related: [en.tenses.past-simple, en.tenses.present-perfect, en.tenses.past-continuous, en.tenses.tense-map, en.verbs.irregular-verbs-table]
 status: { en: draft, es: draft }
 
-title: { en: Past Perfect, es: Pluscuamperfecto (past perfect) }
+title: { en: Past Perfect, es: Pluscuamperfecto }
 summary:
   en: An action that happened before another action or time in the past.
   es: Una acción que ocurrió antes de otra acción o de un momento del pasado.
@@ -49,7 +49,7 @@ sections:
           - en: "Contraction: I**'d**, she**'d**, they**'d**. Speech and messages use it."
             es: "Contracción: I**'d**, she**'d**, they**'d**. Se usa en conversación y mensajes."
           - en: "Regular verbs take -ed; irregular participles are in the [Irregular verbs table](id:en.verbs.irregular-verbs-table)."
-            es: "Los regulares llevan -ed; los participios irregulares están en la [Tabla de verbos irregulares (irregular verbs table)](id:en.verbs.irregular-verbs-table)."
+            es: "Los regulares llevan -ed; los participios irregulares están en la [Tabla de verbos irregulares](id:en.verbs.irregular-verbs-table)."
 
   - title: { en: "Form: negative", es: "Forma: negativa" }
     level: B1
@@ -137,7 +137,7 @@ sections:
           - en: "With **after** and **before** the order is clear, so the past simple is common: After she **left**, I slept."
             es: "Con **after** y **before** el orden es claro, y el past simple es frecuente: After she **left**, I slept."
           - en: "See [Past Simple](id:en.tenses.past-simple)."
-            es: "Ver [Pasado simple (past simple)](id:en.tenses.past-simple)."
+            es: "Ver [Pasado simple](id:en.tenses.past-simple)."
 
   - title: { en: Typical errors, es: Errores típicos }
     level: B1

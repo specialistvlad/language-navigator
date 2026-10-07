@@ -8,7 +8,7 @@ concepts: [present-perfect]
 related: [en.tenses.past-simple, en.tenses.present-simple, en.tenses.present-continuous, en.tenses.past-perfect, en.verbs.irregular-verbs-table, en.tenses.tense-map]
 status: { en: draft, es: draft }
 
-title: { en: Present Perfect, es: Presente perfecto (present perfect) }
+title: { en: Present Perfect, es: Presente perfecto }
 summary:
   en: "Past events that matter now: experience, recent news, unfinished time and states up to now."
   es: "Hechos pasados que importan ahora: experiencias, noticias recientes, tiempo sin terminar y estados hasta hoy."
@@ -69,9 +69,9 @@ sections:
       - type: bullets
         items:
           - en: "The -ed spelling rules are the same as in [Past Simple](id:en.tenses.past-simple)."
-            es: "Las reglas de ortografía de -ed son las de [Pasado simple (past simple)](id:en.tenses.past-simple)."
+            es: "Las reglas de ortografía de -ed son las de [Pasado simple](id:en.tenses.past-simple)."
           - en: "All irregular forms are in the [Irregular verbs table](id:en.verbs.irregular-verbs-table)."
-            es: "Todas las formas irregulares están en la [Tabla de verbos irregulares (irregular verbs table)](id:en.verbs.irregular-verbs-table)."
+            es: "Todas las formas irregulares están en la [Tabla de verbos irregulares](id:en.verbs.irregular-verbs-table)."
 
   - title: { en: "Form: negative", es: "Forma: negativa" }
     level: A2
@@ -206,7 +206,7 @@ sections:
             text:
               es: "El pretérito perfecto español cubre ambos: *He comido a las dos* = I **ate** at two. Decide la expresión de tiempo."
           - en: "See [Past Simple](id:en.tenses.past-simple)."
-            es: "Ver [Pasado simple (past simple)](id:en.tenses.past-simple)."
+            es: "Ver [Pasado simple](id:en.tenses.past-simple)."
 
   - title: { en: Typical errors, es: Errores típicos }
     level: A2-B1
