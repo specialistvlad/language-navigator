@@ -22,10 +22,10 @@ sections:
           - { key: form, label: { en: Form, es: Forma } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, form: { en: Affirmative, es: Afirmativa }, example: "She **can** swim.", tr: { es: Sabe nadar. } }
-          - { level: A1, form: { en: Negative, es: Negativa }, example: "She **can't** swim.", tr: { es: No sabe nadar. } }
-          - { level: A1, form: { en: Question, es: Pregunta }, example: "**Can** she swim?", tr: { es: ¿Sabe nadar? } }
-          - { level: A1, form: { en: Short answer, es: Respuesta corta }, example: "Yes, she **can**. / No, she **can't**.", tr: { es: Sí. / No. } }
+          - { form: { en: Affirmative, es: Afirmativa }, example: "She **can** swim.", tr: { es: Sabe nadar. } }
+          - { form: { en: Negative, es: Negativa }, example: "She **can't** swim.", tr: { es: No sabe nadar. } }
+          - { form: { en: Question, es: Pregunta }, example: "**Can** she swim?", tr: { es: ¿Sabe nadar? } }
+          - { form: { en: Short answer, es: Respuesta corta }, example: "Yes, she **can**. / No, she **can't**.", tr: { es: Sí. / No. } }
           - { level: A2, form: { en: Past, es: Pasado }, example: "I **could** swim at five. / I **couldn't** swim at four.", tr: { es: Sabía nadar a los cinco años. / No sabía nadar a los cuatro. } }
           - { level: A2, form: { en: Past question, es: Pregunta en pasado }, example: "**Could** you swim at five?", tr: { es: "¿Sabías nadar a los cinco años?" } }
       - type: bullets
@@ -68,11 +68,11 @@ sections:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, use: { en: "Ability: skills (can)", es: "Capacidad: habilidades (can)" }, example: "I **can** cook pasta.", tr: { es: Sé cocinar pasta. } }
-          - { level: A1, use: { en: "Permission: what is allowed (can)", es: "Permiso: lo que está permitido (can)" }, example: "You **can** park here.", tr: { es: Puedes aparcar aquí. } }
-          - { level: A1, use: { en: "Not allowed (can't)", es: "Prohibido (can't)" }, example: "You **can't** smoke here.", tr: { es: No se puede fumar aquí. } }
-          - { level: A1, use: { en: "Asking for permission (Can I…?)", es: "Pedir permiso (Can I…?)" }, example: "**Can** I open the window?", tr: { es: "¿Puedo abrir la ventana?" } }
-          - { level: A1, use: { en: "Requests (Can you…?)", es: "Peticiones (Can you…?)" }, example: "**Can** you help me, please?", tr: { es: "¿Puedes ayudarme, por favor?" } }
+          - { use: { en: "Ability: skills (can)", es: "Capacidad: habilidades (can)" }, example: "I **can** cook pasta.", tr: { es: Sé cocinar pasta. } }
+          - { use: { en: "Permission: what is allowed (can)", es: "Permiso: lo que está permitido (can)" }, example: "You **can** park here.", tr: { es: Puedes aparcar aquí. } }
+          - { use: { en: "Not allowed (can't)", es: "Prohibido (can't)" }, example: "You **can't** smoke here.", tr: { es: No se puede fumar aquí. } }
+          - { use: { en: "Asking for permission (Can I…?)", es: "Pedir permiso (Can I…?)" }, example: "**Can** I open the window?", tr: { es: "¿Puedo abrir la ventana?" } }
+          - { use: { en: "Requests (Can you…?)", es: "Peticiones (Can you…?)" }, example: "**Can** you help me, please?", tr: { es: "¿Puedes ayudarme, por favor?" } }
           - { level: A2, use: { en: "Senses: see, hear, smell", es: "Sentidos: see, hear, smell" }, example: "I **can** hear music.", tr: { es: Oigo música. } }
           - { level: A2, use: { en: "General ability in the past (could)", es: "Capacidad general en el pasado (could)" }, example: "I **could** run fast when I was young.", tr: { es: Corría rápido cuando era joven. } }
           - { level: A2, use: { en: "Polite requests (Could you…?)", es: "Peticiones corteses (Could you…?)" }, example: "**Could** you open the door, please?", tr: { es: "¿Podrías abrir la puerta, por favor?" } }
@@ -114,7 +114,7 @@ sections:
           - { wrong: "Do you can swim?", right: "**Can** you swim?", rule: { en: "questions with can need no do", es: "la pregunta con can no lleva do" } }
           - { wrong: "I don't can swim.", right: "I **can't** swim.", rule: { en: "negative = can't", es: "la negativa es can't" } }
           - { for: [es], wrong: "I know swim.", right: "I **can** swim.", rule: { es: "*saber* + infinitivo para habilidades = can + verbo" } }
-          - { wrong: "I can swim when I was five.", right: "I **could** swim when I was five.", rule: { en: "past ability → could", es: "capacidad en pasado → could" } }
+          - { level: A2, wrong: "I can swim when I was five.", right: "I **could** swim when I was five.", rule: { en: "past ability → could", es: "capacidad en pasado → could" } }
           - { for: [en], wrong: "She can swims.", right: "She can **swim**.", rule: { en: "can + base verb" } }
 
 essentials:

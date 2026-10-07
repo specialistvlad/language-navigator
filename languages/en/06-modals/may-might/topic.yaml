@@ -22,8 +22,8 @@ sections:
           - { key: form, label: { en: Form, es: Forma } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A2, form: { en: Affirmative, es: Afirmativa }, example: "It **might** rain. / It **may** rain.", tr: { es: Puede que llueva. } }
-          - { level: A2, form: { en: Negative, es: Negativa }, example: "It **might not** rain. / It **may not** rain.", tr: { es: Puede que no llueva. } }
+          - { form: { en: Affirmative, es: Afirmativa }, example: "It **might** rain. / It **may** rain.", tr: { es: Puede que llueva. } }
+          - { form: { en: Negative, es: Negativa }, example: "It **might not** rain. / It **may not** rain.", tr: { es: Puede que no llueva. } }
           - { level: B1, form: { en: "Question (permission)", es: "Pregunta (permiso)" }, example: "**May** I come in?", tr: { es: "¿Puedo pasar?" } }
       - type: bullets
         items:
@@ -71,9 +71,9 @@ sections:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A2, use: { en: "Possibility now", es: "Posibilidad ahora" }, example: "She **might** be at home.", tr: { es: Puede que esté en casa. } }
-          - { level: A2, use: { en: "Possibility in the future", es: "Posibilidad en el futuro" }, example: "We **might** go to the beach.", tr: { es: Puede que vayamos a la playa. } }
-          - { level: A2, use: { en: "Possibility that something is not true", es: "Posibilidad de que algo no sea verdad" }, example: "He **might not** know.", tr: { es: Puede que no lo sepa. } }
+          - { use: { en: "Possibility now", es: "Posibilidad ahora" }, example: "She **might** be at home.", tr: { es: Puede que esté en casa. } }
+          - { use: { en: "Possibility in the future", es: "Posibilidad en el futuro" }, example: "We **might** go to the beach.", tr: { es: Puede que vayamos a la playa. } }
+          - { use: { en: "Possibility that something is not true", es: "Posibilidad de que algo no sea verdad" }, example: "He **might not** know.", tr: { es: Puede que no lo sepa. } }
           - { level: B1, use: { en: "Formal permission (May I…?)", es: "Permiso formal (May I…?)" }, example: "**May** I use your phone?", tr: { es: "¿Podría usar su teléfono?" } }
           - { level: B1, use: { en: "Formal rules: what is allowed", es: "Normas formales: lo permitido" }, example: "Guests **may** use the pool until 10.", tr: { es: Los huéspedes pueden usar la piscina hasta las 10. } }
       - type: bullets
@@ -119,7 +119,7 @@ sections:
             es: "Usa **will** cuando estás seguro y **may / might** cuando no lo estás."
 
   - title: { en: Typical errors, es: Errores típicos }
-    level: A2-B1
+    level: A2
     content:
       - type: errors
         audience: true

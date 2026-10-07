@@ -67,11 +67,15 @@ it, and the schemas list exactly its codes (`npm run check` compares them).
 | `B1` | Intermediate |
 
 - A topic lists every level it covers in `levels`; it matches the range in `curriculum.yaml`.
-- Every section has a `level`: one level or a range, `A1-A2`.
-- A table row, bullet or text item above its section's level carries its own `level`.
-- A table with row levels renders a `Level` / `Nivel` column.
-- Level markers appear only where they inform. A topic at a single level shows its level once,
-  in the header; a multi-level topic marks the headings, rows and bullets whose level differs.
+- Every section has a `level`: one level, or a range from its base to its top, `A1-A2`.
+- An item (table row, errors row, bullet, text) is at the section's base unless it carries its own
+  `level`; it carries one only when it is above the base, and within the range.
+- The range ends at the highest level an item carries, and at least one item stays at the base.
+- Essentials and reminders hold one level each, so their items carry no `level`.
+- Every level in `levels` is covered by at least one section.
+- A marked item renders with a level badge at its start: in the first cell of a table row, at the
+  start of a bullet. A topic at a single level shows its level once, in the header.
+- `npm run check` enforces every rule in this list.
 
 ## 4. Text values
 
@@ -155,7 +159,7 @@ Block types inside `content`:
 
 ## 7. Tables and writing style
 
-- A rendered table has at most 4 columns, counting the generated translation and level columns,
+- A rendered table has at most 4 columns, counting the generated translation column,
   so it fits A4 portrait, a tablet and a phone screen.
 - The first column holds the key: person, form, use or rule.
 - Each fact appears once in the sections. A topic is a short path through its sections, not a

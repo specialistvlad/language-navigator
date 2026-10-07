@@ -32,7 +32,7 @@ sections:
             es: "Las cuatro palabras no cambian con el género: **this** man, **this** woman."
 
   - title: { en: "Form: before a noun or alone", es: "Forma: delante de un sustantivo o solo" }
-    level: A0
+    level: A0-A1
     content:
       - type: table
         columns:
@@ -80,13 +80,13 @@ sections:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A0, use: { en: Introducing people, es: Presentar a alguien }, example: "**This is** Ana. She's my sister.", tr: { es: Esta es Ana. Es mi hermana. } }
-          - { level: A0, use: { en: "On the phone: you / the other person", es: "Al teléfono: tú / la otra persona" }, example: "Hi, **this is** Tom. Is **that** Ana? (US: Is **this** Ana?)", tr: { es: "Hola, soy Tom. ¿Eres Ana?" } }
+          - { use: { en: Introducing people, es: Presentar a alguien }, example: "**This is** Ana. She's my sister.", tr: { es: Esta es Ana. Es mi hermana. } }
+          - { use: { en: "On the phone: you / the other person", es: "Al teléfono: tú / la otra persona" }, example: "Hi, **this is** Tom. Is **that** Ana? (US: Is **this** Ana?)", tr: { es: "Hola, soy Tom. ¿Eres Ana?" } }
           - { level: A1, use: { en: "Time: now / then", es: "Tiempo: ahora / entonces" }, example: "**this** morning / **that** day", tr: { es: esta mañana / aquel día } }
           - { level: A1, use: { en: Something just said or done, es: Algo que se acaba de decir o hacer }, example: "**That's** great! / **That's** right.", tr: { es: ¡Qué bien! / Eso es. } }
 
   - title: { en: Typical errors, es: Errores típicos }
-    level: A0-A1
+    level: A0
     content:
       - type: errors
         audience: true

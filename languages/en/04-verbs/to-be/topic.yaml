@@ -29,6 +29,7 @@ sections:
           - { key: negative, label: { en: Negative, es: Negativa } }
         rows:
           - tense: { en: "**Future**\nwill be", es: "**Futuro**\nwill be" }
+            level: A2
             question: "**Will** I **be** late?\n**Will** you **be** late?\n**Will** he **be** late?\n**Will** she **be** late?\n**Will** it **be** late?\n**Will** we **be** late?\n**Will** they **be** late?"
             statement: "I **will be** late.\nYou **will be** late.\nHe **will be** late.\nShe **will be** late.\nIt **will be** late.\nWe **will be** late.\nThey **will be** late."
             negative: "I **won't be** late.\nYou **won't be** late.\nHe **won't be** late.\nShe **won't be** late.\nIt **won't be** late.\nWe **won't be** late.\nThey **won't be** late."
@@ -37,6 +38,7 @@ sections:
             statement: "I **am** late.\nYou **are** late.\nHe **is** late.\nShe **is** late.\nIt **is** late.\nWe **are** late.\nThey **are** late."
             negative: "I'**m not** late.\nYou **aren't** late.\nHe **isn't** late.\nShe **isn't** late.\nIt **isn't** late.\nWe **aren't** late.\nThey **aren't** late."
           - tense: { en: "**Past**\nwas / were", es: "**Pasado**\nwas / were" }
+            level: A1
             question: "**Was** I late?\n**Were** you late?\n**Was** he late?\n**Was** she late?\n**Was** it late?\n**Were** we late?\n**Were** they late?"
             statement: "I **was** late.\nYou **were** late.\nHe **was** late.\nShe **was** late.\nIt **was** late.\nWe **were** late.\nThey **were** late."
             negative: "I **wasn't** late.\nYou **weren't** late.\nHe **wasn't** late.\nShe **wasn't** late.\nIt **wasn't** late.\nWe **weren't** late.\nThey **weren't** late."
@@ -184,10 +186,10 @@ sections:
           - { for: [es], wrong: "Are you tired? — Yes, I'm.", right: "Yes, I **am**.", rule: { es: "la respuesta corta afirmativa va con la forma completa" } }
           - { wrong: Do you be a student?, right: "**Are** you a student?", rule: { en: "be makes questions by itself", es: "be forma la pregunta por sí solo" } }
           - { wrong: She are happy., right: "She **is** happy.", rule: { en: "he / she / it → is", es: "he / she / it → is" } }
-          - { wrong: We was at home., right: "We **were** at home.", rule: { en: "you / we / they → were", es: "you / we / they → were" } }
-          - { wrong: Did you be at home?, right: "**Were** you at home?", rule: { en: "be makes past questions by itself", es: "be forma la pregunta en pasado por sí solo" } }
-          - { for: [es], wrong: I born in 1995., right: "I **was born** in 1995.", rule: { es: "*nací* = I was born" } }
-          - { for: [en], wrong: I will at home tomorrow., right: "I **will be** at home tomorrow.", rule: { en: "will + be" } }
+          - { level: A1, wrong: We was at home., right: "We **were** at home.", rule: { en: "you / we / they → were", es: "you / we / they → were" } }
+          - { level: A1, wrong: Did you be at home?, right: "**Were** you at home?", rule: { en: "be makes past questions by itself", es: "be forma la pregunta en pasado por sí solo" } }
+          - { for: [es], level: A1, wrong: I born in 1995., right: "I **was born** in 1995.", rule: { es: "*nací* = I was born" } }
+          - { for: [en], level: A2, wrong: I will at home tomorrow., right: "I **will be** at home tomorrow.", rule: { en: "will + be" } }
 
 essentials:
   - level: A0

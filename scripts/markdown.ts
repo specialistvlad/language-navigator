@@ -89,7 +89,6 @@ export interface TableShape {
   columns: Column[];
   rows: Row[];
   translation: boolean;
-  level: boolean;
   width: number;
 }
 
@@ -97,20 +96,19 @@ export function tableShape(block: TableBlock, explain: Explain, lang: Explain): 
   const columns = block.columns.filter((c) => shows(c, explain));
   const rows = block.rows.filter((r) => shows(r, explain));
   const translation = explain !== lang && rows.some((r) => filled(r.tr?.[explain]));
-  const level = rows.some((r) => filled(r.level));
-  return { columns, rows, translation, level, width: columns.length + (translation ? 1 : 0) + (level ? 1 : 0) };
+  return { columns, rows, translation, width: columns.length + (translation ? 1 : 0) };
 }
 
 function renderTable(block: TableBlock, ctx: Ctx): string {
   const shape = tableShape(block, ctx.explain, ctx.ref.lang);
   const header = shape.columns.map((c) => text(c.label, ctx));
   if (shape.translation) header.push(explainName(ctx.explain));
-  if (shape.level) header.push(say("levelColumn", ctx.explain));
   const lines = [`| ${header.map(cellEscape).join(" | ")} |`, `|${header.map(() => "---").join("|")}|`];
   for (const row of shape.rows) {
     const cells = shape.columns.map((c) => renderCell(row[c.key], ctx));
     if (shape.translation) cells.push(row.tr?.[ctx.explain] ?? "");
-    if (shape.level) cells.push(row.level ?? "");
+    // A row's level opens its first cell as a tag, like a bullet's: [A2] …
+    if (filled(row.level)) cells[0] = `[${row.level}] ${cells[0] ?? ""}`;
     // A line break inside a cell becomes <br>: one cell can list a form for every person.
     lines.push(`| ${cells.map((c) => cellEscape(resolveLinks(c, ctx)).replace(/\n/g, "<br>")).join(" | ")} |`);
   }
@@ -123,7 +121,8 @@ function renderErrors(block: ErrorsBlock, ctx: Ctx): string {
   const header = ["✗", "✓", ...(withRule ? [say("ruleColumn", ctx.explain)] : [])];
   const lines = [`| ${header.join(" | ")} |`, `|${header.map(() => "---").join("|")}|`];
   for (const row of rows) {
-    const cells = [row.wrong, row.right, ...(withRule ? [text(row.rule, ctx)] : [])];
+    const wrong = filled(row.level) ? `[${row.level}] ${row.wrong}` : row.wrong;
+    const cells = [wrong, row.right, ...(withRule ? [text(row.rule, ctx)] : [])];
     lines.push(`| ${cells.map(cellEscape).join(" | ")} |`);
   }
   const audience = block.audience === true && needsTranslation(ctx) ? INTERFACE.errorsAudience[ctx.explain]?.[ctx.ref.lang] : undefined;

@@ -101,10 +101,10 @@ sections:
           - { for: [es], wrong: Lives in Madrid., right: "**She** lives in Madrid.", rule: { es: el sujeto siempre aparece } }
           - { for: [es], wrong: I have a car red., right: "I have a **red car**.", rule: { es: el adjetivo va antes del sustantivo } }
           - { for: [es], wrong: Arrived my friend., right: "**My friend** arrived.", rule: { es: el sujeto va antes del verbo } }
-          - { for: [es], wrong: I like very much coffee., right: "I like coffee **very much**.", rule: { es: "very much va al final, después del objeto" } }
-          - { wrong: I went yesterday to London., right: "I went **to London yesterday**.", rule: { en: place before time, es: lugar antes del tiempo } }
-          - { wrong: I eat always breakfast., right: "I **always eat** breakfast.", rule: { en: frequency adverbs go before the main verb, es: el adverbio de frecuencia va antes del verbo principal } }
-          - { wrong: She always is late., right: "She **is always** late.", rule: { en: frequency adverbs go after be, es: el adverbio de frecuencia va después de be } }
+          - { for: [es], level: A1, wrong: I like very much coffee., right: "I like coffee **very much**.", rule: { es: "very much va al final, después del objeto" } }
+          - { level: A1, wrong: I went yesterday to London., right: "I went **to London yesterday**.", rule: { en: place before time, es: lugar antes del tiempo } }
+          - { level: A1, wrong: I eat always breakfast., right: "I **always eat** breakfast.", rule: { en: frequency adverbs go before the main verb, es: el adverbio de frecuencia va antes del verbo principal } }
+          - { level: A1, wrong: She always is late., right: "She **is always** late.", rule: { en: frequency adverbs go after be, es: el adverbio de frecuencia va después de be } }
 
 essentials:
   - level: A0

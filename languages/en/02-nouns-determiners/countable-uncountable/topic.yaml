@@ -42,10 +42,10 @@ sections:
           - { key: group, label: { en: Group, es: Grupo } }
           - { key: nouns, label: { en: Nouns, es: Sustantivos } }
         rows:
-          - { level: A1, group: { en: Food and drink, es: Comida y bebida }, nouns: "water, milk, coffee, tea, bread, rice, cheese, meat, sugar", tr: { es: "agua, leche, café, té, pan, arroz, queso, carne, azúcar" } }
-          - { level: A1, group: { en: Materials, es: Materiales }, nouns: "wood, glass, paper, plastic, gold", tr: { es: "madera, vidrio, papel, plástico, oro" } }
-          - { level: A1, group: { en: Ideas and information, es: Ideas e información }, nouns: "advice, information, news, help, music", tr: { es: "consejos, información, noticias, ayuda, música" } }
-          - { level: A1, group: { en: Others, es: Otros }, nouns: "money, weather, work", tr: { es: "dinero, tiempo (clima), trabajo" } }
+          - { group: { en: Food and drink, es: Comida y bebida }, nouns: "water, milk, coffee, tea, bread, rice, cheese, meat, sugar", tr: { es: "agua, leche, café, té, pan, arroz, queso, carne, azúcar" } }
+          - { group: { en: Materials, es: Materiales }, nouns: "wood, glass, paper, plastic, gold", tr: { es: "madera, vidrio, papel, plástico, oro" } }
+          - { group: { en: Ideas and information, es: Ideas e información }, nouns: "advice, information, news, help, music", tr: { es: "consejos, información, noticias, ayuda, música" } }
+          - { group: { en: Others, es: Otros }, nouns: "money, weather, work", tr: { es: "dinero, tiempo (clima), trabajo" } }
           - { level: A2, group: { en: Groups of things, es: Conjuntos de cosas }, nouns: "furniture, luggage (US: baggage), equipment, homework, traffic", tr: { es: "muebles, equipaje, equipo, deberes, tráfico" } }
       - type: bullets
         items:
@@ -61,12 +61,12 @@ sections:
           - { key: unit, label: { en: Unit, es: Unidad } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, unit: a glass of, example: "a **glass of** water", tr: { es: un vaso de agua } }
-          - { level: A1, unit: a cup of, example: "a **cup of** tea", tr: { es: una taza de té } }
-          - { level: A1, unit: a bottle of, example: "two **bottles of** milk", tr: { es: dos botellas de leche } }
-          - { level: A1, unit: a slice of, example: "a **slice of** cheese", tr: { es: una loncha de queso } }
-          - { level: A1, unit: a kilo of, example: "a **kilo of** rice", tr: { es: un kilo de arroz } }
-          - { level: A1, unit: a piece of, example: "a **piece of** cake / advice / furniture", tr: { es: un trozo de tarta / un consejo / un mueble } }
+          - { unit: a glass of, example: "a **glass of** water", tr: { es: un vaso de agua } }
+          - { unit: a cup of, example: "a **cup of** tea", tr: { es: una taza de té } }
+          - { unit: a bottle of, example: "two **bottles of** milk", tr: { es: dos botellas de leche } }
+          - { unit: a slice of, example: "a **slice of** cheese", tr: { es: una loncha de queso } }
+          - { unit: a kilo of, example: "a **kilo of** rice", tr: { es: un kilo de arroz } }
+          - { unit: a piece of, example: "a **piece of** cake / advice / furniture", tr: { es: un trozo de tarta / un consejo / un mueble } }
           - { level: A2, unit: a loaf of, example: "a **loaf of** bread", tr: { es: una barra de pan } }
       - type: bullets
         items:
@@ -99,10 +99,10 @@ sections:
           - { for: [es], wrong: informations, right: "**information**", rule: { es: "incontable: sin -s" } }
           - { wrong: an advice, right: "**a piece of advice** / **some advice**", rule: { en: "uncountable: no a / an", es: "incontable: sin a / an" } }
           - { wrong: The news are good., right: "The news **is** good.", rule: { en: "news + singular verb", es: "news + verbo en singular" } }
-          - { wrong: a bread, right: "**a loaf of bread** / **some bread**", rule: { en: "count it with a unit", es: "se cuenta con una unidad" } }
+          - { level: A2, wrong: a bread, right: "**a loaf of bread** / **some bread**", rule: { en: "count it with a unit", es: "se cuenta con una unidad" } }
           - { wrong: She has a good work., right: "She has a good **job**.", rule: { en: "work is uncountable; a job is countable", es: "*un trabajo* = a job; work es incontable" } }
-          - { for: [es], wrong: furnitures, right: "**furniture**", rule: { es: "incontable: sin -s" } }
-          - { for: [es], wrong: I have many homeworks., right: "I have **a lot of homework**.", rule: { es: "homework es incontable" } }
+          - { for: [es], level: A2, wrong: furnitures, right: "**furniture**", rule: { es: "incontable: sin -s" } }
+          - { for: [es], level: A2, wrong: I have many homeworks., right: "I have **a lot of homework**.", rule: { es: "homework es incontable" } }
           - { wrong: What a terrible weather!, right: "What **terrible weather**!", rule: { en: "weather: no a / an", es: "weather: sin a / an" } }
 
 essentials:

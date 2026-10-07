@@ -114,6 +114,7 @@ export interface ErrorRow {
   wrong: string;
   right: string;
   rule?: Text;
+  level?: Level | undefined;
   for?: Explain[];
 }
 export interface ErrorsBlock {

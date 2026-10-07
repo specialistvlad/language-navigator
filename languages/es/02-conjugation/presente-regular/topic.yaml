@@ -200,10 +200,10 @@ sections:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Spanish, es: Ejemplo } }
         rows:
-          - { level: A1, use: { en: Habits and routines, es: Hábitos y rutinas }, example: "**Desayuno** a las ocho.", tr: { en: I have breakfast at eight. } }
-          - { level: A1, use: { en: Facts, es: Hechos }, example: "En España **cenamos** tarde.", tr: { en: In Spain we have dinner late. } }
-          - { level: A1, use: { en: Permanent states, es: Estados permanentes }, example: "**Vivo** en Valencia.", tr: { en: I live in Valencia. } }
-          - { level: A1, use: { en: Actions happening now, es: Acciones en este momento }, example: "¿Qué **miras**?", tr: { en: What are you looking at? } }
+          - { use: { en: Habits and routines, es: Hábitos y rutinas }, example: "**Desayuno** a las ocho.", tr: { en: I have breakfast at eight. } }
+          - { use: { en: Facts, es: Hechos }, example: "En España **cenamos** tarde.", tr: { en: In Spain we have dinner late. } }
+          - { use: { en: Permanent states, es: Estados permanentes }, example: "**Vivo** en Valencia.", tr: { en: I live in Valencia. } }
+          - { use: { en: Actions happening now, es: Acciones en este momento }, example: "¿Qué **miras**?", tr: { en: What are you looking at? } }
           - { level: A2, use: { en: "Near future, with a time word", es: "Futuro próximo, con marcador temporal" }, example: "Mañana **trabajo** en casa.", tr: { en: "Tomorrow I'm working at home." } }
           - { level: A2, use: { en: "Requests, as a question", es: "Peticiones, en forma de pregunta" }, example: "¿Me **pasas** la sal?", tr: { en: Can you pass me the salt? } }
           - { level: A2, use: { en: "Duration up to now: desde hace", es: "Duración hasta ahora: desde hace" }, example: "**Estudio** español desde hace dos años.", tr: { en: "I've been studying Spanish for two years." } }
@@ -279,9 +279,9 @@ sections:
         columns:
           - { key: example, label: Spanish }
         rows:
-          - { level: A1, example: "**Trabajo** en un banco.", tr: { en: "I **work** in a bank." } }
-          - { level: A1, example: "Ahora **trabajo** en casa.", tr: { en: "I'**m working** at home now." } }
-          - { level: A1, example: "Sí, **trabajo** los sábados.", tr: { en: "Yes, I **do work** on Saturdays." } }
+          - { example: "**Trabajo** en un banco.", tr: { en: "I **work** in a bank." } }
+          - { example: "Ahora **trabajo** en casa.", tr: { en: "I'**m working** at home now." } }
+          - { example: "Sí, **trabajo** los sábados.", tr: { en: "Yes, I **do work** on Saturdays." } }
           - { level: A2, example: "¿**Trabajas** mañana?", tr: { en: "**Are** you **working** tomorrow?" } }
       - type: bullets
         items:
@@ -291,7 +291,7 @@ sections:
           - { en: "See [estar + gerundio](id:es.tenses-moods.estar-gerundio)." }
 
   - title: { es: "Comparación: presente y estar + gerundio" }
-    level: A1-A2
+    level: A1
     for: [es]
     content:
       - type: table
@@ -315,7 +315,7 @@ sections:
         rows:
           - { wrong: Yo hablar español., right: "Yo **hablo** español.", rule: { en: conjugate the verb, es: el verbo se conjuga } }
           - { for: [en], wrong: ¿Dónde Ana vive?, right: "¿Dónde **vive** Ana?", rule: { en: question word + verb + subject } }
-          - { for: [en], wrong: Estudio español por dos años., right: "Estudio español **desde hace** dos años.", rule: { en: duration up to now → desde hace } }
+          - { for: [en], level: A2, wrong: Estudio español por dos años., right: "Estudio español **desde hace** dos años.", rule: { en: duration up to now → desde hace } }
           - { wrong: Ella vivo en Roma., right: "Ella **vive** en Roma.", rule: { en: the ending matches the person, es: la terminación concuerda con la persona } }
           - { wrong: Nosotros vivemos aquí., right: "Nosotros **vivimos** aquí.", rule: "-ir: nosotros → -imos" }
           - { wrong: Vosotros hablais inglés., right: "Vosotros **habláis** inglés.", rule: { en: vosotros forms carry an accent, es: las formas de vosotros llevan tilde } }

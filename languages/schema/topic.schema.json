@@ -385,6 +385,9 @@
         "rule": {
           "$ref": "#/definitions/text"
         },
+        "level": {
+          "$ref": "#/definitions/level"
+        },
         "for": {
           "$ref": "#/definitions/for"
         }

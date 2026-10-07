@@ -36,7 +36,7 @@ sections:
           - { for: [es], text: { es: "Un verbo frasal se traduce por un solo verbo: *get up* = *levantarse*, *turn off* = *apagar*." } }
 
   - title: { en: "Form: with an object", es: "Forma: con complemento" }
-    level: A2
+    level: A2-B1
     content:
       - type: table
         columns:
@@ -104,7 +104,7 @@ sections:
           - { verb: stand up, meaning: { en: move to your feet, es: ponerse de pie }, example: { ex: "Everyone **stands up**.", tr: { es: Todos se ponen de pie. } } }
 
   - title: { en: "Going and coming", es: "Ir y venir" }
-    level: A2
+    level: A2-B1
     content:
       - type: table
         columns:
@@ -121,7 +121,7 @@ sections:
           - { level: B1, verb: grow up, meaning: { en: become an adult, es: "crecer, criarse" }, example: { ex: "She **grew up** in Leeds.", tr: { es: Se crió en Leeds. } } }
 
   - title: { en: "Looking and finding out", es: "Buscar y averiguar" }
-    level: A2
+    level: A2-B1
     content:
       - type: table
         columns:
@@ -146,8 +146,8 @@ sections:
           - { key: meaning, label: { en: Meaning, es: Significado } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A2, verb: go on, meaning: { en: continue, es: "seguir, continuar" }, example: { ex: "Please **go on**.", tr: { es: "Por favor, continúa." } } }
-          - { level: A2, verb: give up, meaning: { en: stop trying or stop a habit, es: "rendirse, dejar (un hábito)" }, example: { ex: "I **give up**! / He **gave up** smoking.", tr: { es: "¡Me rindo! / Dejó de fumar." } } }
+          - { verb: go on, meaning: { en: continue, es: "seguir, continuar" }, example: { ex: "Please **go on**.", tr: { es: "Por favor, continúa." } } }
+          - { verb: give up, meaning: { en: stop trying or stop a habit, es: "rendirse, dejar (un hábito)" }, example: { ex: "I **give up**! / He **gave up** smoking.", tr: { es: "¡Me rindo! / Dejó de fumar." } } }
           - { level: B1, verb: carry on, meaning: { en: continue, es: seguir }, example: { ex: "**Carry on** working.", tr: { es: Sigue trabajando. } } }
           - { level: B1, verb: run out of, meaning: { en: have no more, es: quedarse sin }, example: { ex: "We **ran out of** milk.", tr: { es: Nos quedamos sin leche. } } }
           - { level: B1, verb: look forward to, meaning: { en: wait for with pleasure, es: tener ganas de }, example: { ex: "I **look forward to** the weekend.", tr: { es: Tengo ganas de que llegue el fin de semana. } } }
@@ -164,9 +164,9 @@ sections:
           - { wrong: She looks them after., right: "She **looks after them**.", rule: { en: "inseparable verb: the object follows the particle", es: "verbo inseparable: el complemento va después de la partícula" } }
           - { for: [es], wrong: I look my keys., right: "I'm **looking for** my keys.", rule: { es: "buscar = look for; look solo = mirar" } }
           - { for: [es], wrong: I can't find out my keys., right: "I can't **find** my keys.", rule: { es: "encontrar un objeto = find; find out = averiguar" } }
-          - { wrong: We ran out milk., right: "We ran out **of** milk.", rule: { en: run out of needs of, es: "run out of lleva of" } }
-          - { wrong: I look forward to see you., right: "I look forward to **seeing** you.", rule: { en: "to is a preposition: noun or -ing", es: "to es una preposición: sustantivo o -ing" } }
-          - { for: [en], wrong: He gave up to smoke., right: "He gave up **smoking**.", rule: { en: "give up + -ing" } }
+          - { level: B1, wrong: We ran out milk., right: "We ran out **of** milk.", rule: { en: run out of needs of, es: "run out of lleva of" } }
+          - { level: B1, wrong: I look forward to see you., right: "I look forward to **seeing** you.", rule: { en: "to is a preposition: noun or -ing", es: "to es una preposición: sustantivo o -ing" } }
+          - { for: [en], level: B1, wrong: He gave up to smoke., right: "He gave up **smoking**.", rule: { en: "give up + -ing" } }
 
 essentials:
   - level: A2

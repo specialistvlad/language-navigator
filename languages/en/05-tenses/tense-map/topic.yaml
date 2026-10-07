@@ -15,7 +15,7 @@ summary:
 
 sections:
   - title: { en: Overview, es: Resumen }
-    level: A1-B1
+    level: A1-A2
     content:
       - type: table
         columns:
@@ -26,8 +26,8 @@ sections:
         rows:
           - { aspect: { en: Simple, es: Simple }, past: { en: "[Past simple](id:en.tenses.simple-tenses)", es: "[Pasado simple](id:en.tenses.simple-tenses)" }, present: { en: "[Present simple](id:en.tenses.simple-tenses)", es: "[Presente simple](id:en.tenses.simple-tenses)" }, future: { en: "[Future forms](id:en.tenses.future-forms)", es: "[Formas de futuro](id:en.tenses.future-forms)" } }
           - { aspect: { en: In progress, es: En curso }, past: { en: "[Past continuous](id:en.tenses.continuous-tenses)", es: "[Pasado continuo](id:en.tenses.continuous-tenses)" }, present: { en: "[Present continuous](id:en.tenses.continuous-tenses)", es: "[Presente continuo](id:en.tenses.continuous-tenses)" }, future: { en: "[Present continuous](id:en.tenses.continuous-tenses) (arrangements)", es: "[Presente continuo](id:en.tenses.continuous-tenses) (citas)" } }
-          - { aspect: { en: Perfect, es: Perfecto }, past: { en: "[Past perfect](id:en.tenses.perfect-tenses)", es: "[Pluscuamperfecto](id:en.tenses.perfect-tenses)" }, present: { en: "[Present perfect](id:en.tenses.perfect-tenses)", es: "[Presente perfecto](id:en.tenses.perfect-tenses)" }, future: "-" }
-          - { aspect: { en: Past habits, es: Hábitos pasados }, past: { en: "[Used to](id:en.tenses.used-to)", es: "[Used to](id:en.tenses.used-to)" }, present: "-", future: "-" }
+          - { level: A2, aspect: { en: Perfect, es: Perfecto }, past: { en: "[Past perfect](id:en.tenses.perfect-tenses)", es: "[Pluscuamperfecto](id:en.tenses.perfect-tenses)" }, present: { en: "[Present perfect](id:en.tenses.perfect-tenses)", es: "[Presente perfecto](id:en.tenses.perfect-tenses)" }, future: "-" }
+          - { level: A2, aspect: { en: Past habits, es: Hábitos pasados }, past: { en: "[Used to](id:en.tenses.used-to)", es: "[Used to](id:en.tenses.used-to)" }, present: "-", future: "-" }
       - type: bullets
         items:
           - en: "Read the table by time: past on the left, now in the middle, future on the right."
@@ -109,11 +109,11 @@ sections:
           - { wrong: Please be quiet. I study., right: "Please be quiet. I'**m studying**.", rule: { en: "now → present continuous ([Present continuous](id:en.tenses.continuous-tenses))", es: "ahora → presente continuo ([Presente continuo](id:en.tenses.continuous-tenses))" } }
           - { for: [en], wrong: I am wanting a coffee., right: "I **want** a coffee.", rule: { en: "verbs of state → present simple ([Present simple](id:en.tenses.simple-tenses))" } }
           - { wrong: I have seen him yesterday., right: "I **saw** him yesterday.", rule: { en: "finished time → past simple ([Past simple](id:en.tenses.simple-tenses))", es: "tiempo terminado → past simple ([Pasado simple](id:en.tenses.simple-tenses))" } }
-          - { wrong: I live here since 2019., right: "I **have lived** here since 2019.", rule: { en: "since / for + state up to now → present perfect ([Present perfect](id:en.tenses.perfect-tenses))", es: "since / for + estado hasta ahora → present perfect ([Presente perfecto](id:en.tenses.perfect-tenses))" } }
+          - { level: B1, wrong: I live here since 2019., right: "I **have lived** here since 2019.", rule: { en: "since / for + state up to now → present perfect ([Present perfect](id:en.tenses.perfect-tenses))", es: "since / for + estado hasta ahora → present perfect ([Presente perfecto](id:en.tenses.perfect-tenses))" } }
           - { for: [es], wrong: Tomorrow I go to the cinema., right: "Tomorrow I'**m going** to the cinema.", rule: { es: "plan futuro → going to o presente continuo ([Formas de futuro](id:en.tenses.future-forms))" } }
-          - { for: [es], wrong: I think it rains tomorrow., right: "I think it **will rain** tomorrow.", rule: { es: "predicción con *creo que* → will ([Formas de futuro](id:en.tenses.future-forms))" } }
-          - { for: [en], wrong: I use to play football., right: "I **used to** play football.", rule: { en: "past habit → used to + base verb ([Used to](id:en.tenses.used-to))" } }
-          - { wrong: "When I arrived, the film has already started.", right: "When I arrived, the film **had** already **started**.", rule: { en: "earlier past action → past perfect ([Past perfect](id:en.tenses.perfect-tenses))", es: "acción pasada anterior → past perfect ([Pluscuamperfecto](id:en.tenses.perfect-tenses))" } }
+          - { for: [es], level: A2, wrong: I think it rains tomorrow., right: "I think it **will rain** tomorrow.", rule: { es: "predicción con *creo que* → will ([Formas de futuro](id:en.tenses.future-forms))" } }
+          - { for: [en], level: A2, wrong: I use to play football., right: "I **used to** play football.", rule: { en: "past habit → used to + base verb ([Used to](id:en.tenses.used-to))" } }
+          - { level: B1, wrong: "When I arrived, the film has already started.", right: "When I arrived, the film **had** already **started**.", rule: { en: "earlier past action → past perfect ([Past perfect](id:en.tenses.perfect-tenses))", es: "acción pasada anterior → past perfect ([Pluscuamperfecto](id:en.tenses.perfect-tenses))" } }
 
 essentials:
   - level: A1

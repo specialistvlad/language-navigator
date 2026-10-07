@@ -92,10 +92,10 @@ sections:
           - { key: plural, label: { en: Plural, es: Plural } }
           - { key: ipa, label: { en: Pronunciation, es: Pronunciación } }
         rows:
-          - { level: A0, singular: { ex: man, tr: { es: hombre } }, plural: "**men**", ipa: /men/ }
-          - { level: A0, singular: { ex: woman, tr: { es: mujer } }, plural: "**women**", ipa: /ˈwɪmɪn/ }
-          - { level: A0, singular: { ex: child, tr: { es: "niño, niña" } }, plural: "**children**", ipa: /ˈtʃɪldrən/ }
-          - { level: A0, singular: { ex: person, tr: { es: persona } }, plural: "**people**", ipa: /ˈpiːpl/ }
+          - { singular: { ex: man, tr: { es: hombre } }, plural: "**men**", ipa: /men/ }
+          - { singular: { ex: woman, tr: { es: mujer } }, plural: "**women**", ipa: /ˈwɪmɪn/ }
+          - { singular: { ex: child, tr: { es: "niño, niña" } }, plural: "**children**", ipa: /ˈtʃɪldrən/ }
+          - { singular: { ex: person, tr: { es: persona } }, plural: "**people**", ipa: /ˈpiːpl/ }
           - { level: A1, singular: { ex: foot, tr: { es: pie } }, plural: "**feet**", ipa: /fiːt/ }
           - { level: A1, singular: { ex: tooth, tr: { es: diente } }, plural: "**teeth**", ipa: /tiːθ/ }
           - { level: A1, singular: { ex: mouse, tr: { es: ratón } }, plural: "**mice**", ipa: /maɪs/ }
@@ -139,8 +139,8 @@ sections:
           - { for: [es], wrong: many peoples, right: "many **people**", rule: { es: "people ya es plural: *personas*" } }
           - { wrong: The people is nice., right: "The people **are** nice.", rule: { en: people + plural verb, es: people + verbo en plural } }
           - { wrong: two babys · two boxs, right: "two **babies** · two **boxes**", rule: { en: "consonant + y → ies · -x → -es", es: "consonante + y → ies · -x → -es" } }
-          - { wrong: two sheeps, right: "two **sheep**", rule: { en: sheep has the same form, es: sheep no cambia } }
-          - { for: [es], wrong: My trousers is black., right: "My trousers **are** black.", rule: { es: "trousers es plural" } }
+          - { level: A1, wrong: two sheeps, right: "two **sheep**", rule: { en: sheep has the same form, es: sheep no cambia } }
+          - { for: [es], level: A1, wrong: My trousers is black., right: "My trousers **are** black.", rule: { es: "trousers es plural" } }
 
 essentials:
   - level: A0

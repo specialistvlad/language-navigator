@@ -10,7 +10,6 @@ const BULLET_TAG = new RegExp(`^\\[${CODE}\\]\\s*`);
 const wording = (key: string): string[] => Object.values(INTERFACE.text[key] ?? {});
 const ESSENTIALS = wording("essentials");
 const REMINDER = wording("reminder");
-const LEVEL_COLUMN = wording("levelColumn");
 
 export type SectionKind = "essentials" | "reminder" | "body";
 
@@ -99,23 +98,24 @@ export function createRenderer(): MarkdownIt {
           if (t.type === "inline") heads.push(t.content.trim());
         }
         if (heads[0] === "✗") token.attrJoin("class", "errors");
-        const col = heads.findIndex((h) => LEVEL_COLUMN.includes(h));
-        if (col >= 0) {
-          let row: (typeof tokens)[number] | null = null;
-          let cell = -1;
-          for (let k = j; k < tokens.length; k++) {
-            const t = tokens[k];
-            if (!t || t.type === "table_close") break;
-            if (t.type === "tr_open") {
-              row = t;
-              cell = -1;
-            } else if (t.type === "td_open") cell++;
-            else if (t.type === "inline" && row !== null && cell === col) {
-              const value = t.content.trim();
-              if (LEVELS.includes(value)) {
-                row.attrSet("data-level", value);
-                t.children = [html(levelBadge(value))];
-              }
+        // A row whose first cell opens with [A2] gets a data-level attribute and a badge.
+        let row: (typeof tokens)[number] | null = null;
+        let cell = -1;
+        for (let k = j; k < tokens.length; k++) {
+          const t = tokens[k];
+          if (!t || t.type === "table_close") break;
+          if (t.type === "tr_open") {
+            row = t;
+            cell = -1;
+          } else if (t.type === "td_open") cell++;
+          else if (t.type === "inline" && row !== null && cell === 0) {
+            const first = t.children?.[0];
+            const m = first?.type === "text" ? BULLET_TAG.exec(first.content) : null;
+            const level = m?.[1];
+            if (m && first && level !== undefined) {
+              row.attrSet("data-level", level);
+              first.content = first.content.slice(m[0].length);
+              t.children?.unshift(html(levelBadge(level)));
             }
           }
         }

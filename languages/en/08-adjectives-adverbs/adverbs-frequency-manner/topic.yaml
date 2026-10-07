@@ -26,7 +26,7 @@ sections:
           - { level: A2, type: { en: "manner: how", es: "modo: cómo" }, example: "She drives **carefully**.", tr: { es: Conduce con cuidado. } }
 
   - title: { en: "Form: frequency adverbs", es: "Forma: adverbios de frecuencia" }
-    level: A1
+    level: A1-A2
     content:
       - type: table
         columns:
@@ -58,8 +58,8 @@ sections:
           - { key: position, label: { en: Position, es: Posición } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, position: { en: "before the main verb", es: "antes del verbo principal" }, example: "I **often** walk.", tr: { es: A menudo voy andando. } }
-          - { level: A1, position: { en: "after be", es: "después de be" }, example: "She is **always** late.", tr: { es: Siempre llega tarde. } }
+          - { position: { en: "before the main verb", es: "antes del verbo principal" }, example: "I **often** walk.", tr: { es: A menudo voy andando. } }
+          - { position: { en: "after be", es: "después de be" }, example: "She is **always** late.", tr: { es: Siempre llega tarde. } }
           - { level: A2, position: { en: "between auxiliary and main verb", es: "entre el auxiliar y el verbo principal" }, example: "I can **never** find my keys.", tr: { es: Nunca encuentro las llaves. } }
           - { level: A2, position: { en: "after don't / doesn't", es: "después de don't / doesn't" }, example: "He doesn't **always** call.", tr: { es: No siempre llama. } }
       - type: bullets
@@ -176,10 +176,10 @@ sections:
           - { for: [es], wrong: I don't never drink coffee., right: "I **never** drink coffee.", rule: { es: "never ya es negativo: sin don't" } }
           - { for: [es], wrong: I swim every days., right: "I swim **every day**.", rule: { es: "every + singular" } }
           - { for: [es], wrong: She goes there three times by week., right: "She goes there three times **a** week.", rule: { es: "*por semana* = a week" } }
-          - { for: [es], wrong: She speaks well English., right: "She speaks English **well**.", rule: { es: "el objeto va pegado al verbo" } }
-          - { wrong: She sings good., right: "She sings **well**.", rule: { en: "good + noun, well + verb", es: "good + sustantivo; well + verbo" } }
-          - { wrong: He walks careful., right: "He walks **carefully**.", rule: { en: "manner adverb = adjective + -ly", es: "adverbio de modo = adjetivo + -ly" } }
-          - { wrong: They work hardly., right: "They work **hard**.", rule: { en: "hard = hard; hardly = almost not", es: "hard = duro; hardly = casi no" } }
+          - { for: [es], level: A2, wrong: She speaks well English., right: "She speaks English **well**.", rule: { es: "el objeto va pegado al verbo" } }
+          - { level: A2, wrong: She sings good., right: "She sings **well**.", rule: { en: "good + noun, well + verb", es: "good + sustantivo; well + verbo" } }
+          - { level: A2, wrong: He walks careful., right: "He walks **carefully**.", rule: { en: "manner adverb = adjective + -ly", es: "adverbio de modo = adjetivo + -ly" } }
+          - { level: A2, wrong: They work hardly., right: "They work **hard**.", rule: { en: "hard = hard; hardly = almost not", es: "hard = duro; hardly = casi no" } }
 
 essentials:
   - level: A1

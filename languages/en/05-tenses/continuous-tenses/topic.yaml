@@ -29,6 +29,7 @@ sections:
           - { key: negative, label: { en: Negative, es: Negativa } }
         rows:
           - tense: { en: "**Future**\nwill be", es: "**Futuro**\nwill be" }
+            level: B1
             question: "**Will** I **be** work**ing**?\n**Will** you **be** work**ing**?\n**Will** he **be** work**ing**?\n**Will** she **be** work**ing**?\n**Will** it **be** work**ing**?\n**Will** we **be** work**ing**?\n**Will** they **be** work**ing**?"
             statement: "I **will be** work**ing**.\nYou **will be** work**ing**.\nHe **will be** work**ing**.\nShe **will be** work**ing**.\nIt **will be** work**ing**.\nWe **will be** work**ing**.\nThey **will be** work**ing**."
             negative: "I **won't be** work**ing**.\nYou **won't be** work**ing**.\nHe **won't be** work**ing**.\nShe **won't be** work**ing**.\nIt **won't be** work**ing**.\nWe **won't be** work**ing**.\nThey **won't be** work**ing**."
@@ -37,6 +38,7 @@ sections:
             statement: "I **am** work**ing**.\nYou **are** work**ing**.\nHe **is** work**ing**.\nShe **is** work**ing**.\nIt **is** work**ing**.\nWe **are** work**ing**.\nThey **are** work**ing**."
             negative: "I'**m not** work**ing**.\nYou **aren't** work**ing**.\nHe **isn't** work**ing**.\nShe **isn't** work**ing**.\nIt **isn't** work**ing**.\nWe **aren't** work**ing**.\nThey **aren't** work**ing**."
           - tense: { en: "**Past**\nwas / were", es: "**Pasado**\nwas / were" }
+            level: A2
             question: "**Was** I work**ing**?\n**Were** you work**ing**?\n**Was** he work**ing**?\n**Was** she work**ing**?\n**Was** it work**ing**?\n**Were** we work**ing**?\n**Were** they work**ing**?"
             statement: "I **was** work**ing**.\nYou **were** work**ing**.\nHe **was** work**ing**.\nShe **was** work**ing**.\nIt **was** work**ing**.\nWe **were** work**ing**.\nThey **were** work**ing**."
             negative: "I **wasn't** work**ing**.\nYou **weren't** work**ing**.\nHe **wasn't** work**ing**.\nShe **wasn't** work**ing**.\nIt **wasn't** work**ing**.\nWe **weren't** work**ing**.\nThey **weren't** work**ing**."
@@ -224,10 +226,10 @@ sections:
           - { for: [en], wrong: He is runing., right: "He is **running**.", rule: { en: "one vowel + one consonant → double it" } }
           - { for: [es], wrong: Be quiet! The baby sleeps., right: "Be quiet! The baby **is sleeping**.", rule: { es: "acción en curso ahora → be + -ing" } }
           - { wrong: I am knowing the answer., right: "I **know** the answer.", rule: { en: "stative verbs → simple tenses", es: "verbos de estado → tiempos simples" } }
-          - { wrong: "When I was walking home, I was seeing an accident.", right: "…I **saw** an accident.", rule: { en: "short interrupting action → past simple", es: "acción corta que interrumpe → past simple" } }
-          - { for: [es], wrong: "When I was a child, I was playing outside every day.", right: "…I **played** outside every day.", rule: { es: "hábito pasado → past simple o used to" } }
-          - { for: [en], wrong: We was playing., right: "We **were** playing.", rule: { en: "you / we / they → were" } }
-          - { for: [en], wrong: I will flying tomorrow., right: "I **will be flying** tomorrow.", rule: { en: "will be + V-ing" } }
+          - { level: A2, wrong: "When I was walking home, I was seeing an accident.", right: "…I **saw** an accident.", rule: { en: "short interrupting action → past simple", es: "acción corta que interrumpe → past simple" } }
+          - { for: [es], level: A2, wrong: "When I was a child, I was playing outside every day.", right: "…I **played** outside every day.", rule: { es: "hábito pasado → past simple o used to" } }
+          - { for: [en], level: A2, wrong: We was playing., right: "We **were** playing.", rule: { en: "you / we / they → were" } }
+          - { for: [en], level: B1, wrong: I will flying tomorrow., right: "I **will be flying** tomorrow.", rule: { en: "will be + V-ing" } }
 
 essentials:
   - level: A1

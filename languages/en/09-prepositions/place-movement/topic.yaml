@@ -15,7 +15,7 @@ summary:
 
 sections:
   - title: { en: "Place: where something is", es: "Lugar: dónde está algo" }
-    level: A1
+    level: A1-A2
     content:
       - type: table
         columns:
@@ -134,9 +134,9 @@ sections:
           - { wrong: The school is in front the park., right: "The school is **in front of** the park.", rule: { en: in front of needs of, es: "in front of lleva of" } }
           - { wrong: I live at London., right: "I live **in** London.", rule: { en: towns and countries → in, es: "ciudades y países → in" } }
           - { for: [es], wrong: I go to home., right: "I go **home**.", rule: { es: "go home, sin to" } }
-          - { for: [es], wrong: We arrive to London., right: "We arrive **in** London.", rule: { es: "llegar a = arrive in / arrive at" } }
-          - { wrong: I get in the bus., right: "I get **on** the bus.", rule: { en: "bus, train, plane → get on", es: "bus, train, plane → get on" } }
-          - { for: [en], wrong: She gets on the taxi., right: "She gets **in** the taxi.", rule: { en: "car, taxi → get in / out of" } }
+          - { for: [es], level: A2, wrong: We arrive to London., right: "We arrive **in** London.", rule: { es: "llegar a = arrive in / arrive at" } }
+          - { level: A2, wrong: I get in the bus., right: "I get **on** the bus.", rule: { en: "bus, train, plane → get on", es: "bus, train, plane → get on" } }
+          - { for: [en], level: A2, wrong: She gets on the taxi., right: "She gets **in** the taxi.", rule: { en: "car, taxi → get in / out of" } }
 
 essentials:
   - level: A1

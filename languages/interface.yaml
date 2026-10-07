@@ -34,7 +34,6 @@ text:
   upNext: { en: Up next, es: A continuación }
   essentials: { en: Essentials, es: Lo esencial }
   reminder: { en: Reminder, es: Recordatorio }
-  levelColumn: { en: Level, es: Nivel }
   ruleColumn: { en: Rule, es: Regla }
 
   # Cheatsheets

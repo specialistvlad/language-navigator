@@ -29,6 +29,7 @@ sections:
           - { key: negative, label: { en: Negative, es: Negativa } }
         rows:
           - tense: { en: "**Future**\nwill", es: "**Futuro**\nwill" }
+            level: A2
             question: "**Will** I work?\n**Will** you work?\n**Will** he work?\n**Will** she work?\n**Will** it work?\n**Will** we work?\n**Will** they work?"
             statement: "I **will** work.\nYou **will** work.\nHe **will** work.\nShe **will** work.\nIt **will** work.\nWe **will** work.\nThey **will** work."
             negative: "I **won't** work.\nYou **won't** work.\nHe **won't** work.\nShe **won't** work.\nIt **won't** work.\nWe **won't** work.\nThey **won't** work."
@@ -127,11 +128,11 @@ sections:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, use: { en: Habits and routines, es: Hábitos y rutinas }, example: "I **get up** at 7.", tr: { es: Me levanto a las 7. } }
-          - { level: A1, use: { en: Facts and general truths, es: Hechos y verdades generales }, example: "Water **boils** at 100 °C.", tr: { es: El agua hierve a 100 °C. } }
-          - { level: A1, use: { en: Permanent states, es: Estados permanentes }, example: "She **lives** in London.", tr: { es: Vive en Londres. } }
-          - { level: A1, use: { en: "Likes, dislikes, opinions", es: Gustos y opiniones }, example: "I **like** coffee. / I **think** so.", tr: { es: Me gusta el café. / Creo que sí. } }
-          - { level: A1, use: { en: Jobs and regular activities, es: Profesiones y actividades habituales }, example: "He **teaches** maths.", tr: { es: Enseña matemáticas. } }
+          - { use: { en: Habits and routines, es: Hábitos y rutinas }, example: "I **get up** at 7.", tr: { es: Me levanto a las 7. } }
+          - { use: { en: Facts and general truths, es: Hechos y verdades generales }, example: "Water **boils** at 100 °C.", tr: { es: El agua hierve a 100 °C. } }
+          - { use: { en: Permanent states, es: Estados permanentes }, example: "She **lives** in London.", tr: { es: Vive en Londres. } }
+          - { use: { en: "Likes, dislikes, opinions", es: Gustos y opiniones }, example: "I **like** coffee. / I **think** so.", tr: { es: Me gusta el café. / Creo que sí. } }
+          - { use: { en: Jobs and regular activities, es: Profesiones y actividades habituales }, example: "He **teaches** maths.", tr: { es: Enseña matemáticas. } }
           - { level: A2, use: { en: "Timetables and schedules (future)", es: "Horarios y calendarios (futuro)" }, example: "The train **leaves** at 6:15.", tr: { es: El tren sale a las 6:15. } }
           - { level: A2, use: { en: Instructions and directions, es: Instrucciones e indicaciones }, example: "You **turn** left at the bank.", tr: { es: Giras a la izquierda en el banco. } }
       - type: bullets
@@ -263,9 +264,9 @@ sections:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, use: { en: Finished actions at a stated past time, es: Acciones terminadas en un momento concreto del pasado }, example: "I **visited** Paris last year.", tr: { es: "Visité París el año pasado." } }
-          - { level: A1, use: { en: Past states, es: Estados en el pasado }, example: "She **was** ill on Monday.", tr: { es: "El lunes estaba enferma." } }
-          - { level: A1, use: { en: Sequences of events, es: Secuencias de hechos }, example: "I **got up**, **had** a shower and **left**.", tr: { es: "Me levanté, me di una ducha y salí." } }
+          - { use: { en: Finished actions at a stated past time, es: Acciones terminadas en un momento concreto del pasado }, example: "I **visited** Paris last year.", tr: { es: "Visité París el año pasado." } }
+          - { use: { en: Past states, es: Estados en el pasado }, example: "She **was** ill on Monday.", tr: { es: "El lunes estaba enferma." } }
+          - { use: { en: Sequences of events, es: Secuencias de hechos }, example: "I **got up**, **had** a shower and **left**.", tr: { es: "Me levanté, me di una ducha y salí." } }
           - { level: A2, use: { en: Past habits that are over, es: Hábitos del pasado que ya terminaron }, example: "When I was a child, I **played** outside every day.", tr: { es: "Cuando era niño, jugaba fuera todos los días." } }
       - type: bullets
         items:
@@ -326,7 +327,7 @@ sections:
             es: "Los planes y las citas llevan going to o el presente continuo: ver [Formas de futuro](id:en.tenses.future-forms)."
 
   - title: { en: "Compare: past, present and future", es: "Comparación: pasado, presente y futuro" }
-    level: A1-A2
+    level: A2
     content:
       - type: table
         columns:
@@ -358,10 +359,10 @@ sections:
           - { for: [en], wrong: I goed home., right: "I **went** home.", rule: { en: "go → went (irregular verb)" } }
           - { for: [en], wrong: Did he was late?, right: "**Was** he late?", rule: { en: "be makes questions by itself" } }
           - { for: [es], wrong: Before two years I lived there., right: "I lived there two years **ago**.", rule: { es: "*hace dos años* = two years ago, al final" } }
-          - { for: [en], wrong: He will goes., right: "He will **go**.", rule: { en: "will + base verb" } }
-          - { for: [es], wrong: I will to help you., right: "I **will help** you.", rule: { es: "will va directamente con el verbo" } }
-          - { wrong: Do you will come?, right: "**Will** you come?", rule: { en: "will makes questions by itself", es: "will forma la pregunta por sí solo" } }
-          - { for: [es], wrong: I think it rains tomorrow., right: "I think it **will rain** tomorrow.", rule: { es: "predicción con *creo que* → will + verbo" } }
+          - { for: [en], level: A2, wrong: He will goes., right: "He will **go**.", rule: { en: "will + base verb" } }
+          - { for: [es], level: A2, wrong: I will to help you., right: "I **will help** you.", rule: { es: "will va directamente con el verbo" } }
+          - { level: A2, wrong: Do you will come?, right: "**Will** you come?", rule: { en: "will makes questions by itself", es: "will forma la pregunta por sí solo" } }
+          - { for: [es], level: A2, wrong: I think it rains tomorrow., right: "I think it **will rain** tomorrow.", rule: { es: "predicción con *creo que* → will + verbo" } }
 
 essentials:
   - level: A1

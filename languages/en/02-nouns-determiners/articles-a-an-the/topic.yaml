@@ -79,10 +79,10 @@ sections:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, use: { en: "one thing, any one", es: "una cosa, una cualquiera" }, example: "I have **a** car.", tr: { es: "Tengo coche." } }
-          - { level: A1, use: { en: "first mention; then the", es: "primera mención; después the" }, example: "There's **a** cat. **The** cat is black.", tr: { es: "Hay un gato. El gato es negro." } }
-          - { level: A1, use: { en: "jobs", es: "profesiones" }, example: "She's **a** doctor.", tr: { es: "Es médica." } }
-          - { level: A1, use: { en: "what something is", es: "qué es algo" }, example: "It's **an** orange.", tr: { es: "Es una naranja." } }
+          - { use: { en: "one thing, any one", es: "una cosa, una cualquiera" }, example: "I have **a** car.", tr: { es: "Tengo coche." } }
+          - { use: { en: "first mention; then the", es: "primera mención; después the" }, example: "There's **a** cat. **The** cat is black.", tr: { es: "Hay un gato. El gato es negro." } }
+          - { use: { en: "jobs", es: "profesiones" }, example: "She's **a** doctor.", tr: { es: "Es médica." } }
+          - { use: { en: "what something is", es: "qué es algo" }, example: "It's **an** orange.", tr: { es: "Es una naranja." } }
           - { level: A2, use: { en: "rate: per", es: "proporción: por" }, example: "twice **a** week / £3 **a** kilo", tr: { es: "dos veces por semana / 3 libras el kilo" } }
           - { level: A2, use: { en: "exclamations with what", es: "exclamaciones con what" }, example: "What **a** nice day!", tr: { es: "¡Qué día tan bonito!" } }
 
@@ -94,9 +94,9 @@ sections:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, use: { en: "we both know which", es: "los dos sabemos cuál" }, example: "Close **the** door, please.", tr: { es: "Cierra la puerta, por favor." } }
-          - { level: A1, use: { en: "the only one", es: "el único" }, example: "**the** sun / **the** world", tr: { es: "el sol / el mundo" } }
-          - { level: A1, use: { en: "superlatives and ordinals", es: "superlativos y ordinales" }, example: "**the** best / **the** first time", tr: { es: "el mejor / la primera vez" } }
+          - { use: { en: "we both know which", es: "los dos sabemos cuál" }, example: "Close **the** door, please.", tr: { es: "Cierra la puerta, por favor." } }
+          - { use: { en: "the only one", es: "el único" }, example: "**the** sun / **the** world", tr: { es: "el sol / el mundo" } }
+          - { use: { en: "superlatives and ordinals", es: "superlativos y ordinales" }, example: "**the** best / **the** first time", tr: { es: "el mejor / la primera vez" } }
           - { level: A2, use: { en: "musical instruments", es: "instrumentos musicales" }, example: "She plays **the** piano. (US: often *plays piano*)", tr: { es: "Toca el piano." } }
           - { level: A2, use: { en: "rivers, seas, oceans, mountain ranges", es: "ríos, mares, océanos, cordilleras" }, example: "**the** Thames / **the** Atlantic / **the** Alps", tr: { es: "el Támesis / el Atlántico / los Alpes" } }
           - { level: A2, use: { en: "countries with Kingdom, States, Republic or a plural name", es: "países con Kingdom, States, Republic o nombre en plural" }, example: "**the** UK / **the** USA / **the** Netherlands", tr: { es: "el Reino Unido / EE. UU. / los Países Bajos" } }
@@ -110,11 +110,11 @@ sections:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, use: { en: "plural nouns in general", es: "sustantivos plurales en general" }, example: "I like **dogs**.", tr: { es: "Me gustan los perros." } }
-          - { level: A1, use: { en: "uncountable nouns in general", es: "sustantivos incontables en general" }, example: "**Life** is hard. / I love **music**.", tr: { es: "La vida es dura. / Me encanta la música." } }
-          - { level: A1, use: { en: "meals", es: "comidas del día" }, example: "We have **lunch** at two.", tr: { es: "Comemos a las dos." } }
-          - { level: A1, use: { en: "languages, school subjects, sports", es: "idiomas, asignaturas, deportes" }, example: "I speak **Spanish**. / I play **football**.", tr: { es: "Hablo español. / Juego al fútbol." } }
-          - { level: A1, use: { en: "names, most countries and cities", es: "nombres, la mayoría de países y ciudades" }, example: "**Mr Smith** lives in **London**.", tr: { es: "El señor Smith vive en Londres." } }
+          - { use: { en: "plural nouns in general", es: "sustantivos plurales en general" }, example: "I like **dogs**.", tr: { es: "Me gustan los perros." } }
+          - { use: { en: "uncountable nouns in general", es: "sustantivos incontables en general" }, example: "**Life** is hard. / I love **music**.", tr: { es: "La vida es dura. / Me encanta la música." } }
+          - { use: { en: "meals", es: "comidas del día" }, example: "We have **lunch** at two.", tr: { es: "Comemos a las dos." } }
+          - { use: { en: "languages, school subjects, sports", es: "idiomas, asignaturas, deportes" }, example: "I speak **Spanish**. / I play **football**.", tr: { es: "Hablo español. / Juego al fútbol." } }
+          - { use: { en: "names, most countries and cities", es: "nombres, la mayoría de países y ciudades" }, example: "**Mr Smith** lives in **London**.", tr: { es: "El señor Smith vive en Londres." } }
           - { level: A2, use: { en: "home, work, school, bed", es: "home, work, school, bed" }, example: "go **home** / at **work** / go to **bed**", tr: { es: "ir a casa / en el trabajo / ir a la cama" } }
           - { level: A2, use: { en: "transport after by", es: "transporte detrás de by" }, example: "by **bus** / by **train**", tr: { es: "en autobús / en tren" } }
           - { level: B1, use: { en: "hospital, prison, church, university for their main purpose", es: "hospital, prison, church, university por su función principal" }, example: "He's in **hospital**. (US: in **the** hospital)", tr: { es: "Está ingresado en el hospital." } }
@@ -129,7 +129,7 @@ sections:
             tr: { es: "Fui al hospital a visitarlo." }
 
   - title: { en: Typical errors, es: Errores típicos }
-    level: A1-B1
+    level: A1-A2
     content:
       - type: errors
         audience: true
@@ -141,7 +141,7 @@ sections:
           - { for: [es], wrong: I like the dogs., right: "I like **dogs**.", rule: { es: "en general: plural sin artículo" } }
           - { for: [es], wrong: I play the football., right: "I play **football**.", rule: { es: "deportes: sin artículo" } }
           - { for: [es], wrong: The Mr Smith is here., right: "**Mr Smith** is here.", rule: { es: "nombres y títulos: sin artículo" } }
-          - { for: [es], wrong: I go to the home., right: "I go **home**.", rule: { es: "go home: sin to y sin the" } }
+          - { for: [es], level: A2, wrong: I go to the home., right: "I go **home**.", rule: { es: "go home: sin to y sin the" } }
           - { for: [en], wrong: I live in the Spain., right: "I live in **Spain**.", rule: { en: "most countries: no article" } }
 
 essentials:

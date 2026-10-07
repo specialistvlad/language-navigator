@@ -118,10 +118,10 @@ sections:
           - { for: [es], wrong: The houses are bigs., right: "The houses are **big**.", rule: { es: el adjetivo no concuerda en número ni en género } }
           - { for: [es], wrong: She is a woman tall., right: "She is a **tall woman**.", rule: { es: adjetivo + sustantivo } }
           - { wrong: You look tiredly., right: "You look **tired**.", rule: { en: look / feel + adjective, es: look / feel + adjetivo } }
-          - { wrong: a wooden old table, right: "an **old wooden** table", rule: { en: age before material, es: la edad va antes que el material } }
-          - { wrong: a red big bag, right: "a **big red** bag", rule: { en: size before colour, es: el tamaño va antes que el color } }
-          - { for: [es], wrong: I am boring., right: "I'm **bored**.", rule: { es: "*estoy aburrido* = I'm bored; boring describe lo que aburre" } }
-          - { wrong: The film is bored., right: "The film is **boring**.", rule: { en: the cause takes -ing, es: la causa lleva -ing } }
+          - { level: A2, wrong: a wooden old table, right: "an **old wooden** table", rule: { en: age before material, es: la edad va antes que el material } }
+          - { level: A2, wrong: a red big bag, right: "a **big red** bag", rule: { en: size before colour, es: el tamaño va antes que el color } }
+          - { for: [es], level: A2, wrong: I am boring., right: "I'm **bored**.", rule: { es: "*estoy aburrido* = I'm bored; boring describe lo que aburre" } }
+          - { level: A2, wrong: The film is bored., right: "The film is **boring**.", rule: { en: the cause takes -ing, es: la causa lleva -ing } }
 
 essentials:
   - level: A1

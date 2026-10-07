@@ -15,15 +15,15 @@ summary:
 
 sections:
   - title: { en: Overview, es: Resumen }
-    level: A1
+    level: A1-A2
     content:
       - type: table
         columns:
           - { key: form, label: { en: Form, es: Forma } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, form: be going to + V, example: "I'**m going to** buy a car.", tr: { es: Voy a comprar un coche. } }
-          - { level: A1, form: be + V-ing, example: "I'**m meeting** Ana at six.", tr: { es: He quedado con Ana a las seis. } }
+          - { form: be going to + V, example: "I'**m going to** buy a car.", tr: { es: Voy a comprar un coche. } }
+          - { form: be + V-ing, example: "I'**m meeting** Ana at six.", tr: { es: He quedado con Ana a las seis. } }
           - { level: A2, form: will + V, example: "I'**ll** carry that bag.", tr: { es: Yo llevo esa bolsa. } }
           - { level: A2, form: V / V-s, example: "The film **starts** at nine.", tr: { es: La película empieza a las nueve. } }
 
@@ -83,7 +83,7 @@ sections:
           - { key: sound, label: { en: Sound, es: Sonido } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, written: going to, sound: "/ˈɡəʊɪŋ tə/ → informal /ˈɡɒnə/", example: { ex: "I'm **going to** call him.", tr: { es: Voy a llamarlo. } } }
+          - { written: going to, sound: "/ˈɡəʊɪŋ tə/ → informal /ˈɡɒnə/", example: { ex: "I'm **going to** call him.", tr: { es: Voy a llamarlo. } } }
           - { level: A2, written: "'ll", sound: "/əl/ after a consonant, /l/ after a vowel", example: { ex: "She'**ll** call you.", tr: { es: Te llamará. } } }
           - { level: A2, written: won't, sound: "/wəʊnt/", example: { ex: "It **won't** rain.", tr: { es: No lloverá. } } }
       - type: bullets
@@ -92,16 +92,16 @@ sections:
             es: "**gonna** es lenguaje hablado informal; en la escritura y en los exámenes se usa **going to**."
 
   - title: { en: Use, es: Uso }
-    level: A1-B1
+    level: A1-A2
     content:
       - type: table
         columns:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, use: { en: "going to: plans and intentions", es: "going to: planes e intenciones" }, example: "We'**re going to** visit Granada.", tr: { es: Vamos a visitar Granada. } }
-          - { level: A1, use: { en: "going to: prediction with evidence", es: "going to: predicción con pruebas" }, example: "Look at those clouds. It'**s going to** rain.", tr: { es: Mira esas nubes. Va a llover. } }
-          - { level: A1, use: { en: "present continuous: fixed arrangements", es: "presente continuo: citas acordadas" }, example: "I'**m seeing** the dentist on Friday.", tr: { es: El viernes voy al dentista. } }
+          - { use: { en: "going to: plans and intentions", es: "going to: planes e intenciones" }, example: "We'**re going to** visit Granada.", tr: { es: Vamos a visitar Granada. } }
+          - { use: { en: "going to: prediction with evidence", es: "going to: predicción con pruebas" }, example: "Look at those clouds. It'**s going to** rain.", tr: { es: Mira esas nubes. Va a llover. } }
+          - { use: { en: "present continuous: fixed arrangements", es: "presente continuo: citas acordadas" }, example: "I'**m seeing** the dentist on Friday.", tr: { es: El viernes voy al dentista. } }
           - { level: A2, use: { en: "will: decision at the moment of speaking", es: "will: decisión en el momento de hablar" }, example: "It's cold. I'**ll close** the window.", tr: { es: Hace frío. Cierro la ventana. } }
           - { level: A2, use: { en: "will: offers", es: "will: ofrecimientos" }, example: "I'**ll carry** your bag.", tr: { es: Te llevo la bolsa. } }
           - { level: A2, use: { en: "will: promises", es: "will: promesas" }, example: "I **won't tell** anyone.", tr: { es: No se lo diré a nadie. } }
@@ -125,9 +125,9 @@ sections:
           - { key: expression, label: { en: Expression, es: Expresión } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A1, expression: "tomorrow / tonight", example: "We're **going to** cook **tonight**.", tr: { es: Esta noche vamos a cocinar. } }
-          - { level: A1, expression: "next week / month / year", example: "I'm travelling **next week**.", tr: { es: Viajo la semana que viene. } }
-          - { level: A1, expression: "on Friday / at the weekend", example: "She's leaving **on Friday**.", tr: { es: Se va el viernes. } }
+          - { expression: "tomorrow / tonight", example: "We're **going to** cook **tonight**.", tr: { es: Esta noche vamos a cocinar. } }
+          - { expression: "next week / month / year", example: "I'm travelling **next week**.", tr: { es: Viajo la semana que viene. } }
+          - { expression: "on Friday / at the weekend", example: "She's leaving **on Friday**.", tr: { es: Se va el viernes. } }
           - { level: A2, expression: "in two days / in a minute", example: "I'll call you **in a minute**.", tr: { es: Te llamo en un minuto. } }
           - { level: A2, expression: "soon / later", example: "He'll be here **soon**.", tr: { es: Llegará pronto. } }
           - { level: A2, expression: "I think / probably", example: "It'll **probably** rain.", tr: { es: Probablemente lloverá. } }
@@ -144,8 +144,8 @@ sections:
           - { key: will, label: will }
           - { key: going, label: going to }
         rows:
-          - { level: A2, will: { en: "decision made now", es: "decisión tomada ahora" }, going: { en: "plan made before", es: "plan hecho antes" } }
-          - { level: A2, will: { ex: "The phone is ringing. I'**ll answer** it.", tr: { es: Suena el teléfono. Lo cojo yo. } }, going: { ex: "I'**m going to call** Tom tonight. I decided yesterday.", tr: { es: Esta noche voy a llamar a Tom. Lo decidí ayer. } } }
+          - { will: { en: "decision made now", es: "decisión tomada ahora" }, going: { en: "plan made before", es: "plan hecho antes" } }
+          - { will: { ex: "The phone is ringing. I'**ll answer** it.", tr: { es: Suena el teléfono. Lo cojo yo. } }, going: { ex: "I'**m going to call** Tom tonight. I decided yesterday.", tr: { es: Esta noche voy a llamar a Tom. Lo decidí ayer. } } }
           - { level: B1, will: { en: "opinion or guess (I think)", es: "opinión o suposición (I think)" }, going: { en: "evidence now", es: "pruebas ahora" } }
           - { level: B1, will: { ex: "I think it'**ll** be a good year.", tr: { es: Creo que será un buen año. } }, going: { ex: "Watch out! You'**re going to** fall.", tr: { es: "¡Cuidado! Te vas a caer." } } }
       - type: bullets
@@ -158,7 +158,7 @@ sections:
             tr: { es: He quedado con Sam a las 8. / Voy a aprender italiano. }
 
   - title: { en: Typical errors, es: Errores típicos }
-    level: A1-B1
+    level: A1-A2
     content:
       - type: errors
         audience: true
@@ -167,11 +167,11 @@ sections:
           - { for: [es], wrong: Tomorrow I go to the cinema., right: "Tomorrow I'**m going** to the cinema.", rule: { es: "un plan para mañana → going to o presente continuo" } }
           - { for: [en], wrong: I'm going to to travel., right: "I'm going to **travel**.", rule: { en: "going to + base verb" } }
           - { wrong: She is going to goes., right: "She is going to **go**.", rule: { en: "going to + base verb", es: "going to + forma base" } }
-          - { for: [en], wrong: He will goes., right: "He will **go**.", rule: { en: "will + base verb" } }
-          - { for: [es], wrong: I will to help you., right: "I **will help** you.", rule: { es: "will va directamente con el verbo, sin to" } }
-          - { wrong: Do you will come?, right: "**Will** you come?", rule: { en: "will makes questions by itself", es: "will forma preguntas sin do" } }
-          - { for: [es], wrong: I don't will go., right: "I **won't go**.", rule: { es: "negativa: won't + verbo" } }
-          - { for: [es], wrong: I think it rains tomorrow., right: "I think it **will rain** tomorrow.", rule: { es: "predicción con *creo que* → will + verbo" } }
+          - { for: [en], level: A2, wrong: He will goes., right: "He will **go**.", rule: { en: "will + base verb" } }
+          - { for: [es], level: A2, wrong: I will to help you., right: "I **will help** you.", rule: { es: "will va directamente con el verbo, sin to" } }
+          - { level: A2, wrong: Do you will come?, right: "**Will** you come?", rule: { en: "will makes questions by itself", es: "will forma preguntas sin do" } }
+          - { for: [es], level: A2, wrong: I don't will go., right: "I **won't go**.", rule: { es: "negativa: won't + verbo" } }
+          - { for: [es], level: A2, wrong: I think it rains tomorrow., right: "I think it **will rain** tomorrow.", rule: { es: "predicción con *creo que* → will + verbo" } }
 
 essentials:
   - level: A1

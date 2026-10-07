@@ -124,7 +124,7 @@ sections:
             es: "**no** y **none** van con el verbo en afirmativa: There **is** no milk."
 
   - title: { en: Typical errors, es: Errores típicos }
-    level: A1-B1
+    level: A1-A2
     content:
       - type: errors
         audience: true
@@ -134,7 +134,7 @@ sections:
           - { for: [es], wrong: How much apples?, right: "**How many** apples?", rule: { es: how many + plural } }
           - { for: [es], wrong: many money, right: "**much** money / **a lot of** money", rule: { es: money es incontable } }
           - { for: [es], wrong: I have much friends., right: "I have **a lot of** friends.", rule: { es: "afirmativa: a lot of" } }
-          - { for: [es], wrong: a little friends, right: "**a few** friends", rule: { es: a few + plural } }
+          - { for: [es], level: A2, wrong: a little friends, right: "**a few** friends", rule: { es: a few + plural } }
 
 essentials:
   - level: A1

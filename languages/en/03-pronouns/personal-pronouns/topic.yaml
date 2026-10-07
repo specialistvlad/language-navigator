@@ -174,9 +174,9 @@ sections:
           - { key: use, label: { en: Use, es: Uso } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { level: A0, use: { en: Weather, es: Tiempo atmosférico }, example: "**It**'s cold today.", tr: { es: Hoy hace frío. } }
-          - { level: A0, use: { en: Time, es: Hora }, example: "**It**'s five o'clock.", tr: { es: Son las cinco. } }
-          - { level: A0, use: { en: Days and dates, es: Días y fechas }, example: "**It**'s Monday.", tr: { es: Es lunes. } }
+          - { use: { en: Weather, es: Tiempo atmosférico }, example: "**It**'s cold today.", tr: { es: Hoy hace frío. } }
+          - { use: { en: Time, es: Hora }, example: "**It**'s five o'clock.", tr: { es: Son las cinco. } }
+          - { use: { en: Days and dates, es: Días y fechas }, example: "**It**'s Monday.", tr: { es: Es lunes. } }
           - { level: A1, use: { en: Distance, es: Distancia }, example: "**It**'s two kilometres to the station.", tr: { es: Hay dos kilómetros hasta la estación. } }
           - { level: A1, use: { en: "it + be + adjective + to + V", es: "it + be + adjetivo + to + V" }, example: "**It**'s easy to cook pasta.", tr: { es: Es fácil cocinar pasta. } }
 
@@ -190,13 +190,13 @@ sections:
           - { for: [es], wrong: Is cold today., right: "**It**'s cold today.", rule: { es: "tiempo, hora, distancia: sujeto it" } }
           - { for: [es], wrong: Ana and his brother, right: "Ana and **her** brother", rule: { es: "his / her según el poseedor" } }
           - { wrong: The dog wants it's food., right: "The dog wants **its** food.", rule: { en: "its = possessive; it's = it is", es: "its = posesivo; it's = it is" } }
-          - { wrong: I know he., right: "I know **him**.", rule: { en: "after the verb: object form", es: "detrás del verbo: forma objeto" } }
-          - { for: [es], wrong: I you love., right: "I love **you**.", rule: { es: "el pronombre objeto va detrás del verbo" } }
-          - { for: [es], wrong: I wash the hands., right: "I wash **my** hands.", rule: { es: "partes del cuerpo: posesivo" } }
-          - { wrong: The bag is my., right: "The bag is **mine**.", rule: { en: "no noun after it → mine", es: "sin sustantivo detrás → mine" } }
-          - { for: [es], wrong: It's the mine., right: "It's **mine**.", rule: { es: "mine, yours…: sin artículo" } }
-          - { wrong: Is this your's?, right: "Is this **yours**?", rule: { en: "no apostrophe", es: "sin apóstrofo" } }
-          - { for: [es], wrong: Ana is a my friend., right: "Ana is **a friend of mine**.", rule: { es: "*una amiga mía* = a friend of mine" } }
+          - { level: A1, wrong: I know he., right: "I know **him**.", rule: { en: "after the verb: object form", es: "detrás del verbo: forma objeto" } }
+          - { for: [es], level: A1, wrong: I you love., right: "I love **you**.", rule: { es: "el pronombre objeto va detrás del verbo" } }
+          - { for: [es], level: A1, wrong: I wash the hands., right: "I wash **my** hands.", rule: { es: "partes del cuerpo: posesivo" } }
+          - { level: A1, wrong: The bag is my., right: "The bag is **mine**.", rule: { en: "no noun after it → mine", es: "sin sustantivo detrás → mine" } }
+          - { for: [es], level: A1, wrong: It's the mine., right: "It's **mine**.", rule: { es: "mine, yours…: sin artículo" } }
+          - { level: A1, wrong: Is this your's?, right: "Is this **yours**?", rule: { en: "no apostrophe", es: "sin apóstrofo" } }
+          - { for: [es], level: A1, wrong: Ana is a my friend., right: "Ana is **a friend of mine**.", rule: { es: "*una amiga mía* = a friend of mine" } }
 
 essentials:
   - level: A0

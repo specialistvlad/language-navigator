@@ -97,8 +97,8 @@ sections:
           - { for: [es], wrong: What hour is it?, right: "What **time** is it?", rule: { es: "la hora = *time*" } }
           - { for: [es], wrong: It's the three., right: "It's **three (o'clock)**.", rule: { es: "sin *the*" } }
           - { wrong: seven o'clock fifteen, right: "seven **fifteen**", rule: { en: "o'clock only with full hours", es: "o'clock solo con horas en punto" } }
-          - { for: [es], wrong: three and a quarter, right: "(a) **quarter past** three", rule: { es: "y cuarto = quarter past" } }
-          - { for: [es], wrong: four less twenty, right: "twenty **to** four", rule: { es: "menos = *to*, los minutos primero" } }
+          - { for: [es], level: A1, wrong: three and a quarter, right: "(a) **quarter past** three", rule: { es: "y cuarto = quarter past" } }
+          - { for: [es], level: A1, wrong: four less twenty, right: "twenty **to** four", rule: { es: "menos = *to*, los minutos primero" } }
 
 essentials:
   - level: A0

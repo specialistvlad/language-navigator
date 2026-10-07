@@ -128,7 +128,7 @@ sections:
           - { wrong: ship /ʃiːp/, right: "ship **/ʃɪp/** · sheep /ʃiːp/", rule: { en: "short /ɪ/ ≠ long /iː/", es: "/ɪ/ corta ≠ /iː/ larga" } }
           - { wrong: think /sɪŋk/ · this /dɪs/, right: "think **/θɪŋk/** · this **/ðɪs/**", rule: { en: "th = /θ/ or /ð/", es: "th = /θ/ o /ð/" } }
           - { for: [es], wrong: very /ˈberi/, right: "very **/ˈveri/**", rule: { es: "/v/: dientes sobre el labio inferior" } }
-          - { wrong: comˈfortable, right: "**ˈcom**fortable /ˈkʌmftəbl/", rule: { en: "stress on the first syllable", es: "acento en la primera sílaba" } }
+          - { level: A1, wrong: comˈfortable, right: "**ˈcom**fortable /ˈkʌmftəbl/", rule: { en: "stress on the first syllable", es: "acento en la primera sílaba" } }
 
 essentials:
   - level: A0
