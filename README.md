@@ -3,6 +3,8 @@
 A reference library for learners of **English** and **Spanish** from level **A0 to B1**.
 Every topic is explained in English and in Spanish.
 
+**Live site:** https://specialistvlad.github.io/language-navigator/
+
 The source is structured data: one `topic.yaml` per topic holds the full reference (tables,
 rules, examples, typical errors) in both explanation languages, plus an **Essentials** block and
 a **Reminder** block for each level. JSON Schemas define and validate every file. Markdown guides,
@@ -55,6 +57,16 @@ language-navigator/
 |---|---|
 | `bun install` | installs dependencies (Bun runs every script) |
 | `npm start` | builds the site, serves it on port 47380 on every interface (open the printed network address on a phone), rebuilds and reloads on every change |
-| `npm run build` | builds the static site into `build/web/`; `SITE_URL=https://… npm run build` sets the public origin |
+| `npm run build` | builds the static site into `build/web/`; `SITE_URL=https://… npm run build` sets the public URL; its path prefixes every link |
 | `npm run check` | validates all data against the schemas and conventions |
 | `npm run md` | writes every guide as Markdown to `build/md/` |
+
+## Publishing
+
+Pushing a tag publishes the site to GitHub Pages: the Publish workflow
+(`.github/workflows/pages.yml`) takes the highest version tag, runs the checks, builds and
+deploys it. Run workflow on the Actions tab redeploys the same tag.
+
+```
+git tag v0.2.0 && git push origin v0.2.0
+```
