@@ -5,187 +5,152 @@ kind: grammar
 tags: [conjunctions, linkers, connectors, punctuation]
 concepts: [linkers]
 related: [en.sentence-building.conditionals-0-1-2, en.sentence-building.word-order, en.tenses.future-forms, en.sentence-building.questions-negatives]
-status: { en: draft, es: draft }
+status: { en: draft }
 
-title: { en: Conjunctions and Linkers, es: Conjunciones y conectores }
+title: { en: Conjunctions and Linkers }
 summary:
   en: "Linkers join ideas: and adds, but contrasts, or offers a choice, because gives a reason and so gives a result. A comma comes before but and so between two clauses: I was tired, **so** I left."
-  es: "Los conectores unen ideas: and añade, but contrasta, or da a elegir, because explica la causa y so el resultado. Antes de but y so entre dos oraciones va coma, y because lleva sujeto y verbo: I left **because** I was tired."
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: function, label: { en: Function, es: Función } }
+        - { key: function, label: { en: Function } }
         - { key: a1, label: A1 }
         - { key: a2, label: A2 }
         - { key: b1, label: B1 }
       rows:
-        - { level: A1, function: { en: Addition, es: Adición }, a1: and, a2: "also, too", b1: "as well as, in addition" }
-        - { level: A1, function: { en: Contrast, es: Contraste }, a1: but, a2: "—", b1: "although, however, while" }
-        - { level: A1, function: { en: Reason, es: Causa }, a1: because, a2: because of, b1: "—" }
-        - { level: A1, function: { en: Result, es: Resultado }, a1: so, a2: "—", b1: "—" }
-        - { level: A1, function: { en: Choice, es: Elección }, a1: or, a2: "—", b1: "—" }
-        - { level: A2, function: { en: Time, es: Tiempo }, a1: "—", a2: "when, before, after, then", b1: "—" }
-        - { level: B1, function: { en: Purpose, es: Finalidad }, a1: "—", a2: "—", b1: so that }
-        - { level: B1, function: { en: Condition, es: Condición }, a1: "—", a2: "—", b1: unless }
+        - { level: A1, function: { en: Addition }, a1: and, a2: "also, too", b1: "as well as, in addition" }
+        - { level: A1, function: { en: Contrast }, a1: but, a2: "—", b1: "although, however, while" }
+        - { level: A1, function: { en: Reason }, a1: because, a2: because of, b1: "—" }
+        - { level: A1, function: { en: Result }, a1: so, a2: "—", b1: "—" }
+        - { level: A1, function: { en: Choice }, a1: or, a2: "—", b1: "—" }
+        - { level: A2, function: { en: Time }, a1: "—", a2: "when, before, after, then", b1: "—" }
+        - { level: B1, function: { en: Purpose }, a1: "—", a2: "—", b1: so that }
+        - { level: B1, function: { en: Condition }, a1: "—", a2: "—", b1: unless }
 
 sections:
-  - title: { en: "Basic linkers: and, but, or, because, so", es: "Conectores básicos: and, but, or, because, so" }
+  - title: { en: "Basic linkers: and, but, or, because, so" }
     content:
       - type: table
         columns:
-          - { key: linker, label: { en: Linker, es: Conector } }
-          - { key: use, label: { en: Use, es: Uso } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: linker, label: { en: Linker } }
+          - { key: use, label: { en: Use } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A1, linker: and, use: { en: adds an idea, es: añade una idea }, example: "I like tea **and** coffee.", tr: { es: Me gustan el té y el café. } }
-          - { level: A1, linker: but, use: { en: shows a contrast, es: muestra un contraste }, example: "I like tea, **but** I don't like coffee.", tr: { es: Me gusta el té pero no el café. } }
-          - { level: A1, linker: or, use: { en: gives a choice, es: ofrece una elección }, example: "Do you want tea **or** coffee?", tr: { es: "¿Quieres té o café?" } }
-          - { level: A1, linker: because, use: { en: gives the reason, es: da la causa }, example: "I'm tired **because** I work late.", tr: { es: Estoy cansado porque trabajo hasta tarde. } }
-          - { level: A1, linker: so, use: { en: gives the result, es: da el resultado }, example: "I'm tired, **so** I go to bed.", tr: { es: "Estoy cansado, así que me voy a la cama." } }
+          - { level: A1, linker: and, use: { en: adds an idea }, example: "I like tea **and** coffee." }
+          - { level: A1, linker: but, use: { en: shows a contrast }, example: "I like tea, **but** I don't like coffee." }
+          - { level: A1, linker: or, use: { en: gives a choice }, example: "Do you want tea **or** coffee?" }
+          - { level: A1, linker: because, use: { en: gives the reason }, example: "I'm tired **because** I work late." }
+          - { level: A1, linker: so, use: { en: gives the result }, example: "I'm tired, **so** I go to bed." }
       - type: bullets
         items:
           - level: A1
             text:
               en: "Between two full clauses, **but** and **so** usually take a comma before them: I was tired, **so** I left."
-              es: "Entre dos oraciones completas, **but** y **so** suelen llevar coma delante: I was tired, **so** I left."
           - level: A1
             text:
               en: "**and**, **or** and **because** usually have no comma before them."
-              es: "**and**, **or** y **because** suelen ir sin coma delante."
           - level: A1
             text:
               en: "**because** is followed by a clause: a subject and a verb."
-              es: "**because** va seguido de una oración: sujeto y verbo."
           - level: A2
             text:
               en: "**because of** is followed by a noun:"
-              es: "**because of** va seguido de un sustantivo:"
             ex: "We stayed in **because of** the rain."
-            tr: { es: Nos quedamos en casa por la lluvia. }
-          - level: A1
-            for: [es]
-            text: { es: "*Porque* + verbo = **because** + sujeto + verbo. *Por / a causa de* + sustantivo = **because of**." }
-          - level: A1
-            for: [es]
-            text: { es: "*Así que* = **so** (resultado). *Porque* = **because** (causa)." }
 
-  - title: { en: "Time linkers: when, before, after, then", es: "Conectores de tiempo: when, before, after, then" }
+  - title: { en: "Time linkers: when, before, after, then" }
     content:
       - type: table
         columns:
-          - { key: linker, label: { en: Linker, es: Conector } }
-          - { key: pattern, label: { en: Pattern, es: Patrón } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: linker, label: { en: Linker } }
+          - { key: pattern, label: { en: Pattern } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A2, linker: when, pattern: "when + clause", example: "**When** I get home, I cook.", tr: { es: "Cuando llego a casa, cocino." } }
-          - { level: A2, linker: before, pattern: "before + clause", example: "I wash my hands **before** I eat.", tr: { es: Me lavo las manos antes de comer. } }
-          - { level: A2, linker: after, pattern: "after + clause", example: "We go home **after** the film ends.", tr: { es: Nos vamos a casa después de que acabe la película. } }
-          - { level: A2, linker: then, pattern: "clause, then + clause", example: "I had lunch, **then** I went home.", tr: { es: Comí y luego me fui a casa. } }
+          - { level: A2, linker: when, pattern: "when + clause", example: "**When** I get home, I cook." }
+          - { level: A2, linker: before, pattern: "before + clause", example: "I wash my hands **before** I eat." }
+          - { level: A2, linker: after, pattern: "after + clause", example: "We go home **after** the film ends." }
+          - { level: A2, linker: then, pattern: "clause, then + clause", example: "I had lunch, **then** I went home." }
       - type: bullets
         items:
           - level: A2
             text:
               en: "A time clause that starts the sentence takes a comma after it: **When** it rains, we stay in."
-              es: "Una oración de tiempo al principio lleva coma detrás: **When** it rains, we stay in."
           - level: A2
             text:
               en: "After **when**, **before** and **after** the present simple talks about the future: **When** I arrive, I'll call you."
-              es: "Tras **when**, **before** y **after** el presente simple habla del futuro: **When** I arrive, I'll call you."
-          - level: A2
-            for: [es]
-            text: { es: "*Cuando llegue* (subjuntivo) = when I **arrive** (presente simple). Tras when va el presente simple." }
 
-  - title: { en: "Adding: also, too, as well as, in addition", es: "Adición: also, too, as well as, in addition" }
+  - title: { en: "Adding: also, too, as well as, in addition" }
     content:
       - type: table
         columns:
-          - { key: linker, label: { en: Linker, es: Conector } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: linker, label: { en: Linker } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A2, linker: also, example: "I **also** speak French. / She is **also** a nurse.", tr: { es: También hablo francés. / Ella también es enfermera. } }
-          - { level: A2, linker: too, example: "I speak French **too**.", tr: { es: Yo también hablo francés. } }
-          - { level: B1, linker: as well as, example: "She speaks French **as well as** Spanish.", tr: { es: Habla francés además de español. } }
-          - { level: B1, linker: in addition, example: "**In addition**, the hotel has a pool.", tr: { es: "Además, el hotel tiene piscina." } }
+          - { level: A2, linker: also, example: "I **also** speak French. / She is **also** a nurse." }
+          - { level: A2, linker: too, example: "I speak French **too**." }
+          - { level: B1, linker: as well as, example: "She speaks French **as well as** Spanish." }
+          - { level: B1, linker: in addition, example: "**In addition**, the hotel has a pool." }
       - type: bullets
         items:
           - level: A2
             text:
               en: "**also** goes before the main verb and after be. **too** goes at the end."
-              es: "**also** va antes del verbo principal y después de be. **too** va al final."
           - level: B1
             text:
               en: "**as well as** is followed by a noun or an -ing form."
-              es: "**as well as** va seguido de un sustantivo o de una forma en -ing."
           - level: B1
             text:
               en: "**in addition** starts a sentence and is followed by a comma."
-              es: "**in addition** empieza una frase y va seguido de coma."
 
-  - title: { en: "Contrast: although, however, while", es: "Contraste: although, however, while" }
+  - title: { en: "Contrast: although, however, while" }
     content:
       - type: table
         columns:
-          - { key: linker, label: { en: Linker, es: Conector } }
-          - { key: pattern, label: { en: Pattern, es: Patrón } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: linker, label: { en: Linker } }
+          - { key: pattern, label: { en: Pattern } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: B1, linker: although, pattern: "although + clause, clause", example: "**Although** it was raining, we went out.", tr: { es: "Aunque llovía, salimos." } }
-          - { level: B1, linker: however, pattern: "sentence. However, sentence", example: "It was raining. **However**, we went out.", tr: { es: "Llovía. Sin embargo, salimos." } }
-          - { level: B1, linker: while, pattern: "while + clause, clause", example: "**While** I like tea, my wife prefers coffee.", tr: { es: "Mientras que a mí me gusta el té, mi mujer prefiere el café." } }
+          - { level: B1, linker: although, pattern: "although + clause, clause", example: "**Although** it was raining, we went out." }
+          - { level: B1, linker: however, pattern: "sentence. However, sentence", example: "It was raining. **However**, we went out." }
+          - { level: B1, linker: while, pattern: "while + clause, clause", example: "**While** I like tea, my wife prefers coffee." }
       - type: bullets
         items:
           - level: B1
             text:
               en: "**although** joins two clauses in one sentence and replaces **but**."
-              es: "**although** une dos oraciones en una sola frase y sustituye a **but**."
           - level: B1
             text:
               en: "**even though** is a stronger **although**: **Even though** I was tired, I went out."
-              es: "**even though** es un **although** más fuerte: **Even though** I was tired, I went out."
           - level: B1
             text:
               en: "**however** usually starts a new sentence and is followed by a comma."
-              es: "**however** suele empezar una frase nueva y va seguido de coma."
           - level: B1
             text:
               en: "**while** also means *at the same time*: I read **while** I eat."
-              es: "**while** también significa *al mismo tiempo*: I read **while** I eat."
-          - level: B1
-            for: [es]
-            text: { es: "*Aunque* = **although** o **even though**. *Sin embargo* = **however**." }
 
-  - title: { en: "Purpose and condition: so that, unless", es: "Finalidad y condición: so that, unless" }
+  - title: { en: "Purpose and condition: so that, unless" }
     content:
       - type: table
         columns:
-          - { key: linker, label: { en: Linker, es: Conector } }
-          - { key: pattern, label: { en: Pattern, es: Patrón } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: linker, label: { en: Linker } }
+          - { key: pattern, label: { en: Pattern } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: B1, linker: so that, pattern: "so that + clause", example: "I left early **so that** I could catch the bus.", tr: { es: Salí pronto para poder coger el autobús. } }
-          - { level: B1, linker: unless, pattern: "unless = if … not", example: "We stay in **unless** it stops raining.", tr: { es: Nos quedamos en casa a menos que deje de llover. } }
+          - { level: B1, linker: so that, pattern: "so that + clause", example: "I left early **so that** I could catch the bus." }
+          - { level: B1, linker: unless, pattern: "unless = if … not", example: "We stay in **unless** it stops raining." }
       - type: bullets
         items:
           - level: B1
             text:
               en: "More on **unless**: [Conditionals: Zero, First and Second](id:en.sentence-building.conditionals-0-1-2)."
-              es: "Más sobre **unless**: [Condicionales 0, 1 y 2](id:en.sentence-building.conditionals-0-1-2)."
-          - level: B1
-            for: [es]
-            text: { es: "*Para que* + subjuntivo = **so that** + clause, con can / could / will / would." }
 
-  - title: { en: Typical errors, es: Errores típicos }
+  - title: { en: Typical errors }
     content:
       - type: errors
-        audience: true
         rows:
-          - { level: B1, wrong: "Although it was raining, but we went out.", right: "Although it was raining, we went out.", rule: { en: although replaces but, es: although sustituye a but } }
-          - { level: A2, wrong: We stayed in because the rain., right: "We stayed in **because of** the rain.", rule: { en: "because + clause, because of + noun", es: "because + oración, because of + sustantivo" } }
-          - { level: A2, wrong: We stayed in because of it was raining., right: "We stayed in **because** it was raining.", rule: { en: because of + noun only, es: because of solo lleva sustantivo } }
-          - { level: B1, wrong: "It was cold, however we went out.", right: "It was cold. **However**, we went out.", rule: { en: however starts a new sentence and takes a comma, es: however empieza frase nueva y lleva coma } }
-          - { level: A2, wrong: I speak French also., right: "I **also** speak French. / I speak French **too**.", rule: { en: "also goes before the main verb, too at the end", es: "also va antes del verbo principal, too al final" } }
-          - { level: A2, for: [es], wrong: "When I will arrive, I'll call you.", right: "**When** I arrive, I'll call you.", rule: { es: tras when el presente simple habla del futuro } }
-          - { for: [es], level: B1, wrong: I left early so that I catch the bus., right: "I left early so that I **could** catch the bus.", rule: { es: "*para que* = so that; en pasado, could / would" } }
-          - { for: [es], level: B1, wrong: We'll go out unless it doesn't rain., right: "We'll go out **unless** it rains.", rule: { es: unless ya significa if … not } }
+          - { level: B1, wrong: "Although it was raining, but we went out.", right: "Although it was raining, we went out.", rule: { en: although replaces but } }
+          - { level: A2, wrong: We stayed in because the rain., right: "We stayed in **because of** the rain.", rule: { en: "because + clause, because of + noun" } }
+          - { level: A2, wrong: We stayed in because of it was raining., right: "We stayed in **because** it was raining.", rule: { en: because of + noun only } }
+          - { level: B1, wrong: "It was cold, however we went out.", right: "It was cold. **However**, we went out.", rule: { en: however starts a new sentence and takes a comma } }
+          - { level: A2, wrong: I speak French also., right: "I **also** speak French. / I speak French **too**.", rule: { en: "also goes before the main verb, too at the end" } }

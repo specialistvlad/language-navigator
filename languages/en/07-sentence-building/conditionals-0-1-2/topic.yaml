@@ -5,154 +5,131 @@ kind: grammar
 tags: [conditionals, if, unless]
 concepts: [conditionals]
 related: [en.sentence-building.conjunctions-linkers, en.tenses.simple-tenses, en.tenses.future-forms, en.modals.would]
-status: { en: draft, es: draft }
+status: { en: draft }
 
-title: { en: "Conditionals: Zero, First and Second", es: "Condicionales 0, 1 y 2" }
+title: { en: "Conditionals: Zero, First and Second" }
 summary:
   en: "If-sentences for facts (zero), real possibilities (first) and imagined situations (second). After if the verb is in the present simple, even for the future: If it **rains**, we'll stay in."
-  es: "Frases con if para hechos, posibilidades reales y situaciones imaginadas. Tras if el presente simple expresa el futuro, sin will: If it **rains**, we'll stay in."
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: type, label: { en: Type, es: Tipo } }
-        - { key: example, label: { en: Example, es: Ejemplo } }
+        - { key: type, label: { en: Type } }
+        - { key: example, label: { en: Example } }
       rows:
-        - { level: A2, type: "Zero: if + present, present", example: "If you **heat** ice, it **melts**.", tr: { es: "Si calientas hielo, se derrite." } }
-        - { level: A2, type: "First: if + present, will + V", example: "If it **rains**, we'**ll stay** in.", tr: { es: "Si llueve, nos quedaremos en casa." } }
-        - { level: B1, type: "Second: if + past, would + V", example: "If I **had** more time, I'**d learn** Spanish.", tr: { es: "Si tuviera más tiempo, aprendería español." } }
+        - { level: A2, type: "Zero: if + present, present", example: "If you **heat** ice, it **melts**." }
+        - { level: A2, type: "First: if + present, will + V", example: "If it **rains**, we'**ll stay** in." }
+        - { level: B1, type: "Second: if + past, would + V", example: "If I **had** more time, I'**d learn** Spanish." }
 
 sections:
-  - title: { en: Overview, es: Resumen }
+  - title: { en: Overview }
     content:
       - type: bullets
         items:
           - level: A2
             text:
               en: "Zero and first conditionals talk about real situations. The second talks about imagined ones."
-              es: "El condicional cero y el primero hablan de situaciones reales. El segundo habla de situaciones imaginadas."
-          - level: A2
-            for: [es]
-            text: { es: "*Si* + presente → **if** + present simple. Tras **if** va el presente simple, también para el futuro." }
 
-  - title: { en: "Form: zero and first", es: "Forma: cero y primero" }
+  - title: { en: "Form: zero and first" }
     content:
       - type: table
         columns:
-          - { key: type, label: { en: Type, es: Tipo } }
-          - { key: pattern, label: { en: Pattern, es: Patrón } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: type, label: { en: Type } }
+          - { key: pattern, label: { en: Pattern } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A2, type: { en: Zero, es: Cero }, pattern: "if + present, present", example: "If you **mix** blue and yellow, you **get** green.", tr: { es: "Si mezclas azul y amarillo, sale verde." } }
-          - { level: A2, type: { en: First, es: Primero }, pattern: "if + present, will + V", example: "If you **study**, you'**ll pass**.", tr: { es: "Si estudias, aprobarás." } }
-          - { level: A2, type: { en: First (negative), es: Primero (negativo) }, pattern: "if + don't / doesn't + V, will + V", example: "If you **don't hurry**, you'**ll miss** the bus.", tr: { es: "Si no te das prisa, perderás el autobús." } }
+          - { level: A2, type: { en: Zero }, pattern: "if + present, present", example: "If you **mix** blue and yellow, you **get** green." }
+          - { level: A2, type: { en: First }, pattern: "if + present, will + V", example: "If you **study**, you'**ll pass**." }
+          - { level: A2, type: { en: First (negative) }, pattern: "if + don't / doesn't + V, will + V", example: "If you **don't hurry**, you'**ll miss** the bus." }
       - type: bullets
         items:
           - level: A2
             text:
               en: "The if-clause uses the present simple, also for the future."
-              es: "La oración con if usa el presente simple, también para el futuro."
           - level: A2
             text:
               en: "The first conditional main clause can also use can, may or an imperative: If you feel ill, **call** me."
-              es: "La oración principal del primero también puede llevar can, may o un imperativo: If you feel ill, **call** me."
-          - level: A2
-            for: [es]
-            text: { es: "*Si llueve, nos quedaremos* → If it **rains**, we'll stay." }
 
-  - title: { en: "Form: second", es: "Forma: segundo" }
+  - title: { en: "Form: second" }
     content:
       - type: table
         columns:
-          - { key: type, label: { en: Type, es: Tipo } }
-          - { key: pattern, label: { en: Pattern, es: Patrón } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: type, label: { en: Type } }
+          - { key: pattern, label: { en: Pattern } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: B1, type: { en: Second, es: Segundo }, pattern: "if + past simple, would + V", example: "If I **won** the lottery, I'**d buy** a house.", tr: { es: "Si me tocara la lotería, me compraría una casa." } }
-          - { level: B1, type: { en: Second (negative), es: Segundo (negativo) }, pattern: "if + didn't + V, would + V", example: "If I **didn't have** to work, I'**d travel**.", tr: { es: "Si no tuviera que trabajar, viajaría." } }
-          - { level: B1, type: { en: "Second with be", es: "Segundo con be" }, pattern: "if + were, would + V", example: "If it **were** sunny, we'**d go** out.", tr: { es: "Si hiciera sol, saldríamos." } }
+          - { level: B1, type: { en: Second }, pattern: "if + past simple, would + V", example: "If I **won** the lottery, I'**d buy** a house." }
+          - { level: B1, type: { en: Second (negative) }, pattern: "if + didn't + V, would + V", example: "If I **didn't have** to work, I'**d travel**." }
+          - { level: B1, type: { en: "Second with be" }, pattern: "if + were, would + V", example: "If it **were** sunny, we'**d go** out." }
       - type: bullets
         items:
           - level: B1
             text:
               en: "The past simple in the if-clause refers to the present or the future."
-              es: "El pasado simple de la oración con if se refiere al presente o al futuro."
           - level: B1
             text:
               en: "**were** works for every person: If he **were** here, he'd help. **was** is common in informal speech."
-              es: "**were** sirve para todas las personas: If he **were** here, he'd help. **was** es frecuente en el habla informal."
           - level: B1
             text:
               en: "The main clause can also use could or might: If I had time, I **could** help."
-              es: "La oración principal también puede llevar could o might: If I had time, I **could** help."
-          - level: B1
-            for: [es]
-            text: { es: "*Si tuviera* (imperfecto de subjuntivo) → if I **had** (pasado simple). *Aprendería* (condicional) → I **would** learn." }
 
-  - title: { en: Order of the clauses, es: Orden de las oraciones }
+  - title: { en: Order of the clauses }
     content:
       - type: table
         columns:
-          - { key: order, label: { en: Order, es: Orden } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: order, label: { en: Order } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A2, order: { en: "if-clause first: comma", es: "if primero: con coma" }, example: "**If it rains**, we'll stay in.", tr: { es: "Si llueve, nos quedaremos en casa." } }
-          - { level: A2, order: { en: "if-clause second: no comma", es: "if después: sin coma" }, example: "We'll stay in **if it rains**.", tr: { es: Nos quedaremos en casa si llueve. } }
+          - { level: A2, order: { en: "if-clause first: comma" }, example: "**If it rains**, we'll stay in." }
+          - { level: A2, order: { en: "if-clause second: no comma" }, example: "We'll stay in **if it rains**." }
 
-  - title: { en: Use, es: Uso }
+  - title: { en: Use }
     content:
       - type: table
         columns:
-          - { key: use, label: { en: Use, es: Uso } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: use, label: { en: Use } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A2, use: { en: "Facts and general truths (zero)", es: "Hechos y verdades generales (cero)" }, example: "If you **press** this button, the door **opens**.", tr: { es: "Si pulsas este botón, la puerta se abre." } }
-          - { level: A2, use: { en: "Real possibilities in the future (first)", es: "Posibilidades reales en el futuro (primero)" }, example: "If I **see** Ana, I'**ll tell** her.", tr: { es: "Si veo a Ana, se lo diré." } }
-          - { level: B1, use: { en: "Unreal or unlikely situations (second)", es: "Situaciones irreales o poco probables (segundo)" }, example: "If I **were** a bird, I'**d fly** to Spain.", tr: { es: "Si fuera un pájaro, volaría a España." } }
-          - { level: B1, use: { en: "Advice: If I were you (second)", es: "Consejos: If I were you (segundo)" }, example: "If I **were** you, I'**d take** the train.", tr: { es: "Yo que tú, cogería el tren." } }
+          - { level: A2, use: { en: "Facts and general truths (zero)" }, example: "If you **press** this button, the door **opens**." }
+          - { level: A2, use: { en: "Real possibilities in the future (first)" }, example: "If I **see** Ana, I'**ll tell** her." }
+          - { level: B1, use: { en: "Unreal or unlikely situations (second)" }, example: "If I **were** a bird, I'**d fly** to Spain." }
+          - { level: B1, use: { en: "Advice: If I were you (second)" }, example: "If I **were** you, I'**d take** the train." }
 
-  - title: { en: Unless, es: Unless }
+  - title: { en: Unless }
     content:
       - type: bullets
         items:
           - level: B1
             text:
               en: "**unless** means **if … not**. It takes an affirmative verb:"
-              es: "**unless** significa **if … not**. Lleva el verbo en afirmativa:"
             ex: "**Unless** you hurry, you'll miss the bus. = If you **don't** hurry, you'll miss the bus."
-            tr: { es: "A menos que te des prisa, perderás el autobús." }
           - level: B1
             text:
               en: "**unless** goes with the zero and first conditionals. See [Conjunctions and Linkers](id:en.sentence-building.conjunctions-linkers)."
-              es: "**unless** se usa con el condicional cero y el primero. Ver [Conjunciones y conectores](id:en.sentence-building.conjunctions-linkers)."
 
-  - title: { en: "Compare: first and second conditional", es: "Comparación: first y second conditional" }
+  - title: { en: "Compare: first and second conditional" }
     content:
       - type: table
         columns:
           - { key: first, label: First conditional }
           - { key: second, label: Second conditional }
         rows:
-          - { level: B1, first: { en: "real, possible", es: "real, posible" }, second: { en: "imagined, unlikely", es: "imaginado, improbable" } }
-          - { level: B1, first: { ex: "If I **win**, I'**ll buy** a car.", tr: { es: "Si gano, me compraré un coche." } }, second: { ex: "If I **won**, I'**d buy** a car.", tr: { es: "Si ganara, me compraría un coche." } } }
-          - { level: B1, first: { ex: "If we **have** time, we'**ll visit** you.", tr: { es: "Si tenemos tiempo, os visitaremos." } }, second: { ex: "If we **had** time, we'**d visit** you.", tr: { es: "Si tuviéramos tiempo, os visitaríamos." } } }
+          - { level: B1, first: { en: "real, possible" }, second: { en: "imagined, unlikely" } }
+          - { level: B1, first: { ex: "If I **win**, I'**ll buy** a car." }, second: { ex: "If I **won**, I'**d buy** a car." } }
+          - { level: B1, first: { ex: "If we **have** time, we'**ll visit** you." }, second: { ex: "If we **had** time, we'**d visit** you." } }
       - type: bullets
         items:
           - level: B1
             text:
               en: "The speaker chooses by how likely the situation seems."
-              es: "El hablante elige según lo probable que le parece la situación."
 
-  - title: { en: Typical errors, es: Errores típicos }
+  - title: { en: Typical errors }
     content:
       - type: errors
-        audience: true
         rows:
-          - { level: A2, for: [es], wrong: "If it will rain, we'll stay in.", right: "If it **rains**, we'll stay in.", rule: { es: "tras if va presente simple" } }
-          - { for: [es], level: B1, wrong: "If I would have time, I would help.", right: "If I **had** time, I'd help.", rule: { es: "tras if va pasado simple" } }
-          - { level: B1, wrong: "If I am you, I would go.", right: "If I **were** you, I'd go.", rule: { en: advice uses If I were you, es: el consejo usa If I were you } }
-          - { level: B1, wrong: "If I win the lottery, I would buy a house.", right: "If I **won** the lottery, I **would** buy a house.", rule: { en: "match the pair: present + will or past + would", es: "empareja bien: presente + will o pasado + would" } }
-          - { level: A2, wrong: If it rains we'll stay in., right: "**If it rains,** we'll stay in.", rule: { en: comma after an if-clause at the start, es: coma tras la oración con if al principio } }
-          - { level: B1, wrong: "Unless you don't hurry, you'll miss the bus.", right: "**Unless** you hurry, you'll miss the bus.", rule: { en: unless already means if … not, es: unless ya significa if … not } }
-          - { level: A2, for: [en], wrong: "If she come, I'll call you.", right: "If she **comes**, I'll call you.", rule: { en: she / he / it → V-s in the if-clause } }
+          - { level: B1, wrong: "If I am you, I would go.", right: "If I **were** you, I'd go.", rule: { en: advice uses If I were you } }
+          - { level: B1, wrong: "If I win the lottery, I would buy a house.", right: "If I **won** the lottery, I **would** buy a house.", rule: { en: "match the pair: present + will or past + would" } }
+          - { level: A2, wrong: If it rains we'll stay in., right: "**If it rains,** we'll stay in.", rule: { en: comma after an if-clause at the start } }
+          - { level: B1, wrong: "Unless you don't hurry, you'll miss the bus.", right: "**Unless** you hurry, you'll miss the bus.", rule: { en: unless already means if … not } }
+          - { level: A2, wrong: "If she come, I'll call you.", right: "If she **comes**, I'll call you.", rule: { en: she / he / it → V-s in the if-clause } }

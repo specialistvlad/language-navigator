@@ -86,7 +86,9 @@ export function controls(o: ControlsOptions): string {
   const t = ui(o.explain);
   // One explanation language leaves nothing to switch.
   const parts = o.read.length > 1 ? [linkSeg(t.read, o.read)] : [];
-  if (o.level === true) parts.push(seg(t.level, LEVELS.map((l) => `<button type="button" data-set-level="${l}">${l}</button>`).join("")));
+  if (o.level === true) {
+    parts.push(seg(t.level, LEVELS.map((l) => `<button type="button" class="lvl-${l}" data-set-level="${l}">${l}</button>`).join("")));
+  }
   if (o.view === true) {
     parts.push(
       seg(

@@ -5,66 +5,61 @@ kind: grammar
 tags: [nouns, possession, apostrophe]
 concepts: [possession]
 related: [en.nouns-determiners.plurals, en.pronouns.personal-pronouns, en.nouns-determiners.articles-a-an-the, en.nouns-determiners.demonstratives-this-that]
-status: { en: draft, es: draft }
+status: { en: draft }
 
-title: { en: "Possessive 's", es: "El posesivo 's" }
+title: { en: "Possessive 's" }
 summary:
   en: "Noun + 's shows who something belongs to, and ' alone follows a plural in -s. The owner comes first and the thing after it takes no article: **Ana's** car, my **parents'** house, the **children's** room."
-  es: "Sustantivo + 's indica de quién es algo, y detrás de un plural en -s basta el apóstrofo. El inglés pone primero al poseedor con 's, sin of y sin artículo: *el coche de Ana* es **Ana's** car."
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: point, label: { en: Point, es: Punto } }
-        - { key: rule, label: { en: Rule, es: Regla } }
-        - { key: example, label: { en: Example, es: Ejemplo } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
+        - { key: example, label: { en: Example } }
       rows:
-        - { level: A1, point: { en: singular noun, es: sustantivo singular }, rule: "+ 's", example: "**Ana's** car", tr: { es: el coche de Ana } }
-        - { level: A1, point: { en: plural in -s, es: plural en -s }, rule: "+ '", example: "my **parents**' house", tr: { es: la casa de mis padres } }
-        - { level: A1, point: { en: irregular plural, es: plural irregular }, rule: "+ 's", example: "the **children's** room", tr: { es: la habitación de los niños } }
-        - { level: A1, point: { en: two owners, es: dos poseedores }, rule: { en: "'s on the last name", es: "'s en el último nombre" }, example: "Tom and **Ana's** flat", tr: { es: el piso de Tom y Ana } }
-        - { level: A1, point: { en: word order, es: orden }, rule: { en: "owner first, thing after, no article", es: "primero el poseedor, después la cosa, sin artículo" }, example: "**my sister's** phone", tr: { es: el móvil de mi hermana } }
-        - { level: A1, point: { en: "'s or of", es: "'s o of" }, rule: { en: "'s for people and animals, of for things", es: "'s para personas y animales, of para cosas" }, example: "the end **of** the film", tr: { es: el final de la película } }
-        - { level: A1, point: Whose, rule: { en: "asks about the owner", es: "pregunta por el dueño" }, example: "**Whose** bag is this?", tr: { es: ¿De quién es esta bolsa? } }
-        - { level: A1, point: "Who's", rule: { en: "= who is, not the owner", es: "= who is, no el poseedor" }, example: "**Whose** bag? ≠ **Who's** there?", tr: { es: ¿De quién es la bolsa? ≠ ¿Quién está ahí? } }
-        - { level: A1, for: [es], point: { es: "de + persona" }, rule: { es: "poseedor + 's, sin of ni the" }, example: "**Ana's** car", tr: { es: el coche de Ana } }
+        - { level: A1, point: { en: singular noun }, rule: "+ 's", example: "**Ana's** car" }
+        - { level: A1, point: { en: plural in -s }, rule: "+ '", example: "my **parents**' house" }
+        - { level: A1, point: { en: irregular plural }, rule: "+ 's", example: "the **children's** room" }
+        - { level: A1, point: { en: two owners }, rule: { en: "'s on the last name" }, example: "Tom and **Ana's** flat" }
+        - { level: A1, point: { en: word order }, rule: { en: "owner first, thing after, no article" }, example: "**my sister's** phone" }
+        - { level: A1, point: { en: "'s or of" }, rule: { en: "'s for people and animals, of for things" }, example: "the end **of** the film" }
+        - { level: A1, point: Whose, rule: { en: "asks about the owner" }, example: "**Whose** bag is this?" }
+        - { level: A1, point: "Who's", rule: { en: "= who is, not the owner" }, example: "**Whose** bag? ≠ **Who's** there?" }
 
 sections:
-  - title: { en: "Form: 's and '", es: "Forma: 's y '" }
+  - title: { en: "Form: 's and '" }
     content:
       - type: table
         columns:
-          - { key: owner, label: { en: Owner, es: Poseedor } }
-          - { key: form, label: { en: Add, es: Se añade } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: owner, label: { en: Owner } }
+          - { key: form, label: { en: Add } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A1, owner: { en: singular noun, es: sustantivo singular }, form: "'s", example: "**Ana's** car", tr: { es: el coche de Ana } }
-          - { level: A1, owner: { en: plural ending in -s, es: plural acabado en -s }, form: "'", example: "my **parents**' house", tr: { es: la casa de mis padres } }
-          - { level: A1, owner: { en: "irregular plural: children, men, women, people", es: "plural irregular: children, men, women, people" }, form: "'s", example: "the **children's** room", tr: { es: la habitación de los niños } }
-          - { level: A1, owner: { en: name ending in -s, es: nombre acabado en -s }, form: "'s / '", example: "**James's** / **James**' bike", tr: { es: la bici de James } }
-          - { level: A1, owner: { en: two owners of one thing, es: dos poseedores de una cosa }, form: { en: "'s on the last name", es: "'s en el último nombre" }, example: "Tom and **Ana's** flat", tr: { es: el piso de Tom y Ana } }
+          - { level: A1, owner: { en: singular noun }, form: "'s", example: "**Ana's** car" }
+          - { level: A1, owner: { en: plural ending in -s }, form: "'", example: "my **parents**' house" }
+          - { level: A1, owner: { en: "irregular plural: children, men, women, people" }, form: "'s", example: "the **children's** room" }
+          - { level: A1, owner: { en: name ending in -s }, form: "'s / '", example: "**James's** / **James**' bike" }
+          - { level: A1, owner: { en: two owners of one thing }, form: { en: "'s on the last name" }, example: "Tom and **Ana's** flat" }
       - type: bullets
         items:
           - level: A1
             text:
               en: "The owner comes first, then the thing: **my sister's** phone."
-              es: "Primero va el poseedor y después la cosa: *el móvil de mi hermana* → **my sister's** phone."
           - level: A1
             text:
               en: "The thing after 's takes no article: Ana's **car**."
-              es: "La cosa que va detrás de 's no lleva artículo: Ana's **car**."
           - level: A1
             text:
               en: "'s also shortens is and has: **Ana's** tired = Ana is tired."
-              es: "'s también es la forma corta de is y has: **Ana's** tired = Ana is tired."
 
-  - title: { en: "Pronunciation: 's", es: "Pronunciación: 's" }
+  - title: { en: "Pronunciation: 's" }
     content:
       - type: table
         columns:
-          - { key: sound, label: { en: Sound, es: Sonido } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: sound, label: { en: Sound } }
+          - { key: example, label: { en: Example } }
         rows:
           - { level: A1, sound: /s/, example: "Mark's /mɑːks/" }
           - { level: A1, sound: /z/, example: "Ana's /ˈænəz/" }
@@ -74,54 +69,45 @@ sections:
           - level: A1
             text:
               en: "'s follows the sound rules of the plural -s. See [Plurals](id:en.nouns-determiners.plurals)."
-              es: "'s sigue las reglas de sonido de la -s del plural. Ver [El plural](id:en.nouns-determiners.plurals)."
           - level: A1
             text:
               en: "' after a plural -s adds no sound: parents' /ˈpeərənts/."
-              es: "' detrás de la -s del plural no añade sonido: parents' /ˈpeərənts/."
 
-  - title: { en: Use, es: Uso }
+  - title: { en: Use }
     content:
       - type: table
         columns:
-          - { key: use, label: { en: Use, es: Uso } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: use, label: { en: Use } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: People, es: Personas }, example: "my **brother's** job", tr: { es: el trabajo de mi hermano } }
-          - { level: A1, use: { en: Animals, es: Animales }, example: "the **dog's** bed", tr: { es: la cama del perro } }
-          - { level: A1, use: { en: "Someone's home or shop, without the noun", es: "La casa o la tienda de alguien, sin el sustantivo" }, example: "at my **mum's** / at the **doctor's**", tr: { es: en casa de mi madre / en el médico } }
-          - { level: A1, use: { en: "Answer to Whose…?", es: "Respuesta a Whose…?" }, example: "Whose bag is this? — It's **Ana's**.", tr: { es: ¿De quién es esta bolsa? — Es de Ana. } }
+          - { level: A1, use: { en: People }, example: "my **brother's** job" }
+          - { level: A1, use: { en: Animals }, example: "the **dog's** bed" }
+          - { level: A1, use: { en: "Someone's home or shop, without the noun" }, example: "at my **mum's** / at the **doctor's**" }
+          - { level: A1, use: { en: "Answer to Whose…?" }, example: "Whose bag is this? — It's **Ana's**." }
       - type: bullets
         items:
           - level: A1
             text:
               en: "Ask about the owner with **Whose** + noun: **Whose** bag is this?"
-              es: "Para preguntar por el dueño: **Whose** + sustantivo: **Whose** bag is this?"
           - level: A1
             text:
               en: "my, your, his… and mine, yours, his…: see [Personal pronouns](id:en.pronouns.personal-pronouns)."
-              es: "my, your, his… y mine, yours, his…: ver [Pronombres personales](id:en.pronouns.personal-pronouns)."
 
-  - title: { en: "Compare: 's and of", es: "Comparación: 's y of" }
+  - title: { en: "Compare: 's and of" }
     content:
       - type: table
         columns:
           - { key: s, label: "'s" }
           - { key: of, label: of }
         rows:
-          - { level: A1, s: { en: people and animals, es: personas y animales }, of: { en: things and places, es: cosas y lugares } }
-          - { level: A1, s: { ex: "my **friend's** name", tr: { es: el nombre de mi amigo } }, of: { ex: "the name **of** the street", tr: { es: el nombre de la calle } } }
-          - { level: A1, s: { ex: "the **cat's** food", tr: { es: la comida del gato } }, of: { ex: "the end **of** the film", tr: { es: el final de la película } } }
+          - { level: A1, s: { en: people and animals }, of: { en: things and places } }
+          - { level: A1, s: { ex: "my **friend's** name" }, of: { ex: "the name **of** the street" } }
+          - { level: A1, s: { ex: "the **cat's** food" }, of: { ex: "the end **of** the film" } }
 
-  - title: { en: Typical errors, es: Errores típicos }
+  - title: { en: Typical errors }
     content:
       - type: errors
-        audience: true
         rows:
-          - { level: A1, for: [es], wrong: the car of Ana, right: "**Ana's** car", rule: { es: "persona + 's + cosa" } }
-          - { level: A1, for: [es], wrong: the house of my parents, right: "my **parents**' house", rule: { es: "persona + 's / ' + cosa" } }
-          - { level: A1, for: [es], wrong: the Ana's car, right: "**Ana's** car", rule: { es: "nombre + 's, sin the" } }
-          - { level: A1, for: [es], wrong: Ana car, right: "**Ana's** car", rule: { es: "el poseedor lleva 's" } }
-          - { level: A1, wrong: my parents's house, right: "my **parents**' house", rule: { en: "plural in -s → + '", es: "plural en -s → + '" } }
-          - { level: A1, wrong: the childrens' room, right: "the **children's** room", rule: { en: "irregular plural → + 's", es: "plural irregular → + 's" } }
-          - { level: A1, wrong: Who's bag is this?, right: "**Whose** bag is this?", rule: { en: "who's = who is", es: "who's = who is" } }
+          - { level: A1, wrong: my parents's house, right: "my **parents**' house", rule: { en: "plural in -s → + '" } }
+          - { level: A1, wrong: the childrens' room, right: "the **children's** room", rule: { en: "irregular plural → + 's" } }
+          - { level: A1, wrong: Who's bag is this?, right: "**Whose** bag is this?", rule: { en: "who's = who is" } }

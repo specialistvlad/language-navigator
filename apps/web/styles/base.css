@@ -6,6 +6,11 @@
   --surface-2: #f0eee9;
   --text: #1d1d1f;
   --muted: #6b6b70;
+  /* Level tone: every level colour is oklch(--level-l --level-c hue), its hue from levels.yaml, on a
+     tint of --level-mix of it */
+  --level-l: 47%;
+  --level-c: 0.14;
+  --level-mix: 18%;
   --border: #e2dfd8;
   --accent: #2f5bd3;
   --accent-soft: #e8eefc;
@@ -28,6 +33,9 @@
     --surface-2: #26262a;
     --text: #ececef;
     --muted: #9a9aa2;
+    --level-l: 80%;
+    --level-c: 0.13;
+    --level-mix: 22%;
     --border: #33333a;
     --accent: #7ea2ff;
     --accent-soft: #1f2a48;
@@ -48,6 +56,9 @@
   --surface-2: #26262a;
   --text: #ececef;
   --muted: #9a9aa2;
+  --level-l: 80%;
+  --level-c: 0.13;
+  --level-mix: 22%;
   --border: #33333a;
   --accent: #7ea2ff;
   --accent-soft: #1f2a48;

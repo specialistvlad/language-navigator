@@ -5,46 +5,42 @@ kind: foundations
 tags: [time, clock, hours]
 concepts: [telling-time]
 related: [en.foundations.numbers, en.foundations.days-months-dates, en.prepositions.time-in-on-at]
-status: { en: draft, es: draft }
+status: { en: draft }
 
-title: { en: Telling the Time, es: La hora }
+title: { en: Telling the Time }
 summary:
   en: "How to ask the time and say it in numbers, and with past and to. Say the hour first, then the minutes: 7:05 is **seven oh five**, and o'clock follows only a full hour: **seven o'clock**."
-  es: "Cómo preguntar la hora y decirla con números y con past y to. La hora se dice con It's y los números, sin artículo: **It's** seven thirty (*son las siete y media*)."
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: point, label: { en: Point, es: Punto } }
-        - { key: rule, label: { en: Rule, es: Regla } }
-        - { key: example, label: { en: Example, es: Ejemplo } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
+        - { key: example, label: { en: Example } }
       rows:
-        - { level: A0, point: { en: Asking, es: Preguntar }, rule: { en: "ask What time is it? and answer with It's + the time", es: "se pregunta What time is it? y se responde con It's + la hora" }, example: "**It's** seven thirty.", tr: { es: Son las siete y media. } }
-        - { level: A0, point: { en: Numbers, es: Números }, rule: { en: "say the hour, then the minutes; 1–9 minutes take oh", es: "se dice la hora y después los minutos; de 1 a 9 minutos se añade oh" }, example: "7:05 → seven **oh** five" }
-        - { level: A0, point: o'clock, rule: { en: "o'clock goes only with full hours", es: "o'clock va solo con horas en punto" }, example: "seven **o'clock**" }
-        - { level: A0, for: [es], point: { es: Sin artículo }, rule: { es: "la hora es *time*, y se dice sin *the*" }, example: "What **time** is it? / It's **three**.", tr: { es: ¿Qué hora es? / Son las tres. } }
-        - { level: A1, point: past, rule: { en: "minutes 1–30: past the hour", es: "minutos 1–30: past la hora" }, example: "(a) **quarter past** three", tr: { es: las tres y cuarto } }
-        - { level: A1, point: to, rule: { en: "minutes 31–59: to the next hour; say the minutes first", es: "minutos 31–59: to la hora siguiente; primero los minutos" }, example: "twenty **to** four", tr: { es: las cuatro menos veinte } }
-        - { level: A1, point: minutes, rule: { en: "minutes that are not 5, 10, 15… add minutes", es: "los minutos que no son 5, 10, 15… llevan minutes" }, example: "three **minutes** past six" }
-        - { level: A1, point: a.m. / p.m., rule: { en: "a.m. is midnight to midday; p.m. is midday to midnight", es: "a.m. es de medianoche a mediodía; p.m. es de mediodía a medianoche" }, example: "seven **a.m.** / three **p.m.**" }
-        - { level: A1, point: { en: 24 hours, es: 24 horas }, rule: { en: "timetables use the 24-hour clock", es: "los horarios usan el reloj de 24 horas" }, example: "19:30 → nineteen thirty" }
-        - { level: A1, point: US, rule: { en: "after for past, of for to", es: "after por past, of por to" }, example: "a quarter **after** three" }
+        - { level: A0, point: { en: Asking }, rule: { en: "ask What time is it? and answer with It's + the time" }, example: "**It's** seven thirty." }
+        - { level: A0, point: { en: Numbers }, rule: { en: "say the hour, then the minutes; 1–9 minutes take oh" }, example: "7:05 → seven **oh** five" }
+        - { level: A0, point: o'clock, rule: { en: "o'clock goes only with full hours" }, example: "seven **o'clock**" }
+        - { level: A1, point: past, rule: { en: "minutes 1–30: past the hour" }, example: "(a) **quarter past** three" }
+        - { level: A1, point: to, rule: { en: "minutes 31–59: to the next hour; say the minutes first" }, example: "twenty **to** four" }
+        - { level: A1, point: minutes, rule: { en: "minutes that are not 5, 10, 15… add minutes" }, example: "three **minutes** past six" }
+        - { level: A1, point: a.m. / p.m., rule: { en: "a.m. is midnight to midday; p.m. is midday to midnight" }, example: "seven **a.m.** / three **p.m.**" }
+        - { level: A1, point: { en: 24 hours }, rule: { en: "timetables use the 24-hour clock" }, example: "19:30 → nineteen thirty" }
+        - { level: A1, point: US, rule: { en: "after for past, of for to" }, example: "a quarter **after** three" }
 
 sections:
-  - title: { en: The time in numbers, es: La hora con números }
+  - title: { en: The time in numbers }
     content:
       - type: text
         level: A0
         text:
           en: "Ask **What time is it?** or **What's the time?** Answer with **It's** + the time."
-          es: "Se pregunta **What time is it?** o **What's the time?** Se responde con **It's** + la hora."
         ex: "It's seven thirty."
-        tr: { es: Son las siete y media. }
       - type: table
         columns:
-          - { key: time, label: { en: Time, es: Hora } }
-          - { key: said, label: { en: Said, es: Se dice } }
+          - { key: time, label: { en: Time } }
+          - { key: said, label: { en: Said } }
         rows:
           - { level: A0, time: "7:00", said: "seven **o'clock**" }
           - { level: A0, time: "7:05", said: "seven **oh** five" }
@@ -57,18 +53,16 @@ sections:
           - level: A0
             text:
               en: "Say the hour, then the minutes. 1–9 minutes take *oh*: 7:05 → seven **oh** five."
-              es: "Se dice la hora y después los minutos. De 1 a 9 minutos se añade *oh*: 7:05 → seven **oh** five."
           - level: A0
             text:
               en: "**o'clock** /əˈklɒk/ goes only with full hours: seven o'clock."
-              es: "**o'clock** /əˈklɒk/ va solo con horas en punto: seven o'clock."
 
-  - title: { en: Past and to, es: Past y to }
+  - title: { en: Past and to }
     content:
       - type: table
         columns:
-          - { key: time, label: { en: Time, es: Hora } }
-          - { key: said, label: { en: Said, es: Se dice } }
+          - { key: time, label: { en: Time } }
+          - { key: said, label: { en: Said } }
         rows:
           - { level: A1, time: "3:05", said: "five **past** three" }
           - { level: A1, time: "3:15", said: "(a) **quarter past** three" }
@@ -82,26 +76,22 @@ sections:
           - level: A1
             text:
               en: "Minutes 1–30: **past** the hour. Minutes 31–59: **to** the next hour."
-              es: "Minutos 1–30: **past** la hora. Minutos 31–59: **to** la hora siguiente."
           - level: A1
             text:
               en: "Say the minutes first, then the hour: twenty **to** four."
-              es: "Primero los minutos y después la hora: twenty **to** four."
           - level: A1
             text:
               en: "Minutes that are not 5, 10, 15… add *minutes*: three **minutes** past six."
-              es: "Los minutos que no son 5, 10, 15… llevan *minutes*: three **minutes** past six."
           - level: A1
             text:
               en: "US: *after* for past, *of* for to: a quarter **after** three, ten **of** four."
-              es: "US: *after* por past, *of* por to: a quarter **after** three, ten **of** four."
 
-  - title: { en: Parts of the day, es: Partes del día }
+  - title: { en: Parts of the day }
     content:
       - type: table
         columns:
-          - { key: time, label: { en: Time, es: Hora } }
-          - { key: said, label: { en: Said, es: Se dice } }
+          - { key: time, label: { en: Time } }
+          - { key: said, label: { en: Said } }
         rows:
           - { level: A1, time: "07:00", said: "seven **a.m.** / seven in the **morning**" }
           - { level: A1, time: "12:00", said: "**midday** / twelve **noon**" }
@@ -114,19 +104,12 @@ sections:
           - level: A1
             text:
               en: "**a.m.** = from midnight to midday; **p.m.** = from midday to midnight."
-              es: "**a.m.** = de medianoche a mediodía; **p.m.** = de mediodía a medianoche."
           - level: A1
             text:
               en: "In speech, the 12-hour clock is usual. Timetables use 24 hours: 19:30 = *nineteen thirty*."
-              es: "Al hablar se usa el reloj de 12 horas. Los horarios usan 24 horas: 19:30 = *nineteen thirty*."
 
-  - title: { en: Typical errors, es: Errores típicos }
+  - title: { en: Typical errors }
     content:
       - type: errors
-        audience: true
         rows:
-          - { level: A0, for: [es], wrong: What hour is it?, right: "What **time** is it?", rule: { es: "la hora = *time*" } }
-          - { level: A0, for: [es], wrong: It's the three., right: "It's **three (o'clock)**.", rule: { es: "sin *the*" } }
-          - { level: A0, wrong: seven o'clock fifteen, right: "seven **fifteen**", rule: { en: "o'clock only with full hours", es: "o'clock solo con horas en punto" } }
-          - { for: [es], level: A1, wrong: three and a quarter, right: "(a) **quarter past** three", rule: { es: "y cuarto = quarter past" } }
-          - { for: [es], level: A1, wrong: four less twenty, right: "twenty **to** four", rule: { es: "menos = *to*, los minutos primero" } }
+          - { level: A0, wrong: seven o'clock fifteen, right: "seven **fifteen**", rule: { en: "o'clock only with full hours" } }

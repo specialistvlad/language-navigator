@@ -5,146 +5,129 @@ kind: grammar
 tags: [articles, determiners, nouns]
 concepts: [articles]
 related: [en.nouns-determiners.countable-uncountable, en.nouns-determiners.plurals, en.nouns-determiners.quantifiers-some-any-much-many, en.nouns-determiners.demonstratives-this-that, en.nouns-determiners.possessive-s]
-status: { en: draft, es: draft }
+status: { en: draft }
 
-title: { en: "Articles: a, an, the", es: "Artículos: a, an, the" }
+title: { en: "Articles: a, an, the" }
 summary:
   en: "A and an for one thing, the for a thing both people know, and no article for things in general. The first sound decides a or an (**an** hour, **a** university), and general plurals and uncountable nouns take no article: I like **dogs**."
-  es: "A y an para una cosa, the para algo que los dos conocen y sin artículo para las cosas en general. Al hablar en general, el inglés va sin artículo: *Me gustan los perros* es I like **dogs**."
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: article, label: { en: Article, es: Artículo } }
-        - { key: meaning, label: { en: Meaning, es: Significado } }
-        - { key: example, label: { en: Example, es: Ejemplo } }
+        - { key: article, label: { en: Article } }
+        - { key: meaning, label: { en: Meaning } }
+        - { key: example, label: { en: Example } }
       rows:
-        - { level: A1, article: a / an, meaning: { en: "one, any one", es: "uno, uno cualquiera" }, example: "I need **a** pen.", tr: { es: "Necesito un bolígrafo." } }
-        - { level: A1, article: the, meaning: { en: "the one we both know", es: "el que los dos conocemos" }, example: "Pass me **the** pen.", tr: { es: "Pásame el bolígrafo." } }
-        - { level: A1, article: "—", meaning: { en: "things in general", es: "cosas en general" }, example: "**Pens** are cheap.", tr: { es: "Los bolígrafos son baratos." } }
+        - { level: A1, article: a / an, meaning: { en: "one, any one" }, example: "I need **a** pen." }
+        - { level: A1, article: the, meaning: { en: "the one we both know" }, example: "Pass me **the** pen." }
+        - { level: A1, article: "—", meaning: { en: "things in general" }, example: "**Pens** are cheap." }
 
 sections:
-  - title: { en: Overview, es: Resumen }
+  - title: { en: Overview }
     content:
       - type: bullets
         items:
           - level: A1
             text:
               en: "a / an go only with singular countable nouns. See [Countable and uncountable](id:en.nouns-determiners.countable-uncountable)."
-              es: "a / an van solo con sustantivos contables en singular. Ver [Contables e incontables](id:en.nouns-determiners.countable-uncountable)."
           - level: A1
             text:
               en: "**the** goes with all nouns: singular, plural and uncountable."
-              es: "**the** va con todos los sustantivos: singulares, plurales e incontables."
-          - { level: A1, for: [es], text: { es: "a / an = *un, una*. the = *el, la, los, las*: no cambia con el género ni el número." } }
 
-  - title: { en: "Form: a or an", es: "Forma: a o an" }
+  - title: { en: "Form: a or an" }
     content:
       - type: table
         columns:
-          - { key: before, label: { en: Next word starts with, es: La palabra siguiente empieza con } }
-          - { key: article, label: { en: Article, es: Artículo } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: before, label: { en: Next word starts with } }
+          - { key: article, label: { en: Article } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A1, before: { en: a consonant sound, es: un sonido consonante }, article: a, example: "**a** book / **a** big apple", tr: { es: "un libro / una manzana grande" } }
-          - { level: A1, before: { en: a vowel sound, es: un sonido vocal }, article: an, example: "**an** apple / **an** old book", tr: { es: "una manzana / un libro viejo" } }
+          - { level: A1, before: { en: a consonant sound }, article: a, example: "**a** book / **a** big apple" }
+          - { level: A1, before: { en: a vowel sound }, article: an, example: "**an** apple / **an** old book" }
       - type: bullets
         items:
           - level: A1
             text:
               en: "The first sound decides, not the letter: **an** hour /ˈaʊə/, **a** university /juːnɪˈvɜːsəti/."
-              es: "Decide el primer sonido, no la letra: **an** hour /ˈaʊə/, **a** university /juːnɪˈvɜːsəti/."
           - level: A1
             text:
               en: "The article goes before the adjective, so the adjective decides: **an** old car, **a** new car."
-              es: "El artículo va delante del adjetivo, así que decide el adjetivo: **an** old car, **a** new car."
 
-  - title: { en: "Pronunciation: a, an, the", es: "Pronunciación: a, an, the" }
+  - title: { en: "Pronunciation: a, an, the" }
     content:
       - type: table
         columns:
-          - { key: word, label: { en: Word, es: Palabra } }
-          - { key: before, label: { en: Before, es: Delante de } }
-          - { key: sound, label: { en: Sound, es: Sonido } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: word, label: { en: Word } }
+          - { key: before, label: { en: Before } }
+          - { key: sound, label: { en: Sound } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A1, word: a, before: { en: consonant sound, es: sonido consonante }, sound: /ə/, example: a book /ə ˈbʊk/ }
-          - { level: A1, word: an, before: { en: vowel sound, es: sonido vocal }, sound: /ən/, example: an egg /ən ˈeɡ/ }
-          - { level: A1, word: the, before: { en: consonant sound, es: sonido consonante }, sound: /ðə/, example: the book /ðə ˈbʊk/ }
-          - { level: A1, word: the, before: { en: vowel sound, es: sonido vocal }, sound: /ði/, example: the egg /ði ˈeɡ/ }
+          - { level: A1, word: a, before: { en: consonant sound }, sound: /ə/, example: a book /ə ˈbʊk/ }
+          - { level: A1, word: an, before: { en: vowel sound }, sound: /ən/, example: an egg /ən ˈeɡ/ }
+          - { level: A1, word: the, before: { en: consonant sound }, sound: /ðə/, example: the book /ðə ˈbʊk/ }
+          - { level: A1, word: the, before: { en: vowel sound }, sound: /ði/, example: the egg /ði ˈeɡ/ }
       - type: bullets
         items:
           - level: A1
             text:
               en: "Articles are weak and unstressed: the stress falls on the noun."
-              es: "Los artículos son débiles y sin acento: el acento cae en el sustantivo."
 
-  - title: { en: "Use: a / an", es: "Uso: a / an" }
+  - title: { en: "Use: a / an" }
     content:
       - type: table
         columns:
-          - { key: use, label: { en: Use, es: Uso } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: use, label: { en: Use } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: "one thing, any one", es: "una cosa, una cualquiera" }, example: "I have **a** car.", tr: { es: "Tengo coche." } }
-          - { level: A1, use: { en: "first mention; then the", es: "primera mención; después the" }, example: "There's **a** cat. **The** cat is black.", tr: { es: "Hay un gato. El gato es negro." } }
-          - { level: A1, use: { en: "jobs", es: "profesiones" }, example: "She's **a** doctor.", tr: { es: "Es médica." } }
-          - { level: A1, use: { en: "what something is", es: "qué es algo" }, example: "It's **an** orange.", tr: { es: "Es una naranja." } }
-          - { level: A2, use: { en: "rate: per", es: "proporción: por" }, example: "twice **a** week / £3 **a** kilo", tr: { es: "dos veces por semana / 3 libras el kilo" } }
-          - { level: A2, use: { en: "exclamations with what", es: "exclamaciones con what" }, example: "What **a** nice day!", tr: { es: "¡Qué día tan bonito!" } }
+          - { level: A1, use: { en: "one thing, any one" }, example: "I have **a** car." }
+          - { level: A1, use: { en: "first mention; then the" }, example: "There's **a** cat. **The** cat is black." }
+          - { level: A1, use: { en: "jobs" }, example: "She's **a** doctor." }
+          - { level: A1, use: { en: "what something is" }, example: "It's **an** orange." }
+          - { level: A2, use: { en: "rate: per" }, example: "twice **a** week / £3 **a** kilo" }
+          - { level: A2, use: { en: "exclamations with what" }, example: "What **a** nice day!" }
 
-  - title: { en: "Use: the", es: "Uso: the" }
+  - title: { en: "Use: the" }
     content:
       - type: table
         columns:
-          - { key: use, label: { en: Use, es: Uso } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: use, label: { en: Use } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: "we both know which", es: "los dos sabemos cuál" }, example: "Close **the** door, please.", tr: { es: "Cierra la puerta, por favor." } }
-          - { level: A1, use: { en: "the only one", es: "el único" }, example: "**the** sun / **the** world", tr: { es: "el sol / el mundo" } }
-          - { level: A1, use: { en: "superlatives and ordinals", es: "superlativos y ordinales" }, example: "**the** best / **the** first time", tr: { es: "el mejor / la primera vez" } }
-          - { level: A2, use: { en: "musical instruments", es: "instrumentos musicales" }, example: "She plays **the** piano. (US: often *plays piano*)", tr: { es: "Toca el piano." } }
-          - { level: A2, use: { en: "rivers, seas, oceans, mountain ranges", es: "ríos, mares, océanos, cordilleras" }, example: "**the** Thames / **the** Atlantic / **the** Alps", tr: { es: "el Támesis / el Atlántico / los Alpes" } }
-          - { level: A2, use: { en: "countries with Kingdom, States, Republic or a plural name", es: "países con Kingdom, States, Republic o nombre en plural" }, example: "**the** UK / **the** USA / **the** Netherlands", tr: { es: "el Reino Unido / EE. UU. / los Países Bajos" } }
-          - { level: B1, use: { en: "the + adjective: a group of people", es: "the + adjetivo: un grupo de personas" }, example: "**the** rich / **the** young", tr: { es: "los ricos / los jóvenes" } }
+          - { level: A1, use: { en: "we both know which" }, example: "Close **the** door, please." }
+          - { level: A1, use: { en: "the only one" }, example: "**the** sun / **the** world" }
+          - { level: A1, use: { en: "superlatives and ordinals" }, example: "**the** best / **the** first time" }
+          - { level: A2, use: { en: "musical instruments" }, example: "She plays **the** piano. (US: often *plays piano*)" }
+          - { level: A2, use: { en: "rivers, seas, oceans, mountain ranges" }, example: "**the** Thames / **the** Atlantic / **the** Alps" }
+          - { level: A2, use: { en: "countries with Kingdom, States, Republic or a plural name" }, example: "**the** UK / **the** USA / **the** Netherlands" }
+          - { level: B1, use: { en: "the + adjective: a group of people" }, example: "**the** rich / **the** young" }
 
-  - title: { en: "Use: no article", es: "Uso: sin artículo" }
+  - title: { en: "Use: no article" }
     content:
       - type: table
         columns:
-          - { key: use, label: { en: Use, es: Uso } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: use, label: { en: Use } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: "plural nouns in general", es: "sustantivos plurales en general" }, example: "I like **dogs**.", tr: { es: "Me gustan los perros." } }
-          - { level: A1, use: { en: "uncountable nouns in general", es: "sustantivos incontables en general" }, example: "**Life** is hard. / I love **music**.", tr: { es: "La vida es dura. / Me encanta la música." } }
-          - { level: A1, use: { en: "meals", es: "comidas del día" }, example: "We have **lunch** at two.", tr: { es: "Comemos a las dos." } }
-          - { level: A1, use: { en: "languages, school subjects, sports", es: "idiomas, asignaturas, deportes" }, example: "I speak **Spanish**. / I play **football**.", tr: { es: "Hablo español. / Juego al fútbol." } }
-          - { level: A1, use: { en: "names, most countries and cities", es: "nombres, la mayoría de países y ciudades" }, example: "**Mr Smith** lives in **London**.", tr: { es: "El señor Smith vive en Londres." } }
-          - { level: A2, use: { en: "home, work, school, bed", es: "home, work, school, bed" }, example: "go **home** / at **work** / go to **bed**", tr: { es: "ir a casa / en el trabajo / ir a la cama" } }
-          - { level: A2, use: { en: "transport after by", es: "transporte detrás de by" }, example: "by **bus** / by **train**", tr: { es: "en autobús / en tren" } }
-          - { level: B1, use: { en: "hospital, prison, church, university for their main purpose", es: "hospital, prison, church, university por su función principal" }, example: "He's in **hospital**. (US: in **the** hospital)", tr: { es: "Está ingresado en el hospital." } }
+          - { level: A1, use: { en: "plural nouns in general" }, example: "I like **dogs**." }
+          - { level: A1, use: { en: "uncountable nouns in general" }, example: "**Life** is hard. / I love **music**." }
+          - { level: A1, use: { en: "meals" }, example: "We have **lunch** at two." }
+          - { level: A1, use: { en: "languages, school subjects, sports" }, example: "I speak **Spanish**. / I play **football**." }
+          - { level: A1, use: { en: "names, most countries and cities" }, example: "**Mr Smith** lives in **London**." }
+          - { level: A2, use: { en: "home, work, school, bed" }, example: "go **home** / at **work** / go to **bed**" }
+          - { level: A2, use: { en: "transport after by" }, example: "by **bus** / by **train**" }
+          - { level: B1, use: { en: "hospital, prison, church, university for their main purpose" }, example: "He's in **hospital**. (US: in **the** hospital)" }
       - type: bullets
         items:
-          - { level: A1, for: [es], text: { es: "Para hablar en general, el español usa artículo y el inglés no: *Me gustan los perros* → I like **dogs**." } }
           - level: B1
             text:
               en: "For the building itself, use the:"
-              es: "Para el edificio en sí, se usa the:"
             ex: "I went to **the** hospital to visit him."
-            tr: { es: "Fui al hospital a visitarlo." }
 
-  - title: { en: Typical errors, es: Errores típicos }
+  - title: { en: Typical errors }
     content:
       - type: errors
-        audience: true
         rows:
-          - { level: A1, wrong: a apple, right: "**an** apple", rule: { en: an before a vowel sound, es: an delante de sonido vocal } }
-          - { level: A1, wrong: an university, right: "**a** university", rule: { en: "university starts with /j/", es: "university empieza por /j/" } }
-          - { level: A1, for: [es], wrong: She is doctor., right: "She's **a** doctor.", rule: { es: "profesiones: a / an" } }
-          - { level: A1, for: [es], wrong: The life is hard., right: "**Life** is hard.", rule: { es: "en general: sin artículo" } }
-          - { level: A1, for: [es], wrong: I like the dogs., right: "I like **dogs**.", rule: { es: "en general: plural sin artículo" } }
-          - { level: A1, for: [es], wrong: I play the football., right: "I play **football**.", rule: { es: "deportes: sin artículo" } }
-          - { level: A1, for: [es], wrong: The Mr Smith is here., right: "**Mr Smith** is here.", rule: { es: "nombres y títulos: sin artículo" } }
-          - { for: [es], level: A2, wrong: I go to the home., right: "I go **home**.", rule: { es: "go home: sin to y sin the" } }
-          - { level: A1, for: [en], wrong: I live in the Spain., right: "I live in **Spain**.", rule: { en: "most countries: no article" } }
+          - { level: A1, wrong: a apple, right: "**an** apple", rule: { en: an before a vowel sound } }
+          - { level: A1, wrong: an university, right: "**a** university", rule: { en: "university starts with /j/" } }
+          - { level: A1, wrong: I live in the Spain., right: "I live in **Spain**.", rule: { en: "most countries: no article" } }

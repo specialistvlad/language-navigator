@@ -22,13 +22,20 @@ export async function clientJs(): Promise<string> {
 }
 
 // Everything about levels that depends on the scale in languages/levels.yaml: each level's colour,
-// defined once per theme, and the level filter. An element's data-level is its lowest level; it
+// its hue from levels.yaml in the theme's tone (--level-l, --level-c in base.css), the level switcher
+// tinted from the lowest level up to the chosen one, and the level filter. An element's data-level is its lowest level; it
 // hides while the filter (data-level on <html>) sits below it. The rail keeps its entries and greys
 // them out; a view whose content all sits above the filter shows its note instead.
 export function levelsCss(): string {
   const codes = LEVEL_INFO.map((l) => l.code);
-  const vars = (theme: "light" | "dark"): string => LEVEL_INFO.map((l) => `--lvl-${l.code}: ${l.color[theme]};`).join(" ");
-  const colours = codes.map((code) => `.lvl-${code} { --lvl: var(--lvl-${code}); }`);
+  const colours = LEVEL_INFO.map((l) => `.lvl-${l.code} { --lvl: oklch(var(--level-l) var(--level-c) ${l.hue}); }`);
+  const switcher = codes.map(
+    (code, i) =>
+      `html[data-level="${code}"] .seg :is(${codes
+        .slice(0, i + 1)
+        .map((c) => `[data-set-level="${c}"]`)
+        .join(", ")}) { background: var(--level-tint); }`,
+  );
   const filter = codes.flatMap((code, i) => {
     const above = codes.slice(i + 1).map((c) => `[data-level="${c}"]`);
     if (above.length === 0) return [];
@@ -44,13 +51,5 @@ export function levelsCss(): string {
       `${at} .filter-empty${needs} { display: block; }`,
     ];
   });
-  return (
-    [
-      `:root { ${vars("light")} }`,
-      `@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { ${vars("dark")} } }`,
-      `:root[data-theme="dark"] { ${vars("dark")} }`,
-      ...colours,
-      ...filter,
-    ].join("\n") + "\n"
-  );
+  return [...colours, ...switcher, ...filter].join("\n") + "\n";
 }

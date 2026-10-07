@@ -18,7 +18,7 @@
           "code",
           "name",
           "description",
-          "color"
+          "hue"
         ],
         "properties": {
           "code": {
@@ -30,21 +30,11 @@
           "description": {
             "$ref": "#/definitions/localized"
           },
-          "color": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "light",
-              "dark"
-            ],
-            "properties": {
-              "light": {
-                "$ref": "#/definitions/color"
-              },
-              "dark": {
-                "$ref": "#/definitions/color"
-              }
-            }
+          "hue": {
+            "description": "The level's hue on the OKLCH colour wheel, in degrees; the theme sets lightness and chroma.",
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMaximum": 360
           }
         }
       }
@@ -69,10 +59,6 @@
           "minLength": 1
         }
       }
-    },
-    "color": {
-      "type": "string",
-      "pattern": "^#[0-9a-f]{6}$"
     },
     "level": {
       "enum": [

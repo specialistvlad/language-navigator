@@ -84,13 +84,16 @@
 
 /* A level badge is one pill, (A1), or two joined halves, (A1][B1): the rounded badge clips its
    halves, and each half takes its level's colour from --lvl, which levels.css sets once per level:
-   the code in that colour on a clean tint of it over the surface colour. --badge-pad sizes the halves. */
+   the code in that colour on a light tint of it (--level-tint). --badge-pad sizes the halves. */
+[class*="lvl-"] {
+  --level-tint: color-mix(in oklch, var(--lvl) var(--level-mix), var(--surface));
+}
 .lvl {
   margin-left: 8px;
 }
 .lvl > .half {
   padding: var(--badge-pad, 1px 7px);
-  background: color-mix(in oklch, var(--lvl) 22%, var(--surface));
+  background: var(--level-tint);
   color: var(--lvl);
 }
 .blk-level {

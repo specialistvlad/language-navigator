@@ -40,7 +40,7 @@ languages/
 | File | Schema | Holds |
 |---|---|---|
 | `site.yaml` | `schema/site.schema.json` | product name, URLs, explanation languages with their names and `enabled` switch |
-| `levels.yaml` | `schema/levels.schema.json` | the level scale: code, name, description, colour per level |
+| `levels.yaml` | `schema/levels.schema.json` | the level scale: code, name, description, hue per level |
 | `interface.yaml` | `schema/interface.schema.json` | interface wording by key, per explanation language; block headings and column titles the generator writes |
 | `curriculum.yaml` | `schema/curriculum.schema.json` | languages (with an `enabled` switch) → sections → topics (slug, optional title, levels of a planned topic) |
 | `concepts.yaml` | `schema/concepts.schema.json` | concept key → title, description |
@@ -86,10 +86,15 @@ section in the menu.
 
 **Levels on the page.**
 
+- Each level has a colour, and the levels run through the rainbow, lowest first: A0 red, A1
+  orange, A2 yellow, B1 green, B2 blue, C1 indigo, C2 violet. `levels.yaml` gives each level its
+  hue; the theme gives every level the same tone, deeper in the light theme and brighter in the dark
+  one, so a level keeps its colour in both. A level's code reads on a light tint of its colour at a
+  contrast of at least 4.5:1 in both themes (`npm run e2e` measures it).
 - A badge for one level is one pill, (A1). A badge for a range joins two halves, (A1][B1): the
-  lowest level on the left, the highest on the right, each in its own level's colour. `levels.yaml`
-  gives each level one colour per theme; every badge shows the level code in that colour on a light
-  tint of it.
+  lowest level on the left, the highest on the right, each in its own level's colour.
+- The level switcher writes each code in its level's colour and tints the levels from the lowest up
+  to the chosen one: the levels the page shows.
 - The topic title, section headings, the rail and the menu show their range. A block shows its
   range when it starts above its section; a leaf shows its level when it sits above its block's
   lowest level. A topic at a single level shows its level once, in the header.

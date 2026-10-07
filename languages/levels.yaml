@@ -1,46 +1,42 @@
 # yaml-language-server: $schema=schema/levels.schema.json
 # The level scale, lowest first. Every app names, describes and colours levels from this file.
+# A level's colour is its hue on the OKLCH colour wheel: the levels run through the rainbow, red to
+# violet. The tone (lightness and chroma) belongs to the theme (apps/web/styles/base.css), so a level
+# keeps its hue in the light and the dark theme.
 
 levels:
   - code: A0
-    name: { en: Starter, es: Inicial }
+    name: { en: Starter }
     description:
       en: recognise letters, numbers and a few fixed phrases
-      es: reconoce letras, números y unas pocas frases hechas
-    color: { light: "#6b6b70", dark: "#9a9aa2" }
+    hue: 25 # red
   - code: A1
-    name: { en: Beginner, es: Principiante }
+    name: { en: Beginner }
     description:
       en: introduce themselves, ask and answer simple everyday questions
-      es: se presenta y hace y responde preguntas sencillas del día a día
-    color: { light: "#1f8a4c", dark: "#5cc98a" }
+    hue: 60 # orange
   - code: A2
-    name: { en: Elementary, es: Elemental }
+    name: { en: Elementary }
     description:
       en: describe routines, past events and immediate needs
-      es: describe rutinas, hechos pasados y necesidades inmediatas
-    color: { light: "#2f5bd3", dark: "#7ea2ff" }
+    hue: 95 # yellow
   - code: B1
-    name: { en: Intermediate, es: Intermedio }
+    name: { en: Intermediate }
     description:
       en: handle travel situations, describe experiences, give reasons and opinions
-      es: se desenvuelve en viajes, describe experiencias y da razones y opiniones
-    color: { light: "#7b3fc4", dark: "#b88cff" }
+    hue: 150 # green
   - code: B2
-    name: { en: Upper intermediate, es: Intermedio alto }
+    name: { en: Upper intermediate }
     description:
       en: follow complex texts, talk fluently with native speakers and argue a point of view
-      es: sigue textos complejos, habla con fluidez con nativos y defiende un punto de vista
-    color: { light: "#b5530f", dark: "#ff9f5a" }
+    hue: 235 # blue
   - code: C1
-    name: { en: Advanced, es: Avanzado }
+    name: { en: Advanced }
     description:
       en: understand long, demanding texts and use the language flexibly at work and in study
-      es: entiende textos largos y exigentes y usa el idioma con flexibilidad en el trabajo y los estudios
-    color: { light: "#c0264d", dark: "#ff7a9a" }
+    hue: 275 # indigo
   - code: C2
-    name: { en: Proficiency, es: Maestría }
+    name: { en: Proficiency }
     description:
       en: understand virtually everything and express fine shades of meaning
-      es: entiende prácticamente todo y expresa matices sutiles de significado
-    color: { light: "#0f7f86", dark: "#4fd1d9" }
+    hue: 315 # violet

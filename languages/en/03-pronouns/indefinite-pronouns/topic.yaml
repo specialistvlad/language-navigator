@@ -5,94 +5,86 @@ kind: grammar
 tags: [pronouns, indefinite, some, any, no, every]
 concepts: [indefinite-pronouns]
 related: [en.nouns-determiners.quantifiers-some-any-much-many, en.pronouns.personal-pronouns]
-status: { en: draft, es: draft }
+status: { en: draft }
 
-title: { en: Indefinite Pronouns, es: Pronombres indefinidos }
+title: { en: Indefinite Pronouns }
 summary:
   en: "Somebody, anything, nowhere and everyone name unknown or general people, things and places, in four families: some-, any-, no- and every-. English uses one negative word per clause: I don't know **anything**, or I know **nothing**."
-  es: "Somebody, anything, nowhere y everyone nombran personas, cosas y lugares sin concretar, en cuatro familias: some-, any-, no- y every-. La frase lleva una sola palabra negativa: I don't know **anything** (*no sé nada*), I know **nothing**."
 
 cheatsheet:
   content:
     - type: table
       columns:
-        - { key: start, label: { en: Start, es: Inicio } }
-        - { key: people, label: { en: People, es: Personas } }
-        - { key: things, label: { en: Things, es: Cosas } }
-        - { key: places, label: { en: Places, es: Lugares } }
+        - { key: start, label: { en: Start } }
+        - { key: people, label: { en: People } }
+        - { key: things, label: { en: Things } }
+        - { key: places, label: { en: Places } }
       rows:
         - level: A2
           start: some-
-          people: { ex: "**some**body / **some**one", tr: { es: alguien } }
-          things: { ex: "**some**thing", tr: { es: algo } }
-          places: { ex: "**some**where", tr: { es: en algún sitio } }
+          people: { ex: "**some**body / **some**one" }
+          things: { ex: "**some**thing" }
+          places: { ex: "**some**where" }
         - level: A2
           start: any-
-          people: { ex: "**any**body / **any**one", tr: { es: alguien / nadie } }
-          things: { ex: "**any**thing", tr: { es: algo / nada } }
-          places: { ex: "**any**where", tr: { es: en algún sitio / en ningún sitio } }
+          people: { ex: "**any**body / **any**one" }
+          things: { ex: "**any**thing" }
+          places: { ex: "**any**where" }
         - level: A2
           start: no-
-          people: { ex: "**no**body / **no** one", tr: { es: nadie } }
-          things: { ex: "**no**thing", tr: { es: nada } }
-          places: { ex: "**no**where", tr: { es: en ningún sitio } }
+          people: { ex: "**no**body / **no** one" }
+          things: { ex: "**no**thing" }
+          places: { ex: "**no**where" }
         - level: A2
           start: every-
-          people: { ex: "**every**body / **every**one", tr: { es: todo el mundo } }
-          things: { ex: "**every**thing", tr: { es: todo } }
-          places: { ex: "**every**where", tr: { es: en todas partes } }
+          people: { ex: "**every**body / **every**one" }
+          things: { ex: "**every**thing" }
+          places: { ex: "**every**where" }
 
 sections:
-  - title: { en: Overview, es: Resumen }
+  - title: { en: Overview }
     content:
       - type: bullets
         items:
           - level: A2
             text:
               en: "-body and -one mean the same: somebody = someone."
-              es: "-body y -one significan lo mismo: somebody = someone."
           - level: A2
             text:
               en: "**no one** is two words; the others are one word."
-              es: "**no one** se escribe separado; los demás, en una sola palabra."
           - level: A2
             text:
               en: "some-, any- and no- follow the rules of some, any and no: see [Quantifiers](id:en.nouns-determiners.quantifiers-some-any-much-many)."
-              es: "some-, any- y no- siguen las reglas de some, any y no: ver [Cuantificadores](id:en.nouns-determiners.quantifiers-some-any-much-many)."
 
-  - title: { en: "Form: verb and word order", es: "Forma: verbo y orden" }
+  - title: { en: "Form: verb and word order" }
     content:
       - type: text
         level: A2
         text:
           en: "Indefinite pronouns take a singular verb."
-          es: "Los pronombres indefinidos llevan el verbo en singular."
       - type: table
         columns:
-          - { key: pronoun, label: { en: Pronoun, es: Pronombre } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: pronoun, label: { en: Pronoun } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A2, pronoun: everybody, example: "**Everybody is** here.", tr: { es: Están todos aquí. } }
-          - { level: A2, pronoun: somebody, example: "**Somebody wants** to see you.", tr: { es: Alguien quiere verte. } }
-          - { level: A2, pronoun: nothing, example: "**Nothing is** open on Sundays.", tr: { es: Los domingos no abre nada. } }
+          - { level: A2, pronoun: everybody, example: "**Everybody is** here." }
+          - { level: A2, pronoun: somebody, example: "**Somebody wants** to see you." }
+          - { level: A2, pronoun: nothing, example: "**Nothing is** open on Sundays." }
       - type: bullets
         items:
           - level: A2
             text:
               en: "To refer back to somebody, everyone…, use **they / them / their**: Somebody left **their** bag."
-              es: "Para volver a nombrar a somebody, everyone…, se usa **they / them / their**: Somebody left **their** bag."
           - level: A2
             text:
               en: "Adjectives and **else** go after: something **new**, somebody **else**."
-              es: "Los adjetivos y **else** van detrás: something **new**, somebody **else**."
-          - { level: A2, for: [es], text: { es: "*otra cosa, otra persona, otro sitio* → something **else**, somebody **else**, somewhere **else**." } }
 
-  - title: { en: Pronunciation, es: Pronunciación }
+  - title: { en: Pronunciation }
     content:
       - type: table
         columns:
-          - { key: word, label: { en: Word, es: Palabra } }
-          - { key: ipa, label: { en: Sound, es: Sonido } }
+          - { key: word, label: { en: Word } }
+          - { key: ipa, label: { en: Sound } }
         rows:
           - { level: A2, word: somebody, ipa: /ˈsʌmbədi/ }
           - { level: A2, word: someone, ipa: /ˈsʌmwʌn/ }
@@ -105,55 +97,43 @@ sections:
           - level: A2
             text:
               en: "The stress falls on the first syllable."
-              es: "El acento cae en la primera sílaba."
           - level: A2
             text:
               en: "**any** is /ˈeni/, with the vowel of *bed*."
-              es: "**any** se pronuncia /ˈeni/, con «e»."
           - level: A2
             text:
               en: "**nothing** has /ʌ/, like *some*; **nobody** has /əʊ/, like *no*."
-              es: "**nothing** lleva /ʌ/, como *some*; **nobody** lleva /əʊ/, como *no*."
           - level: A2
             text:
               en: "**every** has two syllables: /ˈevri/."
-              es: "**every** tiene dos sílabas: /ˈevri/."
 
-  - title: { en: Use, es: Uso }
+  - title: { en: Use }
     content:
       - type: table
         columns:
-          - { key: use, label: { en: Use, es: Uso } }
-          - { key: example, label: { en: Example, es: Ejemplo } }
+          - { key: use, label: { en: Use } }
+          - { key: example, label: { en: Example } }
         rows:
-          - { level: A2, use: { en: "affirmative: some-", es: "afirmativa: some-" }, example: "I saw **somebody** in the garden.", tr: { es: Vi a alguien en el jardín. } }
-          - { level: A2, use: { en: "negative: not … any-", es: "negativa: not … any-" }, example: "I didn't see **anybody**.", tr: { es: No vi a nadie. } }
-          - { level: A2, use: { en: "question: any-", es: "pregunta: any-" }, example: "Did **anyone** call?", tr: { es: ¿Ha llamado alguien? } }
-          - { level: A2, use: { en: "offer or request: some-", es: "ofrecimiento o petición: some-" }, example: "Would you like **something** to drink?", tr: { es: ¿Quieres algo de beber? } }
-          - { level: A2, use: { en: "no- + affirmative verb", es: "no- + verbo en afirmativa" }, example: "I saw **nothing**.", tr: { es: No vi nada. } }
-          - { level: A2, use: { en: "one-word answer: no-", es: "respuesta de una palabra: no-" }, example: "What did you buy? — **Nothing**.", tr: { es: ¿Qué compraste? — Nada. } }
-          - { level: A2, use: { en: "every- = all", es: "every- = todos, todo" }, example: "**Everything** is ready.", tr: { es: Todo está listo. } }
+          - { level: A2, use: { en: "affirmative: some-" }, example: "I saw **somebody** in the garden." }
+          - { level: A2, use: { en: "negative: not … any-" }, example: "I didn't see **anybody**." }
+          - { level: A2, use: { en: "question: any-" }, example: "Did **anyone** call?" }
+          - { level: A2, use: { en: "offer or request: some-" }, example: "Would you like **something** to drink?" }
+          - { level: A2, use: { en: "no- + affirmative verb" }, example: "I saw **nothing**." }
+          - { level: A2, use: { en: "one-word answer: no-" }, example: "What did you buy? — **Nothing**." }
+          - { level: A2, use: { en: "every- = all" }, example: "**Everything** is ready." }
       - type: bullets
         items:
           - level: A2
             text:
               en: "One negative word only: **not … anybody** or **nobody**."
-              es: "Una sola negación: **not … anybody** o **nobody**."
           - level: A2
             text:
               en: "A negative subject is **no-**, with an affirmative verb:"
-              es: "Un sujeto negativo es **no-**, con el verbo en afirmativa:"
             ex: "**Nobody** came."
-            tr: { es: No vino nadie. }
 
-  - title: { en: Typical errors, es: Errores típicos }
+  - title: { en: Typical errors }
     content:
       - type: errors
-        audience: true
         rows:
-          - { level: A2, for: [es], wrong: I didn't see nobody., right: "I didn't see **anybody**. / I saw **nobody**.", rule: { es: "una sola negación" } }
-          - { level: A2, for: [es], wrong: Nobody didn't come., right: "**Nobody** came.", rule: { es: "nobody + verbo en afirmativa" } }
-          - { level: A2, wrong: Anybody came., right: "**Nobody** came.", rule: { en: "negative subject → nobody", es: "sujeto negativo → nobody" } }
-          - { level: A2, wrong: Everybody are here., right: "Everybody **is** here.", rule: { en: "singular verb", es: "verbo en singular" } }
-          - { level: A2, for: [es], wrong: I want other thing., right: "I want **something else**.", rule: { es: "*otra cosa* = something else" } }
-          - { level: A2, for: [es], wrong: anything /ˈaniθɪŋ/, right: "anything **/ˈeniθɪŋ/**", rule: { es: "any = /ˈeni/" } }
+          - { level: A2, wrong: Anybody came., right: "**Nobody** came.", rule: { en: "negative subject → nobody" } }
+          - { level: A2, wrong: Everybody are here., right: "Everybody **is** here.", rule: { en: "singular verb" } }

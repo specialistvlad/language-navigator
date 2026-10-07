@@ -43,7 +43,8 @@ Defined in `languages/levels.yaml`, which the site reads.
 | C2 | Proficiency | understand virtually everything and express fine shades of meaning |
 
 Every table row, bullet and paragraph carries its level; sections, topics and menu entries take
-their range from what they hold. A badge shows one level as (A1) and a range as two joined halves,
+their range from what they hold. The levels run through the rainbow, A0 red to C2 violet, in the
+same colours in both themes. A badge shows one level as (A1) and a range as two joined halves,
 (A1][B1), each in its own level's colour. The level filter shows what starts at or below the chosen
 level ([languages/CONVENTIONS.md](languages/CONVENTIONS.md) §3).
 
@@ -79,7 +80,7 @@ language-navigator/
 | `npm run build` | builds the static site into `build/web/`; `SITE_URL=https://… npm run build` sets the public URL; its path prefixes every link |
 | `npm run check` | validates all data against the schemas and conventions |
 | `npm test` | unit tests, and checks on every built page that levels, badges and the filter agree with the data |
-| `npm run e2e` | drives every topic and track page in Chromium at every level and view; `bunx playwright install chromium` installs the browser |
+| `npm run e2e` | drives every topic and track page in Chromium at every level and view, and measures the contrast of every level colour in both themes; `bunx playwright install chromium` installs the browser |
 | `npm run typecheck` | type-checks the code under strict TypeScript (`tsconfig.json`) |
 | `npm run lint` | lints the code with typescript-eslint's strict and stylistic type-checked rules (`eslint.config.js`) |
 | `npm run format` | formats the code with Prettier; `npm run format:check` only reports |
