@@ -104,9 +104,12 @@ export async function build(o: BuildOptions): Promise<number> {
     EXPLAINS.map((e) => ({ label: EXPLAIN[e], href: pathFor(e), on: e === explain }));
   const alternates = (pathFor: (e: Explain) => string) => EXPLAINS.map((e) => ({ lang: e, path: pathFor(e) }));
 
+  // Sidebar head: back to the home page, where the language is chosen.
+  const navHome = (explain: Explain) => `<a class="nav-home" href="${homeUrl()}">${escapeHtml(UI[explain].chooseLanguage)}</a>`;
+
   function trackNav(explain: Explain, lang: CurriculumLanguage, current?: TopicRef): string {
     const t = UI[explain];
-    const out = [`<a class="nav-track" href="${trackUrl(explain, lang)}">${escapeHtml(t.index)}</a>`];
+    const out = [navHome(explain), `<a class="nav-track" href="${trackUrl(explain, lang)}">${escapeHtml(t.index)}</a>`];
     for (const section of lang.sections) {
       out.push(`<h4 data-level="${sectionRange(section).split("-")[0]}">${escapeHtml(section.title[explain])}</h4>`);
       for (const ref of refs.filter((r) => r.lang === lang.code && r.section === section)) {
@@ -305,6 +308,7 @@ export async function build(o: BuildOptions): Promise<number> {
       const groups = { levels: t.levels, progressive: t.progressive, sections: t.sections, topics: t.topics } as const;
       const sheetNav = (current?: Sheet) =>
         [
+          navHome(explain),
           `<a class="nav-track" href="${trackUrl(explain, lang)}">${escapeHtml(t.index)}</a>`,
           ...(Object.keys(groups) as (keyof typeof groups)[]).flatMap((g) => {
             const list = sheets.filter((s) => s.group === g);

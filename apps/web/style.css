@@ -398,6 +398,8 @@ td .lvl, li > .lvl, p > .lvl { margin: 0 6px 0 0; }
 .layout.no-nav { grid-template-columns: minmax(0, 1fr); }
 .layout.no-nav .content { margin: 0 auto; }
 
+.sidebar .nav-home { color: var(--muted); font-size: 13px; }
+.sidebar .nav-home::before { content: "←"; }
 .sidebar .nav-track { font-weight: 650; margin-bottom: 6px; }
 .muted { color: var(--muted); }
 
