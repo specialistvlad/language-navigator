@@ -1,5 +1,5 @@
 // Topic pages: the cheatsheet as section 00, the guide in numbered sections, and the rail beside them.
-import { levelRange, topicTitle, type TopicRef } from "../../../scripts/lib.ts";
+import { type Explain, levelRange, lv, say, topicTitle, type TopicRef } from "../../../scripts/lib.ts";
 import { alternates, readChoices, type Track } from "../context.ts";
 import { type GuideSection, guideSections } from "../guide.ts";
 import { GITHUB_ICON, PRINT_ICON } from "../icons.ts";
@@ -24,6 +24,14 @@ function anchors(parts: GuideSection[]): Map<GuideSection, string> {
   );
 }
 
+// What a view shows when the level filter sits below everything in it: a note and a button that
+// sets the level where the view starts. views.css shows it for its view below that level.
+function filterEmpty(view: "cheatsheet" | "extended", level: string, explain: Explain): string {
+  const note = escapeHtml(say("filterEmpty", explain, { level }));
+  const show = escapeHtml(say("showLevel", explain, { level }));
+  return `<div class="filter-empty ${view}" data-needs="${level}"><p>${note}</p><button type="button" data-set-level="${level}">${show}</button></div>`;
+}
+
 export function topicPages(track: Track): void {
   const { ctx, lang, explain, t, title: trackTitle, written } = track;
   const { o } = ctx;
@@ -32,6 +40,8 @@ export function topicPages(track: Track): void {
     if (topic === null) continue;
     const rctx = { ref, explain, refs: ctx.refs, link: ctx.link };
     const all = guideSections(rctx);
+    const lowest = all.reduce((low, s) => (lv(s.from) < lv(low) ? s.from : low), all[0]?.from ?? "");
+    const empty = filterEmpty("cheatsheet", all[0]?.from ?? lowest, explain) + filterEmpty("extended", lowest, explain);
     const idOf = anchors(all);
     const sections = all
       .map((s) => {
@@ -74,7 +84,7 @@ export function topicPages(track: Track): void {
         }),
         nav: trackNav(ctx.refs, explain, lang, ref),
         rail,
-        main: `<article class="doc${topic.levels.length === 1 ? " one-level" : ""}">${head}${intro}<div class="sections lanes">${sections}</div></article>`,
+        main: `<article class="doc${topic.levels.length === 1 ? " one-level" : ""}">${head}${intro}${empty}<div class="sections lanes">${sections}</div></article>`,
         dev: o.dev,
         siteUrl: o.siteUrl,
       }),

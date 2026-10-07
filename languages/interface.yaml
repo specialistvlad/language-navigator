@@ -30,6 +30,10 @@ text:
 
   # A topic
   onThisPage: { en: On this page, es: En esta página }
+  filterEmpty:
+    en: "No information at the current level. This view starts at {level}: choose {level} or a higher level."
+    es: "No hay información en el nivel actual. Esta vista empieza en {level}: elige {level} o un nivel superior."
+  showLevel: { en: "Show {level}", es: "Ver {level}" }
   upNext: { en: Up next, es: A continuación }
   ruleColumn: { en: Rule, es: Regla }
 
