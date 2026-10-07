@@ -1,0 +1,133 @@
+# yaml-language-server: $schema=../../../schema/topic.schema.json
+id: en.prepositions.time-in-on-at
+lang: en
+kind: grammar
+levels: [A1]
+tags: [prepositions, time, at, on, in]
+concepts: [prepositions-time]
+related: [en.foundations.telling-time, en.foundations.days-months-dates, en.prepositions.place-movement]
+status: { en: draft, es: draft }
+
+title: { en: "Time: In, On, At", es: "Tiempo: in, on, at (time: in, on, at)" }
+summary:
+  en: "Which preposition goes before a time: at 7 o'clock, on Monday, in July."
+  es: "Qué preposición va delante de una hora, un día o un periodo: at 7 o'clock, on Monday, in July."
+
+sections:
+  - title: { en: Overview, es: Resumen }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: prep, label: { en: Preposition, es: Preposición } }
+          - { key: goes, label: { en: Goes with, es: Va con } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { prep: at, goes: { en: "clock times and points in time", es: "horas y momentos concretos" }, example: "**at** 7 o'clock", tr: { es: a las 7 } }
+          - { prep: on, goes: { en: "days and dates", es: "días y fechas" }, example: "**on** Monday", tr: { es: el lunes } }
+          - { prep: in, goes: { en: "months, years, seasons and longer periods", es: "meses, años, estaciones y periodos largos" }, example: "**in** July", tr: { es: en julio } }
+      - type: bullets
+        items:
+          - en: "The period gets longer from at, to on, to in."
+            es: "El periodo es más largo de at, a on, a in."
+          - { for: [es], text: { es: "El español usa *a*, *en* o ningún artículo según el caso; el inglés elige entre at, on e in." } }
+
+  - title: { en: Use, es: Uso }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: use, label: { en: Use, es: Uso } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { use: "at + clock time", example: "The class starts **at** 9:30.", tr: { es: La clase empieza a las 9:30. } }
+          - { use: "at + night, midday, midnight", example: "I sleep badly **at night**.", tr: { es: Duermo mal por la noche. } }
+          - { use: "at + the weekend", example: "We relax **at the weekend**. (US: **on the weekend**)", tr: { es: Descansamos el fin de semana. } }
+          - { use: "at + Christmas, Easter", example: "We visit my gran **at Christmas**.", tr: { es: Visitamos a mi abuela en Navidad. } }
+          - { use: "on + day", example: "I work **on Mondays**.", tr: { es: Trabajo los lunes. } }
+          - { use: "on + day + part of the day", example: "See you **on Monday morning**.", tr: { es: Nos vemos el lunes por la mañana. } }
+          - { use: "on + date", example: "My birthday is **on 5 May**.", tr: { es: Mi cumpleaños es el 5 de mayo. } }
+          - { use: "on + a special day", example: "We have a party **on New Year's Day**.", tr: { es: Hacemos una fiesta el día de Año Nuevo. } }
+          - { use: "in + morning, afternoon, evening", example: "I study **in the evening**.", tr: { es: Estudio por la tarde. } }
+          - { use: "in + month", example: "It's cold **in January**.", tr: { es: Hace frío en enero. } }
+          - { use: "in + season", example: "We go to the beach **in summer**.", tr: { es: Vamos a la playa en verano. } }
+          - { use: "in + year", example: "She was born **in 1998**.", tr: { es: Nació en 1998. } }
+          - { use: "in + century", example: "Trains began **in the 19th century**.", tr: { es: Los trenes empezaron en el siglo XIX. } }
+      - type: bullets
+        items:
+          - { for: [es], text: { es: "*El lunes* y *los lunes* → **on Monday** / **on Mondays**, sin artículo." } }
+          - { for: [es], text: { es: "*Por la mañana* → **in the morning**; *por la noche* → **at night**." } }
+
+  - title: { en: No preposition, es: Sin preposición }
+    level: A1
+    content:
+      - type: table
+        columns:
+          - { key: word, label: { en: Word, es: Palabra } }
+          - { key: example, label: { en: Example, es: Ejemplo } }
+        rows:
+          - { word: "this + morning, week, year", example: "I'm busy **this week**.", tr: { es: Esta semana estoy ocupado. } }
+          - { word: "next / last + day, week, month", example: "We meet **next Monday**. / He called **last night**.", tr: { es: Nos vemos el próximo lunes. / Llamó anoche. } }
+          - { word: "every + day, week, year", example: "I walk **every morning**.", tr: { es: Camino todas las mañanas. } }
+          - { word: "today, tonight, tomorrow, yesterday", example: "Call me **tomorrow morning**.", tr: { es: Llámame mañana por la mañana. } }
+      - type: bullets
+        items:
+          - en: "Before this, next, last, every, today and tomorrow, the time word stands alone."
+            es: "Delante de this, next, last, every, today y tomorrow no va preposición."
+
+  - title: { en: Typical errors, es: Errores típicos }
+    level: A1
+    content:
+      - type: errors
+        audience: true
+        rows:
+          - { wrong: The film starts on 8 o'clock., right: "The film starts **at** 8 o'clock.", rule: { en: clock times → at, es: "las horas → at" } }
+          - { for: [es], wrong: I work in Mondays., right: "I work **on** Mondays.", rule: { es: "los días → on" } }
+          - { for: [es], wrong: I work the Mondays., right: "I work **on** Mondays.", rule: { es: "*los lunes* = on Mondays, sin the" } }
+          - { wrong: My birthday is in 5 May., right: "My birthday is **on** 5 May.", rule: { en: dates → on, es: "las fechas → on" } }
+          - { for: [es], wrong: I study at the morning., right: "I study **in** the morning.", rule: { es: "*por la mañana* = in the morning" } }
+          - { wrong: I sleep badly in the night., right: "I sleep badly **at** night.", rule: { en: "night → at, no the", es: "night → at, sin the" } }
+          - { wrong: We relax in the weekend., right: "We relax **at** the weekend.", rule: { en: "at the weekend (US: on the weekend)", es: "at the weekend (US: on the weekend)" } }
+          - { for: [en], wrong: It's cold on January., right: "It's cold **in** January.", rule: { en: months → in } }
+          - { for: [es], wrong: I'll see you in next Friday., right: "I'll see you **next** Friday.", rule: { es: "next + día, sin preposición" } }
+          - { for: [es], wrong: I walk in every morning., right: "I walk **every** morning.", rule: { es: "every + tiempo, sin preposición" } }
+
+essentials:
+  - level: A1
+    parts:
+      - title: { en: Key rules, es: Reglas clave }
+        content:
+          - type: bullets
+            items:
+              - { en: "at: clock times, night, the weekend, Christmas.", es: "at: horas, night, the weekend, Christmas." }
+              - { en: "on: days and dates, and Monday morning.", es: "on: días y fechas, y Monday morning." }
+              - { en: "in: months, seasons, years, centuries, the morning.", es: "in: meses, estaciones, años, siglos, the morning." }
+              - { en: "No preposition before this, next, last, every, today, tomorrow.", es: "Sin preposición delante de this, next, last, every, today, tomorrow." }
+      - title: { en: Use, es: Uso }
+        content:
+          - type: table
+            columns:
+              - { key: prep, label: { en: Preposition, es: Preposición } }
+              - { key: use, label: { en: Use, es: Uso } }
+              - { key: example, label: { en: Example, es: Ejemplo } }
+            rows:
+              - { prep: at, use: "clock time, night, the weekend", example: "**at** 9:30 / **at** night / **at** the weekend" }
+              - { prep: on, use: "day, date, day + part of the day", example: "**on** Monday / **on** 5 May / **on** Monday morning" }
+              - { prep: in, use: "month, season, year, part of the day", example: "**in** July / **in** summer / **in** 1998 / **in** the evening" }
+              - { prep: "-", use: "this, next, last, every", example: "**next** Friday / **every** day" }
+      - title: { en: Top errors, es: Errores principales }
+        content:
+          - type: errors
+            rows:
+              - { wrong: on 8 o'clock, right: "**at** 8 o'clock" }
+              - { for: [es], wrong: in Mondays, right: "**on** Mondays" }
+              - { wrong: in 5 May, right: "**on** 5 May" }
+              - { wrong: in the night, right: "**at** night" }
+              - { for: [es], wrong: in next Friday, right: "**next** Friday" }
+
+reminders:
+  - level: A1
+    items:
+      - { en: "**in** the morning, but **at** night.", es: "**in** the morning, pero **at** night." }
+      - { en: "**on** Monday morning: the day decides the preposition.", es: "**on** Monday morning: el día decide la preposición." }
+      - { en: "**next** Friday, **every** day: no preposition.", es: "**next** Friday, **every** day: sin preposición." }
