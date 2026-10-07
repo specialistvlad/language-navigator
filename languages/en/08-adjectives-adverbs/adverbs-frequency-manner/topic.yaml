@@ -69,7 +69,7 @@ sections:
               es: "**sometimes** también va al principio:"
             ex: "**Sometimes** I work from home."
             tr: { es: A veces trabajo desde casa. }
-          - { for: [es], text: { es: "El adverbio no va entre el verbo y su objeto: *Siempre como pan* → I **always** eat bread." } }
+          - { for: [es], text: { es: "El adverbio va antes del verbo, también con objeto: *Siempre como pan* → I **always** eat bread." } }
 
   - title: { en: "Form: how often?", es: "Forma: ¿con qué frecuencia?" }
     level: A1
@@ -174,12 +174,11 @@ sections:
           - { for: [es], wrong: I go always to school., right: "I **always** go to school.", rule: { es: "el adverbio va antes del verbo" } }
           - { for: [es], wrong: I always am tired., right: "I am **always** tired.", rule: { es: "el adverbio va después de be" } }
           - { for: [es], wrong: I don't never drink coffee., right: "I **never** drink coffee.", rule: { es: "never ya es negativo: sin don't" } }
-          - { for: [es], wrong: How much often do you swim?, right: "**How often** do you swim?", rule: { es: "*¿con qué frecuencia?* = How often" } }
           - { for: [es], wrong: I swim every days., right: "I swim **every day**.", rule: { es: "every + singular" } }
           - { for: [es], wrong: She goes there three times by week., right: "She goes there three times **a** week.", rule: { es: "*por semana* = a week" } }
           - { for: [es], wrong: She speaks well English., right: "She speaks English **well**.", rule: { es: "el objeto va pegado al verbo" } }
           - { wrong: She sings good., right: "She sings **well**.", rule: { en: "good + noun, well + verb", es: "good + sustantivo; well + verbo" } }
-          - { wrong: He drives slow., right: "He drives **slowly**.", rule: { en: "manner adverb = adjective + -ly", es: "adverbio de modo = adjetivo + -ly" } }
+          - { wrong: He walks careful., right: "He walks **carefully**.", rule: { en: "manner adverb = adjective + -ly", es: "adverbio de modo = adjetivo + -ly" } }
           - { wrong: They work hardly., right: "They work **hard**.", rule: { en: "hard = hard; hardly = almost not", es: "hard = duro; hardly = casi no" } }
 
 essentials:

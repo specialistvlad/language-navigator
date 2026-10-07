@@ -45,10 +45,8 @@ sections:
         items:
           - en: "An adjective has one form for singular and plural, masculine and feminine."
             es: "El adjetivo tiene una sola forma para singular y plural, masculino y femenino."
-          - en: "The adjective goes before the noun: a **big** house."
-            es: "El adjetivo va delante del sustantivo: a **big** house."
           - { for: [es], text: { es: "En español el adjetivo suele ir detrás y concuerda: *casas grandes* → **big** houses." } }
-          - { for: [es], text: { es: "Con be el adjetivo no concuerda: *Las casas son grandes* → The houses are **big**." } }
+          - { for: [es], text: { es: "También con be el adjetivo inglés se mantiene igual: *Las casas son grandes* → The houses are **big**." } }
 
   - title: { en: "Form: order of adjectives", es: "Forma: orden de los adjetivos" }
     level: A2
@@ -84,8 +82,8 @@ sections:
             ex: "a **small black** cat / **long dark** hair"
             tr: { es: un gato negro y pequeño / el pelo largo y oscuro }
           - text:
-              en: "After be, adjectives are joined with **and**:"
-              es: "Después de be, los adjetivos se unen con **and**:"
+              en: "After be, the last two adjectives are joined with **and**:"
+              es: "Después de be, los dos últimos adjetivos se unen con **and**:"
             ex: "The room is **big and bright**."
             tr: { es: La habitación es grande y luminosa. }
 

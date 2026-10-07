@@ -45,7 +45,7 @@ sections:
             es: "Algunos adjetivos de dos sílabas admiten las dos formas: clever → cleverer / more clever."
           - en: "Use **the** before a superlative: the cheapest."
             es: "Delante del superlativo va **the**: the cheapest."
-          - { for: [es], text: { es: "Un adjetivo lleva -er o more, nunca los dos: *más grande* → **bigger**." } }
+          - { for: [es], text: { es: "*Más grande* → **bigger**: la idea de *más* ya está en -er." } }
 
   - title: { en: "Spelling: -er and -est", es: "Ortografía: -er y -est" }
     level: A2
@@ -58,7 +58,7 @@ sections:
         rows:
           - { ending: "-e", rule: "+ r / + st", examples: "nice → nicer → nicest" }
           - { ending: { en: consonant + y, es: consonante + y }, rule: "y → ier / iest", examples: "happy → happier → happiest" }
-          - { ending: { en: "one vowel + one consonant", es: "una vocal + una consonante" }, rule: { en: double the consonant, es: se duplica la consonante }, examples: "big → bigger → biggest / hot → hotter → hottest" }
+          - { ending: { en: "one vowel + one consonant (not w, y)", es: "una vocal + una consonante (salvo w, y)" }, rule: { en: double the consonant, es: se duplica la consonante }, examples: "big → bigger → biggest / hot → hotter → hottest" }
 
   - title: { en: "Form: irregular", es: "Forma: irregulares" }
     level: A2
@@ -122,9 +122,8 @@ sections:
           - { wrong: This is more better., right: "This is **better**.", rule: { en: "better, worse are already comparatives", es: "better y worse ya son comparativos" } }
           - { wrong: more happy, right: "**happier**", rule: { en: "consonant + y → -ier", es: "consonante + y → -ier" } }
           - { wrong: He is more tall than me., right: "He is **taller** than me.", rule: { en: "short adjectives take -er", es: "los adjetivos cortos llevan -er" } }
-          - { wrong: He is the more tall., right: "He is **the tallest**.", rule: { en: "three or more: the + -est", es: "tres o más: the + -est" } }
+          - { wrong: He is the most tall., right: "He is **the tallest**.", rule: { en: "three or more: the + -est", es: "tres o más: the + -est" } }
           - { wrong: the best of the world, right: "the best **in** the world", rule: { en: "in + place or group", es: "in + lugar o grupo" } }
-          - { wrong: the tallest from my class, right: "the tallest **in** my class", rule: { en: "in, not from", es: "in, no from" } }
           - { wrong: This is expensiver., right: "This is **more expensive**.", rule: { en: "long adjectives take more", es: "los adjetivos largos llevan more" } }
 
 essentials:

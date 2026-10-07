@@ -74,7 +74,7 @@ sections:
           - { level: A1, use: { en: "Asking for permission (Can I…?)", es: "Pedir permiso (Can I…?)" }, example: "**Can** I open the window?", tr: { es: "¿Puedo abrir la ventana?" } }
           - { level: A1, use: { en: "Requests (Can you…?)", es: "Peticiones (Can you…?)" }, example: "**Can** you help me, please?", tr: { es: "¿Puedes ayudarme, por favor?" } }
           - { level: A2, use: { en: "Senses: see, hear, smell", es: "Sentidos: see, hear, smell" }, example: "I **can** hear music.", tr: { es: Oigo música. } }
-          - { level: A2, use: { en: "Ability in the past (could)", es: "Capacidad en el pasado (could)" }, example: "I **could** run fast when I was young.", tr: { es: Corría rápido cuando era joven. } }
+          - { level: A2, use: { en: "General ability in the past (could)", es: "Capacidad general en el pasado (could)" }, example: "I **could** run fast when I was young.", tr: { es: Corría rápido cuando era joven. } }
           - { level: A2, use: { en: "Polite requests (Could you…?)", es: "Peticiones corteses (Could you…?)" }, example: "**Could** you open the door, please?", tr: { es: "¿Podrías abrir la puerta, por favor?" } }
           - { level: A2, use: { en: "Polite permission (Could I…?)", es: "Permiso cortés (Could I…?)" }, example: "**Could** I use your phone?", tr: { es: "¿Podría usar tu móvil?" } }
           - { level: A2, use: { en: "Possibility", es: Posibilidad }, example: "It **could** rain later.", tr: { es: Podría llover más tarde. } }
@@ -92,6 +92,12 @@ sections:
               es: "**be able to** sustituye a **can** en otros tiempos:"
             ex: "I'll **be able to** help you tomorrow."
             tr: { es: Mañana podré ayudarte. }
+          - level: A2
+            text:
+              en: "A single success in the past takes **was / were able to**:"
+              es: "Un logro concreto en el pasado lleva **was / were able to**:"
+            ex: "The fire was big, but we **were able to** escape."
+            tr: { es: "El fuego era grande, pero conseguimos escapar." }
           - level: A2
             text:
               en: "For other possibility words see [May and Might](id:en.modals.may-might)."

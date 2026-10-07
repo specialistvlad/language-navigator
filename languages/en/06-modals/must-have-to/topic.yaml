@@ -124,12 +124,12 @@ sections:
     content:
       - type: table
         columns:
-          - { key: row, label: "" }
+          - { key: row, label: { en: Point, es: Punto } }
           - { key: mustnt, label: mustn't }
           - { key: dont, label: don't have to }
         rows:
           - row: { en: Meaning, es: Significado }
-            mustnt: { en: "forbidden: do not do it", es: "prohibido: no lo hagas" }
+            mustnt: { en: "forbidden", es: "prohibido" }
             dont: { en: "not necessary: you can choose", es: "no es necesario: puedes elegir" }
           - row: { en: Example, es: Ejemplo }
             mustnt: { ex: "You **mustn't** tell Ana. It's a secret.", tr: { es: No debes contárselo a Ana. Es un secreto. } }
@@ -152,7 +152,7 @@ sections:
           - { wrong: "She musts go.", right: "She **must** go.", rule: { en: "must has no -s", es: "must no lleva -s" } }
           - { wrong: "She must to go.", right: "She must **go**.", rule: { en: "must + base verb; no to", es: "must + forma base, sin to" } }
           - { wrong: "He have to work.", right: "He **has to** work.", rule: { en: "he / she / it → has to", es: "he / she / it → has to" } }
-          - { wrong: "Do I must go?", right: "**Do** I **have to** go? / **Must** I go?", rule: { en: "do goes with have to, not with must", es: "do va con have to, no con must" } }
+          - { wrong: "Do I must go?", right: "**Do** I **have to** go? / **Must** I go?", rule: { en: "have to takes do; must forms its own question", es: "have to lleva do; must forma la pregunta por sí mismo" } }
           - { for: [en], wrong: "She doesn't has to work.", right: "She doesn't **have to** work.", rule: { en: "doesn't + base form" } }
           - { wrong: "I must work yesterday.", right: "I **had to** work yesterday.", rule: { en: "past of must → had to", es: "el pasado de must es had to" } }
           - { for: [es], wrong: "I haven't to go.", right: "I **don't have to** go.", rule: { es: "negativa de have to: don't / doesn't have to" } }

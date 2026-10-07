@@ -60,7 +60,8 @@ sections:
           - { form: maybe, sound: /ˈmeɪbi/, example: "**Maybe** later. /ˈmeɪbi ˈleɪtə/", tr: { es: Quizás luego. } }
       - type: bullets
         items:
-          - { for: [es], text: { es: "En might la **gh** no se pronuncia: /maɪt/." } }
+          - en: "The **gh** in might is silent: /maɪt/."
+            es: "En might la **gh** no se pronuncia: /maɪt/."
 
   - title: { en: Use, es: Uso }
     level: A2-B1
@@ -111,14 +112,11 @@ sections:
         rows:
           - { degree: { en: "sure", es: "seguro" }, example: "She **will** come. / She **won't** come.", tr: { es: Vendrá. / No vendrá. } }
           - { degree: { en: "very likely", es: "muy probable" }, example: "She'll **probably** come.", tr: { es: Probablemente venga. } }
-          - { degree: { en: "possible", es: "posible" }, example: "She **may** come.", tr: { es: Puede que venga. } }
-          - { degree: { en: "less likely", es: "menos probable" }, example: "She **might** come.", tr: { es: Podría ser que venga. } }
+          - { degree: { en: "possible", es: "posible" }, example: "She **may** come. / She **might** come.", tr: { es: Puede que venga. } }
       - type: bullets
         items:
           - en: "Use **will** when you are sure and **may / might** when you are not."
             es: "Usa **will** cuando estás seguro y **may / might** cuando no lo estás."
-          - en: "**may** and **might** are not used together with **will**: She might come."
-            es: "**may** y **might** no se combinan con **will**: She might come."
 
   - title: { en: Typical errors, es: Errores típicos }
     level: A2-B1

@@ -54,7 +54,8 @@ sections:
           - { form: shouldn't, sound: /ˈʃʊdnt/, example: "You **shouldn't** go. /juː ˈʃʊdnt ɡəʊ/", tr: { es: No deberías ir. } }
       - type: bullets
         items:
-          - { for: [es], text: { es: "La **l** de should y shouldn't no se pronuncia: should suena /ʃʊd/." } }
+          - en: "The **l** in should and shouldn't is silent: should is /ʃʊd/ when strong."
+            es: "La **l** de should y shouldn't no se pronuncia: should suena /ʃʊd/ en su forma fuerte."
 
   - title: { en: Use, es: Uso }
     level: A2
@@ -79,7 +80,7 @@ sections:
     content:
       - type: table
         columns:
-          - { key: row, label: "" }
+          - { key: row, label: { en: Point, es: Punto } }
           - { key: should, label: should }
           - { key: must, label: must }
         rows:

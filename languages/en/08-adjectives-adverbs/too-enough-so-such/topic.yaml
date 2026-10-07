@@ -63,7 +63,7 @@ sections:
           - { pattern: "so + adverb", example: "He speaks **so** quickly.", tr: { es: Habla tan rápido. } }
           - { pattern: "so many / so much + noun", example: "I have **so many** friends.", tr: { es: Tengo tantos amigos. } }
           - { pattern: "such a / an + adjective + singular noun", example: "It's **such a** good film.", tr: { es: Es una película tan buena. } }
-          - { pattern: "such + adjective + plural / uncountable noun", example: "They are **such** nice people.", tr: { es: Son gente tan simpática. } }
+          - { pattern: "such + adjective + plural / uncountable noun", example: "They are **such** nice people.", tr: { es: Son personas tan simpáticas. } }
           - { pattern: "so / such … that + result", example: "I was **so** tired **that** I fell asleep.", tr: { es: Estaba tan cansado que me quedé dormido. } }
       - type: bullets
         items:
@@ -86,7 +86,7 @@ sections:
           - { very: { ex: "The bag is **very** heavy, but I can lift it.", tr: { es: "La bolsa pesa mucho, pero puedo levantarla." } }, too: { ex: "The bag is **too** heavy to lift.", tr: { es: La bolsa pesa demasiado para levantarla. } } }
       - type: bullets
         items:
-          - { for: [es], text: { es: "*muy* → **very**. *demasiado* → **too**. Con adjetivos, **too much** no existe: **too** expensive." } }
+          - { for: [es], text: { es: "*muy* → **very**. *demasiado* → **too**. Con adjetivos: **too** expensive." } }
 
   - title: { en: Typical errors, es: Errores típicos }
     level: B1
@@ -97,7 +97,6 @@ sections:
           - { for: [es], wrong: It is too much expensive., right: "It is **too** expensive.", rule: { es: "demasiado + adjetivo = too, sin much" } }
           - { for: [es], wrong: There are too much people., right: "There are **too many** people.", rule: { es: "demasiada gente = too many people" } }
           - { for: [es], wrong: The room is enough big., right: "The room is big **enough**.", rule: { es: "enough va detrás del adjetivo" } }
-          - { wrong: We have not enough time., right: "We **don't have enough** time.", rule: { en: "negative: don't have enough", es: "negativa: don't have enough" } }
           - { wrong: The room is not enough big., right: "The room is **not big enough**.", rule: { en: "not + adjective + enough", es: "not + adjetivo + enough" } }
           - { for: [es], wrong: It is very hot to go out., right: "It is **too** hot to go out.", rule: { es: "resultado negativo = too, no very" } }
           - { for: [es], wrong: It is so a nice day., right: "It is **such a** nice day.", rule: { es: "sustantivo → such a" } }

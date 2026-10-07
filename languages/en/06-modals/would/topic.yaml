@@ -23,7 +23,7 @@ sections:
           - { key: pattern, label: { en: Pattern, es: Estructura } }
           - { key: example, label: { en: Example, es: Ejemplo } }
         rows:
-          - { use: { en: "wants and offers", es: "deseos y ofrecimientos" }, pattern: would like, example: "I'd like a coffee.", tr: { es: Quisiera un café. } }
+          - { use: { en: "wants and offers", es: "deseos y ofrecimientos" }, pattern: would like, example: "I'**d like** a coffee.", tr: { es: Quisiera un café. } }
           - { use: { en: "polite requests", es: "peticiones corteses" }, pattern: Would you + V…?, example: "**Would** you **help** me?", tr: { es: "¿Me ayudarías?" } }
           - { use: { en: "imagined situations", es: "situaciones imaginadas" }, pattern: would + V, example: "I **would** travel more.", tr: { es: Viajaría más. } }
           - { use: { en: "past habits", es: "hábitos del pasado" }, pattern: would + V, example: "We **would** swim every summer.", tr: { es: Nos bañábamos cada verano. } }
@@ -89,7 +89,8 @@ sections:
           - { form: wouldn't, sound: /ˈwʊdnt/, example: "I **wouldn't** go. /aɪ ˈwʊdnt ɡəʊ/", tr: { es: No iría. } }
       - type: bullets
         items:
-          - { for: [es], text: { es: "La **l** de would y wouldn't no se pronuncia: would suena /wʊd/." } }
+          - en: "The **l** in would and wouldn't is silent: would is /wʊd/ when strong."
+            es: "La **l** de would y wouldn't no se pronuncia: would suena /wʊd/ en su forma fuerte."
 
   - title: { en: Use, es: Uso }
     level: B1
@@ -111,8 +112,8 @@ sections:
         items:
           - en: "**would like** is a polite form of **want**: I'd like tea."
             es: "**would like** es la forma cortés de **want**: I'd like tea."
-          - en: "**would like** takes **to** + base verb, never **-ing**: I'd like **to go**."
-            es: "**would like** lleva **to** + forma base, nunca **-ing**: I'd like **to go**."
+          - en: "**would like** takes **to** + base verb: I'd like **to go**."
+            es: "**would like** lleva **to** + forma base: I'd like **to go**."
           - en: "An imagined situation with **if** takes **if** + past simple, **would** + base verb. See [Conditionals](id:en.sentence-building.conditionals-0-1-2)."
             es: "Una situación imaginada con **if** lleva **if** + pasado simple, **would** + forma base. Ver [Condicionales](id:en.sentence-building.conditionals-0-1-2)."
           - en: "A past habit with **would** needs a past time frame: When I was young, I would…"
@@ -124,7 +125,7 @@ sections:
     content:
       - type: table
         columns:
-          - { key: row, label: "" }
+          - { key: row, label: { en: Point, es: Punto } }
           - { key: would, label: would }
           - { key: used, label: used to }
         rows:
