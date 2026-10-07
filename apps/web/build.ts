@@ -163,15 +163,13 @@ export async function build(o: BuildOptions): Promise<number> {
 
       // ---------- Track home ----------
 
-      const statusDot = (status: keyof typeof t.statusNames) =>
-        `<i class="dot st-${status}" title="${escapeHtml(t.statusNames[status])}"></i>`;
       const sectionsHtml = lang.sections
         .map((section) => {
           const sectionRefs = langRefs.filter((r) => r.section === section);
           const items = sectionRefs
             .map((ref) => {
               const from = ref.entry.levels.split("-")[0];
-              const row = `${statusDot(ref.topic?.status[explain] ?? "todo")}<span class="name">${escapeHtml(topicTitle(ref, explain))}</span>${startBadge(ref.entry.levels)}`;
+              const row = `<span class="name">${escapeHtml(topicTitle(ref, explain))}</span>${startBadge(ref.entry.levels)}`;
               return ref.topic
                 ? `<li data-level="${from}"><a href="${topicUrl(explain, lang, ref)}">${row}</a></li>`
                 : `<li data-level="${from}" class="todo"><span class="row">${row}</span></li>`;
