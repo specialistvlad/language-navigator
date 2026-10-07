@@ -488,6 +488,18 @@ html[data-page="topic"]:not([data-view="essentials"]) .sections > section.block 
   .doc:has(.lanes) { max-width: none; }
 }
 .sections > .block { margin: 0 0 28px; }
+
+/* Guide sections are numbered in reading order, in the index card style; sections the level
+   filter hides take no number. */
+.sections { counter-reset: part; }
+.sections > .part { counter-increment: part; }
+.sections > .part > h2::before {
+  content: counter(part, decimal-leading-zero);
+  margin-right: 12px;
+  font: 600 1em var(--mono);
+  letter-spacing: -0.02em;
+  color: var(--muted);
+}
 .sheet-index { --lane: 320px; }
 
 /* Track index: header, one card per section */
