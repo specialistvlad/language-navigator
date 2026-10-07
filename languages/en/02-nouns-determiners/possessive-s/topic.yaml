@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: "Possessive 's", es: "El posesivo 's" }
 summary:
-  en: "Noun + 's shows who something belongs to: Ana's car. A learner needs it to talk about people's things, family and relationships. The page covers the form ('s and ' after a plural -s), the pronunciation of 's, the use, and a comparison of 's and of. It ends with typical errors. The owner comes first and the thing second: Ana's car. After a plural noun ending in -s, add only the apostrophe: my parents' house. Whose asks who owns something, and Who's means Who is."
-  es: "Sustantivo + 's indica de quién es algo: Ana's car. Sirve para hablar de las cosas de las personas, de la familia y de las relaciones. La página trata la forma ('s y ' detrás de un plural en -s), la pronunciación de 's, el uso y una comparación entre 's y of, y termina con los errores típicos. Primero va el poseedor y después la cosa: Ana's car. Detrás de un plural que acaba en -s solo se añade el apóstrofo: my parents' house. Contraste con el español: el español usa la estructura «el coche de Ana» y el inglés pone el poseedor delante, así que the car of Ana es un error. Whose pregunta de quién es algo; Who's significa Who is."
+  en: "Noun + 's shows who something belongs to, and ' alone follows a plural in -s. The owner comes first and the thing after it takes no article: **Ana's** car, my **parents'** house, the **children's** room."
+  es: "Sustantivo + 's indica de quién es algo, y detrás de un plural en -s basta el apóstrofo. El inglés pone primero al poseedor con 's, sin of y sin artículo: *el coche de Ana* es **Ana's** car."
 
 sections:
   - title: { en: "Form: 's and '", es: "Forma: 's y '" }

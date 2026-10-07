@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: "Questions and negatives", es: "Preguntas y negativas" }
 summary:
-  en: "How to make yes/no questions, wh-questions, short answers and negatives with every verb. You need them in every conversation, from the first day. The page opens with an overview, then covers be and modals, do, does and did, negative contractions, wh-questions, subject questions, short answers and question intonation. The thing to get right is that be and modals change places with the subject, while every other verb takes do, does or did and then the base verb: Did you go? She doesn't like tea."
-  es: "Cómo se forman preguntas, preguntas con wh-, respuestas cortas y negativas con todos los verbos. Se necesitan en cualquier conversación, desde el primer día. La página empieza con un resumen y cubre be y los modales, do, does y did, las contracciones negativas, las preguntas con wh-, las preguntas de sujeto, las respuestas cortas y la entonación. Lo más importante es que be y los modales cambian de lugar con el sujeto, mientras que el resto de verbos usan do, does o did más el verbo base: Did you go? She doesn't like tea. En español no hace falta ese auxiliar: se pregunta con la entonación o con la inversión."
+  en: "Yes/no questions, wh-questions, short answers and negatives, with be, modals and every other verb. Be and modals invert or take not; other verbs use do, does or did with the base verb: **Do** you **like** tea?"
+  es: "Preguntas, respuestas cortas y negativas con be, modales y los demás verbos. En inglés la pregunta y la negativa de un verbo normal llevan do, does o did, y el sujeto siempre aparece: **Do** you **like** tea? I **don't like** tea."
 
 sections:
   - title: { en: Overview, es: Resumen }

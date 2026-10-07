@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: "Articles: a, an, the", es: "Artículos: a, an, the" }
 summary:
-  en: "When to use a, an, the, and no article. A learner needs articles in almost every sentence with a noun. The page starts with an overview, then covers the form (a or an), the pronunciation, the use of a and an, the use of the, and the use of no article, and ends with typical errors. A and an introduce one thing, the points to a thing both people know, and no article is used for general ideas. Choose a or an by the sound that follows: an apple, a university. At A2 and B1 it adds the finer uses of the and no article."
-  es: "Cuándo se usa a, an, the y cuándo no se usa artículo. Los artículos aparecen en casi todas las frases con un sustantivo. La página empieza con un resumen y trata después la forma (a o an), la pronunciación, el uso de a y an, el uso de the y el uso sin artículo, y termina con los errores típicos. A y an presentan una cosa, the señala algo que los dos interlocutores conocen, y no se usa artículo para las ideas generales. A o an depende del sonido siguiente: an apple, a university. En A2 y B1 añade los usos más finos de the y de la ausencia de artículo. Contraste con el español: el inglés no lleva artículo en ideas generales (I like dogs, Life is hard) y sí lleva a delante de profesiones (She's a doctor)."
+  en: "A and an for one thing, the for a thing both people know, and no article for things in general. The first sound decides a or an (**an** hour, **a** university), and general plurals and uncountable nouns take no article: I like **dogs**."
+  es: "A y an para una cosa, the para algo que los dos conocen y sin artículo para las cosas en general. Al hablar en general, el inglés va sin artículo: *Me gustan los perros* es I like **dogs**."
 
 sections:
   - title: { en: Overview, es: Resumen }

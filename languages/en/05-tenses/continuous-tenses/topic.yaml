@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Continuous Tenses, es: Tiempos continuos }
 summary:
-  en: "The past, present and future continuous: actions in progress at a moment. Each continuous tense is a form of be plus the verb with -ing: will be for the future, am, is or are for the present, was or were for the past. Be goes before the subject in questions and takes not in negatives, and the main verb always ends in -ing. The page opens with one grid that shows every form for every person, then covers the -ing spelling, each tense one by one, stative verbs and the contrast with the simple tenses. At A1 it covers the present continuous; A2 adds the past continuous and B1 the future continuous. The thing to get right is be: every continuous form needs it, and it carries the tense."
-  es: "El pasado, el presente y el futuro continuo: acciones en curso en un momento. Cada tiempo continuo es una forma de be más el verbo con -ing: will be para el futuro, am, is o are para el presente y was o were para el pasado. Be va delante del sujeto en las preguntas y lleva not en las negativas, y el verbo principal siempre termina en -ing. La página empieza con una tabla que muestra todas las formas para todas las personas y después trata la ortografía de -ing, cada tiempo por separado, los verbos de estado y el contraste con los tiempos simples. En A1 trata el presente continuo; A2 añade el pasado continuo y B1 el futuro continuo. Lo más importante es be: toda forma continua lo necesita y es be quien lleva el tiempo. Corresponde a estar + gerundio, pero el español usa más el presente y el imperfecto simples (¿Qué haces?, llovía)."
+  en: "Present, past and future continuous: be plus the verb with -ing for actions in progress at a moment. Every continuous form needs be before the -ing verb: She **is reading** now. **Was** she **reading**?"
+  es: "Presente, pasado y futuro continuo: be más el verbo con -ing para acciones en curso en un momento. Estar + gerundio es be + verbo con -ing, y be nunca se omite: I **am reading** now. They **were playing** outside."
 
 sections:
   - title: { en: Overview, es: Resumen }

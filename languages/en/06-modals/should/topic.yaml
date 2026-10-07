@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Should, es: Should }
 summary:
-  en: "Advice and opinions with should and shouldn't. You need it to tell someone what is a good idea and to say what you think. The page starts with an overview, then the pronunciation of should and shouldn't, the uses, a comparison of should and must and typical errors. Should has one form for every subject, takes the base verb and needs no do in questions: Should I go? A negative opinion puts the negative in the first verb: I don't think you should go. Should gives advice, and must gives a strong obligation."
-  es: "Consejos y opiniones con should y shouldn't. Sirve para decirle a alguien qué es buena idea y para dar tu opinión. La página empieza con un resumen, sigue con la pronunciación de should y shouldn't, los usos, una comparación entre should y must y los errores típicos. Should tiene una sola forma para todos los sujetos, lleva el verbo en forma base y no necesita do en las preguntas: Should I go? La opinión negativa lleva la negación en el primer verbo: I don't think you should go. En la pregunta, should va delante del sujeto: What should I do?. Should da un consejo y must expresa una obligación fuerte."
+  en: "Should and shouldn't for advice and opinions. Should takes the base verb with every subject and needs no do in questions: You **should** go. **Should** I go?"
+  es: "Should y shouldn't para consejos y opiniones. Should lleva el verbo base sin -s, sin to y sin do: *debería ir* es She **should** go, y *¿debo ir?* es **Should** I go?"
 
 sections:
   - title: { en: Overview, es: Resumen }

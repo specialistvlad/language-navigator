@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Relative Clauses, es: Oraciones de relativo }
 summary:
-  en: "Who, which, that, whose and where join extra information to a noun. You need them to say which person or thing you mean, or to add a detail, in a single sentence. The page covers the relative pronouns, defining clauses and non-defining clauses. Defining clauses identify the noun and have no commas; non-defining clauses add extra information and sit between commas. The thing to get right is the choice of word: who for people, which for things, and that only in defining clauses."
-  es: "Who, which, that, whose y where añaden información a un sustantivo. Sirven para decir de qué persona o cosa se habla, o para añadir un detalle, en una sola frase. La página cubre los pronombres relativos, las oraciones especificativas y las explicativas. Las especificativas identifican el sustantivo y no llevan comas; las explicativas añaden información extra y van entre comas. Lo más importante es elegir bien la palabra: who para personas, which para cosas y that solo en las especificativas. El inglés no usa un relativo único como que, y no admite that en las explicativas."
+  en: "Relative clauses add information about a noun with who for people, which for things, that, whose and where. Who, which and that replace the noun and the clause has no second pronoun: The woman **who** lives here is my aunt."
+  es: "Las oraciones de relativo dan información sobre un sustantivo con who, which, that, whose y where. Who va con personas y which con cosas, y el relativo objeto puede omitirse: The film (**that**) I saw was good."
 
 sections:
   - title: { en: "Form: relative pronouns", es: "Forma: pronombres relativos" }

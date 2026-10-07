@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Personal Pronouns, es: Pronombres personales }
 summary:
-  en: "Subject and object pronouns and possessives: I, me, my, mine. You need them from the first lesson to say who does something, who receives it and who owns it. The page covers subject pronouns (I, you, he), object pronouns (me, him, them), possessive adjectives (my, your, his) and possessive pronouns (mine, yours, his), then it as the subject for weather, time and distance. At A0 it gives the subject pronouns and my, your, his. At A1 it adds object pronouns and the mine forms. The key point is that English always states the subject: \"It is cold\"."
-  es: "Pronombres sujeto y objeto y posesivos: I, me, my, mine. Se necesitan desde la primera clase para decir quién hace algo, quién lo recibe y de quién es. La página trata los pronombres sujeto (I, you, he), los pronombres objeto (me, him, them), los adjetivos posesivos (my, your, his) y los pronombres posesivos (mine, yours, his), y después it como sujeto para el tiempo, la hora y la distancia. En A0 ofrece los pronombres sujeto y my, your, his. En A1 añade los pronombres objeto y las formas mine. Lo esencial es que el inglés siempre expresa el sujeto: \"It is cold\". En español el sujeto suele omitirse (tengo frío, hace frío); en inglés no."
+  en: "Subject, object and possessive forms of the personal pronouns: I, me, my, mine. English always states the subject, even with weather and time: **It** is cold."
+  es: "Pronombres sujeto, objeto y posesivos: I, me, my, mine. En inglés el sujeto siempre aparece, también con el tiempo y la hora: **It** is cold (*hace frío*), **I** am tired (*estoy cansado*)."
 
 sections:
   - title: { en: Overview, es: Resumen }

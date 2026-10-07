@@ -1,4 +1,4 @@
-// Shared reading of topic data: localized values, language scoping and table shape.
+// Shared reading of topic data: localized values, language scoping, table shape and summary leads.
 import { type Column, EXPLAIN, type Explain, filled, type Localized, type Row, type TableBlock } from "./lib.ts";
 
 export const isLocalized = (value: object): value is Localized => Object.keys(value).every((k) => k in EXPLAIN);
@@ -18,3 +18,6 @@ export function tableShape(block: TableBlock, explain: Explain, lang: Explain): 
   const translation = explain !== lang && rows.some((r) => filled(r.tr?.[explain]));
   return { columns, rows, translation, width: columns.length + (translation ? 1 : 0) };
 }
+
+// The first sentence of a summary stands alone: cards and the meta description show only it.
+export const lead = (text: string): string => /^.*?[.!?](?=\s+[A-ZÁÉÍÓÚÑ¿¡]|$)/.exec(text)?.[0] ?? text;

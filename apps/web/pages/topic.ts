@@ -5,7 +5,8 @@ import { type GuideSection, guideSections } from "../guide.ts";
 import { GITHUB_ICON, PRINT_ICON } from "../icons.ts";
 import { controls, page } from "../layout.ts";
 import { trackNav } from "../nav.ts";
-import { chips, editUrl, lead, rangeBadge, slugify } from "../parts.ts";
+import { lead } from "../../../scripts/content.ts";
+import { chips, editUrl, rangeBadge, slugify } from "../parts.ts";
 import { escapeHtml, inline, levelBadge } from "../render.ts";
 import { topicUrl } from "../urls.ts";
 

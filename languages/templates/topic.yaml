@@ -11,8 +11,8 @@ status: { en: draft, es: draft }
 
 title: { en: "{Title}", es: "{Título}" }
 summary:
-  en: "{One line: what this topic covers.}"
-  es: "{Una línea: qué cubre este tema.}"
+  en: "{Lead: the forms and what they do, at most 160 characters.} {The rule to get right, with a **bold** example.}"
+  es: "{Entrada: las formas y para qué sirven, como máximo 160 caracteres.} {La regla clave, con un ejemplo en **negrita**.}"
 
 sections:
   - title: { en: Overview, es: Resumen }

@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Simple Tenses, es: Tiempos simples }
 summary:
-  en: "The past, present and future simple: one pattern for most English sentences. Each simple tense has a helper verb: will for the future, do or does for the present, did for the past. The helper goes before the subject in questions and takes not in negatives, and the main verb stays in its base form. The page opens with one grid that shows every form for every person, then explains the present, the past and the future one by one. At A1 it covers the present and past; at A2 it adds the future with will, the sounds of -s and -ed, timetables and subject questions. The thing to get right is the helper: once it appears, the main verb loses -s and -ed."
-  es: "El pasado, el presente y el futuro simple: un mismo esquema para la mayoría de las frases en inglés. Cada tiempo simple tiene un verbo auxiliar: will para el futuro, do o does para el presente y did para el pasado. El auxiliar va delante del sujeto en las preguntas y lleva not en las negativas, y el verbo principal queda en forma base. La página empieza con una tabla que muestra todas las formas para todas las personas y después explica el presente, el pasado y el futuro por separado. En A1 trata el presente y el pasado; en A2 añade el futuro con will, los sonidos de -s y -ed, los horarios y las preguntas de sujeto. Lo más importante es el auxiliar: cuando aparece, el verbo principal pierde la -s y la -ed. En español el sujeto puede omitirse y el verbo cambia con cada persona; en inglés el sujeto siempre aparece."
+  en: "Past, present and future simple: do or does, did and will make questions and negatives, and the main verb stays in its base form. Once a helper appears, the main verb loses -s and -ed: She **doesn't like** tea. **Did** he **go**?"
+  es: "Presente, pasado y futuro simple: do o does, did y will forman preguntas y negativas, y el verbo principal queda en forma base. El sujeto siempre aparece y, con auxiliar, el verbo pierde la -s y la -ed: **Does** she **like** tea? She **didn't go**."
 
 sections:
   - title: { en: Overview, es: Resumen }

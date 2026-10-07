@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Can and Could, es: Can y could }
 summary:
-  en: "Ability, permission and requests with can; past ability, polite requests and possibility with could. You need it to say what you are able to do, to ask for something and to ask or give permission. The page starts with an overview of the forms, then shows how can and can't sound, then the uses, then typical errors. At A1 it covers can for ability, permission and requests. At A2 it adds could for past ability, polite requests and possibility. Can and could never change: there is no -s, no to and no do, so she can swim and Can she swim? are complete."
-  es: "Capacidad, permiso y peticiones con can; capacidad en pasado, peticiones corteses y posibilidad con could. Sirve para decir lo que sabes o puedes hacer, para pedir algo y para pedir o dar permiso. La página empieza con un resumen de las formas, sigue con la pronunciación de can y can't, después los usos y por último los errores típicos. En A1 cubre can para capacidad, permiso y peticiones; en A2 añade could para la capacidad en pasado, las peticiones corteses y la posibilidad. Can y could no cambian: no llevan -s, ni to, ni do. Saber + infinitivo, para una habilidad, es can + verbo: I can swim."
+  en: "Can for ability, permission and requests; could for past ability, polite requests and possibility. Can and could never change and take the base verb without to: She **can** swim. **Can** she swim?"
+  es: "Can para capacidad, permiso y peticiones; could para capacidad en pasado, peticiones corteses y posibilidad. Saber o poder + infinitivo es can + verbo base, sin to y sin do: I **can** swim. **Can** you swim?"
 
 sections:
   - title: { en: Overview, es: Resumen }

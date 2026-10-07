@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Question Tags, es: Coletillas interrogativas }
 summary:
-  en: "Short questions at the end of a sentence: It's cold, isn't it? You need them to check information or to invite someone to agree. The page covers how to build the tag from the auxiliary and a pronoun, how the auxiliary follows the verb, special cases, intonation, and use. The thing to get right is the polarity: a positive sentence takes a negative tag and a negative sentence takes a positive tag. A falling voice expects agreement; a rising voice asks a real question."
-  es: "Preguntas cortas al final de la frase: It's cold, isn't it? Sirven para confirmar información o invitar a alguien a estar de acuerdo. La página cubre cómo se forma la coletilla con el auxiliar y un pronombre, cómo el auxiliar depende del verbo, los casos especiales, la entonación y el uso. Lo más importante es la polaridad: una frase afirmativa lleva coletilla negativa y una negativa lleva coletilla afirmativa. Con la voz descendente se espera acuerdo; con la ascendente se hace una pregunta real. El inglés cambia la coletilla según el verbo y el sujeto, mientras que en español basta con ¿verdad? o ¿no?."
+  en: "Question tags are short questions added to a statement to check or confirm it. A positive statement takes a negative tag and a negative statement a positive tag, with the same auxiliary: It's cold, **isn't it**?"
+  es: "Las coletillas son preguntas cortas al final de una frase para comprobar o confirmar. Equivalen a \"¿verdad?\" o \"¿no?\", pero cambian según la frase: invierten la polaridad y repiten el auxiliar: She works, **doesn't she**?"
 
 sections:
   - title: { en: "Form: auxiliary and pronoun", es: "Forma: auxiliar y pronombre" }

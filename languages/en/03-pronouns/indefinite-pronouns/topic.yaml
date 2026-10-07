@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Indefinite Pronouns, es: Pronombres indefinidos }
 summary:
-  en: "somebody, anything, nowhere, everyone: people, things and places that are unknown or general. You need them when you do not say exactly who, what or where, as in \"Somebody called\" or \"I need something\". The page starts with a table of the four families (some-, any-, no-, every-) by people, things and places. It then covers the verb and word order, pronunciation, and use in affirmative sentences, questions and negatives. The key point is that English uses only one negative word per clause: \"I don't know anything\" or \"I know nothing\"."
-  es: "somebody, anything, nowhere, everyone: personas, cosas y lugares sin concretar o en general. Sirven cuando no se dice exactamente quién, qué o dónde, como en \"Somebody called\" o \"I need something\". La página empieza con una tabla de las cuatro familias (some-, any-, no-, every-) por personas, cosas y lugares. Después trata el verbo y el orden de las palabras, la pronunciación y el uso en afirmativas, preguntas y negativas. Lo esencial es que el inglés usa una sola palabra negativa por oración: \"I don't know anything\" o \"I know nothing\". A diferencia del español (no sé nada), con nothing el verbo no lleva negación."
+  en: "Somebody, anything, nowhere and everyone name unknown or general people, things and places, in four families: some-, any-, no- and every-. English uses one negative word per clause: I don't know **anything**, or I know **nothing**."
+  es: "Somebody, anything, nowhere y everyone nombran personas, cosas y lugares sin concretar, en cuatro familias: some-, any-, no- y every-. La frase lleva una sola palabra negativa: I don't know **anything** (*no sé nada*), I know **nothing**."
 
 sections:
   - title: { en: Overview, es: Resumen }

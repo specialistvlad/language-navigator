@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: "Countable and Uncountable Nouns", es: "Sustantivos contables e incontables" }
 summary:
-  en: "Which nouns you can count, which you cannot, and what changes. A learner needs the difference to choose the right article, quantifier and verb form. The page starts with an overview, then lists common uncountable nouns, shows how to count them with phrases like a piece of, and explains nouns that have both a countable and an uncountable meaning. It ends with typical errors. Uncountable nouns have no plural and no a or an: information, advice, news. At A2 it adds nouns with two meanings, such as a paper and paper."
-  es: "Qué sustantivos se pueden contar, cuáles no y qué cambia. Hay que distinguirlos para elegir bien el artículo, el cuantificador y la forma del verbo. La página empieza con un resumen, lista los incontables más frecuentes, muestra cómo contarlos con expresiones como a piece of y explica los sustantivos que tienen un significado contable y otro incontable. Termina con los errores típicos. Los incontables no tienen plural y no llevan a ni an: information, advice, news. En A2 añade los sustantivos con dos significados, como a paper y paper. Contraste con el español: muchas palabras que en español son contables son incontables en inglés, como información, consejo, noticias y trabajo: information, advice, news y work."
+  en: "Countable nouns are counted one by one (a book, two books); uncountable nouns are masses and ideas (water, advice). Uncountable nouns take no a or an, no plural and a singular verb: The news **is** good."
+  es: "Los contables se cuentan uno a uno (a book, two books); los incontables son masas e ideas (water, advice). Advice, information, news y furniture son incontables: sin a, sin -s y con verbo en singular: The news **is** good."
 
 sections:
   - title: { en: Overview, es: Resumen }

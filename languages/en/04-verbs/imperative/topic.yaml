@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Imperative, es: Imperativo }
 summary:
-  en: "Instructions, directions, invitations and warnings with the base verb, Don't and Let's. You need it to tell people what to do, give directions and make suggestions. The page covers the affirmative form, the negative with Don't, and Let's for suggestions that include you. It then covers use and politeness, with please and softer alternatives. The key point is that the imperative is the bare base verb with no subject: \"Open the door\", \"Don't run\"."
-  es: "Instrucciones, direcciones, invitaciones y avisos con el verbo en forma base, Don't y Let's. Se necesita para decir a la gente lo que debe hacer, dar direcciones y hacer sugerencias. La página trata la forma afirmativa, la negativa con Don't y Let's para sugerencias que te incluyen. Después trata el uso y la cortesía, con please y alternativas más suaves. Lo esencial es que el imperativo es el verbo en forma base, sin sujeto: \"Open the door\", \"Don't run\". En español el imperativo cambia con tú, usted y vosotros; en inglés la forma es la misma para todos."
+  en: "The imperative gives instructions, directions, invitations and warnings with the base verb, Don't and Let's. The verb is the bare base form with no subject and no to: **Open** the door. **Don't open** it. **Let's go.**"
+  es: "El imperativo da instrucciones, direcciones, invitaciones y avisos con el verbo en forma base, Don't y Let's. Una sola forma vale para tú, usted, vosotros y ustedes, sin sujeto: **Open** the door. **Don't open** it."
 
 sections:
   - title: { en: Overview, es: Resumen }

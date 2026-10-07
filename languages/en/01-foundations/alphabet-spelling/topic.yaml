@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: The Alphabet, es: El alfabeto }
 summary:
-  en: "The 26 letters of the English alphabet and their names. A learner needs the letter names to spell a name, an email address or a word aloud. The page lists the letters in order, with each name in IPA and an example word. It separates vowels from consonants and notes that y works as both. The name of a letter and its sound in a word can differ: A is said /eɪ/, but apple starts with /æ/. Learn E, G, J and W carefully, because they are the names most often confused."
-  es: "Las 26 letras del alfabeto inglés y sus nombres. Hace falta conocer los nombres de las letras para deletrear un nombre, un correo electrónico o una palabra. La página lista las letras en orden, con cada nombre en AFI, su pronunciación aproximada con sonidos del español y una palabra de ejemplo. Distingue las vocales de las consonantes y explica que la y funciona como las dos. El nombre de una letra y su sonido dentro de una palabra pueden ser distintos: A se llama /eɪ/, pero apple empieza con /æ/. Conviene fijarse en E, G, J y W, porque sus nombres no coinciden con los españoles."
+  en: "The 26 letters of the English alphabet and their names, used to spell words aloud. A letter's name differs from its sound in a word: **A** is said /eɪ/, but **a**pple starts with /æ/."
+  es: "Las 26 letras del alfabeto inglés y sus nombres, para deletrear en voz alta. G, J y W tienen nombres propios del inglés: **G** se dice /dʒiː/ (*yi*), **J** /dʒeɪ/ (*yei*), **W** *double U*."
 
 sections:
   - title: { en: The alphabet, es: El alfabeto }

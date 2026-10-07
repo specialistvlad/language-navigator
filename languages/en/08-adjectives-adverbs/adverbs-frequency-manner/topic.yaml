@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: "Adverbs of frequency and manner", es: "Adverbios de frecuencia y modo" }
 summary:
-  en: "How often things happen (always, never) and how they happen (slowly, well). You need it to talk about routines and to say how someone does something. The page starts with frequency adverbs, their position in the sentence and the question How often? Then it covers manner adverbs, the spelling of -ly, irregular manner adverbs, their position, and the difference between good and well. At A1 it covers frequency adverbs and how often. At A2 it adds manner adverbs. Frequency adverbs go before the main verb but after be: I always go, I am always tired. Manner adverbs usually add -ly to the adjective, and good describes a noun while well describes a verb."
-  es: "Con qué frecuencia ocurren las cosas (always, never) y cómo ocurren (slowly, well). Sirve para hablar de rutinas y para decir cómo hace alguien algo. La página empieza con los adverbios de frecuencia, su posición en la frase y la pregunta How often? Después cubre los adverbios de modo, la ortografía de -ly, los adverbios de modo irregulares, su posición y la diferencia entre good y well. En A1 cubre los adverbios de frecuencia y how often; en A2 añade los adverbios de modo. Los adverbios de frecuencia van antes del verbo principal y después de be: I always go, I am always tired. Never ya es negativo, así que no lleva don't. En español el adverbio se mueve con más libertad; en inglés el objeto va pegado al verbo: She speaks English well."
+  en: "Frequency adverbs say how often things happen (always, never); manner adverbs say how they happen (slowly, well). Frequency adverbs go before the main verb but after be: I **always** go. I am **always** tired."
+  es: "Adverbios de frecuencia para decir cuántas veces (always, never) y de modo para decir cómo (slowly, well). El adverbio de frecuencia va antes del verbo principal y después de be, y never ya es negativo: *nunca voy* es I **never** go."
 
 sections:
   - title: { en: Overview, es: Resumen }

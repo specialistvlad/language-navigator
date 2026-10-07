@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Passive Voice, es: Voz pasiva }
 summary:
-  en: "be + past participle: the thing affected comes first, the doer is optional. You need it when the action or the result matters more than who did it. The page covers the change from active to passive, the passive in different tenses, negatives and questions, by + agent, and when to use it. The thing to get right is the order: be changes with the tense, and the main verb is always the past participle, as in The window was broken."
-  es: "be + participio: lo afectado va primero y quien hace la acción es opcional. Se usa cuando importa más la acción o el resultado que quién la hizo. La página cubre el paso de activa a pasiva, la pasiva en distintos tiempos, las negativas y preguntas, by + agente y cuándo usarla. Lo más importante es que be cambia con el tiempo y el verbo principal va siempre en participio, como en The window was broken. En español la pasiva con se (se rompió la ventana) es muy común; en inglés se usa la pasiva con be, y la página compara las dos."
+  en: "The passive (be + past participle) puts the receiver of the action first, for an unknown or unimportant doer, a process or formal writing. Be changes with the tense and the participle stays: English **is spoken** here."
+  es: "La pasiva (be + participio) pone primero a quien recibe la acción, cuando el autor se desconoce o no importa. La pasiva con se se dice con be + participio: *se habla inglés* es English **is spoken** here."
 
 sections:
   - title: { en: "Form: active to passive", es: "Forma: de activa a pasiva" }

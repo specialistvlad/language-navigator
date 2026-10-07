@@ -99,10 +99,26 @@ it, and the schemas list exactly its codes (`npm run check` compares them).
 |---|---|
 | `id`, `lang`, `kind`, `levels`, `tags`, `concepts`, `related` | identity and links |
 | `status` | `draft` or `approved`, per explanation language |
-| `title`, `summary` | localized; the summary is 3–10 sentences, and its first sentence is a one-line description that stands alone |
+| `title`, `summary` | localized; the summary follows the rules below |
 | `sections` | the full guide, in order |
 | `essentials` | one entry per level: the cheatsheet source (§8) |
 | `reminders` | per level: the traps that persist at higher levels (§8) |
+
+**The summary.** The page shows the summary above the guide; topic cards and the meta description
+show its first sentence. It is two sentences, at most 50 words:
+
+1. **The lead** names the forms and what they do, so it stands alone in a search result or on a
+   card: "Can for ability, permission and requests; could for past ability, polite requests and
+   possibility." It starts with a capital letter and has at most 160 characters.
+2. **The rule to get right**: the one rule a learner most needs, with an example that marks the
+   target form in bold: "Can and could never change and take the base verb without to: She **can**
+   swim. **Can** she swim?"
+
+Both sentences talk about the language itself. The rail lists the sections and the badges show the
+levels, so each sentence opens with a form, a meaning or a rule. Each explanation language has its
+own summary for its readers: the Spanish one gives the rule that matters most to Spanish speakers.
+`npm run check` enforces the length, the capital letter, and sentences free of page tours, level
+codes and openers such as "You need it to…".
 
 **A language reference.** Every topic explains a part of the language system through its rules:
 sounds, writing, numbers, dates and time, grammar. Words appear as examples of a rule.

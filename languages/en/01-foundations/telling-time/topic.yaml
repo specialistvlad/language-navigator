@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Telling the Time, es: La hora }
 summary:
-  en: "How to ask the time and say it in numbers, with past and to, and with a.m. and p.m. A learner needs it for appointments, timetables and daily routines. The page covers the time in numbers (seven fifteen), then past and to (quarter past seven, twenty to eight), and the parts of the day, and ends with typical errors. At A1 it adds past and to, and a.m. and p.m. To ask the time, say What time is it?"
-  es: "Cómo preguntar la hora y decirla con números, con past y to, y con a.m. y p.m. Sirve para citas, horarios y rutinas diarias. La página trata la hora con números (seven fifteen), después past y to (quarter past seven, twenty to eight) y las partes del día, y termina con los errores típicos. En A1 añade past y to, y a.m. y p.m. La hora se pregunta con What time is it?: la hora es time. Cuarto se dice quarter y no lleva artículo: quarter past seven."
+  en: "How to ask the time and say it in numbers, and with past and to. Say the hour first, then the minutes: 7:05 is **seven oh five**, and o'clock follows only a full hour: **seven o'clock**."
+  es: "Cómo preguntar la hora y decirla con números y con past y to. La hora se dice con It's y los números, sin artículo: **It's** seven thirty (*son las siete y media*)."
 
 sections:
   - title: { en: The time in numbers, es: La hora con números }

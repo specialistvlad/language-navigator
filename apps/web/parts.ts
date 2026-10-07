@@ -1,4 +1,4 @@
-// Small HTML and text pieces the pages share: level badges and chips, anchors, summaries, edit links.
+// Small HTML and text pieces the pages share: level badges and chips, anchors, edit links.
 import { type CurriculumSection, lv, SITE } from "../../scripts/lib.ts";
 import { levelBadge } from "./render.ts";
 
@@ -36,5 +36,3 @@ export const rangeBadge = (levels: string): string => {
 };
 // Topic entries in lists show one badge: the level where the topic starts.
 export const startBadge = (levels: string): string => levelBadge(firstLevel(levels));
-// The first sentence of a summary stands alone: cards and the meta description show only it.
-export const lead = (text: string): string => /^.*?[.!?](?=\s+[A-ZÁÉÍÓÚÑ¿¡]|$)/.exec(text)?.[0] ?? text;

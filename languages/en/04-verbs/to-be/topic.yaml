@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: "To be", es: "To be (ser / estar)" }
 summary:
-  en: "am, is, are, was, were and will be: the verb for name, age, nationality, job, feelings and place. You need it from the first lesson to introduce yourself and describe people and things. Be needs no helper: it goes before the subject in questions and takes not in negatives, in every tense. The page opens with one grid that shows every form for every person, then covers the present with its short forms, was and were, will be, the uses and typical errors. At A0 it covers the present; A1 adds was and were, and A2 will be. The key point is that English always needs a subject and a form of be: I am 20, She is a teacher."
-  es: "am, is, are, was, were y will be: el verbo para el nombre, la edad, la nacionalidad, la profesión, los sentimientos y el lugar. Se necesita desde la primera clase para presentarse y describir personas y cosas. Be no necesita auxiliar: va delante del sujeto en las preguntas y lleva not en las negativas, en todos los tiempos. La página empieza con una tabla que muestra todas las formas para todas las personas y después trata el presente con sus formas cortas, was y were, will be, los usos y los errores típicos. En A0 trata el presente; A1 añade was y were, y A2 will be. Lo esencial es que el inglés siempre necesita un sujeto y una forma de be: I am 20, She is a teacher. Be cubre ser y estar, y se usa para la edad y los sentimientos (I am cold), donde el español usa tener (tengo frío)."
+  en: "Am, is, are, was, were and will be: the verb for name, age, nationality, job, feelings and place. Be needs no helper and the subject is always in the sentence: **Are** you a student? **It is** cold."
+  es: "Am, is, are, was, were y will be: el verbo para nombre, edad, nacionalidad, profesión, sentimientos y lugar. Ser, estar y tener (con la edad) son be, y el sujeto siempre aparece: I **am** 20. **It is** cold today."
 
 sections:
   - title: { en: Overview, es: Resumen }

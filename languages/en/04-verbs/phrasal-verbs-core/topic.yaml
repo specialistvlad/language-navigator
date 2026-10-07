@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: "Phrasal Verbs: Core", es: "Verbos frasales básicos" }
 summary:
-  en: "Verb + particle with a new meaning: get up, turn it off, look for, run out of. You need them because everyday English uses them constantly, and their meaning often differs from the verb alone. The page explains how they work with an object and where the stress falls. It then groups the verbs by theme: daily routine, going and coming, looking and finding out, and continuing and stopping. At A2 it covers the common verbs; B1 adds verbs such as run out of, look forward to and get on with. The key point is to learn the verb and particle as one unit: \"look for\" means search."
-  es: "Verbo + partícula con un significado nuevo: get up, turn it off, look for, run out of. Se necesitan porque el inglés cotidiano los usa constantemente y su significado suele ser distinto del verbo solo. La página explica cómo funcionan con complemento y dónde cae el acento. Después agrupa los verbos por temas: rutina diaria, ir y venir, buscar y averiguar, y continuar y parar. En A2 trata los verbos comunes; B1 añade verbos como run out of, look forward to y get on with. Lo esencial es aprender verbo y partícula como una unidad: \"look for\" significa buscar. El español no tiene un equivalente directo: suele usar un verbo distinto (levantarse, apagar, buscar)."
+  en: "Verb + particle with a new meaning: get up, turn it off, look for, run out of. A pronoun goes between the verb and the particle of a separable verb: **Turn it off.** **Pick it up.**"
+  es: "Verbo + partícula con un significado nuevo: get up, turn it off, look for, run out of. En un verbo separable el pronombre va en medio: **turn it off**, **pick it up**; en uno inseparable el complemento va después: **look after** them."
 
 sections:
   - title: { en: Overview, es: Resumen }

@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Reported Speech, es: Estilo indirecto }
 summary:
-  en: "How to report what someone said, asked or told you to do. You need it whenever you tell a third person what was said earlier. The page covers say and tell, the shift of tenses (backshift), the change of pronouns and time words, reported questions and reported commands. The thing to get right is the move one step back in time: am becomes was, will becomes would. Reported questions keep statement word order, with no do or did."
-  es: "Cómo contar lo que alguien dijo, preguntó o mandó hacer. Se usa siempre que cuentas a otra persona lo que se dijo antes. La página cubre say y tell, el cambio de tiempo verbal (backshift), el cambio de pronombres y expresiones de tiempo, las preguntas indirectas y las órdenes indirectas. Lo más importante es retroceder un paso en el tiempo: am pasa a was y will pasa a would. Las preguntas indirectas mantienen el orden de una afirmación, sin do ni did. Es parecido al español, pero en inglés el cambio de tiempo es más sistemático y tell siempre lleva persona."
+  en: "Reported speech tells what someone said without quoting it, with say, tell and ask. After a past verb the tense moves one step back and questions take statement order: She asked where I **lived**."
+  es: "El estilo indirecto cuenta lo que alguien dijo, con say, tell y ask. Tras un verbo en pasado el tiempo retrocede un paso, y tell lleva persona: me dijo que vendría es He **told** me he **would** come."
 
 sections:
   - title: { en: "Form: say and tell", es: "Forma: say y tell" }

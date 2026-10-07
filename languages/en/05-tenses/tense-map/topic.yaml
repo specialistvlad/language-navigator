@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Tense map, es: Mapa de tiempos verbales }
 summary:
-  en: "Every tense in the curriculum on one page, with form, main use, example and time words. Use it to see how the tenses fit together and to find the one you need. The page opens with a table that places each tense by time and aspect, then goes through the present, past and future tenses one by one. It ends with signal words and typical errors. At A1 and A2 it covers the simple and continuous tenses, used to and the present perfect, and at B1 it adds the past perfect. The one thing to get right is that the time word and the meaning choose the tense, so read the table by time and by what the speaker wants to say."
-  es: "Todos los tiempos del curso en una página, con forma, uso principal, ejemplo y palabras de tiempo. Sirve para ver cómo encajan los tiempos y para encontrar el que necesitas. La página empieza con una tabla que sitúa cada tiempo por momento y aspecto, y repasa uno a uno los tiempos de presente, pasado y futuro. Termina con las palabras clave y los errores típicos. En A1 y A2 cubre los tiempos simples y continuos, used to y el present perfect, y en B1 añade el past perfect. Lo más importante es que la palabra de tiempo y el significado eligen el tiempo verbal, así que conviene leer la tabla por tiempo y por lo que se quiere decir. Los tiempos ingleses no coinciden uno a uno con los españoles: el present perfect y el past simple, por ejemplo, se reparten de otra manera que el pretérito perfecto y el indefinido."
+  en: "Every tense on one page, placed by time and aspect, with form, main use, example and time words. Time words and meaning choose the tense: yesterday takes the past simple (I **played**), now takes the present continuous (I **am playing**)."
+  es: "Todos los tiempos verbales en una página, situados por tiempo y aspecto, con forma, uso, ejemplo y palabras de tiempo. La palabra de tiempo y el sentido eligen el tiempo verbal, y yesterday pide past simple aunque en español se diga he jugado: I **played** yesterday."
 
 sections:
   - title: { en: Overview, es: Resumen }

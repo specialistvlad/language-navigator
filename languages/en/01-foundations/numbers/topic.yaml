@@ -10,8 +10,8 @@ status: { en: draft, es: draft }
 
 title: { en: Numbers, es: Los números }
 summary:
-  en: "Numbers from 0 to a million, and ordinal numbers. A learner needs them for prices, ages, phone numbers, addresses and dates. The page goes in steps: 0 to 12, 13 to 19, 20 to 90, then hundreds, thousands and millions. It ends with the ordinals (first, second, third) and typical errors. Teens end in -teen and tens end in -ty, and the stress differs: thirTEEN, but THIRty. Hundred, thousand and million stay singular after a number: two hundred."
-  es: "Los números del 0 al millón y los números ordinales. Hacen falta para precios, edades, teléfonos, direcciones y fechas. La página avanza por tramos: del 0 al 12, del 13 al 19, del 20 al 90, y después los cientos, los miles y los millones. Termina con los ordinales (first, second, third) y los errores típicos. Los números del 13 al 19 acaban en -teen y las decenas en -ty, y el acento cambia: thirTEEN, pero THIRty. Hundred, thousand y million van en singular detrás de un número: two hundred. Forty se escribe sin u, a diferencia de four."
+  en: "Numbers from 0 to a million, and the ordinals first, second, third. Numbers in -teen stress the end and numbers in -ty the start: thir**teen** is 13, **thir**ty is 30."
+  es: "Los números del 0 al millón y los ordinales first, second, third. Hundred, thousand y million quedan en singular detrás de un número: two **hundred**, three **thousand**."
 
 sections:
   - title: { en: 0 to 12, es: Del 0 al 12 }
