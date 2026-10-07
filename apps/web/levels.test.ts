@@ -121,7 +121,7 @@ describe.each(topicPages)("%s", (path) => {
   });
 });
 
-test("levels.css hides each level above the filter, gives every level its colours, and tints the switcher up to the chosen level", async () => {
+test("levels.css hides each level above the filter, fades the badge halves above it, gives every level its colours, and tints the switcher up to the chosen level", async () => {
   await testSite();
   const css = await Bun.file(join(SITE_DIR, "levels.css")).text();
   for (const [i, { code }] of LEVEL_INFO.entries()) {
@@ -137,6 +137,10 @@ test("levels.css hides each level above the filter, gives every level its colour
     if (above.length === 0) continue;
     expect(css).toContain(
       `html[data-level="${code}"]:is([data-page="topic"], [data-page="track"]) :is(${above.map((c) => `[data-level="${c}"]`).join(", ")})`,
+    );
+    // Badge halves above the filter fade.
+    expect(css).toContain(
+      `html[data-level="${code}"]:is([data-page="topic"], [data-page="track"]) .lvl > .half:is(${above.map((c) => `.lvl-${c}`).join(", ")}) {`,
     );
   }
 });

@@ -1,6 +1,7 @@
 // The level filter in a browser: on every topic and track page, each level button shows exactly what
-// starts at or below it, leaves no table or list empty, greys out the rail entries above it, trims the
-// badges to it, and shows the empty-view note only when nothing is left.
+// starts at or below it, leaves no table or list empty, greys out the rail entries above it, keeps
+// every badge's range and fades the badge halves above it, and shows the empty-view note only when
+// nothing is left.
 // Run: npm run e2e (Chromium from Playwright: bunx playwright install chromium)
 import { afterAll, beforeAll, describe, expect, test } from "bun:test";
 import { join } from "node:path";
@@ -68,16 +69,20 @@ async function look(levels: readonly string[]): Promise<Seen> {
       .map(name);
     const badges = [...document.querySelectorAll<HTMLElement>(".lvl[data-from][data-to]")]
       .filter((b) => {
-        const from = order.indexOf(b.dataset["from"] ?? "");
-        const shown = order[Math.max(from, Math.min(order.indexOf(b.dataset["to"] ?? ""), at))];
-        const want = shown === order[from] ? [order[from]] : [order[from], shown];
-        const halves = [...b.querySelectorAll(":scope > .half")].map((h) => `${h.className}:${h.textContent}`);
+        const from = b.dataset["from"] ?? "";
+        const to = b.dataset["to"] ?? "";
+        const want = from === to ? [from] : [from, to];
+        const halves = [...b.querySelectorAll<HTMLElement>(":scope > .half")];
+        // A half above the filter fades: it loses its tint and keeps its code.
+        const faded = (h: HTMLElement): boolean => getComputedStyle(h).backgroundColor === "rgba(0, 0, 0, 0)";
+        const above = (h: HTMLElement): boolean => order.indexOf(h.textContent) > at;
+        const tints = halves.filter((h) => !faded(h)).map((h) => getComputedStyle(h).backgroundColor);
         return (
           b.textContent !== want.join("–") ||
-          halves.join() !== want.map((l) => `half lvl-${l ?? ""}:${l ?? ""}`).join() ||
-          // Each half shows its own level's colour.
-          b.querySelectorAll(":scope > .half").length !==
-            new Set([...b.querySelectorAll(":scope > .half")].map((h) => getComputedStyle(h).backgroundColor)).size
+          halves.map((h) => `${h.className}:${h.textContent}`).join() !== want.map((l) => `half lvl-${l}:${l}`).join() ||
+          halves.some((h) => faded(h) !== above(h)) ||
+          // Each tinted half shows its own level's colour.
+          new Set(tints).size !== tints.length
         );
       })
       .map(name);

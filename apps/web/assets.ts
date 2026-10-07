@@ -26,7 +26,8 @@ export async function clientJs(): Promise<string> {
 // its hue from levels.yaml in each theme's tones (level-colours.ts), the level switcher tinted from
 // the lowest level up to the chosen one, and the level filter. An element's data-level is its lowest level; it
 // hides while the filter (data-level on <html>) sits below it. The rail keeps its entries and greys
-// them out; a view whose content all sits above the filter shows its note instead.
+// them out; a view whose content all sits above the filter shows its note instead. A badge keeps its
+// range and fades the half above the filter (layout.css draws the faded half).
 export function levelsCss(): string {
   const codes = LEVEL_INFO.map((l) => l.code);
   const switcher = codes.map(
@@ -45,8 +46,13 @@ export function levelsCss(): string {
       .slice(i + 1)
       .map((c) => `[data-needs="${c}"]`)
       .join(", ")})`;
+    const halves = `:is(${codes
+      .slice(i + 1)
+      .map((c) => `.lvl-${c}`)
+      .join(", ")})`;
     return [
       `${at}:is([data-page="topic"], [data-page="track"]) ${list}:not(.toc > li) { display: none !important; }`,
+      `${at}:is([data-page="topic"], [data-page="track"]) .lvl > .half${halves} { background: var(--beyond-bg); box-shadow: var(--beyond-edge); color: var(--beyond-ink); }`,
       `${at}[data-page="topic"] .toc > li${list} { opacity: 0.4; pointer-events: none; }`,
       `${at} .filter-empty${needs} { display: block; }`,
     ];

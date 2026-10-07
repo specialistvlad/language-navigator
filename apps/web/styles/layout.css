@@ -92,6 +92,20 @@
   padding: var(--badge-pad, 1px 7px);
   background: var(--level-tint);
   color: var(--lvl);
+  /* A half above the level filter keeps its code and fades: an outline of its colour, no tint
+     (levels.css picks the halves) */
+  --beyond-bg: transparent;
+  --beyond-edge: inset 0 0 0 1px color-mix(in oklch, var(--lvl) 40%, transparent);
+  --beyond-ink: color-mix(in oklch, var(--lvl) 55%, var(--surface));
+}
+.lvl > .half:first-child {
+  border-radius: 999px 0 0 999px;
+}
+.lvl > .half:last-child {
+  border-radius: 0 999px 999px 0;
+}
+.lvl > .half:only-child {
+  border-radius: 999px;
 }
 /* A list badge's halves share one width and a single level keeps the second column free, so the
    badges of a list line up: lowest levels in one column, highest in the next */

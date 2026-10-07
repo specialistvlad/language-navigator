@@ -99,8 +99,8 @@ section in the menu.
   range when it starts above its section; a leaf shows its level when it sits above its block's
   lowest level. A topic at a single level shows its level once, in the header.
 - The level filter hides every element that starts above the chosen level, so a block hides with
-  its last leaf and a menu entry with its topic. Badges read up to the chosen level: (A1][B1) reads
-  (A1][A2) at A2 and (A1) at A1. The rail keeps every entry and greys out the ones the filter hides.
+  its last leaf and a menu entry with its topic. A badge keeps its range at every level; the half above
+  the chosen level fades to an outline: at A2, (A1][B1) keeps its B1 half faded. The rail keeps every entry and greys out the ones the filter hides.
 
 ## 4. Text values
 
