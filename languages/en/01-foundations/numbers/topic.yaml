@@ -39,7 +39,7 @@ sections:
       - type: bullets
         items:
           - en: "In phone numbers, say each digit. 0 is *oh* /əʊ/; two equal digits are *double*: 077 → *oh double seven*."
-            es: "En los números de teléfono se dice cada cifra. El 0 es *oh* /əʊ/; dos cifras iguales son *double*: 077 → *oh double seven*."
+            es: "En los teléfonos se dice cada cifra. 0 = *oh* /əʊ/; dos cifras iguales = *double*: 077 → *oh double seven*."
 
   - title: { en: 13 to 19, es: Del 13 al 19 }
     level: A0

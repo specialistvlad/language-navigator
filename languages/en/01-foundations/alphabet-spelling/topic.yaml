@@ -57,7 +57,7 @@ sections:
       - type: bullets
         items:
           - en: "A letter's name and its sound in a word can differ: A is /eɪ/, but **a**pple starts with /æ/."
-            es: "El nombre de una letra y su sonido en una palabra pueden ser distintos: A se llama /eɪ/, pero **a**pple empieza con /æ/."
+            es: "El nombre de una letra y su sonido pueden ser distintos: A se llama /eɪ/, pero **a**pple empieza con /æ/."
           - { for: [es], text: { es: "«Suena como» es una aproximación con sonidos del español. En «sed», la s es sonora: /z/." } }
           - en: "US: Z is /ziː/ (*zee*) and R is /ɑːr/."
             es: "US: Z se dice /ziː/ (*zee*) y R se dice /ɑːr/."
