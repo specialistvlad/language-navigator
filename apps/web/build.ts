@@ -49,6 +49,22 @@ const GITHUB_ICON =
 const PRINT_ICON =
   '<svg class="icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>';
 
+// Cheatsheet body: each ## section heading spans the page and its ### topic blocks flow into lanes;
+// a section with a single topic flows that topic's #### level blocks instead.
+function sheetHtml(markdown: string): string {
+  const [head, ...sections] = markdown.split(/\n(?=## )/);
+  const body = sections.map((section) => {
+    let [lead, ...cards] = section.split(/\n(?=### )/);
+    if (cards.length === 1) {
+      const [topic, ...blocks] = cards[0].split(/\n(?=#### )/);
+      lead = `${lead}\n${topic}`;
+      cards = blocks;
+    }
+    return `${md.render(lead)}<div class="lanes">${cards.map((card) => `<section>${md.render(card)}</section>`).join("")}</div>`;
+  });
+  return md.render(head) + body.join("");
+}
+
 // Level range covered by a section's topics, e.g. "A0-A1".
 function sectionRange(section: CurriculumSection): string {
   const froms = section.topics.map((t) => t.levels.split("-")[0]);
@@ -186,7 +202,7 @@ export async function build(o: BuildOptions): Promise<number> {
             sheets: sheetsChoice(false),
           }),
           nav: trackNav(explain, lang),
-          main: `<article class="doc index">${indexHead}<div class="index-grid">${sectionsHtml}</div></article>`,
+          main: `<article class="doc index">${indexHead}<div class="index-grid lanes">${sectionsHtml}</div></article>`,
           dev: o.dev,
           siteUrl: o.siteUrl,
         }),
@@ -229,7 +245,7 @@ export async function build(o: BuildOptions): Promise<number> {
               sheets: sheetsChoice(false),
             }),
             nav: trackNav(explain, lang, ref),
-            main: `<article class="doc${topic.levels.length === 1 ? " one-level" : ""}">${head}${intro}<div class="sections">${sections}</div></article>`,
+            main: `<article class="doc${topic.levels.length === 1 ? " one-level" : ""}">${head}${intro}<div class="sections lanes">${sections}</div></article>`,
             dev: o.dev,
             siteUrl: o.siteUrl,
           }),
@@ -332,7 +348,7 @@ export async function build(o: BuildOptions): Promise<number> {
           alternates: alternates((e) => sheetsUrl(e, lang)),
           controls: sheetControls((e) => sheetsUrl(e, lang)),
           nav: sheetNav(),
-          main: `<article class="doc"><h1>${escapeHtml(t.sheets)}</h1><blockquote><p>${escapeHtml(t.sheetsIntro)}</p></blockquote>${indexHtml}</article>`,
+          main: `<article class="doc"><h1>${escapeHtml(t.sheets)}</h1><blockquote><p>${escapeHtml(t.sheetsIntro)}</p></blockquote><div class="sheet-index lanes">${indexHtml}</div></article>`,
           dev: o.dev,
           siteUrl: o.siteUrl,
         }),
@@ -350,7 +366,7 @@ export async function build(o: BuildOptions): Promise<number> {
             alternates: alternates((e) => sheetUrl(e, lang, s.id)),
             controls: sheetControls((e) => sheetUrl(e, lang, s.id)),
             nav: sheetNav(s),
-            main: `<article class="doc sheet">${md.render(s.markdown)}</article>`,
+            main: `<article class="doc sheet">${sheetHtml(s.markdown)}</article>`,
             dev: o.dev,
             siteUrl: o.siteUrl,
           }),

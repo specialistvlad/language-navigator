@@ -511,8 +511,6 @@ html[data-page="topic"]:not([data-view="essentials"]) .sections > section.block 
 
 /* Track index: header, one card per section */
 
-html[data-page="track"] .content { max-width: 1200px; }
-
 .index-head { margin-bottom: 28px; }
 .eyebrow { margin: 0 0 6px; font-size: 12px; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
 .doc .index-head h1 { font-size: 34px; margin: 0 0 8px; }

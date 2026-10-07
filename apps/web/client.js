@@ -60,36 +60,36 @@
 
   mark();
 
-  // Topic sections without grid-lanes: CSS sets the column count, this places each visible
-  // section, in order, at the top of the shortest column on a grid of 4px rows.
+  // Lanes without grid-lanes: CSS sets the column count, this places each visible block, in order,
+  // at the top of the shortest column on a grid of 4px rows.
+  const fallback = CSS.supports("display", "grid-lanes") ? [] : [...document.querySelectorAll(".lanes")];
   function lanes() {
-    const sections = document.querySelector(".sections.js-fallback");
-    if (!sections) return;
-    const count = getComputedStyle(sections).gridTemplateColumns.split(" ").length;
-    sections.classList.toggle("js-lanes", count > 1);
-    const heights = Array(count).fill(0);
-    for (const item of sections.children) {
-      item.style.gridColumn = item.style.gridRow = "";
-      if (count === 1 || !item.offsetHeight) continue;
-      const style = getComputedStyle(item);
-      const span = Math.ceil((item.offsetHeight + parseFloat(style.marginTop) + parseFloat(style.marginBottom)) / 4);
-      const lane = heights.indexOf(Math.min(...heights));
-      item.style.gridColumn = String(lane + 1);
-      item.style.gridRow = `${heights[lane] + 1} / span ${span}`;
-      heights[lane] += span;
+    for (const el of fallback) {
+      const style = getComputedStyle(el);
+      const count = style.gridTemplateColumns.split(" ").length;
+      const gap = parseFloat(style.getPropertyValue("--lane-gap")) || 0;
+      el.classList.toggle("js-lanes", count > 1);
+      const heights = Array(count).fill(0);
+      for (const item of el.children) {
+        item.style.gridColumn = item.style.gridRow = "";
+        if (count === 1 || !item.offsetHeight) continue;
+        const margins = parseFloat(getComputedStyle(item).marginTop) + parseFloat(getComputedStyle(item).marginBottom);
+        const span = Math.ceil((item.offsetHeight + margins + gap) / 4);
+        const lane = heights.indexOf(Math.min(...heights));
+        item.style.gridColumn = String(lane + 1);
+        item.style.gridRow = `${heights[lane] + 1} / span ${span}`;
+        heights[lane] += span;
+      }
     }
   }
-  const sections = document.querySelector(".sections");
-  if (sections && !CSS.supports("display", "grid-lanes")) {
-    sections.classList.add("js-fallback");
-    let width = 0;
-    new ResizeObserver(() => {
-      if (sections.clientWidth === width) return;
-      width = sections.clientWidth;
-      lanes();
-    }).observe(sections);
-    document.fonts.ready.then(lanes);
-  }
+  const widths = new Map();
+  const observer = new ResizeObserver((entries) => {
+    if (entries.every((e) => widths.get(e.target) === e.target.clientWidth)) return;
+    for (const e of entries) widths.set(e.target, e.target.clientWidth);
+    lanes();
+  });
+  fallback.forEach((el) => observer.observe(el));
+  if (fallback.length) document.fonts.ready.then(lanes);
 
   // Live reload while `npm start` runs: reload on rebuild and after a server restart.
   if (root.dataset.dev === "1") {
