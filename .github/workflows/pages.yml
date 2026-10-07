@@ -47,9 +47,9 @@ jobs:
         if: steps.tag.outputs.deploy == 'true'
         run: bun install --frozen-lockfile
 
-      - name: Check content
+      - name: Verify code and content
         if: steps.tag.outputs.deploy == 'true'
-        run: bun run check
+        run: bun run verify
 
       - uses: actions/configure-pages@v6
         id: pages

@@ -64,6 +64,10 @@ language-navigator/
 | `npm start` | builds the site into `build/dev/`, serves it on port 47380 on every interface (open the printed network address on a phone), rebuilds and reloads on every change |
 | `npm run build` | builds the static site into `build/web/`; `SITE_URL=https://… npm run build` sets the public URL; its path prefixes every link |
 | `npm run check` | validates all data against the schemas and conventions |
+| `npm run typecheck` | type-checks the code under strict TypeScript (`tsconfig.json`) |
+| `npm run lint` | lints the code with typescript-eslint's strict and stylistic type-checked rules (`eslint.config.js`) |
+| `npm run format` | formats the code with Prettier; `npm run format:check` only reports |
+| `npm run verify` | typecheck, lint, format check and data check together; CI runs it on every push and before publishing |
 | `npm run md` | writes every guide as Markdown to `build/md/` |
 
 ## Publishing
