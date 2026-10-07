@@ -1,13 +1,16 @@
 // Markdown → HTML for guides: level badges, level attributes on rows and bullets,
 // error tables, scrollable table wrappers and links to unwritten topics.
 import MarkdownIt from "markdown-it";
-import { filled, INTERFACE, LEVELS } from "../../scripts/lib.ts";
+import { EXPLAIN_CODES, filled, INTERFACE, LEVELS } from "../../scripts/lib.ts";
 
 const CODE = `(${LEVELS.join("|")})`;
 const TAG = new RegExp(`\\s*\\[${CODE}(?:-${CODE})?\\]\\s*$`);
 const BULLET_TAG = new RegExp(`^\\[${CODE}\\]\\s*`);
 // Headings and column titles the generator writes, in every explanation language (interface.yaml).
-const wording = (key: string): string[] => Object.values(INTERFACE.text[key] ?? {});
+const wording = (key: string): string[] => {
+  const text = INTERFACE.text[key];
+  return text ? EXPLAIN_CODES.map((e) => text[e]) : [];
+};
 const ESSENTIALS = wording("essentials");
 const REMINDER = wording("reminder");
 

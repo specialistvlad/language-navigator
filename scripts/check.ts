@@ -5,7 +5,7 @@ import { join } from "node:path";
 import {
   type Block,
   CONTENT,
-  EXPLAIN,
+  EXPLAIN_CODES,
   type Explain,
   filled,
   INTERFACE,
@@ -27,7 +27,7 @@ import { isLocalized, tableShape } from "./markdown.ts";
 const ajv = new Ajv({ allErrors: true, strict: true });
 const schema = async (name: string): Promise<ValidateFunction> =>
   ajv.compile(await readYaml<object>(join(CONTENT, "schema", `${name}.schema.json`)));
-const ALL: Explain[] = Object.keys(EXPLAIN);
+const ALL: Explain[] = EXPLAIN_CODES;
 
 let problems = 0;
 const fail = (where: string, message: string): void => {
@@ -130,7 +130,8 @@ for (const ref of refs) {
       else unmarked++;
     };
     for (const block of list) {
-      if (block.type === "text") see(block.level);
+      // A text block carries no level of its own (topic.schema.json).
+      if (block.type === "text") see(undefined);
       if (block.type === "bullets") for (const it of block.items) see(typeof it === "object" && !isLocalized(it) ? it.level : undefined);
       if (block.type === "table") for (const row of block.rows) see(row.level);
       if (block.type === "errors") for (const row of block.rows) see(row.level);

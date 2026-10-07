@@ -1,5 +1,5 @@
 // Page shell, controls and interface text for the static site.
-import { EXPLAIN, type Explain, explainName, filled, LEVELS, SITE, say } from "../../scripts/lib.ts";
+import { EXPLAIN_CODES, type Explain, explainName, filled, LEVELS, SITE, say } from "../../scripts/lib.ts";
 import { escapeHtml } from "./render.ts";
 
 // Interface wording keys this app shows, all from languages/interface.yaml.
@@ -58,7 +58,7 @@ function makeUi(e: Explain): Ui {
 }
 
 // Interface wording per explanation language: languages/interface.yaml plus the web-only actions.
-const UI = new Map(Object.keys(EXPLAIN).map((e) => [e, makeUi(e)]));
+const UI = new Map(EXPLAIN_CODES.map((e) => [e, makeUi(e)]));
 export function ui(explain: Explain): Ui {
   const t = UI.get(explain);
   if (t === undefined) throw new Error(`No interface wording for "${explain}"`);

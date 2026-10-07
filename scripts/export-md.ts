@@ -2,7 +2,7 @@
 // Run: npm run md
 import { rm } from "node:fs/promises";
 import { join } from "node:path";
-import { EXPLAIN, loadTopics, ROOT } from "./lib.ts";
+import { EXPLAIN_CODES, loadTopics, ROOT } from "./lib.ts";
 import { renderGuide } from "./markdown.ts";
 
 const OUT = join(ROOT, "build/md");
@@ -12,7 +12,7 @@ const refs = await loadTopics();
 let count = 0;
 for (const ref of refs) {
   if (!ref.topic) continue;
-  for (const explain of Object.keys(EXPLAIN)) {
+  for (const explain of EXPLAIN_CODES) {
     await Bun.write(join(OUT, ref.lang, ref.section.dir, ref.entry.slug, `guide.${explain}.md`), renderGuide(ref, explain, refs));
     count++;
   }

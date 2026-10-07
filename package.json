@@ -15,7 +15,8 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "verify": "bun run typecheck && bun run lint && bun run format:check && bun run check"
+    "verify": "bun run scripts/schema-types.ts --check && bun run typecheck && bun run lint && bun run format:check && bun run check",
+    "types": "bun run scripts/schema-types.ts"
   },
   "dependencies": {
     "ajv": "8",
@@ -28,6 +29,7 @@
     "@typescript/native": "npm:typescript@^7.0.2",
     "eslint": "^10.12.0",
     "globals": "^17.13.0",
+    "json-schema-to-typescript": "^16.0.0",
     "prettier": "^3.9.9",
     "typescript": "npm:typescript@^6.0.2",
     "typescript-eslint": "^8.71.1"

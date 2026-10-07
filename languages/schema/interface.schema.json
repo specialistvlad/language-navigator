@@ -24,10 +24,10 @@
       "additionalProperties": false,
       "properties": {
         "en": {
-          "$ref": "#/definitions/partial"
+          "$ref": "#/definitions/someLanguages"
         },
         "es": {
-          "$ref": "#/definitions/partial"
+          "$ref": "#/definitions/someLanguages"
         }
       }
     }
@@ -52,7 +52,7 @@
         }
       }
     },
-    "partial": {
+    "someLanguages": {
       "description": "Text in some explanation languages.",
       "type": "object",
       "additionalProperties": false,

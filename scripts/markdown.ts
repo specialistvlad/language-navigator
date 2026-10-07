@@ -3,7 +3,6 @@ import { dirname, relative } from "node:path";
 import {
   type Block,
   type Column,
-  type Example,
   type ErrorsBlock,
   type Explain,
   type Item,
@@ -72,17 +71,21 @@ function renderItem(item: Item, ctx: Ctx): string | null {
     return filled(own) ? resolveLinks(own, ctx) : null;
   }
   if (!shows(item, ctx.explain)) return null;
-  const base = [text(item.text, ctx), item.ex].filter(filled).join(" ");
   const level = filled(item.level) ? `[${item.level}] ` : "";
-  return level + resolveLinks(withTranslation(base, item.tr, ctx), ctx);
+  return level + renderText(item.text, item.ex, item.tr, ctx);
 }
 
-function renderCell(cell: unknown, ctx: Ctx): string {
-  if (cell === undefined || cell === null) return "";
+// Text and an example side by side, with the example's translation when the reader needs it.
+function renderText(value: Text | undefined, ex: string | undefined, tr: Localized | undefined, ctx: Ctx): string {
+  const base = [text(value, ctx), ex].filter(filled).join(" ");
+  return resolveLinks(withTranslation(base, tr, ctx), ctx);
+}
+
+function renderCell(cell: Row[string], ctx: Ctx): string {
+  if (cell === undefined || Array.isArray(cell)) return "";
   if (typeof cell === "string") return cell;
-  const value = cell as Localized | Example;
-  if (!isLocalized(value)) return withTranslation(value.ex, value.tr, ctx);
-  return value[ctx.explain] ?? "";
+  if (!isLocalized(cell)) return withTranslation(cell.ex, cell.tr, ctx);
+  return cell[ctx.explain] ?? "";
 }
 
 export interface TableShape {
@@ -133,7 +136,7 @@ function renderBlock(block: Block, ctx: Ctx): string | null {
   if (!shows(block, ctx.explain)) return null;
   switch (block.type) {
     case "text":
-      return renderItem({ text: block.text, ex: block.ex, tr: block.tr }, ctx);
+      return renderText(block.text, block.ex, block.tr, ctx);
     case "bullets": {
       const items = block.items.map((i) => renderItem(i, ctx)).filter(filled);
       return items.length > 0 ? items.map((i) => `- ${i}`).join("\n") : null;

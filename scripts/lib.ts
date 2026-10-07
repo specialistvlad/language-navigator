@@ -3,29 +3,26 @@ import { join } from "node:path";
 import interfaceFile from "../languages/interface.yaml";
 import levelsFile from "../languages/levels.yaml";
 import siteFile from "../languages/site.yaml";
+import type { LanguageNavigatorConcepts as ConceptsFile } from "./generated/concepts.ts";
+import type { LanguageNavigatorCurriculum as CurriculumFile } from "./generated/curriculum.ts";
+import type { InterfaceWording as InterfaceFile } from "./generated/interface.ts";
+import type { LevelScale as LevelsFile } from "./generated/levels.ts";
+import type { SiteIdentityAndExplanationLanguages as SiteFile } from "./generated/site.ts";
+import type { Explain, Item, Level, Localized, LanguageNavigatorTopic as TopicFile } from "./generated/topic.ts";
 
 export const ROOT = join(import.meta.dir, "..");
 export const CONTENT = join(ROOT, "languages");
 
 // ---------- Configuration (languages/site.yaml, levels.yaml, interface.yaml) ----------
 
-export type Explain = string;
-export type Level = string;
-export interface Site {
-  name: string;
-  url: string;
-  repository: string;
-  explain: { code: Explain; enabled: boolean; name: Record<Explain, string> }[];
-}
-export interface LevelInfo {
-  code: Level;
-  name: Record<Explain, string>;
-  description: Record<Explain, string>;
-  color: { light: string; dark: string };
-}
+// Types come from the JSON Schemas (scripts/generated/, npm run types).
+export type { Explain, Level } from "./generated/topic.ts";
+export type Site = SiteFile;
+export type LevelInfo = LevelsFile["levels"][number];
+export type Interface = InterfaceFile;
 
 // The text of a localized value in an explanation language; npm run check guarantees it exists.
-export function localize(value: Partial<Record<Explain, string>>, explain: Explain): string {
+export function localize(value: Localized, explain: Explain): string {
   const text = value[explain];
   if (text === undefined) throw new Error(`No "${explain}" text in ${JSON.stringify(value)}`);
   return text;
@@ -35,9 +32,12 @@ export function localize(value: Partial<Record<Explain, string>>, explain: Expla
 export const SITE = siteFile as Site;
 export const LEVEL_INFO = (levelsFile as { levels: LevelInfo[] }).levels;
 export const LEVELS: readonly Level[] = LEVEL_INFO.map((l) => l.code);
+export const isLevel = (value: string): value is Level => (LEVELS as readonly string[]).includes(value);
+// Explanation language codes in site.yaml order.
+export const EXPLAIN_CODES: Explain[] = SITE.explain.map((e) => e.code);
 // Explanation languages, each under its own name: { en: "English", es: "Español" }.
 // A missing own name falls back to the code here; npm run check reports it.
-export const EXPLAIN: Record<Explain, string> = Object.fromEntries(SITE.explain.map((e) => [e.code, e.name[e.code] ?? e.code]));
+export const EXPLAIN: Partial<Record<Explain, string>> = Object.fromEntries(SITE.explain.map((e) => [e.code, e.name[e.code]]));
 
 export const explainName = (explain: Explain): string => localize(EXPLAIN, explain);
 // A non-empty string: the test text values pass before they are shown.
@@ -46,7 +46,7 @@ export const filled = (value: string | null | undefined): value is string => val
 // Explanation languages readers see (enabled in site.yaml).
 export const ENABLED_EXPLAIN: Explain[] = SITE.explain.filter((e) => e.enabled).map((e) => e.code);
 
-export const lv = (level: string | null): number => LEVELS.indexOf(level ?? "");
+export const lv = (level: string | null): number => (level !== null && isLevel(level) ? LEVELS.indexOf(level) : -1);
 // Every level in a range such as "A0-A2".
 export const levelRange = (range: string): Level[] => {
   const [from = "", to = from] = range.split("-");
@@ -54,10 +54,6 @@ export const levelRange = (range: string): Level[] => {
 };
 export const levelName = (level: Level, explain: Explain): string => LEVEL_INFO.find((l) => l.code === level)?.name[explain] ?? level;
 
-export interface Interface {
-  text: Record<string, Record<Explain, string>>;
-  errorsAudience: Record<Explain, Record<Explain, string>>;
-}
 export const INTERFACE = interfaceFile as Interface;
 
 // Interface wording in an explanation language: {key} placeholders take values, {key:lower} lowercased.
@@ -73,117 +69,36 @@ export function say(key: string, explain: Explain, values: Record<string, string
 // "A and B", "A, B and C" in an explanation language.
 export const listOf = (items: string[], explain: Explain): string => new Intl.ListFormat(explain, { type: "conjunction" }).format(items);
 
-// ---------- Data model (mirrors languages/schema/*.schema.json) ----------
+// ---------- Data model (generated from languages/schema/*.schema.json) ----------
 
-export type Localized = Partial<Record<Explain, string>>;
-export type Text = string | Localized;
-export interface Example {
-  ex: string;
-  tr?: Localized;
-}
-export type Cell = string | Localized | Example;
-export interface ItemObject {
-  text?: Text | undefined;
-  ex?: string | undefined;
-  tr?: Localized | undefined;
-  level?: Level | undefined;
-  for?: Explain[] | undefined;
-}
-export type Item = string | Localized | ItemObject;
+export type {
+  Block,
+  BulletsBlock,
+  Cell,
+  Column,
+  ErrorRow,
+  ErrorsBlock,
+  Example,
+  Item,
+  Localized,
+  Part,
+  Reminder,
+  Row,
+  Section,
+  TableBlock,
+  Text,
+  TextBlock,
+} from "./generated/topic.ts";
+export type Topic = TopicFile;
+export type Essentials = TopicFile["essentials"][number];
+// An item written as an object: text or an example, with optional translation, level and languages.
+export type ItemObject = Exclude<Item, string | Localized>;
 
-export interface TextBlock extends ItemObject {
-  type: "text";
-}
-export interface BulletsBlock {
-  type: "bullets";
-  items: Item[];
-  for?: Explain[];
-}
-export interface Column {
-  key: string;
-  label: Text;
-  for?: Explain[];
-}
-export type Row = { level?: Level; tr?: Localized; for?: Explain[] } & Record<string, unknown>;
-export interface TableBlock {
-  type: "table";
-  columns: Column[];
-  rows: Row[];
-  for?: Explain[];
-}
-export interface ErrorRow {
-  wrong: string;
-  right: string;
-  rule?: Text;
-  level?: Level | undefined;
-  for?: Explain[];
-}
-export interface ErrorsBlock {
-  type: "errors";
-  audience?: boolean;
-  rows: ErrorRow[];
-  for?: Explain[];
-}
-export type Block = TextBlock | BulletsBlock | TableBlock | ErrorsBlock;
-
-export interface Section {
-  title: Localized;
-  level: string;
-  content: Block[];
-  for?: Explain[];
-}
-export interface Part {
-  title: Localized;
-  content: Block[];
-}
-export interface Essentials {
-  level: Level;
-  parts?: Part[];
-  content?: Block[];
-}
-export interface Reminder {
-  level: Level;
-  items: Item[];
-}
-
-export interface Topic {
-  id: string;
-  lang: Explain;
-  kind: string;
-  levels: Level[];
-  tags: string[];
-  concepts: string[];
-  related: string[];
-  status: Record<Explain, "draft" | "approved">;
-  title: Localized;
-  summary: Localized;
-  sections: Section[];
-  essentials: Essentials[];
-  reminders?: Reminder[];
-}
-
-export interface CurriculumTopic {
-  slug: string;
-  levels: string;
-  title?: Record<Explain, string>;
-}
-export interface CurriculumSection {
-  dir: string;
-  title: Record<Explain, string>;
-  topics: CurriculumTopic[];
-}
-export interface CurriculumLanguage {
-  code: Explain;
-  enabled: boolean;
-  slug: string;
-  name: Record<Explain, string>;
-  sections: CurriculumSection[];
-}
-export interface Curriculum {
-  languages: CurriculumLanguage[];
-}
-
-export type Concepts = Record<string, { title: Record<Explain, string>; description: Record<Explain, string> }>;
+export type Curriculum = CurriculumFile;
+export type CurriculumLanguage = Curriculum["languages"][number];
+export type CurriculumSection = CurriculumLanguage["sections"][number];
+export type CurriculumTopic = CurriculumSection["topics"][number];
+export type Concepts = ConceptsFile;
 
 // ---------- Loading ----------
 
