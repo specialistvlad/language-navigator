@@ -10,7 +10,8 @@ the page's address, quote what is wrong and, when you know it, the correct versi
 
 ## Change a topic
 
-Each topic lives in one file: `languages/en/{NN-section}/{topic}/topic.yaml`.
+Each topic lives in one file, `languages/{lang}/{NN-section}/{topic}/topic.yaml`, which holds it in
+every explanation language.
 
 **In the browser.** *Edit on GitHub* at the top of a topic page opens its file in GitHub's editor.
 Saving proposes the change as a pull request, and CI checks it.
@@ -28,7 +29,8 @@ npm run verify     # every check CI runs
 - Every example is your own wording, written for this project. Text from textbooks, dictionaries
   and other sites stays with its authors.
 - [languages/CONVENTIONS.md](languages/CONVENTIONS.md) holds the rules for the data: a level on
-  every leaf, British spelling with US differences marked, short sentences in plain words.
+  every leaf, each language's spelling and varieties (English: British, with US differences marked),
+  short sentences in plain words.
 - `npm run check` validates the data against the schemas and the conventions; a pull request passes
   it before review.
 - One topic per pull request keeps review quick.

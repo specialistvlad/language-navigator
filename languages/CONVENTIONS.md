@@ -1,7 +1,8 @@
 # Conventions
 
-Rules for all language data. They keep the library consistent for readers, for the build
-scripts and for the web app. `npm run check` enforces them.
+Rules for all language data: every language being learned, in every explanation language. They keep
+the library consistent for readers, for the build scripts and for the web app. `npm run check`
+enforces them.
 
 **The data names meaning; the renderer decides how it looks.** Every field, block, mark and
 attribute says what a piece of content is: a paradigm cell, a helper verb, an ending, a typical
@@ -10,9 +11,15 @@ every level. §12 holds the vocabulary.
 
 ## 1. Languages and variants
 
-- English (`en`) is the language being learned and the explanation language: one learning
-  track, English explained in English.
-- Every topic exists in every explanation language.
+A track is one language being learned, explained in one explanation language. Every language being
+learned is written for every explanation language, so the library grows as N languages, each
+explained in N languages.
+
+- `curriculum.yaml` lists the languages being learned and `site.yaml` the explanation languages.
+- Every topic exists in every explanation language: one topic file holds its explanations in each
+  (§4), its examples translated into each (§6) and the typical errors of each one's speakers.
+- Topics in different languages pair through shared `concepts` keys (§9).
+- The library holds one track: English (`en`) explained in English.
 - Explanations use short sentences, present tense and plain words.
 - **English** topics use British spelling and British IPA. US differences appear inline, prefixed
   `US:`, for example *at the weekend (US: on the weekend)*.

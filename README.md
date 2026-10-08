@@ -1,25 +1,27 @@
 # langs123
 
-English grammar from **A0 to B1**, explained in English. Every topic opens with a cheatsheet of the
-whole topic, then rules, examples and typical errors, each marked with its CEFR level.
+The foundations of languages as open data: sounds, writing, numbers, dates, time and grammar, every
+line marked with its CEFR level. Each language being learned is explained in each explanation
+language, so the library grows as N languages, each explained in N languages. It holds English from
+A0 to B1, explained in English.
 
 **Site:** https://langs123.com
 
-## How it works
+## The library
 
-- **The content is data.** One `topic.yaml` per topic holds the cheatsheet and the full reference;
-  JSON Schemas define every file and `npm run check` validates it
-  ([languages/CONVENTIONS.md](languages/CONVENTIONS.md)).
-- **The data names meaning; the renderer decides how it looks.** Each field says what a piece of
-  content is, such as a paradigm, a helper verb or a typical error, and the web app lays it out for
-  every screen, view and level (CONVENTIONS.md §12).
-- **Levels live on every line.** Each row, list item and paragraph carries its level from A0 to C2
-  (`languages/levels.yaml`); the level filter shows what starts at or below the chosen level, and
-  badges show each range in its levels' colours (CONVENTIONS.md §3).
-- **The site is static HTML.** Each topic page offers a Cheatsheet and an Extended view; cheatsheet
-  pages gather the cheatsheets per topic, section and level. The menu groups the topics **by level**,
-  following the study path, or by **category** (CONVENTIONS.md §2). Every page has a clean, stable
-  URL (CONVENTIONS.md §10) and reads on screens of every width.
+- **Tracks.** A track is one language being learned, explained in one explanation language. One
+  topic file holds a topic for every explanation language, and concept keys pair the same subject
+  across languages ([languages/CONVENTIONS.md](languages/CONVENTIONS.md) §1, §9).
+- **Topics.** Each topic explains one part of the language system: a summary, a cheatsheet of the
+  whole topic, then rules, examples and typical errors (§5, §8).
+- **Levels on every line.** Each row, list item and paragraph carries its level from A0 to C2, and
+  everything above it takes its range from them (§3).
+- **Semantic data.** Each field names what a piece of content is, such as a paradigm, a helper verb or
+  a typical error, with grammar features after UniMorph; the renderer decides how it looks (§12).
+- **Checked.** JSON Schemas define every file, and `npm run check` validates the data against them and
+  the conventions.
+
+The web app in `apps/web/` renders the library as a static site.
 
 ## Quick start
 
@@ -35,16 +37,16 @@ npm run verify     # every check CI runs
 
 ```
 language-navigator/
-├── languages/                 all content: the CC BY 4.0 part of the project
+├── languages/                 the library: the CC BY 4.0 part of the project
 │   ├── CONVENTIONS.md         rules for the data
-│   ├── site.yaml              product name, URLs, credit and licences, explanation languages
+│   ├── site.yaml              name, URLs, credit and licences, explanation languages
 │   ├── levels.yaml            level scale: names, descriptions, colours
 │   ├── interface.yaml         interface wording
-│   ├── curriculum.yaml        every planned topic: sections by category, and the study path
+│   ├── curriculum.yaml        languages being learned: topics by category, and the study path
 │   ├── concepts.yaml          concept keys that pair topics across languages
 │   ├── schema/                JSON Schemas
 │   ├── templates/topic.yaml   skeleton for a new topic
-│   └── en/                    English topics: {NN-section}/{topic}/topic.yaml
+│   └── {lang}/                topics of a language being learned: {NN-section}/{topic}/topic.yaml
 ├── apps/web/                  the web app
 ├── scripts/                   shared tooling: data loading, schema types, checks
 ├── ROADMAP.md                 project phases
@@ -56,7 +58,7 @@ language-navigator/
 | Command | What it does |
 |---|---|
 | `npm start` | serves the site from `build/dev/` on port 47380 on every interface (open the printed network address on a phone), rebuilds and reloads on every change, and lists the problems `npm run check` finds |
-| `npm run build` | builds the static site into `build/web/`; `SITE_URL=https://… npm run build` sets the public URL |
+| `npm run build` | builds the static site into `build/web/`; `SITE_URL=https://…` sets the public URL, `UMAMI_WEBSITE_ID` adds Umami analytics |
 | `npm run check` | validates all data against the schemas and conventions |
 | `npm test` | unit tests, and checks on every built page, side by side; fails below full line and function coverage of the modules `bunfig.toml` holds to it; `bun test <file>` runs one file |
 | `npm run e2e` | drives every topic and track page in Chromium at every level and view, each test file side by side; `bunx playwright install chromium` installs the browser |
@@ -64,17 +66,6 @@ language-navigator/
 | `npm run lint` | typescript-eslint's strict and stylistic type-checked rules |
 | `npm run format` | Prettier; `npm run format:check` only reports |
 | `npm run verify` | all of the checks above, side by side, each in a process of its own (`scripts/verify.ts`); CI runs it on every push and pull request |
-
-## Publishing
-
-langs123.com is deployed by hand from a version tag or a commit:
-
-```
-git tag v0.3.0 && git push origin v0.3.0
-```
-
-A build with `UMAMI_WEBSITE_ID` set adds the Umami script to every page, counting visits on the site's
-own host; `UMAMI_SCRIPT_URL` points it at a self-hosted script. The langs123.com deploy sets them.
 
 ## Contributing
 
@@ -94,6 +85,6 @@ Anyone may copy, adapt and sell the content, with this credit, naming any change
 
 > langs123 contributors, https://langs123.com — CC BY 4.0
 
-The site's [credits page](https://langs123.com/credits/) holds the same. The reference stays free:
-everything rendered from this data stays open on langs123.com, and the data stays open here. The
-name langs123 and its logo stay with the project, outside both licences.
+The site's [credits page](https://langs123.com/credits/) holds the same. The data stays open here,
+and the reference built from it stays free on langs123.com. The name langs123 and its logo stay with
+the project, outside both licences.
