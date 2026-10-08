@@ -55,9 +55,9 @@ export function levelsCss(): string {
       `${at}:is([data-page="topic"], [data-page="track"]) .lvl > .half${halves} { background: var(--beyond-bg); box-shadow: var(--beyond-edge); color: var(--beyond-ink); }`,
       `${at}[data-page="topic"] .toc > li${list} { opacity: 0.4; pointer-events: none; }`,
       `${at} .filter-empty${needs} { display: block; }`,
-      // Previous, next and Up next of the other levels (sequence.ts).
-      `${at} [data-at]:not([data-at~="${code}"]) { display: none !important; }`,
     ];
   });
-  return [levelColoursCss(), ...switcher, ...filter].join("\n") + "\n";
+  // Previous, next and Up next of the other levels (sequence.ts), at every level the top one included.
+  const around = codes.map((code) => `html[data-level="${code}"] [data-at]:not([data-at~="${code}"]) { display: none !important; }`);
+  return [levelColoursCss(), ...switcher, ...filter, ...around].join("\n") + "\n";
 }

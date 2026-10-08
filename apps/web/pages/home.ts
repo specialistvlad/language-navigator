@@ -27,13 +27,11 @@ export function homePage(ctx: Context): void {
   };
   const cards = ctx.languages
     .map((lang) => {
-      const total = refs.filter((r) => r.lang === lang.code).length;
-      const written = refs.filter((r) => r.lang === lang.code && r.topic !== null).length;
       const links = EXPLAINS.map(
         (e) =>
           `<a class="track-link" href="${trackUrl(e, lang)}" hreflang="${e}"><strong>${escapeHtml(ui(e).track(localize(lang.name, e)))}</strong><span>${escapeHtml(ui(e).explained)}</span></a>`,
       ).join("");
-      return `<section class="card"><h2>${EXPLAINS.map((e) => escapeHtml(localize(lang.name, e))).join(" · ")}</h2><p class="muted">${ui(home).written(written, total)}</p>${links}</section>`;
+      return `<section class="card"><h2>${EXPLAINS.map((e) => escapeHtml(localize(lang.name, e))).join(" · ")}</h2>${links}</section>`;
     })
     .join("");
   ctx.add(
@@ -44,7 +42,7 @@ export function homePage(ctx: Context): void {
       title: say("homeTitle", home, homeValues),
       description: say("homeDescription", home, homeValues),
       path: homeUrl(),
-      main: `<article class="doc home"><h1>${escapeHtml(SITE.name)}</h1><blockquote><p>${escapeHtml(say("tagline", home, homeValues))}</p></blockquote><div class="cards">${cards}</div></article>`,
+      main: `<article class="doc home"><div class="cards">${cards}</div></article>`,
       dev: o.dev,
       siteUrl: o.siteUrl,
     }),

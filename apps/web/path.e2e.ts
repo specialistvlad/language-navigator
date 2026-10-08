@@ -5,7 +5,7 @@
 import { afterAll, beforeAll, expect, test } from "bun:test";
 import { join } from "node:path";
 import { type Browser, chromium, type Page } from "playwright";
-import { loadCurriculum } from "../../scripts/lib.ts";
+import { LEVELS, loadCurriculum } from "../../scripts/lib.ts";
 import { SITE_DIR, testSite } from "./test-site.ts";
 
 await testSite();
@@ -127,6 +127,28 @@ test(
     // A higher level lets the path go on.
     await page.click('.seg [data-set-level="A1"]');
     expect((await row())[1]).toBe("Next → /en/english/foundations/pronunciation-ipa/?step=a1#consonant-sounds");
+  },
+  SLOW,
+);
+
+test(
+  "at every level, the top level included, a page shows one row of previous and next above the title, one below the guide and one Up next",
+  async () => {
+    // How many of each show: the rows above and below, and Up next in the rail.
+    const counts = (): Promise<number[]> =>
+      page.$$eval(".pagers.top .pager, .pagers.bottom .pager, .up-next", (els) =>
+        [".pagers.top .pager", ".pagers.bottom .pager", ".up-next"].map(
+          (s) => els.filter((el) => el.matches(s) && el.checkVisibility()).length,
+        ),
+      );
+    for (const order of ["categories", "path"]) {
+      await open("/en/english/");
+      await page.click(`.nav-order [data-set-order="${order}"]`);
+      for (const level of LEVELS) {
+        await open(`/en/english/tenses/tense-map/?level=${level.toLowerCase()}`);
+        expect({ order, level, counts: await counts() }).toEqual({ order, level, counts: [1, 1, 1] });
+      }
+    }
   },
   SLOW,
 );

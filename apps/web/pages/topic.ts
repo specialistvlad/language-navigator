@@ -51,7 +51,7 @@ export function topicPages(track: Track): void {
     });
     const rail = `<h4>${escapeHtml(t.onThisPage)}</h4><ol class="toc">${tocItems.join("")}</ol>${upNext(track, ref)}`;
     const actions = [
-      `<a class="tool edit" href="${editUrl(ref.path)}" rel="noopener" title="${escapeHtml(t.editTitle)}">${escapeHtml(t.editOn)}${GITHUB_ICON}<span class="sr-only">GitHub</span></a>`,
+      `<a class="tool edit" href="${editUrl(ref.path)}" rel="noopener" title="${escapeHtml(t.editTitle)}" aria-label="${escapeHtml(`${t.editOn} GitHub`)}">${escapeHtml(t.editOn)}${GITHUB_ICON}</a>`,
       `<button class="tool" id="print" type="button" title="${escapeHtml(t.print)}" aria-label="${escapeHtml(t.print)}">${PRINT_ICON}</button>`,
     ].join("");
     const title = topic.title[explain] ?? ref.entry.slug;
