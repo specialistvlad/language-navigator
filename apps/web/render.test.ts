@@ -84,7 +84,7 @@ describe("every block renders its leaves with their levels", () => {
       ["Stay.", ""],
     ]);
   });
-  test("a slot paradigm: sentences laid out by slot, grouped by sentence, merged and centred but for the subject", () => {
+  test("a slot paradigm: sentences laid out by slot, grouped by sentence, merged but for the subject, every cell centred", () => {
     const sentence = { interrogativity: "int", polarity: "pos" } as const;
     const d = doc([
       {
@@ -142,6 +142,8 @@ describe("every block renders its leaves with their levels", () => {
     expect(d.querySelector("td.key")?.getAttribute("rowspan")).toBe("2");
     expect(d.querySelectorAll("tr.gap-row")).toHaveLength(1);
     expect([...d.querySelectorAll("tbody tr:last-child td")].map((td) => td.textContent)).toContain("");
+    const cells = [...d.querySelectorAll("th, td")].filter((c) => !c.matches(".gap, tr.gap-row td"));
+    expect(cells.filter((c) => !c.classList.contains("center")).map((c) => c.textContent)).toEqual([]);
   });
   test("an errors table: wrong, right and the rule, the rule column only when a row has one", () => {
     const withRule = doc([

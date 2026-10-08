@@ -105,7 +105,7 @@ function columnTitle(c: Column, ctx: Ctx): string {
 }
 
 // A table: a slot paradigm lays sentences out word by word, its slot columns grouped by sentence,
-// merged down where neighbours read the same, and centred but for the subject; any other table shows
+// merged down where neighbours read the same but for the subject, and centred; any other table shows
 // its columns as they are, and a dash where a row leaves a cell empty.
 function tableHtml(block: TableBlock, ctx: Ctx, from: Level): string {
   const shape = tableShape(block, ctx.explain, ctx.ref.lang);
@@ -122,7 +122,7 @@ function tableHtml(block: TableBlock, ctx: Ctx, from: Level): string {
   const merged = shape.columns.map((c) => shape.slots && c.slot !== "subj");
   const starts = blockStarts(grid, levels, merged[0] === true);
   const span = spans(grid, levels, [...merged, false], starts);
-  const center = merged;
+  const center = shape.columns.map(() => shape.slots);
   const groups = shape.columns.map((c) => {
     const name = sentenceName(c, ctx.explain);
     return name === undefined ? undefined : escapeHtml(name);

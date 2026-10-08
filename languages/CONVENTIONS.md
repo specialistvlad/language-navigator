@@ -246,9 +246,9 @@ the sentence. The tense cheatsheets use one: Tense, then Question (Helper, Subje
   `{ interrogativity: int, polarity: pos }` is the question. Its row carries the tense and the
   person as `features`.
 - The renderer writes the slot titles and the sentence titles above them, merges a cell into the one
-  above when both read the same and their rows share a level, and centres every column but the
-  subject. A merged first column splits the table into blocks with an empty row between them; merges
-  stay inside a block. A slot paradigm renders with compact rows.
+  above when both read the same and their rows share a level, the subject excepted, and centres
+  every cell both ways. A merged first column splits the table into blocks with an empty row between
+  them; merges stay inside a block. A slot paradigm renders with compact rows.
 - A slot with nothing in it, such as the helper of a present statement, is a key the row leaves
   out; any other table shows a dash where a row leaves a cell out.
 - Subjects are one per row, lowercase after a helper and capitalised at the start of a sentence.
