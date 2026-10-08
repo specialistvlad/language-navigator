@@ -3,12 +3,10 @@
 // every badge reads the range of what it labels, and shows only where the level changes.
 import { describe, expect, test } from "bun:test";
 import { join } from "node:path";
-import { parseHTML } from "linkedom";
 import { LEVEL_INFO, LEVELS, lv } from "../../scripts/lib.ts";
-import { SITE_DIR, testSite } from "./test-site.ts";
+import { readPage, SITE_DIR, testSite } from "./test-site.ts";
 
 const pages = await testSite();
-const read = async (path: string): Promise<Document> => parseHTML(await Bun.file(join(SITE_DIR, path)).text()).document;
 const topicPages = pages.filter((p) => /^en\/\w+\/[\w-]+\/[\w-]+\/index\.html$/.test(p) && !p.includes("/cheatsheets/"));
 const levelled = (el: Element): Element[] => [...el.querySelectorAll("[data-level]")];
 const from = (el: Element): string => el.getAttribute("data-level") ?? "";
@@ -29,7 +27,7 @@ test("the site builds with topic pages", () => {
 
 describe.each(topicPages)("%s", (path) => {
   test("every level attribute is on the scale, lowest first", async () => {
-    const doc = await read(path);
+    const doc = await readPage(path);
     for (const el of levelled(doc.body)) {
       if (el.matches("[data-set-level]")) continue;
       expect(LEVELS).toContain(from(el) as never);
@@ -38,7 +36,7 @@ describe.each(topicPages)("%s", (path) => {
   });
 
   test("blocks and sections cover exactly their leaves", async () => {
-    const doc = await read(path);
+    const doc = await readPage(path);
     for (const blk of doc.querySelectorAll(".blk")) {
       const leaves = [...blk.querySelectorAll("tr[data-level]:not(.gap-row), li[data-level]")];
       if (leaves.length > 0) expect(`${label(from(blk), to(blk))} ${rangeOf(leaves)}`).toBe(`${rangeOf(leaves)} ${rangeOf(leaves)}`);
@@ -51,7 +49,7 @@ describe.each(topicPages)("%s", (path) => {
   });
 
   test("at every level, a visible block has a visible leaf", async () => {
-    const doc = await read(path);
+    const doc = await readPage(path);
     // An element shows at a level when it and every element around it with a level start at or below it.
     const shows = (el: Element, level: string): boolean => {
       for (let e: Element | null = el; e && e !== doc.documentElement; e = e.parentElement) if (lv(from(e)) > lv(level)) return false;
@@ -70,7 +68,7 @@ describe.each(topicPages)("%s", (path) => {
   });
 
   test("badges read the range they label and show where the level changes", async () => {
-    const doc = await read(path);
+    const doc = await readPage(path);
     for (const badge of doc.querySelectorAll(".lvl")) {
       expect(badge.textContent).toBe(label(badge.getAttribute("data-from") ?? "", badge.getAttribute("data-to") ?? ""));
       // One level is one half in its colour; a range is two halves, lowest left, highest right.
@@ -94,7 +92,7 @@ describe.each(topicPages)("%s", (path) => {
   });
 
   test("the header, the rail and the menu agree with the sections", async () => {
-    const doc = await read(path);
+    const doc = await readPage(path);
     const sections = [...doc.querySelectorAll("section.part")];
     expect(doc.querySelector(".doc-head h1 .lvl")?.textContent).toBe(rangeOf(sections));
     for (const li of doc.querySelectorAll(".toc > li")) {

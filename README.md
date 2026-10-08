@@ -58,12 +58,12 @@ language-navigator/
 | `npm start` | serves the site from `build/dev/` on port 47380 on every interface (open the printed network address on a phone), rebuilds and reloads on every change, and lists the problems `npm run check` finds |
 | `npm run build` | builds the static site into `build/web/`; `SITE_URL=https://… npm run build` sets the public URL |
 | `npm run check` | validates all data against the schemas and conventions |
-| `npm test` | unit tests, and checks on every built page; fails below full line and function coverage of the modules `bunfig.toml` holds to it |
-| `npm run e2e` | drives every topic and track page in Chromium at every level and view; `bunx playwright install chromium` installs the browser |
+| `npm test` | unit tests, and checks on every built page, side by side; fails below full line and function coverage of the modules `bunfig.toml` holds to it; `bun test <file>` runs one file |
+| `npm run e2e` | drives every topic and track page in Chromium at every level and view, each test file side by side; `bunx playwright install chromium` installs the browser |
 | `npm run typecheck` | strict TypeScript |
 | `npm run lint` | typescript-eslint's strict and stylistic type-checked rules |
 | `npm run format` | Prettier; `npm run format:check` only reports |
-| `npm run verify` | all of the checks above; CI runs it on every push and pull request |
+| `npm run verify` | all of the checks above, side by side, each in a process of its own (`scripts/verify.ts`); CI runs it on every push and pull request |
 
 ## Publishing
 

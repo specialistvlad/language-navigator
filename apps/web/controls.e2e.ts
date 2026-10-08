@@ -36,6 +36,13 @@ async function open(width: number): Promise<void> {
   await page.setViewportSize({ width, height: 800 });
   await page.goto(new URL("/en/english/verbs/to-be/?level=a1&view=extended", server.url).href);
 }
+// Waits for the page to draw its last change and for every slide that change started to end.
+async function settled(): Promise<void> {
+  await page.evaluate(async () => {
+    for (let frame = 0; frame < 3; frame++) await new Promise((resolve) => requestAnimationFrame(resolve));
+    await Promise.all(document.getAnimations().map((a) => a.finished.catch(() => undefined)));
+  });
+}
 // The choices a switch shows.
 const shown = (selector: string): Promise<string[]> =>
   page.$$eval(`.controls ${selector}`, (els) => els.filter((el) => el.checkVisibility()).map((el) => el.textContent.trim()));
@@ -81,7 +88,7 @@ test(
     await open(390);
     // The bottom edge of the bar once its slide has finished.
     const edge = async (): Promise<number> => {
-      await page.waitForTimeout(400);
+      await settled();
       return page.evaluate(() => document.querySelector(".topbar")?.getBoundingClientRect().bottom ?? -1);
     };
     expect(await edge()).toBeGreaterThan(0);
@@ -103,7 +110,7 @@ test(
     await open(390);
     expect(await page.locator(".topbar .brand").isVisible()).toBe(false);
     await page.click("#menu");
-    await page.waitForTimeout(300);
+    await settled();
     expect(await page.locator(".sidebar .nav-brand").isVisible()).toBe(true);
     const before = page.url();
     // The page beside the menu, over a link of the document.

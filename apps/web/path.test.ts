@@ -2,17 +2,14 @@
 // level; every step leads to the place its level starts in its topic; Up next follows each step of a
 // topic to the step after it.
 import { describe, expect, test } from "bun:test";
-import { join } from "node:path";
-import { parseHTML } from "linkedom";
 import { loadCurriculum, LEVELS, lv } from "../../scripts/lib.ts";
-import { SITE_DIR, testSite } from "./test-site.ts";
+import { readPage, testSite } from "./test-site.ts";
 
 const pages = await testSite();
-const read = async (path: string): Promise<Document> => parseHTML(await Bun.file(join(SITE_DIR, path)).text()).document;
 const english = (await loadCurriculum()).languages[0];
 if (!english) throw new Error("curriculum.yaml has no language");
 const path = english.path;
-const index = await read("en/english/index.html");
+const index = await readPage("en/english/index.html");
 const menu = '.nav-list[data-order="path"]';
 const steps = [...index.querySelectorAll<HTMLAnchorElement>(`${menu} a`)];
 // The page a step link opens, and the section its anchor names.
@@ -42,7 +39,7 @@ describe.each(steps.map((a) => [`${levelOf(a)} ${a.getAttribute("href") ?? ""}`,
     const href = a.getAttribute("href") ?? "";
     expect(new URL(href, "http://x").searchParams.get("step")).toBe(levelOf(a).toLowerCase());
     expect(pages).toContain(pageOf(href));
-    const doc = await read(pageOf(href));
+    const doc = await readPage(pageOf(href));
     const level = levelOf(a);
     const anchor = href.split("#")[1];
     if (anchor === undefined) {
@@ -105,7 +102,7 @@ describe("a topic page", () => {
   }
 
   test.each(topicsOnPath)("%s marks its steps; at every level each step leads to the shown steps around it", async (file) => {
-    const doc = await read(file);
+    const doc = await readPage(file);
     const own = all.flatMap((s, i) => (pageOf(s.href) === file ? [{ ...s, i }] : []));
     expect([...doc.querySelectorAll(`${menu} a.on`)].map(levelOf)).toEqual(own.map((s) => s.level));
     for (const s of own) {
@@ -121,7 +118,7 @@ describe("a topic page", () => {
   test.each(written.map((w, i) => [w.href, i] as const))(
     "%s, by category, leads at every level to the shown topics around it",
     async (href, i) => {
-      const doc = await read(pageOf(href));
+      const doc = await readPage(pageOf(href));
       for (const level of LEVELS) {
         const want = expected(written, i, level);
         for (const got of seen(doc, '[data-order="categories"]', level)) expect(got).toEqual({ ...want, upNext: want.next });
@@ -132,17 +129,17 @@ describe("a topic page", () => {
   test("at A0, by category: To be sits between Personal Pronouns and Word Order, Word Order starts over at The Alphabet, The Alphabet has no previous", async () => {
     const at = (doc: Document, side: string): string | null | undefined =>
       doc.querySelector(`.pagers.top .pager[data-order="categories"][data-at~="A0"] .${side}`)?.getAttribute("href");
-    const toBe = await read("en/english/verbs/to-be/index.html");
+    const toBe = await readPage("en/english/verbs/to-be/index.html");
     expect(at(toBe, "pager-prev")).toBe("/en/english/pronouns/personal-pronouns/");
     expect(at(toBe, "pager-next")).toBe("/en/english/sentence-building/word-order/");
-    const wordOrder = await read("en/english/sentence-building/word-order/index.html");
+    const wordOrder = await readPage("en/english/sentence-building/word-order/index.html");
     expect(at(wordOrder, "pager-next")).toBe("/en/english/foundations/alphabet-spelling/");
-    const alphabet = await read("en/english/foundations/alphabet-spelling/index.html");
+    const alphabet = await readPage("en/english/foundations/alphabet-spelling/index.html");
     expect(alphabet.querySelector('.pagers.top .pager[data-order="categories"][data-at~="A0"] .pager-prev.off')).not.toBeNull();
   });
 
   test("To be at A0 leads to Word Order", async () => {
-    const doc = await read("en/english/verbs/to-be/index.html");
+    const doc = await readPage("en/english/verbs/to-be/index.html");
     expect(doc.querySelector('.up-next[data-step="A0"][data-at~="A0"] a.next')?.getAttribute("href")).toBe(
       "/en/english/sentence-building/word-order/?step=a0",
     );

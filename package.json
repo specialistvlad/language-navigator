@@ -10,13 +10,13 @@
     "start": "bun --watch apps/web/server.ts",
     "build": "bun run apps/web/build.ts",
     "check": "bun run scripts/check.ts",
-    "test": "bun test --coverage",
-    "e2e": "bun test ./apps/web/levels.e2e.ts && bun test ./apps/web/colours.e2e.ts && bun test ./apps/web/path.e2e.ts && bun test ./apps/web/controls.e2e.ts",
+    "test": "bun run scripts/verify.ts test",
+    "e2e": "bun run scripts/verify.ts e2e",
     "typecheck": "tsc -p .",
     "lint": "eslint . && bun run scripts/lint-css.ts",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "verify": "bun run scripts/schema-types.ts --check && bun run typecheck && bun run lint && bun run format:check && bun run check && bun run test && bun run e2e",
+    "verify": "bun run scripts/verify.ts verify",
     "types": "bun run scripts/schema-types.ts"
   },
   "dependencies": {
