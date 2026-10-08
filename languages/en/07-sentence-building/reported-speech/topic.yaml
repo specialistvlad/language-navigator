@@ -9,145 +9,165 @@ status: { en: draft }
 
 title: { en: Reported Speech }
 summary:
-  en: "Reported speech tells what someone said without quoting it, with say, tell and ask. After a past verb the tense moves one step back and questions take statement order: She asked where I **lived**."
+  lead: { en: "Reported speech tells what someone said without quoting it, with say, tell and ask." }
+  rule: { en: "After a past verb the tense moves one step back and questions take statement order:" }
+  ex: ["She asked where I ", { target: lived }, "."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: point, label: { en: Point } }
         - { key: rule, label: { en: Rule } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: B1, point: say, rule: { en: "say + (that) + clause; no person, or to + person" }, example: "She **said** (that) she was tired." }
-        - { level: B1, point: tell, rule: { en: "tell + person + (that) + clause" }, example: "She **told me** (that) she was tired." }
-        - { level: B1, point: present simple, rule: → past simple, example: "He said he **worked** there." }
-        - { level: B1, point: present continuous, rule: → past continuous, example: "She said she **was waiting**." }
-        - { level: B1, point: past simple / present perfect, rule: → past perfect, example: "He said he **had left**." }
-        - { level: B1, point: will / can / must, rule: → would / could / had to, example: "He said he **would call**." }
-        - { level: B1, point: { en: No change }, rule: { en: "would, could, should, might; a fact still true; after says (present)" }, example: "She says she **is** tired." }
-        - { level: B1, point: { en: Pronouns and time }, rule: { en: "pronouns follow the speaker; today → that day, tomorrow → the next day, yesterday → the day before" }, example: "Anna said **she** was tired." }
-        - { level: B1, point: { en: Questions }, rule: { en: "if / whether or a wh-word + statement order; no do / does / did" }, example: "She asked **where** I **lived**." }
-        - { level: B1, point: { en: Commands }, rule: told / asked + person + (not) to + V, example: "He **told us not to be** late." }
+        - { level: B1, point: say, rule: { en: [{ pattern: [say, (that), { slot: clause }] }, "; no person, or ", { pattern: [to, { slot: person }] }] }, ex: ["She ", { target: said }, " ", { optional: that }, " she was tired."] }
+        - { level: B1, point: tell, rule: { en: { pattern: [tell, { slot: person }, (that), { slot: clause }] } }, ex: ["She ", { target: told me }, " ", { optional: that }, " she was tired."] }
+        - { level: B1, point: present simple, rule: { mapping: [past simple], follows: true }, ex: ["He said he ", { target: worked }, " there."] }
+        - { level: B1, point: present continuous, rule: { mapping: [past continuous], follows: true }, ex: ["She said she ", { target: was waiting }, "."] }
+        - { level: B1, point: { alternatives: [past simple, present perfect] }, rule: { mapping: [past perfect], follows: true }, ex: ["He said he ", { target: had left }, "."] }
+        - { level: B1, point: { alternatives: [will, can, must] }, rule: { mapping: [{ alternatives: [would, could, had to] }], follows: true }, ex: ["He said he ", { target: would call }, "."] }
+        - { level: B1, point: { en: No change }, rule: { en: "would, could, should, might; a fact still true; after says (present)" }, ex: ["She says she ", { target: is }, " tired."] }
+        - { level: B1, point: { en: Pronouns and time }, rule: { en: ["pronouns follow the speaker; ", { mapping: [today, that day] }, ", ", { mapping: [tomorrow, the next day] }, ", ", { mapping: [yesterday, the day before] }] }, ex: ["Anna said ", { target: she }, " was tired."] }
+        - { level: B1, point: { en: Questions }, rule: { en: [{ alternatives: [if, whether] }, " or a ", { pattern: [{ slot: wh-word }, statement] }, " order; no ", { alternatives: [do, does, did] }] }, ex: ["She asked ", { target: where }, " I ", { target: lived }, "."] }
+        - { level: B1, point: { en: Commands }, rule: { pattern: [{ alternatives: [told, asked] }, { slot: person }, [{ optional: not }, " to"], { slot: V }] }, ex: ["He ", { target: told us not to be }, " late."] }
 
 sections:
   - title: { en: "Form: say and tell" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: verb, label: { en: Verb } }
           - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, verb: say, pattern: say + (that) + clause, example: "She **said** (that) she was tired." }
-          - { level: B1, verb: tell, pattern: tell + person + (that) + clause, example: "She **told me** (that) she was tired." }
-          - { level: B1, verb: say, pattern: say + to + person, example: "She **said to me** that she was tired." }
-      - type: bullets
+          - { level: B1, verb: say, pattern: { pattern: [say, { optional: that }, { slot: clause }] }, ex: ["She ", { target: said }, " ", { optional: that }, " she was tired."] }
+          - { level: B1, verb: tell, pattern: { pattern: [tell, { slot: person }, { optional: that }, { slot: clause }] }, ex: ["She ", { target: told me }, " ", { optional: that }, " she was tired."] }
+          - { level: B1, verb: say, pattern: { pattern: [say, to, { slot: person }] }, ex: ["She ", { target: said to me }, " that she was tired."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "**tell** always has a person after it. **say** has no person, or **to** + person."
+              en: [{ term: tell }, " always has a person after it. ", { term: say }, " has no person, or ", { pattern: [{ term: to }, { slot: person }] }, "."]
 
   - title: { en: "Form: backshift" }
+    role: form
     content:
-      - type: text
+      - type: prose
         level: B1
         text:
           en: "After a past reporting verb (said, told, asked), the tense usually moves one step back."
-      - type: table
+      - type: usage
         columns:
           - { key: direct, label: { en: Direct speech } }
           - { key: reported, label: { en: Reported speech } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, direct: present simple, reported: past simple, example: { ex: "“I **work** here.” → He said he **worked** there." } }
-          - { level: B1, direct: present continuous, reported: past continuous, example: { ex: "“I'**m waiting**.” → She said she **was waiting**." } }
-          - { level: B1, direct: past simple, reported: past perfect, example: { ex: "“I **left**.” → He said he **had left**." } }
-          - { level: B1, direct: present perfect, reported: past perfect, example: { ex: "“I'**ve finished**.” → She said she **had finished**." } }
-          - { level: B1, direct: will, reported: would, example: { ex: "“I'**ll call**.” → He said he **would call**." } }
-          - { level: B1, direct: must, reported: had to, example: { ex: "“I **must** go.” → She said she **had to** go." } }
-          - { level: B1, direct: can, reported: could, example: { ex: "“I **can** swim.” → She said she **could** swim." } }
-      - type: bullets
+          - { level: B1, direct: present simple, reported: past simple, ex: { mapping: [["“I ", { target: work }, " here.”"], ["He said he ", { target: worked }, " there."]] } }
+          - { level: B1, direct: present continuous, reported: past continuous, ex: { mapping: [[“I', { target: m waiting }, ".”"], ["She said she ", { target: was waiting }, "."]] } }
+          - { level: B1, direct: past simple, reported: past perfect, ex: { mapping: [["“I ", { target: left }, ".”"], ["He said he ", { target: had left }, "."]] } }
+          - { level: B1, direct: present perfect, reported: past perfect, ex: { mapping: [[“I', { target: ve finished }, ".”"], ["She said she ", { target: had finished }, "."]] } }
+          - { level: B1, direct: will, reported: would, ex: { mapping: [[“I', { target: ll call }, ".”"], ["He said he ", { target: would call }, "."]] } }
+          - { level: B1, direct: must, reported: had to, ex: { mapping: [["“I ", { target: must }, " go.”"], ["She said she ", { target: had to }, " go."]] } }
+          - { level: B1, direct: can, reported: could, ex: { mapping: [["“I ", { target: can }, " swim.”"], ["She said she ", { target: could }, " swim."]] } }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "**would**, **could**, **should** and **might** stay the same."
-          - level: B1
+              en: [{ term: would }, ", ", { term: could }, ", ", { term: should }, " and ", { term: might }, " stay the same."]
+          - type: rule
+            level: B1
             text:
-              en: "The tense can stay when the fact is still true: She said she **lives** in Paris."
-          - level: B1
+              en: "The tense can stay when the fact is still true:"
+            ex: ["She said she ", { target: lives }, " in Paris."]
+          - type: rule
+            level: B1
             text:
-              en: "After **says** (present) the tense stays: She says she **is** tired."
+              en: ["After ", { term: says }, " (present) the tense stays:"]
+            ex: ["She says she ", { target: is }, " tired."]
 
   - title: { en: "Form: pronouns and time words" }
+    role: form
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: direct, label: { en: Direct } }
           - { key: reported, label: { en: Reported } }
         rows:
-          - { level: B1, direct: I / my, reported: he / she / his / her }
-          - { level: B1, direct: we / our, reported: they / their }
-          - { level: B1, direct: this / these, reported: that / those }
+          - { level: B1, direct: { alternatives: [I, my] }, reported: { alternatives: [he, she, his, her] } }
+          - { level: B1, direct: { alternatives: [we, our] }, reported: { alternatives: [they, their] } }
+          - { level: B1, direct: { alternatives: [this, these] }, reported: { alternatives: [that, those] } }
           - { level: B1, direct: here, reported: there }
           - { level: B1, direct: now, reported: then }
           - { level: B1, direct: today, reported: that day }
-          - { level: B1, direct: tomorrow, reported: the next day / the following day }
-          - { level: B1, direct: yesterday, reported: the day before / the previous day }
+          - { level: B1, direct: tomorrow, reported: { alternatives: [the next day, the following day] } }
+          - { level: B1, direct: yesterday, reported: { alternatives: [the day before, the previous day] } }
           - { level: B1, direct: last week, reported: the week before }
-          - { level: B1, direct: next week, reported: the week after / the following week }
+          - { level: B1, direct: next week, reported: { alternatives: [the week after, the following week] } }
           - { level: B1, direct: ago, reported: before }
-      - type: bullets
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "Pronouns follow the speaker: “I'm tired,” said Anna → Anna said **she** was tired."
-          - level: B1
+              en: "Pronouns follow the speaker:"
+            ex: { mapping: ["“I'm tired,” said Anna", ["Anna said ", { target: she }, " was tired."]] }
+          - type: rule
+            level: B1
             text:
-              en: "Time words stay the same when the report is made on the same day."
+              en: Time words stay the same when the report is made on the same day.
 
   - title: { en: "Form: reported questions" }
+    role: form
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: type, label: { en: Question } }
           - { key: direct, label: { en: Direct } }
           - { key: reported, label: { en: Reported } }
         rows:
-          - { level: B1, type: Yes / no, direct: { ex: "“Do you like tea?”" }, reported: { ex: "She asked **if** I **liked** tea." } }
-          - { level: B1, type: Wh-, direct: { ex: "“Where do you live?”" }, reported: { ex: "She asked **where** I **lived**." } }
-          - { level: B1, type: Wh-, direct: { ex: "“What is your name?”" }, reported: { ex: "She asked **what** my name **was**." } }
-      - type: bullets
+          - { level: B1, type: { alternatives: ["Yes", "no"] }, direct: “Do you like tea?”, reported: ["She asked ", { target: if }, " I ", { target: liked }, " tea."] }
+          - { level: B1, type: Wh-, direct: “Where do you live?”, reported: ["She asked ", { target: where }, " I ", { target: lived }, "."] }
+          - { level: B1, type: Wh-, direct: “What is your name?”, reported: ["She asked ", { target: what }, " my name ", { target: was }, "."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "A reported question has statement order: subject + verb, with no do / does / did."
-          - level: B1
+              en: ["A reported question has statement order: ", { pattern: [{ slot: subject }, { alternatives: ["verb, with no do", does, did] }] }, "."]
+          - type: rule
+            level: B1
             text:
-              en: "Yes / no questions take **if** or **whether**. The sentence ends with a full stop."
-          - level: B1
+              en: [{ alternatives: ["Yes", "no"] }, " questions take ", { term: if }, " or ", { term: whether }, . The sentence ends with a full stop.]
+          - type: rule
+            level: B1
             text:
-              en: "Tenses and pronouns change as in statements."
+              en: Tenses and pronouns change as in statements.
 
   - title: { en: "Form: reported commands" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: type, label: { en: Type } }
           - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, type: { en: Command }, pattern: told + person + to + V, example: "“Sit down.” → He **told me to sit** down." }
-          - { level: B1, type: { en: Request }, pattern: asked + person + to + V, example: "“Please help.” → She **asked me to help**." }
-          - { level: B1, type: { en: Negative }, pattern: told + person + not to + V, example: "“Don't be late.” → He **told us not to be** late." }
+          - { level: B1, type: { en: Command }, pattern: { pattern: [told, { slot: person }, to, { slot: V }] }, ex: { mapping: [“Sit down.”, ["He ", { target: told me to sit }, " down."]] } }
+          - { level: B1, type: { en: Request }, pattern: { pattern: [asked, { slot: person }, to, { slot: V }] }, ex: { mapping: [“Please help.”, ["She ", { target: asked me to help }, "."]] } }
+          - { level: B1, type: { en: Negative }, pattern: { pattern: [told, { slot: person }, not to, { slot: V }] }, ex: { mapping: [“Don't be late.”, ["He ", { target: told us not to be }, " late."]] } }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: B1, wrong: She said me that she was tired., right: "She **told** me that she was tired. / She **said** that she was tired.", rule: { en: "say has no person; tell needs one" } }
-          - { level: B1, wrong: He told that he was late., right: "He **said** that he was late.", rule: { en: "tell needs a person" } }
-          - { level: B1, wrong: She asked me where did I live., right: "She asked me where I **lived**.", rule: { en: "reported questions use statement order" } }
-          - { level: B1, wrong: He asked me do I like tea., right: "He asked me **if** I liked tea.", rule: { en: "yes / no questions → if / whether" } }
-          - { level: B1, wrong: He said me to sit down., right: "He **told** me **to sit** down.", rule: { en: "told + person + to + V" } }
-          - { level: B1, wrong: He said he will come., right: "He said he **would** come.", rule: { en: "will → would after a past verb" } }
+          - { level: B1, wrong: She said me that she was tired., right: { alternatives: [["She ", { target: told }, " me that she was tired."], ["She ", { target: said }, " that she was tired."]] }, rule: { en: say has no person; tell needs one } }
+          - { level: B1, wrong: He told that he was late., right: ["He ", { target: said }, " that he was late."], rule: { en: tell needs a person } }
+          - { level: B1, wrong: She asked me where did I live., right: ["She asked me where I ", { target: lived }, "."], rule: { en: reported questions use statement order } }
+          - { level: B1, wrong: He asked me do I like tea., right: ["He asked me ", { target: if }, " I liked tea."], rule: { en: { takes: [[{ alternatives: ["yes", "no"] }, "  questions"], { alternatives: [if, whether] }] } } }
+          - { level: B1, wrong: He said me to sit down., right: ["He ", { target: told }, " me ", { target: to sit }, " down."], rule: { en: { pattern: [told, { slot: person }, to, { slot: V }] } } }
+          - { level: B1, wrong: He said he will come., right: ["He said he ", { target: would }, " come."], rule: { en: { takes: [will, would after a past verb] } } }

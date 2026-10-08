@@ -1,20 +1,11 @@
 // Cheatsheet content: which sheets a track has and the HTML each one holds.
-import {
-  type CurriculumSection,
-  filled,
-  type Level,
-  LEVELS,
-  levelName,
-  localize,
-  lv,
-  topicTitle,
-  type TopicRef,
-} from "../../../scripts/lib.ts";
+import { topicTitle } from "../../../scripts/content.ts";
+import { type CurriculumSection, filled, type Level, LEVELS, levelName, localize, lv, type TopicRef } from "../../../scripts/lib.ts";
 import { contains, type Range, refRange } from "../../../scripts/levels.ts";
 import type { Track } from "../context.ts";
 import { cheatsheetHtml } from "../guide.ts";
 import { refsRange, single } from "../parts.ts";
-import { escapeHtml } from "../render.ts";
+import { escapeHtml } from "../html.ts";
 import { levelSheet, progressiveSheet, sectionSheet, topicSheet, topicUrl } from "../urls.ts";
 
 export interface Sheet {

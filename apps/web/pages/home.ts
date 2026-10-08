@@ -3,7 +3,7 @@ import { listOf, localize, say, SITE } from "../../../scripts/lib.ts";
 import { join, refRange } from "../../../scripts/levels.ts";
 import { type Context, EXPLAINS, homeLanguage } from "../context.ts";
 import { page, ui } from "../layout.ts";
-import { escapeHtml } from "../render.ts";
+import { escapeHtml } from "../html.ts";
 import { homeUrl, trackUrl } from "../urls.ts";
 
 // The home page names every language in the first explanation language.

@@ -1,13 +1,17 @@
 // A topic's guide as HTML pieces: its cheatsheet as section 00, then its sections.
-import { type Block, type Explain, type Level, localize, say, type Topic } from "../../scripts/lib.ts";
+import { plainText, reading, textIn } from "../../scripts/text.ts";
+import { type Block, type Explain, type Level, say, type Text, type Topic } from "../../scripts/lib.ts";
 import { contentRange, type Range, sectionRange, upTo } from "../../scripts/levels.ts";
-import { blocksHtml, type Ctx } from "./render.ts";
+import { type Ctx, escapeHtml, inline } from "./html.ts";
+import { blocksHtml } from "./render.ts";
 
 export type SectionKind = "cheatsheet" | "body";
 
-// A guide section ready to wrap in a <section>, with the range of its leaves.
+// A guide section ready to wrap in a <section>, with the range of its leaves: its title as plain
+// text for anchors and the rail, and as HTML for its heading.
 export interface GuideSection {
   title: string;
+  heading: string;
   range: Range;
   kind: SectionKind;
   html: string;
@@ -25,6 +29,7 @@ export function cheatsheetHtml(ctx: Ctx, level?: Level): string | null {
 // A guide part before rendering: its title, the range of its leaves and its blocks.
 export interface GuidePart {
   title: string;
+  heading: Text | null;
   range: Range;
   kind: SectionKind;
   content: Block[];
@@ -34,10 +39,13 @@ export interface GuidePart {
 export function guideParts(topic: Topic, explain: Explain): GuidePart[] {
   const out: GuidePart[] = [];
   const sheet = contentRange(topic.cheatsheet.content, explain);
-  if (sheet) out.push({ title: say("sheet", explain), range: sheet, kind: "cheatsheet", content: topic.cheatsheet.content });
+  if (sheet) out.push({ title: say("sheet", explain), heading: null, range: sheet, kind: "cheatsheet", content: topic.cheatsheet.content });
   for (const section of topic.sections) {
     const range = sectionRange(section, explain);
-    if (range !== null) out.push({ title: localize(section.title, explain), range, kind: "body", content: section.content });
+    const heading = textIn(section.title, explain);
+    if (range !== null) {
+      out.push({ title: plainText(heading, reading(explain, false)), heading, range, kind: "body", content: section.content });
+    }
   }
   return out;
 }
@@ -48,6 +56,7 @@ export function guideSections(ctx: Ctx): GuideSection[] {
   if (!topic) return [];
   return guideParts(topic, ctx.explain).map((p) => ({
     title: p.title,
+    heading: p.heading === null ? escapeHtml(p.title) : inline(p.heading, ctx, false),
     range: p.range,
     kind: p.kind,
     html: blocksHtml(p.content, ctx, p.range.from),

@@ -1,0 +1,30 @@
+# npm test covers every line and function of the modules that read, check and render topic data;
+# the rest of the app is tested through the pages it builds.
+[test]
+coverageThreshold = { lines = 1.0, functions = 1.0 }
+coveragePathIgnorePatterns = [
+  "scripts/generated/**",
+  "scripts/lib.ts",
+  "scripts/validate/config.ts",
+  "scripts/validate/index.ts",
+  "scripts/validate/report.ts",
+  "scripts/validate/curriculum.ts",
+  "apps/web/assets.ts",
+  "apps/web/build.ts",
+  "apps/web/context.ts",
+  "apps/web/icons.ts",
+  "apps/web/layout.ts",
+  "apps/web/level-colours.ts",
+  "apps/web/nav.ts",
+  "apps/web/output.ts",
+  "apps/web/parts.ts",
+  "apps/web/path.ts",
+  "apps/web/sequence.ts",
+  "apps/web/test-site.ts",
+  "apps/web/urls.ts",
+  "apps/web/pages/credits.ts",
+  "apps/web/pages/home.ts",
+  "apps/web/pages/sheets.ts",
+  "apps/web/pages/topic.ts",
+  "apps/web/pages/track.ts",
+]

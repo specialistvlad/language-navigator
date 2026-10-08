@@ -3,7 +3,7 @@ import type { Concepts, Topic, TopicRef } from "../lib.ts";
 import type { Report } from "./report.ts";
 import { checkLevels } from "./topic-levels.ts";
 import { checkSummary } from "./topic-summary.ts";
-import { checkLanguages } from "./topic-text.ts";
+import { checkText, links } from "./topic-text.ts";
 
 export function checkTopic(ref: TopicRef, topic: Topic, ids: Set<string>, concepts: Concepts, report: Report): void {
   const where = ref.path;
@@ -13,9 +13,10 @@ export function checkTopic(ref: TopicRef, topic: Topic, ids: Set<string>, concep
 
   for (const c of topic.concepts) if (!(c in concepts)) report(where, `concept "${c}" missing from concepts.yaml`);
   for (const id of topic.related) if (!ids.has(id)) report(where, `related "${id}" missing from curriculum.yaml`);
-  for (const [, id] of JSON.stringify(topic).matchAll(/\]\(id:([^)]+)\)/g)) {
-    if (id !== undefined && !ids.has(id)) report(where, `link id:${id} missing from curriculum.yaml`);
+  for (const id of links(topic)) {
+    if (!ids.has(id)) report(where, `link to ${id} missing from curriculum.yaml`);
+    if (id === topic.id) report(where, `link to ${id} points to the topic itself`);
   }
-  checkLanguages(topic, where, report);
+  checkText(topic, where, report);
   checkSummary(topic, where, report);
 }

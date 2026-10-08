@@ -9,184 +9,218 @@ status: { en: draft }
 
 title: { en: Perfect Tenses }
 summary:
-  en: "Present perfect and past perfect: have, has or had plus the past participle for an earlier event seen from a later point. A finished time such as yesterday or ago takes the past simple: I **saw** her yesterday. I **have seen** her today."
+  lead: { en: "Present perfect and past perfect: have, has or had plus the past participle for an earlier event seen from a later point." }
+  rule: { en: "A finished time such as yesterday or ago takes the past simple:" }
+  ex: { examples: [["I ", { target: saw }, " her yesterday."], ["I ", { target: have seen }, " her today."]] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: paradigm
       columns:
-        - { key: tense, label: { en: Tense }, merge: true, center: true }
-        - { key: qh, group: { en: Question }, label: { en: Helper }, merge: true, center: true }
-        - { key: qs, group: { en: Question }, label: { en: Subject } }
-        - { key: qv, group: { en: Question }, label: { en: Verb }, merge: true, center: true }
-        - { key: ss, group: { en: Statement }, label: { en: Subject } }
-        - { key: sh, group: { en: Statement }, label: { en: Helper }, merge: true, center: true }
-        - { key: sv, group: { en: Statement }, label: { en: Verb }, merge: true, center: true }
-        - { key: ns, group: { en: Negative }, label: { en: Subject } }
-        - { key: nh, group: { en: Negative }, label: { en: Helper }, merge: true, center: true }
-        - { key: nv, group: { en: Negative }, label: { en: Verb }, merge: true, center: true }
+        - { key: tense, label: { en: Tense } }
+        - { key: qh, slot: aux, features: { interrogativity: int, polarity: pos } }
+        - { key: qs, slot: subj, features: { interrogativity: int, polarity: pos } }
+        - { key: qv, slot: verb, features: { interrogativity: int, polarity: pos } }
+        - { key: ss, slot: subj, features: { interrogativity: decl, polarity: pos } }
+        - { key: sh, slot: aux, features: { interrogativity: decl, polarity: pos } }
+        - { key: sv, slot: verb, features: { interrogativity: decl, polarity: pos } }
+        - { key: ns, slot: subj, features: { interrogativity: decl, polarity: neg } }
+        - { key: nh, slot: aux, features: { interrogativity: decl, polarity: neg } }
+        - { key: nv, slot: verb, features: { interrogativity: decl, polarity: neg } }
       rows:
-        - { level: A2, tense: { en: Present perfect }, qh: "**Have**", qs: "I", qv: "work**ed**?", ss: "I", sh: "**have**", sv: "work**ed**.", ns: "I", nh: "**haven't**", nv: "work**ed**." }
-        - { level: A2, tense: { en: Present perfect }, qh: "**Have**", qs: "you", qv: "work**ed**?", ss: "You", sh: "**have**", sv: "work**ed**.", ns: "You", nh: "**haven't**", nv: "work**ed**." }
-        - { level: A2, tense: { en: Present perfect }, qh: "**Has**", qs: "he", qv: "work**ed**?", ss: "He", sh: "**has**", sv: "work**ed**.", ns: "He", nh: "**hasn't**", nv: "work**ed**." }
-        - { level: A2, tense: { en: Present perfect }, qh: "**Has**", qs: "she", qv: "work**ed**?", ss: "She", sh: "**has**", sv: "work**ed**.", ns: "She", nh: "**hasn't**", nv: "work**ed**." }
-        - { level: A2, tense: { en: Present perfect }, qh: "**Has**", qs: "it", qv: "work**ed**?", ss: "It", sh: "**has**", sv: "work**ed**.", ns: "It", nh: "**hasn't**", nv: "work**ed**." }
-        - { level: A2, tense: { en: Present perfect }, qh: "**Have**", qs: "we", qv: "work**ed**?", ss: "We", sh: "**have**", sv: "work**ed**.", ns: "We", nh: "**haven't**", nv: "work**ed**." }
-        - { level: A2, tense: { en: Present perfect }, qh: "**Have**", qs: "they", qv: "work**ed**?", ss: "They", sh: "**have**", sv: "work**ed**.", ns: "They", nh: "**haven't**", nv: "work**ed**." }
-        - { level: B1, tense: { en: Past perfect }, qh: "**Had**", qs: "I", qv: "work**ed**?", ss: "I", sh: "**had**", sv: "work**ed**.", ns: "I", nh: "**hadn't**", nv: "work**ed**." }
-        - { level: B1, tense: { en: Past perfect }, qh: "**Had**", qs: "you", qv: "work**ed**?", ss: "You", sh: "**had**", sv: "work**ed**.", ns: "You", nh: "**hadn't**", nv: "work**ed**." }
-        - { level: B1, tense: { en: Past perfect }, qh: "**Had**", qs: "he", qv: "work**ed**?", ss: "He", sh: "**had**", sv: "work**ed**.", ns: "He", nh: "**hadn't**", nv: "work**ed**." }
-        - { level: B1, tense: { en: Past perfect }, qh: "**Had**", qs: "she", qv: "work**ed**?", ss: "She", sh: "**had**", sv: "work**ed**.", ns: "She", nh: "**hadn't**", nv: "work**ed**." }
-        - { level: B1, tense: { en: Past perfect }, qh: "**Had**", qs: "it", qv: "work**ed**?", ss: "It", sh: "**had**", sv: "work**ed**.", ns: "It", nh: "**hadn't**", nv: "work**ed**." }
-        - { level: B1, tense: { en: Past perfect }, qh: "**Had**", qs: "we", qv: "work**ed**?", ss: "We", sh: "**had**", sv: "work**ed**.", ns: "We", nh: "**hadn't**", nv: "work**ed**." }
-        - { level: B1, tense: { en: Past perfect }, qh: "**Had**", qs: "they", qv: "work**ed**?", ss: "They", sh: "**had**", sv: "work**ed**.", ns: "They", nh: "**hadn't**", nv: "work**ed**." }
+        - { level: A2, features: { tense: prs, aspect: prf, person: 1, number: sg }, tense: { en: Present perfect }, qh: { aux: Have }, qs: I, qv: [work, { ending: ed }, "?"], ss: I, sh: { aux: have }, sv: [work, { ending: ed }, "."], ns: I, nh: { aux: haven't }, nv: [work, { ending: ed }, "."] }
+        - { level: A2, features: { tense: prs, aspect: prf, person: 2 }, tense: { en: Present perfect }, qh: { aux: Have }, qs: you, qv: [work, { ending: ed }, "?"], ss: You, sh: { aux: have }, sv: [work, { ending: ed }, "."], ns: You, nh: { aux: haven't }, nv: [work, { ending: ed }, "."] }
+        - { level: A2, features: { tense: prs, aspect: prf, person: 3, number: sg, gender: masc }, tense: { en: Present perfect }, qh: { aux: Has }, qs: he, qv: [work, { ending: ed }, "?"], ss: He, sh: { aux: has }, sv: [work, { ending: ed }, "."], ns: He, nh: { aux: hasn't }, nv: [work, { ending: ed }, "."] }
+        - { level: A2, features: { tense: prs, aspect: prf, person: 3, number: sg, gender: fem }, tense: { en: Present perfect }, qh: { aux: Has }, qs: she, qv: [work, { ending: ed }, "?"], ss: She, sh: { aux: has }, sv: [work, { ending: ed }, "."], ns: She, nh: { aux: hasn't }, nv: [work, { ending: ed }, "."] }
+        - { level: A2, features: { tense: prs, aspect: prf, person: 3, number: sg, gender: neut }, tense: { en: Present perfect }, qh: { aux: Has }, qs: it, qv: [work, { ending: ed }, "?"], ss: It, sh: { aux: has }, sv: [work, { ending: ed }, "."], ns: It, nh: { aux: hasn't }, nv: [work, { ending: ed }, "."] }
+        - { level: A2, features: { tense: prs, aspect: prf, person: 1, number: pl }, tense: { en: Present perfect }, qh: { aux: Have }, qs: we, qv: [work, { ending: ed }, "?"], ss: We, sh: { aux: have }, sv: [work, { ending: ed }, "."], ns: We, nh: { aux: haven't }, nv: [work, { ending: ed }, "."] }
+        - { level: A2, features: { tense: prs, aspect: prf, person: 3, number: pl }, tense: { en: Present perfect }, qh: { aux: Have }, qs: they, qv: [work, { ending: ed }, "?"], ss: They, sh: { aux: have }, sv: [work, { ending: ed }, "."], ns: They, nh: { aux: haven't }, nv: [work, { ending: ed }, "."] }
+        - { level: B1, features: { tense: pst, aspect: prf, person: 1, number: sg }, tense: { en: Past perfect }, qh: { aux: Had }, qs: I, qv: [work, { ending: ed }, "?"], ss: I, sh: { aux: had }, sv: [work, { ending: ed }, "."], ns: I, nh: { aux: hadn't }, nv: [work, { ending: ed }, "."] }
+        - { level: B1, features: { tense: pst, aspect: prf, person: 2 }, tense: { en: Past perfect }, qh: { aux: Had }, qs: you, qv: [work, { ending: ed }, "?"], ss: You, sh: { aux: had }, sv: [work, { ending: ed }, "."], ns: You, nh: { aux: hadn't }, nv: [work, { ending: ed }, "."] }
+        - { level: B1, features: { tense: pst, aspect: prf, person: 3, number: sg, gender: masc }, tense: { en: Past perfect }, qh: { aux: Had }, qs: he, qv: [work, { ending: ed }, "?"], ss: He, sh: { aux: had }, sv: [work, { ending: ed }, "."], ns: He, nh: { aux: hadn't }, nv: [work, { ending: ed }, "."] }
+        - { level: B1, features: { tense: pst, aspect: prf, person: 3, number: sg, gender: fem }, tense: { en: Past perfect }, qh: { aux: Had }, qs: she, qv: [work, { ending: ed }, "?"], ss: She, sh: { aux: had }, sv: [work, { ending: ed }, "."], ns: She, nh: { aux: hadn't }, nv: [work, { ending: ed }, "."] }
+        - { level: B1, features: { tense: pst, aspect: prf, person: 3, number: sg, gender: neut }, tense: { en: Past perfect }, qh: { aux: Had }, qs: it, qv: [work, { ending: ed }, "?"], ss: It, sh: { aux: had }, sv: [work, { ending: ed }, "."], ns: It, nh: { aux: hadn't }, nv: [work, { ending: ed }, "."] }
+        - { level: B1, features: { tense: pst, aspect: prf, person: 1, number: pl }, tense: { en: Past perfect }, qh: { aux: Had }, qs: we, qv: [work, { ending: ed }, "?"], ss: We, sh: { aux: had }, sv: [work, { ending: ed }, "."], ns: We, nh: { aux: hadn't }, nv: [work, { ending: ed }, "."] }
+        - { level: B1, features: { tense: pst, aspect: prf, person: 3, number: pl }, tense: { en: Past perfect }, qh: { aux: Had }, qs: they, qv: [work, { ending: ed }, "?"], ss: They, sh: { aux: had }, sv: [work, { ending: ed }, "."], ns: They, nh: { aux: hadn't }, nv: [work, { ending: ed }, "."] }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: text
+      - type: prose
         level: A2
         text:
-          en: "Each perfect tense is **have** + past participle: **have / has** for the present, **had** for the past."
-      - type: bullets
+          en: ["Each perfect tense is ", { pattern: [{ term: have }, { slot: past participle }] }, ": ", { alternatives: [{ term: have }, { term: has }] }, " for the present, ", { term: had }, " for the past."]
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "In questions the helper goes before the subject; in negatives it takes **not**: haven't, hasn't, hadn't."
-          - level: A2
+              en: ["In questions the helper goes before the subject; in negatives it takes ", { term: not }, ": haven't, hasn't, hadn't."]
+          - type: rule
+            level: A2
             text:
               en: "The main verb is always the past participle: worked, seen, gone."
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "**has** goes with he, she, it; **had** is the same for everyone."
-          - level: A2
+              en: [{ term: has }, " goes with he, she, it; ", { term: had }, " is the same for everyone."]
+          - type: rule
+            level: A2
             text:
               en: "Short forms: I've, she's (= she has), I'd (= I had)."
 
   - title: { en: The past participle }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: type, label: { en: Type } }
           - { key: rule, label: { en: Rule } }
-          - { key: examples, label: { en: Examples } }
+          - { key: ex, label: { en: Examples } }
         rows:
-          - { level: A2, type: { en: regular verbs }, rule: "V + -ed", examples: work → worked / live → lived / study → studied }
-          - { level: A2, type: { en: "irregular, same as past simple" }, rule: { en: "participle = past simple form" }, examples: have → had / buy → bought / meet → met }
-          - { level: A2, type: { en: "irregular, own form" }, rule: { en: "learn each one" }, examples: see → seen / write → written / eat → eaten / do → done }
-          - { level: A2, type: "go, be", rule: { en: "go has two participles" }, examples: go → gone / been · be → been }
-      - type: bullets
+          - { level: A2, type: { en: regular verbs }, rule: { pattern: [{ slot: V }, "-ed"] }, ex: { examples: [{ mapping: [work, worked] }, { mapping: [live, lived] }, { mapping: [study, studied] }] } }
+          - { level: A2, type: { en: "irregular, same as past simple" }, rule: { en: participle = past simple form }, ex: { examples: [{ mapping: [have, had] }, { mapping: [buy, bought] }, { mapping: [meet, met] }] } }
+          - { level: A2, type: { en: "irregular, own form" }, rule: { en: learn each one }, ex: { examples: [{ mapping: [see, seen] }, { mapping: [write, written] }, { mapping: [eat, eaten] }, { mapping: [do, done] }] } }
+          - { level: A2, type: "go, be", rule: { en: go has two participles }, ex: { examples: [{ mapping: [go, { examples: [gone, been] }] }, { mapping: [be, been] }] } }
+      - type: list
         items:
-          - level: A2
+          - type: note
+            level: A2
             text:
-              en: "The -ed spelling is the same as in the past simple: see [Simple Tenses](id:en.tenses.simple-tenses)."
-          - level: A2
+              en: ["The -ed spelling is the same as in the past simple: see ", { link: Simple Tenses, to: en.tenses.simple-tenses }, "."]
+          - type: note
+            level: A2
             text:
-              en: "All irregular forms: [Irregular verbs table](id:en.verbs.irregular-verbs-table)."
+              en: ["All irregular forms: ", { link: Irregular verbs table, to: en.verbs.irregular-verbs-table }, "."]
 
   - title: { en: "Present perfect: form" }
+    role: form
+    features: { tense: prs, aspect: prf }
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "A short answer repeats have / has:"
-            ex: "Have you met Tom? — Yes, I **have**. / No, I **haven't**."
-          - level: A2
+              en: ["A short answer repeats ", { alternatives: [have, has] }, ":"]
+            ex: { exchange: [Have you met Tom?, { alternatives: [["Yes, I ", { target: have }, "."], ["No, I ", { target: haven't }, "."]] }] }
+          - type: rule
+            level: A2
             text:
-              en: "**ever**, **never**, **just** and **already** go between have / has and the participle:"
-            ex: "I'**ve never** seen snow. / He'**s just** left."
-          - level: A2
+              en: [{ term: ever }, ", ", { term: never }, ", ", { term: just }, " and ", { term: already }, " go between ", { alternatives: [have, has] }, " and the participle:"]
+            ex: { examples: [[I', { target: ve never }, " seen snow."], [He', { target: s just }, " left."]] }
+          - type: rule
+            level: A2
             text:
-              en: "**yet** goes at the end, in negatives and questions:"
-            ex: "I haven't finished **yet**. / Have you finished **yet**?"
-          - level: B1
+              en: [{ term: yet }, " goes at the end, in negatives and questions:"]
+            ex: { examples: [["I haven't finished ", { target: yet }, "."], ["Have you finished ", { target: yet }, "?"]] }
+          - type: rule
+            level: B1
             text:
-              en: "**How long** asks about the length of a state up to now:"
-            ex: "How long **have** you **lived** here?"
+              en: [{ term: How long }, " asks about the length of a state up to now:"]
+            ex: ["How long ", { target: have }, " you ", { target: lived }, " here?"]
 
   - title: { en: "Present perfect: use" }
+    role: use
+    features: { tense: prs, aspect: prf }
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, use: { en: "Life experience, no time given" }, example: "I'**ve been** to Paris twice." }
-          - { level: A2, use: { en: "Recent news" }, example: "I'**ve just seen** Anna." }
-          - { level: A2, use: { en: "Result visible now" }, example: "I'**ve lost** my keys." }
-          - { level: A2, use: { en: "Unfinished time (today, this week)" }, example: "I'**ve had** three coffees today." }
-          - { level: B1, use: { en: "A state from the past up to now (for, since)" }, example: "She'**s lived** here since 2019." }
-      - type: bullets
+          - { level: A2, use: { en: "Life experience, no time given" }, ex: [I', { target: ve been }, " to Paris twice."] }
+          - { level: A2, use: { en: Recent news }, ex: [I', { target: ve just seen }, " Anna."] }
+          - { level: A2, use: { en: Result visible now }, ex: [I', { target: ve lost }, " my keys."] }
+          - { level: A2, use: { en: "Unfinished time (today, this week)" }, ex: [I', { target: ve had }, " three coffees today."] }
+          - { level: B1, use: { en: "A state from the past up to now (for, since)" }, ex: [She', { target: s lived }, " here since ", { date: "2019", value: "2019" }, "."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "**been** = went and came back; **gone** = went and is still there:"
-            ex: "She'**s been** to Spain. / She'**s gone** to Spain."
-          - level: B1
+              en: [{ term: been }, " = went and came back; ", { term: gone }, " = went and is still there:"]
+            ex: { examples: [[She', { target: s been }, " to Spain."], [She', { target: s gone }, " to Spain."]] }
+          - type: rule
+            level: B1
             text:
-              en: "**for** takes a length of time; **since** takes a starting point:"
-            ex: "I've known her **for** ten years / **since** 2015."
+              en: [{ term: for }, " takes a length of time; ", { term: since }, " takes a starting point:"]
+            ex: { examples: [["I've known her ", { target: for }, " ten years"], [{ target: since }, " ", { date: "2015", value: "2015" }, "."]] }
 
   - title: { en: "Past perfect: form" }
+    role: form
+    features: { tense: pst, aspect: prf }
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
               en: "A short answer repeats had:"
-            ex: "Had they left? — Yes, they **had**. / No, they **hadn't**."
-          - level: B1
+            ex: { exchange: [Had they left?, { alternatives: [["Yes, they ", { target: had }, "."], ["No, they ", { target: hadn't }, "."]] }] }
+          - type: rule
+            level: B1
             text:
-              en: "**already**, **just** and **never** go between had and the participle:"
-            ex: "I'**d never** flown before."
+              en: [{ term: already }, ", ", { term: just }, " and ", { term: never }, " go between had and the participle:"]
+            ex: [I', { target: d never }, " flown before."]
 
   - title: { en: "Past perfect: use" }
+    role: use
+    features: { tense: pst, aspect: prf }
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, use: { en: "An action before another past action" }, example: "When I got home, she **had** already **cooked**." }
-          - { level: B1, use: { en: "An action before a past time" }, example: "By 8 o'clock he **had left**." }
-          - { level: B1, use: { en: "The reason for a past situation" }, example: "He was tired. He **had worked** all night." }
-      - type: bullets
+          - { level: B1, use: { en: An action before another past action }, ex: ["When I got home, she ", { target: had }, " already ", { target: cooked }, "."] }
+          - { level: B1, use: { en: An action before a past time }, ex: ["By 8 o'clock he ", { target: had left }, "."] }
+          - { level: B1, use: { en: The reason for a past situation }, ex: ["He was tired. He ", { target: had worked }, " all night."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
               en: "Time words: when, after, before, by the time, already."
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "The story itself takes the past simple; the past perfect looks back from it."
+              en: The story itself takes the past simple; the past perfect looks back from it.
 
   - title: { en: "Compare: present perfect and past simple" }
+    role: compare
     content:
-      - type: table
+      - type: comparison
         columns:
-          - { key: perfect, label: Present perfect }
-          - { key: simple, label: { en: Past simple } }
+          - { key: perfect, label: Present perfect, features: { tense: prs, aspect: prf } }
+          - { key: simple, label: { en: Past simple }, features: { tense: pst } }
         rows:
           - { level: A2, perfect: { en: "past event, time open or unfinished" }, simple: { en: "finished time, stated or known" } }
-          - { level: A2, perfect: { ex: "I'**ve seen** that film." }, simple: { ex: "I **saw** it last night." } }
+          - { level: A2, perfect: [I', { target: ve seen }, " that film."], simple: ["I ", { target: saw }, " it last night."] }
           - { level: A2, perfect: "ever, never, just, already, yet", simple: "yesterday, last week, ago" }
-      - type: bullets
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
               en: "A finished-time word (yesterday, last week, ago) takes the past simple."
-          - level: A2
+          - type: note
+            level: A2
+            variety: en-US
             text:
-              en: "US: the past simple is common with just, already and yet: I **just ate**."
+              en: "the past simple is common with just, already and yet:"
+            ex: ["I ", { target: just ate }, "."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A2, wrong: I have seen him yesterday., right: "I **saw** him yesterday.", rule: { en: "finished time → past simple" } }
-          - { level: B1, wrong: I live here since 2010., right: "I **have lived** here since 2010.", rule: { en: "since / for + state up to now → present perfect" } }
-          - { level: A2, wrong: She has went home., right: "She has **gone** home.", rule: { en: "have / has + past participle" } }
-          - { level: A2, wrong: She have lost her keys., right: "She **has** lost her keys.", rule: { en: "he / she / it → has" } }
-          - { level: A2, wrong: I have gone to Paris twice., right: "I have **been** to Paris twice.", rule: { en: "a visit and return → been" } }
-          - { level: B1, wrong: "When I arrived, the film has already started.", right: "When I arrived, the film **had** already **started**.", rule: { en: "earlier past action → had + participle" } }
-          - { level: B1, wrong: Had you saw him?, right: "Had you **seen** him?", rule: { en: "after had use the past participle" } }
+          - { level: A2, wrong: I have seen him yesterday., right: ["I ", { target: saw }, " him yesterday."], rule: { en: { takes: [finished time, past simple] } } }
+          - { level: B1, wrong: ["I live here since ", { date: "2010", value: "2010" }, "."], right: ["I ", { target: have lived }, " here since ", { date: "2010", value: "2010" }, "."], rule: { en: { mapping: [{ pattern: [{ alternatives: [since, for] }, state up to now] }, present perfect] } } }
+          - { level: A2, wrong: She has went home., right: ["She has ", { target: gone }, " home."], rule: { en: { pattern: [{ alternatives: [have, has] }, { slot: past participle }] } } }
+          - { level: A2, wrong: She have lost her keys., right: ["She ", { target: has }, " lost her keys."], rule: { en: { takes: [{ alternatives: [he, she, it] }, has] } } }
+          - { level: A2, wrong: I have gone to Paris twice., right: ["I have ", { target: been }, " to Paris twice."], rule: { en: { takes: [a visit and return, been] } } }
+          - { level: B1, wrong: "When I arrived, the film has already started.", right: ["When I arrived, the film ", { target: had }, " already ", { target: started }, "."], rule: { en: { takes: [earlier past action, { pattern: [had, participle] }] } } }
+          - { level: B1, wrong: Had you saw him?, right: ["Had you ", { target: seen }, " him?"], rule: { en: after had use the past participle } }

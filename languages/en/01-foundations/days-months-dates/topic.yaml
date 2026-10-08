@@ -9,123 +9,147 @@ status: { en: draft }
 
 title: { en: "Days, Months and Dates" }
 summary:
-  en: "The days of the week, the months, and how to say and write dates and years. Days and months always start with a capital letter, and dates are said with ordinals: on **Monday**, the **third** of **July**."
+  lead: { en: "The days of the week, the months, and how to say and write dates and years." }
+  rule: { en: "Days and months always start with a capital letter, and dates are said with ordinals:" }
+  ex: ["on ", { target: { weekday: Monday, value: 1 } }, ", the ", { target: third }, " of ", { target: { date: July, value: "--07" } }, "."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: point, label: { en: Point } }
         - { key: rule, label: { en: Rule } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A0, point: { en: Capitals }, rule: { en: "days and months start with a capital letter" }, example: "**M**onday, **J**une" }
-        - { level: A0, point: Wednesday, rule: { en: "the first d is silent: /ˈwenzdeɪ/" }, example: "Wednesday" }
-        - { level: A0, point: { en: Weekend }, rule: { en: "Saturday and Sunday are the weekend; the other days are weekdays" }, example: "**the weekend**" }
-        - { level: A0, point: { en: Day of the month }, rule: { en: "say the day as an ordinal: 5 May" }, example: "the **fifth** of May" }
-        - { level: A0, point: { en: Date order }, rule: { en: "British: day, month, year, so 04/07/2026 is 4 July; US: month, day, year, so April 7" }, example: "04/07/2026" }
-        - { level: A0, point: { en: Asking the date }, rule: { en: "ask What's the date today? and answer with the ordinal" }, example: "It's the **tenth** of October." }
-        - { level: A0, point: { en: Years }, rule: { en: "most years in two pairs of digits: 1999; 1900 and 1905 as shown" }, example: "**nineteen** ninety-nine / nineteen **hundred** / nineteen **oh** five" }
-        - { level: A0, point: { en: After 2000 }, rule: { en: "2000–2009: two thousand (and) + unit; from 2010 both forms are common" }, example: "two thousand **and** eight / **twenty** twenty-six" }
+        - { level: A0, point: { en: Capitals }, rule: { en: days and months start with a capital letter }, ex: [{ letter: M }, "onday, ", { letter: J }, une] }
+        - { level: A0, point: { weekday: Wednesday, value: 3 }, rule: { en: ["the first d is silent: ", { ipa: ˈwenzdeɪ }] }, ex: { weekday: Wednesday, value: 3 } }
+        - { level: A0, point: { en: Weekend }, rule: { en: Saturday and Sunday are the weekend; the other days are weekdays }, ex: { target: the weekend } }
+        - { level: A0, point: { en: Day of the month }, rule: { en: "say the day as an ordinal: 5 May" }, ex: ["the ", { target: fifth }, " of ", { date: May, value: "--05" }] }
+        - { level: A0, point: { en: Date order }, rule: { en: ["British: day, month, year, so 04/07/2026 is 4 July; ", { variant: "month, day, year, so April 7", variety: en-US }] }, ex: ["04/07/", { date: "2026", value: "2026" }] }
+        - { level: A0, point: { en: Asking the date }, rule: { en: ask What's the date today? and answer with the ordinal }, ex: ["It's the ", { target: tenth }, " of ", { date: October, value: "--10" }, "."] }
+        - { level: A0, point: { en: Years }, rule: { en: "most years in two pairs of digits: 1999; 1900 and 1905 as shown" }, ex: { examples: [[{ target: nineteen }, " ninety-nine"], ["nineteen ", { target: hundred }], ["nineteen ", { target: oh }, " five"]] } }
+        - { level: A0, point: { en: After 2000 }, rule: { en: ["2000–2009: two thousand (and", { pattern: [")", { slot: unit }] }, ; from 2010 both forms are common] }, ex: { examples: [["two thousand ", { target: and }, " eight"], [{ target: twenty }, " twenty-six"]] } }
 
 sections:
   - title: { en: Days of the week }
+    role: own
     content:
-      - type: table
+      - type: inventory
+        set: days
         columns:
           - { key: day, label: { en: Day } }
           - { key: ipa, label: { en: Pronunciation } }
           - { key: short, label: { en: Short } }
         rows:
-          - { level: A0, day: { ex: Monday }, ipa: /ˈmʌndeɪ/, short: Mon }
-          - { level: A0, day: { ex: Tuesday }, ipa: /ˈtjuːzdeɪ/, short: Tue }
-          - { level: A0, day: { ex: Wednesday }, ipa: /ˈwenzdeɪ/, short: Wed }
-          - { level: A0, day: { ex: Thursday }, ipa: /ˈθɜːzdeɪ/, short: Thu }
-          - { level: A0, day: { ex: Friday }, ipa: /ˈfraɪdeɪ/, short: Fri }
-          - { level: A0, day: { ex: Saturday }, ipa: /ˈsætədeɪ/, short: Sat }
-          - { level: A0, day: { ex: Sunday }, ipa: /ˈsʌndeɪ/, short: Sun }
-      - type: bullets
+          - { level: A0, value: 1, day: Monday, ipa: { ipa: ˈmʌndeɪ }, short: Mon }
+          - { level: A0, value: 2, day: Tuesday, ipa: { ipa: ˈtjuːzdeɪ }, short: Tue }
+          - { level: A0, value: 3, day: Wednesday, ipa: { ipa: ˈwenzdeɪ }, short: Wed }
+          - { level: A0, value: 4, day: Thursday, ipa: { ipa: ˈθɜːzdeɪ }, short: Thu }
+          - { level: A0, value: 5, day: Friday, ipa: { ipa: ˈfraɪdeɪ }, short: Fri }
+          - { level: A0, value: 6, day: Saturday, ipa: { ipa: ˈsætədeɪ }, short: Sat }
+          - { level: A0, value: 7, day: Sunday, ipa: { ipa: ˈsʌndeɪ }, short: Sun }
+      - type: list
         items:
-          - level: A0
+          - type: rule
+            level: A0
             text:
-              en: "Days and months always start with a capital letter: **M**onday, **J**une."
-          - level: A0
+              en: "Days and months always start with a capital letter:"
+            ex: [{ letter: M }, "onday, ", { letter: J }, une.]
+          - type: rule
+            level: A0
             text:
-              en: "Wednesday has a silent first d: /ˈwenzdeɪ/."
-          - level: A0
-            text: { en: "Saturday and Sunday are **the weekend**; the other days are **weekdays**." }
+              en: ["Wednesday has a silent first d: ", { ipa: ˈwenzdeɪ }, "."]
+          - type: rule
+            level: A0
+            text:
+              en: ["Saturday and Sunday are ", { term: the weekend }, "; the other days are ", { term: weekdays }, "."]
 
   - title: { en: Months }
+    role: own
     content:
-      - type: table
+      - type: inventory
+        set: months
         columns:
           - { key: month, label: { en: Month } }
           - { key: ipa, label: { en: Pronunciation } }
           - { key: short, label: { en: Short } }
         rows:
-          - { level: A0, month: { ex: January }, ipa: /ˈdʒænjuəri/, short: Jan }
-          - { level: A0, month: { ex: February }, ipa: /ˈfebruəri/, short: Feb }
-          - { level: A0, month: { ex: March }, ipa: /mɑːtʃ/, short: Mar }
-          - { level: A0, month: { ex: April }, ipa: /ˈeɪprəl/, short: Apr }
-          - { level: A0, month: { ex: May }, ipa: /meɪ/, short: May }
-          - { level: A0, month: { ex: June }, ipa: /dʒuːn/, short: Jun }
-          - { level: A0, month: { ex: July }, ipa: /dʒuˈlaɪ/, short: Jul }
-          - { level: A0, month: { ex: August }, ipa: /ˈɔːɡəst/, short: Aug }
-          - { level: A0, month: { ex: September }, ipa: /sepˈtembə/, short: Sep }
-          - { level: A0, month: { ex: October }, ipa: /ɒkˈtəʊbə/, short: Oct }
-          - { level: A0, month: { ex: November }, ipa: /nəʊˈvembə/, short: Nov }
-          - { level: A0, month: { ex: December }, ipa: /dɪˈsembə/, short: Dec }
+          - { level: A0, value: "--01", month: January, ipa: { ipa: ˈdʒænjuəri }, short: Jan }
+          - { level: A0, value: "--02", month: February, ipa: { ipa: ˈfebruəri }, short: Feb }
+          - { level: A0, value: "--03", month: March, ipa: { ipa: mɑːtʃ }, short: Mar }
+          - { level: A0, value: "--04", month: April, ipa: { ipa: ˈeɪprəl }, short: Apr }
+          - { level: A0, value: "--05", month: May, ipa: { ipa: meɪ }, short: May }
+          - { level: A0, value: "--06", month: June, ipa: { ipa: dʒuːn }, short: Jun }
+          - { level: A0, value: "--07", month: July, ipa: { ipa: dʒuˈlaɪ }, short: Jul }
+          - { level: A0, value: "--08", month: August, ipa: { ipa: ˈɔːɡəst }, short: Aug }
+          - { level: A0, value: "--09", month: September, ipa: { ipa: sepˈtembə }, short: Sep }
+          - { level: A0, value: "--10", month: October, ipa: { ipa: ɒkˈtəʊbə }, short: Oct }
+          - { level: A0, value: "--11", month: November, ipa: { ipa: nəʊˈvembə }, short: Nov }
+          - { level: A0, value: "--12", month: December, ipa: { ipa: dɪˈsembə }, short: Dec }
 
   - title: { en: Dates }
+    role: own
     content:
-      - type: table
+      - type: inventory
+        set: dates
         columns:
           - { key: written, label: { en: Written } }
           - { key: said, label: { en: Said } }
         rows:
-          - { level: A0, written: "5 May · 5/5", said: "the **fifth** of May" }
-          - { level: A0, written: "1 June · 1/6", said: "the **first** of June" }
-          - { level: A0, written: "22 March · 22/3", said: "the **twenty-second** of March" }
-      - type: bullets
+          - { level: A0, value: "--05-05", written: { examples: ["5 May", "5/5"] }, said: ["the ", { target: fifth }, " of May"] }
+          - { level: A0, value: "--06-01", written: { examples: ["1 June", "1/6"] }, said: ["the ", { target: first }, " of June"] }
+          - { level: A0, value: "--03-22", written: { examples: ["22 March", "22/3"] }, said: ["the ", { target: twenty-second }, " of March"] }
+      - type: list
         items:
-          - level: A0
+          - type: note
+            level: A0
             text:
-              en: "Say the day as an ordinal number: the **third** of July. Ordinals: [Numbers](id:en.foundations.numbers)."
-          - level: A0
+              en: ["Say the day as an ordinal number: the ", { term: third }, " of July. Ordinals: ", { link: Numbers, to: en.foundations.numbers }, "."]
+          - type: rule
+            level: A0
             text:
               en: "British order: day, month, year. 04/07/2026 is 4 July."
-          - level: A0
+          - type: note
+            level: A0
+            variety: en-US
             text:
-              en: "US: month, day, year. 04/07/2026 is April 7; say *April seventh*."
-          - level: A0
-            text: { en: "Ask the date with **What's the date today?**" }
-            ex: "It's the **tenth** of October."
+              en: ["month, day, year. 04/07/2026 is April 7; say ", { date: April seventh, value: "--04-07" }, "."]
+          - type: rule
+            level: A0
+            text:
+              en: ["Ask the date with ", { term: What's the date today? }]
+            ex: ["It's the ", { target: tenth }, " of ", { date: October, value: "--10" }, "."]
 
   - title: { en: Years }
+    role: own
     content:
-      - type: table
+      - type: inventory
+        set: years
         columns:
           - { key: year, label: { en: Year } }
           - { key: said, label: { en: Said } }
         rows:
-          - { level: A0, year: "1999", said: "**nineteen** ninety-nine" }
-          - { level: A0, year: "1900", said: "nineteen **hundred**" }
-          - { level: A0, year: "1905", said: "nineteen **oh** five" }
-          - { level: A0, year: "2000", said: "two thousand" }
-          - { level: A0, year: "2008", said: "two thousand **and** eight" }
-          - { level: A0, year: "2026", said: "**twenty** twenty-six / two thousand and twenty-six" }
-      - type: bullets
+          - { level: A0, value: "1999", year: "1999", said: [{ target: nineteen }, " ninety-nine"] }
+          - { level: A0, value: "1900", year: "1900", said: ["nineteen ", { target: hundred }] }
+          - { level: A0, value: "1905", year: "1905", said: ["nineteen ", { target: oh }, " five"] }
+          - { level: A0, value: "2000", year: "2000", said: two thousand }
+          - { level: A0, value: "2008", year: "2008", said: ["two thousand ", { target: and }, " eight"] }
+          - { level: A0, value: "2026", year: "2026", said: { alternatives: [[{ target: twenty }, " twenty-six"], two thousand and twenty-six] } }
+      - type: list
         items:
-          - level: A0
+          - type: rule
+            level: A0
             text:
-              en: "Say most years in two pairs of digits: 19 | 99 → nineteen ninety-nine."
-          - level: A0
+              en: ["Say most years in two pairs of digits: ", { mapping: ["19 | 99", nineteen ninety-nine] }, "."]
+          - type: rule
+            level: A0
             text:
-              en: "2000–2009: two thousand (and) + unit. From 2010, both forms are common."
+              en: ["2000–2009: two thousand (and", { pattern: [")", { slot: unit }] }, ". From 2010, both forms are common."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A0, wrong: Wednesday /ˈwednzdeɪ/, right: "Wednesday **/ˈwenzdeɪ/**", rule: { en: "the first d is silent" } }
-          - { level: A0, wrong: the five of May, right: "the **fifth** of May", rule: { en: "days are ordinals" } }
+          - { level: A0, wrong: [{ weekday: Wednesday, value: 3 }, " ", { ipa: ˈwednzdeɪ }], right: [{ weekday: Wednesday, value: 3 }, " ", { ipa: ˈwenzdeɪ }], rule: { en: the first d is silent } }
+          - { level: A0, wrong: ["the five of ", { date: May, value: "--05" }], right: ["the ", { target: fifth }, " of ", { date: May, value: "--05" }], rule: { en: days are ordinals } }

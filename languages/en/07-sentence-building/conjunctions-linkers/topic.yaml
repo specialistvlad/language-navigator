@@ -9,11 +9,13 @@ status: { en: draft }
 
 title: { en: Conjunctions and Linkers }
 summary:
-  en: "Linkers join ideas: and adds, but contrasts, or offers a choice, because gives a reason and so gives a result. A comma comes before but and so between two clauses: I was tired, **so** I left."
+  lead: { en: "Linkers join ideas: and adds, but contrasts, or offers a choice, because gives a reason and so gives a result." }
+  rule: { en: "A comma comes before but and so between two clauses:" }
+  ex: ["I was tired, ", { target: so }, " I left."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: function, label: { en: Function } }
         - { key: a1, label: A1 }
@@ -21,136 +23,161 @@ cheatsheet:
         - { key: b1, label: B1 }
       rows:
         - { level: A1, function: { en: Addition }, a1: and, a2: "also, too", b1: "as well as, in addition" }
-        - { level: A1, function: { en: Contrast }, a1: but, a2: "—", b1: "although, however, while" }
-        - { level: A1, function: { en: Reason }, a1: because, a2: because of, b1: "—" }
-        - { level: A1, function: { en: Result }, a1: so, a2: "—", b1: "—" }
-        - { level: A1, function: { en: Choice }, a1: or, a2: "—", b1: "—" }
-        - { level: A2, function: { en: Time }, a1: "—", a2: "when, before, after, then", b1: "—" }
-        - { level: B1, function: { en: Purpose }, a1: "—", a2: "—", b1: so that }
-        - { level: B1, function: { en: Condition }, a1: "—", a2: "—", b1: unless }
+        - { level: A1, function: { en: Contrast }, a1: but, b1: "although, however, while" }
+        - { level: A1, function: { en: Reason }, a1: because, a2: because of }
+        - { level: A1, function: { en: Result }, a1: so }
+        - { level: A1, function: { en: Choice }, a1: or }
+        - { level: A2, function: { en: Time }, a2: "when, before, after, then" }
+        - { level: B1, function: { en: Purpose }, b1: so that }
+        - { level: B1, function: { en: Condition }, b1: unless }
 
 sections:
   - title: { en: "Basic linkers: and, but, or, because, so" }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: linker, label: { en: Linker } }
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, linker: and, use: { en: adds an idea }, example: "I like tea **and** coffee." }
-          - { level: A1, linker: but, use: { en: shows a contrast }, example: "I like tea, **but** I don't like coffee." }
-          - { level: A1, linker: or, use: { en: gives a choice }, example: "Do you want tea **or** coffee?" }
-          - { level: A1, linker: because, use: { en: gives the reason }, example: "I'm tired **because** I work late." }
-          - { level: A1, linker: so, use: { en: gives the result }, example: "I'm tired, **so** I go to bed." }
-      - type: bullets
+          - { level: A1, linker: and, use: { en: adds an idea }, ex: ["I like tea ", { target: and }, " coffee."] }
+          - { level: A1, linker: but, use: { en: shows a contrast }, ex: ["I like tea, ", { target: but }, " I don't like coffee."] }
+          - { level: A1, linker: or, use: { en: gives a choice }, ex: ["Do you want tea ", { target: or }, " coffee?"] }
+          - { level: A1, linker: because, use: { en: gives the reason }, ex: ["I'm tired ", { target: because }, " I work late."] }
+          - { level: A1, linker: so, use: { en: gives the result }, ex: ["I'm tired, ", { target: so }, " I go to bed."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "Between two full clauses, **but** and **so** usually take a comma before them: I was tired, **so** I left."
-          - level: A1
+              en: ["Between two full clauses, ", { term: but }, " and ", { term: so }, " usually take a comma before them:"]
+            ex: ["I was tired, ", { target: so }, " I left."]
+          - type: rule
+            level: A1
             text:
-              en: "**and**, **or** and **because** usually have no comma before them."
-          - level: A1
+              en: [{ term: and }, ", ", { term: or }, " and ", { term: because }, " usually have no comma before them."]
+          - type: rule
+            level: A1
             text:
-              en: "**because** is followed by a clause: a subject and a verb."
-          - level: A2
+              en: [{ term: because }, " is followed by a clause: a subject and a verb."]
+          - type: rule
+            level: A2
             text:
-              en: "**because of** is followed by a noun:"
-            ex: "We stayed in **because of** the rain."
+              en: [{ term: because of }, " is followed by a noun:"]
+            ex: ["We stayed in ", { target: because of }, " the rain."]
 
   - title: { en: "Time linkers: when, before, after, then" }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: linker, label: { en: Linker } }
           - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, linker: when, pattern: "when + clause", example: "**When** I get home, I cook." }
-          - { level: A2, linker: before, pattern: "before + clause", example: "I wash my hands **before** I eat." }
-          - { level: A2, linker: after, pattern: "after + clause", example: "We go home **after** the film ends." }
-          - { level: A2, linker: then, pattern: "clause, then + clause", example: "I had lunch, **then** I went home." }
-      - type: bullets
+          - { level: A2, linker: when, pattern: { pattern: [when, { slot: clause }] }, ex: [{ target: When }, " I get home, I cook."] }
+          - { level: A2, linker: before, pattern: { pattern: [before, { slot: clause }] }, ex: ["I wash my hands ", { target: before }, " I eat."] }
+          - { level: A2, linker: after, pattern: { pattern: [after, { slot: clause }] }, ex: ["We go home ", { target: after }, " the film ends."] }
+          - { level: A2, linker: then, pattern: [{ slot: clause }, ", ", { pattern: [then, { slot: clause }] }], ex: ["I had lunch, ", { target: then }, " I went home."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "A time clause that starts the sentence takes a comma after it: **When** it rains, we stay in."
-          - level: A2
+              en: "A time clause that starts the sentence takes a comma after it:"
+            ex: [{ target: When }, " it rains, we stay in."]
+          - type: rule
+            level: A2
             text:
-              en: "After **when**, **before** and **after** the present simple talks about the future: **When** I arrive, I'll call you."
+              en: ["After ", { term: when }, ", ", { term: before }, " and ", { term: after }, " the present simple talks about the future:"]
+            ex: [{ target: When }, " I arrive, I'll call you."]
 
   - title: { en: "Adding: also, too, as well as, in addition" }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: linker, label: { en: Linker } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, linker: also, example: "I **also** speak French. / She is **also** a nurse." }
-          - { level: A2, linker: too, example: "I speak French **too**." }
-          - { level: B1, linker: as well as, example: "She speaks French **as well as** Spanish." }
-          - { level: B1, linker: in addition, example: "**In addition**, the hotel has a pool." }
-      - type: bullets
+          - { level: A2, linker: also, ex: { examples: [["I ", { target: also }, " speak French."], ["She is ", { target: also }, " a nurse."]] } }
+          - { level: A2, linker: too, ex: ["I speak French ", { target: too }, "."] }
+          - { level: B1, linker: as well as, ex: ["She speaks French ", { target: as well as }, " Spanish."] }
+          - { level: B1, linker: in addition, ex: [{ target: In addition }, ", the hotel has a pool."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "**also** goes before the main verb and after be. **too** goes at the end."
-          - level: B1
+              en: [{ term: also }, " goes before the main verb and after be. ", { term: too }, " goes at the end."]
+          - type: rule
+            level: B1
             text:
-              en: "**as well as** is followed by a noun or an -ing form."
-          - level: B1
+              en: [{ term: as well as }, " is followed by a noun or an -ing form."]
+          - type: rule
+            level: B1
             text:
-              en: "**in addition** starts a sentence and is followed by a comma."
+              en: [{ term: in addition }, " starts a sentence and is followed by a comma."]
 
   - title: { en: "Contrast: although, however, while" }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: linker, label: { en: Linker } }
           - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, linker: although, pattern: "although + clause, clause", example: "**Although** it was raining, we went out." }
-          - { level: B1, linker: however, pattern: "sentence. However, sentence", example: "It was raining. **However**, we went out." }
-          - { level: B1, linker: while, pattern: "while + clause, clause", example: "**While** I like tea, my wife prefers coffee." }
-      - type: bullets
+          - { level: B1, linker: although, pattern: [{ pattern: [although, { slot: clause }] }, ", ", { slot: clause }], ex: [{ target: Although }, " it was raining, we went out."] }
+          - { level: B1, linker: however, pattern: "sentence. However, sentence", ex: ["It was raining. ", { target: However }, ", we went out."] }
+          - { level: B1, linker: while, pattern: [{ pattern: [while, { slot: clause }] }, ", ", { slot: clause }], ex: [{ target: While }, " I like tea, my wife prefers coffee."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "**although** joins two clauses in one sentence and replaces **but**."
-          - level: B1
+              en: [{ term: although }, " joins two clauses in one sentence and replaces ", { term: but }, "."]
+          - type: rule
+            level: B1
             text:
-              en: "**even though** is a stronger **although**: **Even though** I was tired, I went out."
-          - level: B1
+              en: [{ term: even though }, " is a stronger ", { term: although }, ":"]
+            ex: [{ target: Even though }, " I was tired, I went out."]
+          - type: rule
+            level: B1
             text:
-              en: "**however** usually starts a new sentence and is followed by a comma."
-          - level: B1
+              en: [{ term: however }, " usually starts a new sentence and is followed by a comma."]
+          - type: rule
+            level: B1
             text:
-              en: "**while** also means *at the same time*: I read **while** I eat."
+              en: [{ term: while }, " also means ", { gloss: at the same time }, ":"]
+            ex: ["I read ", { target: while }, " I eat."]
 
   - title: { en: "Purpose and condition: so that, unless" }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: linker, label: { en: Linker } }
           - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, linker: so that, pattern: "so that + clause", example: "I left early **so that** I could catch the bus." }
-          - { level: B1, linker: unless, pattern: "unless = if … not", example: "We stay in **unless** it stops raining." }
-      - type: bullets
+          - { level: B1, linker: so that, pattern: { pattern: [so that, { slot: clause }] }, ex: ["I left early ", { target: so that }, " I could catch the bus."] }
+          - { level: B1, linker: unless, pattern: ["unless = if ", { gap: true }, " not"], ex: ["We stay in ", { target: unless }, " it stops raining."] }
+      - type: list
         items:
-          - level: B1
+          - type: note
+            level: B1
             text:
-              en: "More on **unless**: [Conditionals: Zero, First and Second](id:en.sentence-building.conditionals-0-1-2)."
+              en: ["More on ", { term: unless }, ": ", { link: "Conditionals: Zero, First and Second", to: en.sentence-building.conditionals-0-1-2 }, "."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
           - { level: B1, wrong: "Although it was raining, but we went out.", right: "Although it was raining, we went out.", rule: { en: although replaces but } }
-          - { level: A2, wrong: We stayed in because the rain., right: "We stayed in **because of** the rain.", rule: { en: "because + clause, because of + noun" } }
-          - { level: A2, wrong: We stayed in because of it was raining., right: "We stayed in **because** it was raining.", rule: { en: because of + noun only } }
-          - { level: B1, wrong: "It was cold, however we went out.", right: "It was cold. **However**, we went out.", rule: { en: however starts a new sentence and takes a comma } }
-          - { level: A2, wrong: I speak French also., right: "I **also** speak French. / I speak French **too**.", rule: { en: "also goes before the main verb, too at the end" } }
+          - { level: A2, wrong: We stayed in because the rain., right: ["We stayed in ", { target: because of }, " the rain."], rule: { en: [{ pattern: [because, { slot: clause }] }, ", ", { pattern: [because of, { slot: noun }] }] } }
+          - { level: A2, wrong: We stayed in because of it was raining., right: ["We stayed in ", { target: because }, " it was raining."], rule: { en: { pattern: [because of, noun only] } } }
+          - { level: B1, wrong: "It was cold, however we went out.", right: ["It was cold. ", { target: However }, ", we went out."], rule: { en: however starts a new sentence and takes a comma } }
+          - { level: A2, wrong: I speak French also., right: { alternatives: [["I ", { target: also }, " speak French."], ["I speak French ", { target: too }, "."]] }, rule: { en: "also goes before the main verb, too at the end" } }

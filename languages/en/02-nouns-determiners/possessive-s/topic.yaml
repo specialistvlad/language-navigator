@@ -7,107 +7,124 @@ concepts: [possession]
 related: [en.nouns-determiners.plurals, en.pronouns.personal-pronouns, en.nouns-determiners.articles-a-an-the, en.nouns-determiners.demonstratives-this-that]
 status: { en: draft }
 
-title: { en: "Possessive 's" }
+title: { en: Possessive 's }
 summary:
-  en: "Noun + 's shows who something belongs to, and ' alone follows a plural in -s. The owner comes first and the thing after it takes no article: **Ana's** car, my **parents'** house, the **children's** room."
+  lead: { en: [{ pattern: [Noun, "'s"] }, " shows who something belongs to, and ' alone follows a plural in -s."] }
+  rule: { en: "The owner comes first and the thing after it takes no article:" }
+  ex: [{ target: Ana's }, " car, my ", { target: parents' }, " house, the ", { target: children's }, " room."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: point, label: { en: Point } }
         - { key: rule, label: { en: Rule } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, point: { en: singular noun }, rule: "+ 's", example: "**Ana's** car" }
-        - { level: A1, point: { en: plural in -s }, rule: "+ '", example: "my **parents**' house" }
-        - { level: A1, point: { en: irregular plural }, rule: "+ 's", example: "the **children's** room" }
-        - { level: A1, point: { en: two owners }, rule: { en: "'s on the last name" }, example: "Tom and **Ana's** flat" }
-        - { level: A1, point: { en: word order }, rule: { en: "owner first, thing after, no article" }, example: "**my sister's** phone" }
-        - { level: A1, point: { en: "'s or of" }, rule: { en: "'s for people and animals, of for things" }, example: "the end **of** the film" }
-        - { level: A1, point: Whose, rule: { en: "asks about the owner" }, example: "**Whose** bag is this?" }
-        - { level: A1, point: "Who's", rule: { en: "= who is, not the owner" }, example: "**Whose** bag? ≠ **Who's** there?" }
+        - { level: A1, point: { en: singular noun }, rule: { pattern: [{ ending: "'s" }], follows: true }, ex: [{ target: Ana's }, " car"] }
+        - { level: A1, point: { en: plural in -s }, rule: { pattern: [{ ending: "'" }], follows: true }, ex: ["my ", { target: parents }, "' house"] }
+        - { level: A1, point: { en: irregular plural }, rule: { pattern: [{ ending: "'s" }], follows: true }, ex: ["the ", { target: children's }, " room"] }
+        - { level: A1, point: { en: two owners }, rule: { en: "'s on the last name" }, ex: ["Tom and ", { target: Ana's }, " flat"] }
+        - { level: A1, point: { en: word order }, rule: { en: "owner first, thing after, no article" }, ex: [{ target: my sister's }, " phone"] }
+        - { level: A1, point: { en: "'s or of" }, rule: { en: "'s for people and animals, of for things" }, ex: ["the end ", { target: of }, " the film"] }
+        - { level: A1, point: Whose, rule: { en: asks about the owner }, ex: [{ target: Whose }, " bag is this?"] }
+        - { level: A1, point: Who's, rule: { en: "= who is, not the owner" }, ex: [{ target: Whose }, " bag? ≠ ", { target: Who's }, " there?"] }
 
 sections:
   - title: { en: "Form: 's and '" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: owner, label: { en: Owner } }
           - { key: form, label: { en: Add } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, owner: { en: singular noun }, form: "'s", example: "**Ana's** car" }
-          - { level: A1, owner: { en: plural ending in -s }, form: "'", example: "my **parents**' house" }
-          - { level: A1, owner: { en: "irregular plural: children, men, women, people" }, form: "'s", example: "the **children's** room" }
-          - { level: A1, owner: { en: name ending in -s }, form: "'s / '", example: "**James's** / **James**' bike" }
-          - { level: A1, owner: { en: two owners of one thing }, form: { en: "'s on the last name" }, example: "Tom and **Ana's** flat" }
-      - type: bullets
+          - { level: A1, owner: { en: singular noun }, form: "'s", ex: [{ target: Ana's }, " car"] }
+          - { level: A1, owner: { en: plural ending in -s }, form: "'", ex: ["my ", { target: parents }, "' house"] }
+          - { level: A1, owner: { en: "irregular plural: children, men, women, people" }, form: "'s", ex: ["the ", { target: children's }, " room"] }
+          - { level: A1, owner: { en: name ending in -s }, form: { alternatives: ["'s", "'"] }, ex: { examples: [{ target: James's }, [{ target: James }, "' bike"]] } }
+          - { level: A1, owner: { en: two owners of one thing }, form: { en: "'s on the last name" }, ex: ["Tom and ", { target: Ana's }, " flat"] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "The owner comes first, then the thing: **my sister's** phone."
-          - level: A1
+              en: ["The owner comes first, then the thing: ", { term: my sister's }, " phone."]
+          - type: rule
+            level: A1
             text:
-              en: "The thing after 's takes no article: Ana's **car**."
-          - level: A1
+              en: "The thing after 's takes no article:"
+            ex: ["Ana's ", { target: car }, "."]
+          - type: rule
+            level: A1
             text:
-              en: "'s also shortens is and has: **Ana's** tired = Ana is tired."
+              en: "'s also shortens is and has:"
+            ex: [{ target: Ana's }, " tired = Ana is tired."]
 
   - title: { en: "Pronunciation: 's" }
+    role: pronunciation
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: sound, label: { en: Sound } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, sound: /s/, example: "Mark's /mɑːks/" }
-          - { level: A1, sound: /z/, example: "Ana's /ˈænəz/" }
-          - { level: A1, sound: /ɪz/, example: "James's /ˈdʒeɪmzɪz/" }
-      - type: bullets
+          - { level: A1, sound: { ipa: s }, ex: ["Mark's ", { ipa: mɑːks }] }
+          - { level: A1, sound: { ipa: z }, ex: ["Ana's ", { ipa: ˈænəz }] }
+          - { level: A1, sound: { ipa: ɪz }, ex: ["James's ", { ipa: ˈdʒeɪmzɪz }] }
+      - type: list
         items:
-          - level: A1
+          - type: note
+            level: A1
             text:
-              en: "'s follows the sound rules of the plural -s. See [Plurals](id:en.nouns-determiners.plurals)."
-          - level: A1
+              en: ["'s follows the sound rules of the plural -s. See ", { link: Plurals, to: en.nouns-determiners.plurals }, "."]
+          - type: rule
+            level: A1
             text:
-              en: "' after a plural -s adds no sound: parents' /ˈpeərənts/."
+              en: ["' after a plural -s adds no sound: parents' ", { ipa: ˈpeərənts }, "."]
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: People }, example: "my **brother's** job" }
-          - { level: A1, use: { en: Animals }, example: "the **dog's** bed" }
-          - { level: A1, use: { en: "Someone's home or shop, without the noun" }, example: "at my **mum's** / at the **doctor's**" }
-          - { level: A1, use: { en: "Answer to Whose…?" }, example: "Whose bag is this? — It's **Ana's**." }
-      - type: bullets
+          - { level: A1, use: { en: People }, ex: ["my ", { target: brother's }, " job"] }
+          - { level: A1, use: { en: Animals }, ex: ["the ", { target: dog's }, " bed"] }
+          - { level: A1, use: { en: "Someone's home or shop, without the noun" }, ex: { examples: [["at my ", { target: mum's }], ["at the ", { target: doctor's }]] } }
+          - { level: A1, use: { en: Answer to Whose…? }, ex: { exchange: [Whose bag is this?, ["It's ", { target: Ana's }, "."]] } }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "Ask about the owner with **Whose** + noun: **Whose** bag is this?"
-          - level: A1
+              en: ["Ask about the owner with ", { pattern: [{ term: Whose }, { slot: noun }] }, ":"]
+            ex: [{ target: Whose }, " bag is this?"]
+          - type: note
+            level: A1
             text:
-              en: "my, your, his… and mine, yours, his…: see [Personal pronouns](id:en.pronouns.personal-pronouns)."
+              en: ["my, your, his… and mine, yours, his…: see ", { link: Personal pronouns, to: en.pronouns.personal-pronouns }, "."]
 
   - title: { en: "Compare: 's and of" }
+    role: compare
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: s, label: "'s" }
           - { key: of, label: of }
         rows:
           - { level: A1, s: { en: people and animals }, of: { en: things and places } }
-          - { level: A1, s: { ex: "my **friend's** name" }, of: { ex: "the name **of** the street" } }
-          - { level: A1, s: { ex: "the **cat's** food" }, of: { ex: "the end **of** the film" } }
+          - { level: A1, s: ["my ", { target: friend's }, " name"], of: ["the name ", { target: of }, " the street"] }
+          - { level: A1, s: ["the ", { target: cat's }, " food"], of: ["the end ", { target: of }, " the film"] }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: my parents's house, right: "my **parents**' house", rule: { en: "plural in -s → + '" } }
-          - { level: A1, wrong: the childrens' room, right: "the **children's** room", rule: { en: "irregular plural → + 's" } }
-          - { level: A1, wrong: Who's bag is this?, right: "**Whose** bag is this?", rule: { en: "who's = who is" } }
+          - { level: A1, wrong: my parents's house, right: ["my ", { target: parents }, "' house"], rule: { en: { takes: [plural in -s, { pattern: [{ ending: "'" }], follows: true }] } } }
+          - { level: A1, wrong: the childrens' room, right: ["the ", { target: children's }, " room"], rule: { en: { takes: [irregular plural, { pattern: [{ ending: "'s" }], follows: true }] } } }
+          - { level: A1, wrong: Who's bag is this?, right: [{ target: Whose }, " bag is this?"], rule: { en: who's = who is } }

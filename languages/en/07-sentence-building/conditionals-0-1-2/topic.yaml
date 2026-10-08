@@ -9,127 +9,148 @@ status: { en: draft }
 
 title: { en: "Conditionals: Zero, First and Second" }
 summary:
-  en: "If-sentences for facts (zero), real possibilities (first) and imagined situations (second). After if the verb is in the present simple, even for the future: If it **rains**, we'll stay in."
+  lead: { en: "If-sentences for facts (zero), real possibilities (first) and imagined situations (second)." }
+  rule: { en: "After if the verb is in the present simple, even for the future:" }
+  ex: ["If it ", { target: rains }, ", we'll stay in."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: type, label: { en: Type } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A2, type: "Zero: if + present, present", example: "If you **heat** ice, it **melts**." }
-        - { level: A2, type: "First: if + present, will + V", example: "If it **rains**, we'**ll stay** in." }
-        - { level: B1, type: "Second: if + past, would + V", example: "If I **had** more time, I'**d learn** Spanish." }
+        - { level: A2, type: ["Zero: ", { pattern: [if, { slot: present }] }, ", ", { slot: present }], ex: ["If you ", { target: heat }, " ice, it ", { target: melts }, "."] }
+        - { level: A2, type: ["First: ", { pattern: [if, { slot: present }] }, ", ", { pattern: [will, { slot: V }] }], ex: ["If it ", { target: rains }, ", we'", { target: ll stay }, " in."] }
+        - { level: B1, type: ["Second: ", { pattern: [if, { slot: past }] }, ", ", { pattern: [would, { slot: V }] }], ex: ["If I ", { target: had }, " more time, I'", { target: d learn }, " Spanish."] }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "Zero and first conditionals talk about real situations. The second talks about imagined ones."
+              en: Zero and first conditionals talk about real situations. The second talks about imagined ones.
 
   - title: { en: "Form: zero and first" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: type, label: { en: Type } }
           - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, type: { en: Zero }, pattern: "if + present, present", example: "If you **mix** blue and yellow, you **get** green." }
-          - { level: A2, type: { en: First }, pattern: "if + present, will + V", example: "If you **study**, you'**ll pass**." }
-          - { level: A2, type: { en: First (negative) }, pattern: "if + don't / doesn't + V, will + V", example: "If you **don't hurry**, you'**ll miss** the bus." }
-      - type: bullets
+          - { level: A2, type: { en: Zero }, pattern: [{ pattern: [if, { slot: present }] }, ", ", { slot: present }], ex: ["If you ", { target: mix }, " blue and yellow, you ", { target: get }, " green."] }
+          - { level: A2, type: { en: First }, pattern: [{ pattern: [if, { slot: present }] }, ", ", { pattern: [will, { slot: V }] }], ex: ["If you ", { target: study }, ", you'", { target: ll pass }, "."] }
+          - { level: A2, type: { en: First (negative) }, pattern: [{ pattern: [if, { alternatives: [don't, doesn't] }, { slot: V }] }, ", ", { pattern: [will, { slot: V }] }], ex: ["If you ", { target: don't hurry }, ", you'", { target: ll miss }, " the bus."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
               en: "The if-clause uses the present simple, also for the future."
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "The first conditional main clause can also use can, may or an imperative: If you feel ill, **call** me."
+              en: "The first conditional main clause can also use can, may or an imperative:"
+            ex: ["If you feel ill, ", { target: call }, " me."]
 
   - title: { en: "Form: second" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: type, label: { en: Type } }
           - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, type: { en: Second }, pattern: "if + past simple, would + V", example: "If I **won** the lottery, I'**d buy** a house." }
-          - { level: B1, type: { en: Second (negative) }, pattern: "if + didn't + V, would + V", example: "If I **didn't have** to work, I'**d travel**." }
-          - { level: B1, type: { en: "Second with be" }, pattern: "if + were, would + V", example: "If it **were** sunny, we'**d go** out." }
-      - type: bullets
+          - { level: B1, type: { en: Second }, pattern: [{ pattern: [if, { slot: past simple }] }, ", ", { pattern: [would, { slot: V }] }], ex: ["If I ", { target: won }, " the lottery, I'", { target: d buy }, " a house."] }
+          - { level: B1, type: { en: Second (negative) }, pattern: [{ pattern: [if, didn't, { slot: V }] }, ", ", { pattern: [would, { slot: V }] }], ex: ["If I ", { target: didn't have }, " to work, I'", { target: d travel }, "."] }
+          - { level: B1, type: { en: Second with be }, pattern: [{ pattern: [if, were] }, ", ", { pattern: [would, { slot: V }] }], ex: ["If it ", { target: were }, " sunny, we'", { target: d go }, " out."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "The past simple in the if-clause refers to the present or the future."
-          - level: B1
+              en: The past simple in the if-clause refers to the present or the future.
+          - type: rule
+            level: B1
             text:
-              en: "**were** works for every person: If he **were** here, he'd help. **was** is common in informal speech."
-          - level: B1
+              en: [{ term: were }, " works for every person: If he ", { term: were }, " here, he'd help. ", { term: was }, " is common in informal speech."]
+          - type: rule
+            level: B1
             text:
-              en: "The main clause can also use could or might: If I had time, I **could** help."
+              en: "The main clause can also use could or might:"
+            ex: ["If I had time, I ", { target: could }, " help."]
 
   - title: { en: Order of the clauses }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: order, label: { en: Order } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, order: { en: "if-clause first: comma" }, example: "**If it rains**, we'll stay in." }
-          - { level: A2, order: { en: "if-clause second: no comma" }, example: "We'll stay in **if it rains**." }
+          - { level: A2, order: { en: "if-clause first: comma" }, ex: [{ target: If it rains }, ", we'll stay in."] }
+          - { level: A2, order: { en: "if-clause second: no comma" }, ex: ["We'll stay in ", { target: if it rains }, "."] }
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, use: { en: "Facts and general truths (zero)" }, example: "If you **press** this button, the door **opens**." }
-          - { level: A2, use: { en: "Real possibilities in the future (first)" }, example: "If I **see** Ana, I'**ll tell** her." }
-          - { level: B1, use: { en: "Unreal or unlikely situations (second)" }, example: "If I **were** a bird, I'**d fly** to Spain." }
-          - { level: B1, use: { en: "Advice: If I were you (second)" }, example: "If I **were** you, I'**d take** the train." }
+          - { level: A2, use: { en: Facts and general truths (zero) }, ex: ["If you ", { target: press }, " this button, the door ", { target: opens }, "."] }
+          - { level: A2, use: { en: Real possibilities in the future (first) }, ex: ["If I ", { target: see }, " Ana, I'", { target: ll tell }, " her."] }
+          - { level: B1, use: { en: Unreal or unlikely situations (second) }, ex: ["If I ", { target: were }, " a bird, I'", { target: d fly }, " to Spain."] }
+          - { level: B1, use: { en: "Advice: If I were you (second)" }, ex: ["If I ", { target: were }, " you, I'", { target: d take }, " the train."] }
 
   - title: { en: Unless }
+    role: own
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "**unless** means **if … not**. It takes an affirmative verb:"
-            ex: "**Unless** you hurry, you'll miss the bus. = If you **don't** hurry, you'll miss the bus."
-          - level: B1
+              en: [{ term: unless }, " means ", { term: if … not }, ". It takes an affirmative verb:"]
+            ex: [{ target: Unless }, " you hurry, you'll miss the bus. = If you ", { target: don't }, " hurry, you'll miss the bus."]
+          - type: note
+            level: B1
             text:
-              en: "**unless** goes with the zero and first conditionals. See [Conjunctions and Linkers](id:en.sentence-building.conjunctions-linkers)."
+              en: [{ term: unless }, " goes with the zero and first conditionals. See ", { link: Conjunctions and Linkers, to: en.sentence-building.conjunctions-linkers }, "."]
 
   - title: { en: "Compare: first and second conditional" }
+    role: compare
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: first, label: First conditional }
           - { key: second, label: Second conditional }
         rows:
           - { level: B1, first: { en: "real, possible" }, second: { en: "imagined, unlikely" } }
-          - { level: B1, first: { ex: "If I **win**, I'**ll buy** a car." }, second: { ex: "If I **won**, I'**d buy** a car." } }
-          - { level: B1, first: { ex: "If we **have** time, we'**ll visit** you." }, second: { ex: "If we **had** time, we'**d visit** you." } }
-      - type: bullets
+          - { level: B1, first: ["If I ", { target: win }, ", I'", { target: ll buy }, " a car."], second: ["If I ", { target: won }, ", I'", { target: d buy }, " a car."] }
+          - { level: B1, first: ["If we ", { target: have }, " time, we'", { target: ll visit }, " you."], second: ["If we ", { target: had }, " time, we'", { target: d visit }, " you."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "The speaker chooses by how likely the situation seems."
+              en: The speaker chooses by how likely the situation seems.
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: B1, wrong: "If I am you, I would go.", right: "If I **were** you, I'd go.", rule: { en: advice uses If I were you } }
-          - { level: B1, wrong: "If I win the lottery, I would buy a house.", right: "If I **won** the lottery, I **would** buy a house.", rule: { en: "match the pair: present + will or past + would" } }
-          - { level: A2, wrong: If it rains we'll stay in., right: "**If it rains,** we'll stay in.", rule: { en: comma after an if-clause at the start } }
-          - { level: B1, wrong: "Unless you don't hurry, you'll miss the bus.", right: "**Unless** you hurry, you'll miss the bus.", rule: { en: unless already means if … not } }
-          - { level: A2, wrong: "If she come, I'll call you.", right: "If she **comes**, I'll call you.", rule: { en: she / he / it → V-s in the if-clause } }
+          - { level: B1, wrong: "If I am you, I would go.", right: ["If I ", { target: were }, " you, I'd go."], rule: { en: advice uses If I were you } }
+          - { level: B1, wrong: "If I win the lottery, I would buy a house.", right: ["If I ", { target: won }, " the lottery, I ", { target: would }, " buy a house."], rule: { en: ["match the pair: ", { pattern: [{ slot: present }, will] }, " or ", { pattern: [{ slot: past }, would] }] } }
+          - { level: A2, wrong: If it rains we'll stay in., right: [{ target: "If it rains," }, " we'll stay in."], rule: { en: comma after an if-clause at the start } }
+          - { level: B1, wrong: "Unless you don't hurry, you'll miss the bus.", right: [{ target: Unless }, " you hurry, you'll miss the bus."], rule: { en: unless already means if … not } }
+          - { level: A2, wrong: "If she come, I'll call you.", right: ["If she ", { target: comes }, ", I'll call you."], rule: { en: { takes: [{ alternatives: [she, he, it] }, V-s in the if-clause] } } }

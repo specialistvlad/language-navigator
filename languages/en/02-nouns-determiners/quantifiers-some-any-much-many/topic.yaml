@@ -9,118 +9,139 @@ status: { en: draft }
 
 title: { en: "Quantifiers: some, any, much, many" }
 summary:
-  en: "Some, any, much, many, a lot of, a few and a little say how much or how many without an exact number. Some goes in affirmative sentences, and any in negatives and questions: I have **some** milk but I don't have **any** eggs."
+  lead: { en: "Some, any, much, many, a lot of, a few and a little say how much or how many without an exact number." }
+  rule: { en: "Some goes in affirmative sentences, and any in negatives and questions:" }
+  ex: ["I have ", { target: some }, " milk but I don't have ", { target: any }, " eggs."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: paradigm
       columns:
         - { key: form, label: { en: Sentence } }
-        - { key: countable, label: { en: Plural countable noun } }
-        - { key: uncountable, label: { en: Uncountable noun } }
+        - { key: countable, label: { en: Plural countable noun }, features: { countability: count, number: pl } }
+        - { key: uncountable, label: { en: Uncountable noun }, features: { countability: mass } }
       rows:
-        - { level: A1, form: { en: Affirmative }, countable: "**some** apples / **a lot of** apples", uncountable: "**some** milk / **a lot of** milk" }
-        - { level: A1, form: { en: Negative }, countable: "not **any** apples / not **many** apples", uncountable: "not **any** milk / not **much** milk" }
-        - { level: A1, form: { en: Question }, countable: "**any** apples? / **many** apples?", uncountable: "**any** milk? / **much** milk?" }
-        - { level: A1, form: How…?, countable: "**How many** apples?", uncountable: "**How much** milk?" }
+        - { level: A1, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, countable: { alternatives: [[{ target: some }, " apples"], [{ target: a lot of }, " apples"]] }, uncountable: { alternatives: [[{ target: some }, " milk"], [{ target: a lot of }, " milk"]] } }
+        - { level: A1, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, countable: { alternatives: [["not ", { target: any }, " apples"], ["not ", { target: many }, " apples"]] }, uncountable: { alternatives: [["not ", { target: any }, " milk"], ["not ", { target: much }, " milk"]] } }
+        - { level: A1, features: { polarity: pos, interrogativity: int }, form: { en: Question }, countable: { alternatives: [[{ target: any }, " apples?"], [{ target: many }, " apples?"]] }, uncountable: { alternatives: [[{ target: any }, " milk?"], [{ target: much }, " milk?"]] } }
+        - { level: A1, features: { interrogativity: int }, form: [How, { gap: true }, "?"], countable: [{ target: How many }, " apples?"], uncountable: [{ target: How much }, " milk?"] }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A1
+          - type: note
+            level: A1
             text:
-              en: "Which nouns are countable: [Countable and uncountable nouns](id:en.nouns-determiners.countable-uncountable)."
+              en: ["Which nouns are countable: ", { link: Countable and uncountable nouns, to: en.nouns-determiners.countable-uncountable }, "."]
 
   - title: { en: Some and any }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: "affirmative: some" }, example: "There are **some** eggs in the fridge." }
-          - { level: A1, use: { en: "negative: any" }, example: "We don't have **any** bread." }
-          - { level: A1, use: { en: "question: any" }, example: "Is there **any** sugar?" }
-          - { level: A2, use: { en: "offer: some" }, example: "Would you like **some** tea?" }
-          - { level: A2, use: { en: "request: some" }, example: "Can I have **some** water?" }
-          - { level: B1, use: { en: "any = it doesn't matter which" }, example: "Take **any** seat." }
-      - type: bullets
+          - { level: A1, use: { en: "affirmative: some" }, ex: ["There are ", { target: some }, " eggs in the fridge."] }
+          - { level: A1, use: { en: "negative: any" }, ex: ["We don't have ", { target: any }, " bread."] }
+          - { level: A1, use: { en: "question: any" }, ex: ["Is there ", { target: any }, " sugar?"] }
+          - { level: A2, use: { en: "offer: some" }, ex: ["Would you like ", { target: some }, " tea?"] }
+          - { level: A2, use: { en: "request: some" }, ex: ["Can I have ", { target: some }, " water?"] }
+          - { level: B1, use: { en: any = it doesn't matter which }, ex: ["Take ", { target: any }, " seat."] }
+      - type: list
         items:
-          - level: A2
+          - type: note
+            level: A2
             text:
-              en: "somebody, anything… follow the same rules: [Indefinite pronouns](id:en.pronouns.indefinite-pronouns)."
+              en: ["somebody, anything… follow the same rules: ", { link: Indefinite pronouns, to: en.pronouns.indefinite-pronouns }, "."]
 
   - title: { en: "Much, many, a lot of" }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: word, label: { en: Quantifier } }
           - { key: with, label: { en: With } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, word: many, with: { en: plural countable }, example: "There aren't **many** shops here." }
-          - { level: A1, word: much, with: { en: uncountable }, example: "I don't have **much** time." }
-          - { level: A1, word: a lot of / lots of, with: { en: both }, example: "She has **a lot of** friends." }
-      - type: bullets
+          - { level: A1, word: many, with: { en: plural countable }, ex: ["There aren't ", { target: many }, " shops here."] }
+          - { level: A1, word: much, with: { en: uncountable }, ex: ["I don't have ", { target: much }, " time."] }
+          - { level: A1, word: { alternatives: [a lot of, lots of] }, with: { en: both }, ex: ["She has ", { target: a lot of }, " friends."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "Affirmative sentences take **a lot of**: I have **a lot of** friends."
-          - level: A1
+              en: ["Affirmative sentences take ", { term: a lot of }, ":"]
+            ex: ["I have ", { target: a lot of }, " friends."]
+          - type: rule
+            level: A1
             text:
-              en: "**lots of** means a lot of; it is informal."
-          - level: A1
+              en: [{ term: lots of }, " means a lot of; it is informal."]
+          - type: rule
+            level: A1
             text:
-              en: "**How many** + plural noun; **How much** + uncountable noun."
-          - level: A1
+              en: [{ pattern: [{ term: How many }, { slot: plural noun }] }, "; ", { pattern: [{ term: How much }, { slot: uncountable noun }] }, "."]
+          - type: rule
+            level: A1
             text:
-              en: "**How much** also asks the price:"
-            ex: "**How much** is this jacket?"
-          - level: A2
+              en: [{ term: How much }, " also asks the price:"]
+            ex: [{ target: How much }, " is this jacket?"]
+          - type: rule
+            level: A2
             text:
-              en: "**many** also works in affirmative sentences; affirmative **much** is formal."
-            ex: "**Many** people work from home."
+              en: [{ term: many }, " also works in affirmative sentences; affirmative ", { term: much }, " is formal."]
+            ex: [{ target: Many }, " people work from home."]
 
   - title: { en: "A few, a little, few, little" }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: word, label: { en: Quantifier } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, word: { en: a few + plural noun }, example: "I have **a few** friends here." }
-          - { level: A2, word: { en: a little + uncountable noun }, example: "There's **a little** milk left." }
-          - { level: B1, word: { en: few + plural noun }, example: "**Few** people came." }
-          - { level: B1, word: { en: little + uncountable noun }, example: "We have **little** time." }
-      - type: bullets
+          - { level: A2, word: { en: { pattern: [a few, { slot: plural noun }] } }, ex: ["I have ", { target: a few }, " friends here."] }
+          - { level: A2, word: { en: { pattern: [a little, { slot: uncountable noun }] } }, ex: ["There's ", { target: a little }, " milk left."] }
+          - { level: B1, word: { en: { pattern: [few, { slot: plural noun }] } }, ex: [{ target: Few }, " people came."] }
+          - { level: B1, word: { en: { pattern: [little, { slot: uncountable noun }] } }, ex: ["We have ", { target: little }, " time."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "**a few / a little** = some, a small number or amount. **few / little** = not many, not much: not enough."
+              en: [{ alternatives: [{ term: a few }, { term: a little }] }, " = some, a small number or amount. ", { alternatives: [{ term: few }, { term: little }] }, " = not many, not much: not enough."]
 
   - title: { en: No and none }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: form, label: { en: Form } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, form: no + noun, example: "There's **no** milk." }
-          - { level: B1, form: { en: none (no noun after it) }, example: "How many eggs are there? — **None**." }
-          - { level: B1, form: none of + the / my… + noun, example: "**None of** my friends came." }
-      - type: bullets
+          - { level: A2, form: { pattern: ["no", { slot: noun }] }, ex: ["There's ", { target: "no" }, " milk."] }
+          - { level: B1, form: { en: none (no noun after it) }, ex: { exchange: [How many eggs are there?, [{ target: None }, "."]] } }
+          - { level: B1, form: { pattern: [none of, { alternatives: [the, [my, { gap: true }]] }, { slot: noun }] }, ex: [{ target: None of }, " my friends came."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "**no** + noun = **not any** + noun: There's **no** milk = There isn't **any** milk."
-          - level: A2
+              en: [{ pattern: [{ term: "no" }, { slot: noun }] }, " = ", { pattern: [{ term: not any }, { slot: noun }] }, ":"]
+            ex: ["There's ", { target: "no" }, " milk = There isn't ", { target: any }, " milk."]
+          - type: rule
+            level: A2
             text:
-              en: "**no** and **none** take an affirmative verb: There **is** no milk."
+              en: [{ term: "no" }, " and ", { term: none }, " take an affirmative verb:"]
+            ex: ["There ", { target: is }, " no milk."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: There isn't some milk., right: "There isn't **any** milk.", rule: { en: negative → any } }
+          - { level: A1, wrong: There isn't some milk., right: ["There isn't ", { target: any }, " milk."], rule: { en: { mapping: [negative, any] } } }

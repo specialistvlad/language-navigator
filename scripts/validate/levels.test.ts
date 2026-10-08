@@ -26,8 +26,10 @@ const content = (topic: Record<string, unknown>, section: number): Record<string
   (topic["sections"] as { content: Record<string, unknown>[] }[])[section]?.content ?? [];
 // The rows of the first table in the sections.
 function rows(topic: Record<string, unknown>): Record<string, unknown>[] {
-  const blocks = (topic["sections"] as { content: { type: string; rows?: Record<string, unknown>[] }[] }[]).flatMap((s) => s.content);
-  return blocks.find((b) => b.type === "table")?.rows ?? [];
+  const blocks = (topic["sections"] as { content: { type: string; columns?: unknown[]; rows?: Record<string, unknown>[] }[] }[]).flatMap(
+    (s) => s.content,
+  );
+  return blocks.find((b) => b.columns !== undefined)?.rows ?? [];
 }
 
 describe("the data as it is", () => {
@@ -46,15 +48,15 @@ describe("every leaf carries its level", () => {
     });
     expect(messages(problems)).toContain("must have required property 'level'");
   });
-  test("a bullet without a level", async () => {
+  test("a list item without a level", async () => {
     const problems = await problemsOf((t) => {
-      content(t, 0).push({ type: "bullets", items: [{ text: { en: "No level.", es: "Sin nivel." } }] });
+      content(t, 0).push({ type: "list", items: [{ type: "rule", text: { en: "No level." } }] });
     });
     expect(messages(problems)).toContain("must have required property 'level'");
   });
-  test("a text block without a level", async () => {
+  test("a paragraph without a level", async () => {
     const problems = await problemsOf((t) => {
-      content(t, 0).push({ type: "text", text: { en: "No level.", es: "Sin nivel." } });
+      content(t, 0).push({ type: "prose", text: { en: "No level." } });
     });
     expect(messages(problems)).toContain("must have required property 'level'");
   });

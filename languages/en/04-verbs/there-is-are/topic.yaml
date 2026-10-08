@@ -9,161 +9,188 @@ status: { en: draft }
 
 title: { en: There Is and There Are }
 summary:
-  en: "There is and there are say that something exists or is in a place, with a / some / any / numbers. There is goes with singular and uncountable nouns, there are with plural nouns: **There is** a park. **There are** two beds."
+  lead: { en: ["There is and there are say that something exists or is in a place, with ", { alternatives: [a, some, any, numbers] }, "."] }
+  rule: { en: "There is goes with singular and uncountable nouns, there are with plural nouns:" }
+  ex: { examples: [[{ target: There is }, " a park."], [{ target: There are }, " two beds."]] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: paradigm
       columns:
         - { key: form, label: { en: Form } }
-        - { key: singular, label: { en: Singular } }
-        - { key: plural, label: { en: Plural } }
+        - { key: singular, label: { en: Singular }, features: { number: sg } }
+        - { key: plural, label: { en: Plural }, features: { number: pl } }
       rows:
-        - { level: A1, form: { en: Affirmative }, singular: "There **is** a park.", plural: "There **are** two parks." }
-        - { level: A1, form: { en: Negative }, singular: "There **isn't** a park.", plural: "There **aren't** any parks." }
-        - { level: A1, form: { en: Question }, singular: "**Is there** a park?", plural: "**Are there** any parks?" }
-        - { level: A1, form: { en: Short answer }, singular: "Yes, there **is**. / No, there **isn't**.", plural: "Yes, there **are**. / No, there **aren't**." }
+        - { level: A1, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, singular: ["There ", { target: is }, " a park."], plural: ["There ", { target: are }, " two parks."] }
+        - { level: A1, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, singular: ["There ", { target: isn't }, " a park."], plural: ["There ", { target: aren't }, " any parks."] }
+        - { level: A1, features: { polarity: pos, interrogativity: int }, form: { en: Question }, singular: [{ target: Is there }, " a park?"], plural: [{ target: Are there }, " any parks?"] }
+        - { level: A1, features: { interrogativity: decl, polarity: [pos, neg] }, form: { en: Short answer }, singular: { alternatives: [["Yes, there ", { target: is }, "."], ["No, there ", { target: isn't }, "."]] }, plural: { alternatives: [["Yes, there ", { target: are }, "."], ["No, there ", { target: aren't }, "."]] } }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "**there** is the subject. The verb **be** agrees with the noun that follows."
+              en: [{ term: there }, " is the subject. The verb ", { term: be }, " agrees with the noun that follows."]
 
   - title: { en: "Form: affirmative" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: noun, label: { en: Noun } }
           - { key: form, label: { en: Form } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, noun: { en: singular countable }, form: there is / there's + a / an, example: "There'**s** a cat in the garden." }
-          - { level: A1, noun: { en: plural }, form: there are + some / number, example: "There **are** three chairs." }
-          - { level: A1, noun: { en: uncountable }, form: there is + some, example: "There **is** some milk." }
-      - type: bullets
+          - { level: A1, features: { number: sg, countability: count }, noun: { en: singular countable }, form: { pattern: [{ alternatives: [there is, there's] }, { alternatives: [a, an] }] }, ex: [There', { target: s }, " a cat in the garden."] }
+          - { level: A1, features: { number: pl }, noun: { en: plural }, form: { pattern: [there are, { alternatives: [some, number] }] }, ex: ["There ", { target: are }, " three chairs."] }
+          - { level: A1, features: { countability: mass }, noun: { en: uncountable }, form: { pattern: [there is, some] }, ex: ["There ", { target: is }, " some milk."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "Speech and messages use the short form **there's**. **there are** has no short form."
-          - level: A1
+              en: ["Speech and messages use the short form ", { term: there's }, ". ", { term: there are }, " has no short form."]
+          - type: rule
+            level: A1
             text:
-              en: "A list takes the verb of the first noun: There **is** a bed and two chairs."
+              en: "A list takes the verb of the first noun:"
+            ex: ["There ", { target: is }, " a bed and two chairs."]
 
   - title: { en: "Form: negative" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: noun, label: { en: Noun } }
           - { key: form, label: { en: Form } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, noun: { en: singular countable }, form: there isn't + a / an, example: "There **isn't** a bank here." }
-          - { level: A1, noun: { en: plural }, form: there aren't + any, example: "There **aren't any** shops." }
-          - { level: A1, noun: { en: uncountable }, form: there isn't + any, example: "There **isn't any** water." }
+          - { level: A1, features: { number: sg, countability: count }, noun: { en: singular countable }, form: { pattern: [there isn't, { alternatives: [a, an] }] }, ex: ["There ", { target: isn't }, " a bank here."] }
+          - { level: A1, features: { number: pl }, noun: { en: plural }, form: { pattern: [there aren't, any] }, ex: ["There ", { target: aren't any }, " shops."] }
+          - { level: A1, features: { countability: mass }, noun: { en: uncountable }, form: { pattern: [there isn't, any] }, ex: ["There ", { target: isn't any }, " water."] }
 
   - title: { en: "Form: questions" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: form, label: { en: Form } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, form: "Is there + a / any", example: "**Is there** a bank near here?" }
-          - { level: A1, form: "Are there + any", example: "**Are there any** shops?" }
-          - { level: A1, form: "How many … are there?", example: "How many people **are there**?" }
-          - { level: A1, form: "How much … is there?", example: "How much milk **is there**?" }
-          - { level: A1, form: "What is there …?", example: "What'**s there** in the fridge?" }
-      - type: bullets
+          - { level: A1, form: { pattern: [Is there, { alternatives: [a, any] }] }, ex: [{ target: Is there }, " a bank near here?"] }
+          - { level: A1, form: { pattern: [Are there, any] }, ex: [{ target: Are there any }, " shops?"] }
+          - { level: A1, form: ["How many ", { gap: true }, " are there?"], ex: ["How many people ", { target: are there }, "?"] }
+          - { level: A1, form: ["How much ", { gap: true }, " is there?"], ex: ["How much milk ", { target: is there }, "?"] }
+          - { level: A1, form: ["What is there ", { gap: true }, "?"], ex: [What', { target: s there }, " in the fridge?"] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "A question puts **be** before **there**: There is → **Is there**…?"
-          - level: A1
+              en: ["A question puts ", { term: be }, " before ", { term: there }, ":"]
+            ex: { mapping: [There is, [{ target: Is there }, { gap: true }, "?"]] }
+          - type: rule
+            level: A1
             text:
-              en: "**How many** goes with plural nouns, **how much** with uncountable nouns."
-          - level: A1
+              en: [{ term: How many }, " goes with plural nouns, ", { term: how much }, " with uncountable nouns."]
+          - type: rule
+            level: A1
             text:
-              en: "A how many / how much question ends with **there**: How many people are **there**?"
+              en: ["A ", { alternatives: [how many, how much] }, " question ends with ", { term: there }, ":"]
+            ex: ["How many people are ", { target: there }, "?"]
 
   - title: { en: "Form: short answers" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: question, label: { en: Question } }
-          - { key: "yes", label: { en: "Yes" } }
-          - { key: "no", label: { en: "No" } }
+          - { key: "yes", label: { en: "Yes" }, features: { polarity: pos } }
+          - { key: "no", label: { en: "No" }, features: { polarity: neg } }
         rows:
-          - { level: A1, question: Is there a bank here?, "yes": "Yes, there **is**.", "no": "No, there **isn't**." }
-          - { level: A1, question: Are there any shops?, "yes": "Yes, there **are**.", "no": "No, there **aren't**." }
-      - type: bullets
+          - { level: A1, question: Is there a bank here?, "yes": ["Yes, there ", { target: is }, "."], "no": ["No, there ", { target: isn't }, "."] }
+          - { level: A1, question: Are there any shops?, "yes": ["Yes, there ", { target: are }, "."], "no": ["No, there ", { target: aren't }, "."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "A positive short answer has the full form: Yes, there **is**."
+              en: "A positive short answer has the full form:"
+            ex: ["Yes, there ", { target: is }, "."]
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: "Say that something exists" }, example: "There **is** a cinema in my town." }
-          - { level: A1, use: { en: "Say what is in a place" }, example: "There **are** two beds in the room." }
-          - { level: A1, use: { en: "Describe a room or a town" }, example: "There **is** a big park near the station." }
-          - { level: A1, use: { en: "Ask about places and things" }, example: "**Is there** a toilet here?" }
-      - type: bullets
+          - { level: A1, use: { en: Say that something exists }, ex: ["There ", { target: is }, " a cinema in my town."] }
+          - { level: A1, use: { en: Say what is in a place }, ex: ["There ", { target: are }, " two beds in the room."] }
+          - { level: A1, use: { en: Describe a room or a town }, ex: ["There ", { target: is }, " a big park near the station."] }
+          - { level: A1, use: { en: Ask about places and things }, ex: [{ target: Is there }, " a toilet here?"] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "A place phrase follows, or opens, the sentence: There is a cat **on the sofa**."
-          - level: A1
+              en: "A place phrase follows, or opens, the sentence:"
+            ex: ["There is a cat ", { target: on the sofa }, "."]
+          - type: note
+            level: A1
             text:
-              en: "For place words see [Place and Movement](id:en.prepositions.place-movement)."
+              en: ["For place words see ", { link: Place and Movement, to: en.prepositions.place-movement }, "."]
 
   - title: { en: "With a, some, any and numbers" }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: word, label: { en: Word } }
           - { key: rule, label: { en: Rule } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, word: a / an, rule: { en: "singular countable, + and ?" }, example: "There'**s a** bus stop." }
-          - { level: A1, word: some, rule: { en: "plural or uncountable, +" }, example: "There are **some** apples." }
-          - { level: A1, word: any, rule: { en: "plural or uncountable, − and ?" }, example: "Are there **any** apples?" }
-          - { level: A1, word: { en: number }, rule: { en: "plural, + − ?" }, example: "There are **four** apples." }
-      - type: bullets
+          - { level: A1, word: { alternatives: [a, an] }, rule: { en: { pattern: ["singular countable,", and ?] } }, ex: [There', { target: s a }, " bus stop."] }
+          - { level: A1, word: some, rule: { en: "plural or uncountable, +" }, ex: ["There are ", { target: some }, " apples."] }
+          - { level: A1, word: any, rule: { en: "plural or uncountable, − and ?" }, ex: ["Are there ", { target: any }, " apples?"] }
+          - { level: A1, word: { en: number }, rule: { en: { pattern: ["plural,", "− ?"] } }, ex: ["There are ", { target: four }, " apples."] }
+      - type: list
         items:
-          - level: A1
+          - type: note
+            level: A1
             text:
-              en: "See [Quantifiers: some, any, much, many](id:en.nouns-determiners.quantifiers-some-any-much-many) and [Countable and Uncountable Nouns](id:en.nouns-determiners.countable-uncountable)."
+              en: ["See ", { link: "Quantifiers: some, any, much, many", to: en.nouns-determiners.quantifiers-some-any-much-many }, " and ", { link: Countable and Uncountable Nouns, to: en.nouns-determiners.countable-uncountable }, "."]
 
   - title: { en: "Compare: there is and it is" }
+    role: compare
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: point, label: { en: Point } }
-          - { key: there, label: there is / are }
+          - { key: there, label: { alternatives: [there is, are] } }
           - { key: it, label: it is }
         rows:
-          - { level: A1, point: { en: Job }, there: { en: "introduces something new" }, it: { en: "talks about something known" } }
-          - { level: A1, point: { en: Example }, there: { ex: "**There is** a dog in the garden." }, it: { ex: "**It is** a big dog." } }
-          - { level: A1, point: { en: Question }, there: { ex: "**Is there** a shop near here?" }, it: { ex: "**Is it** open?" } }
-      - type: bullets
+          - { level: A1, point: { en: Job }, there: { en: introduces something new }, it: { en: talks about something known } }
+          - { level: A1, point: { en: Example }, there: [{ target: There is }, " a dog in the garden."], it: [{ target: It is }, " a big dog."] }
+          - { level: A1, point: { en: Question }, there: [{ target: Is there }, " a shop near here?"], it: [{ target: Is it }, " open?"] }
+      - type: list
         items:
-          - level: A1
+          - type: note
+            level: A1
             text:
-              en: "See [To be](id:en.verbs.to-be)."
+              en: ["See ", { link: To be, to: en.verbs.to-be }, "."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: There is two cats., right: "There **are** two cats.", rule: { en: "plural noun → there are" } }
-          - { level: A1, wrong: There are a cat., right: "There **is** a cat.", rule: { en: "singular noun → there is" } }
-          - { level: A1, wrong: There isn't some milk., right: "There isn't **any** milk.", rule: { en: "negatives take any" } }
+          - { level: A1, wrong: There is two cats., right: ["There ", { target: are }, " two cats."], rule: { en: { takes: [plural noun, there are] } } }
+          - { level: A1, wrong: There are a cat., right: ["There ", { target: is }, " a cat."], rule: { en: { takes: [singular noun, there is] } } }
+          - { level: A1, wrong: There isn't some milk., right: ["There isn't ", { target: any }, " milk."], rule: { en: negatives take any } }

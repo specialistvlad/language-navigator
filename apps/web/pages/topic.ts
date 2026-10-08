@@ -7,9 +7,9 @@ import { GITHUB_ICON, PRINT_ICON } from "../icons.ts";
 import { controls, page } from "../layout.ts";
 import { trackNav } from "../nav.ts";
 import { pagers, upNext } from "../sequence.ts";
-import { lead } from "../../../scripts/content.ts";
+import { plainText, reading, textIn } from "../../../scripts/text.ts";
 import { anchorIds, badge, editUrl, levelAttrs, listBadge } from "../parts.ts";
-import { escapeHtml, inline } from "../render.ts";
+import { escapeHtml, explained, inline } from "../html.ts";
 import { topicUrl } from "../urls.ts";
 
 // What a view shows when the level filter sits below everything in it: a note and a button that
@@ -39,7 +39,7 @@ export function topicPages(track: Track): void {
         const cls = s.kind === "cheatsheet" ? "part cheatsheet" : "part";
         const anchor = idOf.get(s);
         const id = anchor === undefined ? "" : ` id="${anchor}"`;
-        return `<section class="${cls}"${id}${levelAttrs(s.range)}><h2>${inline(s.title, rctx)}${badge(s.range)}</h2>${s.html}</section>`;
+        return `<section class="${cls}"${id}${levelAttrs(s.range)}><h2>${s.heading}${badge(s.range)}</h2>${s.html}</section>`;
       })
       .join("\n");
 
@@ -47,23 +47,26 @@ export function topicPages(track: Track): void {
     // lists, and the next topic.
     const tocItems = all.map((s) => {
       const guide = s.kind === "cheatsheet" ? "" : ' class="guide"';
-      return `<li${guide}${levelAttrs(s.range)}><a href="#${idOf.get(s) ?? ""}"><span class="name">${escapeHtml(s.title)}</span>${listBadge(s.range)}</a></li>`;
+      return `<li${guide}${levelAttrs(s.range)}><a href="#${idOf.get(s) ?? ""}"><span class="name">${s.heading}</span>${listBadge(s.range)}</a></li>`;
     });
     const rail = `<h4>${escapeHtml(t.onThisPage)}</h4><ol class="toc">${tocItems.join("")}</ol>${upNext(track, ref)}`;
     const actions = [
       `<a class="tool edit" href="${editUrl(ref.path)}" rel="noopener" title="${escapeHtml(t.editTitle)}" aria-label="${escapeHtml(`${t.editOn} GitHub`)}">${escapeHtml(t.editOn)}${GITHUB_ICON}</a>`,
       `<button class="tool" id="print" type="button" title="${escapeHtml(t.print)}" aria-label="${escapeHtml(t.print)}">${PRINT_ICON}</button>`,
     ].join("");
-    const title = topic.title[explain] ?? ref.entry.slug;
-    const head = `<header class="doc-head"><h1>${escapeHtml(title)}${badge(range)}</h1><div class="actions">${actions}</div></header>`;
-    const intro = `<blockquote><p>${inline(topic.summary[explain] ?? "", rctx)}</p></blockquote>`;
+    const title = plainText(textIn(topic.title, explain), reading(explain, false));
+    const head = `<header class="doc-head"><h1>${inline(textIn(topic.title, explain), rctx, false)}${badge(range)}</h1><div class="actions">${actions}</div></header>`;
+    // The summary: its lead, its rule and the rule's examples, read as one paragraph.
+    const { summary } = topic;
+    const example = summary.ex === undefined ? "" : ` ${inline(summary.ex, rctx, true, true)}`;
+    const intro = `<blockquote><p>${explained(summary.lead, rctx)} ${explained(summary.rule, rctx)}${example}</p></blockquote>`;
     ctx.add(
       topicUrl(explain, lang, ref),
       page({
         kind: "topic",
         lang: explain,
         title: `${title} — ${trackTitle}`,
-        description: lead(topic.summary[explain] ?? ""),
+        description: plainText(textIn(summary.lead, explain), reading(explain, false)),
         path: topicUrl(explain, lang, ref),
         alternates: alternates((e) => topicUrl(e, lang, ref)),
         controls: controls({

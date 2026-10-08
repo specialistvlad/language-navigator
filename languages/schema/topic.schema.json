@@ -20,8 +20,7 @@
   ],
   "properties": {
     "id": {
-      "type": "string",
-      "pattern": "^en\\.[a-z0-9-]+\\.[a-z0-9-]+$"
+      "$ref": "#/definitions/topicId"
     },
     "lang": {
       "$ref": "#/definitions/explain"
@@ -68,14 +67,7 @@
       "$ref": "#/definitions/localized"
     },
     "summary": {
-      "$ref": "#/definitions/localized"
-    },
-    "sections": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/section"
-      },
-      "minItems": 1
+      "$ref": "#/definitions/summary"
     },
     "cheatsheet": {
       "description": "Section 00: the whole topic in one table, shown in both the Cheatsheet and the Extended view.",
@@ -89,6 +81,13 @@
           "$ref": "#/definitions/content"
         }
       }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/section"
+      },
+      "minItems": 1
     }
   },
   "definitions": {
@@ -119,8 +118,8 @@
       "type": "string",
       "pattern": "^en\\.[a-z0-9-]+\\.[a-z0-9-]+$"
     },
-    "for": {
-      "description": "Explanation languages that render this element; all when absent.",
+    "readers": {
+      "description": "Explanation languages an element serves; all when absent.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/explain"
@@ -128,38 +127,1076 @@
       "minItems": 1,
       "uniqueItems": true
     },
-    "localized": {
-      "description": "Explanation text, one string per explanation language.",
+    "variety": {
+      "description": "A variety of the language being learned, as a BCP 47 tag; en-GB when absent.",
+      "enum": [
+        "en-GB",
+        "en-US"
+      ]
+    },
+    "features": {
+      "description": "The grammar features of a row, a column or a section: one bundle, or several that each apply.",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/featureBundle"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/featureBundle"
+          },
+          "minItems": 2
+        }
+      ]
+    },
+    "featureBundle": {
+      "description": "Grammar features after the UniMorph schema; a feature takes one value or several.",
       "type": "object",
       "additionalProperties": false,
       "minProperties": 1,
       "properties": {
-        "en": {
-          "type": "string"
+        "person": {
+          "oneOf": [
+            {
+              "enum": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  1,
+                  2,
+                  3
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "number": {
+          "oneOf": [
+            {
+              "enum": [
+                "sg",
+                "pl"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "sg",
+                  "pl"
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "gender": {
+          "oneOf": [
+            {
+              "enum": [
+                "masc",
+                "fem",
+                "neut"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "masc",
+                  "fem",
+                  "neut"
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "case": {
+          "oneOf": [
+            {
+              "enum": [
+                "nom",
+                "acc",
+                "gen"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "nom",
+                  "acc",
+                  "gen"
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "tense": {
+          "oneOf": [
+            {
+              "enum": [
+                "prs",
+                "pst",
+                "fut"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "prs",
+                  "pst",
+                  "fut"
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "aspect": {
+          "oneOf": [
+            {
+              "enum": [
+                "prog",
+                "prf",
+                "hab"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "prog",
+                  "prf",
+                  "hab"
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "mood": {
+          "oneOf": [
+            {
+              "enum": [
+                "ind",
+                "imp",
+                "sbjv",
+                "cond"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "ind",
+                  "imp",
+                  "sbjv",
+                  "cond"
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "polarity": {
+          "oneOf": [
+            {
+              "enum": [
+                "pos",
+                "neg"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "pos",
+                  "neg"
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "interrogativity": {
+          "oneOf": [
+            {
+              "enum": [
+                "decl",
+                "int"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "decl",
+                  "int"
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "politeness": {
+          "oneOf": [
+            {
+              "enum": [
+                "infm",
+                "form"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "infm",
+                  "form"
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "degree": {
+          "oneOf": [
+            {
+              "enum": [
+                "pos",
+                "cmpr",
+                "sprl"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "pos",
+                  "cmpr",
+                  "sprl"
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "definiteness": {
+          "oneOf": [
+            {
+              "enum": [
+                "def",
+                "indf"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "def",
+                  "indf"
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "deixis": {
+          "oneOf": [
+            {
+              "enum": [
+                "prox",
+                "dist"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "prox",
+                  "dist"
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "voice": {
+          "oneOf": [
+            {
+              "enum": [
+                "act",
+                "pass"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "act",
+                  "pass"
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "verbform": {
+          "oneOf": [
+            {
+              "enum": [
+                "inf",
+                "ptcp",
+                "ger"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "inf",
+                  "ptcp",
+                  "ger"
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "contraction": {
+          "oneOf": [
+            {
+              "enum": [
+                "full",
+                "short"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "full",
+                  "short"
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
+        },
+        "countability": {
+          "oneOf": [
+            {
+              "enum": [
+                "count",
+                "mass"
+              ]
+            },
+            {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "count",
+                  "mass"
+                ]
+              },
+              "minItems": 2,
+              "uniqueItems": true
+            }
+          ]
         }
       }
     },
     "text": {
-      "description": "A plain string (identical in every explanation language) or localized text.",
+      "description": "Text: a string, one mark, or a list of parts.",
       "oneOf": [
         {
           "type": "string"
         },
         {
-          "$ref": "#/definitions/localized"
+          "$ref": "#/definitions/mark"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/part"
+          },
+          "minItems": 2
         }
       ]
     },
-    "example": {
-      "description": "An example in the language being learned, with translations into explanation languages.",
+    "part": {
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "$ref": "#/definitions/mark"
+        }
+      ]
+    },
+    "mark": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/targetMark"
+        },
+        {
+          "$ref": "#/definitions/auxMark"
+        },
+        {
+          "$ref": "#/definitions/subjMark"
+        },
+        {
+          "$ref": "#/definitions/verbMark"
+        },
+        {
+          "$ref": "#/definitions/endingMark"
+        },
+        {
+          "$ref": "#/definitions/stressMark"
+        },
+        {
+          "$ref": "#/definitions/termMark"
+        },
+        {
+          "$ref": "#/definitions/letterMark"
+        },
+        {
+          "$ref": "#/definitions/signalMark"
+        },
+        {
+          "$ref": "#/definitions/soundMark"
+        },
+        {
+          "$ref": "#/definitions/l1Mark"
+        },
+        {
+          "$ref": "#/definitions/optionalMark"
+        },
+        {
+          "$ref": "#/definitions/alternativesMark"
+        },
+        {
+          "$ref": "#/definitions/examplesMark"
+        },
+        {
+          "$ref": "#/definitions/mappingMark"
+        },
+        {
+          "$ref": "#/definitions/takesMark"
+        },
+        {
+          "$ref": "#/definitions/exchangeMark"
+        },
+        {
+          "$ref": "#/definitions/glossMark"
+        },
+        {
+          "$ref": "#/definitions/ipaMark"
+        },
+        {
+          "$ref": "#/definitions/linkMark"
+        },
+        {
+          "$ref": "#/definitions/dateMark"
+        },
+        {
+          "$ref": "#/definitions/weekdayMark"
+        },
+        {
+          "$ref": "#/definitions/timeMark"
+        },
+        {
+          "$ref": "#/definitions/numeralMark"
+        },
+        {
+          "$ref": "#/definitions/ordinalMark"
+        },
+        {
+          "$ref": "#/definitions/intonationMark"
+        },
+        {
+          "$ref": "#/definitions/gapMark"
+        },
+        {
+          "$ref": "#/definitions/variantMark"
+        },
+        {
+          "$ref": "#/definitions/slotMark"
+        },
+        {
+          "$ref": "#/definitions/patternMark"
+        }
+      ]
+    },
+    "targetMark": {
+      "description": "The form the topic teaches; in an error, the corrected part.",
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "ex"
+        "target"
+      ],
+      "properties": {
+        "target": {
+          "$ref": "#/definitions/text"
+        }
+      }
+    },
+    "auxMark": {
+      "description": "A helper verb.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "aux"
+      ],
+      "properties": {
+        "aux": {
+          "$ref": "#/definitions/text"
+        }
+      }
+    },
+    "subjMark": {
+      "description": "The subject of a pattern sentence.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "subj"
+      ],
+      "properties": {
+        "subj": {
+          "$ref": "#/definitions/text"
+        }
+      }
+    },
+    "verbMark": {
+      "description": "The main verb of a pattern sentence.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "verb"
+      ],
+      "properties": {
+        "verb": {
+          "$ref": "#/definitions/text"
+        }
+      }
+    },
+    "endingMark": {
+      "description": "An ending added to a stem.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ending"
+      ],
+      "properties": {
+        "ending": {
+          "$ref": "#/definitions/text"
+        }
+      }
+    },
+    "stressMark": {
+      "description": "The stressed syllable.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stress"
+      ],
+      "properties": {
+        "stress": {
+          "$ref": "#/definitions/text"
+        }
+      }
+    },
+    "termMark": {
+      "description": "A word or part of a word of the language being learned, discussed in an explanation.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "term"
+      ],
+      "properties": {
+        "term": {
+          "$ref": "#/definitions/text"
+        }
+      }
+    },
+    "letterMark": {
+      "description": "The letters a rule is about: the spelling of a sound, a silent letter, a capital, a spelling change.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "letter"
+      ],
+      "properties": {
+        "letter": {
+          "$ref": "#/definitions/text"
+        }
+      }
+    },
+    "signalMark": {
+      "description": "A signal word inside an example.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "signal"
+      ],
+      "properties": {
+        "signal": {
+          "$ref": "#/definitions/text"
+        }
+      }
+    },
+    "soundMark": {
+      "description": "A pronunciation respelling.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sound"
+      ],
+      "properties": {
+        "sound": {
+          "$ref": "#/definitions/text"
+        }
+      }
+    },
+    "l1Mark": {
+      "description": "A phrase in the reader's first language.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "l1"
+      ],
+      "properties": {
+        "l1": {
+          "$ref": "#/definitions/text"
+        }
+      }
+    },
+    "optionalMark": {
+      "description": "An optional part.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "optional"
+      ],
+      "properties": {
+        "optional": {
+          "$ref": "#/definitions/text"
+        }
+      }
+    },
+    "alternativesMark": {
+      "description": "Forms or examples that each work; the renderer joins them with a slash.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "alternatives"
+      ],
+      "properties": {
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/text"
+          },
+          "minItems": 2
+        }
+      }
+    },
+    "examplesMark": {
+      "description": "Examples side by side.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "examples"
+      ],
+      "properties": {
+        "examples": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/text"
+          },
+          "minItems": 2
+        }
+      }
+    },
+    "mappingMark": {
+      "description": "A form and what it becomes, in order. follows: the list continues the form under discussion.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mapping"
+      ],
+      "properties": {
+        "mapping": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/text"
+          },
+          "minItems": 1
+        },
+        "follows": {
+          "const": true
+        }
+      }
+    },
+    "takesMark": {
+      "description": "A case and the form it calls for. follows: the list continues the form under discussion.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "takes"
+      ],
+      "properties": {
+        "takes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/text"
+          },
+          "minItems": 1
+        },
+        "follows": {
+          "const": true
+        }
+      }
+    },
+    "exchangeMark": {
+      "description": "A question and its answer.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "exchange"
+      ],
+      "properties": {
+        "exchange": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/text"
+          },
+          "minItems": 2
+        }
+      }
+    },
+    "glossMark": {
+      "description": "A meaning in the reader's language: localized inside text of the language being learned.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gloss"
+      ],
+      "properties": {
+        "gloss": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/text"
+            },
+            {
+              "$ref": "#/definitions/localized"
+            }
+          ]
+        }
+      }
+    },
+    "ipaMark": {
+      "description": "An IPA transcription, without its slashes.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ipa"
+      ],
+      "properties": {
+        "ipa": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "linkMark": {
+      "description": "Another topic, by ID.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "link",
+        "to"
+      ],
+      "properties": {
+        "link": {
+          "$ref": "#/definitions/text"
+        },
+        "to": {
+          "$ref": "#/definitions/topicId"
+        }
+      }
+    },
+    "dateMark": {
+      "description": "A date with its ISO 8601 value: 2026-07-03, --07-03, --07 or 2026.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "date",
+        "value"
+      ],
+      "properties": {
+        "date": {
+          "$ref": "#/definitions/text"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^(\\d{4}(-\\d\\d(-\\d\\d)?)?|--\\d\\d(-\\d\\d)?)$"
+        }
+      }
+    },
+    "weekdayMark": {
+      "description": "A day of the week with its ISO 8601 number, Monday 1.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "weekday",
+        "value"
+      ],
+      "properties": {
+        "weekday": {
+          "$ref": "#/definitions/text"
+        },
+        "value": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 7
+        }
+      }
+    },
+    "timeMark": {
+      "description": "A clock time with its 24-hour value.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "time",
+        "value"
+      ],
+      "properties": {
+        "time": {
+          "$ref": "#/definitions/text"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"
+        }
+      }
+    },
+    "numeralMark": {
+      "description": "A number in words with its value in digits.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "numeral",
+        "value"
+      ],
+      "properties": {
+        "numeral": {
+          "$ref": "#/definitions/text"
+        },
+        "value": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string",
+              "pattern": "^\\d+$"
+            }
+          ]
+        }
+      }
+    },
+    "ordinalMark": {
+      "description": "An ordinal with its value.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ordinal",
+        "value"
+      ],
+      "properties": {
+        "ordinal": {
+          "$ref": "#/definitions/text"
+        },
+        "value": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "intonationMark": {
+      "description": "The voice rises or falls.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "intonation"
+      ],
+      "properties": {
+        "intonation": {
+          "enum": [
+            "rise",
+            "fall"
+          ]
+        }
+      }
+    },
+    "gapMark": {
+      "description": "An open slot or the gap in a split form.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gap"
+      ],
+      "properties": {
+        "gap": {
+          "const": true
+        }
+      }
+    },
+    "variantMark": {
+      "description": "The form in another variety of the language.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "variant",
+        "variety"
+      ],
+      "properties": {
+        "variant": {
+          "$ref": "#/definitions/text"
+        },
+        "variety": {
+          "$ref": "#/definitions/variety"
+        }
+      }
+    },
+    "slotMark": {
+      "description": "A slot of a pattern: a code from the slot list, or a description of what fills it.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slot"
+      ],
+      "properties": {
+        "slot": {
+          "oneOf": [
+            {
+              "enum": [
+                "V",
+                "V-s",
+                "V-ing",
+                "V-ed",
+                "-ing",
+                "subject",
+                "verb",
+                "base verb",
+                "noun",
+                "plural noun",
+                "singular noun",
+                "uncountable noun",
+                "adjective",
+                "adverb",
+                "comparative",
+                "superlative",
+                "wh-word",
+                "person",
+                "clause",
+                "past participle",
+                "infinitive",
+                "present",
+                "past",
+                "past simple",
+                "number",
+                "unit",
+                "hyphen",
+                "result",
+                "agent",
+                "helper",
+                "consonant",
+                "vowel",
+                "the time",
+                "day",
+                "date",
+                "month",
+                "year"
+              ]
+            },
+            {
+              "$ref": "#/definitions/localized"
+            }
+          ]
+        }
+      }
+    },
+    "patternMark": {
+      "description": "The slots of a sentence pattern, in order; follows: the pattern comes after the form under discussion.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pattern"
+      ],
+      "properties": {
+        "pattern": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/text"
+          },
+          "minItems": 1
+        },
+        "follows": {
+          "const": true
+        }
+      }
+    },
+    "localized": {
+      "description": "Explanation text, one value per explanation language; npm run check requires each enabled one.",
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "en": {
+          "$ref": "#/definitions/text"
+        }
+      }
+    },
+    "example": {
+      "description": "An example with its translations into explanation languages.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ex",
+        "tr"
       ],
       "properties": {
         "ex": {
-          "type": "string"
+          "$ref": "#/definitions/text"
         },
         "tr": {
           "$ref": "#/definitions/localized"
@@ -169,7 +1206,7 @@
     "cell": {
       "oneOf": [
         {
-          "type": "string"
+          "$ref": "#/definitions/text"
         },
         {
           "$ref": "#/definitions/localized"
@@ -179,50 +1216,58 @@
         }
       ]
     },
-    "item": {
-      "description": "A bullet: explanation text or an example, with its level.",
+    "summary": {
+      "description": "The lead and the rule of the summary, and the rule's examples.",
       "type": "object",
       "additionalProperties": false,
-      "anyOf": [
-        {
-          "properties": {
-            "text": true
-          },
-          "required": [
-            "text"
-          ]
-        },
-        {
-          "properties": {
-            "ex": true
-          },
-          "required": [
-            "ex"
-          ]
-        }
+      "required": [
+        "lead",
+        "rule"
       ],
       "properties": {
-        "text": {
-          "$ref": "#/definitions/text"
+        "lead": {
+          "$ref": "#/definitions/localized"
+        },
+        "rule": {
+          "$ref": "#/definitions/localized"
         },
         "ex": {
-          "type": "string"
-        },
-        "tr": {
-          "$ref": "#/definitions/localized"
+          "$ref": "#/definitions/text"
+        }
+      }
+    },
+    "proseBlock": {
+      "description": "A paragraph.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "level",
+        "text"
+      ],
+      "properties": {
+        "type": {
+          "const": "prose"
         },
         "level": {
           "$ref": "#/definitions/level"
         },
-        "for": {
-          "$ref": "#/definitions/for"
+        "readers": {
+          "$ref": "#/definitions/readers"
+        },
+        "text": {
+          "$ref": "#/definitions/localized"
+        },
+        "ex": {
+          "$ref": "#/definitions/text"
+        },
+        "tr": {
+          "$ref": "#/definitions/localized"
         }
-      },
-      "required": [
-        "level"
-      ]
+      }
     },
-    "textBlock": {
+    "item": {
+      "description": "A list item: a rule, a note or an example, with its level.",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -249,26 +1294,34 @@
       ],
       "properties": {
         "type": {
-          "const": "text"
+          "enum": [
+            "rule",
+            "note",
+            "example"
+          ]
         },
         "level": {
           "$ref": "#/definitions/level"
         },
+        "readers": {
+          "$ref": "#/definitions/readers"
+        },
+        "variety": {
+          "$ref": "#/definitions/variety"
+        },
         "text": {
-          "$ref": "#/definitions/text"
+          "$ref": "#/definitions/localized"
         },
         "ex": {
-          "type": "string"
+          "$ref": "#/definitions/text"
         },
         "tr": {
           "$ref": "#/definitions/localized"
-        },
-        "for": {
-          "$ref": "#/definitions/for"
         }
       }
     },
-    "bulletsBlock": {
+    "listBlock": {
+      "description": "A list of rules, notes and examples.",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -277,7 +1330,7 @@
       ],
       "properties": {
         "type": {
-          "const": "bullets"
+          "const": "list"
         },
         "items": {
           "type": "array",
@@ -286,65 +1339,99 @@
           },
           "minItems": 1
         },
-        "for": {
-          "$ref": "#/definitions/for"
+        "readers": {
+          "$ref": "#/definitions/readers"
         }
       }
     },
     "column": {
+      "description": "A table column: its key, and its label, or the slot of a pattern sentence it holds; features name what it holds.",
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "key",
-        "label"
+        "key"
+      ],
+      "anyOf": [
+        {
+          "properties": {
+            "label": true
+          },
+          "required": [
+            "label"
+          ]
+        },
+        {
+          "properties": {
+            "slot": true
+          },
+          "required": [
+            "slot"
+          ]
+        }
       ],
       "properties": {
         "key": {
           "type": "string",
-          "pattern": "^[a-z][a-z0-9_]*$"
+          "pattern": "^(?!(level|features|value|variety|readers|tr)$)[a-z][a-z0-9_]*$"
         },
         "label": {
-          "$ref": "#/definitions/text"
+          "$ref": "#/definitions/cell"
         },
-        "merge": {
-          "description": "A cell joins the cell above it when both read the same and their rows share a level.",
-          "type": "boolean"
+        "slot": {
+          "enum": [
+            "aux",
+            "subj",
+            "verb",
+            "rest"
+          ]
         },
-        "group": {
-          "description": "A title shared with the neighbouring columns of the same group, in a header row above their own.",
-          "$ref": "#/definitions/text"
+        "features": {
+          "$ref": "#/definitions/features"
         },
-        "center": {
-          "description": "The column's cells and title are centred horizontally and vertically.",
-          "type": "boolean"
-        },
-        "for": {
-          "$ref": "#/definitions/for"
+        "readers": {
+          "$ref": "#/definitions/readers"
         }
       }
     },
     "row": {
-      "description": "Cells by column key, plus the row's level, an optional translation and explanation-language filter.",
+      "description": "Cells by column key, with the row's level, features, value, variety and readers.",
       "type": "object",
+      "required": [
+        "level"
+      ],
       "properties": {
         "level": {
           "$ref": "#/definitions/level"
         },
+        "readers": {
+          "$ref": "#/definitions/readers"
+        },
+        "features": {
+          "$ref": "#/definitions/features"
+        },
+        "value": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        },
+        "variety": {
+          "$ref": "#/definitions/variety"
+        },
         "tr": {
           "$ref": "#/definitions/localized"
-        },
-        "for": {
-          "$ref": "#/definitions/for"
         }
       },
       "additionalProperties": {
         "$ref": "#/definitions/cell"
-      },
-      "required": [
-        "level"
-      ]
+      }
     },
-    "tableBlock": {
+    "paradigmBlock": {
+      "description": "Forms or sentences in cells labelled by features: its rows or its columns carry them.",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -354,7 +1441,7 @@
       ],
       "properties": {
         "type": {
-          "const": "table"
+          "const": "paradigm"
         },
         "columns": {
           "type": "array",
@@ -371,8 +1458,121 @@
           },
           "minItems": 1
         },
-        "for": {
-          "$ref": "#/definitions/for"
+        "readers": {
+          "$ref": "#/definitions/readers"
+        }
+      }
+    },
+    "usageBlock": {
+      "description": "Uses, rules, patterns or words, each with its explanation and examples.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "columns",
+        "rows"
+      ],
+      "properties": {
+        "type": {
+          "const": "usage"
+        },
+        "columns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/column"
+          },
+          "minItems": 1,
+          "maxItems": 10
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/row"
+          },
+          "minItems": 1
+        },
+        "readers": {
+          "$ref": "#/definitions/readers"
+        }
+      }
+    },
+    "comparisonBlock": {
+      "description": "Items side by side under named columns.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "columns",
+        "rows"
+      ],
+      "properties": {
+        "type": {
+          "const": "comparison"
+        },
+        "columns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/column"
+          },
+          "minItems": 1,
+          "maxItems": 10
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/row"
+          },
+          "minItems": 1
+        },
+        "readers": {
+          "$ref": "#/definitions/readers"
+        }
+      }
+    },
+    "inventoryBlock": {
+      "description": "The members of a closed set, each row one member with its value.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "columns",
+        "rows",
+        "set"
+      ],
+      "properties": {
+        "type": {
+          "const": "inventory"
+        },
+        "set": {
+          "enum": [
+            "letters",
+            "sounds",
+            "numbers",
+            "ordinals",
+            "days",
+            "months",
+            "years",
+            "dates",
+            "times"
+          ]
+        },
+        "columns": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/column"
+          },
+          "minItems": 1,
+          "maxItems": 10
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/row"
+          },
+          "minItems": 1
+        },
+        "readers": {
+          "$ref": "#/definitions/readers"
         }
       }
     },
@@ -386,23 +1586,27 @@
       ],
       "properties": {
         "wrong": {
-          "type": "string"
+          "$ref": "#/definitions/text"
         },
         "right": {
-          "type": "string"
+          "$ref": "#/definitions/text"
         },
         "rule": {
-          "$ref": "#/definitions/text"
+          "$ref": "#/definitions/localized"
         },
         "level": {
           "$ref": "#/definitions/level"
         },
-        "for": {
-          "$ref": "#/definitions/for"
+        "readers": {
+          "$ref": "#/definitions/readers"
+        },
+        "speakers": {
+          "$ref": "#/definitions/readers"
         }
       }
     },
     "errorsBlock": {
+      "description": "Typical errors: wrong, right and the rule.",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -420,21 +1624,30 @@
           },
           "minItems": 1
         },
-        "for": {
-          "$ref": "#/definitions/for"
+        "readers": {
+          "$ref": "#/definitions/readers"
         }
       }
     },
     "block": {
       "oneOf": [
         {
-          "$ref": "#/definitions/textBlock"
+          "$ref": "#/definitions/proseBlock"
         },
         {
-          "$ref": "#/definitions/bulletsBlock"
+          "$ref": "#/definitions/listBlock"
         },
         {
-          "$ref": "#/definitions/tableBlock"
+          "$ref": "#/definitions/paradigmBlock"
+        },
+        {
+          "$ref": "#/definitions/usageBlock"
+        },
+        {
+          "$ref": "#/definitions/comparisonBlock"
+        },
+        {
+          "$ref": "#/definitions/inventoryBlock"
         },
         {
           "$ref": "#/definitions/errorsBlock"
@@ -453,17 +1666,34 @@
       "additionalProperties": false,
       "required": [
         "title",
+        "role",
         "content"
       ],
       "properties": {
         "title": {
           "$ref": "#/definitions/localized"
         },
+        "role": {
+          "enum": [
+            "overview",
+            "form",
+            "spelling",
+            "pronunciation",
+            "use",
+            "signals",
+            "own",
+            "compare",
+            "errors"
+          ]
+        },
+        "features": {
+          "$ref": "#/definitions/features"
+        },
         "content": {
           "$ref": "#/definitions/content"
         },
-        "for": {
-          "$ref": "#/definitions/for"
+        "readers": {
+          "$ref": "#/definitions/readers"
         }
       }
     }

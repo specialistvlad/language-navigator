@@ -4,7 +4,7 @@ import { alternates, readChoices, type Track } from "../context.ts";
 import { controls, page } from "../layout.ts";
 import { navHome } from "../nav.ts";
 import { badge } from "../parts.ts";
-import { escapeHtml } from "../render.ts";
+import { escapeHtml } from "../html.ts";
 import { sheetsUrl, sheetUrl, trackUrl } from "../urls.ts";
 import { type Sheet, sheetsOf } from "./sheet-content.ts";
 

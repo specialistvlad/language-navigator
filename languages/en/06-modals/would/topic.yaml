@@ -9,148 +9,161 @@ status: { en: draft }
 
 title: { en: Would }
 summary:
-  en: "Would like for offers and wants; would for polite requests, imagined situations and past habits. Would has one form for every subject and takes the base verb: **Would** you like a coffee? I **would** like tea."
+  lead: { en: "Would like for offers and wants; would for polite requests, imagined situations and past habits." }
+  rule: { en: "Would has one form for every subject and takes the base verb:" }
+  ex: { examples: [[{ target: Would }, " you like a coffee?"], ["I ", { target: would }, " like tea."]] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: use, label: { en: Use } }
         - { key: pattern, label: { en: Pattern } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, use: { en: "wants and offers" }, pattern: would like, example: "I'**d like** a coffee." }
-        - { level: B1, use: { en: "polite requests" }, pattern: Would you + V…?, example: "**Would** you **help** me?" }
-        - { level: B1, use: { en: "imagined situations" }, pattern: would + V, example: "I **would** travel more." }
-        - { level: B1, use: { en: "past habits" }, pattern: would + V, example: "We **would** swim every summer." }
+        - { level: A1, use: { en: wants and offers }, pattern: would like, ex: [I', { target: d like }, " a coffee."] }
+        - { level: B1, use: { en: polite requests }, pattern: { pattern: [Would you, [V, { gap: true }, "?"]] }, ex: [{ target: Would }, " you ", { target: help }, " me?"] }
+        - { level: B1, use: { en: imagined situations }, pattern: { pattern: [would, { slot: V }] }, ex: ["I ", { target: would }, " travel more."] }
+        - { level: B1, use: { en: past habits }, pattern: { pattern: [would, { slot: V }] }, ex: ["We ", { target: would }, " swim every summer."] }
 
 sections:
   - title: { en: "Form: would" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: form, label: { en: Form } }
           - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, form: { en: Affirmative }, pattern: subject + would / 'd + V, example: "She **would** help." }
-          - { level: B1, form: { en: Negative }, pattern: subject + wouldn't + V, example: "I **wouldn't** go." }
-          - { level: A1, form: { en: Question }, pattern: Would + subject + V, example: "**Would** you like tea?" }
-          - { level: B1, form: { en: Short answer }, pattern: "Yes, … would. / No, … wouldn't.", example: "Yes, I **would**. / No, I **wouldn't**." }
-      - type: bullets
+          - { level: B1, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, pattern: { pattern: [{ slot: subject }, { alternatives: [would, "'d"] }, { slot: V }] }, ex: ["She ", { target: would }, " help."] }
+          - { level: B1, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, pattern: { pattern: [{ slot: subject }, wouldn't, { slot: V }] }, ex: ["I ", { target: wouldn't }, " go."] }
+          - { level: A1, features: { polarity: pos, interrogativity: int }, form: { en: Question }, pattern: { pattern: [Would, { slot: subject }, { slot: V }] }, ex: [{ target: Would }, " you like tea?"] }
+          - { level: B1, features: { interrogativity: decl, polarity: [pos, neg] }, form: { en: Short answer }, pattern: { alternatives: [["Yes, ", { gap: true }, " would."], ["No, ", { gap: true }, " wouldn't."]] }, ex: { examples: [["Yes, I ", { target: would }, "."], ["No, I ", { target: wouldn't }, "."]] } }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "**would** has one form for every subject: I would, she would."
-          - level: B1
+              en: [{ term: would }, " has one form for every subject: I would, she would."]
+          - type: rule
+            level: B1
             text:
-              en: "The verb after **would** is in the base form: She would **help**."
-          - level: B1
+              en: ["The verb after ", { term: would }, " is in the base form:"]
+            ex: ["She would ", { target: help }, "."]
+          - type: rule
+            level: B1
             text:
-              en: "Questions and negatives need no **do**: **Would** you go? / I **wouldn't** go."
+              en: ["Questions and negatives need no ", { term: do }, ":"]
+            ex: { examples: [[{ target: Would }, " you go?"], ["I ", { target: wouldn't }, " go."]] }
 
   - title: { en: "Form: short forms" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
-          - { key: full, label: { en: Full form } }
-          - { key: short, label: { en: Short form } }
-          - { key: example, label: { en: Example } }
+          - { key: full, label: { en: Full form }, features: { contraction: full } }
+          - { key: short, label: { en: Short form }, features: { contraction: short } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, full: I would, short: I'd, example: "I'**d** like a tea." }
-          - { level: B1, full: you would, short: you'd, example: "You'**d** like her." }
-          - { level: B1, full: he / she / it would, short: he'd / she'd / it'd, example: "She'**d** love it." }
-          - { level: B1, full: we / they would, short: we'd / they'd, example: "We'**d** go." }
-          - { level: B1, full: would not, short: wouldn't, example: "They **wouldn't** mind." }
-      - type: bullets
+          - { level: A1, features: { person: 1, number: sg }, full: I would, short: I'd, ex: [I', { target: d }, " like a tea."] }
+          - { level: B1, features: { person: 2 }, full: you would, short: you'd, ex: [You', { target: d }, " like her."] }
+          - { level: B1, features: { person: 3, number: sg }, full: [{ alternatives: [he, she, it] }, "  would"], short: { alternatives: [he'd, she'd, it'd] }, ex: [She', { target: d }, " love it."] }
+          - { level: B1, features: [{ person: 1, number: pl }, { person: 3, number: pl }], full: [{ alternatives: [we, they] }, "  would"], short: { alternatives: [we'd, they'd] }, ex: [We', { target: d }, " go."] }
+          - { level: B1, features: { polarity: neg }, full: would not, short: wouldn't, ex: ["They ", { target: wouldn't }, " mind."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "**'d** + base verb = **would**. **'d** + past participle = **had**:"
-            ex: "I'**d** go. (= I would go) / I'**d** gone. (= I had gone)"
-          - level: B1
+              en: [{ pattern: [{ term: "'d" }, { slot: base verb }] }, " = ", { term: would }, ". ", { pattern: [{ term: "'d" }, { slot: past participle }] }, " = ", { term: had }, ":"]
+            ex: { examples: [[I', { target: d }, " go. ", { gloss: { en: = I would go } }], [I', { target: d }, " gone. ", { gloss: { en: = I had gone } }]] }
+          - type: note
+            level: B1
             text:
-              en: "See [Past perfect](id:en.tenses.perfect-tenses)."
+              en: ["See ", { link: Past perfect, to: en.tenses.perfect-tenses }, "."]
 
   - title: { en: "Pronunciation: would and 'd" }
+    role: pronunciation
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: form, label: { en: Form } }
           - { key: sound, label: { en: Sound } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, form: { en: "would (weak, in a sentence)" }, sound: /wəd/, example: "**Would** you help? /wəd juː ˈhelp/" }
-          - { level: B1, form: { en: "would (strong, at the end)" }, sound: /wʊd/, example: "Yes, I **would**. /jes aɪ ˈwʊd/" }
-          - { level: A1, form: I'd, sound: /aɪd/, example: "I'**d** like tea. /aɪd ˈlaɪk tiː/" }
-          - { level: B1, form: wouldn't, sound: /ˈwʊdnt/, example: "I **wouldn't** go. /aɪ ˈwʊdnt ɡəʊ/" }
-      - type: bullets
+          - { level: B1, form: { en: "would (weak, in a sentence)" }, sound: { ipa: wəd }, ex: [{ target: Would }, " you help? ", { ipa: wəd juː ˈhelp }] }
+          - { level: B1, form: { en: "would (strong, at the end)" }, sound: { ipa: wʊd }, ex: ["Yes, I ", { target: would }, ". ", { ipa: jes aɪ ˈwʊd }] }
+          - { level: A1, form: I'd, sound: { ipa: aɪd }, ex: [I', { target: d }, " like tea. ", { ipa: aɪd ˈlaɪk tiː }] }
+          - { level: B1, form: wouldn't, sound: { ipa: ˈwʊdnt }, ex: ["I ", { target: wouldn't }, " go. ", { ipa: aɪ ˈwʊdnt ɡəʊ }] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "The **l** in would and wouldn't is silent: would is /wʊd/ when strong."
+              en: ["The ", { letter: l }, " in would and wouldn't is silent: would is ", { ipa: wʊd }, " when strong."]
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: "A polite want: would like + noun" }, example: "I'**d like** a coffee, please." }
-          - { level: A1, use: { en: "A polite want: would like + to V" }, example: "I'**d like to** book a table." }
-          - { level: A1, use: { en: "Offers and invitations" }, example: "**Would** you **like** some cake?" }
-          - { level: B1, use: { en: "Offering to do something (would like me to)" }, example: "**Would** you **like me to** carry that?" }
-          - { level: B1, use: { en: "Polite requests" }, example: "**Would** you pass the salt, please?" }
-          - { level: B1, use: { en: "Imagined situations" }, example: "I **would** buy a boat." }
-          - { level: B1, use: { en: "Imagined situations with if" }, example: "If I had more time, I **would** learn Italian." }
-          - { level: B1, use: { en: "Past habits: repeated actions" }, example: "When I was a child, we **would** play outside every day." }
-      - type: bullets
+          - { level: A1, use: { en: ["A polite want: ", { pattern: [would like, { slot: noun }] }] }, ex: [I', { target: d like }, " a coffee, please."] }
+          - { level: A1, use: { en: ["A polite want: ", { pattern: [would like, to V] }] }, ex: [I', { target: d like to }, " book a table."] }
+          - { level: A1, use: { en: Offers and invitations }, ex: [{ target: Would }, " you ", { target: like }, " some cake?"] }
+          - { level: B1, use: { en: Offering to do something (would like me to) }, ex: [{ target: Would }, " you ", { target: like me to }, " carry that?"] }
+          - { level: B1, use: { en: Polite requests }, ex: [{ target: Would }, " you pass the salt, please?"] }
+          - { level: B1, use: { en: Imagined situations }, ex: ["I ", { target: would }, " buy a boat."] }
+          - { level: B1, use: { en: Imagined situations with if }, ex: ["If I had more time, I ", { target: would }, " learn Italian."] }
+          - { level: B1, use: { en: "Past habits: repeated actions" }, ex: ["When I was a child, we ", { target: would }, " play outside every day."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "**would like** is a polite form of **want**: I'd like tea."
-          - level: A1
+              en: [{ term: would like }, " is a polite form of ", { term: want }, ": I'd like tea."]
+          - type: rule
+            level: A1
             text:
-              en: "**would like** takes **to** + base verb: I'd like **to go**."
-          - level: B1
+              en: [{ term: would like }, " takes ", { pattern: [{ term: to }, { slot: base verb }] }, ":"]
+            ex: ["I'd like ", { target: to go }, "."]
+          - type: note
+            level: B1
             text:
-              en: "An imagined situation with **if** takes **if** + past simple, **would** + base verb. See [Conditionals](id:en.sentence-building.conditionals-0-1-2)."
-          - level: B1
+              en: ["An imagined situation with ", { term: if }, " takes ", { pattern: [{ term: if }, { slot: past simple }] }, ", ", { pattern: [{ term: would }, { slot: base verb }] }, ". See ", { link: Conditionals, to: en.sentence-building.conditionals-0-1-2 }, "."]
+          - type: rule
+            level: B1
             text:
-              en: "A past habit with **would** needs a past time frame: When I was young, I would…"
+              en: ["A past habit with ", { term: would }, " needs a past time frame: When I was young, I would…"]
 
   - title: { en: "Compare: would and used to" }
+    role: compare
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: row, label: { en: Point } }
           - { key: would, label: would }
-          - { key: used, label: used to }
+          - { key: used, label: used to, features: { aspect: hab, tense: pst } }
         rows:
-          - level: B1
-            row: { en: Meaning }
-            would: { en: "repeated past actions" }
-            used: { en: "repeated past actions and past states" }
-          - level: B1
-            row: { en: Action }
-            would: { ex: "We **would** swim every summer." }
-            used: { ex: "We **used to** swim every summer." }
-          - level: B1
-            row: { en: State }
-            would: "—"
-            used: { ex: "I **used to** live in Leeds." }
-      - type: bullets
+          - { level: B1, row: { en: Meaning }, would: { en: repeated past actions }, used: { en: repeated past actions and past states } }
+          - { level: B1, row: { en: Action }, would: ["We ", { target: would }, " swim every summer."], used: ["We ", { target: used to }, " swim every summer."] }
+          - { level: B1, row: { en: State }, used: ["I ", { target: used to }, " live in Leeds."] }
+      - type: list
         items:
-          - level: B1
+          - type: note
+            level: B1
             text:
-              en: "A past state (live, be, have, know) takes **used to**. See [Used to](id:en.tenses.used-to)."
+              en: ["A past state (live, be, have, know) takes ", { term: used to }, ". See ", { link: Used to, to: en.tenses.used-to }, "."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: "Do you would like a coffee?", right: "**Would** you like a coffee?", rule: { en: "questions with would need no do" } }
-          - { level: A1, wrong: "I would like going.", right: "I'd like **to go**.", rule: { en: "would like + to + base verb" } }
-          - { level: B1, wrong: "She would likes tea.", right: "She would **like** tea.", rule: { en: "would + base verb" } }
-          - { level: B1, wrong: "When I was young, I would live in Paris.", right: "When I was young, I **used to** live in Paris.", rule: { en: "past states take used to" } }
+          - { level: A1, wrong: Do you would like a coffee?, right: [{ target: Would }, " you like a coffee?"], rule: { en: questions with would need no do } }
+          - { level: A1, wrong: I would like going., right: ["I'd like ", { target: to go }, "."], rule: { en: { pattern: [would like, to, { slot: base verb }] } } }
+          - { level: B1, wrong: She would likes tea., right: ["She would ", { target: like }, " tea."], rule: { en: { pattern: [would, { slot: base verb }] } } }
+          - { level: B1, wrong: "When I was young, I would live in Paris.", right: ["When I was young, I ", { target: used to }, " live in Paris."], rule: { en: past states take used to } }

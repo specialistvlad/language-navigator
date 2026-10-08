@@ -9,157 +9,186 @@ status: { en: draft }
 
 title: { en: Used to }
 summary:
-  en: "Used to for past habits and states that are over now, such as living in Rome years ago. After did and didn't the verb is use to, without the d: **Did** you **use to** play? I **didn't use to** like fish."
+  lead: { en: "Used to for past habits and states that are over now, such as living in Rome years ago." }
+  rule: { en: "After did and didn't the verb is use to, without the d:" }
+  ex: { examples: [[{ target: Did }, " you ", { target: use to }, " play?"], ["I ", { target: didn't use to }, " like fish."]] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: paradigm
       columns:
         - { key: form, label: { en: Form } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A2, form: { en: Affirmative }, example: "I **used to play** football." }
-        - { level: A2, form: { en: Negative }, example: "I **didn't use to play** football." }
-        - { level: A2, form: { en: Question }, example: "**Did** you **use to play** football?" }
-        - { level: A2, form: { en: Short answer }, example: "Yes, I **did**. / No, I **didn't**." }
+        - { level: A2, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, ex: ["I ", { target: used to play }, " football."] }
+        - { level: A2, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, ex: ["I ", { target: didn't use to play }, " football."] }
+        - { level: A2, features: { polarity: pos, interrogativity: int }, form: { en: Question }, ex: [{ target: Did }, " you ", { target: use to play }, " football?"] }
+        - { level: A2, features: { interrogativity: decl, polarity: [pos, neg] }, form: { en: Short answer }, ex: { examples: [["Yes, I ", { target: did }, "."], ["No, I ", { target: didn't }, "."]] } }
 
 sections:
   - title: { en: "Form: affirmative" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: subject, label: { en: Subject } }
           - { key: form, label: { en: Form } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, subject: { en: all subjects }, form: used to + V, example: "She **used to live** in Rome." }
-      - type: bullets
+          - { level: A2, subject: { en: all subjects }, form: { pattern: [used to, { slot: V }] }, ex: ["She ", { target: used to live }, " in Rome."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "The form is the same for every subject: I / he / they **used to** live here."
-          - level: A2
+              en: "The form is the same for every subject:"
+            ex: { examples: [I, he, ["they ", { target: used to }, " live here."]] }
+          - type: rule
+            level: A2
             text:
-              en: "**used to** is followed by the base verb: used to **play**."
-          - level: A2
+              en: [{ term: used to }, " is followed by the base verb: used to ", { term: play }, "."]
+          - type: rule
+            level: A2
             text:
-              en: "**used to** exists only in the past."
+              en: [{ term: used to }, " exists only in the past."]
 
   - title: { en: "Form: negative" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: subject, label: { en: Subject } }
           - { key: form, label: { en: Form } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, subject: { en: all subjects }, form: didn't use to + V, example: "We **didn't use to have** a car." }
-      - type: bullets
+          - { level: A2, subject: { en: all subjects }, form: { pattern: [didn't use to, { slot: V }] }, ex: ["We ", { target: didn't use to have }, " a car."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "After **didn't** the form is **use to**, with no -d."
-          - level: A2
+              en: ["After ", { term: didn't }, " the form is ", { term: use to }, ", with no -d."]
+          - type: rule
+            level: A2
             text:
-              en: "**never** also makes a negative: I **never used to** like fish."
+              en: [{ term: never }, " also makes a negative:"]
+            ex: ["I ", { target: never used to }, " like fish."]
 
   - title: { en: "Form: questions" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
-          - { key: aux, label: { en: Auxiliary + subject } }
+          - { key: aux, label: { en: { pattern: [Auxiliary, { slot: subject }] } } }
           - { key: verb, label: { en: Verb } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, aux: Did + subject, verb: use to + V, example: "**Did** you **use to walk** to school?" }
-          - { level: A2, aux: wh-word + did + subject, verb: use to + V, example: "Where **did** you **use to live**?" }
-      - type: bullets
+          - { level: A2, aux: { pattern: [Did, { slot: subject }] }, verb: { pattern: [use to, { slot: V }] }, ex: [{ target: Did }, " you ", { target: use to walk }, " to school?"] }
+          - { level: A2, aux: { pattern: [{ slot: wh-word }, did, { slot: subject }] }, verb: { pattern: [use to, { slot: V }] }, ex: ["Where ", { target: did }, " you ", { target: use to live }, "?"] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "After **Did** the form is **use to**, with no -d."
-          - level: A2
+              en: ["After ", { term: Did }, " the form is ", { term: use to }, ", with no -d."]
+          - type: rule
+            level: A2
             text:
-              en: "A short answer repeats did: Yes, I **did**. / No, I **didn't**."
+              en: "A short answer repeats did:"
+            ex: { examples: [["Yes, I ", { target: did }, "."], ["No, I ", { target: didn't }, "."]] }
 
   - title: { en: "Pronunciation: used to" }
+    role: pronunciation
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: form, label: { en: Form } }
           - { key: ipa, label: IPA }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, form: used to, ipa: "/ˈjuːst tə/", example: "I **used to** swim." }
-          - { level: A2, form: use to, ipa: "/juːs tə/", example: "Did you **use to** swim?" }
-      - type: bullets
+          - { level: A2, form: used to, ipa: { ipa: ˈjuːst tə }, ex: ["I ", { target: used to }, " swim."] }
+          - { level: A2, form: use to, ipa: { ipa: juːs tə }, ex: ["Did you ", { target: use to }, " swim?"] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "The **d** is silent in speech: used to sounds like *use-ta*."
+              en: ["The ", { letter: d }, " is silent in speech: used to sounds like ", { sound: use-ta }, "."]
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, use: { en: Past habits }, example: "I **used to walk** to school." }
-          - { level: A2, use: { en: Past states }, example: "We **used to have** a dog." }
-          - { level: A2, use: { en: Past situations that changed }, example: "There **used to be** a cinema here." }
-      - type: bullets
+          - { level: A2, use: { en: Past habits }, ex: ["I ", { target: used to walk }, " to school."] }
+          - { level: A2, use: { en: Past states }, ex: ["We ", { target: used to have }, " a dog."] }
+          - { level: A2, use: { en: Past situations that changed }, ex: ["There ", { target: used to be }, " a cinema here."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "The habit or state is over now. The speaker compares past and present."
+              en: The habit or state is over now. The speaker compares past and present.
 
   - title: { en: Signal words }
+    role: signals
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: expression, label: { en: Expression } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, expression: when I was a child / young, example: "**When I was a child**, I used to climb trees." }
-          - { level: A2, expression: in those days, example: "People used to write letters **in those days**." }
-          - { level: A2, expression: years ago, example: "I used to smoke **years ago**." }
-          - { level: A2, expression: always / often / never, example: "He **always** used to be late." }
-          - { level: A2, expression: but now, example: "I used to run, **but now** I swim." }
-      - type: bullets
+          - { level: A2, expression: { alternatives: [when I was a child, young] }, ex: [{ signal: When I was a child }, ", I used to climb trees."] }
+          - { level: A2, expression: in those days, ex: ["People used to write letters ", { signal: in those days }, "."] }
+          - { level: A2, expression: years ago, ex: ["I used to smoke ", { signal: years ago }, "."] }
+          - { level: A2, expression: { alternatives: [always, often, never] }, ex: ["He ", { signal: always }, " used to be late."] }
+          - { level: A2, expression: but now, ex: ["I used to run, ", { signal: but now }, " I swim."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "**always**, **often** and **never** go before **used to**: He **always** used to be late."
+              en: [{ term: always }, ", ", { term: often }, " and ", { term: never }, " go before ", { term: used to }, ":"]
+            ex: ["He ", { target: always }, " used to be late."]
 
   - title: { en: "Compare: used to vs past simple" }
+    role: compare
     content:
-      - type: table
+      - type: comparison
         columns:
-          - { key: used, label: Used to }
-          - { key: simple, label: Past simple }
+          - { key: used, label: Used to, features: { aspect: hab, tense: pst } }
+          - { key: simple, label: Past simple, features: { tense: pst } }
         rows:
           - { level: A2, used: { en: "past habits and states, over now" }, simple: { en: "finished actions, stated time or number" } }
-          - { level: A2, used: { ex: "I **used to live** in Paris." }, simple: { ex: "I **lived** in Paris for two years." } }
-          - { level: A2, used: { ex: "We **used to eat** out on Fridays." }, simple: { ex: "We **ate** out last Friday." } }
-          - { level: A2, used: { ex: "**Did** you **use to** have a dog?" }, simple: { ex: "**Did** you **have** a dog last year?" } }
-      - type: bullets
+          - { level: A2, used: ["I ", { target: used to live }, " in Paris."], simple: ["I ", { target: lived }, " in Paris for two years."] }
+          - { level: A2, used: ["We ", { target: used to eat }, " out on ", { weekday: Fridays, value: 5 }, "."], simple: ["We ", { target: ate }, " out last ", { weekday: Friday, value: 5 }, "."] }
+          - { level: A2, used: [{ target: Did }, " you ", { target: use to }, " have a dog?"], simple: [{ target: Did }, " you ", { target: have }, " a dog last year?"] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "A single event takes the past simple: I **visited** Rome in May."
-          - level: A2
+              en: "A single event takes the past simple:"
+            ex: ["I ", { target: visited }, " Rome in ", { date: May, value: "--05" }, "."]
+          - type: rule
+            level: A2
             text:
-              en: "A habit with a time expression takes either form: I **played** football every Saturday."
-          - level: A2
+              en: "A habit with a time expression takes either form:"
+            ex: ["I ", { target: played }, " football every ", { weekday: Saturday, value: 6 }, "."]
+          - type: note
+            level: A2
             text:
-              en: "See [Past simple](id:en.tenses.simple-tenses)."
+              en: ["See ", { link: Past simple, to: en.tenses.simple-tenses }, "."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A2, wrong: I use to play football., right: "I **used to** play football.", rule: { en: "affirmative → used to, with -d" } }
-          - { level: A2, wrong: Did you used to play?, right: "Did you **use to** play?", rule: { en: "after did → use to" } }
-          - { level: A2, wrong: I didn't used to like it., right: "I didn't **use to** like it.", rule: { en: "after didn't → use to" } }
-          - { level: A2, wrong: I used to playing football., right: "I used to **play** football.", rule: { en: "used to + base verb" } }
+          - { level: A2, wrong: I use to play football., right: ["I ", { target: used to }, " play football."], rule: { en: { takes: [affirmative, "used to, with -d"] } } }
+          - { level: A2, wrong: Did you used to play?, right: ["Did you ", { target: use to }, " play?"], rule: { en: { takes: [after did, use to] } } }
+          - { level: A2, wrong: I didn't used to like it., right: ["I didn't ", { target: use to }, " like it."], rule: { en: { takes: [after didn't, use to] } } }
+          - { level: A2, wrong: I used to playing football., right: ["I used to ", { target: play }, " football."], rule: { en: { pattern: [used to, { slot: base verb }] } } }

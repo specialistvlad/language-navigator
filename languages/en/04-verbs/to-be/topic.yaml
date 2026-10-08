@@ -7,186 +7,214 @@ concepts: [be]
 related: [en.pronouns.personal-pronouns, en.tenses.simple-tenses, en.verbs.there-is-are, en.verbs.have-have-got]
 status: { en: draft }
 
-title: { en: "To be" }
+title: { en: To be }
 summary:
-  en: "Am, is, are, was, were and will be: the verb for name, age, nationality, job, feelings and place. Be needs no helper and the subject is always in the sentence: **Are** you a student? **It is** cold."
+  lead: { en: "Am, is, are, was, were and will be: the verb for name, age, nationality, job, feelings and place." }
+  rule: { en: "Be needs no helper and the subject is always in the sentence:" }
+  ex: { examples: [[{ target: Are }, " you a student?"], [{ target: It is }, " cold."]] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: paradigm
       columns:
-        - { key: tense, label: { en: Tense }, merge: true, center: true }
-        - { key: qh, group: { en: Question }, label: { en: Verb }, merge: true, center: true }
-        - { key: qs, group: { en: Question }, label: { en: Subject } }
-        - { key: qv, group: { en: Question }, label: { en: Rest }, merge: true, center: true }
-        - { key: ss, group: { en: Statement }, label: { en: Subject } }
-        - { key: sh, group: { en: Statement }, label: { en: Verb }, merge: true, center: true }
-        - { key: sv, group: { en: Statement }, label: { en: Rest }, merge: true, center: true }
-        - { key: ns, group: { en: Negative }, label: { en: Subject } }
-        - { key: nh, group: { en: Negative }, label: { en: Verb }, merge: true, center: true }
-        - { key: nv, group: { en: Negative }, label: { en: Rest }, merge: true, center: true }
+        - { key: tense, label: { en: Tense } }
+        - { key: qh, slot: verb, features: { interrogativity: int, polarity: pos } }
+        - { key: qs, slot: subj, features: { interrogativity: int, polarity: pos } }
+        - { key: qv, slot: rest, features: { interrogativity: int, polarity: pos } }
+        - { key: ss, slot: subj, features: { interrogativity: decl, polarity: pos } }
+        - { key: sh, slot: verb, features: { interrogativity: decl, polarity: pos } }
+        - { key: sv, slot: rest, features: { interrogativity: decl, polarity: pos } }
+        - { key: ns, slot: subj, features: { interrogativity: decl, polarity: neg } }
+        - { key: nh, slot: verb, features: { interrogativity: decl, polarity: neg } }
+        - { key: nv, slot: rest, features: { interrogativity: decl, polarity: neg } }
       rows:
-        - { level: A2, tense: { en: Future }, qh: "**Will**", qs: "I", qv: "**be** late?", ss: "I", sh: "**will be**", sv: "late.", ns: "I", nh: "**won't be**", nv: "late." }
-        - { level: A2, tense: { en: Future }, qh: "**Will**", qs: "you", qv: "**be** late?", ss: "You", sh: "**will be**", sv: "late.", ns: "You", nh: "**won't be**", nv: "late." }
-        - { level: A2, tense: { en: Future }, qh: "**Will**", qs: "he", qv: "**be** late?", ss: "He", sh: "**will be**", sv: "late.", ns: "He", nh: "**won't be**", nv: "late." }
-        - { level: A2, tense: { en: Future }, qh: "**Will**", qs: "she", qv: "**be** late?", ss: "She", sh: "**will be**", sv: "late.", ns: "She", nh: "**won't be**", nv: "late." }
-        - { level: A2, tense: { en: Future }, qh: "**Will**", qs: "it", qv: "**be** late?", ss: "It", sh: "**will be**", sv: "late.", ns: "It", nh: "**won't be**", nv: "late." }
-        - { level: A2, tense: { en: Future }, qh: "**Will**", qs: "we", qv: "**be** late?", ss: "We", sh: "**will be**", sv: "late.", ns: "We", nh: "**won't be**", nv: "late." }
-        - { level: A2, tense: { en: Future }, qh: "**Will**", qs: "they", qv: "**be** late?", ss: "They", sh: "**will be**", sv: "late.", ns: "They", nh: "**won't be**", nv: "late." }
-        - { level: A0, tense: { en: Present }, qh: "**Am**", qs: "I", qv: "late?", ss: "I", sh: "**am**", sv: "late.", ns: "I", nh: "**am not**", nv: "late." }
-        - { level: A0, tense: { en: Present }, qh: "**Are**", qs: "you", qv: "late?", ss: "You", sh: "**are**", sv: "late.", ns: "You", nh: "**aren't**", nv: "late." }
-        - { level: A0, tense: { en: Present }, qh: "**Is**", qs: "he", qv: "late?", ss: "He", sh: "**is**", sv: "late.", ns: "He", nh: "**isn't**", nv: "late." }
-        - { level: A0, tense: { en: Present }, qh: "**Is**", qs: "she", qv: "late?", ss: "She", sh: "**is**", sv: "late.", ns: "She", nh: "**isn't**", nv: "late." }
-        - { level: A0, tense: { en: Present }, qh: "**Is**", qs: "it", qv: "late?", ss: "It", sh: "**is**", sv: "late.", ns: "It", nh: "**isn't**", nv: "late." }
-        - { level: A0, tense: { en: Present }, qh: "**Are**", qs: "we", qv: "late?", ss: "We", sh: "**are**", sv: "late.", ns: "We", nh: "**aren't**", nv: "late." }
-        - { level: A0, tense: { en: Present }, qh: "**Are**", qs: "they", qv: "late?", ss: "They", sh: "**are**", sv: "late.", ns: "They", nh: "**aren't**", nv: "late." }
-        - { level: A1, tense: { en: Past }, qh: "**Was**", qs: "I", qv: "late?", ss: "I", sh: "**was**", sv: "late.", ns: "I", nh: "**wasn't**", nv: "late." }
-        - { level: A1, tense: { en: Past }, qh: "**Were**", qs: "you", qv: "late?", ss: "You", sh: "**were**", sv: "late.", ns: "You", nh: "**weren't**", nv: "late." }
-        - { level: A1, tense: { en: Past }, qh: "**Was**", qs: "he", qv: "late?", ss: "He", sh: "**was**", sv: "late.", ns: "He", nh: "**wasn't**", nv: "late." }
-        - { level: A1, tense: { en: Past }, qh: "**Was**", qs: "she", qv: "late?", ss: "She", sh: "**was**", sv: "late.", ns: "She", nh: "**wasn't**", nv: "late." }
-        - { level: A1, tense: { en: Past }, qh: "**Was**", qs: "it", qv: "late?", ss: "It", sh: "**was**", sv: "late.", ns: "It", nh: "**wasn't**", nv: "late." }
-        - { level: A1, tense: { en: Past }, qh: "**Were**", qs: "we", qv: "late?", ss: "We", sh: "**were**", sv: "late.", ns: "We", nh: "**weren't**", nv: "late." }
-        - { level: A1, tense: { en: Past }, qh: "**Were**", qs: "they", qv: "late?", ss: "They", sh: "**were**", sv: "late.", ns: "They", nh: "**weren't**", nv: "late." }
+        - { level: A2, features: { tense: fut, person: 1, number: sg }, tense: { en: Future }, qh: { target: Will }, qs: I, qv: [{ target: be }, " late?"], ss: I, sh: { target: will be }, sv: late., ns: I, nh: { target: won't be }, nv: late. }
+        - { level: A2, features: { tense: fut, person: 2 }, tense: { en: Future }, qh: { target: Will }, qs: you, qv: [{ target: be }, " late?"], ss: You, sh: { target: will be }, sv: late., ns: You, nh: { target: won't be }, nv: late. }
+        - { level: A2, features: { tense: fut, person: 3, number: sg, gender: masc }, tense: { en: Future }, qh: { target: Will }, qs: he, qv: [{ target: be }, " late?"], ss: He, sh: { target: will be }, sv: late., ns: He, nh: { target: won't be }, nv: late. }
+        - { level: A2, features: { tense: fut, person: 3, number: sg, gender: fem }, tense: { en: Future }, qh: { target: Will }, qs: she, qv: [{ target: be }, " late?"], ss: She, sh: { target: will be }, sv: late., ns: She, nh: { target: won't be }, nv: late. }
+        - { level: A2, features: { tense: fut, person: 3, number: sg, gender: neut }, tense: { en: Future }, qh: { target: Will }, qs: it, qv: [{ target: be }, " late?"], ss: It, sh: { target: will be }, sv: late., ns: It, nh: { target: won't be }, nv: late. }
+        - { level: A2, features: { tense: fut, person: 1, number: pl }, tense: { en: Future }, qh: { target: Will }, qs: we, qv: [{ target: be }, " late?"], ss: We, sh: { target: will be }, sv: late., ns: We, nh: { target: won't be }, nv: late. }
+        - { level: A2, features: { tense: fut, person: 3, number: pl }, tense: { en: Future }, qh: { target: Will }, qs: they, qv: [{ target: be }, " late?"], ss: They, sh: { target: will be }, sv: late., ns: They, nh: { target: won't be }, nv: late. }
+        - { level: A0, features: { tense: prs, person: 1, number: sg }, tense: { en: Present }, qh: { target: Am }, qs: I, qv: late?, ss: I, sh: { target: am }, sv: late., ns: I, nh: { target: am not }, nv: late. }
+        - { level: A0, features: { tense: prs, person: 2 }, tense: { en: Present }, qh: { target: Are }, qs: you, qv: late?, ss: You, sh: { target: are }, sv: late., ns: You, nh: { target: aren't }, nv: late. }
+        - { level: A0, features: { tense: prs, person: 3, number: sg, gender: masc }, tense: { en: Present }, qh: { target: Is }, qs: he, qv: late?, ss: He, sh: { target: is }, sv: late., ns: He, nh: { target: isn't }, nv: late. }
+        - { level: A0, features: { tense: prs, person: 3, number: sg, gender: fem }, tense: { en: Present }, qh: { target: Is }, qs: she, qv: late?, ss: She, sh: { target: is }, sv: late., ns: She, nh: { target: isn't }, nv: late. }
+        - { level: A0, features: { tense: prs, person: 3, number: sg, gender: neut }, tense: { en: Present }, qh: { target: Is }, qs: it, qv: late?, ss: It, sh: { target: is }, sv: late., ns: It, nh: { target: isn't }, nv: late. }
+        - { level: A0, features: { tense: prs, person: 1, number: pl }, tense: { en: Present }, qh: { target: Are }, qs: we, qv: late?, ss: We, sh: { target: are }, sv: late., ns: We, nh: { target: aren't }, nv: late. }
+        - { level: A0, features: { tense: prs, person: 3, number: pl }, tense: { en: Present }, qh: { target: Are }, qs: they, qv: late?, ss: They, sh: { target: are }, sv: late., ns: They, nh: { target: aren't }, nv: late. }
+        - { level: A1, features: { tense: pst, person: 1, number: sg }, tense: { en: Past }, qh: { target: Was }, qs: I, qv: late?, ss: I, sh: { target: was }, sv: late., ns: I, nh: { target: wasn't }, nv: late. }
+        - { level: A1, features: { tense: pst, person: 2 }, tense: { en: Past }, qh: { target: Were }, qs: you, qv: late?, ss: You, sh: { target: were }, sv: late., ns: You, nh: { target: weren't }, nv: late. }
+        - { level: A1, features: { tense: pst, person: 3, number: sg, gender: masc }, tense: { en: Past }, qh: { target: Was }, qs: he, qv: late?, ss: He, sh: { target: was }, sv: late., ns: He, nh: { target: wasn't }, nv: late. }
+        - { level: A1, features: { tense: pst, person: 3, number: sg, gender: fem }, tense: { en: Past }, qh: { target: Was }, qs: she, qv: late?, ss: She, sh: { target: was }, sv: late., ns: She, nh: { target: wasn't }, nv: late. }
+        - { level: A1, features: { tense: pst, person: 3, number: sg, gender: neut }, tense: { en: Past }, qh: { target: Was }, qs: it, qv: late?, ss: It, sh: { target: was }, sv: late., ns: It, nh: { target: wasn't }, nv: late. }
+        - { level: A1, features: { tense: pst, person: 1, number: pl }, tense: { en: Past }, qh: { target: Were }, qs: we, qv: late?, ss: We, sh: { target: were }, sv: late., ns: We, nh: { target: weren't }, nv: late. }
+        - { level: A1, features: { tense: pst, person: 3, number: pl }, tense: { en: Past }, qh: { target: Were }, qs: they, qv: late?, ss: They, sh: { target: were }, sv: late., ns: They, nh: { target: weren't }, nv: late. }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: text
+      - type: prose
         level: A0
         text:
-          en: "**be** has its own form in each tense: **will be** for the future, **am / is / are** for the present, **was / were** for the past."
-      - type: bullets
+          en: [{ term: be }, " has its own form in each tense: ", { term: will be }, " for the future, ", { alternatives: [{ term: am }, { term: is }, { term: are }] }, " for the present, ", { alternatives: [{ term: was }, { term: were }] }, " for the past."]
+      - type: list
         items:
-          - level: A0
+          - type: rule
+            level: A0
             text:
-              en: "be needs no helper: in questions it goes before the subject, in negatives it takes **not**."
-          - level: A0
+              en: ["be needs no helper: in questions it goes before the subject, in negatives it takes ", { term: not }, "."]
+          - type: rule
+            level: A0
             text:
-              en: "Present and past forms change with the person; **will be** is the same for everyone."
-          - level: A0
+              en: ["Present and past forms change with the person; ", { term: will be }, " is the same for everyone."]
+          - type: rule
+            level: A0
             text:
-              en: "**you** takes **are** and **were**, for one person and for many."
+              en: [{ term: you }, " takes ", { term: are }, " and ", { term: were }, ", for one person and for many."]
 
   - title: { en: "Present: short forms" }
+    role: form
+    features: { tense: prs }
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: subject, label: { en: Subject } }
-          - { key: full, label: { en: Full form } }
-          - { key: short, label: { en: Short form } }
+          - { key: full, label: { en: Full form }, features: { contraction: full } }
+          - { key: short, label: { en: Short form }, features: { contraction: short } }
         rows:
-          - { level: A0, subject: I, full: "I **am** a student.", short: "I'**m** a student." }
-          - { level: A0, subject: you, full: "You **are** late.", short: "You'**re** late." }
-          - { level: A0, subject: he, full: "He **is** at home.", short: "He'**s** at home." }
-          - { level: A0, subject: she, full: "She **is** happy.", short: "She'**s** happy." }
-          - { level: A0, subject: it, full: "It **is** cold.", short: "It'**s** cold." }
-          - { level: A0, subject: we, full: "We **are** friends.", short: "We'**re** friends." }
-          - { level: A0, subject: they, full: "They **are** teachers.", short: "They'**re** teachers." }
-      - type: bullets
+          - { level: A0, features: { person: 1, number: sg }, subject: I, full: ["I ", { target: am }, " a student."], short: [I', { target: m }, " a student."] }
+          - { level: A0, features: { person: 2 }, subject: you, full: ["You ", { target: are }, " late."], short: [You', { target: re }, " late."] }
+          - { level: A0, features: { person: 3, number: sg, gender: masc }, subject: he, full: ["He ", { target: is }, " at home."], short: [He', { target: s }, " at home."] }
+          - { level: A0, features: { person: 3, number: sg, gender: fem }, subject: she, full: ["She ", { target: is }, " happy."], short: [She', { target: s }, " happy."] }
+          - { level: A0, features: { person: 3, number: sg, gender: neut }, subject: it, full: ["It ", { target: is }, " cold."], short: [It', { target: s }, " cold."] }
+          - { level: A0, features: { person: 1, number: pl }, subject: we, full: ["We ", { target: are }, " friends."], short: [We', { target: re }, " friends."] }
+          - { level: A0, features: { person: 3, number: pl }, subject: they, full: ["They ", { target: are }, " teachers."], short: [They', { target: re }, " teachers."] }
+      - type: list
         items:
-          - level: A0
+          - type: rule
+            level: A0
             text:
-              en: "Speech and messages use the short forms."
-          - level: A0
+              en: Speech and messages use the short forms.
+          - type: rule
+            level: A0
             text:
-              en: "Negatives: **isn't** and **aren't** are usual; **I'm not** is the only short form with I."
-          - level: A0
+              en: ["Negatives: ", { term: isn't }, " and ", { term: aren't }, " are usual; ", { term: I'm not }, " is the only short form with I."]
+          - type: rule
+            level: A0
             text:
-              en: "A noun subject takes **is** (singular) or **are** (plural): My parents **are** doctors."
+              en: ["A noun subject takes ", { term: is }, " (singular) or ", { term: are }, " (plural):"]
+            ex: ["My parents ", { target: are }, " doctors."]
 
   - title: { en: "Present: questions and short answers" }
+    role: form
+    features: { tense: prs }
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: form, label: { en: Form } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A0, form: "be + subject", example: "**Are** you a student?" }
-          - { level: A0, form: "wh-word + be + subject", example: "Where **are** you from?" }
-          - { level: A0, form: "wh-word + be + subject", example: "What **is** your name?" }
-          - { level: A0, form: "wh-word + be + subject", example: "How old **are** you?" }
-          - { level: A0, form: "wh-word + be + subject", example: "How **are** you?" }
-      - type: bullets
+          - { level: A0, form: { pattern: [be, { slot: subject }] }, ex: [{ target: Are }, " you a student?"] }
+          - { level: A0, form: { pattern: [{ slot: wh-word }, be, { slot: subject }] }, ex: ["Where ", { target: are }, " you from?"] }
+          - { level: A0, form: { pattern: [{ slot: wh-word }, be, { slot: subject }] }, ex: ["What ", { target: is }, " your name?"] }
+          - { level: A0, form: { pattern: [{ slot: wh-word }, be, { slot: subject }] }, ex: ["How old ", { target: are }, " you?"] }
+          - { level: A0, form: { pattern: [{ slot: wh-word }, be, { slot: subject }] }, ex: ["How ", { target: are }, " you?"] }
+      - type: list
         items:
-          - level: A0
+          - type: rule
+            level: A0
             text:
               en: "A short answer repeats be; the positive answer takes the full form:"
-            ex: "Are you tired? — Yes, I **am**. / No, I'**m not**."
+            ex: { exchange: [Are you tired?, { alternatives: [["Yes, I ", { target: am }, "."], ["No, I'", { target: m not }, "."]] }] }
 
   - title: { en: "Past: was and were" }
+    role: form
+    features: { tense: pst }
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: form, label: { en: Form } }
-          - { key: singular, label: I / he / she / it }
-          - { key: plural, label: you / we / they }
+          - { key: singular, label: { alternatives: [I, he, she, it] }, features: [{ person: 1, number: sg }, { person: 3, number: sg }] }
+          - { key: plural, label: { alternatives: [you, we, they] }, features: [{ person: 2 }, { person: 1, number: pl }, { person: 3, number: pl }] }
         rows:
-          - { level: A1, form: +, singular: { ex: "I **was** at home." }, plural: { ex: "We **were** at home." } }
-          - { level: A1, form: −, singular: { ex: "She **wasn't** at home." }, plural: { ex: "They **weren't** at home." } }
-          - { level: A1, form: "?", singular: { ex: "**Was** he at home?" }, plural: { ex: "**Were** you at home?" } }
-      - type: bullets
+          - { level: A1, features: { polarity: pos, interrogativity: decl }, form: "+", singular: ["I ", { target: was }, " at home."], plural: ["We ", { target: were }, " at home."] }
+          - { level: A1, features: { polarity: neg, interrogativity: decl }, form: "−", singular: ["She ", { target: wasn't }, " at home."], plural: ["They ", { target: weren't }, " at home."] }
+          - { level: A1, features: { polarity: pos, interrogativity: int }, form: "?", singular: [{ target: Was }, " he at home?"], plural: [{ target: Were }, " you at home?"] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "A short answer repeats was / were:"
-            ex: "Were you there? — Yes, I **was**. / No, I **wasn't**."
-          - level: A1
+              en: ["A short answer repeats ", { alternatives: [was, were] }, ":"]
+            ex: { exchange: [Were you there?, { alternatives: [["Yes, I ", { target: was }, "."], ["No, I ", { target: wasn't }, "."]] }] }
+          - type: rule
+            level: A1
             text:
-              en: "Birth takes **was / were born**:"
-            ex: "I **was born** in 1995."
-          - level: A1
+              en: ["Birth takes ", { alternatives: [{ term: was }, { term: were }] }, "  ", { term: born }, ":"]
+            ex: ["I ", { target: was born }, " in ", { date: "1995", value: "1995" }, "."]
+          - type: rule
+            level: A1
             text:
               en: "Time words: yesterday, last night, last week, in 2010."
 
   - title: { en: "Future: will be" }
+    role: form
+    features: { tense: fut }
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, use: { en: A future state or place }, example: "I'**ll be** at home tomorrow." }
-          - { level: A2, use: { en: Predictions }, example: "It **will be** sunny at the weekend." }
-          - { level: A2, use: { en: Questions about the future }, example: "**Will** you **be** there?" }
-      - type: bullets
+          - { level: A2, use: { en: A future state or place }, ex: [I', { target: ll be }, " at home tomorrow."] }
+          - { level: A2, use: { en: Predictions }, ex: ["It ", { target: will be }, " sunny at the weekend."] }
+          - { level: A2, use: { en: Questions about the future }, ex: [{ target: Will }, " you ", { target: be }, " there?"] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
               en: "Short forms: I'll be, she'll be, won't be."
-          - level: A2
+          - type: note
+            level: A2
             text:
-              en: "More about will: [Simple Tenses](id:en.tenses.simple-tenses)."
+              en: ["More about will: ", { link: Simple Tenses, to: en.tenses.simple-tenses }, "."]
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A0, use: { en: Name }, example: "My name **is** Anna." }
-          - { level: A0, use: { en: Age }, example: "I'**m** 20. / He **is** 30 years old." }
-          - { level: A0, use: { en: Nationality and origin }, example: "She'**s** Spanish. / We'**re** from Madrid." }
-          - { level: A0, use: { en: Job }, example: "He'**s** a teacher." }
-          - { level: A0, use: { en: Description }, example: "The house **is** big." }
-          - { level: A0, use: { en: Feelings and states }, example: "I'**m** hungry. / They'**re** tired." }
-          - { level: A0, use: { en: Place }, example: "The keys **are** on the table." }
-          - { level: A0, use: { en: "Weather, time, dates" }, example: "It'**s** sunny. / It'**s** 5 o'clock." }
-      - type: bullets
+          - { level: A0, use: { en: Name }, ex: ["My name ", { target: is }, " Anna."] }
+          - { level: A0, use: { en: Age }, ex: { examples: [[I', { target: m }, " 20."], ["He ", { target: is }, " 30 years old."]] } }
+          - { level: A0, use: { en: Nationality and origin }, ex: { examples: [[She', { target: s }, " Spanish."], [We', { target: re }, " from Madrid."]] } }
+          - { level: A0, use: { en: Job }, ex: [He', { target: s }, " a teacher."] }
+          - { level: A0, use: { en: Description }, ex: ["The house ", { target: is }, " big."] }
+          - { level: A0, use: { en: Feelings and states }, ex: { examples: [[I', { target: m }, " hungry."], [They', { target: re }, " tired."]] } }
+          - { level: A0, use: { en: Place }, ex: ["The keys ", { target: are }, " on the table."] }
+          - { level: A0, use: { en: "Weather, time, dates" }, ex: { examples: [[It', { target: s }, " sunny."], [It', { target: s }, " 5 o'clock."]] } }
+      - type: list
         items:
-          - level: A0
+          - type: note
+            level: A0
             text:
-              en: "A job takes **a / an**: He is **a** teacher. See [Articles](id:en.nouns-determiners.articles-a-an-the)."
-          - level: A0
+              en: ["A job takes ", { alternatives: [{ term: a }, { term: an }] }, ": He is ", { term: a }, " teacher. See ", { link: Articles, to: en.nouns-determiners.articles-a-an-the }, "."]
+          - type: note
+            level: A0
             text:
-              en: "Weather and time use the subject **it**: **It** is cold. For *there is*, see [There is / there are](id:en.verbs.there-is-are)."
+              en: ["Weather and time use the subject ", { term: it }, ": ", { term: It }, " is cold. For ", { term: there is }, ", see ", { link: { alternatives: [There is, there are] }, to: en.verbs.there-is-are }, "."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A0, wrong: Do you be a student?, right: "**Are** you a student?", rule: { en: "be makes questions by itself" } }
-          - { level: A0, wrong: She are happy., right: "She **is** happy.", rule: { en: "he / she / it → is" } }
-          - { level: A1, wrong: We was at home., right: "We **were** at home.", rule: { en: "you / we / they → were" } }
-          - { level: A1, wrong: Did you be at home?, right: "**Were** you at home?", rule: { en: "be makes past questions by itself" } }
-          - { level: A2, wrong: I will at home tomorrow., right: "I **will be** at home tomorrow.", rule: { en: "will + be" } }
+          - { level: A0, wrong: Do you be a student?, right: [{ target: Are }, " you a student?"], rule: { en: be makes questions by itself } }
+          - { level: A0, wrong: She are happy., right: ["She ", { target: is }, " happy."], rule: { en: { takes: [{ alternatives: [he, she, it] }, is] } } }
+          - { level: A1, wrong: We was at home., right: ["We ", { target: were }, " at home."], rule: { en: { takes: [{ alternatives: [you, we, they] }, were] } } }
+          - { level: A1, wrong: Did you be at home?, right: [{ target: Were }, " you at home?"], rule: { en: be makes past questions by itself } }
+          - { level: A2, wrong: I will at home tomorrow., right: ["I ", { target: will be }, " at home tomorrow."], rule: { en: { pattern: [will, be] } } }

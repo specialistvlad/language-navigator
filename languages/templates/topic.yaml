@@ -1,8 +1,10 @@
 # yaml-language-server: $schema=../../../schema/topic.schema.json
 # Copy to languages/{lang}/{NN-section}/{topic}/topic.yaml and replace every {placeholder}.
-# Every row, bullet and text block carries its level; sections and the topic take their range from them.
+# Every row, list item and paragraph carries its level; sections and the topic take their range from them.
+# The fields name what each piece of content is (CONVENTIONS.md §12): a string with marks is a list of
+# parts, ["I ", { target: work }, " here."]; a string without marks stays a string.
 id: "{lang}.{section}.{topic}"
-lang: "{en|es}"
+lang: en
 kind: grammar
 tags: []
 concepts: []
@@ -11,38 +13,70 @@ status: { en: draft }
 
 title: { en: "{Title}" }
 summary:
-  en: "{Lead: the forms and what they do, at most 160 characters.} {The rule to get right, with a **bold** example.}"
+  lead: { en: "{The forms and what they do, one sentence of at most 160 characters.}" }
+  rule: { en: "{The rule to get right:}" }
+  ex: ["{Example with the }", { target: "{target form}" }, "."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: paradigm
       columns:
-        - { key: form, label: { en: Form }, merge: true, center: true }
-        - { key: rule, label: { en: Rule } }
-        - { key: example, label: { en: Example } }
+        - { key: form, label: { en: Form } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: "{A1}", form: { en: "{form}" }, rule: { en: "{rule}" }, example: "{example with **target** in bold}" }
-        - { level: "{A2}", form: { en: "{form}" }, rule: { en: "{rule}" }, example: "{example}" }
+        - { level: "{A1}", features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, ex: ["She ", { target: "{works}" }, "."] }
+        - { level: "{A1}", features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, ex: ["She ", { target: "{doesn't work}" }, "."] }
+        - { level: "{A2}", features: { polarity: pos, interrogativity: int }, form: { en: Question }, ex: [{ aux: Does }, " she ", { target: work }, "?"] }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: bullets
+      - type: list
         items:
-          - { level: "{A1}", text: { en: "{Rule.}" } }
+          - type: rule
+            level: "{A1}"
+            text: { en: "{One rule, at most 20 words:}" }
+            ex: ["{Its example with the }", { target: "{target}" }, "."]
+          - type: note
+            level: "{A1}"
+            text: { en: ["{A note. See }", { link: "{Other topic}", to: "{en.section.topic}" }, "."] }
+
+  - title: { en: "Form: {form}" }
+    role: form
+    content:
+      - type: usage
+        columns:
+          - { key: form, label: { en: Form } }
+          - { key: ex, label: { en: Example } }
+        rows:
+          - { level: "{A1}", form: { pattern: [{ slot: subject }, "{form}", { slot: V }] }, ex: "{Example}" }
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: "{A1}", use: { en: "{use}" }, example: "{example}" }
-          - { level: "{A2}", use: { en: "{use}" }, example: "{example}" }
+          - { level: "{A1}", use: { en: "{use}" }, ex: ["{Example with the }", { target: "{target}" }, "."] }
+          - { level: "{A2}", use: { en: "{use}" }, ex: { examples: ["{One example.}", "{Another example.}"] } }
+
+  - title: { en: "Compare: {this} and {that}" }
+    role: compare
+    content:
+      - type: comparison
+        columns:
+          - { key: this, label: "{this}" }
+          - { key: that, label: "{that}" }
+        rows:
+          - { level: "{A2}", this: { en: "{meaning}" }, that: { en: "{meaning}" } }
+          - { level: "{A2}", this: ["{Example with }", { target: "{this}" }, "."], that: ["{Example with }", { target: "{that}" }, "."] }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: "{A1}", wrong: "{wrong}", right: "{right with **fix** in bold}", rule: { en: "{rule}" } }
+          - { level: "{A1}", wrong: "{wrong}", right: ["{right with the }", { target: "{fix}" }], rule: { en: "{rule}" } }

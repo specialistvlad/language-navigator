@@ -1,7 +1,7 @@
 // Page shell, controls and interface text for the static site.
 import { EXPLAIN_CODES, type Explain, explainName, filled, LEVELS, SITE, say } from "../../scripts/lib.ts";
 import { INFO_ICON } from "./icons.ts";
-import { escapeHtml } from "./render.ts";
+import { escapeHtml } from "./html.ts";
 import { creditsUrl } from "./urls.ts";
 
 // Interface wording keys this app shows, all from languages/interface.yaml.

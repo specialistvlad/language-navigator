@@ -3,7 +3,7 @@ import { mkdir, rename, rm } from "node:fs/promises";
 import { join } from "node:path";
 import { clientJs, levelsCss, styleCss } from "./assets.ts";
 import type { BuildOptions, Page } from "./context.ts";
-import { escapeHtml } from "./render.ts";
+import { escapeHtml } from "./html.ts";
 
 // A build that names an Umami website puts its script in every page's head. The script counts visits
 // on the site's own host (data-domains), so a copy of the built pages served elsewhere reports nothing.

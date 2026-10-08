@@ -9,122 +9,144 @@ status: { en: draft }
 
 title: { en: May and Might }
 summary:
-  en: "Might and may for possibility; may for formal permission. Might and may take no -s, no to and no do, and the negative is might not: She **might** come. He **might not** come."
+  lead: { en: Might and may for possibility; may for formal permission. }
+  rule: { en: "Might and may take no -s, no to and no do, and the negative is might not:" }
+  ex: { examples: [["She ", { target: might }, " come."], ["He ", { target: might not }, " come."]] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: paradigm
       columns:
         - { key: form, label: { en: Form } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A2, form: { en: Affirmative }, example: "It **might** rain. / It **may** rain." }
-        - { level: A2, form: { en: Negative }, example: "It **might not** rain. / It **may not** rain." }
-        - { level: B1, form: { en: "Question (permission)" }, example: "**May** I come in?" }
+        - { level: A2, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, ex: { examples: [["It ", { target: might }, " rain."], ["It ", { target: may }, " rain."]] } }
+        - { level: A2, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, ex: { examples: [["It ", { target: might not }, " rain."], ["It ", { target: may not }, " rain."]] } }
+        - { level: B1, features: { polarity: pos, interrogativity: int }, form: { en: Question (permission) }, ex: [{ target: May }, " I come in?"] }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "**might** and **may** have one form for every subject: she might, she may."
-          - level: A2
+              en: [{ term: might }, " and ", { term: may }, " have one form for every subject: she might, she may."]
+          - type: rule
+            level: A2
             text:
-              en: "The verb after **might** or **may** is in the base form: It might **rain**."
-          - level: A2
+              en: ["The verb after ", { term: might }, " or ", { term: may }, " is in the base form:"]
+            ex: ["It might ", { target: rain }, "."]
+          - type: rule
+            level: A2
             text:
-              en: "The negative is **might not** / **may not**."
-          - level: B1
+              en: ["The negative is ", { alternatives: [{ term: might not }, { term: may not }] }, "."]
+          - type: rule
+            level: B1
             text:
-              en: "Questions with **may** ask for permission, with **may** before the subject:"
-            ex: "**May** I sit here?"
-          - level: A2
+              en: ["Questions with ", { term: may }, " ask for permission, with ", { term: may }, " before the subject:"]
+            ex: [{ target: May }, " I sit here?"]
+          - type: rule
+            level: A2
             text:
-              en: "A question about possibility uses **think** + **will**:"
-            ex: "Do you think it **will** rain?"
+              en: ["A question about possibility uses ", { pattern: [{ term: think }, { term: will }] }, ":"]
+            ex: ["Do you think it ", { target: will }, " rain?"]
 
   - title: { en: "Pronunciation: may and might" }
+    role: pronunciation
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: form, label: { en: Form } }
           - { key: sound, label: { en: Sound } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, form: might, sound: /maɪt/, example: "It **might** rain. /ɪt maɪt reɪn/" }
-          - { level: A2, form: may, sound: /meɪ/, example: "It **may** rain. /ɪt meɪ reɪn/" }
-          - { level: A2, form: maybe, sound: /ˈmeɪbi/, example: "**Maybe** later. /ˈmeɪbi ˈleɪtə/" }
-      - type: bullets
+          - { level: A2, form: might, sound: { ipa: maɪt }, ex: ["It ", { target: might }, " rain. ", { ipa: ɪt maɪt reɪn }] }
+          - { level: A2, form: may, sound: { ipa: meɪ }, ex: ["It ", { target: may }, " rain. ", { ipa: ɪt meɪ reɪn }] }
+          - { level: A2, form: maybe, sound: { ipa: ˈmeɪbi }, ex: [{ target: Maybe }, " later. ", { ipa: ˈmeɪbi ˈleɪtə }] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "The **gh** in might is silent: /maɪt/."
+              en: ["The ", { term: gh }, " in might is silent: ", { ipa: maɪt }, "."]
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, use: { en: "Possibility now" }, example: "She **might** be at home." }
-          - { level: A2, use: { en: "Possibility in the future" }, example: "We **might** go to the beach." }
-          - { level: A2, use: { en: "Possibility that something is not true" }, example: "He **might not** know." }
-          - { level: B1, use: { en: "Formal permission (May I…?)" }, example: "**May** I use your phone?" }
-          - { level: B1, use: { en: "Formal rules: what is allowed" }, example: "Guests **may** use the pool until 10." }
-      - type: bullets
+          - { level: A2, use: { en: Possibility now }, ex: ["She ", { target: might }, " be at home."] }
+          - { level: A2, use: { en: Possibility in the future }, ex: ["We ", { target: might }, " go to the beach."] }
+          - { level: A2, use: { en: Possibility that something is not true }, ex: ["He ", { target: might not }, " know."] }
+          - { level: B1, use: { en: Formal permission (May I…?) }, ex: [{ target: May }, " I use your phone?"] }
+          - { level: B1, use: { en: "Formal rules: what is allowed" }, ex: ["Guests ", { target: may }, " use the pool until 10."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "**might** and **may** are close in meaning; **might** sounds a little less sure."
-          - level: A2
+              en: [{ term: might }, " and ", { term: may }, " are close in meaning; ", { term: might }, " sounds a little less sure."]
+          - type: note
+            level: A2
             text:
-              en: "**could** also expresses possibility: It **could** rain. See [Can and Could](id:en.modals.can-could)."
+              en: [{ term: could }, " also expresses possibility: It ", { term: could }, " rain. See ", { link: Can and Could, to: en.modals.can-could }, "."]
 
   - title: { en: Signal words }
+    role: signals
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: word, label: { en: Word } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, word: maybe, example: "**Maybe** she is busy." }
-          - { level: A2, word: perhaps, example: "**Perhaps** we can meet later." }
-          - { level: A2, word: probably, example: "She'll **probably** come." }
-          - { level: A2, word: "I'm not sure", example: "**I'm not sure.** It might rain." }
-      - type: bullets
+          - { level: A2, word: maybe, ex: [{ signal: Maybe }, " she is busy."] }
+          - { level: A2, word: perhaps, ex: [{ signal: Perhaps }, " we can meet later."] }
+          - { level: A2, word: probably, ex: ["She'll ", { signal: probably }, " come."] }
+          - { level: A2, word: I'm not sure, ex: [{ signal: I'm not sure. }, " It might rain."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "**maybe** is one word and starts a clause: **Maybe** he is late."
-          - level: A2
+              en: [{ term: maybe }, " is one word and starts a clause:"]
+            ex: [{ target: Maybe }, " he is late."]
+          - type: rule
+            level: A2
             text:
-              en: "**may be** is two words and follows the subject: He **may be** late."
+              en: [{ term: may be }, " is two words and follows the subject:"]
+            ex: ["He ", { target: may be }, " late."]
 
   - title: { en: Degrees of certainty }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: degree, label: { en: Certainty } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, degree: { en: "sure" }, example: "She **will** come. / She **won't** come." }
-          - { level: B1, degree: { en: "very likely" }, example: "She'll **probably** come." }
-          - { level: B1, degree: { en: "possible" }, example: "She **may** come. / She **might** come." }
-      - type: bullets
+          - { level: B1, degree: { en: sure }, ex: { examples: [["She ", { target: will }, " come."], ["She ", { target: won't }, " come."]] } }
+          - { level: B1, degree: { en: very likely }, ex: ["She'll ", { target: probably }, " come."] }
+          - { level: B1, degree: { en: possible }, ex: { examples: [["She ", { target: may }, " come."], ["She ", { target: might }, " come."]] } }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "Use **will** when you are sure and **may / might** when you are not."
+              en: ["Use ", { term: will }, " when you are sure and ", { alternatives: [{ term: may }, { term: might }] }, " when you are not."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A2, wrong: "It mights rain.", right: "It **might** rain.", rule: { en: "might has no -s" } }
-          - { level: A2, wrong: "It might to rain.", right: "It might **rain**.", rule: { en: "might + base verb; no to" } }
-          - { level: A2, wrong: "I don't might go.", right: "I **might not** go.", rule: { en: "negative = might not" } }
-          - { level: A2, wrong: "He maybe at home.", right: "He **may be** at home. / **Maybe** he is at home.", rule: { en: "may be after the subject; maybe at the start" } }
-          - { level: A2, wrong: "She might will come.", right: "She **might** come.", rule: { en: "a modal verb takes no second modal" } }
+          - { level: A2, wrong: It mights rain., right: ["It ", { target: might }, " rain."], rule: { en: might has no -s } }
+          - { level: A2, wrong: It might to rain., right: ["It might ", { target: rain }, "."], rule: { en: [{ pattern: [might, { slot: base verb }] }, ; no to] } }
+          - { level: A2, wrong: I don't might go., right: ["I ", { target: might not }, " go."], rule: { en: negative = might not } }
+          - { level: A2, wrong: He maybe at home., right: { alternatives: [["He ", { target: may be }, " at home."], [{ target: Maybe }, " he is at home."]] }, rule: { en: may be after the subject; maybe at the start } }
+          - { level: A2, wrong: She might will come., right: ["She ", { target: might }, " come."], rule: { en: a modal verb takes no second modal } }

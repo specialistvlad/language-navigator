@@ -9,120 +9,138 @@ status: { en: draft }
 
 title: { en: Gerund vs Infinitive }
 summary:
-  en: "Verbs followed by -ing, verbs followed by to + infinitive, and verbs that take both with a change of meaning. The verb before decides the form: I **enjoy cooking**, I **want to cook**."
+  lead: { en: ["Verbs followed by -ing, verbs followed by ", { pattern: [to, { slot: infinitive }] }, ", and verbs that take both with a change of meaning."] }
+  rule: { en: "The verb before decides the form:" }
+  ex: ["I ", { target: enjoy cooking }, ", I ", { target: want to cook }, "."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: pattern, label: { en: Pattern } }
         - { key: verbs, label: { en: Verbs } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: B1, pattern: verb + -ing, verbs: "enjoy, finish, mind, avoid, suggest, keep", example: "I **enjoy cooking**." }
-        - { level: B1, pattern: verb + to + V, verbs: "want, decide, hope, plan, need, would like", example: "They **decided to move**." }
-        - { level: B1, pattern: want / need / would like + person + to + V, verbs: "want, need, would like", example: "I **want you to come**." }
-        - { level: B1, pattern: preposition + -ing, verbs: "interested in, before, without", example: "Wash your hands **before eating**." }
-        - { level: B1, pattern: -ing as subject, verbs: "—", example: "**Swimming** is good for you." }
-        - { level: B1, pattern: look forward to + -ing, verbs: "to is a preposition", example: "I look forward to **seeing** you." }
-        - { level: B1, pattern: stop + -ing / to + V, verbs: stop, example: "He **stopped smoking**. / He **stopped to smoke**." }
-        - { level: B1, pattern: remember + -ing / to + V, verbs: remember, example: "I **remember locking** it. / **Remember to lock** it." }
-        - { level: B1, pattern: try + -ing / to + V, verbs: try, example: "**Try adding** salt. / I **tried to open** it." }
-        - { level: B1, pattern: either form, verbs: "like, love, hate, prefer", example: "I **like** swimming. / I **like** to swim." }
+        - { level: B1, pattern: { pattern: [{ slot: verb }, { slot: "-ing" }] }, verbs: "enjoy, finish, mind, avoid, suggest, keep", ex: ["I ", { target: enjoy cooking }, "."] }
+        - { level: B1, pattern: { pattern: [{ slot: verb }, to, { slot: V }] }, verbs: "want, decide, hope, plan, need, would like", ex: ["They ", { target: decided to move }, "."] }
+        - { level: B1, pattern: { pattern: [{ alternatives: [want, need, would like] }, { slot: person }, to, { slot: V }] }, verbs: "want, need, would like", ex: ["I ", { target: want you to come }, "."] }
+        - { level: B1, pattern: { pattern: [{ slot: { en: preposition } }, { slot: "-ing" }] }, verbs: "interested in, before, without", ex: ["Wash your hands ", { target: before eating }, "."] }
+        - { level: B1, pattern: "-ing as subject", ex: [{ target: Swimming }, " is good for you."] }
+        - { level: B1, pattern: { pattern: [look forward to, { slot: "-ing" }] }, verbs: to is a preposition, ex: ["I look forward to ", { target: seeing }, " you."] }
+        - { level: B1, pattern: { pattern: [stop, { alternatives: [{ slot: "-ing" }, { pattern: [to, { slot: V }] }] }] }, verbs: stop, ex: { examples: [["He ", { target: stopped smoking }, "."], ["He ", { target: stopped to smoke }, "."]] } }
+        - { level: B1, pattern: { pattern: [remember, { alternatives: [{ slot: "-ing" }, { pattern: [to, { slot: V }] }] }] }, verbs: remember, ex: { examples: [["I ", { target: remember locking }, " it."], [{ target: Remember to lock }, " it."]] } }
+        - { level: B1, pattern: { pattern: [try, { alternatives: [{ slot: "-ing" }, { pattern: [to, { slot: V }] }] }] }, verbs: try, ex: { examples: [[{ target: Try adding }, " salt."], ["I ", { target: tried to open }, " it."]] } }
+        - { level: B1, pattern: either form, verbs: "like, love, hate, prefer", ex: { examples: [["I ", { target: like }, " swimming."], ["I ", { target: like }, " to swim."]] } }
 
 sections:
-  - title: { en: "Form: verb + -ing" }
+  - title: { en: ["Form: ", { pattern: [{ slot: verb }, { slot: "-ing" }] }] }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: verb, label: { en: Verb } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, verb: enjoy, example: "I **enjoy cooking**." }
-          - { level: B1, verb: finish, example: "She **finished reading** the book." }
-          - { level: B1, verb: mind, example: "Do you **mind waiting**?" }
-          - { level: B1, verb: avoid, example: "He **avoids driving** at night." }
-          - { level: B1, verb: suggest, example: "I **suggest taking** a taxi." }
-          - { level: B1, verb: keep, example: "She **keeps asking** questions." }
-          - { level: B1, verb: "practise, consider, can't stand", example: "I **can't stand waiting**." }
-      - type: bullets
+          - { level: B1, verb: enjoy, ex: ["I ", { target: enjoy cooking }, "."] }
+          - { level: B1, verb: finish, ex: ["She ", { target: finished reading }, " the book."] }
+          - { level: B1, verb: mind, ex: ["Do you ", { target: mind waiting }, "?"] }
+          - { level: B1, verb: avoid, ex: ["He ", { target: avoids driving }, " at night."] }
+          - { level: B1, verb: suggest, ex: ["I ", { target: suggest taking }, " a taxi."] }
+          - { level: B1, verb: keep, ex: ["She ", { target: keeps asking }, " questions."] }
+          - { level: B1, verb: "practise, consider, can't stand", ex: ["I ", { target: can't stand waiting }, "."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "These verbs are followed by **-ing**: I enjoy **cooking**."
+              en: ["These verbs are followed by ", { term: "-ing" }, ":"]
+            ex: ["I enjoy ", { target: cooking }, "."]
 
-  - title: { en: "Form: verb + to + infinitive" }
+  - title: { en: ["Form: ", { pattern: [{ slot: verb }, to, { slot: infinitive }] }] }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: verb, label: { en: Verb } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, verb: want, example: "I **want to go** home." }
-          - { level: B1, verb: decide, example: "They **decided to move**." }
-          - { level: B1, verb: hope, example: "We **hope to see** you soon." }
-          - { level: B1, verb: plan, example: "He **plans to study** abroad." }
-          - { level: B1, verb: need, example: "You **need to rest**." }
-          - { level: B1, verb: would like / would love, example: "I'**d like to book** a table." }
-          - { level: B1, verb: "learn, agree, promise, manage", example: "She **learned to swim**." }
-      - type: bullets
+          - { level: B1, verb: want, ex: ["I ", { target: want to go }, " home."] }
+          - { level: B1, verb: decide, ex: ["They ", { target: decided to move }, "."] }
+          - { level: B1, verb: hope, ex: ["We ", { target: hope to see }, " you soon."] }
+          - { level: B1, verb: plan, ex: ["He ", { target: plans to study }, " abroad."] }
+          - { level: B1, verb: need, ex: ["You ", { target: need to rest }, "."] }
+          - { level: B1, verb: { alternatives: [would like, would love] }, ex: [I', { target: d like to book }, " a table."] }
+          - { level: B1, verb: "learn, agree, promise, manage", ex: ["She ", { target: learned to swim }, "."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "These verbs are followed by **to** + base verb."
-          - level: B1
+              en: ["These verbs are followed by ", { pattern: [{ term: to }, { slot: base verb }] }, "."]
+          - type: rule
+            level: B1
             text:
-              en: "With **want**, **need** and **would like**, a person can come before **to**:"
-            ex: "I **want you to come**."
+              en: ["With ", { term: want }, ", ", { term: need }, " and ", { term: would like }, ", a person can come before ", { term: to }, ":"]
+            ex: ["I ", { target: want you to come }, "."]
 
   - title: { en: "Form: after prepositions and as subject" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Position } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, use: { en: "after a preposition" }, example: "I'm interested **in learning** Spanish." }
-          - { level: B1, use: { en: "after a preposition" }, example: "Wash your hands **before eating**." }
-          - { level: B1, use: { en: "after a preposition" }, example: "She left **without saying** goodbye." }
-          - { level: B1, use: { en: "as the subject" }, example: "**Swimming** is good for you." }
-          - { level: B1, use: { en: "after look forward to" }, example: "I look forward to **seeing** you." }
-      - type: bullets
+          - { level: B1, use: { en: after a preposition }, ex: ["I'm interested ", { target: in learning }, " Spanish."] }
+          - { level: B1, use: { en: after a preposition }, ex: ["Wash your hands ", { target: before eating }, "."] }
+          - { level: B1, use: { en: after a preposition }, ex: ["She left ", { target: without saying }, " goodbye."] }
+          - { level: B1, use: { en: as the subject }, ex: [{ target: Swimming }, " is good for you."] }
+          - { level: B1, use: { en: after look forward to }, ex: ["I look forward to ", { target: seeing }, " you."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "A verb after a preposition takes **-ing**."
-          - level: B1
+              en: ["A verb after a preposition takes ", { term: "-ing" }, "."]
+          - type: rule
+            level: B1
             text:
-              en: "In **look forward to**, **to** is a preposition, so **-ing** follows."
-          - level: B1
+              en: ["In ", { term: look forward to }, ", ", { term: to }, " is a preposition, so ", { term: "-ing" }, " follows."]
+          - type: rule
+            level: B1
             text:
-              en: "The -ing form works as a noun and can be the subject."
+              en: The -ing form works as a noun and can be the subject.
 
-  - title: { en: "Verbs with both forms" }
+  - title: { en: Verbs with both forms }
+    role: own
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: verb, label: { en: Verb } }
-          - { key: ing, label: { en: "+ -ing" } }
-          - { key: to, label: { en: "+ to + infinitive" } }
+          - { key: ing, label: { en: { pattern: [{ slot: "-ing" }], follows: true } }, features: { verbform: ger } }
+          - { key: to, label: { en: { pattern: [to, { slot: infinitive }], follows: true } }, features: { verbform: inf } }
         rows:
-          - { level: B1, verb: stop, ing: { ex: "He **stopped smoking**. (He quit.)" }, to: { ex: "He **stopped to smoke**. (He paused in order to smoke.)" } }
-          - { level: B1, verb: remember, ing: { ex: "I **remember locking** the door. (I recall the action.)" }, to: { ex: "**Remember to lock** the door. (Do not forget.)" } }
-          - { level: B1, verb: try, ing: { ex: "**Try adding** salt. (Test it.)" }, to: { ex: "I **tried to open** it. (I made an effort.)" } }
-      - type: bullets
+          - { level: B1, verb: stop, ing: ["He ", { target: stopped smoking }, ". ", { gloss: { en: He quit. } }], to: ["He ", { target: stopped to smoke }, ". ", { gloss: { en: He paused in order to smoke. } }] }
+          - { level: B1, verb: remember, ing: ["I ", { target: remember locking }, " the door. ", { gloss: { en: I recall the action. } }], to: [{ target: Remember to lock }, " the door. ", { gloss: { en: Do not forget. } }] }
+          - { level: B1, verb: try, ing: [{ target: Try adding }, " salt. ", { gloss: { en: Test it. } }], to: ["I ", { target: tried to open }, " it. ", { gloss: { en: I made an effort. } }] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "**like**, **love**, **hate** and **prefer** take either form, with almost the same meaning."
-          - { level: B1, text: { en: "I **like** swimming. / I **like** to swim." } }
+              en: [{ term: like }, ", ", { term: love }, ", ", { term: hate }, " and ", { term: prefer }, " take either form, with almost the same meaning."]
+          - type: rule
+            level: B1
+            text:
+              en: { examples: [["I ", { target: like }, " swimming."], ["I ", { target: like }, " to swim."]] }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: B1, wrong: I enjoy to cook., right: "I enjoy **cooking**.", rule: { en: "enjoy, finish, mind, avoid, suggest, keep → -ing" } }
-          - { level: B1, wrong: She decided going home., right: "She decided **to go** home.", rule: { en: "want, decide, hope, plan, need → to + infinitive" } }
-          - { level: B1, wrong: I'm interested in learn Spanish., right: "I'm interested in **learning** Spanish.", rule: { en: "after a preposition → -ing" } }
-          - { level: B1, wrong: He suggested to go by train., right: "He suggested **going** by train.", rule: { en: "suggest + -ing" } }
-          - { level: B1, wrong: I look forward to see you., right: "I look forward to **seeing** you.", rule: { en: "to is a preposition here → -ing" } }
+          - { level: B1, wrong: I enjoy to cook., right: ["I enjoy ", { target: cooking }, "."], rule: { en: { takes: ["enjoy, finish, mind, avoid, suggest, keep", "-ing"] } } }
+          - { level: B1, wrong: She decided going home., right: ["She decided ", { target: to go }, " home."], rule: { en: { takes: ["want, decide, hope, plan, need", { pattern: [to, { slot: infinitive }] }] } } }
+          - { level: B1, wrong: I'm interested in learn Spanish., right: ["I'm interested in ", { target: learning }, " Spanish."], rule: { en: { takes: [after a preposition, "-ing"] } } }
+          - { level: B1, wrong: He suggested to go by train., right: ["He suggested ", { target: going }, " by train."], rule: { en: { pattern: [suggest, { slot: "-ing" }] } } }
+          - { level: B1, wrong: I look forward to see you., right: ["I look forward to ", { target: seeing }, " you."], rule: { en: { takes: [to is a preposition here, "-ing"] } } }

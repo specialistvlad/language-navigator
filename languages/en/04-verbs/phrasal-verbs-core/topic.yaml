@@ -9,46 +9,53 @@ status: { en: draft }
 
 title: { en: "Phrasal Verbs: Core" }
 summary:
-  en: "Verb + particle with a new meaning: get up, turn it off, look for, run out of. A pronoun goes between the verb and the particle of a separable verb: **Turn it off.** **Pick it up.**"
+  lead: { en: [{ pattern: [Verb, particle] }, " with a new meaning: get up, turn it off, look for, run out of."] }
+  rule: { en: "A pronoun goes between the verb and the particle of a separable verb:" }
+  ex: [{ target: Turn it off. }, " ", { target: Pick it up. }]
 
 cheatsheet:
   content:
-    - type: table
+    - type: comparison
       columns:
         - { key: verb, label: { en: Verb alone } }
         - { key: phrasal, label: { en: Phrasal verb } }
       rows:
-        - { level: A2, verb: { ex: "I **look** at the map." }, phrasal: { ex: "I **look for** my keys." } }
-        - { level: A2, verb: { ex: "She **gives** me a book." }, phrasal: { ex: "He never **gives up**." } }
-        - { level: A2, verb: { ex: "I **turn** left here." }, phrasal: { ex: "**Turn off** the light." } }
+        - { level: A2, verb: ["I ", { target: look }, " at the map."], phrasal: ["I ", { target: look for }, " my keys."] }
+        - { level: A2, verb: ["She ", { target: gives }, " me a book."], phrasal: ["He never ", { target: gives up }, "."] }
+        - { level: A2, verb: ["I ", { target: turn }, " left here."], phrasal: [{ target: Turn off }, " the light."] }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "A phrasal verb is a verb + a particle: get + up, turn + off, look + for."
-          - level: A2
+              en: ["A phrasal verb is a ", { pattern: [{ slot: verb }, a] }, " particle: ", { pattern: [get, up] }, ", ", { pattern: [turn, "off"] }, ", ", { pattern: [look, for] }, "."]
+          - type: rule
+            level: A2
             text:
               en: "The particle (up, off, on, out, back, down, in, for, after) gives the verb a new meaning."
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "Phrasal verbs are very common in everyday speech."
+              en: Phrasal verbs are very common in everyday speech.
 
   - title: { en: "Form: with an object" }
+    role: form
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: kind, label: { en: Type } }
           - { key: noun, label: { en: With a noun } }
           - { key: pronoun, label: { en: With a pronoun } }
         rows:
-          - { level: A2, kind: { en: Separable }, noun: "Turn **off** the light. / Turn the light **off**.", pronoun: "Turn **it** off." }
-          - { level: A2, kind: { en: Inseparable }, noun: "Look **after** the baby.", pronoun: "Look after **him**." }
-          - { level: A2, kind: { en: No object }, noun: "Sit **down**, please.", pronoun: "-" }
-      - type: table
+          - { level: A2, kind: { en: Separable }, noun: { alternatives: [["Turn ", { target: "off" }, " the light."], ["Turn the light ", { target: "off" }, "."]] }, pronoun: ["Turn ", { target: it }, " off."] }
+          - { level: A2, kind: { en: Inseparable }, noun: ["Look ", { target: after }, " the baby."], pronoun: ["Look after ", { target: him }, "."] }
+          - { level: A2, kind: { en: No object }, noun: ["Sit ", { target: down }, ", please."] }
+      - type: usage
         columns:
           - { key: kind, label: { en: Type } }
           - { key: verbs, label: { en: Verbs } }
@@ -56,108 +63,119 @@ sections:
           - { level: A2, kind: { en: Separable }, verbs: "wake sb up, put on, take off, turn on, turn off, try on, pick up, drop off, look up, fill in, write down, work out, give up" }
           - { level: A2, kind: { en: Inseparable }, verbs: "look for, look after, get on with, look forward to, run out of" }
           - { level: A2, kind: { en: No object }, verbs: "wake up, get up, sit down, stand up, go out, come in, come back, set off, grow up, go on, carry on" }
-      - type: bullets
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "With a separable verb, a pronoun goes between the verb and the particle: pick **it** up."
-          - level: A2
+              en: ["With a separable verb, a pronoun goes between the verb and the particle: pick ", { term: it }, " up."]
+          - type: rule
+            level: A2
             text:
-              en: "A noun goes before or after the particle: pick up the bag / pick the bag up."
-          - level: A2
+              en: ["A noun goes before or after the particle: ", { examples: [pick up the bag, pick the bag up.] }]
+          - type: rule
+            level: A2
             text:
-              en: "With an inseparable verb, the object always follows the particle: look after **them**."
-          - level: A2
+              en: ["With an inseparable verb, the object always follows the particle: look after ", { term: them }, "."]
+          - type: rule
+            level: A2
             text:
-              en: "**find out** usually takes its object after the particle: find out the price."
-          - level: B1
+              en: [{ term: find out }, " usually takes its object after the particle: find out the price."]
+          - type: rule
+            level: B1
             text:
-              en: "**look forward to** and **give up** are followed by a noun or the -ing form:"
-            ex: "I look forward to **seeing** you. / He gave up **smoking**."
+              en: [{ term: look forward to }, " and ", { term: give up }, " are followed by a noun or the -ing form:"]
+            ex: { examples: [["I look forward to ", { target: seeing }, " you."], ["He gave up ", { target: smoking }, "."]] }
 
   - title: { en: "Pronunciation: stress" }
+    role: pronunciation
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: kind, label: { en: Type } }
           - { key: stress, label: { en: Stress } }
-          - { key: examples, label: { en: Examples } }
+          - { key: ex, label: { en: Examples } }
         rows:
-          - { level: A2, kind: { en: "Particle with its own meaning" }, stress: { en: "on the particle" }, examples: "get up /ˌɡet ˈʌp/ / turn off /ˌtɜːn ˈɒf/ / pick up /ˌpɪk ˈʌp/" }
-          - { level: A2, kind: { en: "Verb + preposition" }, stress: { en: "on the verb" }, examples: "look for /ˈlʊk fə/ / look after /ˈlʊk ˌɑːftə/" }
+          - { level: A2, kind: { en: Particle with its own meaning }, stress: { en: on the particle }, ex: { examples: [["get up ", { ipa: ˌɡet ˈʌp }], ["turn off ", { ipa: ˌtɜːn ˈɒf }], ["pick up ", { ipa: ˌpɪk ˈʌp }]] } }
+          - { level: A2, kind: { en: { pattern: [Verb, preposition] } }, stress: { en: on the verb }, ex: { examples: [["look for ", { ipa: ˈlʊk fə }], ["look after ", { ipa: ˈlʊk ˌɑːftə }]] } }
 
-  - title: { en: "Daily routine" }
+  - title: { en: Daily routine }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: verb, label: { en: Phrasal verb } }
           - { key: meaning, label: { en: Meaning } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, verb: wake up, meaning: { en: stop sleeping }, example: { ex: "I **wake up** at six." } }
-          - { level: A2, verb: get up, meaning: { en: leave your bed }, example: { ex: "We **get up** at seven." } }
-          - { level: A2, verb: put on, meaning: { en: start wearing clothes }, example: { ex: "She **puts on** her coat." } }
-          - { level: A2, verb: take off, meaning: { en: remove clothes }, example: { ex: "He **takes off** his shoes." } }
-          - { level: A2, verb: try on, meaning: { en: wear clothes to check them }, example: { ex: "Can I **try on** this jacket?" } }
-          - { level: A2, verb: turn on, meaning: { en: start a light or a machine }, example: { ex: "**Turn on** the TV." } }
-          - { level: A2, verb: turn off, meaning: { en: stop a light or a machine }, example: { ex: "**Turn** the light **off**." } }
-          - { level: A2, verb: sit down, meaning: { en: move to a seat }, example: { ex: "Please **sit down**." } }
-          - { level: A2, verb: stand up, meaning: { en: move to your feet }, example: { ex: "Everyone **stands up**." } }
+          - { level: A2, verb: wake up, meaning: { en: stop sleeping }, ex: ["I ", { target: wake up }, " at six."] }
+          - { level: A2, verb: get up, meaning: { en: leave your bed }, ex: ["We ", { target: get up }, " at seven."] }
+          - { level: A2, verb: put on, meaning: { en: start wearing clothes }, ex: ["She ", { target: puts on }, " her coat."] }
+          - { level: A2, verb: take off, meaning: { en: remove clothes }, ex: ["He ", { target: takes off }, " his shoes."] }
+          - { level: A2, verb: try on, meaning: { en: wear clothes to check them }, ex: ["Can I ", { target: try on }, " this jacket?"] }
+          - { level: A2, verb: turn on, meaning: { en: start a light or a machine }, ex: [{ target: Turn on }, " the TV."] }
+          - { level: A2, verb: turn off, meaning: { en: stop a light or a machine }, ex: [{ target: Turn }, " the light ", { target: "off" }, "."] }
+          - { level: A2, verb: sit down, meaning: { en: move to a seat }, ex: ["Please ", { target: sit down }, "."] }
+          - { level: A2, verb: stand up, meaning: { en: move to your feet }, ex: ["Everyone ", { target: stands up }, "."] }
 
-  - title: { en: "Going and coming" }
+  - title: { en: Going and coming }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: verb, label: { en: Phrasal verb } }
           - { key: meaning, label: { en: Meaning } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, verb: go out, meaning: { en: leave home to do something }, example: { ex: "We **go out** on Fridays." } }
-          - { level: A2, verb: come in, meaning: { en: enter }, example: { ex: "**Come in**, please." } }
-          - { level: A2, verb: come back, meaning: { en: return }, example: { ex: "I **come back** at six." } }
-          - { level: A2, verb: pick up, meaning: { en: collect a person or a thing }, example: { ex: "I **pick up** the children at three." } }
-          - { level: B1, verb: set off, meaning: { en: start a journey }, example: { ex: "We **set off** at eight." } }
-          - { level: B1, verb: drop off, meaning: { en: leave a person or a thing somewhere }, example: { ex: "I **drop** the kids **off** at school." } }
-          - { level: B1, verb: grow up, meaning: { en: become an adult }, example: { ex: "She **grew up** in Leeds." } }
+          - { level: A2, verb: go out, meaning: { en: leave home to do something }, ex: ["We ", { target: go out }, " on ", { weekday: Fridays, value: 5 }, "."] }
+          - { level: A2, verb: come in, meaning: { en: enter }, ex: [{ target: Come in }, ", please."] }
+          - { level: A2, verb: come back, meaning: { en: return }, ex: ["I ", { target: come back }, " at six."] }
+          - { level: A2, verb: pick up, meaning: { en: collect a person or a thing }, ex: ["I ", { target: pick up }, " the children at three."] }
+          - { level: B1, verb: set off, meaning: { en: start a journey }, ex: ["We ", { target: set off }, " at eight."] }
+          - { level: B1, verb: drop off, meaning: { en: leave a person or a thing somewhere }, ex: ["I ", { target: drop }, " the kids ", { target: "off" }, " at school."] }
+          - { level: B1, verb: grow up, meaning: { en: become an adult }, ex: ["She ", { target: grew up }, " in Leeds."] }
 
-  - title: { en: "Looking and finding out" }
+  - title: { en: Looking and finding out }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: verb, label: { en: Phrasal verb } }
           - { key: meaning, label: { en: Meaning } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, verb: look for, meaning: { en: try to find }, example: { ex: "I'm **looking for** my keys." } }
-          - { level: A2, verb: look after, meaning: { en: take care of }, example: { ex: "She **looks after** her gran." } }
-          - { level: A2, verb: look up, meaning: { en: search in a dictionary or online }, example: { ex: "**Look up** the word." } }
-          - { level: A2, verb: find out, meaning: { en: learn a fact }, example: { ex: "I want to **find out** the price." } }
-          - { level: A2, verb: fill in, meaning: { en: write information on a form }, example: { ex: "**Fill in** this form. (US: **fill out**)" } }
-          - { level: A2, verb: write down, meaning: { en: put on paper }, example: { ex: "**Write down** my number." } }
-          - { level: B1, verb: work out, meaning: { en: solve or calculate }, example: { ex: "I can't **work out** the answer." } }
+          - { level: A2, verb: look for, meaning: { en: try to find }, ex: ["I'm ", { target: looking for }, " my keys."] }
+          - { level: A2, verb: look after, meaning: { en: take care of }, ex: ["She ", { target: looks after }, " her gran."] }
+          - { level: A2, verb: look up, meaning: { en: search in a dictionary or online }, ex: [{ target: Look up }, " the word."] }
+          - { level: A2, verb: find out, meaning: { en: learn a fact }, ex: ["I want to ", { target: find out }, " the price."] }
+          - { level: A2, verb: fill in, meaning: { en: write information on a form }, ex: [{ target: Fill in }, " this form. ", { variant: { target: fill out }, variety: en-US }] }
+          - { level: A2, verb: write down, meaning: { en: put on paper }, ex: [{ target: Write down }, " my number."] }
+          - { level: B1, verb: work out, meaning: { en: solve or calculate }, ex: ["I can't ", { target: work out }, " the answer."] }
 
-  - title: { en: "Continuing and stopping" }
+  - title: { en: Continuing and stopping }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: verb, label: { en: Phrasal verb } }
           - { key: meaning, label: { en: Meaning } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, verb: go on, meaning: { en: continue }, example: { ex: "Please **go on**." } }
-          - { level: A2, verb: give up, meaning: { en: stop trying or stop a habit }, example: { ex: "I **give up**! / He **gave up** smoking." } }
-          - { level: B1, verb: carry on, meaning: { en: continue }, example: { ex: "**Carry on** working." } }
-          - { level: B1, verb: run out of, meaning: { en: have no more }, example: { ex: "We **ran out of** milk." } }
-          - { level: B1, verb: look forward to, meaning: { en: wait for with pleasure }, example: { ex: "I **look forward to** the weekend." } }
-          - { level: B1, verb: get on with, meaning: { en: have a good relationship with }, example: { ex: "I **get on with** my sister." } }
+          - { level: A2, verb: go on, meaning: { en: continue }, ex: ["Please ", { target: go on }, "."] }
+          - { level: A2, verb: give up, meaning: { en: stop trying or stop a habit }, ex: { examples: [["I ", { target: give up }, "!"], ["He ", { target: gave up }, " smoking."]] } }
+          - { level: B1, verb: carry on, meaning: { en: continue }, ex: [{ target: Carry on }, " working."] }
+          - { level: B1, verb: run out of, meaning: { en: have no more }, ex: ["We ", { target: ran out of }, " milk."] }
+          - { level: B1, verb: look forward to, meaning: { en: wait for with pleasure }, ex: ["I ", { target: look forward to }, " the weekend."] }
+          - { level: B1, verb: get on with, meaning: { en: have a good relationship with }, ex: ["I ", { target: get on with }, " my sister."] }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A2, wrong: Turn off it., right: "**Turn it off.**", rule: { en: "separable verb + pronoun: the pronoun goes in the middle" } }
-          - { level: A2, wrong: Can you wake up me at seven?, right: "Can you **wake me up** at seven?", rule: { en: "the pronoun goes between wake and up" } }
-          - { level: A2, wrong: She looks them after., right: "She **looks after them**.", rule: { en: "inseparable verb: the object follows the particle" } }
-          - { level: B1, wrong: We ran out milk., right: "We ran out **of** milk.", rule: { en: run out of needs of } }
-          - { level: B1, wrong: I look forward to see you., right: "I look forward to **seeing** you.", rule: { en: "to is a preposition: noun or -ing" } }
-          - { level: B1, wrong: He gave up to smoke., right: "He gave up **smoking**.", rule: { en: "give up + -ing" } }
+          - { level: A2, wrong: Turn off it., right: { target: Turn it off. }, rule: { en: [{ pattern: [separable verb, pronoun] }, ": the pronoun goes in the middle"] } }
+          - { level: A2, wrong: Can you wake up me at seven?, right: ["Can you ", { target: wake me up }, " at seven?"], rule: { en: the pronoun goes between wake and up } }
+          - { level: A2, wrong: She looks them after., right: ["She ", { target: looks after them }, "."], rule: { en: "inseparable verb: the object follows the particle" } }
+          - { level: B1, wrong: We ran out milk., right: ["We ran out ", { target: of }, " milk."], rule: { en: run out of needs of } }
+          - { level: B1, wrong: I look forward to see you., right: ["I look forward to ", { target: seeing }, " you."], rule: { en: "to is a preposition: noun or -ing" } }
+          - { level: B1, wrong: He gave up to smoke., right: ["He gave up ", { target: smoking }, "."], rule: { en: { pattern: [give up, { slot: "-ing" }] } } }

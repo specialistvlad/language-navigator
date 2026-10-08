@@ -30,22 +30,31 @@ export function parseRange(text: string | undefined): Range | null {
 
 export const contains = (range: Range, level: string): boolean => lv(level) >= lv(range.from) && lv(level) <= lv(range.to);
 export const inside = (inner: Range, outer: Range): boolean => contains(outer, inner.from) && contains(outer, inner.to);
-export const levelsOf = (range: Range): Level[] => LEVELS.filter((l) => contains(range, l));
 
-// The leaves of a block that render in an explanation language, or in any when none is given.
-const visible = (el: { for?: Explain[] | undefined }, explain?: Explain): boolean => explain === undefined || shows(el, explain);
+// The leaves of a block that render in an explanation language, or in any when none is given: a
+// paragraph, a list item, a table row, an errors row.
+const visible = (el: { readers?: Explain[] | undefined }, explain?: Explain): boolean => explain === undefined || shows(el, explain);
 export function leaves(block: Block, explain?: Explain): { level: Level }[] {
   if (!visible(block, explain)) return [];
   switch (block.type) {
-    case "text":
+    case "prose":
       return [block];
-    case "bullets":
+    case "list":
       return block.items.filter((it) => visible(it, explain));
-    case "table":
+    case "paradigm":
+    case "usage":
+    case "comparison":
+    case "inventory":
     case "errors":
-      return (block.rows as { level: Level; for?: Explain[] }[]).filter((r) => visible(r, explain));
+      return (block.rows as { level: Level; readers?: Explain[] }[]).filter((r) => visible(r, explain));
+    default:
+      return unknownBlock(block);
   }
 }
+
+const unknownBlock = (block: never): never => {
+  throw new Error(`Unknown block ${JSON.stringify(block)}`);
+};
 
 export const blockRange = (block: Block, explain?: Explain): Range | null => span(leaves(block, explain).map((l) => l.level));
 export const contentRange = (content: Block[], explain?: Explain): Range | null => join(content.map((b) => blockRange(b, explain)));
@@ -71,16 +80,26 @@ export const refRange = (ref: TopicRef, explain?: Explain): Range | null =>
 export function upTo(content: Block[], level: Level): Block[] {
   const fits = (it: { level: Level }): boolean => lv(it.level) <= lv(level);
   return content.flatMap((b): Block[] => {
-    if (b.type === "text") return fits(b) ? [b] : [];
-    if (b.type === "bullets") {
-      const items = b.items.filter(fits);
-      return items.length > 0 ? [{ ...b, items }] : [];
+    switch (b.type) {
+      case "prose":
+        return fits(b) ? [b] : [];
+      case "list": {
+        const items = b.items.filter(fits);
+        return items.length > 0 ? [{ ...b, items }] : [];
+      }
+      case "paradigm":
+      case "usage":
+      case "comparison":
+      case "inventory": {
+        const rows = b.rows.filter(fits);
+        return rows.length > 0 ? [{ ...b, rows }] : [];
+      }
+      case "errors": {
+        const rows = b.rows.filter(fits);
+        return rows.length > 0 ? [{ ...b, rows }] : [];
+      }
+      default:
+        return unknownBlock(b);
     }
-    if (b.type === "table") {
-      const rows = b.rows.filter(fits);
-      return rows.length > 0 ? [{ ...b, rows }] : [];
-    }
-    const rows = b.rows.filter(fits);
-    return rows.length > 0 ? [{ ...b, rows }] : [];
   });
 }

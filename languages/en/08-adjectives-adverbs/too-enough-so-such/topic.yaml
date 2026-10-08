@@ -9,80 +9,90 @@ status: { en: draft }
 
 title: { en: "Too, Enough, So and Such" }
 summary:
-  en: "Too, enough, so and such say how much of a quality: too hot, hot enough, so hot, such a hot day. Enough follows the adjective, so goes with an adjective and such with a noun: big **enough**, **so** nice, **such a** nice day."
+  lead: { en: "Too, enough, so and such say how much of a quality: too hot, hot enough, so hot, such a hot day." }
+  rule: { en: "Enough follows the adjective, so goes with an adjective and such with a noun:" }
+  ex: ["big ", { target: enough }, ", ", { target: so }, " nice, ", { target: such a }, " nice day."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: word, label: { en: Word } }
         - { key: pattern, label: { en: Pattern } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: B1, word: too, pattern: "too + adjective / adverb (+ to + V)", example: "It's **too** hot to walk." }
-        - { level: B1, word: enough, pattern: "adjective + enough / enough + noun", example: "It's warm **enough**. / We have **enough** time." }
-        - { level: B1, word: so, pattern: "so + adjective / adverb (+ that)", example: "It's **so** hot that I can't sleep." }
-        - { level: B1, word: such, pattern: "such (a) + adjective + noun (+ that)", example: "It's **such** a hot day." }
+        - { level: B1, word: too, pattern: [{ pattern: [too, { alternatives: [adjective, adverb] }] }, " ", { optional: { pattern: [to, { slot: V }], follows: true } }], ex: ["It's ", { target: too }, " hot to walk."] }
+        - { level: B1, word: enough, pattern: { alternatives: [{ pattern: [{ slot: adjective }, enough] }, { pattern: [enough, { slot: noun }] }] }, ex: { examples: [["It's warm ", { target: enough }, "."], ["We have ", { target: enough }, " time."]] } }
+        - { level: B1, word: so, pattern: [{ pattern: [so, { alternatives: [adjective, adverb] }] }, " ", { optional: { pattern: [that], follows: true } }], ex: ["It's ", { target: so }, " hot that I can't sleep."] }
+        - { level: B1, word: such, pattern: [{ pattern: [["such ", { optional: a }], { slot: adjective }, { slot: noun }] }, " ", { optional: { pattern: [that], follows: true } }], ex: ["It's ", { target: such }, " a hot day."] }
 
 sections:
   - title: { en: "Form: too and enough" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, pattern: "too + adjective / adverb", example: "This coffee is **too** hot." }
-          - { level: B1, pattern: "too + adjective + (for person) + to + V", example: "The box is **too** heavy **for me to** lift." }
-          - { level: B1, pattern: "too much / too many + noun", example: "There are **too many** people." }
-          - { level: B1, pattern: "adjective / adverb + enough", example: "She is old **enough** to drive." }
-          - { level: B1, pattern: "enough + noun", example: "We have **enough** chairs." }
-          - { level: B1, pattern: "not + adjective + enough", example: "The room isn't big **enough**." }
-      - type: bullets
+          - { level: B1, pattern: { pattern: [too, { alternatives: [adjective, adverb] }] }, ex: ["This coffee is ", { target: too }, " hot."] }
+          - { level: B1, pattern: { pattern: [too, { slot: adjective }, { optional: for person }, to, { slot: V }] }, ex: ["The box is ", { target: too }, " heavy ", { target: for me to }, " lift."] }
+          - { level: B1, pattern: { pattern: [{ alternatives: [too much, too many] }, { slot: noun }] }, ex: ["There are ", { target: too many }, " people."] }
+          - { level: B1, pattern: { pattern: [{ alternatives: [adjective, adverb] }, enough] }, ex: ["She is old ", { target: enough }, " to drive."] }
+          - { level: B1, pattern: { pattern: [enough, { slot: noun }] }, ex: ["We have ", { target: enough }, " chairs."] }
+          - { level: B1, pattern: { pattern: [not, { slot: adjective }, enough] }, ex: ["The room isn't big ", { target: enough }, "."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "**too** means more than is good. It has a negative result."
-          - level: B1
+              en: [{ term: too }, " means more than is good. It has a negative result."]
+          - type: rule
+            level: B1
             text:
-              en: "**enough** follows an adjective or adverb and comes before a noun."
+              en: [{ term: enough }, " follows an adjective or adverb and comes before a noun."]
 
   - title: { en: "Form: so and such" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, pattern: "so + adjective", example: "The film is **so** good." }
-          - { level: B1, pattern: "so + adverb", example: "He speaks **so** quickly." }
-          - { level: B1, pattern: "so many / so much + noun", example: "I have **so many** friends." }
-          - { level: B1, pattern: "such a / an + adjective + singular noun", example: "It's **such a** good film." }
-          - { level: B1, pattern: "such + adjective + plural / uncountable noun", example: "They are **such** nice people." }
-          - { level: B1, pattern: "so / such … that + result", example: "I was **so** tired **that** I fell asleep." }
-      - type: bullets
+          - { level: B1, pattern: { pattern: [so, { slot: adjective }] }, ex: ["The film is ", { target: so }, " good."] }
+          - { level: B1, pattern: { pattern: [so, { slot: adverb }] }, ex: ["He speaks ", { target: so }, " quickly."] }
+          - { level: B1, pattern: { pattern: [{ alternatives: [so many, so much] }, { slot: noun }] }, ex: ["I have ", { target: so many }, " friends."] }
+          - { level: B1, pattern: { pattern: [{ alternatives: [such a, an] }, { slot: adjective }, { slot: singular noun }] }, ex: ["It's ", { target: such a }, " good film."] }
+          - { level: B1, pattern: { pattern: [such, { slot: adjective }, [{ alternatives: [plural, uncountable] }, "  noun"]] }, ex: ["They are ", { target: such }, " nice people."] }
+          - { level: B1, pattern: { pattern: [{ alternatives: [so, ["such ", { gap: true }, " that"]] }, { slot: result }] }, ex: ["I was ", { target: so }, " tired ", { target: that }, " I fell asleep."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "**such** goes with a noun: such a day. **so** goes with an adjective or adverb: so hot."
-          - level: B1
+              en: [{ term: such }, " goes with a noun: such a day. ", { term: so }, " goes with an adjective or adverb: so hot."]
+          - type: rule
+            level: B1
             text:
-              en: "**a / an** comes after such: such **a** big house."
+              en: [{ alternatives: [{ term: a }, { term: an }] }, " comes after such: such ", { term: a }, " big house."]
 
   - title: { en: "Compare: very and too" }
+    role: compare
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: very, label: very }
           - { key: too, label: too }
         rows:
           - { level: B1, very: { en: "a high degree, no problem" }, too: { en: "more than is good, a problem" } }
-          - { level: B1, very: { ex: "It's **very** hot, but I like it." }, too: { ex: "It's **too** hot. I can't sit outside." } }
-          - { level: B1, very: { ex: "The bag is **very** heavy, but I can lift it." }, too: { ex: "The bag is **too** heavy to lift." } }
+          - { level: B1, very: ["It's ", { target: very }, " hot, but I like it."], too: ["It's ", { target: too }, " hot. I can't sit outside."] }
+          - { level: B1, very: ["The bag is ", { target: very }, " heavy, but I can lift it."], too: ["The bag is ", { target: too }, " heavy to lift."] }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: B1, wrong: The room is not enough big., right: "The room is **not big enough**.", rule: { en: "not + adjective + enough" } }
-          - { level: B1, wrong: I have so much friends., right: "I have **so many** friends.", rule: { en: "many + plural noun" } }
+          - { level: B1, wrong: The room is not enough big., right: ["The room is ", { target: not big enough }, "."], rule: { en: { pattern: [not, { slot: adjective }, enough] } } }
+          - { level: B1, wrong: I have so much friends., right: ["I have ", { target: so many }, " friends."], rule: { en: { pattern: [many, { slot: plural noun }] } } }

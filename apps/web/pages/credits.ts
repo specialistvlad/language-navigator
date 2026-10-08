@@ -3,7 +3,7 @@
 import { say, SITE } from "../../../scripts/lib.ts";
 import { type Context, homeLanguage } from "../context.ts";
 import { page } from "../layout.ts";
-import { escapeHtml } from "../render.ts";
+import { escapeHtml } from "../html.ts";
 import { creditsUrl } from "../urls.ts";
 
 const link = (href: string, text: string, attrs = ""): string => `<a href="${escapeHtml(href)}"${attrs}>${escapeHtml(text)}</a>`;

@@ -1,95 +1,72 @@
-// Topic content (topic.yaml) → HTML: blocks with level badges, error tables, scrollable table
-// wrappers, and the inline marks of the data: **bold**, *italic*, [label](id:topic) and line breaks.
-import { isLocalized, shows, tableShape } from "../../scripts/content.ts";
+// Topic content (topic.yaml) → HTML: blocks with level badges, lists, and tables laid out from what their
+// columns hold (CONVENTIONS.md §12).
+import { shows, type TableBlock, tableShape } from "../../scripts/content.ts";
+import { isLocalized, reading } from "../../scripts/text.ts";
+import { type Ctx, escapeHtml, explained, learned, translation } from "./html.ts";
 import { blockRange } from "../../scripts/levels.ts";
 import { badge, levelAttrs, single } from "./parts.ts";
 import { blockStarts, classAttr, GAP_CELL, gapLevel, gapsAfter, headHtml, spans } from "./table.ts";
 import {
   type Block,
+  type Cell,
+  type Column,
   type ErrorsBlock,
+  type Example,
   type Explain,
   explainName,
+  type FeatureBundle,
   filled,
   type Item,
   type Level,
-  lv,
   type Localized,
-  type Row,
+  lv,
   say,
-  type TableBlock,
   type Text,
-  type TopicRef,
 } from "../../scripts/lib.ts";
 
-// Turns a topic ID into a page URL; null marks a topic without a page yet.
-export type LinkFn = (target: TopicRef | undefined, explain: Explain, from: TopicRef) => string | null;
-
-// One topic rendered in one explanation language.
-export interface Ctx {
-  ref: TopicRef;
-  explain: Explain;
-  refs: TopicRef[];
-  link: LinkFn;
-}
-
-const ENTITIES: Record<string, string> = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
-
-export function escapeHtml(text: string): string {
-  return text.replace(/[&<>"']/g, (c) => ENTITIES[c] ?? c);
-}
-
-// Inline marks: [label](id:topic) links, **bold**, *italic*, and a line break for each "\n".
-export function inline(value: string, ctx: Ctx): string {
-  return escapeHtml(value)
-    .replace(/\[([^\]]+)\]\(id:([^)]+)\)/g, (_match, label: string, id: string) => {
-      const href = ctx.link(
-        ctx.refs.find((r) => r.id === id),
-        ctx.explain,
-        ctx.ref,
-      );
-      return href === null ? `<span class="missing">${label}</span>` : `<a href="${href}">${label}</a>`;
-    })
-    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-    .replace(/\*(.+?)\*/g, "<em>$1</em>")
-    .replace(/\n/g, "<br>");
-}
-
-const text = (value: Text | undefined, ctx: Ctx): string => (typeof value === "string" ? value : (value?.[ctx.explain] ?? ""));
 // A leaf carries its level for the filter; its badge shows when it sits above its block's lowest level.
 const leafAttr = (level: Level): string => levelAttrs(single(level));
 const mark = (level: Level, from: Level): string => (lv(level) > lv(from) ? badge(single(level)) : "");
 
-// A translation into the reader's language, when it differs from the language being learned.
-function translation(tr: Localized | undefined, ctx: Ctx): string {
-  const value = ctx.explain === ctx.ref.lang ? undefined : tr?.[ctx.explain];
-  return filled(value) ? ` — <em>${inline(value, ctx)}</em>` : "";
-}
+// Explanation text, then its example in the language being learned.
+const textAndExample = (text: Localized | undefined, ex: Text | undefined, ctx: Ctx): string =>
+  [explained(text, ctx), learned(ex, ctx)].filter(filled).join(" ");
+
+// ---------- Lists ----------
 
 interface Rendered {
   html: string;
   level: Level;
+  attrs: string;
 }
 
-// A bullet: explanation, example and its translation; null when it serves other readers.
+// A list item: a rule, a note or an example; a note about another variety names it first.
 function item(it: Item, ctx: Ctx): Rendered | null {
   if (!shows(it, ctx.explain)) return null;
-  const base = [text(it.text, ctx), it.ex].filter(filled).join(" ");
-  return filled(base) ? { html: inline(base, ctx) + translation(it.tr, ctx), level: it.level } : null;
+  const base = textAndExample(it.text, it.ex, ctx);
+  if (!filled(base)) return null;
+  const variety =
+    it.variety === undefined ? "" : `<span data-mark="variety">${escapeHtml(reading(ctx.explain, false).variety(it.variety))}:</span> `;
+  const attrs = ` data-type="${it.type}"${it.variety === undefined ? "" : ` data-variety="${it.variety}"`}`;
+  return { html: variety + base + translation(it.tr, ctx), level: it.level, attrs };
 }
 
-// A bullet list; null when no item serves this reader.
 function list(items: Item[], ctx: Ctx, from: Level): string | null {
   const shown = items.map((i) => item(i, ctx)).filter((i): i is Rendered => i !== null);
   if (shown.length === 0) return null;
-  return `<ul>${shown.map((i) => `<li${leafAttr(i.level)}>${mark(i.level, from)}${i.html}</li>`).join("")}</ul>`;
+  return `<ul>${shown.map((i) => `<li${leafAttr(i.level)}${i.attrs}>${mark(i.level, from)}${i.html}</li>`).join("")}</ul>`;
 }
 
-// A cell value: text, localized text or an example; a row's own keys (for) render nothing.
-function cell(value: Row[string], ctx: Ctx): string {
-  if (value === undefined || Array.isArray(value)) return "";
-  if (typeof value === "string") return inline(value, ctx);
-  if (isLocalized(value)) return inline(value[ctx.explain] ?? "", ctx);
-  return inline(value.ex, ctx) + translation(value.tr, ctx);
+// ---------- Tables ----------
+
+const isExample = (value: Cell): value is Example => typeof value === "object" && !Array.isArray(value) && "ex" in value && "tr" in value;
+
+// A cell: explanation text, text in the language being learned, or an example with its translation.
+function cell(value: Cell | undefined, ctx: Ctx): string {
+  if (value === undefined) return "";
+  if (isExample(value)) return learned(value.ex, ctx) + translation(value.tr, ctx);
+  if (typeof value === "object" && !Array.isArray(value) && isLocalized(value)) return explained(value, ctx);
+  return learned(value, ctx);
 }
 
 const wrap = (inner: string): string => `<div class="table-wrap">${inner}</div>`;
@@ -104,63 +81,95 @@ interface Layout {
 }
 const td = (n: number, span: number, names: string[], content: string): string =>
   span === 0 ? "" : `<td${classAttr([...(n === 0 ? ["key"] : []), ...names])}${span > 1 ? ` rowspan="${span}"` : ""}>${content}</td>`;
-const row = (level: Level, from: Level, cells: string[], layout: Layout = {}): string =>
-  `<tr${leafAttr(level)}>${cells
+const row = (level: Level, from: Level, cells: string[], layout: Layout = {}, attrs = ""): string =>
+  `<tr${leafAttr(level)}${attrs}>${cells
     .map((c, n) => {
       const names = [...(layout.center?.[n] === true ? ["center"] : []), ...(layout.end?.[n] === true ? ["end"] : [])];
       return td(n, layout.span?.[n] ?? 1, names, (n === 0 ? mark(level, from) : "") + c) + (layout.gaps?.[n] === true ? GAP_CELL : "");
     })
     .join("")}</tr>`;
 
+const SLOT_LABEL = { aux: "slotAux", subj: "slotSubj", verb: "slotVerb", rest: "slotRest" } as const;
+
+// The sentence a slot column belongs to, named by its features: Question, Statement, Negative.
+function sentenceName(c: Column, explain: Explain): string | undefined {
+  const f = c.features as FeatureBundle | undefined;
+  if (c.slot === undefined || f === undefined) return undefined;
+  if (f.interrogativity === "int") return say("groupQuestion", explain);
+  return say(f.polarity === "neg" ? "groupNegative" : "groupStatement", explain);
+}
+
+function columnTitle(c: Column, ctx: Ctx): string {
+  if (c.slot !== undefined) return escapeHtml(say(SLOT_LABEL[c.slot], ctx.explain));
+  return cell(c.label, ctx);
+}
+
+// A table: a slot paradigm lays sentences out word by word, its slot columns grouped by sentence,
+// merged down where neighbours read the same, and centred but for the subject; any other table shows
+// its columns as they are, and a dash where a row leaves a cell empty.
 function tableHtml(block: TableBlock, ctx: Ctx, from: Level): string {
   const shape = tableShape(block, ctx.explain, ctx.ref.lang);
-  const titles = shape.columns.map((c) => inline(text(c.label, ctx), ctx));
+  const titles = shape.columns.map((c) => columnTitle(c, ctx));
   if (shape.translation) titles.push(escapeHtml(explainName(ctx.explain)));
+  const empty = shape.slots ? "" : "—";
   const grid = shape.rows.map((r) => {
-    const cells = shape.columns.map((c) => cell(r[c.key], ctx));
-    if (shape.translation) cells.push(inline(r.tr?.[ctx.explain] ?? "", ctx));
+    const cells = shape.columns.map((c) => (r[c.key] === undefined ? empty : cell(r[c.key] as Cell, ctx)));
+    if (shape.translation) cells.push(r.tr === undefined ? "" : explained(r.tr, ctx));
     return cells;
   });
   const levels = shape.rows.map((r) => r.level);
   const r = (n: number): Level => levels[n] ?? from;
-  const starts = blockStarts(grid, levels, shape.columns[0]?.merge === true);
-  const span = spans(grid, levels, [...shape.columns.map((c) => c.merge === true), false], starts);
-  const center = shape.columns.map((c) => c.center === true);
-  const groups = shape.columns.map((c) => (c.group === undefined ? undefined : inline(text(c.group, ctx), ctx)));
+  const merged = shape.columns.map((c) => shape.slots && c.slot !== "subj");
+  const starts = blockStarts(grid, levels, merged[0] === true);
+  const span = spans(grid, levels, [...merged, false], starts);
+  const center = merged;
+  const groups = shape.columns.map((c) => {
+    const name = sentenceName(c, ctx.explain);
+    return name === undefined ? undefined : escapeHtml(name);
+  });
   const gaps = gapsAfter(groups);
   const width = grid[0]?.length ?? 0;
   const spacer = (n: number): string =>
     `<tr class="gap-row"${leafAttr(gapLevel(r(n - 1), r(n)))}><td colspan="${width + gaps.filter(Boolean).length}"></td></tr>`;
   const end = (n: number): boolean[] | undefined => span[n]?.map((s) => n + s === grid.length);
+  const value = (n: number): string => {
+    const v = shape.rows[n]?.value;
+    return v === undefined ? "" : ` data-value="${escapeHtml(String(v))}"`;
+  };
   const rows = grid.map(
-    (cells, n) => (starts.has(n) ? spacer(n) : "") + row(r(n), from, cells, { span: span[n], center, gaps, end: end(n) }),
+    (cells, n) => (starts.has(n) ? spacer(n) : "") + row(r(n), from, cells, { span: span[n], center, gaps, end: end(n) }, value(n)),
   );
   const header = headHtml(titles.map((title, n) => ({ title, group: groups[n], center: center[n] === true })));
-  const compact = shape.columns.some((c) => c.merge === true) ? ' class="compact"' : "";
-  return wrap(`<table${compact}>${header}<tbody>${rows.join("")}</tbody></table>`);
+  const compact = shape.slots ? ' class="compact"' : "";
+  return wrap(`<table${compact} data-type="${block.type}">${header}<tbody>${rows.join("")}</tbody></table>`);
 }
 
 function errorsHtml(block: ErrorsBlock, ctx: Ctx, from: Level): string {
   const rows = block.rows.filter((r) => shows(r, ctx.explain));
-  const withRule = rows.some((r) => r.rule !== undefined && r.rule !== "");
+  const withRule = rows.some((r) => r.rule !== undefined);
   const titles = ["✗", "✓", ...(withRule ? [say("ruleColumn", ctx.explain)] : [])].map(escapeHtml);
   const body = rows.map((r) =>
-    row(r.level, from, [inline(r.wrong, ctx), inline(r.right, ctx), ...(withRule ? [inline(text(r.rule, ctx), ctx)] : [])]),
+    row(r.level, from, [learned(r.wrong, ctx), learned(r.right, ctx), ...(withRule ? [explained(r.rule, ctx)] : [])]),
   );
   return wrap(
     `<table class="errors">${headHtml(titles.map((title) => ({ title, group: undefined, center: false })))}<tbody>${body.join("")}</tbody></table>`,
   );
 }
 
+// ---------- Blocks ----------
+
 function contentHtml(b: Block, ctx: Ctx, from: Level): string | null {
   switch (b.type) {
-    case "text": {
-      const base = [text(b.text, ctx), b.ex].filter(filled).join(" ");
-      return filled(base) ? `<p>${inline(base, ctx)}${translation(b.tr, ctx)}</p>` : null;
+    case "prose": {
+      const base = textAndExample(b.text, b.ex, ctx);
+      return filled(base) ? `<p>${base}${translation(b.tr, ctx)}</p>` : null;
     }
-    case "bullets":
+    case "list":
       return list(b.items, ctx, from);
-    case "table":
+    case "paradigm":
+    case "usage":
+    case "comparison":
+    case "inventory":
       return tableHtml(b, ctx, from);
     case "errors":
       return errorsHtml(b, ctx, from);

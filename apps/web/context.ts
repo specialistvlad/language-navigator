@@ -2,7 +2,7 @@
 import { type CurriculumLanguage, ENABLED_EXPLAIN, type Explain, explainName, type TopicRef } from "../../scripts/lib.ts";
 import type { Choice, Ui } from "./layout.ts";
 import type { Stage } from "./path.ts";
-import type { LinkFn } from "./render.ts";
+import type { LinkFn } from "./html.ts";
 
 export interface BuildOptions {
   outDir: string;

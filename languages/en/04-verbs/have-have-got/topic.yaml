@@ -9,155 +9,178 @@ status: { en: draft }
 
 title: { en: Have and Have Got }
 summary:
-  en: "Have and have got for possession, family and features; have alone for everyday actions. Have takes do / does and have got takes have / has: I **don't have** a car. I **haven't got** a car."
+  lead: { en: "Have and have got for possession, family and features; have alone for everyday actions." }
+  rule: { en: ["Have takes ", { alternatives: [do, does] }, " and have got takes ", { alternatives: [have, has] }, ":"] }
+  ex: { examples: [["I ", { target: don't have }, " a car."], ["I ", { target: haven't got }, " a car."]] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: paradigm
       columns:
         - { key: form, label: { en: Form } }
         - { key: have, label: have }
         - { key: got, label: have got }
       rows:
-        - { level: A1, form: { en: Affirmative }, have: "I **have** a car.", got: "I'**ve got** a car." }
-        - { level: A1, form: { en: Negative }, have: "I **don't have** a car.", got: "I **haven't got** a car." }
-        - { level: A1, form: { en: Question }, have: "**Do** you **have** a car?", got: "**Have** you **got** a car?" }
-        - { level: A1, form: { en: Short answer }, have: "Yes, I **do**. / No, I **don't**.", got: "Yes, I **have**. / No, I **haven't**." }
+        - { level: A1, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, have: ["I ", { target: have }, " a car."], got: [I', { target: ve got }, " a car."] }
+        - { level: A1, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, have: ["I ", { target: don't have }, " a car."], got: ["I ", { target: haven't got }, " a car."] }
+        - { level: A1, features: { polarity: pos, interrogativity: int }, form: { en: Question }, have: [{ target: Do }, " you ", { target: have }, " a car?"], got: [{ target: Have }, " you ", { target: got }, " a car?"] }
+        - { level: A1, features: { interrogativity: decl, polarity: [pos, neg] }, form: { en: Short answer }, have: { alternatives: [["Yes, I ", { target: do }, "."], ["No, I ", { target: don't }, "."]] }, got: { alternatives: [["Yes, I ", { target: have }, "."], ["No, I ", { target: haven't }, "."]] } }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "**have** and **have got** have the same meaning for possession, family and features."
-          - level: A1
+              en: [{ term: have }, " and ", { term: have got }, " have the same meaning for possession, family and features."]
+          - type: rule
+            level: A1
             text:
-              en: "Actions (have breakfast, have a shower) take only **have**."
+              en: ["Actions (have breakfast, have a shower) take only ", { term: have }, "."]
 
   - title: { en: "Form: affirmative" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: subject, label: { en: Subject } }
           - { key: have, label: have }
           - { key: got, label: have got }
         rows:
-          - { level: A1, subject: I / you / we / they, have: "They **have** two children.", got: "They'**ve got** two children." }
-          - { level: A1, subject: he / she / it, have: "She **has** a brother.", got: "She'**s got** a brother." }
-      - type: bullets
+          - { level: A1, features: [{ person: 1, number: sg }, { person: 2 }, { person: 1, number: pl }, { person: 3, number: pl }], subject: { alternatives: [I, you, we, they] }, have: ["They ", { target: have }, " two children."], got: [They', { target: ve got }, " two children."] }
+          - { level: A1, features: { person: 3, number: sg }, subject: { alternatives: [he, she, it] }, have: ["She ", { target: has }, " a brother."], got: [She', { target: s got }, " a brother."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "he / she / it takes **has**: She **has** a dog."
-          - level: A1
+              en: [{ alternatives: [he, she, it] }, " takes ", { term: has }, ":"]
+            ex: ["She ", { target: has }, " a dog."]
+          - type: rule
+            level: A1
             text:
-              en: "Speech and messages use the short forms **'ve got** and **'s got**."
+              en: ["Speech and messages use the short forms ", { term: "'ve got" }, " and ", { term: "'s got" }, "."]
 
   - title: { en: "Form: negative" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: subject, label: { en: Subject } }
           - { key: have, label: have }
           - { key: got, label: have got }
         rows:
-          - { level: A1, subject: I / you / we / they, have: "I **don't have** a car.", got: "I **haven't got** a car." }
-          - { level: A1, subject: he / she / it, have: "He **doesn't have** a car.", got: "He **hasn't got** a car." }
-      - type: bullets
+          - { level: A1, features: [{ person: 1, number: sg }, { person: 2 }, { person: 1, number: pl }, { person: 3, number: pl }], subject: { alternatives: [I, you, we, they] }, have: ["I ", { target: don't have }, " a car."], got: ["I ", { target: haven't got }, " a car."] }
+          - { level: A1, features: { person: 3, number: sg }, subject: { alternatives: [he, she, it] }, have: ["He ", { target: doesn't have }, " a car."], got: ["He ", { target: hasn't got }, " a car."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "**have** makes the negative with **don't / doesn't** and the base form: He doesn't **have**."
-          - level: A1
+              en: [{ term: have }, " makes the negative with ", { alternatives: [{ term: don't }, { term: doesn't }] }, " and the base form:"]
+            ex: ["He doesn't ", { target: have }, "."]
+          - type: rule
+            level: A1
             text:
-              en: "**have got** makes the negative with **haven't / hasn't** before **got**."
+              en: [{ term: have got }, " makes the negative with ", { alternatives: [{ term: haven't }, { term: hasn't }] }, " before ", { term: got }, "."]
 
   - title: { en: "Form: questions" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: subject, label: { en: Subject } }
           - { key: have, label: have }
           - { key: got, label: have got }
         rows:
-          - { level: A1, subject: I / you / we / they, have: "**Do** you **have** a pen?", got: "**Have** you **got** a pen?" }
-          - { level: A1, subject: he / she / it, have: "**Does** she **have** a pen?", got: "**Has** she **got** a pen?" }
-      - type: bullets
+          - { level: A1, features: [{ person: 1, number: sg }, { person: 2 }, { person: 1, number: pl }, { person: 3, number: pl }], subject: { alternatives: [I, you, we, they] }, have: [{ target: Do }, " you ", { target: have }, " a pen?"], got: [{ target: Have }, " you ", { target: got }, " a pen?"] }
+          - { level: A1, features: { person: 3, number: sg }, subject: { alternatives: [he, she, it] }, have: [{ target: Does }, " she ", { target: have }, " a pen?"], got: [{ target: Has }, " she ", { target: got }, " a pen?"] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "Wh-questions put the wh-word first: How many brothers **do** you **have**? / What **have** you **got**?"
+              en: "Wh-questions put the wh-word first:"
+            ex: { examples: [["How many brothers ", { target: do }, " you ", { target: have }, "?"], ["What ", { target: have }, " you ", { target: got }, "?"]] }
 
   - title: { en: "Form: short answers" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: question, label: { en: Question } }
-          - { key: "yes", label: { en: "Yes" } }
-          - { key: "no", label: { en: "No" } }
+          - { key: "yes", label: { en: "Yes" }, features: { polarity: pos } }
+          - { key: "no", label: { en: "No" }, features: { polarity: neg } }
         rows:
-          - { level: A1, question: Do you have a bike?, "yes": "Yes, I **do**.", "no": "No, I **don't**." }
-          - { level: A1, question: Does she have a bike?, "yes": "Yes, she **does**.", "no": "No, she **doesn't**." }
-          - { level: A1, question: Have you got a bike?, "yes": "Yes, I **have**.", "no": "No, I **haven't**." }
-          - { level: A1, question: Has she got a bike?, "yes": "Yes, she **has**.", "no": "No, she **hasn't**." }
-      - type: bullets
+          - { level: A1, question: Do you have a bike?, "yes": ["Yes, I ", { target: do }, "."], "no": ["No, I ", { target: don't }, "."] }
+          - { level: A1, question: Does she have a bike?, "yes": ["Yes, she ", { target: does }, "."], "no": ["No, she ", { target: doesn't }, "."] }
+          - { level: A1, question: Have you got a bike?, "yes": ["Yes, I ", { target: have }, "."], "no": ["No, I ", { target: haven't }, "."] }
+          - { level: A1, question: Has she got a bike?, "yes": ["Yes, she ", { target: has }, "."], "no": ["No, she ", { target: hasn't }, "."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "A short answer ends with the auxiliary from the question: do / does or have / has."
+              en: ["A short answer ends with the auxiliary from the question: ", { alternatives: [do, does] }, " or ", { alternatives: [have, has] }, "."]
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: Possession }, example: "I **have** a new phone." }
-          - { level: A1, use: { en: Family and friends }, example: "She'**s got** two sisters." }
-          - { level: A1, use: { en: "Features, appearance" }, example: "He **has** blue eyes. / My flat **has** a balcony." }
-          - { level: A1, use: { en: "Illness, pain" }, example: "I'**ve got** a headache." }
-          - { level: A1, use: { en: "Work, appointments" }, example: "I'**ve got** a meeting at 3." }
+          - { level: A1, use: { en: Possession }, ex: ["I ", { target: have }, " a new phone."] }
+          - { level: A1, use: { en: Family and friends }, ex: [She', { target: s got }, " two sisters."] }
+          - { level: A1, use: { en: "Features, appearance" }, ex: { examples: [["He ", { target: has }, " blue eyes."], ["My flat ", { target: has }, " a balcony."]] } }
+          - { level: A1, use: { en: "Illness, pain" }, ex: [I', { target: ve got }, " a headache."] }
+          - { level: A1, use: { en: "Work, appointments" }, ex: [I', { target: ve got }, " a meeting at 3."] }
 
-  - title: { en: "Have for actions" }
+  - title: { en: Have for actions }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: group, label: { en: Group } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, group: { en: Meals and drinks }, example: "I **have** breakfast at 8. / Let's **have** a coffee." }
-          - { level: A1, group: { en: Washing }, example: "She **has** a shower every morning." }
-          - { level: A1, group: { en: "Rest, fun" }, example: "We **have** a rest. / They **have** a party." }
-          - { level: A1, group: { en: Talking }, example: "I **have** a chat with Tom." }
-      - type: bullets
+          - { level: A1, group: { en: Meals and drinks }, ex: { examples: [["I ", { target: have }, " breakfast at 8."], ["Let's ", { target: have }, " a coffee."]] } }
+          - { level: A1, group: { en: Washing }, ex: ["She ", { target: has }, " a shower every morning."] }
+          - { level: A1, group: { en: "Rest, fun" }, ex: { examples: [["We ", { target: have }, " a rest."], ["They ", { target: have }, " a party."]] } }
+          - { level: A1, group: { en: Talking }, ex: ["I ", { target: have }, " a chat with Tom."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "In this use **have** is a main verb, so questions and negatives take **do / does**:"
-            ex: "What time **do** you **have** lunch? / I **don't have** breakfast."
+              en: ["In this use ", { term: have }, " is a main verb, so questions and negatives take ", { alternatives: [{ term: do }, { term: does }] }, ":"]
+            ex: { examples: [["What time ", { target: do }, " you ", { target: have }, " lunch?"], ["I ", { target: don't have }, " breakfast."]] }
 
   - title: { en: "Compare: have and have got" }
+    role: compare
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: point, label: { en: Point } }
           - { key: have, label: have }
           - { key: got, label: have got }
         rows:
           - { level: A1, point: { en: Style }, have: { en: "neutral, also in writing" }, got: { en: "informal, mostly speech" } }
-          - { level: A1, point: { en: Region }, have: { en: "US: the usual form" }, got: { en: "common in British English" } }
-          - { level: A1, point: { en: Example }, have: { ex: "Do you **have** a pen?" }, got: { ex: "**Have** you **got** a pen?" } }
+          - { level: A1, point: { en: Region }, have: { en: { variant: the usual form, variety: en-US } }, got: { en: common in British English } }
+          - { level: A1, point: { en: Example }, have: ["Do you ", { target: have }, " a pen?"], got: [{ target: Have }, " you ", { target: got }, " a pen?"] }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: She have a dog., right: "She **has** a dog.", rule: { en: he / she / it → has } }
-          - { level: A1, wrong: Do you have got a car?, right: "**Do** you **have** a car? / **Have** you **got** a car?", rule: { en: "do goes with have, not with have got" } }
-          - { level: A1, wrong: I don't have got a car., right: "I **haven't got** a car. / I **don't have** a car.", rule: { en: "choose one pattern: have or have got" } }
-          - { level: A1, wrong: Does she has a car?, right: "Does she **have** a car?", rule: { en: does + base verb } }
-          - { level: A1, wrong: She don't have a car., right: "She **doesn't have** a car.", rule: { en: he / she / it → doesn't } }
-          - { level: A1, wrong: I have got breakfast at 8., right: "I **have** breakfast at 8.", rule: { en: "actions take have only" } }
+          - { level: A1, wrong: She have a dog., right: ["She ", { target: has }, " a dog."], rule: { en: { takes: [{ alternatives: [he, she, it] }, has] } } }
+          - { level: A1, wrong: Do you have got a car?, right: { alternatives: [[{ target: Do }, " you ", { target: have }, " a car?"], [{ target: Have }, " you ", { target: got }, " a car?"]] }, rule: { en: "do goes with have, not with have got" } }
+          - { level: A1, wrong: I don't have got a car., right: { alternatives: [["I ", { target: haven't got }, " a car."], ["I ", { target: don't have }, " a car."]] }, rule: { en: "choose one pattern: have or have got" } }
+          - { level: A1, wrong: Does she has a car?, right: ["Does she ", { target: have }, " a car?"], rule: { en: { pattern: [does, { slot: base verb }] } } }
+          - { level: A1, wrong: She don't have a car., right: ["She ", { target: doesn't have }, " a car."], rule: { en: { takes: [{ alternatives: [he, she, it] }, doesn't] } } }
+          - { level: A1, wrong: I have got breakfast at 8., right: ["I ", { target: have }, " breakfast at 8."], rule: { en: actions take have only } }

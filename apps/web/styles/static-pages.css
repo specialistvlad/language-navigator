@@ -97,10 +97,6 @@
   margin: 0;
 }
 
-.doc .missing {
-  color: var(--muted);
-  text-decoration: underline dotted;
-}
 .doc h2 a,
 .doc h3 a {
   color: inherit;

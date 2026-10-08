@@ -9,135 +9,151 @@ status: { en: draft }
 
 title: { en: Sounds and IPA }
 summary:
-  en: "The sounds of English, how to read them in IPA, and word stress. IPA gives every sound one symbol between slashes, so it shows how a word sounds whatever its spelling: **ship** /ʃɪp/, **sheep** /ʃiːp/."
+  lead: { en: "The sounds of English, how to read them in IPA, and word stress." }
+  rule: { en: "IPA gives every sound one symbol between slashes, so it shows how a word sounds whatever its spelling:" }
+  ex: [{ target: ship }, " ", { ipa: ʃɪp }, ", ", { target: sheep }, " ", { ipa: ʃiːp }, "."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: point, label: { en: Point } }
         - { key: rule, label: { en: Rule } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A0, point: IPA, rule: { en: "one symbol for each sound, written between slashes" }, example: "book /bʊk/" }
-        - { level: A0, point: { en: Spelling and sound }, rule: { en: "spelling and sound often differ" }, example: "*photo* /ˈfəʊtəʊ/" }
-        - { level: A0, point: "ː  ˈ", rule: { en: "ː makes a vowel long; ˈ comes before the stressed syllable" }, example: "f**oo**d /fuːd/, teacher /ˈtiːtʃə/" }
-        - { level: A1, point: { en: Short and long }, rule: { en: "short /ɪ/ is not long /iː/" }, example: "**ship** /ʃɪp/ · **sheep** /ʃiːp/" }
-        - { level: A1, point: th, rule: { en: "th is /θ/ or /ð/" }, example: "**th**ink /θɪŋk/ · **th**is /ðɪs/" }
-        - { level: A1, point: US, rule: { en: "/ɒ/ becomes /ɑː/, /əʊ/ becomes /oʊ/, and /r/ is pronounced after vowels" }, example: "hot /hɑːt/, car /kɑːr/" }
-        - { level: A1, point: { en: Stress in two syllables }, rule: { en: "most nouns and adjectives: first syllable; many verbs: second" }, example: "**ˈtea**cher / be**ˈgin**" }
-        - { level: A1, point: -tion  -sion  -ic, rule: { en: "stress the syllable before the ending" }, example: "infor**ˈma**tion / fan**ˈtas**tic" }
-        - { level: A1, point: { en: Weak vowel }, rule: { en: "unstressed vowels are often the weak /ə/" }, example: "about /əˈbaʊt/" }
+        - { level: A0, point: IPA, rule: { en: "one symbol for each sound, written between slashes" }, ex: ["book ", { ipa: bʊk }] }
+        - { level: A0, point: { en: Spelling and sound }, rule: { en: spelling and sound often differ }, ex: [{ term: photo }, " ", { ipa: ˈfəʊtəʊ }] }
+        - { level: A0, point: ː  ˈ, rule: { en: ː makes a vowel long; ˈ comes before the stressed syllable }, ex: [f, { letter: oo }, "d ", { ipa: fuːd }, ", teacher ", { ipa: ˈtiːtʃə }] }
+        - { level: A1, point: { en: Short and long }, rule: { en: ["short ", { ipa: ɪ }, " is not long ", { ipa: iː }] }, ex: { examples: [[{ target: ship }, " ", { ipa: ʃɪp }], [{ target: sheep }, " ", { ipa: ʃiːp }]] } }
+        - { level: A1, point: th, rule: { en: ["th is ", { ipa: θ }, " or ", { ipa: ð }] }, ex: { examples: [[{ letter: th }, "ink ", { ipa: θɪŋk }], [{ letter: th }, "is ", { ipa: ðɪs }]] } }
+        - { level: A1, point: US, rule: { en: [{ ipa: ɒ }, " becomes ", { ipa: ɑː }, ", ", { ipa: əʊ }, " becomes ", { ipa: oʊ }, ", and ", { ipa: r }, " is pronounced after vowels"] }, ex: ["hot ", { ipa: hɑːt }, ", car ", { ipa: kɑːr }], variety: en-US }
+        - { level: A1, point: { en: Stress in two syllables }, rule: { en: "most nouns and adjectives: first syllable; many verbs: second" }, ex: { examples: [[{ stress: ˈtea }, cher], [be, { stress: ˈgin }]] } }
+        - { level: A1, point: "-tion  -sion  -ic", rule: { en: stress the syllable before the ending }, ex: { examples: [[infor, { stress: ˈma }, tion], [fan, { stress: ˈtas }, tic]] } }
+        - { level: A1, point: { en: Weak vowel }, rule: { en: ["unstressed vowels are often the weak ", { ipa: ə }] }, ex: ["about ", { ipa: əˈbaʊt }] }
 
 sections:
   - title: { en: How IPA works }
+    role: own
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A0
+          - type: rule
+            level: A0
             text:
-              en: "IPA writes sounds, one symbol for each sound. Dictionaries put it between slashes: book /bʊk/."
-          - level: A0
+              en: ["IPA writes sounds, one symbol for each sound. Dictionaries put it between slashes: book ", { ipa: bʊk }, "."]
+          - type: rule
+            level: A0
             text:
-              en: "Spelling and sound often differ: *photo* /ˈfəʊtəʊ/ has no /p/ and no /h/."
-          - level: A0
+              en: ["Spelling and sound often differ: ", { term: photo }, " ", { ipa: ˈfəʊtəʊ }, " has no ", { ipa: p }, " and no ", { ipa: h }, "."]
+          - type: rule
+            level: A0
             text:
-              en: "**ː** makes a vowel long: /uː/ in *food*."
-          - level: A0
+              en: [{ letter: ː }, " makes a vowel long: ", { ipa: uː }, " in ", { term: food }, "."]
+          - type: rule
+            level: A0
             text:
-              en: "**ˈ** comes before the stressed syllable: teacher /ˈtiːtʃə/."
+              en: [{ stress: ˈ }, " comes before the stressed syllable: teacher ", { ipa: ˈtiːtʃə }, "."]
 
   - title: { en: Consonant sounds }
+    role: own
     content:
-      - type: table
+      - type: inventory
+        set: sounds
         columns:
           - { key: sound, label: { en: Sound } }
           - { key: spelling, label: { en: Spelling } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A0, sound: /p/, spelling: p, example: { ex: "**p**en" } }
-          - { level: A0, sound: /b/, spelling: b, example: { ex: "**b**ed" } }
-          - { level: A0, sound: /t/, spelling: t, example: { ex: "**t**en" } }
-          - { level: A0, sound: /d/, spelling: d, example: { ex: "**d**og" } }
-          - { level: A0, sound: /k/, spelling: "c / k / ck", example: { ex: "**c**at / ba**ck**" } }
-          - { level: A1, sound: /g/, spelling: g, example: { ex: "**g**o" } }
-          - { level: A0, sound: /f/, spelling: "f / ph", example: { ex: "**f**ish / **ph**one" } }
-          - { level: A0, sound: /v/, spelling: v, example: { ex: "**v**an" } }
-          - { level: A1, sound: /θ/, spelling: th, example: { ex: "**th**ink" } }
-          - { level: A1, sound: /ð/, spelling: th, example: { ex: "**th**is" } }
-          - { level: A0, sound: /s/, spelling: "s / c", example: { ex: "**s**un / **c**ity" } }
-          - { level: A0, sound: /z/, spelling: "z / s", example: { ex: "**z**oo / i**s**" } }
-          - { level: A1, sound: /ʃ/, spelling: sh, example: { ex: "**sh**op" } }
-          - { level: A1, sound: /ʒ/, spelling: s, example: { ex: "televi**s**ion" } }
-          - { level: A1, sound: /h/, spelling: h, example: { ex: "**h**at" } }
-          - { level: A0, sound: /tʃ/, spelling: ch, example: { ex: "**ch**air" } }
-          - { level: A0, sound: /dʒ/, spelling: "j / g", example: { ex: "**j**ob / a**g**e" } }
-          - { level: A0, sound: /m/, spelling: m, example: { ex: "**m**an" } }
-          - { level: A0, sound: /n/, spelling: n, example: { ex: "**n**o" } }
-          - { level: A1, sound: /ŋ/, spelling: ng, example: { ex: "si**ng**" } }
-          - { level: A0, sound: /l/, spelling: l, example: { ex: "**l**eg" } }
-          - { level: A1, sound: /r/, spelling: r, example: { ex: "**r**ed" } }
-          - { level: A0, sound: /w/, spelling: w, example: { ex: "**w**ater" } }
-          - { level: A0, sound: /j/, spelling: y, example: { ex: "**y**es" } }
+          - { level: A0, value: p, sound: { ipa: p }, spelling: p, ex: [{ letter: p }, en] }
+          - { level: A0, value: b, sound: { ipa: b }, spelling: b, ex: [{ letter: b }, ed] }
+          - { level: A0, value: t, sound: { ipa: t }, spelling: t, ex: [{ letter: t }, en] }
+          - { level: A0, value: d, sound: { ipa: d }, spelling: d, ex: [{ letter: d }, og] }
+          - { level: A0, value: k, sound: { ipa: k }, spelling: { alternatives: [c, k, ck] }, ex: { examples: [[{ letter: c }, at], [ba, { letter: ck }]] } }
+          - { level: A1, value: g, sound: { ipa: g }, spelling: g, ex: [{ letter: g }, o] }
+          - { level: A0, value: f, sound: { ipa: f }, spelling: { alternatives: [f, ph] }, ex: { examples: [[{ letter: f }, ish], [{ letter: ph }, one]] } }
+          - { level: A0, value: v, sound: { ipa: v }, spelling: v, ex: [{ letter: v }, an] }
+          - { level: A1, value: θ, sound: { ipa: θ }, spelling: th, ex: [{ letter: th }, ink] }
+          - { level: A1, value: ð, sound: { ipa: ð }, spelling: th, ex: [{ letter: th }, is] }
+          - { level: A0, value: s, sound: { ipa: s }, spelling: { alternatives: [s, c] }, ex: { examples: [[{ letter: s }, un], [{ letter: c }, ity]] } }
+          - { level: A0, value: z, sound: { ipa: z }, spelling: { alternatives: [z, s] }, ex: { examples: [[{ letter: z }, oo], [i, { ending: s }]] } }
+          - { level: A1, value: ʃ, sound: { ipa: ʃ }, spelling: sh, ex: [{ letter: sh }, op] }
+          - { level: A1, value: ʒ, sound: { ipa: ʒ }, spelling: s, ex: [televi, { letter: s }, ion] }
+          - { level: A1, value: h, sound: { ipa: h }, spelling: h, ex: [{ letter: h }, at] }
+          - { level: A0, value: tʃ, sound: { ipa: tʃ }, spelling: ch, ex: [{ letter: ch }, air] }
+          - { level: A0, value: dʒ, sound: { ipa: dʒ }, spelling: { alternatives: [j, g] }, ex: { examples: [[{ letter: j }, ob], [a, { letter: g }, e]] } }
+          - { level: A0, value: m, sound: { ipa: m }, spelling: m, ex: [{ letter: m }, an] }
+          - { level: A0, value: "n", sound: { ipa: "n" }, spelling: "n", ex: [{ letter: "n" }, o] }
+          - { level: A1, value: ŋ, sound: { ipa: ŋ }, spelling: ng, ex: [si, { letter: ng }] }
+          - { level: A0, value: l, sound: { ipa: l }, spelling: l, ex: [{ letter: l }, eg] }
+          - { level: A1, value: r, sound: { ipa: r }, spelling: r, ex: [{ letter: r }, ed] }
+          - { level: A0, value: w, sound: { ipa: w }, spelling: w, ex: [{ letter: w }, ater] }
+          - { level: A0, value: j, sound: { ipa: j }, spelling: "y", ex: [{ letter: "y" }, es] }
 
   - title: { en: Vowel sounds }
+    role: own
     content:
-      - type: table
+      - type: inventory
+        set: sounds
         columns:
           - { key: sound, label: { en: Sound } }
           - { key: type, label: { en: Type } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, sound: /ɪ/, type: { en: short }, example: { ex: "sh**i**p" } }
-          - { level: A0, sound: /iː/, type: { en: long }, example: { ex: "sh**ee**p" } }
-          - { level: A0, sound: /e/, type: { en: short }, example: { ex: "b**e**d" } }
-          - { level: A0, sound: /æ/, type: { en: short }, example: { ex: "c**a**t" } }
-          - { level: A0, sound: /ʌ/, type: { en: short }, example: { ex: "c**u**p" } }
-          - { level: A0, sound: /ɑː/, type: { en: long }, example: { ex: "c**ar**" } }
-          - { level: A1, sound: /ɒ/, type: { en: short }, example: { ex: "h**o**t" } }
-          - { level: A1, sound: /ɔː/, type: { en: long }, example: { ex: "d**oor**" } }
-          - { level: A1, sound: /ʊ/, type: { en: short }, example: { ex: "b**oo**k" } }
-          - { level: A0, sound: /uː/, type: { en: long }, example: { ex: "f**oo**d" } }
-          - { level: A1, sound: /ɜː/, type: { en: long }, example: { ex: "b**ir**d" } }
-          - { level: A0, sound: /ə/, type: { en: "short, weak" }, example: { ex: "**a**bout" } }
-          - { level: A0, sound: /eɪ/, type: { en: diphthong }, example: { ex: "d**ay**" } }
-          - { level: A0, sound: /aɪ/, type: { en: diphthong }, example: { ex: "m**y**" } }
-          - { level: A1, sound: /ɔɪ/, type: { en: diphthong }, example: { ex: "b**oy**" } }
-          - { level: A0, sound: /əʊ/, type: { en: diphthong }, example: { ex: "g**o**" } }
-          - { level: A1, sound: /aʊ/, type: { en: diphthong }, example: { ex: "n**ow**" } }
-          - { level: A1, sound: /ɪə/, type: { en: diphthong }, example: { ex: "h**ere**" } }
-          - { level: A1, sound: /eə/, type: { en: diphthong }, example: { ex: "h**air**" } }
-          - { level: A1, sound: /ʊə/, type: { en: diphthong }, example: { ex: "t**our**" } }
-      - type: bullets
+          - { level: A1, value: ɪ, sound: { ipa: ɪ }, type: { en: short }, ex: [sh, { letter: i }, p] }
+          - { level: A0, value: iː, sound: { ipa: iː }, type: { en: long }, ex: [sh, { letter: ee }, p] }
+          - { level: A0, value: e, sound: { ipa: e }, type: { en: short }, ex: [b, { letter: e }, d] }
+          - { level: A0, value: æ, sound: { ipa: æ }, type: { en: short }, ex: [c, { letter: a }, t] }
+          - { level: A0, value: ʌ, sound: { ipa: ʌ }, type: { en: short }, ex: [c, { letter: u }, p] }
+          - { level: A0, value: ɑː, sound: { ipa: ɑː }, type: { en: long }, ex: [c, { letter: ar }] }
+          - { level: A1, value: ɒ, sound: { ipa: ɒ }, type: { en: short }, ex: [h, { letter: o }, t] }
+          - { level: A1, value: ɔː, sound: { ipa: ɔː }, type: { en: long }, ex: [d, { letter: oor }] }
+          - { level: A1, value: ʊ, sound: { ipa: ʊ }, type: { en: short }, ex: [b, { letter: oo }, k] }
+          - { level: A0, value: uː, sound: { ipa: uː }, type: { en: long }, ex: [f, { letter: oo }, d] }
+          - { level: A1, value: ɜː, sound: { ipa: ɜː }, type: { en: long }, ex: [b, { letter: ir }, d] }
+          - { level: A0, value: ə, sound: { ipa: ə }, type: { en: "short, weak" }, ex: [{ letter: a }, bout] }
+          - { level: A0, value: eɪ, sound: { ipa: eɪ }, type: { en: diphthong }, ex: [d, { letter: ay }] }
+          - { level: A0, value: aɪ, sound: { ipa: aɪ }, type: { en: diphthong }, ex: [m, { letter: "y" }] }
+          - { level: A1, value: ɔɪ, sound: { ipa: ɔɪ }, type: { en: diphthong }, ex: [b, { letter: oy }] }
+          - { level: A0, value: əʊ, sound: { ipa: əʊ }, type: { en: diphthong }, ex: [g, { letter: o }] }
+          - { level: A1, value: aʊ, sound: { ipa: aʊ }, type: { en: diphthong }, ex: ["n", { letter: ow }] }
+          - { level: A1, value: ɪə, sound: { ipa: ɪə }, type: { en: diphthong }, ex: [h, { letter: ere }] }
+          - { level: A1, value: eə, sound: { ipa: eə }, type: { en: diphthong }, ex: [h, { letter: air }] }
+          - { level: A1, value: ʊə, sound: { ipa: ʊə }, type: { en: diphthong }, ex: [t, { letter: our }] }
+      - type: list
         items:
-          - level: A1
+          - type: note
+            level: A1
+            variety: en-US
             text:
-              en: "US: /ɒ/ becomes /ɑː/ (*hot* /hɑːt/), /əʊ/ becomes /oʊ/, and /r/ is pronounced after vowels (*car* /kɑːr/)."
+              en: [{ ipa: ɒ }, " becomes ", { ipa: ɑː }, " (", { term: hot }, " ", { ipa: hɑːt }, "), ", { ipa: əʊ }, " becomes ", { ipa: oʊ }, ", and ", { ipa: r }, " is pronounced after vowels (", { term: car }, " ", { ipa: kɑːr }, ")."]
 
   - title: { en: Word stress }
+    role: own
     content:
-      - type: text
+      - type: prose
         level: A1
         text:
           en: "In a word of two or more syllables, one syllable is stronger and longer."
-      - type: table
+      - type: usage
         columns:
           - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, pattern: { en: "Most two-syllable nouns and adjectives: first syllable" }, example: { ex: "**ˈtea**cher / **ˈhap**py" } }
-          - { level: A1, pattern: { en: "Many two-syllable verbs: second syllable" }, example: { ex: "be**ˈgin** / de**ˈcide**" } }
-          - { level: A1, pattern: { en: "Words ending in -tion, -sion, -ic: the syllable before the ending" }, example: { ex: "infor**ˈma**tion / fan**ˈtas**tic" } }
-      - type: bullets
+          - { level: A1, pattern: { en: "Most two-syllable nouns and adjectives: first syllable" }, ex: { examples: [[{ stress: ˈtea }, cher], [{ stress: ˈhap }, py]] } }
+          - { level: A1, pattern: { en: "Many two-syllable verbs: second syllable" }, ex: { examples: [[be, { stress: ˈgin }], [de, { stress: ˈcide }]] } }
+          - { level: A1, pattern: { en: "Words ending in -tion, -sion, -ic: the syllable before the ending" }, ex: { examples: [[infor, { stress: ˈma }, tion], [fan, { stress: ˈtas }, tic]] } }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "Unstressed vowels are often the weak /ə/: banana /bəˈnɑːnə/, about /əˈbaʊt/."
+              en: ["Unstressed vowels are often the weak ", { ipa: ə }, ": banana ", { ipa: bəˈnɑːnə }, ", about ", { ipa: əˈbaʊt }, "."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: ship /ʃiːp/, right: "ship **/ʃɪp/** · sheep /ʃiːp/", rule: { en: "short /ɪ/ ≠ long /iː/" } }
-          - { level: A1, wrong: think /sɪŋk/ · this /dɪs/, right: "think **/θɪŋk/** · this **/ðɪs/**", rule: { en: "th = /θ/ or /ð/" } }
-          - { level: A1, wrong: comˈfortable, right: "**ˈcom**fortable /ˈkʌmftəbl/", rule: { en: "stress on the first syllable" } }
+          - { level: A1, wrong: ["ship ", { ipa: ʃiːp }], right: { examples: [["ship ", { ipa: ʃɪp }], ["sheep ", { ipa: ʃiːp }]] }, rule: { en: ["short ", { ipa: ɪ }, " ≠ long ", { ipa: iː }] } }
+          - { level: A1, wrong: { examples: [["think ", { ipa: sɪŋk }], ["this ", { ipa: dɪs }]] }, right: { examples: [["think ", { ipa: θɪŋk }], ["this ", { ipa: ðɪs }]] }, rule: { en: ["th = ", { ipa: θ }, " or ", { ipa: ð }] } }
+          - { level: A1, wrong: comˈfortable, right: [{ stress: ˈcom }, "fortable ", { ipa: ˈkʌmftəbl }], rule: { en: stress on the first syllable } }

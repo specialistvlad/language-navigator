@@ -9,134 +9,153 @@ status: { en: draft }
 
 title: { en: Imperative }
 summary:
-  en: "The imperative gives instructions, directions, invitations and warnings with the base verb, Don't and Let's. The verb is the bare base form with no subject and no to: **Open** the door. **Don't open** it. **Let's go.**"
+  lead: { en: "The imperative gives instructions, directions, invitations and warnings with the base verb, Don't and Let's." }
+  rule: { en: "The verb is the bare base form with no subject and no to:" }
+  ex: { examples: [[{ target: Open }, " the door."], [{ target: Don't open }, " it."], { target: Let's go. }] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: paradigm
       columns:
         - { key: form, label: { en: Form } }
         - { key: pattern, label: { en: Pattern } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, form: { en: Affirmative }, pattern: V, example: "**Open** the door." }
-        - { level: A1, form: { en: Negative }, pattern: Don't + V, example: "**Don't open** the door." }
-        - { level: A1, form: { en: Suggestion }, pattern: Let's + V, example: "**Let's open** the door." }
-        - { level: A1, form: { en: Negative suggestion }, pattern: Let's not + V, example: "**Let's not open** the door." }
+        - { level: A1, features: { mood: imp, polarity: pos }, form: { en: Affirmative }, pattern: V, ex: [{ target: Open }, " the door."] }
+        - { level: A1, features: { mood: imp, polarity: neg }, form: { en: Negative }, pattern: { pattern: [Don't, { slot: V }] }, ex: [{ target: Don't open }, " the door."] }
+        - { level: A1, features: { mood: imp, person: 1, number: pl, polarity: pos }, form: { en: Suggestion }, pattern: { pattern: [Let's, { slot: V }] }, ex: [{ target: Let's open }, " the door."] }
+        - { level: A1, features: { mood: imp, person: 1, number: pl, polarity: neg }, form: { en: Negative suggestion }, pattern: { pattern: [Let's not, { slot: V }] }, ex: [{ target: Let's not open }, " the door."] }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "The imperative has no subject and no tense. The verb is in the base form."
+              en: The imperative has no subject and no tense. The verb is in the base form.
 
   - title: { en: "Form: affirmative" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: verb, label: { en: Verb } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, verb: { en: action verb }, example: "**Sit** down. / **Close** your books." }
-          - { level: A1, verb: be, example: "**Be** quiet. / **Be** careful." }
-      - type: bullets
+          - { level: A1, verb: { en: action verb }, ex: { examples: [[{ target: Sit }, " down."], [{ target: Close }, " your books."]] } }
+          - { level: A1, verb: be, ex: { examples: [[{ target: Be }, " quiet."], [{ target: Be }, " careful."]] } }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "The imperative is the base verb for every person: **Come** in. / **Be** quiet."
-          - level: A1
+              en: "The imperative is the base verb for every person:"
+            ex: { examples: [[{ target: Come }, " in."], [{ target: Be }, " quiet."]] }
+          - type: rule
+            level: A1
             text:
-              en: "A name or **everybody** opens the sentence to say who is spoken to:"
-            ex: "**Tom, come** here. / **Everybody, listen.**"
+              en: ["A name or ", { term: everybody }, " opens the sentence to say who is spoken to:"]
+            ex: { examples: [[{ target: "Tom, come" }, " here."], { target: "Everybody, listen." }] }
 
   - title: { en: "Form: negative" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, pattern: Don't + V, example: "**Don't touch** it." }
-          - { level: A1, pattern: Don't be + adjective, example: "**Don't be** late." }
-          - { level: A1, pattern: Do not + V, example: "**Do not enter.**" }
-      - type: bullets
+          - { level: A1, pattern: { pattern: [Don't, { slot: V }] }, ex: [{ target: Don't touch }, " it."] }
+          - { level: A1, pattern: { pattern: [Don't be, { slot: adjective }] }, ex: [{ target: Don't be }, " late."] }
+          - { level: A1, pattern: { pattern: [Do not, { slot: V }] }, ex: { target: Do not enter. } }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "**Don't** goes before the base verb, also before **be**."
-          - level: A1
+              en: [{ term: Don't }, " goes before the base verb, also before ", { term: be }, "."]
+          - type: rule
+            level: A1
             text:
-              en: "**Do not** is the full form. Signs and notices use it."
+              en: [{ term: Do not }, " is the full form. Signs and notices use it."]
 
   - title: { en: "Form: Let's" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, pattern: Let's + V, example: "**Let's go** to the beach." }
-          - { level: A1, pattern: Let's not + V, example: "**Let's not wait.**" }
-          - { level: A1, pattern: "Shall we + V?", example: "**Shall we eat** now?" }
-      - type: table
+          - { level: A1, pattern: { pattern: [Let's, { slot: V }] }, ex: [{ target: Let's go }, " to the beach."] }
+          - { level: A1, pattern: { pattern: [Let's not, { slot: V }] }, ex: { target: Let's not wait. } }
+          - { level: A1, pattern: { pattern: [Shall we, [{ slot: V }, "?"]] }, ex: [{ target: Shall we eat }, " now?"] }
+      - type: usage
         columns:
           - { key: answer, label: { en: Answer } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, answer: { en: agree }, example: "Yes, **let's**. / Good idea." }
-          - { level: A1, answer: { en: refuse }, example: "No, **let's not**. / Sorry, I can't." }
-      - type: bullets
+          - { level: A1, answer: { en: agree }, ex: { examples: [["Yes, ", { target: let's }, "."], Good idea.] } }
+          - { level: A1, answer: { en: refuse }, ex: { examples: [["No, ", { target: let's not }, "."], "Sorry, I can't."] } }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "**Let's** = *let us*. It includes the speaker and invites others to join."
+              en: [{ term: Let's }, " = ", { term: let us }, . It includes the speaker and invites others to join.]
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: Instructions }, example: "**Add** two eggs and **mix** well." }
-          - { level: A1, use: { en: Directions }, example: "**Turn** left and **go straight on**. (US: **go straight**)" }
-          - { level: A1, use: { en: Invitations and offers }, example: "**Come** in. **Have** a seat." }
-          - { level: A1, use: { en: Warnings }, example: "**Look out!** / **Be** careful!" }
-          - { level: A1, use: { en: Orders }, example: "**Stop!** / **Listen**, please." }
-          - { level: A1, use: { en: "Signs, notices" }, example: "**Keep** off the grass." }
-      - type: bullets
+          - { level: A1, use: { en: Instructions }, ex: [{ target: Add }, " two eggs and ", { target: mix }, " well."] }
+          - { level: A1, use: { en: Directions }, ex: [{ target: Turn }, " left and ", { target: go straight on }, ". ", { variant: { target: go straight }, variety: en-US }] }
+          - { level: A1, use: { en: Invitations and offers }, ex: [{ target: Come }, " in. ", { target: Have }, " a seat."] }
+          - { level: A1, use: { en: Warnings }, ex: { examples: [{ target: Look out! }, [{ target: Be }, " careful!"]] } }
+          - { level: A1, use: { en: Orders }, ex: { examples: [{ target: Stop! }, [{ target: Listen }, ", please."]] } }
+          - { level: A1, use: { en: "Signs, notices" }, ex: [{ target: Keep }, " off the grass."] }
+      - type: list
         items:
-          - level: A1
+          - type: note
+            level: A1
             text:
-              en: "For directions with place words see [Place and Movement](id:en.prepositions.place-movement)."
+              en: ["For directions with place words see ", { link: Place and Movement, to: en.prepositions.place-movement }, "."]
 
   - title: { en: Politeness }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: way, label: { en: Way } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, way: { en: please at the start }, example: "**Please** sit down." }
-          - { level: A1, way: { en: please at the end }, example: "Sit down, **please**." }
-          - { level: A1, way: { en: "a question with Could you…" }, example: "**Could you** open the window, **please**?" }
-      - type: bullets
+          - { level: A1, way: { en: please at the start }, ex: [{ target: Please }, " sit down."] }
+          - { level: A1, way: { en: please at the end }, ex: ["Sit down, ", { target: please }, "."] }
+          - { level: A1, way: { en: a question with Could you… }, ex: [{ target: Could you }, " open the window, ", { target: please }, "?"] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "A bare imperative sounds direct. **please** makes a request friendly."
-          - level: A1
+              en: ["A bare imperative sounds direct. ", { term: please }, " makes a request friendly."]
+          - type: note
+            level: A1
             text:
-              en: "Requests to strangers and in formal situations use **Could you…?** See [Can and Could](id:en.modals.can-could)."
+              en: ["Requests to strangers and in formal situations use ", { term: Could you…? }, " See ", { link: Can and Could, to: en.modals.can-could }, "."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: Not open the door., right: "**Don't open** the door.", rule: { en: "negative imperative → Don't + V" } }
-          - { level: A1, wrong: Don't to open the door., right: "Don't **open** the door.", rule: { en: "Don't + base verb, no to" } }
-          - { level: A1, wrong: Opens the door., right: "**Open** the door.", rule: { en: "the imperative has no -s" } }
-          - { level: A1, wrong: Let's to go., right: "Let's **go**.", rule: { en: "Let's + base verb, no to" } }
+          - { level: A1, wrong: Not open the door., right: [{ target: Don't open }, " the door."], rule: { en: { takes: [negative imperative, { pattern: [Don't, { slot: V }] }] } } }
+          - { level: A1, wrong: Don't to open the door., right: ["Don't ", { target: open }, " the door."], rule: { en: { pattern: [Don't, "base verb, no to"] } } }
+          - { level: A1, wrong: Opens the door., right: [{ target: Open }, " the door."], rule: { en: the imperative has no -s } }
+          - { level: A1, wrong: Let's to go., right: ["Let's ", { target: go }, "."], rule: { en: { pattern: [Let's, "base verb, no to"] } } }

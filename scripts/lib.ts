@@ -8,7 +8,7 @@ import type { Langs123Curriculum as CurriculumFile } from "./generated/curriculu
 import type { InterfaceWording as InterfaceFile } from "./generated/interface.ts";
 import type { LevelScale as LevelsFile } from "./generated/levels.ts";
 import type { SiteIdentityLicencesAndExplanationLanguages as SiteFile } from "./generated/site.ts";
-import type { Explain, Item, Level, Localized, Langs123Topic as TopicFile } from "./generated/topic.ts";
+import type { Explain, Level, Langs123Topic as TopicFile } from "./generated/topic.ts";
 
 export const ROOT = join(import.meta.dir, "..");
 export const CONTENT = join(ROOT, "languages");
@@ -21,8 +21,8 @@ export type Site = SiteFile;
 export type LevelInfo = LevelsFile["levels"][number];
 export type Interface = InterfaceFile;
 
-// The text of a localized value in an explanation language; npm run check guarantees it exists.
-export function localize(value: Localized, explain: Explain): string {
+// A configuration string in an explanation language: a name or a title; npm run check guarantees it exists.
+export function localize(value: Partial<Record<Explain, string>>, explain: Explain): string {
   const text = value[explain];
   if (text === undefined) throw new Error(`No "${explain}" text in ${JSON.stringify(value)}`);
   return text;
@@ -68,23 +68,30 @@ export const listOf = (items: string[], explain: Explain): string => new Intl.Li
 
 export type {
   Block,
-  BulletsBlock,
   Cell,
   Column,
+  ComparisonBlock,
   ErrorRow,
   ErrorsBlock,
   Example,
+  FeatureBundle,
+  Features,
+  InventoryBlock,
   Item,
+  ListBlock,
   Localized,
+  Mark,
+  ParadigmBlock,
+  Part,
+  ProseBlock,
   Row,
   Section,
-  TableBlock,
+  Summary,
   Text,
-  TextBlock,
+  UsageBlock,
+  Variety,
 } from "./generated/topic.ts";
 export type Topic = TopicFile;
-// An item written as an object: text or an example, with optional translation, level and languages.
-export type ItemObject = Exclude<Item, string | Localized>;
 
 export type Curriculum = CurriculumFile;
 export type CurriculumLanguage = Curriculum["languages"][number];
@@ -130,10 +137,4 @@ export async function loadTopics(curriculum?: Curriculum): Promise<TopicRef[]> {
     }
   }
   return refs;
-}
-
-// Title of any curriculum topic in an explanation language: topic file, then curriculum, then slug.
-export function topicTitle(ref: TopicRef, explain: Explain): string {
-  const fromSlug = ref.entry.slug.replace(/-/g, " ").replace(/^./, (c) => c.toUpperCase());
-  return ref.topic?.title[explain] ?? ref.entry.title?.[explain] ?? fromSlug;
 }

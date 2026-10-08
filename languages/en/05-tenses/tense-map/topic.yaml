@@ -9,97 +9,107 @@ status: { en: draft }
 
 title: { en: Tense map }
 summary:
-  en: "Every tense on one page, placed by time and aspect, with form, main use, example and time words. Time words and meaning choose the tense: yesterday takes the past simple (I **played**), now takes the present continuous (I **am playing**)."
+  lead: { en: "Every tense on one page, placed by time and aspect, with form, main use, example and time words." }
+  rule: { en: ["Time words and meaning choose the tense: yesterday takes the past simple (I ", { term: played }, "), now takes the present continuous (I ", { term: am playing }, ")."] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: paradigm
       columns:
         - { key: aspect, label: { en: Aspect } }
-        - { key: past, label: { en: Past } }
-        - { key: present, label: { en: Present } }
-        - { key: future, label: { en: Future } }
+        - { key: past, label: { en: Past }, features: { tense: pst } }
+        - { key: present, label: { en: Present }, features: { tense: prs } }
+        - { key: future, label: { en: Future }, features: { tense: fut } }
       rows:
-        - { level: A1, aspect: { en: Simple }, past: { en: "[Past simple](id:en.tenses.simple-tenses)" }, present: { en: "[Present simple](id:en.tenses.simple-tenses)" }, future: { en: "[Future forms](id:en.tenses.future-forms)" } }
-        - { level: A1, aspect: { en: In progress }, past: { en: "[Past continuous](id:en.tenses.continuous-tenses)" }, present: { en: "[Present continuous](id:en.tenses.continuous-tenses)" }, future: { en: "[Present continuous](id:en.tenses.continuous-tenses) (arrangements)" } }
-        - { level: A2, aspect: { en: Perfect }, past: { en: "[Past perfect](id:en.tenses.perfect-tenses)" }, present: { en: "[Present perfect](id:en.tenses.perfect-tenses)" }, future: "-" }
-        - { level: A2, aspect: { en: Past habits }, past: { en: "[Used to](id:en.tenses.used-to)" }, present: "-", future: "-" }
+        - { level: A1, aspect: { en: Simple }, past: { en: { link: Past simple, to: en.tenses.simple-tenses } }, present: { en: { link: Present simple, to: en.tenses.simple-tenses } }, future: { en: { link: Future forms, to: en.tenses.future-forms } } }
+        - { level: A1, aspect: { en: In progress }, past: { en: { link: Past continuous, to: en.tenses.continuous-tenses } }, present: { en: { link: Present continuous, to: en.tenses.continuous-tenses } }, future: { en: [{ link: Present continuous, to: en.tenses.continuous-tenses }, " (arrangements)"] } }
+        - { level: A2, aspect: { en: Perfect }, past: { en: { link: Past perfect, to: en.tenses.perfect-tenses } }, present: { en: { link: Present perfect, to: en.tenses.perfect-tenses } } }
+        - { level: A2, aspect: { en: Past habits }, past: { en: { link: Used to, to: en.tenses.used-to } } }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
               en: "Read the table by time: past on the left, now in the middle, future on the right."
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "Simple = the fact or event. In progress = while it happens. Perfect = before another moment."
+              en: Simple = the fact or event. In progress = while it happens. Perfect = before another moment.
 
   - title: { en: Present }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
-          - { key: tense, label: { en: "Tense and main use" } }
+          - { key: tense, label: { en: Tense and main use } }
           - { key: form, label: { en: Form } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, tense: { en: "[Present simple](id:en.tenses.simple-tenses): habits, facts, permanent states" }, form: "V / V-s", example: { ex: "I **work** here." } }
-          - { level: A1, tense: { en: "[Present continuous](id:en.tenses.continuous-tenses): now, temporary situations" }, form: "am / is / are + V-ing", example: { ex: "I'**m working** now." } }
-          - { level: A2, tense: { en: "[Present perfect](id:en.tenses.perfect-tenses): past events that matter now" }, form: "have / has + V-ed", example: { ex: "I'**ve lost** my keys." } }
+          - { level: A1, tense: { en: [{ link: Present simple, to: en.tenses.simple-tenses }, ": habits, facts, permanent states"] }, form: { alternatives: [V, V-s] }, ex: ["I ", { target: work }, " here."] }
+          - { level: A1, tense: { en: [{ link: Present continuous, to: en.tenses.continuous-tenses }, ": now, temporary situations"] }, form: { pattern: [{ alternatives: [am, is, are] }, { slot: V-ing }] }, ex: [I', { target: m working }, " now."] }
+          - { level: A2, tense: { en: [{ link: Present perfect, to: en.tenses.perfect-tenses }, ": past events that matter now"] }, form: { pattern: [{ alternatives: [have, has] }, { slot: V-ed }] }, ex: [I', { target: ve lost }, " my keys."] }
 
   - title: { en: Past }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
-          - { key: tense, label: { en: "Tense and main use" } }
+          - { key: tense, label: { en: Tense and main use } }
           - { key: form, label: { en: Form } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, tense: { en: "[Past simple](id:en.tenses.simple-tenses): finished events" }, form: "V-ed / irregular", example: { ex: "I **worked** yesterday." } }
-          - { level: A2, tense: { en: "[Past continuous](id:en.tenses.continuous-tenses): in progress at a past moment" }, form: "was / were + V-ing", example: { ex: "I **was working** at eight." } }
-          - { level: A2, tense: { en: "[Used to](id:en.tenses.used-to): past habits and states, over now" }, form: "used to + V", example: { ex: "I **used to smoke**." } }
-          - { level: B1, tense: { en: "[Past perfect](id:en.tenses.perfect-tenses): before another past event" }, form: "had + V-ed", example: { ex: "She **had left** before I arrived." } }
+          - { level: A1, tense: { en: [{ link: Past simple, to: en.tenses.simple-tenses }, ": finished events"] }, form: { alternatives: [V-ed, irregular] }, ex: ["I ", { target: worked }, " yesterday."] }
+          - { level: A2, tense: { en: [{ link: Past continuous, to: en.tenses.continuous-tenses }, ": in progress at a past moment"] }, form: { pattern: [{ alternatives: [was, were] }, { slot: V-ing }] }, ex: ["I ", { target: was working }, " at eight."] }
+          - { level: A2, tense: { en: [{ link: Used to, to: en.tenses.used-to }, ": past habits and states, over now"] }, form: { pattern: [used to, { slot: V }] }, ex: ["I ", { target: used to smoke }, "."] }
+          - { level: B1, tense: { en: [{ link: Past perfect, to: en.tenses.perfect-tenses }, ": before another past event"] }, form: { pattern: [had, { slot: V-ed }] }, ex: ["She ", { target: had left }, " before I arrived."] }
 
   - title: { en: Future }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
-          - { key: tense, label: { en: "Tense and main use" } }
+          - { key: tense, label: { en: Tense and main use } }
           - { key: form, label: { en: Form } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, tense: { en: "[Future forms](id:en.tenses.future-forms): going to: plans, predictions with evidence" }, form: "am / is / are going to + V", example: { ex: "I'**m going to** buy a car." } }
-          - { level: A1, tense: { en: "[Present continuous](id:en.tenses.continuous-tenses): arrangements" }, form: "am / is / are + V-ing", example: { ex: "I'**m meeting** Ana at six." } }
-          - { level: A2, tense: { en: "[Future forms](id:en.tenses.future-forms): will: decisions, offers, promises, opinions" }, form: "will + V", example: { ex: "I'**ll help** you." } }
-          - { level: A2, tense: { en: "[Present simple](id:en.tenses.simple-tenses): timetables" }, form: "V / V-s", example: { ex: "The train **leaves** at six." } }
+          - { level: A1, tense: { en: [{ link: Future forms, to: en.tenses.future-forms }, ": going to: plans, predictions with evidence"] }, form: { pattern: [[{ alternatives: [am, is, are] }, "  going to"], { slot: V }] }, ex: [I', { target: m going to }, " buy a car."] }
+          - { level: A1, tense: { en: [{ link: Present continuous, to: en.tenses.continuous-tenses }, ": arrangements"] }, form: { pattern: [{ alternatives: [am, is, are] }, { slot: V-ing }] }, ex: [I', { target: m meeting }, " Ana at six."] }
+          - { level: A2, tense: { en: [{ link: Future forms, to: en.tenses.future-forms }, ": will: decisions, offers, promises, opinions"] }, form: { pattern: [will, { slot: V }] }, ex: [I', { target: ll help }, " you."] }
+          - { level: A2, tense: { en: [{ link: Present simple, to: en.tenses.simple-tenses }, ": timetables"] }, form: { alternatives: [V, V-s] }, ex: ["The train ", { target: leaves }, " at six."] }
 
   - title: { en: Signal words }
+    role: signals
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: marker, label: { en: Time word } }
           - { key: tense, label: { en: Tense } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, marker: { en: "always, every day, usually" }, tense: { en: "[Present simple](id:en.tenses.simple-tenses)" }, example: { ex: "I **always** walk to work." } }
-          - { level: A1, marker: { en: "now, at the moment, this week" }, tense: { en: "[Present continuous](id:en.tenses.continuous-tenses)" }, example: { ex: "She's cooking **now**." } }
-          - { level: A1, marker: { en: "yesterday, last week, ago, in 2020" }, tense: { en: "[Past simple](id:en.tenses.simple-tenses)" }, example: { ex: "We met **last week**." } }
-          - { level: A1, marker: { en: "tomorrow, next week, tonight" }, tense: { en: "[Future forms](id:en.tenses.future-forms)" }, example: { ex: "I'm leaving **tomorrow**." } }
-          - { level: A2, marker: { en: "while, at 8 last night" }, tense: { en: "[Past continuous](id:en.tenses.continuous-tenses)" }, example: { ex: "I was reading **at 8 last night**." } }
-          - { level: A2, marker: { en: "when I was a child, years ago" }, tense: { en: "[Used to](id:en.tenses.used-to)" }, example: { ex: "I **used to** swim **when I was a child**." } }
-          - { level: A2, marker: { en: "ever, never, just, already, yet" }, tense: { en: "[Present perfect](id:en.tenses.perfect-tenses)" }, example: { ex: "I've **never** been to Rome." } }
-          - { level: A2, marker: { en: "I think, probably" }, tense: { en: "[Future forms](id:en.tenses.future-forms)" }, example: { ex: "I **think** it'll rain." } }
-          - { level: B1, marker: { en: "for, since" }, tense: { en: "[Present perfect](id:en.tenses.perfect-tenses)" }, example: { ex: "I've lived here **since** 2019." } }
-          - { level: B1, marker: { en: "by the time, after, before (earlier action)" }, tense: { en: "[Past perfect](id:en.tenses.perfect-tenses)" }, example: { ex: "**By the time** I arrived, it **had closed**." } }
+          - { level: A1, marker: { en: "always, every day, usually" }, tense: { en: { link: Present simple, to: en.tenses.simple-tenses } }, ex: ["I ", { signal: always }, " walk to work."] }
+          - { level: A1, marker: { en: "now, at the moment, this week" }, tense: { en: { link: Present continuous, to: en.tenses.continuous-tenses } }, ex: ["She's cooking ", { signal: now }, "."] }
+          - { level: A1, marker: { en: "yesterday, last week, ago, in 2020" }, tense: { en: { link: Past simple, to: en.tenses.simple-tenses } }, ex: ["We met ", { signal: last week }, "."] }
+          - { level: A1, marker: { en: "tomorrow, next week, tonight" }, tense: { en: { link: Future forms, to: en.tenses.future-forms } }, ex: ["I'm leaving ", { signal: tomorrow }, "."] }
+          - { level: A2, marker: { en: "while, at 8 last night" }, tense: { en: { link: Past continuous, to: en.tenses.continuous-tenses } }, ex: ["I was reading ", { signal: at 8 last night }, "."] }
+          - { level: A2, marker: { en: "when I was a child, years ago" }, tense: { en: { link: Used to, to: en.tenses.used-to } }, ex: ["I ", { target: used to }, " swim ", { signal: when I was a child }, "."] }
+          - { level: A2, marker: { en: "ever, never, just, already, yet" }, tense: { en: { link: Present perfect, to: en.tenses.perfect-tenses } }, ex: ["I've ", { signal: never }, " been to Rome."] }
+          - { level: A2, marker: { en: "I think, probably" }, tense: { en: { link: Future forms, to: en.tenses.future-forms } }, ex: ["I ", { signal: think }, " it'll rain."] }
+          - { level: B1, marker: { en: "for, since" }, tense: { en: { link: Present perfect, to: en.tenses.perfect-tenses } }, ex: ["I've lived here ", { signal: since }, " ", { date: "2019", value: "2019" }, "."] }
+          - { level: B1, marker: { en: "by the time, after, before (earlier action)" }, tense: { en: { link: Past perfect, to: en.tenses.perfect-tenses } }, ex: [{ signal: By the time }, " I arrived, it ", { target: had closed }, "."] }
+
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: Please be quiet. I study., right: "Please be quiet. I'**m studying**.", rule: { en: "now → present continuous ([Present continuous](id:en.tenses.continuous-tenses))" } }
-          - { level: A1, wrong: I am wanting a coffee., right: "I **want** a coffee.", rule: { en: "verbs of state → present simple ([Present simple](id:en.tenses.simple-tenses))" } }
-          - { level: A1, wrong: I have seen him yesterday., right: "I **saw** him yesterday.", rule: { en: "finished time → past simple ([Past simple](id:en.tenses.simple-tenses))" } }
-          - { level: B1, wrong: I live here since 2019., right: "I **have lived** here since 2019.", rule: { en: "since / for + state up to now → present perfect ([Present perfect](id:en.tenses.perfect-tenses))" } }
-          - { level: A2, wrong: I use to play football., right: "I **used to** play football.", rule: { en: "past habit → used to + base verb ([Used to](id:en.tenses.used-to))" } }
-          - { level: B1, wrong: "When I arrived, the film has already started.", right: "When I arrived, the film **had** already **started**.", rule: { en: "earlier past action → past perfect ([Past perfect](id:en.tenses.perfect-tenses))" } }
+          - { level: A1, wrong: Please be quiet. I study., right: [Please be quiet. I', { target: m studying }, "."], rule: { en: { takes: [now, [present continuous (, { link: Present continuous, to: en.tenses.continuous-tenses }, ")"]] } } }
+          - { level: A1, wrong: I am wanting a coffee., right: ["I ", { target: want }, " a coffee."], rule: { en: { takes: [verbs of state, [present simple (, { link: Present simple, to: en.tenses.simple-tenses }, ")"]] } } }
+          - { level: A1, wrong: I have seen him yesterday., right: ["I ", { target: saw }, " him yesterday."], rule: { en: { takes: [finished time, [past simple (, { link: Past simple, to: en.tenses.simple-tenses }, ")"]] } } }
+          - { level: B1, wrong: ["I live here since ", { date: "2019", value: "2019" }, "."], right: ["I ", { target: have lived }, " here since ", { date: "2019", value: "2019" }, "."], rule: { en: { mapping: [{ pattern: [{ alternatives: [since, for] }, state up to now] }, [present perfect (, { link: Present perfect, to: en.tenses.perfect-tenses }, ")"]] } } }
+          - { level: A2, wrong: I use to play football., right: ["I ", { target: used to }, " play football."], rule: { en: { takes: [past habit, [{ pattern: [used to, { slot: base verb }] }, " (", { link: Used to, to: en.tenses.used-to }, ")"]] } } }
+          - { level: B1, wrong: "When I arrived, the film has already started.", right: ["When I arrived, the film ", { target: had }, " already ", { target: started }, "."], rule: { en: { takes: [earlier past action, [past perfect (, { link: Past perfect, to: en.tenses.perfect-tenses }, ")"]] } } }

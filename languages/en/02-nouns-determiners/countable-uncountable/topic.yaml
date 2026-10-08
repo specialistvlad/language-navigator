@@ -7,38 +7,44 @@ concepts: [countability]
 related: [en.nouns-determiners.plurals, en.nouns-determiners.articles-a-an-the, en.nouns-determiners.quantifiers-some-any-much-many]
 status: { en: draft }
 
-title: { en: "Countable and Uncountable Nouns" }
+title: { en: Countable and Uncountable Nouns }
 summary:
-  en: "Countable nouns are counted one by one (a book, two books); uncountable nouns are masses and ideas (water, advice). Uncountable nouns take no a or an, no plural and a singular verb: The news **is** good."
+  lead: { en: "Countable nouns are counted one by one (a book, two books); uncountable nouns are masses and ideas (water, advice)." }
+  rule: { en: "Uncountable nouns take no a or an, no plural and a singular verb:" }
+  ex: ["The news ", { target: is }, " good."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: comparison
       columns:
         - { key: point, label: { en: Point } }
-        - { key: countable, label: { en: Countable } }
-        - { key: uncountable, label: { en: Uncountable } }
+        - { key: countable, label: { en: Countable }, features: { countability: count } }
+        - { key: uncountable, label: { en: Uncountable }, features: { countability: mass } }
       rows:
-        - { level: A1, point: { en: Meaning }, countable: { en: "things you count one by one" }, uncountable: { en: "masses, materials, ideas" } }
-        - { level: A1, point: a / an, countable: "**a** book", uncountable: { en: "no a / an: water" } }
-        - { level: A1, point: Plural, countable: "book**s**", uncountable: { en: "no plural" } }
-        - { level: A1, point: { en: Verb }, countable: "The book **is** new. / The books **are** new.", uncountable: "The water **is** cold." }
+        - { level: A1, point: { en: Meaning }, countable: { en: things you count one by one }, uncountable: { en: "masses, materials, ideas" } }
+        - { level: A1, point: { alternatives: [a, an] }, countable: [{ target: a }, " book"], uncountable: { en: ["no ", { alternatives: [a, an] }, ": water"] } }
+        - { level: A1, point: Plural, countable: [book, { ending: s }], uncountable: { en: no plural } }
+        - { level: A1, point: { en: Verb }, countable: { alternatives: [["The book ", { target: is }, " new."], ["The books ", { target: are }, " new."]] }, uncountable: ["The water ", { target: is }, " cold."] }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "A singular countable noun needs a word before it: **a** book, **the** book, **my** book."
-          - level: A1
+              en: ["A singular countable noun needs a word before it: ", { term: a }, " book, ", { term: the }, " book, ", { term: my }, " book."]
+          - type: note
+            level: A1
             text:
-              en: "Articles: [Articles: a, an, the](id:en.nouns-determiners.articles-a-an-the). How much / how many: [Quantifiers](id:en.nouns-determiners.quantifiers-some-any-much-many)."
+              en: ["Articles: ", { link: "Articles: a, an, the", to: en.nouns-determiners.articles-a-an-the }, ". ", { alternatives: [How much, how many] }, ": ", { link: Quantifiers, to: en.nouns-determiners.quantifiers-some-any-much-many }, "."]
 
   - title: { en: Common uncountable nouns }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: group, label: { en: Group } }
           - { key: nouns, label: { en: Nouns } }
@@ -47,55 +53,61 @@ sections:
           - { level: A1, group: { en: Materials }, nouns: "wood, glass, paper, plastic, gold" }
           - { level: A1, group: { en: Ideas and information }, nouns: "advice, information, news, help, music" }
           - { level: A1, group: { en: Others }, nouns: "money, weather, work" }
-          - { level: A2, group: { en: Groups of things }, nouns: "furniture, luggage (US: baggage), equipment, homework, traffic" }
-      - type: bullets
+          - { level: A2, group: { en: Groups of things }, nouns: ["furniture, luggage ", { variant: baggage, variety: en-US }, ", equipment, homework, traffic"] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "**news** ends in -s but is uncountable: The news **is** good."
+              en: [{ term: news }, " ends in -s but is uncountable:"]
+            ex: ["The news ", { target: is }, " good."]
 
   - title: { en: Counting uncountable nouns }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: unit, label: { en: Unit } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, unit: a glass of, example: "a **glass of** water" }
-          - { level: A1, unit: a cup of, example: "a **cup of** tea" }
-          - { level: A1, unit: a bottle of, example: "two **bottles of** milk" }
-          - { level: A1, unit: a slice of, example: "a **slice of** cheese" }
-          - { level: A1, unit: a kilo of, example: "a **kilo of** rice" }
-          - { level: A1, unit: a piece of, example: "a **piece of** cake / advice / furniture" }
-          - { level: A2, unit: a loaf of, example: "a **loaf of** bread" }
-      - type: bullets
+          - { level: A1, unit: a glass of, ex: ["a ", { target: glass of }, " water"] }
+          - { level: A1, unit: a cup of, ex: ["a ", { target: cup of }, " tea"] }
+          - { level: A1, unit: a bottle of, ex: ["two ", { target: bottles of }, " milk"] }
+          - { level: A1, unit: a slice of, ex: ["a ", { target: slice of }, " cheese"] }
+          - { level: A1, unit: a kilo of, ex: ["a ", { target: kilo of }, " rice"] }
+          - { level: A1, unit: a piece of, ex: { examples: [["a ", { target: piece of }, " cake"], advice, furniture] } }
+          - { level: A2, unit: a loaf of, ex: ["a ", { target: loaf of }, " bread"] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "The unit is countable and takes the plural: two **cups** of coffee."
+              en: ["The unit is countable and takes the plural: two ", { term: cups }, " of coffee."]
 
   - title: { en: Countable and uncountable meanings }
+    role: own
     content:
-      - type: text
+      - type: prose
         level: A2
         text:
-          en: "Some nouns are both. The meaning changes."
-      - type: table
+          en: Some nouns are both. The meaning changes.
+      - type: comparison
         columns:
-          - { key: uncountable, label: { en: Uncountable } }
-          - { key: countable, label: { en: Countable } }
+          - { key: uncountable, label: { en: Uncountable }, features: { countability: mass } }
+          - { key: countable, label: { en: Countable }, features: { countability: count } }
         rows:
-          - { level: A2, uncountable: { ex: "I like **coffee**." }, countable: { ex: "Two **coffees**, please." } }
-          - { level: A2, uncountable: { ex: "She has long **hair**." }, countable: { ex: "There's **a hair** in my soup." } }
-          - { level: A2, uncountable: { ex: "a sheet of **paper**" }, countable: { ex: "I buy **a paper** every day." } }
-          - { level: A2, uncountable: { ex: "There's no **room** in the car." }, countable: { ex: "The flat has three **rooms**." } }
+          - { level: A2, uncountable: ["I like ", { target: coffee }, "."], countable: ["Two ", { target: coffees }, ", please."] }
+          - { level: A2, uncountable: ["She has long ", { target: hair }, "."], countable: ["There's ", { target: a hair }, " in my soup."] }
+          - { level: A2, uncountable: ["a sheet of ", { target: paper }], countable: ["I buy ", { target: a paper }, " every day."] }
+          - { level: A2, uncountable: ["There's no ", { target: room }, " in the car."], countable: ["The flat has three ", { target: rooms }, "."] }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: an advice, right: "**a piece of advice** / **some advice**", rule: { en: "uncountable: no a / an" } }
-          - { level: A1, wrong: The news are good., right: "The news **is** good.", rule: { en: "news + singular verb" } }
-          - { level: A2, wrong: a bread, right: "**a loaf of bread** / **some bread**", rule: { en: "count it with a unit" } }
-          - { level: A1, wrong: She has a good work., right: "She has a good **job**.", rule: { en: "work is uncountable; a job is countable" } }
-          - { level: A1, wrong: What a terrible weather!, right: "What **terrible weather**!", rule: { en: "weather: no a / an" } }
+          - { level: A1, wrong: an advice, right: { alternatives: [{ target: a piece of advice }, { target: some advice }] }, rule: { en: ["uncountable: no ", { alternatives: [a, an] }] } }
+          - { level: A1, wrong: The news are good., right: ["The news ", { target: is }, " good."], rule: { en: { pattern: [news, singular verb] } } }
+          - { level: A2, wrong: a bread, right: { alternatives: [{ target: a loaf of bread }, { target: some bread }] }, rule: { en: count it with a unit } }
+          - { level: A1, wrong: She has a good work., right: ["She has a good ", { target: job }, "."], rule: { en: work is uncountable; a job is countable } }
+          - { level: A1, wrong: What a terrible weather!, right: ["What ", { target: terrible weather }, "!"], rule: { en: ["weather: no ", { alternatives: [a, an] }] } }

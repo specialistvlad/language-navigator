@@ -9,222 +9,252 @@ status: { en: draft }
 
 title: { en: Continuous Tenses }
 summary:
-  en: "Present, past and future continuous: be plus the verb with -ing for actions in progress at a moment. Every continuous form needs be before the -ing verb: She **is reading** now. **Was** she **reading**?"
+  lead: { en: "Present, past and future continuous: be plus the verb with -ing for actions in progress at a moment." }
+  rule: { en: "Every continuous form needs be before the -ing verb:" }
+  ex: { examples: [["She ", { target: is reading }, " now."], [{ target: Was }, " she ", { target: reading }, "?"]] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: paradigm
       columns:
-        - { key: tense, label: { en: Tense }, merge: true, center: true }
-        - { key: qh, group: { en: Question }, label: { en: Helper }, merge: true, center: true }
-        - { key: qs, group: { en: Question }, label: { en: Subject } }
-        - { key: qv, group: { en: Question }, label: { en: Verb }, merge: true, center: true }
-        - { key: ss, group: { en: Statement }, label: { en: Subject } }
-        - { key: sh, group: { en: Statement }, label: { en: Helper }, merge: true, center: true }
-        - { key: sv, group: { en: Statement }, label: { en: Verb }, merge: true, center: true }
-        - { key: ns, group: { en: Negative }, label: { en: Subject } }
-        - { key: nh, group: { en: Negative }, label: { en: Helper }, merge: true, center: true }
-        - { key: nv, group: { en: Negative }, label: { en: Verb }, merge: true, center: true }
+        - { key: tense, label: { en: Tense } }
+        - { key: qh, slot: aux, features: { interrogativity: int, polarity: pos } }
+        - { key: qs, slot: subj, features: { interrogativity: int, polarity: pos } }
+        - { key: qv, slot: verb, features: { interrogativity: int, polarity: pos } }
+        - { key: ss, slot: subj, features: { interrogativity: decl, polarity: pos } }
+        - { key: sh, slot: aux, features: { interrogativity: decl, polarity: pos } }
+        - { key: sv, slot: verb, features: { interrogativity: decl, polarity: pos } }
+        - { key: ns, slot: subj, features: { interrogativity: decl, polarity: neg } }
+        - { key: nh, slot: aux, features: { interrogativity: decl, polarity: neg } }
+        - { key: nv, slot: verb, features: { interrogativity: decl, polarity: neg } }
       rows:
-        - { level: B1, tense: { en: Future }, qh: "**Will**", qs: "I", qv: "**be** work**ing**?", ss: "I", sh: "**will be**", sv: "work**ing**.", ns: "I", nh: "**won't be**", nv: "work**ing**." }
-        - { level: B1, tense: { en: Future }, qh: "**Will**", qs: "you", qv: "**be** work**ing**?", ss: "You", sh: "**will be**", sv: "work**ing**.", ns: "You", nh: "**won't be**", nv: "work**ing**." }
-        - { level: B1, tense: { en: Future }, qh: "**Will**", qs: "he", qv: "**be** work**ing**?", ss: "He", sh: "**will be**", sv: "work**ing**.", ns: "He", nh: "**won't be**", nv: "work**ing**." }
-        - { level: B1, tense: { en: Future }, qh: "**Will**", qs: "she", qv: "**be** work**ing**?", ss: "She", sh: "**will be**", sv: "work**ing**.", ns: "She", nh: "**won't be**", nv: "work**ing**." }
-        - { level: B1, tense: { en: Future }, qh: "**Will**", qs: "it", qv: "**be** work**ing**?", ss: "It", sh: "**will be**", sv: "work**ing**.", ns: "It", nh: "**won't be**", nv: "work**ing**." }
-        - { level: B1, tense: { en: Future }, qh: "**Will**", qs: "we", qv: "**be** work**ing**?", ss: "We", sh: "**will be**", sv: "work**ing**.", ns: "We", nh: "**won't be**", nv: "work**ing**." }
-        - { level: B1, tense: { en: Future }, qh: "**Will**", qs: "they", qv: "**be** work**ing**?", ss: "They", sh: "**will be**", sv: "work**ing**.", ns: "They", nh: "**won't be**", nv: "work**ing**." }
-        - { level: A1, tense: { en: Present }, qh: "**Am**", qs: "I", qv: "work**ing**?", ss: "I", sh: "**am**", sv: "work**ing**.", ns: "I", nh: "**am not**", nv: "work**ing**." }
-        - { level: A1, tense: { en: Present }, qh: "**Are**", qs: "you", qv: "work**ing**?", ss: "You", sh: "**are**", sv: "work**ing**.", ns: "You", nh: "**aren't**", nv: "work**ing**." }
-        - { level: A1, tense: { en: Present }, qh: "**Is**", qs: "he", qv: "work**ing**?", ss: "He", sh: "**is**", sv: "work**ing**.", ns: "He", nh: "**isn't**", nv: "work**ing**." }
-        - { level: A1, tense: { en: Present }, qh: "**Is**", qs: "she", qv: "work**ing**?", ss: "She", sh: "**is**", sv: "work**ing**.", ns: "She", nh: "**isn't**", nv: "work**ing**." }
-        - { level: A1, tense: { en: Present }, qh: "**Is**", qs: "it", qv: "work**ing**?", ss: "It", sh: "**is**", sv: "work**ing**.", ns: "It", nh: "**isn't**", nv: "work**ing**." }
-        - { level: A1, tense: { en: Present }, qh: "**Are**", qs: "we", qv: "work**ing**?", ss: "We", sh: "**are**", sv: "work**ing**.", ns: "We", nh: "**aren't**", nv: "work**ing**." }
-        - { level: A1, tense: { en: Present }, qh: "**Are**", qs: "they", qv: "work**ing**?", ss: "They", sh: "**are**", sv: "work**ing**.", ns: "They", nh: "**aren't**", nv: "work**ing**." }
-        - { level: A2, tense: { en: Past }, qh: "**Was**", qs: "I", qv: "work**ing**?", ss: "I", sh: "**was**", sv: "work**ing**.", ns: "I", nh: "**wasn't**", nv: "work**ing**." }
-        - { level: A2, tense: { en: Past }, qh: "**Were**", qs: "you", qv: "work**ing**?", ss: "You", sh: "**were**", sv: "work**ing**.", ns: "You", nh: "**weren't**", nv: "work**ing**." }
-        - { level: A2, tense: { en: Past }, qh: "**Was**", qs: "he", qv: "work**ing**?", ss: "He", sh: "**was**", sv: "work**ing**.", ns: "He", nh: "**wasn't**", nv: "work**ing**." }
-        - { level: A2, tense: { en: Past }, qh: "**Was**", qs: "she", qv: "work**ing**?", ss: "She", sh: "**was**", sv: "work**ing**.", ns: "She", nh: "**wasn't**", nv: "work**ing**." }
-        - { level: A2, tense: { en: Past }, qh: "**Was**", qs: "it", qv: "work**ing**?", ss: "It", sh: "**was**", sv: "work**ing**.", ns: "It", nh: "**wasn't**", nv: "work**ing**." }
-        - { level: A2, tense: { en: Past }, qh: "**Were**", qs: "we", qv: "work**ing**?", ss: "We", sh: "**were**", sv: "work**ing**.", ns: "We", nh: "**weren't**", nv: "work**ing**." }
-        - { level: A2, tense: { en: Past }, qh: "**Were**", qs: "they", qv: "work**ing**?", ss: "They", sh: "**were**", sv: "work**ing**.", ns: "They", nh: "**weren't**", nv: "work**ing**." }
+        - { level: B1, features: { tense: fut, person: 1, number: sg }, tense: { en: Future }, qh: { aux: Will }, qs: I, qv: [{ aux: be }, " work", { ending: ing }, "?"], ss: I, sh: { aux: will be }, sv: [work, { ending: ing }, "."], ns: I, nh: { aux: won't be }, nv: [work, { ending: ing }, "."] }
+        - { level: B1, features: { tense: fut, person: 2 }, tense: { en: Future }, qh: { aux: Will }, qs: you, qv: [{ aux: be }, " work", { ending: ing }, "?"], ss: You, sh: { aux: will be }, sv: [work, { ending: ing }, "."], ns: You, nh: { aux: won't be }, nv: [work, { ending: ing }, "."] }
+        - { level: B1, features: { tense: fut, person: 3, number: sg, gender: masc }, tense: { en: Future }, qh: { aux: Will }, qs: he, qv: [{ aux: be }, " work", { ending: ing }, "?"], ss: He, sh: { aux: will be }, sv: [work, { ending: ing }, "."], ns: He, nh: { aux: won't be }, nv: [work, { ending: ing }, "."] }
+        - { level: B1, features: { tense: fut, person: 3, number: sg, gender: fem }, tense: { en: Future }, qh: { aux: Will }, qs: she, qv: [{ aux: be }, " work", { ending: ing }, "?"], ss: She, sh: { aux: will be }, sv: [work, { ending: ing }, "."], ns: She, nh: { aux: won't be }, nv: [work, { ending: ing }, "."] }
+        - { level: B1, features: { tense: fut, person: 3, number: sg, gender: neut }, tense: { en: Future }, qh: { aux: Will }, qs: it, qv: [{ aux: be }, " work", { ending: ing }, "?"], ss: It, sh: { aux: will be }, sv: [work, { ending: ing }, "."], ns: It, nh: { aux: won't be }, nv: [work, { ending: ing }, "."] }
+        - { level: B1, features: { tense: fut, person: 1, number: pl }, tense: { en: Future }, qh: { aux: Will }, qs: we, qv: [{ aux: be }, " work", { ending: ing }, "?"], ss: We, sh: { aux: will be }, sv: [work, { ending: ing }, "."], ns: We, nh: { aux: won't be }, nv: [work, { ending: ing }, "."] }
+        - { level: B1, features: { tense: fut, person: 3, number: pl }, tense: { en: Future }, qh: { aux: Will }, qs: they, qv: [{ aux: be }, " work", { ending: ing }, "?"], ss: They, sh: { aux: will be }, sv: [work, { ending: ing }, "."], ns: They, nh: { aux: won't be }, nv: [work, { ending: ing }, "."] }
+        - { level: A1, features: { tense: prs, person: 1, number: sg }, tense: { en: Present }, qh: { aux: Am }, qs: I, qv: [work, { ending: ing }, "?"], ss: I, sh: { aux: am }, sv: [work, { ending: ing }, "."], ns: I, nh: { aux: am not }, nv: [work, { ending: ing }, "."] }
+        - { level: A1, features: { tense: prs, person: 2 }, tense: { en: Present }, qh: { aux: Are }, qs: you, qv: [work, { ending: ing }, "?"], ss: You, sh: { aux: are }, sv: [work, { ending: ing }, "."], ns: You, nh: { aux: aren't }, nv: [work, { ending: ing }, "."] }
+        - { level: A1, features: { tense: prs, person: 3, number: sg, gender: masc }, tense: { en: Present }, qh: { aux: Is }, qs: he, qv: [work, { ending: ing }, "?"], ss: He, sh: { aux: is }, sv: [work, { ending: ing }, "."], ns: He, nh: { aux: isn't }, nv: [work, { ending: ing }, "."] }
+        - { level: A1, features: { tense: prs, person: 3, number: sg, gender: fem }, tense: { en: Present }, qh: { aux: Is }, qs: she, qv: [work, { ending: ing }, "?"], ss: She, sh: { aux: is }, sv: [work, { ending: ing }, "."], ns: She, nh: { aux: isn't }, nv: [work, { ending: ing }, "."] }
+        - { level: A1, features: { tense: prs, person: 3, number: sg, gender: neut }, tense: { en: Present }, qh: { aux: Is }, qs: it, qv: [work, { ending: ing }, "?"], ss: It, sh: { aux: is }, sv: [work, { ending: ing }, "."], ns: It, nh: { aux: isn't }, nv: [work, { ending: ing }, "."] }
+        - { level: A1, features: { tense: prs, person: 1, number: pl }, tense: { en: Present }, qh: { aux: Are }, qs: we, qv: [work, { ending: ing }, "?"], ss: We, sh: { aux: are }, sv: [work, { ending: ing }, "."], ns: We, nh: { aux: aren't }, nv: [work, { ending: ing }, "."] }
+        - { level: A1, features: { tense: prs, person: 3, number: pl }, tense: { en: Present }, qh: { aux: Are }, qs: they, qv: [work, { ending: ing }, "?"], ss: They, sh: { aux: are }, sv: [work, { ending: ing }, "."], ns: They, nh: { aux: aren't }, nv: [work, { ending: ing }, "."] }
+        - { level: A2, features: { tense: pst, person: 1, number: sg }, tense: { en: Past }, qh: { aux: Was }, qs: I, qv: [work, { ending: ing }, "?"], ss: I, sh: { aux: was }, sv: [work, { ending: ing }, "."], ns: I, nh: { aux: wasn't }, nv: [work, { ending: ing }, "."] }
+        - { level: A2, features: { tense: pst, person: 2 }, tense: { en: Past }, qh: { aux: Were }, qs: you, qv: [work, { ending: ing }, "?"], ss: You, sh: { aux: were }, sv: [work, { ending: ing }, "."], ns: You, nh: { aux: weren't }, nv: [work, { ending: ing }, "."] }
+        - { level: A2, features: { tense: pst, person: 3, number: sg, gender: masc }, tense: { en: Past }, qh: { aux: Was }, qs: he, qv: [work, { ending: ing }, "?"], ss: He, sh: { aux: was }, sv: [work, { ending: ing }, "."], ns: He, nh: { aux: wasn't }, nv: [work, { ending: ing }, "."] }
+        - { level: A2, features: { tense: pst, person: 3, number: sg, gender: fem }, tense: { en: Past }, qh: { aux: Was }, qs: she, qv: [work, { ending: ing }, "?"], ss: She, sh: { aux: was }, sv: [work, { ending: ing }, "."], ns: She, nh: { aux: wasn't }, nv: [work, { ending: ing }, "."] }
+        - { level: A2, features: { tense: pst, person: 3, number: sg, gender: neut }, tense: { en: Past }, qh: { aux: Was }, qs: it, qv: [work, { ending: ing }, "?"], ss: It, sh: { aux: was }, sv: [work, { ending: ing }, "."], ns: It, nh: { aux: wasn't }, nv: [work, { ending: ing }, "."] }
+        - { level: A2, features: { tense: pst, person: 1, number: pl }, tense: { en: Past }, qh: { aux: Were }, qs: we, qv: [work, { ending: ing }, "?"], ss: We, sh: { aux: were }, sv: [work, { ending: ing }, "."], ns: We, nh: { aux: weren't }, nv: [work, { ending: ing }, "."] }
+        - { level: A2, features: { tense: pst, person: 3, number: pl }, tense: { en: Past }, qh: { aux: Were }, qs: they, qv: [work, { ending: ing }, "?"], ss: They, sh: { aux: were }, sv: [work, { ending: ing }, "."], ns: They, nh: { aux: weren't }, nv: [work, { ending: ing }, "."] }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: text
+      - type: prose
         level: A1
         text:
-          en: "Each continuous tense is **be** + verb + **-ing**: **will be** for the future, **am / is / are** for the present, **was / were** for the past."
-      - type: bullets
+          en: ["Each continuous tense is ", { pattern: [{ term: be }, { slot: verb }, { term: "-ing" }] }, ": ", { term: will be }, " for the future, ", { alternatives: [{ term: am }, { term: is }, { term: are }] }, " for the present, ", { alternatives: [{ term: was }, { term: were }] }, " for the past."]
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "In questions be goes before the subject; in negatives it takes **not**: isn't, wasn't, won't be."
-          - level: A1
+              en: ["In questions be goes before the subject; in negatives it takes ", { term: not }, ": isn't, wasn't, won't be."]
+          - type: rule
+            level: A1
             text:
-              en: "The main verb always ends in **-ing**, in every tense and for every person."
-          - level: A1
+              en: ["The main verb always ends in ", { term: "-ing" }, ", in every tense and for every person."]
+          - type: rule
+            level: A1
             text:
-              en: "Be changes with the person in the present and past; **will be** is the same for everyone."
-          - level: A1
+              en: ["Be changes with the person in the present and past; ", { term: will be }, " is the same for everyone."]
+          - type: rule
+            level: A1
             text:
               en: "Speech and messages use short forms: I'm, she's, they're, won't be."
 
-  - title: { en: "The -ing form" }
+  - title: { en: The -ing form }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: ending, label: { en: Verb ending } }
           - { key: rule, label: { en: Spelling } }
-          - { key: examples, label: { en: Examples } }
+          - { key: ex, label: { en: Examples } }
         rows:
-          - { level: A1, ending: { en: most verbs }, rule: + ing, examples: work → working / play → playing / go → going }
-          - { level: A1, ending: "-e", rule: { en: drop e + ing }, examples: make → making / write → writing / come → coming }
-          - { level: A1, ending: "-ee", rule: + ing, examples: see → seeing / agree → agreeing }
-          - { level: A1, ending: "-ie", rule: ie → ying, examples: lie → lying / die → dying }
-          - { level: A1, ending: { en: "1 vowel + 1 consonant, one syllable" }, rule: { en: double the consonant + ing }, examples: run → running / sit → sitting / swim → swimming }
-          - { level: A1, ending: "-w, -x, -y", rule: { en: "+ ing, single consonant" }, examples: show → showing / fix → fixing / stay → staying }
+          - { level: A1, ending: { en: most verbs }, rule: { pattern: [{ ending: ing }], follows: true }, ex: { examples: [{ mapping: [work, working] }, { mapping: [play, playing] }, { mapping: [go, going] }] } }
+          - { level: A1, ending: "-e", rule: { en: { pattern: [drop e, ing] } }, ex: { examples: [{ mapping: [make, making] }, { mapping: [write, writing] }, { mapping: [come, coming] }] } }
+          - { level: A1, ending: "-ee", rule: { pattern: [{ ending: ing }], follows: true }, ex: { examples: [{ mapping: [see, seeing] }, { mapping: [agree, agreeing] }] } }
+          - { level: A1, ending: "-ie", rule: { mapping: [ie, ying] }, ex: { examples: [{ mapping: [lie, lying] }, { mapping: [die, dying] }] } }
+          - { level: A1, ending: { en: { pattern: ["1 vowel", "1 consonant, one syllable"] } }, rule: { en: { pattern: [double the consonant, ing] } }, ex: { examples: [{ mapping: [run, running] }, { mapping: [sit, sitting] }, { mapping: [swim, swimming] }] } }
+          - { level: A1, ending: "-w, -x, -y", rule: { en: { pattern: ["ing, single consonant"], follows: true } }, ex: { examples: [{ mapping: [show, showing] }, { mapping: [fix, fixing] }, { mapping: [stay, staying] }] } }
 
   - title: { en: "Present continuous: form" }
+    role: form
+    features: { tense: prs, aspect: prog }
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: subject, label: { en: Subject } }
           - { key: form, label: { en: Form } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, subject: I, form: am / 'm + V-ing, example: "I'**m reading**." }
-          - { level: A1, subject: he / she / it, form: is / 's + V-ing, example: "He'**s reading**." }
-          - { level: A1, subject: you / we / they, form: are / 're + V-ing, example: "They'**re reading**." }
-          - { level: A1, subject: { en: singular noun }, form: is + V-ing, example: "My sister **is reading**." }
-      - type: bullets
+          - { level: A1, features: { person: 1, number: sg }, subject: I, form: { pattern: [{ alternatives: [am, "'m"] }, { slot: V-ing }] }, ex: [I', { target: m reading }, "."] }
+          - { level: A1, features: { person: 3, number: sg }, subject: { alternatives: [he, she, it] }, form: { pattern: [{ alternatives: [is, "'s"] }, { slot: V-ing }] }, ex: [He', { target: s reading }, "."] }
+          - { level: A1, features: [{ person: 2 }, { person: 1, number: pl }, { person: 3, number: pl }], subject: { alternatives: [you, we, they] }, form: { pattern: [{ alternatives: [are, "'re"] }, { slot: V-ing }] }, ex: [They', { target: re reading }, "."] }
+          - { level: A1, features: { person: 3, number: sg }, subject: { en: singular noun }, form: { pattern: [is, { slot: V-ing }] }, ex: ["My sister ", { target: is reading }, "."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
               en: "A short answer repeats be; the positive answer takes the full form:"
-            ex: "Are you working? — Yes, I **am**. / No, I'**m not**."
-          - level: A1
+            ex: { exchange: [Are you working?, { alternatives: [["Yes, I ", { target: am }, "."], ["No, I'", { target: m not }, "."]] }] }
+          - type: rule
+            level: A1
             text:
-              en: "A wh-word goes first: wh-word + am / is / are + subject + V-ing."
-            ex: "What **are** you **doing**?"
+              en: ["A wh-word goes first: ", { pattern: [{ slot: wh-word }, { alternatives: [am, is, are] }, { slot: subject }, { slot: V-ing }] }, "."]
+            ex: ["What ", { target: are }, " you ", { target: doing }, "?"]
 
   - title: { en: "Present continuous: use" }
+    role: use
+    features: { tense: prs, aspect: prog }
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: Actions happening now }, example: "I'**m cooking** dinner." }
-          - { level: A1, use: { en: Temporary situations }, example: "I'**m staying** with my sister this week." }
-          - { level: A1, use: { en: "Changes and trends around now" }, example: "Prices **are going** up." }
-      - type: bullets
+          - { level: A1, use: { en: Actions happening now }, ex: [I', { target: m cooking }, " dinner."] }
+          - { level: A1, use: { en: Temporary situations }, ex: [I', { target: m staying }, " with my sister this week."] }
+          - { level: A1, use: { en: Changes and trends around now }, ex: ["Prices ", { target: are going }, " up."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
               en: "Time words: now, right now, at the moment, today, this week, Look!"
-            ex: "**Look!** It's snow**ing**."
-          - level: A1
+            ex: [{ target: Look! }, " It's snow", { ending: ing }, "."]
+          - type: note
+            level: A1
             text:
-              en: "Plans and arrangements for the future: see [Future forms](id:en.tenses.future-forms)."
+              en: ["Plans and arrangements for the future: see ", { link: Future forms, to: en.tenses.future-forms }, "."]
 
   - title: { en: "Past continuous: form" }
+    role: form
+    features: { tense: pst, aspect: prog }
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: subject, label: { en: Subject } }
           - { key: form, label: { en: Form } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, subject: I / he / she / it, form: was + V-ing, example: "She **was reading**." }
-          - { level: A2, subject: you / we / they, form: were + V-ing, example: "We **were reading**." }
-      - type: bullets
+          - { level: A2, features: [{ person: 1, number: sg }, { person: 3, number: sg }], subject: { alternatives: [I, he, she, it] }, form: { pattern: [was, { slot: V-ing }] }, ex: ["She ", { target: was reading }, "."] }
+          - { level: A2, features: [{ person: 2 }, { person: 1, number: pl }, { person: 3, number: pl }], subject: { alternatives: [you, we, they] }, form: { pattern: [were, { slot: V-ing }] }, ex: ["We ", { target: were reading }, "."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "A short answer repeats was / were:"
-            ex: "Were you sleeping? — Yes, I **was**. / No, I **wasn't**."
-          - level: A2
+              en: ["A short answer repeats ", { alternatives: [was, were] }, ":"]
+            ex: { exchange: [Were you sleeping?, { alternatives: [["Yes, I ", { target: was }, "."], ["No, I ", { target: wasn't }, "."]] }] }
+          - type: rule
+            level: A2
             text:
-              en: "A wh-word goes first: wh-word + was / were + subject + V-ing."
-            ex: "What **were** you **doing** at 8?"
+              en: ["A wh-word goes first: ", { pattern: [{ slot: wh-word }, { alternatives: [was, were] }, { slot: subject }, { slot: V-ing }] }, "."]
+            ex: ["What ", { target: were }, " you ", { target: doing }, " at 8?"]
 
   - title: { en: "Past continuous: use" }
+    role: use
+    features: { tense: pst, aspect: prog }
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, use: { en: In progress at a past moment }, example: "At 8 o'clock I **was having** dinner." }
-          - { level: A2, use: { en: Background to a story }, example: "The sun **was shining** and children **were playing**." }
-          - { level: A2, use: { en: "Interrupted action (when + past simple)" }, example: "I **was cooking** when the phone **rang**." }
-          - { level: A2, use: { en: "Two actions at the same time (while)" }, example: "While I **was cooking**, he **was watching** TV." }
-      - type: bullets
+          - { level: A2, use: { en: In progress at a past moment }, ex: ["At 8 o'clock I ", { target: was having }, " dinner."] }
+          - { level: A2, use: { en: Background to a story }, ex: ["The sun ", { target: was shining }, " and children ", { target: were playing }, "."] }
+          - { level: A2, use: { en: [Interrupted action (, { pattern: [when, { slot: past simple }] }, ")"] }, ex: ["I ", { target: was cooking }, " when the phone ", { target: rang }, "."] }
+          - { level: A2, use: { en: Two actions at the same time (while) }, ex: ["While I ", { target: was cooking }, ", he ", { target: was watching }, " TV."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "**while** comes before the long action; **when** comes before the short action that interrupts it."
+              en: [{ term: while }, " comes before the long action; ", { term: when }, " comes before the short action that interrupts it."]
 
   - title: { en: "Future continuous: form and use" }
+    role: form
+    features: { tense: fut, aspect: prog }
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, use: { en: "In progress at a future moment" }, example: "This time tomorrow I'**ll be flying** to Rome." }
-          - { level: B1, use: { en: "Polite questions about plans" }, example: "**Will** you **be using** the car tonight?" }
-      - type: bullets
+          - { level: B1, use: { en: In progress at a future moment }, ex: [This time tomorrow I', { target: ll be flying }, " to Rome."] }
+          - { level: B1, use: { en: Polite questions about plans }, ex: [{ target: Will }, " you ", { target: be using }, " the car tonight?"] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
               en: "Time words: this time tomorrow, at 8 tonight, all day tomorrow."
 
   - title: { en: Stative verbs }
+    role: own
     content:
-      - type: text
+      - type: prose
         level: A1
         text:
           en: "Verbs for states take the simple tenses, also for what is true right now."
-      - type: table
+      - type: usage
         columns:
           - { key: group, label: { en: Group } }
           - { key: verbs, label: { en: Verbs } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, group: { en: Feelings }, verbs: "like, love, hate, want, need, prefer", example: { ex: "I **want** a coffee." } }
-          - { level: A1, group: { en: Thinking }, verbs: { en: "know, think (= believe), understand, remember, mean" }, example: { ex: "I **understand** you." } }
-          - { level: A2, group: { en: Possession }, verbs: { en: "have (= own), own, belong" }, example: { ex: "This bag **belongs** to me." } }
-          - { level: A2, group: { en: "Senses, being" }, verbs: "see, hear, seem, cost", example: { ex: "It **costs** £10." } }
+          - { level: A1, group: { en: Feelings }, verbs: "like, love, hate, want, need, prefer", ex: ["I ", { target: want }, " a coffee."] }
+          - { level: A1, group: { en: Thinking }, verbs: { en: "know, think (= believe), understand, remember, mean" }, ex: ["I ", { target: understand }, " you."] }
+          - { level: A2, group: { en: Possession }, verbs: { en: "have (= own), own, belong" }, ex: ["This bag ", { target: belongs }, " to me."] }
+          - { level: A2, group: { en: "Senses, being" }, verbs: "see, hear, seem, cost", ex: ["It ", { target: costs }, " £10."] }
 
   - title: { en: "Compare: continuous and simple" }
+    role: compare
     content:
-      - type: table
+      - type: comparison
         columns:
-          - { key: continuous, label: { en: Continuous } }
+          - { key: continuous, label: { en: Continuous }, features: { aspect: prog } }
           - { key: simple, label: { en: Simple } }
         rows:
           - { level: A1, continuous: { en: "in progress, temporary" }, simple: { en: "habit, fact, finished event" } }
-          - { level: A1, continuous: { ex: "I'**m drinking** tea now." }, simple: { ex: "I **drink** tea every day." } }
-          - { level: A1, continuous: { ex: "What **are** you **doing**? (= now)" }, simple: { ex: "What **do** you **do**? (= your job)" } }
-          - { level: A2, continuous: { ex: "I **was walking** home…" }, simple: { ex: "…when I **saw** Tom." } }
-      - type: bullets
+          - { level: A1, continuous: [I', { target: m drinking }, " tea now."], simple: ["I ", { target: drink }, " tea every day."] }
+          - { level: A1, continuous: ["What ", { target: are }, " you ", { target: doing }, "? ", { gloss: { en: = now } }], simple: ["What ", { target: do }, " you ", { target: do }, "? ", { gloss: { en: = your job } }] }
+          - { level: A2, continuous: ["I ", { target: was walking }, " home", { gap: true }], simple: [{ gap: true }, "when I ", { target: saw }, " Tom."] }
+      - type: list
         items:
-          - level: A1
+          - type: note
+            level: A1
             text:
-              en: "Simple forms: [Simple Tenses](id:en.tenses.simple-tenses)."
+              en: ["Simple forms: ", { link: Simple Tenses, to: en.tenses.simple-tenses }, "."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: She working now., right: "She **is working** now.", rule: { en: "be is required" } }
-          - { level: A1, wrong: I am work now., right: "I'm **working** now.", rule: { en: "be + V-ing" } }
-          - { level: A1, wrong: What you are doing?, right: "What **are you** doing?", rule: { en: "be goes before the subject" } }
-          - { level: A1, wrong: Does she working?, right: "**Is** she working?", rule: { en: "questions start with be" } }
-          - { level: A1, wrong: He is runing., right: "He is **running**.", rule: { en: "one vowel + one consonant → double it" } }
-          - { level: A1, wrong: I am knowing the answer., right: "I **know** the answer.", rule: { en: "stative verbs → simple tenses" } }
-          - { level: A2, wrong: "When I was walking home, I was seeing an accident.", right: "…I **saw** an accident.", rule: { en: "short interrupting action → past simple" } }
-          - { level: A2, wrong: We was playing., right: "We **were** playing.", rule: { en: "you / we / they → were" } }
-          - { level: B1, wrong: I will flying tomorrow., right: "I **will be flying** tomorrow.", rule: { en: "will be + V-ing" } }
+          - { level: A1, wrong: She working now., right: ["She ", { target: is working }, " now."], rule: { en: be is required } }
+          - { level: A1, wrong: I am work now., right: ["I'm ", { target: working }, " now."], rule: { en: { pattern: [be, { slot: V-ing }] } } }
+          - { level: A1, wrong: What you are doing?, right: ["What ", { target: are you }, " doing?"], rule: { en: be goes before the subject } }
+          - { level: A1, wrong: Does she working?, right: [{ target: Is }, " she working?"], rule: { en: questions start with be } }
+          - { level: A1, wrong: He is runing., right: ["He is ", { target: running }, "."], rule: { en: { mapping: [{ pattern: [one vowel, one consonant] }, double it] } } }
+          - { level: A1, wrong: I am knowing the answer., right: ["I ", { target: know }, " the answer."], rule: { en: { takes: [stative verbs, simple tenses] } } }
+          - { level: A2, wrong: "When I was walking home, I was seeing an accident.", right: [{ gap: true }, "I ", { target: saw }, " an accident."], rule: { en: { takes: [short interrupting action, past simple] } } }
+          - { level: A2, wrong: We was playing., right: ["We ", { target: were }, " playing."], rule: { en: { takes: [{ alternatives: [you, we, they] }, were] } } }
+          - { level: B1, wrong: I will flying tomorrow., right: ["I ", { target: will be flying }, " tomorrow."], rule: { en: { pattern: [will be, { slot: V-ing }] } } }

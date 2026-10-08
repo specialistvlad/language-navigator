@@ -9,127 +9,143 @@ status: { en: draft }
 
 title: { en: Passive Voice }
 summary:
-  en: "The passive (be + past participle) puts the receiver of the action first, for an unknown or unimportant doer, a process or formal writing. Be changes with the tense and the participle stays: English **is spoken** here."
+  lead: { en: [The passive (, { pattern: [be, { slot: past participle }] }, ") puts the receiver of the action first, for an unknown or unimportant doer, a process or formal writing."] }
+  rule: { en: "Be changes with the tense and the participle stays:" }
+  ex: ["English ", { target: is spoken }, " here."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: point, label: { en: Point } }
         - { key: rule, label: { en: Rule } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: B1, point: { en: Active → passive }, rule: { en: "the object becomes the subject; be in the tense of the active verb + past participle" }, example: "Shakespeare wrote Hamlet. → Hamlet **was written** by Shakespeare." }
-        - { level: B1, point: Present simple, rule: am / is / are + V-ed, example: "English **is spoken** here." }
-        - { level: B1, point: Past simple, rule: was / were + V-ed, example: "The bridge **was built** in 1990." }
-        - { level: B1, point: Present perfect, rule: has / have been + V-ed, example: "The window **has been broken**." }
-        - { level: B1, point: "will, can, must", rule: will / can / must be + V-ed, example: "The results **will be sent** tomorrow." }
-        - { level: B1, point: { en: Negative }, rule: be + not + V-ed, example: "The room **wasn't cleaned**." }
-        - { level: B1, point: { en: Question }, rule: be + subject + V-ed, example: "**Was** the room **cleaned**?" }
-        - { level: B1, point: by / with, rule: { en: "by = the doer, added only when it is new or important; with = a tool" }, example: "The song **was written by** Adele." }
-        - { level: B1, point: { en: Use }, rule: { en: "unknown or unimportant doer, processes, news and formal writing" }, example: "Wine **is made** from grapes." }
-        - { level: B1, point: { en: Trap }, rule: { en: "only verbs with an object have a passive: happen, arrive and die have none" }, example: "The accident **happened** yesterday." }
+        - { level: B1, point: { en: { mapping: [Active, passive] } }, rule: { en: ["the object becomes the subject; be in the tense of the active ", { pattern: [{ slot: verb }, { slot: past participle }] }] }, ex: { mapping: [Shakespeare wrote Hamlet., ["Hamlet ", { target: was written }, " by Shakespeare."]] } }
+        - { level: B1, point: Present simple, rule: { pattern: [{ alternatives: [am, is, are] }, { slot: V-ed }] }, ex: ["English ", { target: is spoken }, " here."] }
+        - { level: B1, point: Past simple, rule: { pattern: [{ alternatives: [was, were] }, { slot: V-ed }] }, ex: ["The bridge ", { target: was built }, " in ", { date: "1990", value: "1990" }, "."] }
+        - { level: B1, point: Present perfect, rule: { pattern: [[{ alternatives: [has, have] }, "  been"], { slot: V-ed }] }, ex: ["The window ", { target: has been broken }, "."] }
+        - { level: B1, point: "will, can, must", rule: { pattern: [[{ alternatives: [will, can, must] }, "  be"], { slot: V-ed }] }, ex: ["The results ", { target: will be sent }, " tomorrow."] }
+        - { level: B1, point: { en: Negative }, rule: { pattern: [be, not, { slot: V-ed }] }, ex: ["The room ", { target: wasn't cleaned }, "."] }
+        - { level: B1, point: { en: Question }, rule: { pattern: [be, { slot: subject }, { slot: V-ed }] }, ex: [{ target: Was }, " the room ", { target: cleaned }, "?"] }
+        - { level: B1, point: { alternatives: [by, with] }, rule: { en: "by = the doer, added only when it is new or important; with = a tool" }, ex: ["The song ", { target: was written by }, " Adele."] }
+        - { level: B1, point: { en: Use }, rule: { en: "unknown or unimportant doer, processes, news and formal writing" }, ex: ["Wine ", { target: is made }, " from grapes."] }
+        - { level: B1, point: { en: Trap }, rule: { en: "only verbs with an object have a passive: happen, arrive and die have none" }, ex: ["The accident ", { target: happened }, " yesterday."] }
 
 sections:
   - title: { en: "Form: active to passive" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
-          - { key: active, label: { en: Active } }
-          - { key: passive, label: { en: Passive } }
+          - { key: active, label: { en: Active }, features: { voice: act } }
+          - { key: passive, label: { en: Passive }, features: { voice: pass } }
         rows:
-          - { level: B1, active: { ex: "Shakespeare **wrote** Hamlet." }, passive: { ex: "Hamlet **was written** by Shakespeare." } }
-          - { level: B1, active: { ex: "They **sell** tickets online." }, passive: { ex: "Tickets **are sold** online." } }
-      - type: bullets
+          - { level: B1, active: ["Shakespeare ", { target: wrote }, " Hamlet."], passive: ["Hamlet ", { target: was written }, " by Shakespeare."] }
+          - { level: B1, active: ["They ", { target: sell }, " tickets online."], passive: ["Tickets ", { target: are sold }, " online."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "The object of the active sentence becomes the subject of the passive."
-          - level: B1
+              en: The object of the active sentence becomes the subject of the passive.
+          - type: rule
+            level: B1
             text:
-              en: "The verb is **be** in the tense of the active verb, plus the past participle."
-          - level: B1
+              en: ["The verb is ", { term: be }, " in the tense of the active verb, plus the past participle."]
+          - type: rule
+            level: B1
             text:
               en: "Verbs with an object have a passive. happen, arrive, die and sleep have an active form only."
 
   - title: { en: "Form: tenses" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: tense, label: { en: Tense } }
           - { key: form, label: { en: Form } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, tense: Present simple, form: am / is / are + V-ed, example: "English **is spoken** here." }
-          - { level: B1, tense: Past simple, form: was / were + V-ed, example: "The bridge **was built** in 1990." }
-          - { level: B1, tense: Present perfect, form: has / have been + V-ed, example: "The window **has been broken**." }
-          - { level: B1, tense: will, form: will be + V-ed, example: "The results **will be sent** tomorrow." }
-          - { level: B1, tense: { en: can / must }, form: can / must be + V-ed, example: "The door **must be locked**." }
-      - type: bullets
+          - { level: B1, tense: Present simple, form: { pattern: [{ alternatives: [am, is, are] }, { slot: V-ed }] }, ex: ["English ", { target: is spoken }, " here."] }
+          - { level: B1, tense: Past simple, form: { pattern: [{ alternatives: [was, were] }, { slot: V-ed }] }, ex: ["The bridge ", { target: was built }, " in ", { date: "1990", value: "1990" }, "."] }
+          - { level: B1, tense: Present perfect, form: { pattern: [[{ alternatives: [has, have] }, "  been"], { slot: V-ed }] }, ex: ["The window ", { target: has been broken }, "."] }
+          - { level: B1, tense: will, form: { pattern: [will be, { slot: V-ed }] }, ex: ["The results ", { target: will be sent }, " tomorrow."] }
+          - { level: B1, tense: { en: { alternatives: [can, must] } }, form: { pattern: [[{ alternatives: [can, must] }, "  be"], { slot: V-ed }] }, ex: ["The door ", { target: must be locked }, "."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
               en: "V-ed = past participle: made, written, sold, taken, built."
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "Irregular participles are in the [irregular verbs table](id:en.verbs.irregular-verbs-table)."
+              en: ["Irregular participles are in the ", { link: irregular verbs table, to: en.verbs.irregular-verbs-table }, "."]
 
   - title: { en: "Form: negatives and questions" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: type, label: { en: Type } }
           - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, type: { en: Negative }, pattern: be + not + V-ed, example: "The room **wasn't cleaned**." }
-          - { level: B1, type: { en: Question }, pattern: be + subject + V-ed, example: "**Was** the room **cleaned**?" }
-          - { level: B1, type: Wh-question, pattern: wh-word + be + subject + V-ed, example: "When **was** it **built**?" }
-      - type: bullets
+          - { level: B1, features: { polarity: neg, interrogativity: decl }, type: { en: Negative }, pattern: { pattern: [be, not, { slot: V-ed }] }, ex: ["The room ", { target: wasn't cleaned }, "."] }
+          - { level: B1, features: { polarity: pos, interrogativity: int }, type: { en: Question }, pattern: { pattern: [be, { slot: subject }, { slot: V-ed }] }, ex: [{ target: Was }, " the room ", { target: cleaned }, "?"] }
+          - { level: B1, features: { interrogativity: int }, type: Wh-question, pattern: { pattern: [{ slot: wh-word }, be, { slot: subject }, { slot: V-ed }] }, ex: ["When ", { target: was }, " it ", { target: built }, "?"] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "The first auxiliary changes position: **has** it **been** fixed? / It **hasn't been** fixed."
+              en: ["The first auxiliary changes position: ", { examples: [[{ target: has }, " it ", { target: been }, " fixed?"], ["It ", { target: hasn't been }, " fixed."]] }]
 
-  - title: { en: "Form: by + agent" }
+  - title: { en: ["Form: ", { pattern: [by, { slot: agent }] }] }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: word, label: { en: Word } }
           - { key: introduces, label: { en: Introduces } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, word: by, introduces: { en: "the doer" }, example: "The song **was written by** Adele." }
-          - { level: B1, word: with, introduces: { en: "a tool or material" }, example: "The door **was opened with** a key." }
-      - type: bullets
+          - { level: B1, word: by, introduces: { en: the doer }, ex: ["The song ", { target: was written by }, " Adele."] }
+          - { level: B1, word: with, introduces: { en: a tool or material }, ex: ["The door ", { target: was opened with }, " a key."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "**by** + agent goes at the end of the clause."
-          - level: B1
+              en: [{ pattern: [{ term: by }, { slot: agent }] }, " goes at the end of the clause."]
+          - type: rule
+            level: B1
             text:
-              en: "The agent is added when it is new or important information."
+              en: The agent is added when it is new or important information.
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, use: { en: "The doer is unknown" }, example: "My phone **was stolen** on the train." }
-          - { level: B1, use: { en: "The doer is obvious or unimportant" }, example: "The room **is cleaned** every day." }
-          - { level: B1, use: { en: "Processes and how things are made" }, example: "Wine **is made** from grapes." }
-          - { level: B1, use: { en: "News, notices and formal writing" }, example: "Two people **were arrested** last night." }
-          - { level: B1, use: { en: "The receiver is the topic" }, example: "Our teacher **was given** a prize." }
+          - { level: B1, use: { en: The doer is unknown }, ex: ["My phone ", { target: was stolen }, " on the train."] }
+          - { level: B1, use: { en: The doer is obvious or unimportant }, ex: ["The room ", { target: is cleaned }, " every day."] }
+          - { level: B1, use: { en: Processes and how things are made }, ex: ["Wine ", { target: is made }, " from grapes."] }
+          - { level: B1, use: { en: "News, notices and formal writing" }, ex: ["Two people ", { target: were arrested }, " last night."] }
+          - { level: B1, use: { en: The receiver is the topic }, ex: ["Our teacher ", { target: was given }, " a prize."] }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: B1, wrong: English speaks here., right: "English **is spoken** here.", rule: { en: "the subject receives the action → be + V-ed" } }
-          - { level: B1, wrong: The bridge built in 1990., right: "The bridge **was built** in 1990.", rule: { en: "the passive needs be" } }
-          - { level: B1, wrong: The window was broke., right: "The window was **broken**.", rule: { en: "use the past participle" } }
-          - { level: B1, wrong: The accident was happened yesterday., right: "The accident **happened** yesterday.", rule: { en: "happen, arrive and die have no passive" } }
-          - { level: B1, wrong: The book was written from Orwell., right: "The book was written **by** Orwell.", rule: { en: "agent → by" } }
-          - { level: B1, wrong: "Was the room cleaned? — Yes, it cleaned.", right: "Yes, it **was**.", rule: { en: "the short answer repeats be" } }
+          - { level: B1, wrong: English speaks here., right: ["English ", { target: is spoken }, " here."], rule: { en: { takes: [the subject receives the action, { pattern: [be, { slot: V-ed }] }] } } }
+          - { level: B1, wrong: ["The bridge built in ", { date: "1990", value: "1990" }, "."], right: ["The bridge ", { target: was built }, " in ", { date: "1990", value: "1990" }, "."], rule: { en: the passive needs be } }
+          - { level: B1, wrong: The window was broke., right: ["The window was ", { target: broken }, "."], rule: { en: use the past participle } }
+          - { level: B1, wrong: The accident was happened yesterday., right: ["The accident ", { target: happened }, " yesterday."], rule: { en: "happen, arrive and die have no passive" } }
+          - { level: B1, wrong: The book was written from Orwell., right: ["The book was written ", { target: by }, " Orwell."], rule: { en: { mapping: [agent, by] } } }
+          - { level: B1, wrong: { exchange: [Was the room cleaned?, "Yes, it cleaned."] }, right: ["Yes, it ", { target: was }, "."], rule: { en: the short answer repeats be } }

@@ -9,67 +9,73 @@ status: { en: draft }
 
 title: { en: The Alphabet }
 summary:
-  en: "The 26 letters of the English alphabet and their names, used to spell words aloud. A letter's name differs from its sound in a word: **A** is said /eɪ/, but **a**pple starts with /æ/."
+  lead: { en: "The 26 letters of the English alphabet and their names, used to spell words aloud." }
+  rule: { en: ["A letter's name differs from its sound in a word: ", { letter: A }, " is said ", { ipa: eɪ }, ", but ", { letter: a }, "pple starts with ", { ipa: æ }, "."] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: point, label: { en: Point } }
         - { key: rule, label: { en: Rule } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A0, point: { en: Letters }, rule: { en: "26 letters; vowels a, e, i, o, u; the other 21 are consonants; y works as both" }, example: "**y**es / m**y**" }
-        - { level: A0, point: { en: Vowel names }, rule: { en: "A /eɪ/, E /iː/, I /aɪ/, O /əʊ/, U /juː/" }, example: "**e**gg / **i**ce" }
-        - { level: A0, point: { en: G and J }, rule: { en: "G /dʒiː/, J /dʒeɪ/" }, example: "**g**irl / **j**ob" }
-        - { level: A0, point: { en: W and Z }, rule: { en: "W is *double U* /ˈdʌbəljuː/; Z is /zed/" }, example: "**w**ater / **z**oo" }
-        - { level: A0, point: { en: Name and sound }, rule: { en: "a letter's name and its sound in a word can differ: A is /eɪ/" }, example: "**a**pple /æ/" }
-        - { level: A0, point: US, rule: { en: "Z is /ziː/ and R is /ɑːr/" }, example: "Z /ziː/" }
+        - { level: A0, point: { en: Letters }, rule: { en: "26 letters; vowels a, e, i, o, u; the other 21 are consonants; y works as both" }, ex: { examples: [[{ letter: "y" }, es], [m, { letter: "y" }]] } }
+        - { level: A0, point: { en: Vowel names }, rule: { en: ["A ", { ipa: eɪ }, ", E ", { ipa: iː }, ", I ", { ipa: aɪ }, ", O ", { ipa: əʊ }, ", U ", { ipa: juː }] }, ex: { examples: [[{ letter: e }, gg], [{ letter: i }, ce]] } }
+        - { level: A0, point: { en: G and J }, rule: { en: ["G ", { ipa: dʒiː }, ", J ", { ipa: dʒeɪ }] }, ex: { examples: [[{ letter: g }, irl], [{ letter: j }, ob]] } }
+        - { level: A0, point: { en: W and Z }, rule: { en: ["W is ", { term: double U }, " ", { ipa: ˈdʌbəljuː }, "; Z is ", { ipa: zed }] }, ex: { examples: [[{ letter: w }, ater], [{ letter: z }, oo]] } }
+        - { level: A0, point: { en: Name and sound }, rule: { en: ["a letter's name and its sound in a word can differ: A is ", { ipa: eɪ }] }, ex: [{ letter: a }, "pple ", { ipa: æ }] }
+        - { level: A0, point: US, rule: { en: ["Z is ", { ipa: ziː }, " and R is ", { ipa: ɑːr }] }, ex: ["Z ", { ipa: ziː }], variety: en-US }
 
 sections:
   - title: { en: The alphabet }
+    role: own
     content:
-      - type: text
+      - type: prose
         level: A0
         text:
-          en: "26 letters. Vowels: **a, e, i, o, u**. The other 21 are consonants; **y** works as both (*yes*, *my*)."
-      - type: table
+          en: ["26 letters. Vowels: ", { letter: "a, e, i, o, u" }, ". The other 21 are consonants; ", { letter: "y" }, " works as both (", { term: "yes" }, ", ", { term: my }, ")."]
+      - type: inventory
+        set: letters
         columns:
           - { key: letter, label: { en: Letter } }
           - { key: name, label: { en: Name } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A0, letter: A a, name: /eɪ/, example: { ex: "**a**pple" } }
-          - { level: A0, letter: B b, name: /biː/, example: { ex: "**b**ook" } }
-          - { level: A0, letter: C c, name: /siː/, example: { ex: "**c**at" } }
-          - { level: A0, letter: D d, name: /diː/, example: { ex: "**d**og" } }
-          - { level: A0, letter: E e, name: /iː/, example: { ex: "**e**gg" } }
-          - { level: A0, letter: F f, name: /ef/, example: { ex: "**f**ish" } }
-          - { level: A0, letter: G g, name: /dʒiː/, example: { ex: "**g**irl" } }
-          - { level: A0, letter: H h, name: /eɪtʃ/, example: { ex: "**h**ouse" } }
-          - { level: A0, letter: I i, name: /aɪ/, example: { ex: "**i**ce" } }
-          - { level: A0, letter: J j, name: /dʒeɪ/, example: { ex: "**j**ob" } }
-          - { level: A0, letter: K k, name: /keɪ/, example: { ex: "**k**ey" } }
-          - { level: A0, letter: L l, name: /el/, example: { ex: "**l**emon" } }
-          - { level: A0, letter: M m, name: /em/, example: { ex: "**m**ilk" } }
-          - { level: A0, letter: N n, name: /en/, example: { ex: "**n**ame" } }
-          - { level: A0, letter: O o, name: /əʊ/, example: { ex: "**o**range" } }
-          - { level: A0, letter: P p, name: /piː/, example: { ex: "**p**en" } }
-          - { level: A0, letter: Q q, name: /kjuː/, example: { ex: "**q**ueen" } }
-          - { level: A0, letter: R r, name: /ɑː/, example: { ex: "**r**ed" } }
-          - { level: A0, letter: S s, name: /es/, example: { ex: "**s**un" } }
-          - { level: A0, letter: T t, name: /tiː/, example: { ex: "**t**ea" } }
-          - { level: A0, letter: U u, name: /juː/, example: { ex: "**u**mbrella" } }
-          - { level: A0, letter: V v, name: /viː/, example: { ex: "**v**an" } }
-          - { level: A0, letter: W w, name: /ˈdʌbəljuː/, example: { ex: "**w**ater" } }
-          - { level: A0, letter: X x, name: /eks/, example: { ex: "bo**x**" } }
-          - { level: A0, letter: Y y, name: /waɪ/, example: { ex: "**y**es" } }
-          - { level: A0, letter: Z z, name: /zed/, example: { ex: "**z**oo" } }
-      - type: bullets
+          - { level: A0, value: a, letter: A a, name: { ipa: eɪ }, ex: [{ letter: a }, pple] }
+          - { level: A0, value: b, letter: B b, name: { ipa: biː }, ex: [{ letter: b }, ook] }
+          - { level: A0, value: c, letter: C c, name: { ipa: siː }, ex: [{ letter: c }, at] }
+          - { level: A0, value: d, letter: D d, name: { ipa: diː }, ex: [{ letter: d }, og] }
+          - { level: A0, value: e, letter: E e, name: { ipa: iː }, ex: [{ letter: e }, gg] }
+          - { level: A0, value: f, letter: F f, name: { ipa: ef }, ex: [{ letter: f }, ish] }
+          - { level: A0, value: g, letter: G g, name: { ipa: dʒiː }, ex: [{ letter: g }, irl] }
+          - { level: A0, value: h, letter: H h, name: { ipa: eɪtʃ }, ex: [{ letter: h }, ouse] }
+          - { level: A0, value: i, letter: I i, name: { ipa: aɪ }, ex: [{ letter: i }, ce] }
+          - { level: A0, value: j, letter: J j, name: { ipa: dʒeɪ }, ex: [{ letter: j }, ob] }
+          - { level: A0, value: k, letter: K k, name: { ipa: keɪ }, ex: [{ letter: k }, ey] }
+          - { level: A0, value: l, letter: L l, name: { ipa: el }, ex: [{ letter: l }, emon] }
+          - { level: A0, value: m, letter: M m, name: { ipa: em }, ex: [{ letter: m }, ilk] }
+          - { level: A0, value: "n", letter: N n, name: { ipa: en }, ex: [{ letter: "n" }, ame] }
+          - { level: A0, value: o, letter: O o, name: { ipa: əʊ }, ex: [{ letter: o }, range] }
+          - { level: A0, value: p, letter: P p, name: { ipa: piː }, ex: [{ letter: p }, en] }
+          - { level: A0, value: q, letter: Q q, name: { ipa: kjuː }, ex: [{ letter: q }, ueen] }
+          - { level: A0, value: r, letter: R r, name: { ipa: ɑː }, ex: [{ letter: r }, ed] }
+          - { level: A0, value: s, letter: S s, name: { ipa: es }, ex: [{ letter: s }, un] }
+          - { level: A0, value: t, letter: T t, name: { ipa: tiː }, ex: [{ letter: t }, ea] }
+          - { level: A0, value: u, letter: U u, name: { ipa: juː }, ex: [{ letter: u }, mbrella] }
+          - { level: A0, value: v, letter: V v, name: { ipa: viː }, ex: [{ letter: v }, an] }
+          - { level: A0, value: w, letter: W w, name: { ipa: ˈdʌbəljuː }, ex: [{ letter: w }, ater] }
+          - { level: A0, value: x, letter: X x, name: { ipa: eks }, ex: [bo, { letter: x }] }
+          - { level: A0, value: "y", letter: Y y, name: { ipa: waɪ }, ex: [{ letter: "y" }, es] }
+          - { level: A0, value: z, letter: Z z, name: { ipa: zed }, ex: [{ letter: z }, oo] }
+      - type: list
         items:
-          - level: A0
+          - type: rule
+            level: A0
             text:
-              en: "A letter's name and its sound in a word can differ: A is /eɪ/, but **a**pple starts with /æ/."
-          - level: A0
+              en: ["A letter's name and its sound in a word can differ: A is ", { ipa: eɪ }, ", but ", { letter: a }, "pple starts with ", { ipa: æ }, "."]
+          - type: note
+            level: A0
+            variety: en-US
             text:
-              en: "US: Z is /ziː/ (*zee*) and R is /ɑːr/."
+              en: ["Z is ", { ipa: ziː }, " (", { sound: zee }, ") and R is ", { ipa: ɑːr }, "."]

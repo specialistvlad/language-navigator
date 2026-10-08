@@ -9,136 +9,154 @@ status: { en: draft }
 
 title: { en: Question Tags }
 summary:
-  en: "Question tags are short questions added to a statement to check or confirm it. A positive statement takes a negative tag and a negative statement a positive tag, with the same auxiliary: It's cold, **isn't it**?"
+  lead: { en: Question tags are short questions added to a statement to check or confirm it. }
+  rule: { en: "A positive statement takes a negative tag and a negative statement a positive tag, with the same auxiliary:" }
+  ex: ["It's cold, ", { target: isn't it }, "?"]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: point, label: { en: Point } }
         - { key: rule, label: { en: Tag } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: B1, point: { en: Positive statement }, rule: { en: negative tag }, example: "It's cold, **isn't it**?" }
-        - { level: B1, point: { en: Negative statement }, rule: { en: positive tag }, example: "It isn't cold, **is it**?" }
-        - { level: B1, point: be, rule: "isn't / aren't / wasn't / weren't", example: "They **were** late, **weren't they**?" }
-        - { level: B1, point: Present simple, rule: don't / doesn't, example: "She **works** here, **doesn't she**?" }
-        - { level: B1, point: Past simple, rule: didn't, example: "He **left** early, **didn't he**?" }
-        - { level: B1, point: { en: "have, modals" }, rule: { en: "repeat the auxiliary or modal" }, example: "You **can** swim, **can't you**?" }
-        - { level: B1, point: { en: Pronoun }, rule: { en: "the tag ends with a pronoun that replaces the subject" }, example: "Tom is late, **isn't he**?" }
-        - { level: B1, point: I am, rule: aren't I, example: "I'**m** right, **aren't I**?" }
-        - { level: B1, point: Let's, rule: shall we, example: "**Let's** go, **shall we**?" }
-        - { level: B1, point: { en: Command }, rule: will you, example: "**Open** the door, **will you**?" }
-        - { level: B1, point: "nobody, nothing, never", rule: { en: "the statement is negative, so the tag is positive" }, example: "**Nobody** called, **did they**?" }
-        - { level: B1, point: { en: Intonation }, rule: { en: "falling ↘ = you are sure; rising ↗ = a real question" }, example: "You haven't seen my keys, **have you**? ↗" }
+        - { level: B1, point: { en: Positive statement }, rule: { en: negative tag }, ex: ["It's cold, ", { target: isn't it }, "?"] }
+        - { level: B1, point: { en: Negative statement }, rule: { en: positive tag }, ex: ["It isn't cold, ", { target: is it }, "?"] }
+        - { level: B1, point: be, rule: { alternatives: [isn't, aren't, wasn't, weren't] }, ex: ["They ", { target: were }, " late, ", { target: weren't they }, "?"] }
+        - { level: B1, point: Present simple, rule: { alternatives: [don't, doesn't] }, ex: ["She ", { target: works }, " here, ", { target: doesn't she }, "?"] }
+        - { level: B1, point: Past simple, rule: didn't, ex: ["He ", { target: left }, " early, ", { target: didn't he }, "?"] }
+        - { level: B1, point: { en: "have, modals" }, rule: { en: repeat the auxiliary or modal }, ex: ["You ", { target: can }, " swim, ", { target: can't you }, "?"] }
+        - { level: B1, point: { en: Pronoun }, rule: { en: the tag ends with a pronoun that replaces the subject }, ex: ["Tom is late, ", { target: isn't he }, "?"] }
+        - { level: B1, point: I am, rule: aren't I, ex: [I', { target: m }, " right, ", { target: aren't I }, "?"] }
+        - { level: B1, point: Let's, rule: shall we, ex: [{ target: Let's }, " go, ", { target: shall we }, "?"] }
+        - { level: B1, point: { en: Command }, rule: will you, ex: [{ target: Open }, " the door, ", { target: will you }, "?"] }
+        - { level: B1, point: "nobody, nothing, never", rule: { en: "the statement is negative, so the tag is positive" }, ex: [{ target: Nobody }, " called, ", { target: did they }, "?"] }
+        - { level: B1, point: { en: Intonation }, rule: { en: ["falling ", { intonation: fall }, " = you are sure; rising ", { intonation: rise }, " = a real question"] }, ex: ["You haven't seen my keys, ", { target: have you }, "? ", { intonation: rise }] }
 
 sections:
   - title: { en: "Form: auxiliary and pronoun" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: statement, label: { en: Statement } }
           - { key: tag, label: { en: Tag } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, statement: { en: positive }, tag: { en: negative }, example: "It's cold, **isn't it**?" }
-          - { level: B1, statement: { en: negative }, tag: { en: positive }, example: "It isn't cold, **is it**?" }
-      - type: bullets
+          - { level: B1, statement: { en: positive }, tag: { en: negative }, ex: ["It's cold, ", { target: isn't it }, "?"] }
+          - { level: B1, statement: { en: negative }, tag: { en: positive }, ex: ["It isn't cold, ", { target: is it }, "?"] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "The tag is an auxiliary + a pronoun: isn't **it**, doesn't **she**."
-          - level: B1
+              en: ["The tag is an ", { pattern: [auxiliary, a] }, " pronoun: isn't ", { term: it }, ", doesn't ", { term: she }, "."]
+          - type: rule
+            level: B1
             text:
-              en: "The pronoun replaces the subject: Tom is late, isn't **he**?"
-          - level: B1
+              en: "The pronoun replaces the subject:"
+            ex: ["Tom is late, isn't ", { target: he }, "?"]
+          - type: rule
+            level: B1
             text:
               en: "The negative tag uses the short form: isn't, doesn't, can't."
 
   - title: { en: "Form: the auxiliary matches the verb" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: verb, label: { en: Verb in the statement } }
           - { key: tag, label: { en: Tag } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, verb: be, tag: "isn't / aren't / wasn't / weren't", example: "They **were** late, **weren't they**?" }
-          - { level: B1, verb: present simple (other verbs), tag: don't / doesn't, example: "She **works** here, **doesn't she**?" }
-          - { level: B1, verb: past simple (other verbs), tag: didn't, example: "He **left** early, **didn't he**?" }
-          - { level: B1, verb: "have / has / had + participle", tag: "haven't / hasn't / hadn't", example: "You've **finished**, **haven't you**?" }
-          - { level: B1, verb: "will, can, must, should…", tag: "the same modal", example: "You **can** swim, **can't you**?" }
-      - type: bullets
+          - { level: B1, verb: be, tag: { alternatives: [isn't, aren't, wasn't, weren't] }, ex: ["They ", { target: were }, " late, ", { target: weren't they }, "?"] }
+          - { level: B1, verb: { en: present simple (other verbs) }, tag: { alternatives: [don't, doesn't] }, ex: ["She ", { target: works }, " here, ", { target: doesn't she }, "?"] }
+          - { level: B1, verb: { en: past simple (other verbs) }, tag: didn't, ex: ["He ", { target: left }, " early, ", { target: didn't he }, "?"] }
+          - { level: B1, verb: { pattern: [{ alternatives: [have, has, had] }, { slot: { en: participle } }] }, tag: { alternatives: [haven't, hasn't, hadn't] }, ex: ["You've ", { target: finished }, ", ", { target: haven't you }, "?"] }
+          - { level: B1, verb: ["will, can, must, should", { gap: true }], tag: the same modal, ex: ["You ", { target: can }, " swim, ", { target: can't you }, "?"] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
               en: "When the statement has an auxiliary or a modal, the tag repeats it."
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "When it has no auxiliary, the tag uses **do / does / did**."
+              en: ["When it has no auxiliary, the tag uses ", { alternatives: [{ term: do }, { term: does }, { term: did }] }, "."]
 
   - title: { en: "Form: special cases" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: start, label: { en: Statement } }
           - { key: tag, label: { en: Tag } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, start: I am, tag: aren't I, example: "I'**m** right, **aren't I**?" }
-          - { level: B1, start: Let's, tag: shall we, example: "**Let's** go, **shall we**?" }
-          - { level: B1, start: { en: command }, tag: will you, example: "**Open** the door, **will you**?" }
-          - { level: B1, start: { en: negative command }, tag: will you, example: "**Don't** be late, **will you**?" }
-          - { level: B1, start: There is / are, tag: isn't / aren't there, example: "**There's** a bus, **isn't there**?" }
-          - { level: B1, start: "everybody, somebody, nobody", tag: they, example: "**Everybody** came, **didn't they**?" }
-          - { level: B1, start: "nobody, nothing, never", tag: { en: positive tag }, example: "**Nobody** called, **did they**?" }
-      - type: bullets
+          - { level: B1, start: I am, tag: aren't I, ex: [I', { target: m }, " right, ", { target: aren't I }, "?"] }
+          - { level: B1, start: Let's, tag: shall we, ex: [{ target: Let's }, " go, ", { target: shall we }, "?"] }
+          - { level: B1, start: { en: command }, tag: will you, ex: [{ target: Open }, " the door, ", { target: will you }, "?"] }
+          - { level: B1, start: { en: negative command }, tag: will you, ex: [{ target: Don't }, " be late, ", { target: will you }, "?"] }
+          - { level: B1, start: { alternatives: [There is, are] }, tag: [{ alternatives: [isn't, aren't] }, "  there"], ex: [{ target: There's }, " a bus, ", { target: isn't there }, "?"] }
+          - { level: B1, start: "everybody, somebody, nobody", tag: they, ex: [{ target: Everybody }, " came, ", { target: didn't they }, "?"] }
+          - { level: B1, start: "nobody, nothing, never", tag: { en: positive tag }, ex: [{ target: Nobody }, " called, ", { target: did they }, "?"] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "**Nobody**, **nothing** and **never** make the statement negative, so the tag is positive."
-          - level: B1
+              en: [{ term: Nobody }, ", ", { term: nothing }, " and ", { term: never }, " make the statement negative, so the tag is positive."]
+          - type: rule
+            level: B1
             text:
-              en: "A tag after a command is a polite request. **won't you** is more friendly: Come in, won't you?"
+              en: ["A tag after a command is a polite request. ", { term: won't you }, " is more friendly: Come in, won't you?"]
 
   - title: { en: "Pronunciation: intonation" }
+    role: pronunciation
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: tone, label: { en: Tone } }
           - { key: meaning, label: { en: Meaning } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, tone: { en: "falling ↘" }, meaning: { en: "you are sure and want agreement" }, example: "It's a lovely day, **isn't it**? ↘" }
-          - { level: B1, tone: { en: "rising ↗" }, meaning: { en: "you are not sure and ask a real question" }, example: "You haven't seen my keys, **have you**? ↗" }
-      - type: bullets
+          - { level: B1, tone: { en: ["falling ", { intonation: fall }] }, meaning: { en: you are sure and want agreement }, ex: ["It's a lovely day, ", { target: isn't it }, "? ", { intonation: fall }] }
+          - { level: B1, tone: { en: ["rising ", { intonation: rise }] }, meaning: { en: you are not sure and ask a real question }, ex: ["You haven't seen my keys, ", { target: have you }, "? ", { intonation: rise }] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "The voice falls or rises on the tag."
-          - level: B1
+              en: The voice falls or rises on the tag.
+          - type: rule
+            level: B1
             text:
-              en: "A rising tag expects the answer **yes** or **no**."
+              en: ["A rising tag expects the answer ", { term: "yes" }, " or ", { term: "no" }, "."]
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, use: { en: "Checking something you think is true" }, example: "You're from Madrid, **aren't you**?" }
-          - { level: B1, use: { en: "Making conversation" }, example: "Lovely weather, **isn't it**?" }
-          - { level: B1, use: { en: "Asking politely for help" }, example: "You couldn't lend me a pen, **could you**?" }
+          - { level: B1, use: { en: Checking something you think is true }, ex: ["You're from Madrid, ", { target: aren't you }, "?"] }
+          - { level: B1, use: { en: Making conversation }, ex: ["Lovely weather, ", { target: isn't it }, "?"] }
+          - { level: B1, use: { en: Asking politely for help }, ex: ["You couldn't lend me a pen, ", { target: could you }, "?"] }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: B1, wrong: "You like tea, aren't you?", right: "You like tea, **don't you**?", rule: { en: "the tag matches the verb: like → don't" } }
-          - { level: B1, wrong: "She works here, isn't she?", right: "She works here, **doesn't she**?", rule: { en: "present simple, he / she / it → doesn't" } }
-          - { level: B1, wrong: "He doesn't like it, doesn't he?", right: "He doesn't like it, **does he**?", rule: { en: "negative statement → positive tag" } }
-          - { level: B1, wrong: "Let's go, will we?", right: "Let's go, **shall we**?", rule: { en: "Let's → shall we" } }
-          - { level: B1, wrong: "Open the door, don't you?", right: "Open the door, **will you**?", rule: { en: "command → will you" } }
-          - { level: B1, wrong: "Tom is late, isn't Tom?", right: "Tom is late, isn't **he**?", rule: { en: "the tag uses a pronoun" } }
-          - { level: B1, wrong: "Nobody called, didn't they?", right: "Nobody called, **did they**?", rule: { en: "nobody is negative → positive tag" } }
+          - { level: B1, wrong: "You like tea, aren't you?", right: ["You like tea, ", { target: don't you }, "?"], rule: { en: ["the tag matches the verb: ", { mapping: [like, don't] }] } }
+          - { level: B1, wrong: "She works here, isn't she?", right: ["She works here, ", { target: doesn't she }, "?"], rule: { en: { takes: [["present simple, ", { alternatives: [he, she, it] }], doesn't] } } }
+          - { level: B1, wrong: "He doesn't like it, doesn't he?", right: ["He doesn't like it, ", { target: does he }, "?"], rule: { en: { takes: [negative statement, positive tag] } } }
+          - { level: B1, wrong: "Let's go, will we?", right: ["Let's go, ", { target: shall we }, "?"], rule: { en: { takes: [Let's, shall we] } } }
+          - { level: B1, wrong: "Open the door, don't you?", right: ["Open the door, ", { target: will you }, "?"], rule: { en: { takes: [command, will you] } } }
+          - { level: B1, wrong: "Tom is late, isn't Tom?", right: ["Tom is late, isn't ", { target: he }, "?"], rule: { en: the tag uses a pronoun } }
+          - { level: B1, wrong: "Nobody called, didn't they?", right: ["Nobody called, ", { target: did they }, "?"], rule: { en: { takes: [nobody is negative, positive tag] } } }

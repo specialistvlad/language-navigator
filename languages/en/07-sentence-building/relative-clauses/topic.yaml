@@ -9,121 +9,135 @@ status: { en: draft }
 
 title: { en: Relative Clauses }
 summary:
-  en: "Relative clauses add information about a noun with who for people, which for things, that, whose and where. Who, which and that replace the noun and the clause has no second pronoun: The woman **who** lives here is my aunt."
+  lead: { en: "Relative clauses add information about a noun with who for people, which for things, that, whose and where." }
+  rule: { en: "Who, which and that replace the noun and the clause has no second pronoun:" }
+  ex: ["The woman ", { target: who }, " lives here is my aunt."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
-        - { key: point, label: { en: Word / point } }
+        - { key: point, label: { en: { alternatives: [Word, point] } } }
         - { key: rule, label: { en: Rule } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: B1, point: who, rule: { en: people }, example: "The woman **who** lives next door is a nurse." }
-        - { level: B1, point: which, rule: { en: things }, example: "The book **which** I bought was cheap." }
-        - { level: B1, point: that, rule: { en: "people or things, defining clauses only" }, example: "The film **that** we saw was long." }
-        - { level: B1, point: whose, rule: { en: "possession, followed by a noun" }, example: "The man **whose** car was stolen called the police." }
-        - { level: B1, point: where, rule: { en: "places; includes the preposition" }, example: "The café **where** we met has closed." }
-        - { level: B1, point: { en: Subject pronoun }, rule: { en: "stays: a verb follows" }, example: "The girl **who speaks** French is my cousin." }
-        - { level: B1, point: { en: Object pronoun }, rule: { en: "can be left out in a defining clause" }, example: "The film **I saw** was long." }
-        - { level: B1, point: { en: Defining }, rule: { en: "says which one; no commas" }, example: "The man **who called** is my uncle." }
-        - { level: B1, point: { en: Non-defining }, rule: { en: "extra information; commas; who / which / whose / where; never leave out the object pronoun" }, example: "Paris, **which** I visited in May, is beautiful." }
+        - { level: B1, point: who, rule: { en: people }, ex: ["The woman ", { target: who }, " lives next door is a nurse."] }
+        - { level: B1, point: which, rule: { en: things }, ex: ["The book ", { target: which }, " I bought was cheap."] }
+        - { level: B1, point: that, rule: { en: "people or things, defining clauses only" }, ex: ["The film ", { target: that }, " we saw was long."] }
+        - { level: B1, point: whose, rule: { en: "possession, followed by a noun" }, ex: ["The man ", { target: whose }, " car was stolen called the police."] }
+        - { level: B1, point: where, rule: { en: places; includes the preposition }, ex: ["The café ", { target: where }, " we met has closed."] }
+        - { level: B1, point: { en: Subject pronoun }, rule: { en: "stays: a verb follows" }, ex: ["The girl ", { target: who speaks }, " French is my cousin."] }
+        - { level: B1, point: { en: Object pronoun }, rule: { en: can be left out in a defining clause }, ex: ["The film ", { target: I saw }, " was long."] }
+        - { level: B1, point: { en: Defining }, rule: { en: says which one; no commas }, ex: ["The man ", { target: who called }, " is my uncle."] }
+        - { level: B1, point: { en: Non-defining }, rule: { en: ["extra information; commas; ", { alternatives: [who, which, whose, where] }, ; never leave out the object pronoun] }, ex: ["Paris, ", { target: which }, " I visited in ", { date: May, value: "--05" }, ", is beautiful."] }
 
 sections:
   - title: { en: "Form: relative pronouns" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: pronoun, label: { en: Word } }
           - { key: refers, label: { en: Refers to } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, pronoun: who, refers: { en: people }, example: "The woman **who** lives next door is a nurse." }
-          - { level: B1, pronoun: which, refers: { en: things }, example: "The book **which** I bought was cheap." }
-          - { level: B1, pronoun: that, refers: { en: "people or things (defining clauses)" }, example: "The film **that** we saw was long." }
-          - { level: B1, pronoun: whose, refers: { en: possession }, example: "The man **whose** car was stolen called the police." }
-          - { level: B1, pronoun: where, refers: { en: places }, example: "The café **where** we met has closed." }
-      - type: bullets
+          - { level: B1, pronoun: who, refers: { en: people }, ex: ["The woman ", { target: who }, " lives next door is a nurse."] }
+          - { level: B1, pronoun: which, refers: { en: things }, ex: ["The book ", { target: which }, " I bought was cheap."] }
+          - { level: B1, pronoun: that, refers: { en: people or things (defining clauses) }, ex: ["The film ", { target: that }, " we saw was long."] }
+          - { level: B1, pronoun: whose, refers: { en: possession }, ex: ["The man ", { target: whose }, " car was stolen called the police."] }
+          - { level: B1, pronoun: where, refers: { en: places }, ex: ["The café ", { target: where }, " we met has closed."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "A relative clause comes straight after the noun it describes."
-          - level: B1
+              en: A relative clause comes straight after the noun it describes.
+          - type: rule
+            level: B1
             text:
-              en: "**whose** is followed by a noun: whose car, whose idea."
-          - level: B1
+              en: [{ term: whose }, " is followed by a noun: whose car, whose idea."]
+          - type: rule
+            level: B1
             text:
-              en: "**where** includes the preposition: the house **where** I live."
-          - level: B1
+              en: [{ term: where }, " includes the preposition: the house ", { term: where }, " I live."]
+          - type: rule
+            level: B1
             text:
-              en: "**whom** is the formal object form: The man **whom** I met. Everyday English uses **who** or no pronoun."
+              en: [{ term: whom }, " is the formal object form: The man ", { term: whom }, " I met. Everyday English uses ", { term: who }, " or no pronoun."]
 
   - title: { en: "Form: defining clauses" }
+    role: form
     content:
-      - type: text
+      - type: prose
         level: B1
         text:
-          en: "A defining clause says which person or thing. It has no commas."
-        ex: "The man **who called** is my uncle."
-      - type: table
+          en: A defining clause says which person or thing. It has no commas.
+        ex: ["The man ", { target: who called }, " is my uncle."]
+      - type: comparison
         columns:
           - { key: role, label: { en: The pronoun is } }
           - { key: with, label: { en: With pronoun } }
           - { key: without, label: { en: Without pronoun } }
         rows:
-          - { level: B1, role: { en: "subject (verb follows)" }, with: { ex: "The girl **who speaks** French is my cousin." }, without: "—" }
-          - { level: B1, role: { en: "object (subject follows)" }, with: { ex: "The film **that I saw** was long." }, without: { ex: "The film **I saw** was long." } }
-          - { level: B1, role: { en: "object of a preposition" }, with: { ex: "The man **who I spoke to** was kind." }, without: { ex: "The man **I spoke to** was kind." } }
-      - type: bullets
+          - { level: B1, role: { en: subject (verb follows) }, with: ["The girl ", { target: who speaks }, " French is my cousin."] }
+          - { level: B1, role: { en: object (subject follows) }, with: ["The film ", { target: that I saw }, " was long."], without: ["The film ", { target: I saw }, " was long."] }
+          - { level: B1, role: { en: object of a preposition }, with: ["The man ", { target: who I spoke to }, " was kind."], without: ["The man ", { target: I spoke to }, " was kind."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "A subject pronoun stays: who / which / that is followed by a verb."
-          - level: B1
+              en: ["A subject pronoun stays: ", { alternatives: [who, which, that] }, " is followed by a verb."]
+          - type: rule
+            level: B1
             text:
-              en: "An object pronoun can be left out: who / which / that is followed by a subject."
-          - level: B1
+              en: ["An object pronoun can be left out: ", { alternatives: [who, which, that] }, " is followed by a subject."]
+          - type: rule
+            level: B1
             text:
-              en: "In everyday English the preposition goes to the end of the clause."
+              en: In everyday English the preposition goes to the end of the clause.
 
   - title: { en: "Form: non-defining clauses" }
+    role: form
     content:
-      - type: text
+      - type: prose
         level: B1
         text:
-          en: "A non-defining clause adds extra information. Commas separate it from the rest."
-        ex: "My uncle, **who lives in Leeds**, is a doctor."
-      - type: table
+          en: A non-defining clause adds extra information. Commas separate it from the rest.
+        ex: ["My uncle, ", { target: who lives in Leeds }, ", is a doctor."]
+      - type: comparison
         columns:
           - { key: feature, label: { en: Feature } }
           - { key: defining, label: { en: Defining } }
           - { key: nondefining, label: { en: Non-defining } }
         rows:
-          - { level: B1, feature: { en: Information }, defining: { en: "says which one" }, nondefining: { en: "extra, can be removed" } }
+          - { level: B1, feature: { en: Information }, defining: { en: says which one }, nondefining: { en: "extra, can be removed" } }
           - { level: B1, feature: { en: Commas }, defining: { en: none }, nondefining: { en: "yes, and a pause in speech" } }
-          - { level: B1, feature: { en: Pronouns }, defining: who / which / that, nondefining: who / which / whose / where }
-          - { level: B1, feature: { en: "Leave out the object pronoun" }, defining: { en: possible }, nondefining: { en: never } }
-      - type: table
+          - { level: B1, feature: { en: Pronouns }, defining: { alternatives: [who, which, that] }, nondefining: { alternatives: [who, which, whose, where] } }
+          - { level: B1, feature: { en: Leave out the object pronoun }, defining: { en: possible }, nondefining: { en: never } }
+      - type: usage
         columns:
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: B1, example: "Paris, **which** I visited in May, is beautiful." }
-          - { level: B1, example: "Tom, **whose** brother is a chef, cooks well." }
-      - type: bullets
+          - { level: B1, ex: ["Paris, ", { target: which }, " I visited in ", { date: May, value: "--05" }, ", is beautiful."] }
+          - { level: B1, ex: ["Tom, ", { target: whose }, " brother is a chef, cooks well."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "**which** can refer to a whole clause:"
-            ex: "He passed the exam, **which** surprised everyone."
+              en: [{ term: which }, " can refer to a whole clause:"]
+            ex: ["He passed the exam, ", { target: which }, " surprised everyone."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: B1, wrong: The man which lives next door is a doctor., right: "The man **who** lives next door is a doctor.", rule: { en: people → who or that } }
-          - { level: B1, wrong: The house where I live in is old., right: "The house **where I live** is old. / The house **I live in** is old.", rule: { en: "where includes the preposition" } }
-          - { level: B1, wrong: "My uncle, that lives in Leeds, is a doctor.", right: "My uncle, **who** lives in Leeds, is a doctor.", rule: { en: "non-defining clauses use who or which" } }
-          - { level: B1, wrong: The film that I saw it was long., right: "The film that I saw was long.", rule: { en: "the pronoun stands for the object" } }
-          - { level: B1, wrong: I know a man lives in Paris., right: "I know a man **who** lives in Paris.", rule: { en: "a subject pronoun stays" } }
-          - { level: B1, wrong: "Paris, which I visited it in May, is beautiful.", right: "Paris, which I visited in May, is beautiful.", rule: { en: "which stands for the object" } }
-          - { level: B1, wrong: "Paris which I visited in May is beautiful.", right: "Paris, which I visited in May, is beautiful.", rule: { en: "non-defining clauses need commas" } }
+          - { level: B1, wrong: The man which lives next door is a doctor., right: ["The man ", { target: who }, " lives next door is a doctor."], rule: { en: { takes: [people, who or that] } } }
+          - { level: B1, wrong: The house where I live in is old., right: { alternatives: [["The house ", { target: where I live }, " is old."], ["The house ", { target: I live in }, " is old."]] }, rule: { en: where includes the preposition } }
+          - { level: B1, wrong: "My uncle, that lives in Leeds, is a doctor.", right: ["My uncle, ", { target: who }, " lives in Leeds, is a doctor."], rule: { en: non-defining clauses use who or which } }
+          - { level: B1, wrong: The film that I saw it was long., right: The film that I saw was long., rule: { en: the pronoun stands for the object } }
+          - { level: B1, wrong: I know a man lives in Paris., right: ["I know a man ", { target: who }, " lives in Paris."], rule: { en: a subject pronoun stays } }
+          - { level: B1, wrong: ["Paris, which I visited it in ", { date: May, value: "--05" }, ", is beautiful."], right: ["Paris, which I visited in ", { date: May, value: "--05" }, ", is beautiful."], rule: { en: which stands for the object } }
+          - { level: B1, wrong: ["Paris which I visited in ", { date: May, value: "--05" }, " is beautiful."], right: ["Paris, which I visited in ", { date: May, value: "--05" }, ", is beautiful."], rule: { en: non-defining clauses need commas } }

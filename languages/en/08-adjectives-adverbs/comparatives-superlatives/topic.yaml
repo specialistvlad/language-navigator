@@ -9,103 +9,115 @@ status: { en: draft }
 
 title: { en: Comparatives and Superlatives }
 summary:
-  en: "Comparatives and superlatives compare things: taller than, the tallest, as tall as. Short adjectives add -er and -est, and long adjectives take more and the most: She is **taller** than me. This bag is **more expensive**."
+  lead: { en: "Comparatives and superlatives compare things: taller than, the tallest, as tall as." }
+  rule: { en: "Short adjectives add -er and -est, and long adjectives take more and the most:" }
+  ex: { examples: [["She is ", { target: taller }, " than me."], ["This bag is ", { target: more expensive }, "."]] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: pattern, label: { en: Pattern } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A2, pattern: "comparative + than", example: "My bag is **heavier than** yours." }
-        - { level: A2, pattern: "the + superlative + in / of", example: "She is **the tallest** in the class." }
-        - { level: A2, pattern: "as + adjective + as", example: "He is **as tall as** me." }
-        - { level: A2, pattern: "not as + adjective + as", example: "I'm **not as tall as** him." }
+        - { level: A2, pattern: { pattern: [{ slot: comparative }, than] }, ex: ["My bag is ", { target: heavier than }, " yours."] }
+        - { level: A2, pattern: { pattern: [the, { slot: superlative }, { alternatives: [in, of] }] }, ex: ["She is ", { target: the tallest }, " in the class."] }
+        - { level: A2, pattern: { pattern: [as, { slot: adjective }, as] }, ex: ["He is ", { target: as tall as }, " me."] }
+        - { level: A2, pattern: { pattern: [not as, { slot: adjective }, as] }, ex: ["I'm ", { target: not as tall as }, " him."] }
 
 sections:
   - title: { en: "Form: comparative and superlative" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
-          - { key: adjective, label: { en: Adjective } }
-          - { key: comparative, label: { en: Comparative } }
-          - { key: superlative, label: { en: Superlative } }
+          - { key: adjective, label: { en: Adjective }, features: { degree: pos } }
+          - { key: comparative, label: { en: Comparative }, features: { degree: cmpr } }
+          - { key: superlative, label: { en: Superlative }, features: { degree: sprl } }
         rows:
-          - { level: A2, adjective: { en: "one syllable: cheap" }, comparative: "cheap**er**", superlative: "the cheap**est**" }
-          - { level: A2, adjective: { en: "two syllables ending in -y: easy" }, comparative: "eas**ier**", superlative: "the eas**iest**" }
-          - { level: A2, adjective: { en: "two or more syllables: expensive" }, comparative: "**more** expensive", superlative: "the **most** expensive" }
-      - type: bullets
+          - { level: A2, adjective: { en: "one syllable: cheap" }, comparative: [cheap, { ending: er }], superlative: [the cheap, { ending: est }] }
+          - { level: A2, adjective: { en: "two syllables ending in -y: easy" }, comparative: [eas, { ending: ier }], superlative: [the eas, { ending: iest }] }
+          - { level: A2, adjective: { en: "two or more syllables: expensive" }, comparative: [{ target: more }, " expensive"], superlative: ["the ", { target: most }, " expensive"] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "Some two-syllable adjectives take both: clever → cleverer / more clever."
-          - level: A2
+              en: ["Some two-syllable adjectives take both: ", { examples: [{ mapping: [clever, cleverer] }, more clever.] }]
+          - type: rule
+            level: A2
             text:
-              en: "Use **the** before a superlative: the cheapest."
+              en: ["Use ", { term: the }, " before a superlative: the cheapest."]
 
   - title: { en: "Spelling: -er and -est" }
+    role: spelling
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: ending, label: { en: Ending } }
           - { key: rule, label: { en: Rule } }
-          - { key: examples, label: { en: Examples } }
+          - { key: ex, label: { en: Examples } }
         rows:
-          - { level: A2, ending: "-e", rule: "+ r / + st", examples: "nice → nicer → nicest" }
-          - { level: A2, ending: { en: consonant + y }, rule: "y → ier / iest", examples: "happy → happier → happiest" }
-          - { level: A2, ending: { en: "one vowel + one consonant (not w, y)" }, rule: { en: double the consonant }, examples: "big → bigger → biggest / hot → hotter → hottest" }
+          - { level: A2, ending: "-e", rule: { alternatives: [{ pattern: [{ ending: r }], follows: true }, { pattern: [{ ending: st }], follows: true }] }, ex: { mapping: [nice, nicer, nicest] } }
+          - { level: A2, ending: { en: { pattern: [{ slot: consonant }, "y"] } }, rule: { mapping: ["y", { alternatives: [ier, iest] }] }, ex: { mapping: [happy, happier, happiest] } }
+          - { level: A2, ending: { en: [{ pattern: [one vowel, one consonant] }, " (not w, y)"] }, rule: { en: double the consonant }, ex: { examples: [{ mapping: [big, bigger, biggest] }, { mapping: [hot, hotter, hottest] }] } }
 
   - title: { en: "Form: irregular" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
-          - { key: adjective, label: { en: Adjective } }
-          - { key: comparative, label: { en: Comparative } }
-          - { key: superlative, label: { en: Superlative } }
+          - { key: adjective, label: { en: Adjective }, features: { degree: pos } }
+          - { key: comparative, label: { en: Comparative }, features: { degree: cmpr } }
+          - { key: superlative, label: { en: Superlative }, features: { degree: sprl } }
         rows:
           - { level: A2, adjective: good, comparative: better, superlative: the best }
           - { level: A2, adjective: bad, comparative: worse, superlative: the worst }
-          - { level: A2, adjective: far, comparative: "further / farther", superlative: "the furthest / the farthest" }
+          - { level: A2, adjective: far, comparative: { alternatives: [further, farther] }, superlative: { alternatives: [the furthest, the farthest] } }
           - { level: A2, adjective: little, comparative: less, superlative: the least }
-          - { level: A2, adjective: "much / many", comparative: more, superlative: the most }
+          - { level: A2, adjective: { alternatives: [much, many] }, comparative: more, superlative: the most }
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
           - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, use: { en: "compare two things" }, pattern: "comparative + than", example: "Trains are **faster than** buses." }
-          - { level: A2, use: { en: "less than" }, pattern: "less + adjective + than", example: "Buses are **less expensive than** taxis." }
-          - { level: A2, use: { en: "a big or small difference" }, pattern: "a lot / much / a bit + comparative", example: "This room is **a lot bigger**." }
-          - { level: A2, use: { en: "the top of three or more" }, pattern: "the + superlative", example: "It's **the best** film of the year." }
-          - { level: A2, use: { en: "equal" }, pattern: "as + adjective + as", example: "My flat is **as big as** yours." }
-          - { level: A2, use: { en: "not equal" }, pattern: "not as + adjective + as", example: "Tea is **not as strong as** coffee." }
-      - type: bullets
+          - { level: A2, use: { en: compare two things }, pattern: { pattern: [{ slot: comparative }, than] }, ex: ["Trains are ", { target: faster than }, " buses."] }
+          - { level: A2, use: { en: less than }, pattern: { pattern: [less, { slot: adjective }, than] }, ex: ["Buses are ", { target: less expensive than }, " taxis."] }
+          - { level: A2, use: { en: a big or small difference }, pattern: { pattern: [{ alternatives: [a lot, much, a bit] }, { slot: comparative }] }, ex: ["This room is ", { target: a lot bigger }, "."] }
+          - { level: A2, use: { en: the top of three or more }, pattern: { pattern: [the, { slot: superlative }] }, ex: ["It's ", { target: the best }, " film of the year."] }
+          - { level: A2, use: { en: equal }, pattern: { pattern: [as, { slot: adjective }, as] }, ex: ["My flat is ", { target: as big as }, " yours."] }
+          - { level: A2, use: { en: not equal }, pattern: { pattern: [not as, { slot: adjective }, as] }, ex: ["Tea is ", { target: not as strong as }, " coffee."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "After a superlative, **in** goes with a place or group:"
-            ex: "the tallest girl **in** the class / the biggest city **in** Spain"
-          - level: A2
+              en: ["After a superlative, ", { term: in }, " goes with a place or group:"]
+            ex: { examples: [["the tallest girl ", { target: in }, " the class"], ["the biggest city ", { target: in }, " Spain"]] }
+          - type: rule
+            level: A2
             text:
-              en: "After a superlative, **of** goes with a number or a plural:"
-            ex: "the best **of** the three / the oldest **of** all"
-          - level: A2
+              en: ["After a superlative, ", { term: of }, " goes with a number or a plural:"]
+            ex: { examples: [["the best ", { target: of }, " the three"], ["the oldest ", { target: of }, " all"]] }
+          - type: rule
+            level: A2
             text:
-              en: "After **than**, speech uses an object pronoun:"
-            ex: "She is taller than **me**."
+              en: ["After ", { term: than }, ", speech uses an object pronoun:"]
+            ex: ["She is taller than ", { target: me }, "."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A2, wrong: This is more better., right: "This is **better**.", rule: { en: "better, worse are already comparatives" } }
-          - { level: A2, wrong: more happy, right: "**happier**", rule: { en: "consonant + y → -ier" } }
-          - { level: A2, wrong: He is more tall than me., right: "He is **taller** than me.", rule: { en: "short adjectives take -er" } }
-          - { level: A2, wrong: He is the most tall., right: "He is **the tallest**.", rule: { en: "three or more: the + -est" } }
-          - { level: A2, wrong: the best of the world, right: "the best **in** the world", rule: { en: "in + place or group" } }
-          - { level: A2, wrong: This is expensiver., right: "This is **more expensive**.", rule: { en: "long adjectives take more" } }
+          - { level: A2, wrong: This is more better., right: ["This is ", { target: better }, "."], rule: { en: "better, worse are already comparatives" } }
+          - { level: A2, wrong: more happy, right: { target: happier }, rule: { en: { mapping: [{ pattern: [{ slot: consonant }, "y"] }, "-ier"] } } }
+          - { level: A2, wrong: He is more tall than me., right: ["He is ", { target: taller }, " than me."], rule: { en: short adjectives take -er } }
+          - { level: A2, wrong: He is the most tall., right: ["He is ", { target: the tallest }, "."], rule: { en: ["three or more: ", { pattern: [the, "-est"] }] } }
+          - { level: A2, wrong: the best of the world, right: ["the best ", { target: in }, " the world"], rule: { en: { pattern: [in, place or group] } } }
+          - { level: A2, wrong: This is expensiver., right: ["This is ", { target: more expensive }, "."], rule: { en: long adjectives take more } }

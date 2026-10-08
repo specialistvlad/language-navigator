@@ -9,100 +9,111 @@ status: { en: draft }
 
 title: { en: Adjectives and Adjective Order }
 summary:
-  en: "Where adjectives go, their fixed order, and -ed and -ing adjectives. Adjectives go before a noun, take no plural -s, and put size before colour and age before material: a **big red** bag, an **old wooden** table."
+  lead: { en: "Where adjectives go, their fixed order, and -ed and -ing adjectives." }
+  rule: { en: "Adjectives go before a noun, take no plural -s, and put size before colour and age before material:" }
+  ex: ["a ", { target: big red }, " bag, an ", { target: old wooden }, " table."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: pattern, label: { en: Pattern } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, pattern: adjective + noun, example: "a **red** car" }
-        - { level: A1, pattern: be / look / feel + adjective, example: "The car is **red**." }
-        - { level: A1, pattern: adjective + plural noun, example: "two **red** cars" }
-        - { level: A2, pattern: { en: "opinion, size, age, shape, colour, origin, material + noun" }, example: "a **lovely small old** house" }
-        - { level: A2, pattern: "-ed / -ing", example: "I'm **bored**. / It's **boring**." }
+        - { level: A1, pattern: { pattern: [{ slot: adjective }, { slot: noun }] }, ex: ["a ", { target: red }, " car"] }
+        - { level: A1, pattern: { pattern: [{ alternatives: [be, look, feel] }, { slot: adjective }] }, ex: ["The car is ", { target: red }, "."] }
+        - { level: A1, pattern: { pattern: [{ slot: adjective }, { slot: plural noun }] }, ex: ["two ", { target: red }, " cars"] }
+        - { level: A2, pattern: { en: { pattern: ["opinion, size, age, shape, colour, origin, material", { slot: noun }] } }, ex: ["a ", { target: lovely small old }, " house"] }
+        - { level: A2, pattern: { alternatives: ["-ed", "-ing"] }, ex: { examples: [["I'm ", { target: bored }, "."], ["It's ", { target: boring }, "."]] } }
 
 sections:
   - title: { en: "Form: position and agreement" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: position, label: { en: Position } }
           - { key: pattern, label: { en: Pattern } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, position: { en: before a noun }, pattern: adjective + noun, example: "She has a **new** phone." }
-          - { level: A1, position: { en: after be }, pattern: be + adjective, example: "My phone **is new**." }
-          - { level: A1, position: { en: "after look, feel, sound, taste, smell" }, pattern: verb + adjective, example: "You **look tired**." }
-          - { level: A1, position: { en: before a plural noun }, pattern: adjective + plural noun, example: "I like **old** films." }
-      - type: bullets
+          - { level: A1, position: { en: before a noun }, pattern: { pattern: [{ slot: adjective }, { slot: noun }] }, ex: ["She has a ", { target: new }, " phone."] }
+          - { level: A1, position: { en: after be }, pattern: { pattern: [be, { slot: adjective }] }, ex: ["My phone ", { target: is new }, "."] }
+          - { level: A1, position: { en: "after look, feel, sound, taste, smell" }, pattern: { pattern: [{ slot: verb }, { slot: adjective }] }, ex: ["You ", { target: look tired }, "."] }
+          - { level: A1, position: { en: before a plural noun }, pattern: { pattern: [{ slot: adjective }, { slot: plural noun }] }, ex: ["I like ", { target: old }, " films."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
               en: "An adjective has one form for singular and plural, masculine and feminine."
 
   - title: { en: "Form: order of adjectives" }
+    role: form
     content:
-      - type: text
+      - type: prose
         level: A2
         text:
           en: "Several adjectives before a noun follow a fixed order:"
-      - type: table
+      - type: usage
         columns:
           - { key: order, label: { en: Order } }
           - { key: type, label: { en: Type } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, order: "1", type: { en: opinion }, example: "a **lovely** day" }
-          - { level: A2, order: "2", type: { en: size }, example: "a **big** dog" }
-          - { level: A2, order: "3", type: { en: age }, example: "an **old** car" }
-          - { level: A2, order: "4", type: { en: shape }, example: "a **round** table" }
-          - { level: A2, order: "5", type: { en: colour }, example: "a **blue** shirt" }
-          - { level: A2, order: "6", type: { en: origin }, example: "a **Spanish** guitar" }
-          - { level: A2, order: "7", type: { en: material }, example: "a **wooden** box" }
-          - { level: A2, order: "8", type: { en: "purpose (+ noun)" }, example: "a **running** shoe" }
-      - type: bullets
+          - { level: A2, order: "1", type: { en: opinion }, ex: ["a ", { target: lovely }, " day"] }
+          - { level: A2, order: "2", type: { en: size }, ex: ["a ", { target: big }, " dog"] }
+          - { level: A2, order: "3", type: { en: age }, ex: ["an ", { target: old }, " car"] }
+          - { level: A2, order: "4", type: { en: shape }, ex: ["a ", { target: round }, " table"] }
+          - { level: A2, order: "5", type: { en: colour }, ex: ["a ", { target: blue }, " shirt"] }
+          - { level: A2, order: "6", type: { en: origin }, ex: ["a ", { target: Spanish }, " guitar"] }
+          - { level: A2, order: "7", type: { en: material }, ex: ["a ", { target: wooden }, " box"] }
+          - { level: A2, order: "8", type: { en: [purpose (, { pattern: [{ slot: noun }], follows: true }, ")"] }, ex: ["a ", { target: running }, " shoe"] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
               en: "Opinion comes first, material and purpose come last:"
-            ex: "a **nice old wooden** chair"
-          - level: A2
+            ex: ["a ", { target: nice old wooden }, " chair"]
+          - type: rule
+            level: A2
             text:
               en: "Most phrases use two or three adjectives:"
-            ex: "a **small black** cat / **long dark** hair"
-          - level: A2
+            ex: { examples: [["a ", { target: small black }, " cat"], [{ target: long dark }, " hair"]] }
+          - type: rule
+            level: A2
             text:
-              en: "After be, the last two adjectives are joined with **and**:"
-            ex: "The room is **big and bright**."
+              en: ["After be, the last two adjectives are joined with ", { term: and }, ":"]
+            ex: ["The room is ", { target: big and bright }, "."]
 
   - title: { en: "Use: -ed and -ing adjectives" }
+    role: use
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: pair, label: { en: Pair } }
           - { key: ed, label: { en: "-ed: how a person feels" } }
           - { key: ing, label: { en: "-ing: what causes the feeling" } }
         rows:
-          - { level: A2, pair: bored / boring, ed: { ex: "I'm **bored**." }, ing: { ex: "The film is **boring**." } }
-          - { level: A2, pair: interested / interesting, ed: { ex: "She's **interested** in art." }, ing: { ex: "The book is **interesting**." } }
-          - { level: A2, pair: excited / exciting, ed: { ex: "We're **excited**." }, ing: { ex: "The game is **exciting**." } }
-          - { level: A2, pair: tired / tiring, ed: { ex: "I'm **tired**." }, ing: { ex: "The job is **tiring**." } }
-          - { level: A2, pair: surprised / surprising, ed: { ex: "He's **surprised**." }, ing: { ex: "The news is **surprising**." } }
-      - type: bullets
+          - { level: A2, pair: { alternatives: [bored, boring] }, ed: ["I'm ", { target: bored }, "."], ing: ["The film is ", { target: boring }, "."] }
+          - { level: A2, pair: { alternatives: [interested, interesting] }, ed: ["She's ", { target: interested }, " in art."], ing: ["The book is ", { target: interesting }, "."] }
+          - { level: A2, pair: { alternatives: [excited, exciting] }, ed: ["We're ", { target: excited }, "."], ing: ["The game is ", { target: exciting }, "."] }
+          - { level: A2, pair: { alternatives: [tired, tiring] }, ed: ["I'm ", { target: tired }, "."], ing: ["The job is ", { target: tiring }, "."] }
+          - { level: A2, pair: { alternatives: [surprised, surprising] }, ed: ["He's ", { target: surprised }, "."], ing: ["The news is ", { target: surprising }, "."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
               en: "-ed describes how a person feels; -ing describes the person or thing that causes the feeling."
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: two reds cars, right: "two **red** cars", rule: { en: adjectives take no plural -s } }
-          - { level: A1, wrong: You look tiredly., right: "You look **tired**.", rule: { en: look / feel + adjective } }
-          - { level: A2, wrong: a wooden old table, right: "an **old wooden** table", rule: { en: age before material } }
-          - { level: A2, wrong: a red big bag, right: "a **big red** bag", rule: { en: size before colour } }
-          - { level: A2, wrong: The film is bored., right: "The film is **boring**.", rule: { en: the cause takes -ing } }
+          - { level: A1, wrong: two reds cars, right: ["two ", { target: red }, " cars"], rule: { en: adjectives take no plural -s } }
+          - { level: A1, wrong: You look tiredly., right: ["You look ", { target: tired }, "."], rule: { en: { pattern: [{ alternatives: [look, feel] }, { slot: adjective }] } } }
+          - { level: A2, wrong: a wooden old table, right: ["an ", { target: old wooden }, " table"], rule: { en: age before material } }
+          - { level: A2, wrong: a red big bag, right: ["a ", { target: big red }, " bag"], rule: { en: size before colour } }
+          - { level: A2, wrong: The film is bored., right: ["The film is ", { target: boring }, "."], rule: { en: the cause takes -ing } }

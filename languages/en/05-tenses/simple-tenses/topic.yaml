@@ -9,337 +9,388 @@ status: { en: draft }
 
 title: { en: Simple Tenses }
 summary:
-  en: "Past, present and future simple: do or does, did and will make questions and negatives, and the main verb stays in its base form. Once a helper appears, the main verb loses -s and -ed: She **doesn't like** tea. **Did** he **go**?"
+  lead: { en: "Past, present and future simple: do or does, did and will make questions and negatives, and the main verb stays in its base form." }
+  rule: { en: "Once a helper appears, the main verb loses -s and -ed:" }
+  ex: { examples: [["She ", { target: doesn't like }, " tea."], [{ target: Did }, " he ", { target: go }, "?"]] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: paradigm
       columns:
-        - { key: tense, label: { en: Tense }, merge: true, center: true }
-        - { key: qh, group: { en: Question }, label: { en: Helper }, merge: true, center: true }
-        - { key: qs, group: { en: Question }, label: { en: Subject } }
-        - { key: qv, group: { en: Question }, label: { en: Verb }, merge: true, center: true }
-        - { key: ss, group: { en: Statement }, label: { en: Subject } }
-        - { key: sh, group: { en: Statement }, label: { en: Helper }, merge: true, center: true }
-        - { key: sv, group: { en: Statement }, label: { en: Verb }, merge: true, center: true }
-        - { key: ns, group: { en: Negative }, label: { en: Subject } }
-        - { key: nh, group: { en: Negative }, label: { en: Helper }, merge: true, center: true }
-        - { key: nv, group: { en: Negative }, label: { en: Verb }, merge: true, center: true }
+        - { key: tense, label: { en: Tense } }
+        - { key: qh, slot: aux, features: { interrogativity: int, polarity: pos } }
+        - { key: qs, slot: subj, features: { interrogativity: int, polarity: pos } }
+        - { key: qv, slot: verb, features: { interrogativity: int, polarity: pos } }
+        - { key: ss, slot: subj, features: { interrogativity: decl, polarity: pos } }
+        - { key: sh, slot: aux, features: { interrogativity: decl, polarity: pos } }
+        - { key: sv, slot: verb, features: { interrogativity: decl, polarity: pos } }
+        - { key: ns, slot: subj, features: { interrogativity: decl, polarity: neg } }
+        - { key: nh, slot: aux, features: { interrogativity: decl, polarity: neg } }
+        - { key: nv, slot: verb, features: { interrogativity: decl, polarity: neg } }
       rows:
-        - { level: A2, tense: { en: Future }, qh: "**Will**", qs: "I", qv: "work?", ss: "I", sh: "**will**", sv: "work.", ns: "I", nh: "**won't**", nv: "work." }
-        - { level: A2, tense: { en: Future }, qh: "**Will**", qs: "you", qv: "work?", ss: "You", sh: "**will**", sv: "work.", ns: "You", nh: "**won't**", nv: "work." }
-        - { level: A2, tense: { en: Future }, qh: "**Will**", qs: "he", qv: "work?", ss: "He", sh: "**will**", sv: "work.", ns: "He", nh: "**won't**", nv: "work." }
-        - { level: A2, tense: { en: Future }, qh: "**Will**", qs: "she", qv: "work?", ss: "She", sh: "**will**", sv: "work.", ns: "She", nh: "**won't**", nv: "work." }
-        - { level: A2, tense: { en: Future }, qh: "**Will**", qs: "it", qv: "work?", ss: "It", sh: "**will**", sv: "work.", ns: "It", nh: "**won't**", nv: "work." }
-        - { level: A2, tense: { en: Future }, qh: "**Will**", qs: "we", qv: "work?", ss: "We", sh: "**will**", sv: "work.", ns: "We", nh: "**won't**", nv: "work." }
-        - { level: A2, tense: { en: Future }, qh: "**Will**", qs: "they", qv: "work?", ss: "They", sh: "**will**", sv: "work.", ns: "They", nh: "**won't**", nv: "work." }
-        - { level: A1, tense: { en: Present }, qh: "**Do**", qs: "I", qv: "work?", ss: "I", sv: "work.", ns: "I", nh: "**don't**", nv: "work." }
-        - { level: A1, tense: { en: Present }, qh: "**Do**", qs: "you", qv: "work?", ss: "You", sv: "work.", ns: "You", nh: "**don't**", nv: "work." }
-        - { level: A1, tense: { en: Present }, qh: "**Does**", qs: "he", qv: "work?", ss: "He", sv: "work**s**.", ns: "He", nh: "**doesn't**", nv: "work." }
-        - { level: A1, tense: { en: Present }, qh: "**Does**", qs: "she", qv: "work?", ss: "She", sv: "work**s**.", ns: "She", nh: "**doesn't**", nv: "work." }
-        - { level: A1, tense: { en: Present }, qh: "**Does**", qs: "it", qv: "work?", ss: "It", sv: "work**s**.", ns: "It", nh: "**doesn't**", nv: "work." }
-        - { level: A1, tense: { en: Present }, qh: "**Do**", qs: "we", qv: "work?", ss: "We", sv: "work.", ns: "We", nh: "**don't**", nv: "work." }
-        - { level: A1, tense: { en: Present }, qh: "**Do**", qs: "they", qv: "work?", ss: "They", sv: "work.", ns: "They", nh: "**don't**", nv: "work." }
-        - { level: A1, tense: { en: Past }, qh: "**Did**", qs: "I", qv: "work?", ss: "I", sv: "work**ed**.", ns: "I", nh: "**didn't**", nv: "work." }
-        - { level: A1, tense: { en: Past }, qh: "**Did**", qs: "you", qv: "work?", ss: "You", sv: "work**ed**.", ns: "You", nh: "**didn't**", nv: "work." }
-        - { level: A1, tense: { en: Past }, qh: "**Did**", qs: "he", qv: "work?", ss: "He", sv: "work**ed**.", ns: "He", nh: "**didn't**", nv: "work." }
-        - { level: A1, tense: { en: Past }, qh: "**Did**", qs: "she", qv: "work?", ss: "She", sv: "work**ed**.", ns: "She", nh: "**didn't**", nv: "work." }
-        - { level: A1, tense: { en: Past }, qh: "**Did**", qs: "it", qv: "work?", ss: "It", sv: "work**ed**.", ns: "It", nh: "**didn't**", nv: "work." }
-        - { level: A1, tense: { en: Past }, qh: "**Did**", qs: "we", qv: "work?", ss: "We", sv: "work**ed**.", ns: "We", nh: "**didn't**", nv: "work." }
-        - { level: A1, tense: { en: Past }, qh: "**Did**", qs: "they", qv: "work?", ss: "They", sv: "work**ed**.", ns: "They", nh: "**didn't**", nv: "work." }
+        - { level: A2, features: { tense: fut, person: 1, number: sg }, tense: { en: Future }, qh: { aux: Will }, qs: I, qv: work?, ss: I, sh: { aux: will }, sv: work., ns: I, nh: { aux: won't }, nv: work. }
+        - { level: A2, features: { tense: fut, person: 2 }, tense: { en: Future }, qh: { aux: Will }, qs: you, qv: work?, ss: You, sh: { aux: will }, sv: work., ns: You, nh: { aux: won't }, nv: work. }
+        - { level: A2, features: { tense: fut, person: 3, number: sg, gender: masc }, tense: { en: Future }, qh: { aux: Will }, qs: he, qv: work?, ss: He, sh: { aux: will }, sv: work., ns: He, nh: { aux: won't }, nv: work. }
+        - { level: A2, features: { tense: fut, person: 3, number: sg, gender: fem }, tense: { en: Future }, qh: { aux: Will }, qs: she, qv: work?, ss: She, sh: { aux: will }, sv: work., ns: She, nh: { aux: won't }, nv: work. }
+        - { level: A2, features: { tense: fut, person: 3, number: sg, gender: neut }, tense: { en: Future }, qh: { aux: Will }, qs: it, qv: work?, ss: It, sh: { aux: will }, sv: work., ns: It, nh: { aux: won't }, nv: work. }
+        - { level: A2, features: { tense: fut, person: 1, number: pl }, tense: { en: Future }, qh: { aux: Will }, qs: we, qv: work?, ss: We, sh: { aux: will }, sv: work., ns: We, nh: { aux: won't }, nv: work. }
+        - { level: A2, features: { tense: fut, person: 3, number: pl }, tense: { en: Future }, qh: { aux: Will }, qs: they, qv: work?, ss: They, sh: { aux: will }, sv: work., ns: They, nh: { aux: won't }, nv: work. }
+        - { level: A1, features: { tense: prs, person: 1, number: sg }, tense: { en: Present }, qh: { aux: Do }, qs: I, qv: work?, ss: I, sv: work., ns: I, nh: { aux: don't }, nv: work. }
+        - { level: A1, features: { tense: prs, person: 2 }, tense: { en: Present }, qh: { aux: Do }, qs: you, qv: work?, ss: You, sv: work., ns: You, nh: { aux: don't }, nv: work. }
+        - { level: A1, features: { tense: prs, person: 3, number: sg, gender: masc }, tense: { en: Present }, qh: { aux: Does }, qs: he, qv: work?, ss: He, sv: [work, { ending: s }, "."], ns: He, nh: { aux: doesn't }, nv: work. }
+        - { level: A1, features: { tense: prs, person: 3, number: sg, gender: fem }, tense: { en: Present }, qh: { aux: Does }, qs: she, qv: work?, ss: She, sv: [work, { ending: s }, "."], ns: She, nh: { aux: doesn't }, nv: work. }
+        - { level: A1, features: { tense: prs, person: 3, number: sg, gender: neut }, tense: { en: Present }, qh: { aux: Does }, qs: it, qv: work?, ss: It, sv: [work, { ending: s }, "."], ns: It, nh: { aux: doesn't }, nv: work. }
+        - { level: A1, features: { tense: prs, person: 1, number: pl }, tense: { en: Present }, qh: { aux: Do }, qs: we, qv: work?, ss: We, sv: work., ns: We, nh: { aux: don't }, nv: work. }
+        - { level: A1, features: { tense: prs, person: 3, number: pl }, tense: { en: Present }, qh: { aux: Do }, qs: they, qv: work?, ss: They, sv: work., ns: They, nh: { aux: don't }, nv: work. }
+        - { level: A1, features: { tense: pst, person: 1, number: sg }, tense: { en: Past }, qh: { aux: Did }, qs: I, qv: work?, ss: I, sv: [work, { ending: ed }, "."], ns: I, nh: { aux: didn't }, nv: work. }
+        - { level: A1, features: { tense: pst, person: 2 }, tense: { en: Past }, qh: { aux: Did }, qs: you, qv: work?, ss: You, sv: [work, { ending: ed }, "."], ns: You, nh: { aux: didn't }, nv: work. }
+        - { level: A1, features: { tense: pst, person: 3, number: sg, gender: masc }, tense: { en: Past }, qh: { aux: Did }, qs: he, qv: work?, ss: He, sv: [work, { ending: ed }, "."], ns: He, nh: { aux: didn't }, nv: work. }
+        - { level: A1, features: { tense: pst, person: 3, number: sg, gender: fem }, tense: { en: Past }, qh: { aux: Did }, qs: she, qv: work?, ss: She, sv: [work, { ending: ed }, "."], ns: She, nh: { aux: didn't }, nv: work. }
+        - { level: A1, features: { tense: pst, person: 3, number: sg, gender: neut }, tense: { en: Past }, qh: { aux: Did }, qs: it, qv: work?, ss: It, sv: [work, { ending: ed }, "."], ns: It, nh: { aux: didn't }, nv: work. }
+        - { level: A1, features: { tense: pst, person: 1, number: pl }, tense: { en: Past }, qh: { aux: Did }, qs: we, qv: work?, ss: We, sv: [work, { ending: ed }, "."], ns: We, nh: { aux: didn't }, nv: work. }
+        - { level: A1, features: { tense: pst, person: 3, number: pl }, tense: { en: Past }, qh: { aux: Did }, qs: they, qv: work?, ss: They, sv: [work, { ending: ed }, "."], ns: They, nh: { aux: didn't }, nv: work. }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: text
+      - type: prose
         level: A1
         text:
-          en: "Each simple tense has a helper verb: **will** for the future, **do / does** for the present, **did** for the past."
-      - type: bullets
+          en: ["Each simple tense has a helper verb: ", { examples: [[{ target: will }, " for the future, ", { target: do }], [{ target: does }, " for the present, ", { target: did }, " for the past."]] }]
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "In questions the helper goes before the subject; in negatives it takes **not**: don't, doesn't, didn't, won't."
-          - level: A1
+              en: ["In questions the helper goes before the subject; in negatives it takes ", { term: not }, ": don't, doesn't, didn't, won't."]
+          - type: rule
+            level: A1
             text:
-              en: "After every helper the main verb is in the base form: Does she **work**? / She didn't **work**."
-          - level: A1
+              en: "After every helper the main verb is in the base form:"
+            ex: { examples: [["Does she ", { target: work }, "?"], ["She didn't ", { target: work }, "."]] }
+          - type: rule
+            level: A1
             text:
-              en: "Present and past statements have no helper: the verb itself takes **-s** (he, she, it) or **-ed**."
-          - level: A1
+              en: ["Present and past statements have no helper: the verb itself takes ", { term: "-s" }, " (he, she, it) or ", { term: "-ed" }, "."]
+          - type: rule
+            level: A1
             text:
-              en: "**will** and **did** are the same for every person; only the present changes with he, she, it."
-          - level: A1
+              en: [{ term: will }, " and ", { term: did }, " are the same for every person; only the present changes with he, she, it."]
+          - type: note
+            level: A1
             text:
-              en: "**be** has its own forms: am / is / are, was / were. See [To be](id:en.verbs.to-be)."
+              en: [{ term: be }, " has its own forms: ", { alternatives: [am, is, are] }, ", ", { alternatives: [was, were] }, ". See ", { link: To be, to: en.verbs.to-be }, "."]
 
   - title: { en: "Present simple: form" }
+    role: form
+    features: { tense: prs }
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: subject, label: { en: Subject } }
           - { key: verb, label: { en: Verb } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, subject: I / you / we / they, verb: V, example: "I **live** in Madrid." }
-          - { level: A1, subject: he / she / it, verb: V-s, example: "She **lives** in Madrid." }
-          - { level: A1, subject: { en: singular noun }, verb: V-s, example: "My brother **lives** in Madrid." }
-          - { level: A1, subject: { en: plural noun }, verb: V, example: "My parents **live** in Madrid." }
-      - type: bullets
+          - { level: A1, features: [{ person: 1, number: sg }, { person: 2 }, { person: 1, number: pl }, { person: 3, number: pl }], subject: { alternatives: [I, you, we, they] }, verb: V, ex: ["I ", { target: live }, " in Madrid."] }
+          - { level: A1, features: { person: 3, number: sg }, subject: { alternatives: [he, she, it] }, verb: V-s, ex: ["She ", { target: lives }, " in Madrid."] }
+          - { level: A1, features: { person: 3, number: sg }, subject: { en: singular noun }, verb: V-s, ex: ["My brother ", { target: lives }, " in Madrid."] }
+          - { level: A1, features: { person: 3, number: pl }, subject: { en: plural noun }, verb: V, ex: ["My parents ", { target: live }, " in Madrid."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
               en: "A short answer repeats the helper:"
-            ex: "Do you like tea? — Yes, I **do**. / No, I **don't**."
-          - level: A1
+            ex: { exchange: [Do you like tea?, { alternatives: [["Yes, I ", { target: do }, "."], ["No, I ", { target: don't }, "."]] }] }
+          - type: rule
+            level: A1
             text:
-              en: "A wh-word goes first: wh-word + do / does + subject + verb."
-            ex: "Where **does** he **live**?"
-          - level: A2
+              en: ["A wh-word goes first: ", { pattern: [{ slot: wh-word }, { alternatives: [do, does] }, { slot: subject }, { slot: verb }] }, "."]
+            ex: ["Where ", { target: does }, " he ", { target: live }, "?"]
+          - type: rule
+            level: A2
             text:
-              en: "When **who** or **what** is the subject, the verb follows directly, with -s:"
-            ex: "Who **lives** here?"
-          - level: A1
+              en: ["When ", { term: who }, " or ", { term: what }, " is the subject, the verb follows directly, with -s:"]
+            ex: ["Who ", { target: lives }, " here?"]
+          - type: note
+            level: A1
             text:
-              en: "More question patterns: [Questions and negatives](id:en.sentence-building.questions-negatives)."
+              en: ["More question patterns: ", { link: Questions and negatives, to: en.sentence-building.questions-negatives }, "."]
 
   - title: { en: "Present simple: the -s ending" }
+    role: own
+    features: { tense: prs }
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: ending, label: { en: Verb ending } }
           - { key: rule, label: { en: Spelling } }
-          - { key: examples, label: { en: Examples } }
+          - { key: ex, label: { en: Examples } }
         rows:
-          - { level: A1, ending: { en: most verbs }, rule: + s, examples: work → works / read → reads }
-          - { level: A1, ending: "-s, -ss, -sh, -ch, -x, -z", rule: + es, examples: pass → passes / wash → washes / watch → watches / fix → fixes }
-          - { level: A1, ending: "-o", rule: + es, examples: go → goes / do → does }
-          - { level: A1, ending: { en: consonant + y }, rule: y → ies, examples: study → studies / try → tries }
-          - { level: A1, ending: { en: vowel + y }, rule: + s, examples: play → plays / buy → buys }
-          - { level: A1, ending: have, rule: { en: own form }, examples: have → has }
-      - type: table
+          - { level: A1, ending: { en: most verbs }, rule: { pattern: [{ ending: s }], follows: true }, ex: { examples: [{ mapping: [work, works] }, { mapping: [read, reads] }] } }
+          - { level: A1, ending: "-s, -ss, -sh, -ch, -x, -z", rule: { pattern: [{ ending: es }], follows: true }, ex: { examples: [{ mapping: [pass, passes] }, { mapping: [wash, washes] }, { mapping: [watch, watches] }, { mapping: [fix, fixes] }] } }
+          - { level: A1, ending: "-o", rule: { pattern: [{ ending: es }], follows: true }, ex: { examples: [{ mapping: [go, goes] }, { mapping: [do, does] }] } }
+          - { level: A1, ending: { en: { pattern: [{ slot: consonant }, "y"] } }, rule: { mapping: ["y", ies] }, ex: { examples: [{ mapping: [study, studies] }, { mapping: [try, tries] }] } }
+          - { level: A1, ending: { en: { pattern: [{ slot: vowel }, "y"] } }, rule: { pattern: [{ ending: s }], follows: true }, ex: { examples: [{ mapping: [play, plays] }, { mapping: [buy, buys] }] } }
+          - { level: A1, ending: have, rule: { en: own form }, ex: { mapping: [have, has] } }
+      - type: usage
         columns:
           - { key: sound, label: { en: Sound } }
           - { key: after, label: { en: After } }
-          - { key: examples, label: { en: Examples } }
+          - { key: ex, label: { en: Examples } }
         rows:
-          - { level: A2, sound: /s/, after: { en: "voiceless sounds /p t k f θ/" }, examples: stops /stɒps/ / works /wɜːks/ / laughs /lɑːfs/ }
-          - { level: A2, sound: /z/, after: { en: voiced sounds and vowels }, examples: lives /lɪvz/ / plays /pleɪz/ / goes /ɡəʊz/ }
-          - { level: A2, sound: /ɪz/, after: /s z ʃ tʃ dʒ/, examples: washes /ˈwɒʃɪz/ / watches /ˈwɒtʃɪz/ / uses /ˈjuːzɪz/ }
-      - type: bullets
+          - { level: A2, sound: { ipa: s }, after: { en: ["voiceless sounds ", { ipa: p t k f θ }] }, ex: { examples: [["stops ", { ipa: stɒps }], ["works ", { ipa: wɜːks }], ["laughs ", { ipa: lɑːfs }]] } }
+          - { level: A2, sound: { ipa: z }, after: { en: voiced sounds and vowels }, ex: { examples: [["lives ", { ipa: lɪvz }], ["plays ", { ipa: pleɪz }], ["goes ", { ipa: ɡəʊz }]] } }
+          - { level: A2, sound: { ipa: ɪz }, after: { ipa: s z ʃ tʃ dʒ }, ex: { examples: [["washes ", { ipa: ˈwɒʃɪz }], ["watches ", { ipa: ˈwɒtʃɪz }], ["uses ", { ipa: ˈjuːzɪz }]] } }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "Three verbs change their vowel sound: does /dʌz/, says /sez/, has /hæz/."
+              en: ["Three verbs change their vowel sound: does ", { ipa: dʌz }, ", says ", { ipa: sez }, ", has ", { ipa: hæz }, "."]
 
   - title: { en: "Present simple: use" }
+    role: use
+    features: { tense: prs }
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: Habits and routines }, example: "I **get up** at 7." }
-          - { level: A1, use: { en: Facts and general truths }, example: "Water **boils** at 100 °C." }
-          - { level: A1, use: { en: Permanent states }, example: "She **lives** in London." }
-          - { level: A1, use: { en: "Likes, dislikes, opinions" }, example: "I **like** coffee. / I **think** so." }
-          - { level: A1, use: { en: Jobs and regular activities }, example: "He **teaches** maths." }
-          - { level: A2, use: { en: "Timetables and schedules (future)" }, example: "The train **leaves** at 6:15." }
-          - { level: A2, use: { en: Instructions and directions }, example: "You **turn** left at the bank." }
-      - type: bullets
+          - { level: A1, use: { en: Habits and routines }, ex: ["I ", { target: get up }, " at 7."] }
+          - { level: A1, use: { en: Facts and general truths }, ex: ["Water ", { target: boils }, " at 100 °C."] }
+          - { level: A1, use: { en: Permanent states }, ex: ["She ", { target: lives }, " in London."] }
+          - { level: A1, use: { en: "Likes, dislikes, opinions" }, ex: { examples: [["I ", { target: like }, " coffee."], ["I ", { target: think }, " so."]] } }
+          - { level: A1, use: { en: Jobs and regular activities }, ex: ["He ", { target: teaches }, " maths."] }
+          - { level: A2, use: { en: Timetables and schedules (future) }, ex: ["The train ", { target: leaves }, " at ", { time: "6:15", value: "06:15" }, "."] }
+          - { level: A2, use: { en: Instructions and directions }, ex: ["You ", { target: turn }, " left at the bank."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
               en: "Frequency adverbs go before the main verb and after be:"
-            ex: "I **often** walk to work. / She is **always** late."
-          - level: A1
+            ex: { examples: [["I ", { target: often }, " walk to work."], ["She is ", { target: always }, " late."]] }
+          - type: rule
+            level: A1
             text:
               en: "Time expressions go at the end:"
-            ex: "I swim **every day**. / She works late **on Mondays**."
-          - level: A2
+            ex: { examples: [["I swim ", { target: every day }, "."], ["She works late ", { target: ["on ", { weekday: Mondays, value: 1 }] }, "."]] }
+          - type: rule
+            level: A2
             text:
               en: "Verbs for states take the present simple, also for now:"
-            ex: "I **know** the answer. / I **want** a coffee."
-          - level: A1
+            ex: { examples: [["I ", { target: know }, " the answer."], ["I ", { target: want }, " a coffee."]] }
+          - type: note
+            level: A1
             text:
-              en: "All frequency adverbs: [Adverbs of frequency and manner](id:en.adjectives-adverbs.adverbs-frequency-manner)."
+              en: ["All frequency adverbs: ", { link: Adverbs of frequency and manner, to: en.adjectives-adverbs.adverbs-frequency-manner }, "."]
 
   - title: { en: "Past simple: form" }
+    role: form
+    features: { tense: pst }
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A1
+          - type: note
+            level: A1
             text:
-              en: "**be** has its own past, with no helper: was / were. See [To be](id:en.verbs.to-be)."
-            ex: "I **was** at home. / **Were** you there?"
-      - type: text
+              en: [{ term: be }, " has its own past, with no helper: ", { alternatives: [was, were] }, ". See ", { link: To be, to: en.verbs.to-be }, "."]
+            ex: { examples: [["I ", { target: was }, " at home."], [{ target: Were }, " you there?"]] }
+      - type: prose
         level: A1
         text:
           en: "Every other verb has one past form for every person:"
-      - type: table
+      - type: usage
         columns:
           - { key: type, label: { en: Verb type } }
           - { key: form, label: { en: Form } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, type: { en: regular }, form: V-ed, example: "I **watched** TV." }
-          - { level: A1, type: { en: irregular }, form: { en: own form }, example: "I **saw** a film." }
-      - type: bullets
+          - { level: A1, type: { en: regular }, form: V-ed, ex: ["I ", { target: watched }, " TV."] }
+          - { level: A1, type: { en: irregular }, form: { en: own form }, ex: ["I ", { target: saw }, " a film."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
               en: "A short answer repeats the helper:"
-            ex: "Did you like it? — Yes, I **did**. / No, I **didn't**."
-          - level: A1
+            ex: { exchange: [Did you like it?, { alternatives: [["Yes, I ", { target: did }, "."], ["No, I ", { target: didn't }, "."]] }] }
+          - type: rule
+            level: A1
             text:
-              en: "A wh-word goes first: wh-word + did + subject + verb."
-            ex: "Where **did** they **go**?"
-          - level: A2
+              en: ["A wh-word goes first: ", { pattern: [{ slot: wh-word }, did, { slot: subject }, { slot: verb }] }, "."]
+            ex: ["Where ", { target: did }, " they ", { target: go }, "?"]
+          - type: rule
+            level: A2
             text:
-              en: "When **who** or **what** is the subject, the verb is in the past directly:"
-            ex: "Who **called** you? / What **happened**?"
+              en: ["When ", { term: who }, " or ", { term: what }, " is the subject, the verb is in the past directly:"]
+            ex: { examples: [["Who ", { target: called }, " you?"], ["What ", { target: happened }, "?"]] }
 
   - title: { en: "Past simple: the -ed ending" }
+    role: own
+    features: { tense: pst }
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: ending, label: { en: Verb ending } }
           - { key: rule, label: { en: Spelling } }
-          - { key: examples, label: { en: Examples } }
+          - { key: ex, label: { en: Examples } }
         rows:
-          - { level: A1, ending: { en: most verbs }, rule: + ed, examples: work → worked / watch → watched / visit → visited }
-          - { level: A1, ending: "-e", rule: + d, examples: live → lived / like → liked / arrive → arrived }
-          - { level: A1, ending: { en: consonant + y }, rule: y → ied, examples: study → studied / try → tried }
-          - { level: A1, ending: { en: vowel + y }, rule: + ed, examples: play → played / stay → stayed }
-          - { level: A1, ending: { en: "1 vowel + 1 consonant, one syllable" }, rule: { en: double the consonant + ed }, examples: stop → stopped / plan → planned }
-      - type: table
+          - { level: A1, ending: { en: most verbs }, rule: { pattern: [{ ending: ed }], follows: true }, ex: { examples: [{ mapping: [work, worked] }, { mapping: [watch, watched] }, { mapping: [visit, visited] }] } }
+          - { level: A1, ending: "-e", rule: { pattern: [{ ending: d }], follows: true }, ex: { examples: [{ mapping: [live, lived] }, { mapping: [like, liked] }, { mapping: [arrive, arrived] }] } }
+          - { level: A1, ending: { en: { pattern: [{ slot: consonant }, "y"] } }, rule: { mapping: ["y", ied] }, ex: { examples: [{ mapping: [study, studied] }, { mapping: [try, tried] }] } }
+          - { level: A1, ending: { en: { pattern: [{ slot: vowel }, "y"] } }, rule: { pattern: [{ ending: ed }], follows: true }, ex: { examples: [{ mapping: [play, played] }, { mapping: [stay, stayed] }] } }
+          - { level: A1, ending: { en: { pattern: ["1 vowel", "1 consonant, one syllable"] } }, rule: { en: { pattern: [double the consonant, ed] } }, ex: { examples: [{ mapping: [stop, stopped] }, { mapping: [plan, planned] }] } }
+      - type: usage
         columns:
           - { key: sound, label: { en: Sound } }
           - { key: after, label: { en: After } }
-          - { key: examples, label: { en: Examples } }
+          - { key: ex, label: { en: Examples } }
         rows:
-          - { level: A2, sound: /t/, after: { en: "voiceless sounds /p k f s ʃ tʃ θ/" }, examples: stopped /stɒpt/ / worked /wɜːkt/ / watched /wɒtʃt/ }
-          - { level: A2, sound: /d/, after: { en: voiced sounds and vowels }, examples: lived /lɪvd/ / played /pleɪd/ / opened /ˈəʊpənd/ }
-          - { level: A2, sound: /ɪd/, after: /t d/, examples: wanted /ˈwɒntɪd/ / needed /ˈniːdɪd/ / visited /ˈvɪzɪtɪd/ }
-      - type: bullets
+          - { level: A2, sound: { ipa: t }, after: { en: ["voiceless sounds ", { ipa: p k f s ʃ tʃ θ }] }, ex: { examples: [["stopped ", { ipa: stɒpt }], ["worked ", { ipa: wɜːkt }], ["watched ", { ipa: wɒtʃt }]] } }
+          - { level: A2, sound: { ipa: d }, after: { en: voiced sounds and vowels }, ex: { examples: [["lived ", { ipa: lɪvd }], ["played ", { ipa: pleɪd }], ["opened ", { ipa: ˈəʊpənd }]] } }
+          - { level: A2, sound: { ipa: ɪd }, after: { ipa: t d }, ex: { examples: [["wanted ", { ipa: ˈwɒntɪd }], ["needed ", { ipa: ˈniːdɪd }], ["visited ", { ipa: ˈvɪzɪtɪd }]] } }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "The ending adds a syllable only after /t/ and /d/: wanted has two syllables, worked has one."
+              en: ["The ending adds a syllable only after ", { ipa: t }, " and ", { ipa: d }, ": wanted has two syllables, worked has one."]
 
   - title: { en: "Past simple: irregular verbs" }
+    role: own
+    features: { tense: pst }
     content:
-      - type: table
+      - type: paradigm
         columns:
-          - { key: base, label: { en: Base verb } }
-          - { key: past, label: { en: Past simple } }
-          - { key: example, label: { en: Example } }
+          - { key: base, label: { en: Base verb }, features: { verbform: inf } }
+          - { key: past, label: { en: Past simple }, features: { tense: pst } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, base: go, past: went, example: "We **went** home." }
-          - { level: A1, base: have, past: had, example: "I **had** lunch." }
-          - { level: A1, base: do, past: did, example: "She **did** her homework." }
-          - { level: A1, base: see, past: saw, example: "I **saw** Tom." }
-          - { level: A1, base: get, past: got, example: "He **got** a letter." }
-          - { level: A1, base: make, past: made, example: "They **made** a cake." }
-          - { level: A1, base: take, past: took, example: "I **took** a taxi." }
-          - { level: A1, base: come, past: came, example: "She **came** late." }
-          - { level: A1, base: eat, past: ate, example: "We **ate** pizza." }
-          - { level: A1, base: buy, past: bought, example: "I **bought** a coat." }
-          - { level: A1, base: say, past: said, example: "He **said** hello." }
-          - { level: A1, base: write, past: wrote, example: "I **wrote** an email." }
-      - type: bullets
+          - { level: A1, base: go, past: went, ex: ["We ", { target: went }, " home."] }
+          - { level: A1, base: have, past: had, ex: ["I ", { target: had }, " lunch."] }
+          - { level: A1, base: do, past: did, ex: ["She ", { target: did }, " her homework."] }
+          - { level: A1, base: see, past: saw, ex: ["I ", { target: saw }, " Tom."] }
+          - { level: A1, base: get, past: got, ex: ["He ", { target: got }, " a letter."] }
+          - { level: A1, base: make, past: made, ex: ["They ", { target: made }, " a cake."] }
+          - { level: A1, base: take, past: took, ex: ["I ", { target: took }, " a taxi."] }
+          - { level: A1, base: come, past: came, ex: ["She ", { target: came }, " late."] }
+          - { level: A1, base: eat, past: ate, ex: ["We ", { target: ate }, " pizza."] }
+          - { level: A1, base: buy, past: bought, ex: ["I ", { target: bought }, " a coat."] }
+          - { level: A1, base: say, past: said, ex: ["He ", { target: said }, " hello."] }
+          - { level: A1, base: write, past: wrote, ex: ["I ", { target: wrote }, " an email."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "The irregular form is only for statements; questions and negatives take did + base verb: Did you **go**?"
-          - level: A1
+              en: ["The irregular form is only for statements; questions and negatives take ", { pattern: [did, { slot: base verb }] }, ":"]
+            ex: ["Did you ", { target: go }, "?"]
+          - type: note
+            level: A1
             text:
-              en: "More verbs: [Irregular verbs table](id:en.verbs.irregular-verbs-table)."
+              en: ["More verbs: ", { link: Irregular verbs table, to: en.verbs.irregular-verbs-table }, "."]
 
   - title: { en: "Past simple: use" }
+    role: use
+    features: { tense: pst }
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: Finished actions at a stated past time }, example: "I **visited** Paris last year." }
-          - { level: A1, use: { en: Past states }, example: "She **was** ill on Monday." }
-          - { level: A1, use: { en: Sequences of events }, example: "I **got up**, **had** a shower and **left**." }
-          - { level: A2, use: { en: Past habits that are over }, example: "When I was a child, I **played** outside every day." }
-      - type: bullets
+          - { level: A1, use: { en: Finished actions at a stated past time }, ex: ["I ", { target: visited }, " Paris last year."] }
+          - { level: A1, use: { en: Past states }, ex: ["She ", { target: was }, " ill on ", { weekday: Monday, value: 1 }, "."] }
+          - { level: A1, use: { en: Sequences of events }, ex: ["I ", { target: got up }, ", ", { target: had }, " a shower and ", { target: left }, "."] }
+          - { level: A2, use: { en: Past habits that are over }, ex: ["When I was a child, I ", { target: played }, " outside every day."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "Time words: yesterday, last week, in 2020, two years ago. **ago** comes after the period:"
-            ex: "She left two days **ago**."
-          - level: A2
+              en: ["Time words: yesterday, last week, in 2020, two years ago. ", { term: ago }, " comes after the period:"]
+            ex: ["She left two days ", { target: ago }, "."]
+          - type: note
+            level: A2
             text:
-              en: "Past habits also take *used to*: see [Used to](id:en.tenses.used-to)."
+              en: ["Past habits also take ", { term: used to }, ": see ", { link: Used to, to: en.tenses.used-to }, "."]
 
   - title: { en: "Future simple: form" }
+    role: form
+    features: { tense: fut }
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: form, label: { en: Form } }
           - { key: structure, label: { en: Structure } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, form: +, structure: "will / 'll + V", example: "I'**ll help** you." }
-          - { level: A2, form: −, structure: "will not / won't + V", example: "He **won't come**." }
-          - { level: A2, form: "?", structure: "will + subject + V", example: "**Will** she **come**?" }
-          - { level: A2, form: { en: Short answer }, structure: "Yes, I will. / No, I won't.", example: "**Will** you call? — Yes, I **will**." }
-      - type: bullets
+          - { level: A2, features: { polarity: pos, interrogativity: decl }, form: "+", structure: { pattern: [{ alternatives: [will, "'ll"] }, { slot: V }] }, ex: [I', { target: ll help }, " you."] }
+          - { level: A2, features: { polarity: neg, interrogativity: decl }, form: "−", structure: { pattern: [{ alternatives: [will not, won't] }, { slot: V }] }, ex: ["He ", { target: won't come }, "."] }
+          - { level: A2, features: { polarity: pos, interrogativity: int }, form: "?", structure: { pattern: [will, { slot: subject }, { slot: V }] }, ex: [{ target: Will }, " she ", { target: come }, "?"] }
+          - { level: A2, features: { interrogativity: decl, polarity: [pos, neg] }, form: { en: Short answer }, structure: { alternatives: ["Yes, I will.", "No, I won't."] }, ex: { exchange: [[{ target: Will }, " you call?"], ["Yes, I ", { target: will }, "."]] } }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "Speech and messages use **'ll** and **won't**: 'll is /l/ after a vowel, /əl/ after a consonant; won't is /wəʊnt/."
+              en: ["Speech and messages use ", { term: "'ll" }, " and ", { term: won't }, ": 'll is ", { ipa: l }, " after a vowel, ", { ipa: əl }, " after a consonant; won't is ", { ipa: wəʊnt }, "."]
 
   - title: { en: "Future simple: use" }
+    role: use
+    features: { tense: fut }
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, use: { en: Decision at the moment of speaking }, example: "It's cold. I'**ll close** the window." }
-          - { level: A2, use: { en: Offers }, example: "I'**ll carry** your bag." }
-          - { level: A2, use: { en: Promises }, example: "I **won't tell** anyone." }
-          - { level: A2, use: { en: "Opinions and predictions (I think)" }, example: "I think she'**ll win**." }
-      - type: bullets
+          - { level: A2, use: { en: Decision at the moment of speaking }, ex: [It's cold. I', { target: ll close }, " the window."] }
+          - { level: A2, use: { en: Offers }, ex: [I', { target: ll carry }, " your bag."] }
+          - { level: A2, use: { en: Promises }, ex: ["I ", { target: won't tell }, " anyone."] }
+          - { level: A2, use: { en: Opinions and predictions (I think) }, ex: [I think she', { target: ll win }, "."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "**probably** goes after will and before won't:"
-            ex: "It will **probably** rain. / It **probably** won't rain."
-          - level: A2
+              en: [{ term: probably }, " goes after will and before won't:"]
+            ex: { examples: [["It will ", { target: probably }, " rain."], ["It ", { target: probably }, " won't rain."]] }
+          - type: note
+            level: A2
             text:
-              en: "Plans and arrangements take going to or the present continuous: see [Future forms](id:en.tenses.future-forms)."
+              en: ["Plans and arrangements take going to or the present continuous: see ", { link: Future forms, to: en.tenses.future-forms }, "."]
 
   - title: { en: "Compare: past, present and future" }
+    role: compare
     content:
-      - type: table
+      - type: comparison
         columns:
-          - { key: past, label: { en: Past simple } }
-          - { key: present, label: { en: Present simple } }
-          - { key: future, label: { en: Future simple } }
+          - { key: past, label: { en: Past simple }, features: { tense: pst } }
+          - { key: present, label: { en: Present simple }, features: { tense: prs } }
+          - { key: future, label: { en: Future simple }, features: { tense: fut } }
         rows:
-          - { level: A2, past: "did", present: "do / does", future: "will" }
-          - { level: A2, past: "yesterday, last week, ago", present: "every day, usually, on Mondays", future: "tomorrow, next week, soon" }
-          - { level: A2, past: { ex: "I **worked** yesterday." }, present: { ex: "I **work** every day." }, future: { ex: "I'**ll work** tomorrow." } }
-          - { level: A2, past: { ex: "**Did** she **call**?" }, present: { ex: "**Does** she **call**?" }, future: { ex: "**Will** she **call**?" } }
-          - { level: A2, past: { ex: "He **didn't** come." }, present: { ex: "He **doesn't** come." }, future: { ex: "He **won't** come." } }
+          - { level: A2, past: did, present: { alternatives: [do, does] }, future: will }
+          - { level: A2, past: "yesterday, last week, ago", present: ["every day, usually, on ", { weekday: Mondays, value: 1 }], future: "tomorrow, next week, soon" }
+          - { level: A2, past: ["I ", { target: worked }, " yesterday."], present: ["I ", { target: work }, " every day."], future: [I', { target: ll work }, " tomorrow."] }
+          - { level: A2, past: [{ target: Did }, " she ", { target: call }, "?"], present: [{ target: Does }, " she ", { target: call }, "?"], future: [{ target: Will }, " she ", { target: call }, "?"] }
+          - { level: A2, past: ["He ", { target: didn't }, " come."], present: ["He ", { target: doesn't }, " come."], future: ["He ", { target: won't }, " come."] }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: She work here., right: "She **works** here.", rule: { en: "he / she / it → V-s" } }
-          - { level: A1, wrong: He doesn't works., right: "He doesn't **work**.", rule: { en: "helper + base verb" } }
-          - { level: A1, wrong: Where you live?, right: "Where **do** you live?", rule: { en: "questions need a helper" } }
-          - { level: A1, wrong: Did you went there?, right: "Did you **go** there?", rule: { en: "did + base verb" } }
-          - { level: A1, wrong: She didn't called., right: "She didn't **call**.", rule: { en: "didn't + base verb" } }
-          - { level: A1, wrong: I goed home., right: "I **went** home.", rule: { en: "go → went (irregular verb)" } }
-          - { level: A1, wrong: Did he was late?, right: "**Was** he late?", rule: { en: "be makes questions by itself" } }
-          - { level: A2, wrong: He will goes., right: "He will **go**.", rule: { en: "will + base verb" } }
-          - { level: A2, wrong: Do you will come?, right: "**Will** you come?", rule: { en: "will makes questions by itself" } }
+          - { level: A1, wrong: She work here., right: ["She ", { target: works }, " here."], rule: { en: { takes: [{ alternatives: [he, she, it] }, V-s] } } }
+          - { level: A1, wrong: He doesn't works., right: ["He doesn't ", { target: work }, "."], rule: { en: { pattern: [{ slot: helper }, { slot: base verb }] } } }
+          - { level: A1, wrong: Where you live?, right: ["Where ", { target: do }, " you live?"], rule: { en: questions need a helper } }
+          - { level: A1, wrong: Did you went there?, right: ["Did you ", { target: go }, " there?"], rule: { en: { pattern: [did, { slot: base verb }] } } }
+          - { level: A1, wrong: She didn't called., right: ["She didn't ", { target: call }, "."], rule: { en: { pattern: [didn't, { slot: base verb }] } } }
+          - { level: A1, wrong: I goed home., right: ["I ", { target: went }, " home."], rule: { en: { mapping: [go, went (irregular verb)] } } }
+          - { level: A1, wrong: Did he was late?, right: [{ target: Was }, " he late?"], rule: { en: be makes questions by itself } }
+          - { level: A2, wrong: He will goes., right: ["He will ", { target: go }, "."], rule: { en: { pattern: [will, { slot: base verb }] } } }
+          - { level: A2, wrong: Do you will come?, right: [{ target: Will }, " you come?"], rule: { en: will makes questions by itself } }

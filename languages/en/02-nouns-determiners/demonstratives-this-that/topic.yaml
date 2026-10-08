@@ -9,84 +9,96 @@ status: { en: draft }
 
 title: { en: "This, That, These, Those" }
 summary:
-  en: "This and these point to things near you; that and those point to things far away, in the singular and the plural. These and those go with plural nouns and are: **These** are my keys. **Those** shoes **are** nice."
+  lead: { en: "This and these point to things near you; that and those point to things far away, in the singular and the plural." }
+  rule: { en: "These and those go with plural nouns and are:" }
+  ex: { examples: [[{ target: These }, " are my keys."], [{ target: Those }, " shoes ", { target: are }, " nice."]] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: paradigm
       columns:
         - { key: where, label: { en: Distance } }
-        - { key: singular, label: { en: Singular } }
-        - { key: plural, label: { en: Plural } }
+        - { key: singular, label: { en: Singular }, features: { number: sg } }
+        - { key: plural, label: { en: Plural }, features: { number: pl } }
       rows:
-        - { level: A0, where: { en: "near: here" }, singular: "**this** book", plural: "**these** books" }
-        - { level: A0, where: { en: "far: there" }, singular: "**that** book", plural: "**those** books" }
+        - { level: A0, features: { deixis: prox }, where: { en: "near: here" }, singular: [{ target: this }, " book"], plural: [{ target: these }, " books"] }
+        - { level: A0, features: { deixis: dist }, where: { en: "far: there" }, singular: [{ target: that }, " book"], plural: [{ target: those }, " books"] }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A0
+          - type: rule
+            level: A0
             text:
-              en: "The four words never change for masculine or feminine: **this** man, **this** woman."
+              en: ["The four words never change for masculine or feminine: ", { term: this }, " man, ", { term: this }, " woman."]
 
   - title: { en: "Form: before a noun or alone" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: form, label: { en: Form } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A0, form: { en: + singular noun }, example: "**This** bag is new." }
-          - { level: A0, form: { en: + plural noun }, example: "**Those** shoes are nice." }
-          - { level: A0, form: { en: alone }, example: "**This** is my bag. / **Those** are my shoes." }
-          - { level: A1, form: "+ one", example: "I like **that one**." }
-      - type: bullets
+          - { level: A0, form: { en: { pattern: [{ slot: singular noun }], follows: true } }, ex: [{ target: This }, " bag is new."] }
+          - { level: A0, form: { en: { pattern: [{ slot: plural noun }], follows: true } }, ex: [{ target: Those }, " shoes are nice."] }
+          - { level: A0, form: { en: alone }, ex: { examples: [[{ target: This }, " is my bag."], [{ target: Those }, " are my shoes."]] } }
+          - { level: A1, form: { pattern: [one], follows: true }, ex: ["I like ", { target: that one }, "."] }
+      - type: list
         items:
-          - level: A0
+          - type: rule
+            level: A0
             text:
-              en: "this / that + singular noun + **is**; these / those + plural noun + **are**."
-          - level: A1
+              en: [{ pattern: [{ alternatives: [this, that] }, { slot: singular noun }, { term: is }] }, "; ", { pattern: [{ alternatives: [these, those] }, { slot: plural noun }, { term: are }] }, "."]
+          - type: rule
+            level: A1
             text:
-              en: "**one** replaces a singular noun already known: this one, that one."
+              en: [{ term: one }, " replaces a singular noun already known: this one, that one."]
 
   - title: { en: "Pronunciation: this and these" }
+    role: pronunciation
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: word, label: { en: Word } }
           - { key: ipa, label: { en: Sound } }
           - { key: vowel, label: { en: Vowel } }
         rows:
-          - { level: A0, word: this, ipa: /ðɪs/, vowel: { en: short /ɪ/ } }
-          - { level: A0, word: these, ipa: /ðiːz/, vowel: { en: long /iː/ } }
-          - { level: A0, word: that, ipa: /ðæt/, vowel: /æ/ }
-          - { level: A0, word: those, ipa: /ðəʊz/, vowel: /əʊ/ }
-      - type: bullets
+          - { level: A0, word: this, ipa: { ipa: ðɪs }, vowel: { en: ["short ", { ipa: ɪ }] } }
+          - { level: A0, word: these, ipa: { ipa: ðiːz }, vowel: { en: ["long ", { ipa: iː }] } }
+          - { level: A0, word: that, ipa: { ipa: ðæt }, vowel: { ipa: æ } }
+          - { level: A0, word: those, ipa: { ipa: ðəʊz }, vowel: { ipa: əʊ } }
+      - type: list
         items:
-          - level: A0
+          - type: rule
+            level: A0
             text:
-              en: "All four start with /ð/, the voiced th."
-          - level: A0
+              en: ["All four start with ", { ipa: ð }, ", the voiced th."]
+          - type: rule
+            level: A0
             text:
-              en: "**these** and **those** end in /z/; **this** ends in /s/."
+              en: [{ term: these }, " and ", { term: those }, " end in ", { ipa: z }, "; ", { term: this }, " ends in ", { ipa: s }, "."]
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A0, use: { en: Introducing people }, example: "**This is** Ana. She's my sister." }
-          - { level: A0, use: { en: "On the phone: you / the other person" }, example: "Hi, **this is** Tom. Is **that** Ana? (US: Is **this** Ana?)" }
-          - { level: A1, use: { en: "Time: now / then" }, example: "**this** morning / **that** day" }
-          - { level: A1, use: { en: Something just said or done }, example: "**That's** great! / **That's** right." }
+          - { level: A0, use: { en: Introducing people }, ex: [{ target: This is }, " Ana. She's my sister."] }
+          - { level: A0, use: { en: ["On the phone: ", { alternatives: [you, the other person] }] }, ex: ["Hi, ", { target: this is }, " Tom. Is ", { target: that }, " Ana? ", { variant: ["Is ", { target: this }, " Ana?"], variety: en-US }] }
+          - { level: A1, use: { en: ["Time: ", { alternatives: [now, then] }] }, ex: { examples: [[{ target: this }, " morning"], [{ target: that }, " day"]] } }
+          - { level: A1, use: { en: Something just said or done }, ex: { examples: [[{ target: That's }, " great!"], [{ target: That's }, " right."]] } }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A0, wrong: this books, right: "**these** books", rule: { en: "plural noun → these / those" } }
-          - { level: A0, wrong: These is my keys., right: "These **are** my keys.", rule: { en: "these / those + are" } }
+          - { level: A0, wrong: this books, right: [{ target: these }, " books"], rule: { en: { takes: [plural noun, { alternatives: [these, those] }] } } }
+          - { level: A0, wrong: These is my keys., right: ["These ", { target: are }, " my keys."], rule: { en: { pattern: [{ alternatives: [these, those] }, are] } } }

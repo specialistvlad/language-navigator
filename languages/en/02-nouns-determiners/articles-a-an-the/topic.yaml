@@ -9,125 +9,140 @@ status: { en: draft }
 
 title: { en: "Articles: a, an, the" }
 summary:
-  en: "A and an for one thing, the for a thing both people know, and no article for things in general. The first sound decides a or an (**an** hour, **a** university), and general plurals and uncountable nouns take no article: I like **dogs**."
+  lead: { en: "A and an for one thing, the for a thing both people know, and no article for things in general." }
+  rule: { en: [The first sound decides a or an (, { term: an }, " hour, ", { term: a }, " university), and general plurals and uncountable nouns take no article:"] }
+  ex: ["I like ", { target: dogs }, "."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: article, label: { en: Article } }
         - { key: meaning, label: { en: Meaning } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, article: a / an, meaning: { en: "one, any one" }, example: "I need **a** pen." }
-        - { level: A1, article: the, meaning: { en: "the one we both know" }, example: "Pass me **the** pen." }
-        - { level: A1, article: "—", meaning: { en: "things in general" }, example: "**Pens** are cheap." }
+        - { level: A1, article: { alternatives: [a, an] }, meaning: { en: "one, any one" }, ex: ["I need ", { target: a }, " pen."] }
+        - { level: A1, article: the, meaning: { en: the one we both know }, ex: ["Pass me ", { target: the }, " pen."] }
+        - { level: A1, meaning: { en: things in general }, ex: [{ target: Pens }, " are cheap."] }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A1
+          - type: note
+            level: A1
             text:
-              en: "a / an go only with singular countable nouns. See [Countable and uncountable](id:en.nouns-determiners.countable-uncountable)."
-          - level: A1
+              en: [{ alternatives: [a, an] }, " go only with singular countable nouns. See ", { link: Countable and uncountable, to: en.nouns-determiners.countable-uncountable }, "."]
+          - type: rule
+            level: A1
             text:
-              en: "**the** goes with all nouns: singular, plural and uncountable."
+              en: [{ term: the }, " goes with all nouns: singular, plural and uncountable."]
 
   - title: { en: "Form: a or an" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: before, label: { en: Next word starts with } }
           - { key: article, label: { en: Article } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, before: { en: a consonant sound }, article: a, example: "**a** book / **a** big apple" }
-          - { level: A1, before: { en: a vowel sound }, article: an, example: "**an** apple / **an** old book" }
-      - type: bullets
+          - { level: A1, before: { en: a consonant sound }, article: a, ex: { examples: [[{ target: a }, " book"], [{ target: a }, " big apple"]] } }
+          - { level: A1, before: { en: a vowel sound }, article: an, ex: { examples: [[{ target: an }, " apple"], [{ target: an }, " old book"]] } }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "The first sound decides, not the letter: **an** hour /ˈaʊə/, **a** university /juːnɪˈvɜːsəti/."
-          - level: A1
+              en: ["The first sound decides, not the letter: ", { term: an }, " hour ", { ipa: ˈaʊə }, ", ", { term: a }, " university ", { ipa: juːnɪˈvɜːsəti }, "."]
+          - type: rule
+            level: A1
             text:
-              en: "The article goes before the adjective, so the adjective decides: **an** old car, **a** new car."
+              en: ["The article goes before the adjective, so the adjective decides: ", { term: an }, " old car, ", { term: a }, " new car."]
 
   - title: { en: "Pronunciation: a, an, the" }
+    role: pronunciation
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: word, label: { en: Word } }
           - { key: before, label: { en: Before } }
           - { key: sound, label: { en: Sound } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, word: a, before: { en: consonant sound }, sound: /ə/, example: a book /ə ˈbʊk/ }
-          - { level: A1, word: an, before: { en: vowel sound }, sound: /ən/, example: an egg /ən ˈeɡ/ }
-          - { level: A1, word: the, before: { en: consonant sound }, sound: /ðə/, example: the book /ðə ˈbʊk/ }
-          - { level: A1, word: the, before: { en: vowel sound }, sound: /ði/, example: the egg /ði ˈeɡ/ }
-      - type: bullets
+          - { level: A1, word: a, before: { en: consonant sound }, sound: { ipa: ə }, ex: ["a book ", { ipa: ə ˈbʊk }] }
+          - { level: A1, word: an, before: { en: vowel sound }, sound: { ipa: ən }, ex: ["an egg ", { ipa: ən ˈeɡ }] }
+          - { level: A1, word: the, before: { en: consonant sound }, sound: { ipa: ðə }, ex: ["the book ", { ipa: ðə ˈbʊk }] }
+          - { level: A1, word: the, before: { en: vowel sound }, sound: { ipa: ði }, ex: ["the egg ", { ipa: ði ˈeɡ }] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
               en: "Articles are weak and unstressed: the stress falls on the noun."
 
-  - title: { en: "Use: a / an" }
+  - title: { en: ["Use: ", { alternatives: [a, an] }] }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: "one thing, any one" }, example: "I have **a** car." }
-          - { level: A1, use: { en: "first mention; then the" }, example: "There's **a** cat. **The** cat is black." }
-          - { level: A1, use: { en: "jobs" }, example: "She's **a** doctor." }
-          - { level: A1, use: { en: "what something is" }, example: "It's **an** orange." }
-          - { level: A2, use: { en: "rate: per" }, example: "twice **a** week / £3 **a** kilo" }
-          - { level: A2, use: { en: "exclamations with what" }, example: "What **a** nice day!" }
+          - { level: A1, use: { en: "one thing, any one" }, ex: ["I have ", { target: a }, " car."] }
+          - { level: A1, use: { en: first mention; then the }, ex: ["There's ", { target: a }, " cat. ", { target: The }, " cat is black."] }
+          - { level: A1, use: { en: jobs }, ex: ["She's ", { target: a }, " doctor."] }
+          - { level: A1, use: { en: what something is }, ex: ["It's ", { target: an }, " orange."] }
+          - { level: A2, use: { en: "rate: per" }, ex: { examples: [["twice ", { target: a }, " week"], ["£3 ", { target: a }, " kilo"]] } }
+          - { level: A2, use: { en: exclamations with what }, ex: ["What ", { target: a }, " nice day!"] }
 
   - title: { en: "Use: the" }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: "we both know which" }, example: "Close **the** door, please." }
-          - { level: A1, use: { en: "the only one" }, example: "**the** sun / **the** world" }
-          - { level: A1, use: { en: "superlatives and ordinals" }, example: "**the** best / **the** first time" }
-          - { level: A2, use: { en: "musical instruments" }, example: "She plays **the** piano. (US: often *plays piano*)" }
-          - { level: A2, use: { en: "rivers, seas, oceans, mountain ranges" }, example: "**the** Thames / **the** Atlantic / **the** Alps" }
-          - { level: A2, use: { en: "countries with Kingdom, States, Republic or a plural name" }, example: "**the** UK / **the** USA / **the** Netherlands" }
-          - { level: B1, use: { en: "the + adjective: a group of people" }, example: "**the** rich / **the** young" }
+          - { level: A1, use: { en: we both know which }, ex: ["Close ", { target: the }, " door, please."] }
+          - { level: A1, use: { en: the only one }, ex: { examples: [[{ target: the }, " sun"], [{ target: the }, " world"]] } }
+          - { level: A1, use: { en: superlatives and ordinals }, ex: { examples: [[{ target: the }, " best"], [{ target: the }, " first time"]] } }
+          - { level: A2, use: { en: musical instruments }, ex: ["She plays ", { target: the }, " piano. ", { variant: ["often ", { term: plays piano }], variety: en-US }] }
+          - { level: A2, use: { en: "rivers, seas, oceans, mountain ranges" }, ex: { examples: [[{ target: the }, " Thames"], [{ target: the }, " Atlantic"], [{ target: the }, " Alps"]] } }
+          - { level: A2, use: { en: "countries with Kingdom, States, Republic or a plural name" }, ex: { examples: [[{ target: the }, " UK"], [{ target: the }, " USA"], [{ target: the }, " Netherlands"]] } }
+          - { level: B1, use: { en: [{ pattern: [the, { slot: adjective }] }, ": a group of people"] }, ex: { examples: [[{ target: the }, " rich"], [{ target: the }, " young"]] } }
 
   - title: { en: "Use: no article" }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: "plural nouns in general" }, example: "I like **dogs**." }
-          - { level: A1, use: { en: "uncountable nouns in general" }, example: "**Life** is hard. / I love **music**." }
-          - { level: A1, use: { en: "meals" }, example: "We have **lunch** at two." }
-          - { level: A1, use: { en: "languages, school subjects, sports" }, example: "I speak **Spanish**. / I play **football**." }
-          - { level: A1, use: { en: "names, most countries and cities" }, example: "**Mr Smith** lives in **London**." }
-          - { level: A2, use: { en: "home, work, school, bed" }, example: "go **home** / at **work** / go to **bed**" }
-          - { level: A2, use: { en: "transport after by" }, example: "by **bus** / by **train**" }
-          - { level: B1, use: { en: "hospital, prison, church, university for their main purpose" }, example: "He's in **hospital**. (US: in **the** hospital)" }
-      - type: bullets
+          - { level: A1, use: { en: plural nouns in general }, ex: ["I like ", { target: dogs }, "."] }
+          - { level: A1, use: { en: uncountable nouns in general }, ex: { examples: [[{ target: Life }, " is hard."], ["I love ", { target: music }, "."]] } }
+          - { level: A1, use: { en: meals }, ex: ["We have ", { target: lunch }, " at two."] }
+          - { level: A1, use: { en: "languages, school subjects, sports" }, ex: { examples: [["I speak ", { target: Spanish }, "."], ["I play ", { target: football }, "."]] } }
+          - { level: A1, use: { en: "names, most countries and cities" }, ex: [{ target: Mr Smith }, " lives in ", { target: London }, "."] }
+          - { level: A2, use: { en: "home, work, school, bed" }, ex: { examples: [["go ", { target: home }], ["at ", { target: work }], ["go to ", { target: bed }]] } }
+          - { level: A2, use: { en: transport after by }, ex: { examples: [["by ", { target: bus }], ["by ", { target: train }]] } }
+          - { level: B1, use: { en: "hospital, prison, church, university for their main purpose" }, ex: ["He's in ", { target: hospital }, ". ", { variant: ["in ", { target: the }, " hospital"], variety: en-US }] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
               en: "For the building itself, use the:"
-            ex: "I went to **the** hospital to visit him."
+            ex: ["I went to ", { target: the }, " hospital to visit him."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: a apple, right: "**an** apple", rule: { en: an before a vowel sound } }
-          - { level: A1, wrong: an university, right: "**a** university", rule: { en: "university starts with /j/" } }
-          - { level: A1, wrong: I live in the Spain., right: "I live in **Spain**.", rule: { en: "most countries: no article" } }
+          - { level: A1, wrong: a apple, right: [{ target: an }, " apple"], rule: { en: an before a vowel sound } }
+          - { level: A1, wrong: an university, right: [{ target: a }, " university"], rule: { en: ["university starts with ", { ipa: j }] } }
+          - { level: A1, wrong: I live in the Spain., right: ["I live in ", { target: Spain }, "."], rule: { en: "most countries: no article" } }

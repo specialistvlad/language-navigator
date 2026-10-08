@@ -9,103 +9,114 @@ status: { en: draft }
 
 title: { en: Should }
 summary:
-  en: "Should and shouldn't for advice and opinions. Should takes the base verb with every subject and needs no do in questions: You **should** go. **Should** I go?"
+  lead: { en: Should and shouldn't for advice and opinions. }
+  rule: { en: "Should takes the base verb with every subject and needs no do in questions:" }
+  ex: { examples: [["You ", { target: should }, " go."], [{ target: Should }, " I go?"]] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: paradigm
       columns:
         - { key: form, label: { en: Form } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A2, form: { en: Affirmative }, example: "You **should** see a doctor." }
-        - { level: A2, form: { en: Negative }, example: "You **shouldn't** work so late." }
-        - { level: A2, form: { en: Question }, example: "**Should** I take the bus?" }
-        - { level: A2, form: { en: Short answer }, example: "Yes, you **should**. / No, you **shouldn't**." }
-        - { level: A2, form: { en: Opinion }, example: "I **think** you **should** call her." }
-        - { level: A2, form: { en: Negative opinion }, example: "I **don't think** you **should** go." }
+        - { level: A2, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, ex: ["You ", { target: should }, " see a doctor."] }
+        - { level: A2, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, ex: ["You ", { target: shouldn't }, " work so late."] }
+        - { level: A2, features: { polarity: pos, interrogativity: int }, form: { en: Question }, ex: [{ target: Should }, " I take the bus?"] }
+        - { level: A2, features: { interrogativity: decl, polarity: [pos, neg] }, form: { en: Short answer }, ex: { examples: [["Yes, you ", { target: should }, "."], ["No, you ", { target: shouldn't }, "."]] } }
+        - { level: A2, features: { polarity: pos, interrogativity: decl }, form: { en: Opinion }, ex: ["I ", { target: think }, " you ", { target: should }, " call her."] }
+        - { level: A2, features: { polarity: neg, interrogativity: decl }, form: { en: Negative opinion }, ex: ["I ", { target: don't think }, " you ", { target: should }, " go."] }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "**should** has one form for every subject: I should, she should."
-          - level: A2
+              en: [{ term: should }, " has one form for every subject: I should, she should."]
+          - type: rule
+            level: A2
             text:
-              en: "The verb after **should** is in the base form: You should **rest**."
-          - level: A2
+              en: ["The verb after ", { term: should }, " is in the base form:"]
+            ex: ["You should ", { target: rest }, "."]
+          - type: rule
+            level: A2
             text:
-              en: "Questions and negatives need no **do**: **Should** I go? / You **shouldn't** go."
-          - level: A2
+              en: ["Questions and negatives need no ", { term: do }, ":"]
+            ex: { examples: [[{ target: Should }, " I go?"], ["You ", { target: shouldn't }, " go."]] }
+          - type: rule
+            level: A2
             text:
-              en: "The negative opinion puts **don't** on **think**: I **don't think** you should go."
+              en: ["The negative opinion puts ", { term: don't }, " on ", { term: think }, ":"]
+            ex: ["I ", { target: don't think }, " you should go."]
 
   - title: { en: "Pronunciation: should and shouldn't" }
+    role: pronunciation
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: form, label: { en: Form } }
           - { key: sound, label: { en: Sound } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, form: { en: "should (weak, in a sentence)" }, sound: /ʃəd/, example: "You **should** rest. /juː ʃəd ˈrest/" }
-          - { level: A2, form: { en: "should (strong, at the end)" }, sound: /ʃʊd/, example: "Yes, you **should**. /jes juː ˈʃʊd/" }
-          - { level: A2, form: shouldn't, sound: /ˈʃʊdnt/, example: "You **shouldn't** go. /juː ˈʃʊdnt ɡəʊ/" }
-      - type: bullets
+          - { level: A2, form: { en: "should (weak, in a sentence)" }, sound: { ipa: ʃəd }, ex: ["You ", { target: should }, " rest. ", { ipa: juː ʃəd ˈrest }] }
+          - { level: A2, form: { en: "should (strong, at the end)" }, sound: { ipa: ʃʊd }, ex: ["Yes, you ", { target: should }, ". ", { ipa: jes juː ˈʃʊd }] }
+          - { level: A2, form: shouldn't, sound: { ipa: ˈʃʊdnt }, ex: ["You ", { target: shouldn't }, " go. ", { ipa: juː ˈʃʊdnt ɡəʊ }] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "The **l** in should and shouldn't is silent: should is /ʃʊd/ when strong."
+              en: ["The ", { letter: l }, " in should and shouldn't is silent: should is ", { ipa: ʃʊd }, " when strong."]
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, use: { en: "Advice: a good idea" }, example: "You **should** drink more water." }
-          - { level: A2, use: { en: "Advice against: a bad idea" }, example: "You **shouldn't** eat so much sugar." }
-          - { level: A2, use: { en: "Asking for advice" }, example: "What **should** I do?" }
-          - { level: A2, use: { en: "Giving an opinion" }, example: "I think the government **should** build more parks." }
-          - { level: A2, use: { en: "A mild duty" }, example: "We **should** leave now. It's late." }
-      - type: bullets
+          - { level: A2, use: { en: "Advice: a good idea" }, ex: ["You ", { target: should }, " drink more water."] }
+          - { level: A2, use: { en: "Advice against: a bad idea" }, ex: ["You ", { target: shouldn't }, " eat so much sugar."] }
+          - { level: A2, use: { en: Asking for advice }, ex: ["What ", { target: should }, " I do?"] }
+          - { level: A2, use: { en: Giving an opinion }, ex: ["I think the government ", { target: should }, " build more parks."] }
+          - { level: A2, use: { en: A mild duty }, ex: ["We ", { target: should }, " leave now. It's late."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "**should** gives advice and opinions; the listener decides whether to follow them."
+              en: [{ term: should }, " gives advice and opinions; the listener decides whether to follow them."]
 
   - title: { en: "Compare: should and must" }
+    role: compare
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: row, label: { en: Point } }
           - { key: should, label: should }
           - { key: must, label: must }
         rows:
-          - level: A2
-            row: { en: Meaning }
-            should: { en: "advice, a good idea" }
-            must: { en: "strong obligation, a rule" }
-          - level: A2
-            row: { en: Example }
-            should: { ex: "You **should** wear a coat." }
-            must: { ex: "You **must** wear a seat belt." }
-      - type: bullets
+          - { level: A2, row: { en: Meaning }, should: { en: "advice, a good idea" }, must: { en: "strong obligation, a rule" } }
+          - { level: A2, row: { en: Example }, should: ["You ", { target: should }, " wear a coat."], must: ["You ", { target: must }, " wear a seat belt."] }
+      - type: list
         items:
-          - level: A2
+          - type: note
+            level: A2
             text:
-              en: "See [Must and Have To](id:en.modals.must-have-to)."
+              en: ["See ", { link: Must and Have To, to: en.modals.must-have-to }, "."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A2, wrong: "She shoulds go.", right: "She **should** go.", rule: { en: "should has no -s" } }
-          - { level: A2, wrong: "You should to see a doctor.", right: "You should **see** a doctor.", rule: { en: "should + base verb; no to" } }
-          - { level: A2, wrong: "Do I should go?", right: "**Should** I go?", rule: { en: "questions with should need no do" } }
-          - { level: A2, wrong: "I think you don't should go.", right: "I **don't think** you should go.", rule: { en: "negative opinion: I don't think + should" } }
-          - { level: A2, wrong: "Should he goes?", right: "Should he **go**?", rule: { en: "should + base verb" } }
+          - { level: A2, wrong: She shoulds go., right: ["She ", { target: should }, " go."], rule: { en: should has no -s } }
+          - { level: A2, wrong: You should to see a doctor., right: ["You should ", { target: see }, " a doctor."], rule: { en: [{ pattern: [should, { slot: base verb }] }, ; no to] } }
+          - { level: A2, wrong: Do I should go?, right: [{ target: Should }, " I go?"], rule: { en: questions with should need no do } }
+          - { level: A2, wrong: I think you don't should go., right: ["I ", { target: don't think }, " you should go."], rule: { en: ["negative opinion: I don't ", { pattern: [think, should] }] } }
+          - { level: A2, wrong: Should he goes?, right: ["Should he ", { target: go }, "?"], rule: { en: { pattern: [should, { slot: base verb }] } } }

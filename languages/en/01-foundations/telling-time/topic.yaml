@@ -9,107 +9,125 @@ status: { en: draft }
 
 title: { en: Telling the Time }
 summary:
-  en: "How to ask the time and say it in numbers, and with past and to. Say the hour first, then the minutes: 7:05 is **seven oh five**, and o'clock follows only a full hour: **seven o'clock**."
+  lead: { en: "How to ask the time and say it in numbers, and with past and to." }
+  rule: { en: ["Say the hour first, then the minutes: 7:05 is ", { term: seven oh five }, ", and o'clock follows only a full hour:"] }
+  ex: [{ target: seven o'clock }, "."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: point, label: { en: Point } }
         - { key: rule, label: { en: Rule } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A0, point: { en: Asking }, rule: { en: "ask What time is it? and answer with It's + the time" }, example: "**It's** seven thirty." }
-        - { level: A0, point: { en: Numbers }, rule: { en: "say the hour, then the minutes; 1–9 minutes take oh" }, example: "7:05 → seven **oh** five" }
-        - { level: A0, point: o'clock, rule: { en: "o'clock goes only with full hours" }, example: "seven **o'clock**" }
-        - { level: A1, point: past, rule: { en: "minutes 1–30: past the hour" }, example: "(a) **quarter past** three" }
-        - { level: A1, point: to, rule: { en: "minutes 31–59: to the next hour; say the minutes first" }, example: "twenty **to** four" }
-        - { level: A1, point: minutes, rule: { en: "minutes that are not 5, 10, 15… add minutes" }, example: "three **minutes** past six" }
-        - { level: A1, point: a.m. / p.m., rule: { en: "a.m. is midnight to midday; p.m. is midday to midnight" }, example: "seven **a.m.** / three **p.m.**" }
-        - { level: A1, point: { en: 24 hours }, rule: { en: "timetables use the 24-hour clock" }, example: "19:30 → nineteen thirty" }
-        - { level: A1, point: US, rule: { en: "after for past, of for to" }, example: "a quarter **after** three" }
+        - { level: A0, point: { en: Asking }, rule: { en: { pattern: [ask What time is it? and answer with It's, { slot: the time }] } }, ex: [{ target: It's }, " seven thirty."] }
+        - { level: A0, point: { en: Numbers }, rule: { en: "say the hour, then the minutes; 1–9 minutes take oh" }, ex: { mapping: [{ time: "7:05", value: "07:05" }, ["seven ", { target: oh }, " five"]] } }
+        - { level: A0, point: o'clock, rule: { en: o'clock goes only with full hours }, ex: ["seven ", { target: o'clock }] }
+        - { level: A1, point: past, rule: { en: "minutes 1–30: past the hour" }, ex: [{ optional: a }, " ", { target: quarter past }, " three"] }
+        - { level: A1, point: to, rule: { en: "minutes 31–59: to the next hour; say the minutes first" }, ex: ["twenty ", { target: to }, " four"] }
+        - { level: A1, point: minutes, rule: { en: "minutes that are not 5, 10, 15… add minutes" }, ex: ["three ", { target: minutes }, " past six"] }
+        - { level: A1, point: { alternatives: [a.m., p.m.] }, rule: { en: a.m. is midnight to midday; p.m. is midday to midnight }, ex: { examples: [["seven ", { target: a.m. }], ["three ", { target: p.m. }]] } }
+        - { level: A1, point: { en: "24 hours" }, rule: { en: timetables use the 24-hour clock }, ex: { mapping: [{ time: "19:30", value: "19:30" }, nineteen thirty] } }
+        - { level: A1, point: US, rule: { en: "after for past, of for to" }, ex: ["a quarter ", { target: after }, " three"], variety: en-US }
 
 sections:
   - title: { en: The time in numbers }
+    role: own
     content:
-      - type: text
+      - type: prose
         level: A0
         text:
-          en: "Ask **What time is it?** or **What's the time?** Answer with **It's** + the time."
-        ex: "It's seven thirty."
-      - type: table
+          en: ["Ask ", { term: What time is it? }, " or ", { term: What's the time? }, " Answer with ", { pattern: [{ term: It's }, { slot: the time }] }, "."]
+        ex: It's seven thirty.
+      - type: inventory
+        set: times
         columns:
           - { key: time, label: { en: Time } }
           - { key: said, label: { en: Said } }
         rows:
-          - { level: A0, time: "7:00", said: "seven **o'clock**" }
-          - { level: A0, time: "7:05", said: "seven **oh** five" }
-          - { level: A0, time: "7:15", said: "seven fifteen" }
-          - { level: A0, time: "7:30", said: "seven thirty" }
-          - { level: A0, time: "7:45", said: "seven forty-five" }
-          - { level: A0, time: "7:50", said: "seven fifty" }
-      - type: bullets
+          - { level: A0, value: "07:00", time: "7:00", said: ["seven ", { target: o'clock }] }
+          - { level: A0, value: "07:05", time: "7:05", said: ["seven ", { target: oh }, " five"] }
+          - { level: A0, value: "07:15", time: "7:15", said: seven fifteen }
+          - { level: A0, value: "07:30", time: "7:30", said: seven thirty }
+          - { level: A0, value: "07:45", time: "7:45", said: seven forty-five }
+          - { level: A0, value: "07:50", time: "7:50", said: seven fifty }
+      - type: list
         items:
-          - level: A0
+          - type: rule
+            level: A0
             text:
-              en: "Say the hour, then the minutes. 1–9 minutes take *oh*: 7:05 → seven **oh** five."
-          - level: A0
+              en: ["Say the hour, then the minutes. 1–9 minutes take ", { term: oh }, ": ", { mapping: ["7:05", ["seven ", { term: oh }, " five"]] }, "."]
+          - type: rule
+            level: A0
             text:
-              en: "**o'clock** /əˈklɒk/ goes only with full hours: seven o'clock."
+              en: [{ term: o'clock }, " ", { ipa: əˈklɒk }, " goes only with full hours: seven o'clock."]
 
   - title: { en: Past and to }
+    role: own
     content:
-      - type: table
+      - type: inventory
+        set: times
         columns:
           - { key: time, label: { en: Time } }
           - { key: said, label: { en: Said } }
         rows:
-          - { level: A1, time: "3:05", said: "five **past** three" }
-          - { level: A1, time: "3:15", said: "(a) **quarter past** three" }
-          - { level: A1, time: "3:20", said: "twenty **past** three" }
-          - { level: A1, time: "3:30", said: "**half past** three" }
-          - { level: A1, time: "3:40", said: "twenty **to** four" }
-          - { level: A1, time: "3:45", said: "(a) **quarter to** four" }
-          - { level: A1, time: "3:55", said: "five **to** four" }
-      - type: bullets
+          - { level: A1, value: "03:05", time: "3:05", said: ["five ", { target: past }, " three"] }
+          - { level: A1, value: "03:15", time: "3:15", said: [{ optional: a }, " ", { target: quarter past }, " three"] }
+          - { level: A1, value: "03:20", time: "3:20", said: ["twenty ", { target: past }, " three"] }
+          - { level: A1, value: "03:30", time: "3:30", said: [{ target: half past }, " three"] }
+          - { level: A1, value: "03:40", time: "3:40", said: ["twenty ", { target: to }, " four"] }
+          - { level: A1, value: "03:45", time: "3:45", said: [{ optional: a }, " ", { target: quarter to }, " four"] }
+          - { level: A1, value: "03:55", time: "3:55", said: ["five ", { target: to }, " four"] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "Minutes 1–30: **past** the hour. Minutes 31–59: **to** the next hour."
-          - level: A1
+              en: ["Minutes 1–30: ", { term: past }, " the hour. Minutes 31–59: ", { term: to }, " the next hour."]
+          - type: rule
+            level: A1
             text:
-              en: "Say the minutes first, then the hour: twenty **to** four."
-          - level: A1
+              en: ["Say the minutes first, then the hour: twenty ", { term: to }, " four."]
+          - type: rule
+            level: A1
             text:
-              en: "Minutes that are not 5, 10, 15… add *minutes*: three **minutes** past six."
-          - level: A1
+              en: ["Minutes that are not 5, 10, 15… add ", { term: minutes }, ": three ", { term: minutes }, " past six."]
+          - type: note
+            level: A1
+            variety: en-US
             text:
-              en: "US: *after* for past, *of* for to: a quarter **after** three, ten **of** four."
+              en: [{ term: after }, " for past, ", { term: of }, " for to: a quarter ", { term: after }, " three, ten ", { term: of }, " four."]
 
   - title: { en: Parts of the day }
+    role: own
     content:
-      - type: table
+      - type: inventory
+        set: times
         columns:
           - { key: time, label: { en: Time } }
           - { key: said, label: { en: Said } }
         rows:
-          - { level: A1, time: "07:00", said: "seven **a.m.** / seven in the **morning**" }
-          - { level: A1, time: "12:00", said: "**midday** / twelve **noon**" }
-          - { level: A1, time: "15:00", said: "three **p.m.** / three in the **afternoon**" }
-          - { level: A1, time: "20:00", said: "eight p.m. / eight in the **evening**" }
-          - { level: A1, time: "23:00", said: "eleven p.m. / eleven at **night**" }
-          - { level: A1, time: "00:00", said: "**midnight**" }
-      - type: bullets
+          - { level: A1, value: "07:00", time: "07:00", said: { alternatives: [["seven ", { target: a.m. }], ["seven in the ", { target: morning }]] } }
+          - { level: A1, value: "12:00", time: "12:00", said: { alternatives: [{ target: midday }, ["twelve ", { target: noon }]] } }
+          - { level: A1, value: "15:00", time: "15:00", said: { alternatives: [["three ", { target: p.m. }], ["three in the ", { target: afternoon }]] } }
+          - { level: A1, value: "20:00", time: "20:00", said: { alternatives: [eight p.m., ["eight in the ", { target: evening }]] } }
+          - { level: A1, value: "23:00", time: "23:00", said: { alternatives: [eleven p.m., ["eleven at ", { target: night }]] } }
+          - { level: A1, value: "00:00", time: "00:00", said: { target: midnight } }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "**a.m.** = from midnight to midday; **p.m.** = from midday to midnight."
-          - level: A1
+              en: [{ term: a.m. }, " = from midnight to midday; ", { term: p.m. }, " = from midday to midnight."]
+          - type: rule
+            level: A1
             text:
-              en: "In speech, the 12-hour clock is usual. Timetables use 24 hours: 19:30 = *nineteen thirty*."
+              en: ["In speech, the 12-hour clock is usual. Timetables use 24 hours: 19:30 = ", { time: nineteen thirty, value: "19:30" }, "."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A0, wrong: seven o'clock fifteen, right: "seven **fifteen**", rule: { en: "o'clock only with full hours" } }
+          - { level: A0, wrong: seven o'clock fifteen, right: ["seven ", { target: fifteen }], rule: { en: o'clock only with full hours } }

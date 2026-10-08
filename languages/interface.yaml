@@ -42,6 +42,17 @@ text:
   startOver: { en: Start over }
   ruleColumn: { en: Rule }
 
+  # Topic content: names the renderer writes from the data (CONVENTIONS.md §12)
+  varietyUs: { en: US }
+  varietyGb: { en: British }
+  slotAux: { en: Helper }
+  slotSubj: { en: Subject }
+  slotVerb: { en: Verb }
+  slotRest: { en: Rest }
+  groupQuestion: { en: Question }
+  groupStatement: { en: Statement }
+  groupNegative: { en: Negative }
+
   # Cheatsheets
   sheets: { en: Cheatsheets }
   sheet: { en: Cheatsheet }

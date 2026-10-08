@@ -1,12 +1,13 @@
 // A track's index in both orders: one card per section, or one card per level of the study path.
-import { localize, SITE, topicTitle } from "../../../scripts/lib.ts";
+import { topicTitle } from "../../../scripts/content.ts";
+import { localize, SITE } from "../../../scripts/lib.ts";
 import { alternates, readChoices, type Track } from "../context.ts";
 import { controls, page } from "../layout.ts";
 import { orderSwitch, trackNav } from "../nav.ts";
 import { pathCards } from "../path.ts";
 import { refRange } from "../../../scripts/levels.ts";
 import { levelAttrs, listBadge, refsRange } from "../parts.ts";
-import { escapeHtml } from "../render.ts";
+import { escapeHtml } from "../html.ts";
 import { topicUrl, trackUrl } from "../urls.ts";
 
 export function trackIndex(track: Track): void {

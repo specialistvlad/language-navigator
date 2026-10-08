@@ -4,12 +4,13 @@
 // shown pages around it: nothing before the first, and from the last back to the first, Start over.
 // Each distinct result renders once, tagged with the levels it serves (data-at); levels.css shows the
 // one of the chosen level, and client.ts the one of the step being read.
-import { lead } from "../../scripts/content.ts";
-import { type Level, LEVELS, lv, topicTitle, type TopicRef } from "../../scripts/lib.ts";
+import { topicTitle } from "../../scripts/content.ts";
+import { plainText, reading, textIn } from "../../scripts/text.ts";
+import { type Level, LEVELS, lv, type TopicRef } from "../../scripts/lib.ts";
 import { refRange } from "../../scripts/levels.ts";
 import type { Track } from "./context.ts";
 import { listBadge, single } from "./parts.ts";
-import { escapeHtml } from "./render.ts";
+import { escapeHtml } from "./html.ts";
 import { topicUrl } from "./urls.ts";
 
 interface Entry {
@@ -55,7 +56,7 @@ interface Placed {
 
 function placed(track: Track, ref: TopicRef): Placed[] {
   const { lang, explain } = track;
-  const summary = (r: TopicRef): string => lead(r.topic?.summary[explain] ?? "");
+  const summary = (r: TopicRef): string => (r.topic ? plainText(textIn(r.topic.summary.lead, explain), reading(explain, false)) : "");
   const byCategory: Entry[] = track.written.flatMap((r) => {
     const range = refRange(r, explain);
     return range

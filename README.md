@@ -13,7 +13,7 @@ whole topic, then rules, examples and typical errors, each marked with its CEFR 
 - **The data names meaning; the renderer decides how it looks.** Each field says what a piece of
   content is, such as a paradigm, a helper verb or a typical error, and the web app lays it out for
   every screen, view and level (CONVENTIONS.md §12).
-- **Levels live on every line.** Each row, bullet and paragraph carries its level from A0 to C2
+- **Levels live on every line.** Each row, list item and paragraph carries its level from A0 to C2
   (`languages/levels.yaml`); the level filter shows what starts at or below the chosen level, and
   badges show each range in its levels' colours (CONVENTIONS.md §3).
 - **The site is static HTML.** Each topic page offers a Cheatsheet and an Extended view; cheatsheet
@@ -58,7 +58,7 @@ language-navigator/
 | `npm start` | serves the site from `build/dev/` on port 47380 on every interface (open the printed network address on a phone), rebuilds and reloads on every change, and lists the problems `npm run check` finds |
 | `npm run build` | builds the static site into `build/web/`; `SITE_URL=https://… npm run build` sets the public URL |
 | `npm run check` | validates all data against the schemas and conventions |
-| `npm test` | unit tests, and checks on every built page |
+| `npm test` | unit tests, and checks on every built page; fails below full coverage of the code that reads, checks and renders topic data (`bunfig.toml`) |
 | `npm run e2e` | drives every topic and track page in Chromium at every level and view; `bunx playwright install chromium` installs the browser |
 | `npm run typecheck` | strict TypeScript |
 | `npm run lint` | typescript-eslint's strict and stylistic type-checked rules |

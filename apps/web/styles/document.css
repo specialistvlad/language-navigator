@@ -99,17 +99,31 @@
 .doc li {
   margin: 3px 0;
 }
-.doc strong {
+/* Marks (CONVENTIONS.md §12): the form or word a rule is about shows in bold; a sound, a meaning or a
+   translation is muted; every other mark reads as its text. */
+.doc
+  :is(
+    [data-mark="target"],
+    [data-mark="aux"],
+    [data-mark="subj"],
+    [data-mark="verb"],
+    [data-mark="ending"],
+    [data-mark="stress"],
+    [data-mark="term"],
+    [data-mark="letter"],
+    [data-mark="signal"]
+  ) {
   color: var(--accent);
   font-weight: 650;
 }
-.doc em {
+.doc :is([data-mark="sound"], [data-mark="gloss"], [data-mark="l1"], [data-mark="translation"]) {
   color: var(--muted);
 }
 .doc a {
   color: var(--accent);
 }
-.doc a.missing {
+/* A link to a topic without a page yet. */
+.doc .missing {
   color: var(--muted);
   text-decoration: underline dotted;
   cursor: help;

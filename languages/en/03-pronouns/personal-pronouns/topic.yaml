@@ -9,180 +9,207 @@ status: { en: draft }
 
 title: { en: Personal Pronouns }
 summary:
-  en: "Subject, object and possessive forms of the personal pronouns: I, me, my, mine. English always states the subject, even with weather and time: **It** is cold."
+  lead: { en: "Subject, object and possessive forms of the personal pronouns: I, me, my, mine." }
+  rule: { en: "English always states the subject, even with weather and time:" }
+  ex: [{ target: It }, " is cold."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: paradigm
       columns:
-        - { key: subject, label: { en: Subject } }
-        - { key: object, label: { en: Object } }
-        - { key: det, label: { en: Possessive + noun } }
-        - { key: alone, label: { en: Possessive alone } }
+        - { key: subject, label: { en: Subject }, features: { case: nom } }
+        - { key: object, label: { en: Object }, features: { case: acc } }
+        - { key: det, label: { en: { pattern: [Possessive, { slot: noun }] } }, features: { case: gen } }
+        - { key: alone, label: { en: Possessive alone }, features: { case: gen } }
       rows:
-        - { level: A1, subject: I, object: me, det: my, alone: mine }
-        - { level: A1, subject: you, object: you, det: your, alone: yours }
-        - { level: A1, subject: he, object: him, det: his, alone: his }
-        - { level: A1, subject: she, object: her, det: her, alone: hers }
-        - { level: A1, subject: it, object: it, det: its, alone: "—" }
-        - { level: A1, subject: we, object: us, det: our, alone: ours }
-        - { level: A1, subject: they, object: them, det: their, alone: theirs }
+        - { level: A1, features: { person: 1, number: sg }, subject: I, object: me, det: my, alone: mine }
+        - { level: A1, features: { person: 2 }, subject: you, object: you, det: your, alone: yours }
+        - { level: A1, features: { person: 3, number: sg, gender: masc }, subject: he, object: him, det: his, alone: his }
+        - { level: A1, features: { person: 3, number: sg, gender: fem }, subject: she, object: her, det: her, alone: hers }
+        - { level: A1, features: { person: 3, number: sg, gender: neut }, subject: it, object: it, det: its }
+        - { level: A1, features: { person: 1, number: pl }, subject: we, object: us, det: our, alone: ours }
+        - { level: A1, features: { person: 3, number: pl }, subject: they, object: them, det: their, alone: theirs }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: text
+      - type: prose
         level: A1
         text:
           en: "Subject before the verb, object after it, possessive before a noun or alone:"
-        ex: "**We** like **them**. **Their** house is next to **ours**."
+        ex: [{ target: We }, " like ", { target: them }, ". ", { target: Their }, " house is next to ", { target: ours }, "."]
 
   - title: { en: "Form: subject pronouns" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: pronoun, label: { en: Pronoun } }
           - { key: refers, label: { en: Refers to } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A0, pronoun: I, refers: { en: the speaker }, example: "**I**'m Tom." }
-          - { level: A0, pronoun: you, refers: { en: the listener or listeners }, example: "**You**'re late." }
-          - { level: A0, pronoun: he, refers: { en: a man or a boy }, example: "**He**'s my brother." }
-          - { level: A0, pronoun: she, refers: { en: a woman or a girl }, example: "**She**'s a teacher." }
-          - { level: A0, pronoun: it, refers: { en: a thing or an animal }, example: "**It**'s new." }
-          - { level: A0, pronoun: we, refers: { en: the speaker and others }, example: "**We**'re from Spain." }
-          - { level: A0, pronoun: they, refers: { en: people or things }, example: "**They**'re here." }
-      - type: bullets
+          - { level: A0, features: { person: 1, number: sg }, pronoun: I, refers: { en: the speaker }, ex: [{ target: I }, "'m Tom."] }
+          - { level: A0, features: { person: 2 }, pronoun: you, refers: { en: the listener or listeners }, ex: [{ target: You }, "'re late."] }
+          - { level: A0, features: { person: 3, number: sg, gender: masc }, pronoun: he, refers: { en: a man or a boy }, ex: [{ target: He }, "'s my brother."] }
+          - { level: A0, features: { person: 3, number: sg, gender: fem }, pronoun: she, refers: { en: a woman or a girl }, ex: [{ target: She }, "'s a teacher."] }
+          - { level: A0, features: { person: 3, number: sg, gender: neut }, pronoun: it, refers: { en: a thing or an animal }, ex: [{ target: It }, "'s new."] }
+          - { level: A0, features: { person: 1, number: pl }, pronoun: we, refers: { en: the speaker and others }, ex: [{ target: We }, "'re from Spain."] }
+          - { level: A0, features: { person: 3, number: pl }, pronoun: they, refers: { en: people or things }, ex: [{ target: They }, "'re here."] }
+      - type: list
         items:
-          - level: A0
+          - type: rule
+            level: A0
             text:
-              en: "**I** is always a capital letter: Tom and **I**."
-          - level: A0
+              en: [{ term: I }, " is always a capital letter:"]
+            ex: ["Tom and ", { target: I }, "."]
+          - type: rule
+            level: A0
             text:
-              en: "**you** is one word for one or many people, friends or strangers."
-          - level: A0
+              en: [{ term: you }, " is one word for one or many people, friends or strangers."]
+          - type: rule
+            level: A0
             text:
-              en: "**we** and **they** have no gender: **they** = men, women or things."
-          - level: A0
+              en: [{ term: we }, " and ", { term: they }, " have no gender: ", { term: they }, " = men, women or things."]
+          - type: rule
+            level: A0
             text:
-              en: "Pets often take **he** or **she**: Max is our dog. **He**'s two."
+              en: ["Pets often take ", { term: he }, " or ", { term: she }, ":"]
+            ex: ["Max is our dog. ", { target: He }, "'s two."]
 
   - title: { en: "Form: object pronouns" }
+    role: form
     content:
-      - type: text
+      - type: prose
         level: A1
         text:
-          en: "The object pronoun goes after the verb or after a preposition."
-      - type: table
+          en: The object pronoun goes after the verb or after a preposition.
+      - type: paradigm
         columns:
-          - { key: subject, label: { en: Subject } }
-          - { key: object, label: { en: Object } }
-          - { key: example, label: { en: Example } }
+          - { key: subject, label: { en: Subject }, features: { case: nom } }
+          - { key: object, label: { en: Object }, features: { case: acc } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, subject: I, object: me, example: "Can you help **me**?" }
-          - { level: A1, subject: you, object: you, example: "I love **you**." }
-          - { level: A1, subject: he, object: him, example: "I know **him**." }
-          - { level: A1, subject: she, object: her, example: "Call **her** later." }
-          - { level: A1, subject: it, object: it, example: "I like **it**." }
-          - { level: A1, subject: we, object: us, example: "Come with **us**." }
-          - { level: A1, subject: they, object: them, example: "I see **them** every day." }
-      - type: bullets
+          - { level: A1, features: { person: 1, number: sg }, subject: I, object: me, ex: ["Can you help ", { target: me }, "?"] }
+          - { level: A1, features: { person: 2 }, subject: you, object: you, ex: ["I love ", { target: you }, "."] }
+          - { level: A1, features: { person: 3, number: sg, gender: masc }, subject: he, object: him, ex: ["I know ", { target: him }, "."] }
+          - { level: A1, features: { person: 3, number: sg, gender: fem }, subject: she, object: her, ex: ["Call ", { target: her }, " later."] }
+          - { level: A1, features: { person: 3, number: sg, gender: neut }, subject: it, object: it, ex: ["I like ", { target: it }, "."] }
+          - { level: A1, features: { person: 1, number: pl }, subject: we, object: us, ex: ["Come with ", { target: us }, "."] }
+          - { level: A1, features: { person: 3, number: pl }, subject: they, object: them, ex: ["I see ", { target: them }, " every day."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "Short answers and answers with be take the object form: Who's there? — It's **me**. / **Me** too."
+              en: "Short answers and answers with be take the object form:"
+            ex: { exchange: [Who's there?, { alternatives: [["It's ", { target: me }, "."], [{ target: Me }, " too."]] }] }
 
   - title: { en: "Form: my, your, his…" }
+    role: form
     content:
-      - type: text
+      - type: prose
         level: A0
         text:
           en: "my, your, his… go before a noun and show the owner."
-      - type: table
+      - type: paradigm
         columns:
-          - { key: subject, label: { en: Subject } }
-          - { key: possessive, label: { en: Possessive } }
-          - { key: example, label: { en: Example } }
+          - { key: subject, label: { en: Subject }, features: { case: nom } }
+          - { key: possessive, label: { en: Possessive }, features: { case: gen } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A0, subject: I, possessive: my, example: "**My** name is Tom." }
-          - { level: A0, subject: you, possessive: your, example: "What's **your** name?" }
-          - { level: A0, subject: he, possessive: his, example: "**His** car is red." }
-          - { level: A0, subject: she, possessive: her, example: "**Her** car is blue." }
-          - { level: A0, subject: it, possessive: its, example: "The dog is in **its** bed." }
-          - { level: A0, subject: we, possessive: our, example: "**Our** flat is small." }
-          - { level: A0, subject: they, possessive: their, example: "**Their** children are at school." }
-      - type: bullets
+          - { level: A0, features: { person: 1, number: sg }, subject: I, possessive: my, ex: [{ target: My }, " name is Tom."] }
+          - { level: A0, features: { person: 2 }, subject: you, possessive: your, ex: ["What's ", { target: your }, " name?"] }
+          - { level: A0, features: { person: 3, number: sg, gender: masc }, subject: he, possessive: his, ex: [{ target: His }, " car is red."] }
+          - { level: A0, features: { person: 3, number: sg, gender: fem }, subject: she, possessive: her, ex: [{ target: Her }, " car is blue."] }
+          - { level: A0, features: { person: 3, number: sg, gender: neut }, subject: it, possessive: its, ex: ["The dog is in ", { target: its }, " bed."] }
+          - { level: A0, features: { person: 1, number: pl }, subject: we, possessive: our, ex: [{ target: Our }, " flat is small."] }
+          - { level: A0, features: { person: 3, number: pl }, subject: they, possessive: their, ex: [{ target: Their }, " children are at school."] }
+      - type: list
         items:
-          - level: A0
+          - type: rule
+            level: A0
             text:
-              en: "**his** or **her** depends on the owner: Tom and **his** sister, Ana and **her** brother."
-          - level: A0
+              en: [{ term: his }, " or ", { term: her }, " depends on the owner:"]
+            ex: ["Tom and ", { target: his }, " sister, Ana and ", { target: her }, " brother."]
+          - type: rule
+            level: A0
             text:
-              en: "The possessive never changes for the thing: **my** book, **my** books."
-          - level: A0
+              en: ["The possessive never changes for the thing: ", { term: my }, " book, ", { term: my }, " books."]
+          - type: rule
+            level: A0
             text:
-              en: "No article before it: **my** car."
-          - level: A0
+              en: ["No article before it: ", { term: my }, " car."]
+          - type: rule
+            level: A0
             text:
-              en: "**its** has no apostrophe; **it's** = it is."
-          - level: A1
+              en: [{ term: its }, " has no apostrophe; ", { term: it's }, " = it is."]
+          - type: rule
+            level: A1
             text:
               en: "Body parts and clothes take a possessive:"
-            ex: "I wash **my** hands. / Take off **your** coat."
+            ex: { examples: [["I wash ", { target: my }, " hands."], ["Take off ", { target: your }, " coat."]] }
 
   - title: { en: "Form: mine, yours, his…" }
+    role: form
     content:
-      - type: text
+      - type: prose
         level: A1
         text:
           en: "mine, yours, his… stand alone, without a noun."
-      - type: table
+      - type: paradigm
         columns:
-          - { key: possessive, label: { en: + noun } }
-          - { key: alone, label: { en: Alone } }
-          - { key: example, label: { en: Example } }
+          - { key: possessive, label: { en: { pattern: [{ slot: noun }], follows: true } }, features: { case: gen } }
+          - { key: alone, label: { en: Alone }, features: { case: gen } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, possessive: my, alone: mine, example: "This bag is **mine**." }
-          - { level: A1, possessive: your, alone: yours, example: "Is this **yours**?" }
-          - { level: A1, possessive: his, alone: his, example: "The red car is **his**." }
-          - { level: A1, possessive: her, alone: hers, example: "The blue one is **hers**." }
-          - { level: A1, possessive: our, alone: ours, example: "This table is **ours**." }
-          - { level: A1, possessive: their, alone: theirs, example: "The house is **theirs**." }
-      - type: bullets
+          - { level: A1, features: { person: 1, number: sg }, possessive: my, alone: mine, ex: ["This bag is ", { target: mine }, "."] }
+          - { level: A1, features: { person: 2 }, possessive: your, alone: yours, ex: ["Is this ", { target: yours }, "?"] }
+          - { level: A1, features: { person: 3, number: sg, gender: masc }, possessive: his, alone: his, ex: ["The red car is ", { target: his }, "."] }
+          - { level: A1, features: { person: 3, number: sg, gender: fem }, possessive: her, alone: hers, ex: ["The blue one is ", { target: hers }, "."] }
+          - { level: A1, features: { person: 1, number: pl }, possessive: our, alone: ours, ex: ["This table is ", { target: ours }, "."] }
+          - { level: A1, features: { person: 3, number: pl }, possessive: their, alone: theirs, ex: ["The house is ", { target: theirs }, "."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "No noun after it and no article before it: It's **mine**."
-          - level: A1
+              en: "No noun after it and no article before it:"
+            ex: ["It's ", { target: mine }, "."]
+          - type: rule
+            level: A1
             text:
               en: "No apostrophe: yours, hers, ours, theirs."
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "**a friend of mine** = one of my friends:"
-            ex: "Ana is **a friend of mine**."
+              en: [{ term: a friend of mine }, " = one of my friends:"]
+            ex: ["Ana is ", { target: a friend of mine }, "."]
 
   - title: { en: "It for weather, time and distance" }
+    role: own
     content:
-      - type: text
+      - type: prose
         level: A0
         text:
-          en: "Weather, time and distance have no real subject. **it** fills the place."
-      - type: table
+          en: ["Weather, time and distance have no real subject. ", { term: it }, " fills the place."]
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A0, use: { en: Weather }, example: "**It**'s cold today." }
-          - { level: A0, use: { en: Time }, example: "**It**'s five o'clock." }
-          - { level: A0, use: { en: Days and dates }, example: "**It**'s Monday." }
-          - { level: A1, use: { en: Distance }, example: "**It**'s two kilometres to the station." }
-          - { level: A1, use: { en: "it + be + adjective + to + V" }, example: "**It**'s easy to cook pasta." }
+          - { level: A0, use: { en: Weather }, ex: [{ target: It }, "'s cold today."] }
+          - { level: A0, use: { en: Time }, ex: [{ target: It }, "'s five o'clock."] }
+          - { level: A0, use: { en: Days and dates }, ex: [{ target: It }, "'s ", { weekday: Monday, value: 1 }, "."] }
+          - { level: A1, use: { en: Distance }, ex: [{ target: It }, "'s two kilometres to the station."] }
+          - { level: A1, use: { en: { pattern: [it, be, { slot: adjective }, to, { slot: V }] } }, ex: [{ target: It }, "'s easy to cook pasta."] }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A0, wrong: The dog wants it's food., right: "The dog wants **its** food.", rule: { en: "its = possessive; it's = it is" } }
-          - { level: A1, wrong: I know he., right: "I know **him**.", rule: { en: "after the verb: object form" } }
-          - { level: A1, wrong: The bag is my., right: "The bag is **mine**.", rule: { en: "no noun after it → mine" } }
-          - { level: A1, wrong: Is this your's?, right: "Is this **yours**?", rule: { en: "no apostrophe" } }
+          - { level: A0, wrong: The dog wants it's food., right: ["The dog wants ", { target: its }, " food."], rule: { en: its = possessive; it's = it is } }
+          - { level: A1, wrong: I know he., right: ["I know ", { target: him }, "."], rule: { en: "after the verb: object form" } }
+          - { level: A1, wrong: The bag is my., right: ["The bag is ", { target: mine }, "."], rule: { en: { takes: [no noun after it, mine] } } }
+          - { level: A1, wrong: Is this your's?, right: ["Is this ", { target: yours }, "?"], rule: { en: no apostrophe } }

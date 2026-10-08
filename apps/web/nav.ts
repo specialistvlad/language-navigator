@@ -1,13 +1,14 @@
 // The sidebar menu: back to the home page, the track index, the order switch, and every topic of the
 // track in both orders: by category (sections, each topic with its range) and the study path (levels,
 // each with its steps). The switch shows one; the level filter hides what starts above it.
-import { type Explain, localize, SITE, topicTitle, type TopicRef } from "../../scripts/lib.ts";
+import { topicTitle } from "../../scripts/content.ts";
+import { type Explain, localize, SITE, type TopicRef } from "../../scripts/lib.ts";
 import { refRange } from "../../scripts/levels.ts";
 import type { Track } from "./context.ts";
 import { seg, ui } from "./layout.ts";
 import { pathMenu } from "./path.ts";
 import { levelAttrs, listBadge, refsRange } from "./parts.ts";
-import { escapeHtml } from "./render.ts";
+import { escapeHtml } from "./html.ts";
 import { homeUrl, topicUrl, trackUrl } from "./urls.ts";
 
 // Grouping of the topic lists: by level, along the study path, or by category. The choice lives in the browser,

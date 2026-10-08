@@ -14,7 +14,7 @@ Topics are written one at a time; each topic is approved before the next one sta
 | 1 | Web app | Static pages, cheatsheets, level filter, sitemap, publishing | 0 | done |
 | 2 | Pilot topics | `en.tenses.simple-tenses` and `es.conjugation.presente-regular`, reviewed in the web app | 1 | done |
 | 3 | English topics | Every English topic, by level: A0–A1, then A2, then B1 | 2 | done |
-| 4 | Semantic data | The vocabulary of CONVENTIONS.md §12 in the schemas, the checks and the renderer: every topic names its blocks, marks, structures and features | 3 | todo |
+| 4 | Semantic data | The vocabulary of CONVENTIONS.md §12 in the schemas, the checks and the renderer: every topic names its blocks, marks, structures and features | 3 | done |
 | 5 | Internationalization | Spanish and Ukrainian as explanation languages: the interface and every topic in each | 4 | todo |
 | 6 | Visual explanations | Diagrams rendered from the data, such as tense timelines and paradigm charts | 4 | todo |
 | 7 | Interactive explanations | Helpers to understand a rule by trying it: the reader changes a part of an example, such as the person, the tense or the polarity, and sees the form change with it | 4 | todo |

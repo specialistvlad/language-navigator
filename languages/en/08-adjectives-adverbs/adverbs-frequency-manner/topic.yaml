@@ -7,150 +7,167 @@ concepts: [adverbs]
 related: [en.tenses.simple-tenses, en.adjectives-adverbs.adjective-order, en.verbs.to-be, en.sentence-building.word-order]
 status: { en: draft }
 
-title: { en: "Adverbs of frequency and manner" }
+title: { en: Adverbs of frequency and manner }
 summary:
-  en: "Frequency adverbs say how often things happen (always, never); manner adverbs say how they happen (slowly, well). Frequency adverbs go before the main verb but after be: I **always** go. I am **always** tired."
+  lead: { en: "Frequency adverbs say how often things happen (always, never); manner adverbs say how they happen (slowly, well)." }
+  rule: { en: "Frequency adverbs go before the main verb but after be:" }
+  ex: { examples: [["I ", { target: always }, " go."], ["I am ", { target: always }, " tired."]] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: type, label: { en: Type } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, type: { en: "frequency: how often" }, example: "I **always** walk to work." }
-        - { level: A2, type: { en: "manner: how" }, example: "She drives **carefully**." }
+        - { level: A1, type: { en: "frequency: how often" }, ex: ["I ", { target: always }, " walk to work."] }
+        - { level: A2, type: { en: "manner: how" }, ex: ["She drives ", { target: carefully }, "."] }
 
 sections:
   - title: { en: "Form: frequency adverbs" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: adverb, label: { en: Adverb } }
           - { key: often, label: { en: How often } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, adverb: always, often: 100%, example: "I **always** walk to work." }
-          - { level: A1, adverb: usually, often: ≈ 90%, example: "She **usually** has toast." }
-          - { level: A1, adverb: often, often: ≈ 70%, example: "We **often** eat out." }
-          - { level: A1, adverb: sometimes, often: ≈ 50%, example: "They **sometimes** call me." }
-          - { level: A1, adverb: rarely, often: ≈ 10%, example: "He **rarely** drives." }
-          - { level: A1, adverb: never, often: 0%, example: "I **never** drink coffee." }
-      - type: bullets
+          - { level: A1, adverb: always, often: "100%", ex: ["I ", { target: always }, " walk to work."] }
+          - { level: A1, adverb: usually, often: ≈ 90%, ex: ["She ", { target: usually }, " has toast."] }
+          - { level: A1, adverb: often, often: ≈ 70%, ex: ["We ", { target: often }, " eat out."] }
+          - { level: A1, adverb: sometimes, often: ≈ 50%, ex: ["They ", { target: sometimes }, " call me."] }
+          - { level: A1, adverb: rarely, often: ≈ 10%, ex: ["He ", { target: rarely }, " drives."] }
+          - { level: A1, adverb: never, often: "0%", ex: ["I ", { target: never }, " drink coffee."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "**hardly ever** (≈ 5%) is close to never:"
-            ex: "We **hardly ever** go out."
+              en: [{ term: hardly ever }, " (≈ 5%) is close to never:"]
+            ex: ["We ", { target: hardly ever }, " go out."]
 
   - title: { en: "Form: position of frequency adverbs" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: position, label: { en: Position } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, position: { en: "before the main verb" }, example: "I **often** walk." }
-          - { level: A1, position: { en: "after be" }, example: "She is **always** late." }
-          - { level: A2, position: { en: "between auxiliary and main verb" }, example: "I can **never** find my keys." }
-          - { level: A2, position: { en: "after don't / doesn't" }, example: "He doesn't **always** call." }
-      - type: bullets
+          - { level: A1, position: { en: before the main verb }, ex: ["I ", { target: often }, " walk."] }
+          - { level: A1, position: { en: after be }, ex: ["She is ", { target: always }, " late."] }
+          - { level: A2, position: { en: between auxiliary and main verb }, ex: ["I can ", { target: never }, " find my keys."] }
+          - { level: A2, position: { en: { alternatives: [after don't, doesn't] } }, ex: ["He doesn't ", { target: always }, " call."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "**sometimes** also goes at the start:"
-            ex: "**Sometimes** I work from home."
+              en: [{ term: sometimes }, " also goes at the start:"]
+            ex: [{ target: Sometimes }, " I work from home."]
 
   - title: { en: "Form: how often?" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: question, label: { en: Question } }
           - { key: answer, label: { en: Answer } }
         rows:
-          - { level: A1, question: "How often do you swim?", answer: "I swim **every day**." }
-          - { level: A1, question: "How often does she cook?", answer: "She cooks **once a week**." }
-          - { level: A1, question: "How often do they visit you?", answer: "They visit **twice a month**." }
-      - type: bullets
+          - { level: A1, question: How often do you swim?, answer: ["I swim ", { target: every day }, "."] }
+          - { level: A1, question: How often does she cook?, answer: ["She cooks ", { target: once a week }, "."] }
+          - { level: A1, question: How often do they visit you?, answer: ["They visit ", { target: twice a month }, "."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
               en: "Frequency expressions go at the end: every day, once a week, three times a year."
 
   - title: { en: "Form: manner adverbs" }
+    role: form
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: adjective, label: { en: Adjective } }
           - { key: adverb, label: { en: Adverb } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, adjective: slow, adverb: slowly, example: "He walks **slowly**." }
-          - { level: A2, adjective: careful, adverb: carefully, example: "Drive **carefully**." }
-          - { level: A2, adjective: quiet, adverb: quietly, example: "They talk **quietly**." }
-      - type: bullets
+          - { level: A2, adjective: slow, adverb: slowly, ex: ["He walks ", { target: slowly }, "."] }
+          - { level: A2, adjective: careful, adverb: carefully, ex: ["Drive ", { target: carefully }, "."] }
+          - { level: A2, adjective: quiet, adverb: quietly, ex: ["They talk ", { target: quietly }, "."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "A manner adverb says how someone does something. Most are adjective + **-ly**."
+              en: ["A manner adverb says how someone does something. Most are ", { pattern: [{ slot: adjective }, { term: "-ly" }] }, "."]
 
   - title: { en: "Spelling: -ly" }
+    role: spelling
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: ending, label: { en: Ending } }
           - { key: rule, label: { en: Rule } }
-          - { key: examples, label: { en: Examples } }
+          - { key: ex, label: { en: Examples } }
         rows:
-          - { level: A2, ending: { en: consonant + y }, rule: "y → ily", examples: "happy → happily / easy → easily" }
-          - { level: A2, ending: "-le", rule: "-le → ly", examples: "simple → simply / terrible → terribly" }
-          - { level: A2, ending: "-ic", rule: "+ ally", examples: "basic → basically" }
-          - { level: A2, ending: "-ue", rule: "-ue → uly", examples: "true → truly" }
+          - { level: A2, ending: { en: { pattern: [{ slot: consonant }, "y"] } }, rule: { mapping: ["y", ily] }, ex: { examples: [{ mapping: [happy, happily] }, { mapping: [easy, easily] }] } }
+          - { level: A2, ending: "-le", rule: { mapping: ["-le", ly] }, ex: { examples: [{ mapping: [simple, simply] }, { mapping: [terrible, terribly] }] } }
+          - { level: A2, ending: "-ic", rule: { pattern: [{ ending: ally }], follows: true }, ex: { mapping: [basic, basically] } }
+          - { level: A2, ending: "-ue", rule: { mapping: ["-ue", uly] }, ex: { mapping: ["true", truly] } }
 
   - title: { en: "Form: irregular manner adverbs" }
+    role: form
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: adjective, label: { en: Adjective } }
           - { key: adverb, label: { en: Adverb } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, adjective: good, adverb: well, example: "She sings **well**." }
-          - { level: A2, adjective: fast, adverb: fast, example: "He runs **fast**." }
-          - { level: A2, adjective: hard, adverb: hard, example: "They work **hard**." }
-          - { level: A2, adjective: late, adverb: late, example: "I arrived **late**." }
-          - { level: A2, adjective: early, adverb: early, example: "We got up **early**." }
-      - type: bullets
+          - { level: A2, adjective: good, adverb: well, ex: ["She sings ", { target: well }, "."] }
+          - { level: A2, adjective: fast, adverb: fast, ex: ["He runs ", { target: fast }, "."] }
+          - { level: A2, adjective: hard, adverb: hard, ex: ["They work ", { target: hard }, "."] }
+          - { level: A2, adjective: late, adverb: late, ex: ["I arrived ", { target: late }, "."] }
+          - { level: A2, adjective: early, adverb: early, ex: ["We got up ", { target: early }, "."] }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "**hardly** means almost not, and **lately** means recently: She **hardly** speaks."
+              en: [{ term: hardly }, " means almost not, and ", { term: lately }, " means recently:"]
+            ex: ["She ", { target: hardly }, " speaks."]
 
   - title: { en: "Form: position of manner adverbs" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: position, label: { en: Position } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, position: { en: "after the verb" }, example: "She sings **beautifully**." }
-          - { level: A2, position: { en: "after the object" }, example: "He opened the door **slowly**." }
+          - { level: A2, position: { en: after the verb }, ex: ["She sings ", { target: beautifully }, "."] }
+          - { level: A2, position: { en: after the object }, ex: ["He opened the door ", { target: slowly }, "."] }
 
   - title: { en: "Compare: good and well" }
+    role: compare
     content:
-      - type: table
+      - type: comparison
         columns:
-          - { key: good, label: { en: "good (adjective)" } }
-          - { key: well, label: { en: "well (adverb)" } }
+          - { key: good, label: { en: good (adjective) } }
+          - { key: well, label: { en: well (adverb) } }
         rows:
-          - { level: A2, good: { en: "describes a noun" }, well: { en: "describes a verb" } }
-          - { level: A2, good: { ex: "She is a **good** singer." }, well: { ex: "She sings **well**." } }
-          - { level: A2, good: { ex: "The food is **good**." }, well: { ex: "He speaks English **well**." } }
+          - { level: A2, good: { en: describes a noun }, well: { en: describes a verb } }
+          - { level: A2, good: ["She is a ", { target: good }, " singer."], well: ["She sings ", { target: well }, "."] }
+          - { level: A2, good: ["The food is ", { target: good }, "."], well: ["He speaks English ", { target: well }, "."] }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A2, wrong: She sings good., right: "She sings **well**.", rule: { en: "good + noun, well + verb" } }
-          - { level: A2, wrong: He walks careful., right: "He walks **carefully**.", rule: { en: "manner adverb = adjective + -ly" } }
-          - { level: A2, wrong: They work hardly., right: "They work **hard**.", rule: { en: "hard = hard; hardly = almost not" } }
+          - { level: A2, wrong: She sings good., right: ["She sings ", { target: well }, "."], rule: { en: [{ pattern: [good, { slot: noun }] }, ", ", { pattern: [well, { slot: verb }] }] } }
+          - { level: A2, wrong: He walks careful., right: ["He walks ", { target: carefully }, "."], rule: { en: { pattern: [manner adverb = adjective, "-ly"] } } }
+          - { level: A2, wrong: They work hardly., right: ["They work ", { target: hard }, "."], rule: { en: hard = hard; hardly = almost not } }

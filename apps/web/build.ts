@@ -10,7 +10,7 @@ import { creditsPage } from "./pages/credits.ts";
 import { homePage, notFoundPage } from "./pages/home.ts";
 import { sheetPages } from "./pages/sheets.ts";
 import { topicPages } from "./pages/topic.ts";
-import type { LinkFn } from "./render.ts";
+import type { LinkFn } from "./html.ts";
 import { trackIndex } from "./pages/track.ts";
 import { topicUrl } from "./urls.ts";
 

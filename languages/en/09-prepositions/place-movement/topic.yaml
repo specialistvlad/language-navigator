@@ -7,138 +7,153 @@ concepts: [prepositions-place]
 related: [en.prepositions.time-in-on-at, en.verbs.phrasal-verbs-core, en.verbs.there-is-are]
 status: { en: draft }
 
-title: { en: "Place and Movement" }
+title: { en: Place and Movement }
 summary:
-  en: "In, on, at and under say where something is; to, into, out of and through say where it goes. In is inside a space, on touches a surface and at is a point: **in** the bag, **on** the table, **at** the door."
+  lead: { en: "In, on, at and under say where something is; to, into, out of and through say where it goes." }
+  rule: { en: "In is inside a space, on touches a surface and at is a point:" }
+  ex: [{ target: in }, " the bag, ", { target: "on" }, " the table, ", { target: at }, " the door."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: point, label: { en: Point } }
         - { key: rule, label: { en: Rule } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, point: in, rule: { en: "inside a space, town, country" }, example: "**in** the bag / **in** Madrid" }
-        - { level: A1, point: on, rule: { en: "touching a surface" }, example: "**on** the table / **on** the wall" }
-        - { level: A1, point: at, rule: { en: "a point or a place for its purpose" }, example: "**at** the door / **at** home" }
-        - { level: A1, point: { en: fixed phrases }, rule: { en: "at home, at work, at school, in bed: no the" }, example: "She's **at** work." }
-        - { level: A1, point: "behind, near", rule: { en: "no of" }, example: "I live **near** the park." }
-        - { level: A1, point: "next to, in front of", rule: { en: "keep to and of" }, example: "**next to** the café / **in front of** the school" }
-        - { level: A1, point: "to / from", rule: { en: "movement to and from a place" }, example: "We go **to** the beach." }
-        - { level: A1, point: home, rule: { en: "go home: no to" }, example: "I go **home**." }
-        - { level: A2, point: "in → into · on → onto · at → to", rule: { en: "place becomes movement" }, example: "She goes **into** the kitchen." }
-        - { level: A2, point: opposite, rule: { en: "facing, no of" }, example: "The hotel is **opposite** the station." }
-        - { level: A2, point: arrive, rule: { en: "in a city or country · at a building" }, example: "We arrive **in** Paris." }
-        - { level: A2, point: { en: transport }, rule: { en: "bus, train, plane, bike → on · car, taxi → in" }, example: "I get **on** the bus." }
+        - { level: A1, point: in, rule: { en: "inside a space, town, country" }, ex: { examples: [[{ target: in }, " the bag"], [{ target: in }, " Madrid"]] } }
+        - { level: A1, point: "on", rule: { en: touching a surface }, ex: { examples: [[{ target: "on" }, " the table"], [{ target: "on" }, " the wall"]] } }
+        - { level: A1, point: at, rule: { en: a point or a place for its purpose }, ex: { examples: [[{ target: at }, " the door"], [{ target: at }, " home"]] } }
+        - { level: A1, point: { en: fixed phrases }, rule: { en: "at home, at work, at school, in bed: no the" }, ex: ["She's ", { target: at }, " work."] }
+        - { level: A1, point: "behind, near", rule: { en: no of }, ex: ["I live ", { target: near }, " the park."] }
+        - { level: A1, point: "next to, in front of", rule: { en: keep to and of }, ex: { examples: [[{ target: next to }, " the café"], [{ target: in front of }, " the school"]] } }
+        - { level: A1, point: { alternatives: [to, from] }, rule: { en: movement to and from a place }, ex: ["We go ", { target: to }, " the beach."] }
+        - { level: A1, point: home, rule: { en: "go home: no to" }, ex: ["I go ", { target: home }, "."] }
+        - { level: A2, point: { examples: [{ mapping: [in, into] }, { mapping: ["on", onto] }, { mapping: [at, to] }] }, rule: { en: place becomes movement }, ex: ["She goes ", { target: into }, " the kitchen."] }
+        - { level: A2, point: opposite, rule: { en: "facing, no of" }, ex: ["The hotel is ", { target: opposite }, " the station."] }
+        - { level: A2, point: arrive, rule: { en: { examples: [in a city or country, at a building] } }, ex: ["We arrive ", { target: in }, " Paris."] }
+        - { level: A2, point: { en: transport }, rule: { en: { examples: [{ takes: ["bus, train, plane, bike", "on"] }, { takes: ["car, taxi", in] }] } }, ex: ["I get ", { target: "on" }, " the bus."] }
 
 sections:
   - title: { en: "Place: where something is" }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: prep, label: { en: Preposition } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, prep: in, example: "The keys are **in** the bag." }
-          - { level: A1, prep: on, example: "The phone is **on** the table." }
-          - { level: A1, prep: at, example: "She is **at** the door." }
-          - { level: A1, prep: under, example: "The cat is **under** the chair." }
-          - { level: A1, prep: next to, example: "The bank is **next to** the café." }
-          - { level: A1, prep: between, example: "The shop is **between** the bank and the café." }
-          - { level: A1, prep: behind, example: "The garden is **behind** the house." }
-          - { level: A1, prep: in front of, example: "The bus stop is **in front of** the school." }
-          - { level: A2, prep: opposite, example: "The hotel is **opposite** the station." }
-          - { level: A1, prep: near, example: "I live **near** the park." }
-      - type: bullets
+          - { level: A1, prep: in, ex: ["The keys are ", { target: in }, " the bag."] }
+          - { level: A1, prep: "on", ex: ["The phone is ", { target: "on" }, " the table."] }
+          - { level: A1, prep: at, ex: ["She is ", { target: at }, " the door."] }
+          - { level: A1, prep: under, ex: ["The cat is ", { target: under }, " the chair."] }
+          - { level: A1, prep: next to, ex: ["The bank is ", { target: next to }, " the café."] }
+          - { level: A1, prep: between, ex: ["The shop is ", { target: between }, " the bank and the café."] }
+          - { level: A1, prep: behind, ex: ["The garden is ", { target: behind }, " the house."] }
+          - { level: A1, prep: in front of, ex: ["The bus stop is ", { target: in front of }, " the school."] }
+          - { level: A2, prep: opposite, ex: ["The hotel is ", { target: opposite }, " the station."] }
+          - { level: A1, prep: near, ex: ["I live ", { target: near }, " the park."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "**behind**, **opposite** and **near** go straight before the noun: near the park."
+              en: [{ term: behind }, ", ", { term: opposite }, " and ", { term: near }, " go straight before the noun: near the park."]
 
   - title: { en: "In, on, at: place" }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, use: "in + room, building, town, country", example: "He lives **in** Madrid. / It's **in** the kitchen." }
-          - { level: A1, use: "in + bed, hospital", example: "I'm **in** bed. (US: **in the hospital**)" }
-          - { level: A1, use: "on + surface, wall, floor", example: "The picture is **on** the wall." }
-          - { level: A1, use: "at + home, work, school, university", example: "She's **at** home. / He's **at** work." }
-          - { level: A1, use: "at + point or event", example: "I'm **at** the bus stop. / We're **at** a party." }
-      - type: bullets
+          - { level: A1, use: { pattern: [in, { slot: { en: "room, building, town, country" } }] }, ex: { examples: [["He lives ", { target: in }, " Madrid."], ["It's ", { target: in }, " the kitchen."]] } }
+          - { level: A1, use: { pattern: [in, "bed, hospital"] }, ex: ["I'm ", { target: in }, " bed. ", { variant: { target: in the hospital }, variety: en-US }] }
+          - { level: A1, use: { pattern: ["on", { slot: { en: "surface, wall, floor" } }] }, ex: ["The picture is ", { target: "on" }, " the wall."] }
+          - { level: A1, use: { pattern: [at, "home, work, school, university"] }, ex: { examples: [["She's ", { target: at }, " home."], ["He's ", { target: at }, " work."]] } }
+          - { level: A1, use: { pattern: [at, { slot: { en: point or event } }] }, ex: { examples: [["I'm ", { target: at }, " the bus stop."], ["We're ", { target: at }, " a party."]] } }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "**at home**, **at work**, **at school** and **in bed** are fixed phrases without *the*."
-          - level: A1
+              en: [{ term: at home }, ", ", { term: at work }, ", ", { term: at school }, " and ", { term: in bed }, " are fixed phrases without ", { term: the }, "."]
+          - type: rule
+            level: A1
             text:
-              en: "**in** = inside a space. **on** = touching a surface. **at** = a point or a place for its purpose."
+              en: [{ term: in }, " = inside a space. ", { term: "on" }, " = touching a surface. ", { term: at }, " = a point or a place for its purpose."]
 
   - title: { en: "Movement: where something goes" }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: prep, label: { en: Preposition } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, prep: to, example: "We go **to** the beach." }
-          - { level: A1, prep: from, example: "She comes **from** Italy." }
-          - { level: A2, prep: into, example: "He walks **into** the room." }
-          - { level: A2, prep: out of, example: "She gets **out of** the car." }
-          - { level: A2, prep: onto, example: "The cat jumps **onto** the sofa." }
-          - { level: A2, prep: up, example: "We walk **up** the hill." }
-          - { level: A2, prep: down, example: "He runs **down** the stairs." }
-          - { level: A2, prep: along, example: "Walk **along** the river." }
-          - { level: A2, prep: across, example: "We walk **across** the bridge." }
-          - { level: A2, prep: through, example: "The train goes **through** a tunnel." }
-          - { level: A2, prep: past, example: "Walk **past** the bank." }
-          - { level: A2, prep: towards, example: "The dog runs **towards** me." }
-      - type: bullets
+          - { level: A1, prep: to, ex: ["We go ", { target: to }, " the beach."] }
+          - { level: A1, prep: from, ex: ["She comes ", { target: from }, " Italy."] }
+          - { level: A2, prep: into, ex: ["He walks ", { target: into }, " the room."] }
+          - { level: A2, prep: out of, ex: ["She gets ", { target: out of }, " the car."] }
+          - { level: A2, prep: onto, ex: ["The cat jumps ", { target: onto }, " the sofa."] }
+          - { level: A2, prep: up, ex: ["We walk ", { target: up }, " the hill."] }
+          - { level: A2, prep: down, ex: ["He runs ", { target: down }, " the stairs."] }
+          - { level: A2, prep: along, ex: ["Walk ", { target: along }, " the river."] }
+          - { level: A2, prep: across, ex: ["We walk ", { target: across }, " the bridge."] }
+          - { level: A2, prep: through, ex: ["The train goes ", { target: through }, " a tunnel."] }
+          - { level: A2, prep: past, ex: ["Walk ", { target: past }, " the bank."] }
+          - { level: A2, prep: towards, ex: ["The dog runs ", { target: towards }, " me."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "**home** follows go, come and get directly: go **home**."
-          - level: A1
+              en: [{ term: home }, " follows go, come and get directly: go ", { term: home }, "."]
+          - type: rule
+            level: A1
             text:
-              en: "**to school**, **to work** and **to bed** are fixed phrases without *the*: I go **to work**."
-          - level: A1
+              en: [{ term: to school }, ", ", { term: to work }, " and ", { term: to bed }, " are fixed phrases without ", { term: the }, ":"]
+            ex: ["I go ", { target: to work }, "."]
+          - type: rule
+            level: A1
             text:
-              en: "**towards** /təˈwɔːdz/ (US: **toward**)."
+              en: [{ term: towards }, " ", { ipa: təˈwɔːdz }, " (", { variant: { term: toward }, variety: en-US }, ")."]
 
-  - title: { en: "Arriving and transport" }
+  - title: { en: Arriving and transport }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, use: "arrive in + city, country", example: "We arrive **in** Paris at noon." }
-          - { level: A2, use: "arrive at + building, station, event", example: "I arrive **at** the office at nine." }
-          - { level: A2, use: "arrive home", example: "She arrives **home** late." }
-          - { level: A2, use: "get on / off + bus, train, plane, bike", example: "I get **on** the bus here. / He gets **off** the train." }
-          - { level: A2, use: "get in / out of + car, taxi", example: "She gets **in** the taxi. / He gets **out of** the car." }
-          - { level: A2, use: "by + transport", example: "I go to school **by bus**. / We go **on foot**." }
-          - { level: A2, use: "on + bus, train, plane, bike · in + car, taxi", example: "I'm **on** the train. / She's **in** the car." }
+          - { level: A2, use: { pattern: [arrive in, { slot: { en: "city, country" } }] }, ex: ["We arrive ", { target: in }, " Paris at noon."] }
+          - { level: A2, use: { pattern: [arrive at, { slot: { en: "building, station, event" } }] }, ex: ["I arrive ", { target: at }, " the office at nine."] }
+          - { level: A2, use: arrive home, ex: ["She arrives ", { target: home }, " late."] }
+          - { level: A2, use: { pattern: [{ alternatives: [get on, "off"] }, "bus, train, plane, bike"] }, ex: { examples: [["I get ", { target: "on" }, " the bus here."], ["He gets ", { target: "off" }, " the train."]] } }
+          - { level: A2, use: { pattern: [{ alternatives: [get in, out of] }, "car, taxi"] }, ex: { examples: [["She gets ", { target: in }, " the taxi."], ["He gets ", { target: out of }, " the car."]] } }
+          - { level: A2, use: { pattern: [by, { slot: { en: transport } }] }, ex: { examples: [["I go to school ", { target: by bus }, "."], ["We go ", { target: on foot }, "."]] } }
+          - { level: A2, use: { examples: [{ pattern: ["on", "bus, train, plane, bike"] }, { pattern: [in, "car, taxi"] }] }, ex: { examples: [["I'm ", { target: "on" }, " the train."], ["She's ", { target: in }, " the car."]] } }
 
   - title: { en: "Compare: place and movement" }
+    role: compare
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: place, label: { en: Place } }
           - { key: movement, label: { en: Movement } }
         rows:
-          - { level: A2, place: { ex: "She is **in** the kitchen." }, movement: { ex: "She goes **into** the kitchen." } }
-          - { level: A2, place: { ex: "The cat is **on** the sofa." }, movement: { ex: "The cat jumps **onto** the sofa." } }
-          - { level: A2, place: { ex: "He is **at** school." }, movement: { ex: "He goes **to** school." } }
+          - { level: A2, place: ["She is ", { target: in }, " the kitchen."], movement: ["She goes ", { target: into }, " the kitchen."] }
+          - { level: A2, place: ["The cat is ", { target: "on" }, " the sofa."], movement: ["The cat jumps ", { target: onto }, " the sofa."] }
+          - { level: A2, place: ["He is ", { target: at }, " school."], movement: ["He goes ", { target: to }, " school."] }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: The school is in front the park., right: "The school is **in front of** the park.", rule: { en: in front of needs of } }
-          - { level: A1, wrong: I live at London., right: "I live **in** London.", rule: { en: towns and countries → in } }
-          - { level: A2, wrong: I get in the bus., right: "I get **on** the bus.", rule: { en: "bus, train, plane → get on" } }
-          - { level: A2, wrong: She gets on the taxi., right: "She gets **in** the taxi.", rule: { en: "car, taxi → get in / out of" } }
+          - { level: A1, wrong: The school is in front the park., right: ["The school is ", { target: in front of }, " the park."], rule: { en: in front of needs of } }
+          - { level: A1, wrong: I live at London., right: ["I live ", { target: in }, " London."], rule: { en: { takes: [towns and countries, in] } } }
+          - { level: A2, wrong: I get in the bus., right: ["I get ", { target: "on" }, " the bus."], rule: { en: { takes: ["bus, train, plane", get on] } } }
+          - { level: A2, wrong: She gets on the taxi., right: ["She gets ", { target: in }, " the taxi."], rule: { en: { takes: ["car, taxi", { alternatives: [get in, out of] }] } } }

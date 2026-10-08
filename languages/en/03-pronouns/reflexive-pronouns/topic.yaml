@@ -9,88 +9,98 @@ status: { en: draft }
 
 title: { en: Reflexive Pronouns }
 summary:
-  en: "Reflexive pronouns (myself, yourself, themselves) show that the subject and the object are the same person. Routine verbs such as get up and get dressed take no reflexive: I **get up**, I **get dressed**."
+  lead: { en: "Reflexive pronouns (myself, yourself, themselves) show that the subject and the object are the same person." }
+  rule: { en: "Routine verbs such as get up and get dressed take no reflexive:" }
+  ex: ["I ", { target: get up }, ", I ", { target: get dressed }, "."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: paradigm
       columns:
         - { key: subject, label: { en: Subject } }
         - { key: reflexive, label: { en: Reflexive } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A2, subject: I, reflexive: myself, example: "I cut **myself**." }
-        - { level: A2, subject: you, reflexive: yourself / yourselves, example: "Help **yourself**. / Help **yourselves**." }
-        - { level: A2, subject: he, reflexive: himself, example: "He hurt **himself**." }
-        - { level: A2, subject: she, reflexive: herself, example: "She taught **herself** French." }
-        - { level: A2, subject: it, reflexive: itself, example: "The door closes by **itself**." }
-        - { level: A2, subject: we, reflexive: ourselves, example: "We enjoyed **ourselves**." }
-        - { level: A2, subject: they, reflexive: themselves, example: "They looked at **themselves** in the mirror." }
+        - { level: A2, features: { person: 1, number: sg }, subject: I, reflexive: myself, ex: ["I cut ", { target: myself }, "."] }
+        - { level: A2, features: { person: 2 }, subject: you, reflexive: { alternatives: [yourself, yourselves] }, ex: { examples: [["Help ", { target: yourself }, "."], ["Help ", { target: yourselves }, "."]] } }
+        - { level: A2, features: { person: 3, number: sg, gender: masc }, subject: he, reflexive: himself, ex: ["He hurt ", { target: himself }, "."] }
+        - { level: A2, features: { person: 3, number: sg, gender: fem }, subject: she, reflexive: herself, ex: ["She taught ", { target: herself }, " French."] }
+        - { level: A2, features: { person: 3, number: sg, gender: neut }, subject: it, reflexive: itself, ex: ["The door closes by ", { target: itself }, "."] }
+        - { level: A2, features: { person: 1, number: pl }, subject: we, reflexive: ourselves, ex: ["We enjoyed ", { target: ourselves }, "."] }
+        - { level: A2, features: { person: 3, number: pl }, subject: they, reflexive: themselves, ex: ["They looked at ", { target: themselves }, " in the mirror."] }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "Singular forms end in **-self**; plural forms end in **-selves**."
-          - level: A2
+              en: ["Singular forms end in ", { term: "-self" }, "; plural forms end in ", { term: "-selves" }, "."]
+          - type: rule
+            level: A2
             text:
-              en: "**you** has two forms: **yourself** for one person, **yourselves** for several."
-          - level: A2
+              en: [{ term: you }, " has two forms: ", { term: yourself }, " for one person, ", { term: yourselves }, " for several."]
+          - type: rule
+            level: A2
             text:
-              en: "The stress falls on -self: myself /maɪˈself/, themselves /ðəmˈselvz/."
+              en: ["The stress falls on -self: myself ", { ipa: maɪˈself }, ", themselves ", { ipa: ðəmˈselvz }, "."]
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, use: { en: "object = subject" }, example: "I burnt **myself** in the kitchen." }
-          - { level: A2, use: { en: "after a preposition, same person" }, example: "She talks to **herself**." }
-          - { level: A2, use: { en: "emphasis: that person and nobody else" }, example: "I made the cake **myself**." }
-          - { level: A2, use: { en: "by + reflexive = alone, without help" }, example: "He lives **by himself**." }
-          - { level: A2, use: { en: "fixed expressions" }, example: "Enjoy **yourselves**! / Make **yourself** at home." }
+          - { level: A2, use: { en: object = subject }, ex: ["I burnt ", { target: myself }, " in the kitchen."] }
+          - { level: A2, use: { en: "after a preposition, same person" }, ex: ["She talks to ", { target: herself }, "."] }
+          - { level: A2, use: { en: "emphasis: that person and nobody else" }, ex: ["I made the cake ", { target: myself }, "."] }
+          - { level: A2, use: { en: { pattern: [by, "reflexive = alone, without help"] } }, ex: ["He lives ", { target: by himself }, "."] }
+          - { level: A2, use: { en: fixed expressions }, ex: { examples: [["Enjoy ", { target: yourselves }, "!"], ["Make ", { target: yourself }, " at home."]] } }
 
   - title: { en: "Everyday routines: the verb alone" }
+    role: own
     content:
-      - type: text
+      - type: prose
         level: A2
         text:
           en: "These everyday verbs take no reflexive pronoun:"
-      - type: table
+      - type: usage
         columns:
           - { key: verb, label: { en: Verb } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, verb: get up / wake up, example: "I **get up** at seven." }
-          - { level: A2, verb: have a shower, example: "He **has a shower** every morning." }
-          - { level: A2, verb: get dressed, example: "I **get dressed** quickly." }
-          - { level: A2, verb: sit down, example: "Please **sit down**." }
-          - { level: A2, verb: feel, example: "I **feel** tired." }
-          - { level: A2, verb: relax, example: "We **relax** at the weekend." }
-          - { level: A2, verb: remember, example: "I **remember** her." }
-          - { level: A2, verb: meet, example: "We **met** in 2019." }
-          - { level: A2, verb: worry, example: "Don't **worry**." }
+          - { level: A2, verb: { alternatives: [get up, wake up] }, ex: ["I ", { target: get up }, " at seven."] }
+          - { level: A2, verb: have a shower, ex: ["He ", { target: has a shower }, " every morning."] }
+          - { level: A2, verb: get dressed, ex: ["I ", { target: get dressed }, " quickly."] }
+          - { level: A2, verb: sit down, ex: ["Please ", { target: sit down }, "."] }
+          - { level: A2, verb: feel, ex: ["I ", { target: feel }, " tired."] }
+          - { level: A2, verb: relax, ex: ["We ", { target: relax }, " at the weekend."] }
+          - { level: A2, verb: remember, ex: ["I ", { target: remember }, " her."] }
+          - { level: A2, verb: meet, ex: ["We ", { target: met }, " in ", { date: "2019", value: "2019" }, "."] }
+          - { level: A2, verb: worry, ex: ["Don't ", { target: worry }, "."] }
 
   - title: { en: "Compare: themselves and each other" }
+    role: compare
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: self, label: themselves }
           - { key: other, label: each other }
         rows:
-          - { level: A2, self: { en: "each person → the same person" }, other: { en: "each person → the other person" } }
-          - { level: A2, self: { ex: "They looked at **themselves** in the mirror." }, other: { ex: "They looked at **each other**." } }
-          - { level: A2, self: { ex: "We blamed **ourselves**." }, other: { ex: "We blamed **each other**." } }
+          - { level: A2, self: { en: { takes: [each person, the same person] } }, other: { en: { takes: [each person, the other person] } } }
+          - { level: A2, self: ["They looked at ", { target: themselves }, " in the mirror."], other: ["They looked at ", { target: each other }, "."] }
+          - { level: A2, self: ["We blamed ", { target: ourselves }, "."], other: ["We blamed ", { target: each other }, "."] }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A2, wrong: He hurt hisself., right: "He hurt **himself**.", rule: { en: "him + self" } }
-          - { level: A2, wrong: They enjoyed theirselves., right: "They enjoyed **themselves**.", rule: { en: "them + selves" } }
-          - { level: A2, wrong: "Help yourself, children!", right: "Help **yourselves**, children!", rule: { en: "several people → yourselves" } }
+          - { level: A2, wrong: He hurt hisself., right: ["He hurt ", { target: himself }, "."], rule: { en: { pattern: [him, self] } } }
+          - { level: A2, wrong: They enjoyed theirselves., right: ["They enjoyed ", { target: themselves }, "."], rule: { en: { pattern: [them, selves] } } }
+          - { level: A2, wrong: "Help yourself, children!", right: ["Help ", { target: yourselves }, ", children!"], rule: { en: { takes: [several people, yourselves] } } }

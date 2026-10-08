@@ -9,89 +9,104 @@ status: { en: draft }
 
 title: { en: Word Order }
 summary:
-  en: "The order of subject, verb, object, adjectives and adverbs in an English sentence. The subject is always present and the adjective comes before the noun: **It** is cold. I have a **red car**."
+  lead: { en: "The order of subject, verb, object, adjectives and adverbs in an English sentence." }
+  rule: { en: "The subject is always present and the adjective comes before the noun:" }
+  ex: { examples: [[{ target: It }, " is cold."], ["I have a ", { target: red car }, "."]] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: part, label: { en: Part } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A0, part: { en: 1. Subject }, example: "**My sister** buys bread in the shop every day." }
-        - { level: A0, part: { en: 2. Verb }, example: "My sister **buys** bread in the shop every day." }
-        - { level: A0, part: { en: 3. Object }, example: "My sister buys **bread** in the shop every day." }
-        - { level: A1, part: { en: 4. Place }, example: "My sister buys bread **in the shop** every day." }
-        - { level: A1, part: { en: 5. Time }, example: "My sister buys bread in the shop **every day**." }
+        - { level: A0, part: { en: "1. Subject" }, ex: [{ target: My sister }, " buys bread in the shop every day."] }
+        - { level: A0, part: { en: "2. Verb" }, ex: ["My sister ", { target: buys }, " bread in the shop every day."] }
+        - { level: A0, part: { en: "3. Object" }, ex: ["My sister buys ", { target: bread }, " in the shop every day."] }
+        - { level: A1, part: { en: "4. Place" }, ex: ["My sister buys bread ", { target: in the shop }, " every day."] }
+        - { level: A1, part: { en: "5. Time" }, ex: ["My sister buys bread in the shop ", { target: every day }, "."] }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A0
+          - type: rule
+            level: A0
             text:
               en: "The order is subject, verb, object (SVO), then place, then time."
-          - level: A0
+          - type: note
+            level: A0
             text:
-              en: "Questions change the order. See [Questions and negatives](id:en.sentence-building.questions-negatives)."
+              en: ["Questions change the order. See ", { link: Questions and negatives, to: en.sentence-building.questions-negatives }, "."]
 
   - title: { en: "Form: statements" }
+    role: form
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: rule, label: { en: Rule } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A0, rule: { en: "The subject is always present." }, example: "**It** is cold. / **She** lives in Madrid." }
-          - { level: A0, rule: { en: "The verb comes right after the subject." }, example: "My friend **came** early." }
-          - { level: A0, rule: { en: "The object comes right after the verb." }, example: "I **drink tea** at night." }
-          - { level: A0, rule: { en: "An adjective comes before the noun." }, example: "I have a **red car**." }
-      - type: bullets
+          - { level: A0, rule: { en: The subject is always present. }, ex: { examples: [[{ target: It }, " is cold."], [{ target: She }, " lives in Madrid."]] } }
+          - { level: A0, rule: { en: The verb comes right after the subject. }, ex: ["My friend ", { target: came }, " early."] }
+          - { level: A0, rule: { en: The object comes right after the verb. }, ex: ["I ", { target: drink tea }, " at night."] }
+          - { level: A0, rule: { en: An adjective comes before the noun. }, ex: ["I have a ", { target: red car }, "."] }
+      - type: list
         items:
-          - level: A0
+          - type: note
+            level: A0
             text:
-              en: "For two or more adjectives, see [Adjective order](id:en.adjectives-adverbs.adjective-order)."
+              en: ["For two or more adjectives, see ", { link: Adjective order, to: en.adjectives-adverbs.adjective-order }, "."]
 
   - title: { en: Place and time }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: rule, label: { en: Rule } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, rule: { en: "Place comes before time." }, example: "I went **to London** **last year**." }
-          - { level: A1, rule: { en: "A time word can also start the sentence." }, example: "**Last year** I went to London." }
-      - type: bullets
+          - { level: A1, rule: { en: Place comes before time. }, ex: ["I went ", { target: to London }, " ", { target: last year }, "."] }
+          - { level: A1, rule: { en: A time word can also start the sentence. }, ex: [{ target: Last year }, " I went to London."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "A time phrase at the start often takes a comma: **Last summer**, we went to Italy."
-          - level: A1
+              en: "A time phrase at the start often takes a comma:"
+            ex: [{ target: Last summer }, ", we went to Italy."]
+          - type: rule
+            level: A1
             text:
-              en: "A place or time word follows the object: I met **Ana** in the park."
+              en: "A place or time word follows the object:"
+            ex: ["I met ", { target: Ana }, " in the park."]
 
   - title: { en: Adverbs }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: adverb, label: { en: Adverb } }
           - { key: position, label: { en: Position } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, adverb: always, position: { en: "before the main verb, after be" }, example: "I **always** eat breakfast. / She is **always** late." }
-          - { level: A1, adverb: really, position: { en: "before the main verb" }, example: "I **really** like jazz." }
-          - { level: A1, adverb: "very much / a lot", position: { en: "at the end, after the object" }, example: "I like coffee **very much**." }
-      - type: bullets
+          - { level: A1, adverb: always, position: { en: "before the main verb, after be" }, ex: { examples: [["I ", { target: always }, " eat breakfast."], ["She is ", { target: always }, " late."]] } }
+          - { level: A1, adverb: really, position: { en: before the main verb }, ex: ["I ", { target: really }, " like jazz."] }
+          - { level: A1, adverb: { alternatives: [very much, a lot] }, position: { en: "at the end, after the object" }, ex: ["I like coffee ", { target: very much }, "."] }
+      - type: list
         items:
-          - level: A1
+          - type: note
+            level: A1
             text:
-              en: "More on frequency adverbs: [Adverbs of frequency and manner](id:en.adjectives-adverbs.adverbs-frequency-manner)."
+              en: ["More on frequency adverbs: ", { link: Adverbs of frequency and manner, to: en.adjectives-adverbs.adverbs-frequency-manner }, "."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: I went yesterday to London., right: "I went **to London yesterday**.", rule: { en: place before time } }
-          - { level: A1, wrong: I eat always breakfast., right: "I **always eat** breakfast.", rule: { en: frequency adverbs go before the main verb } }
-          - { level: A1, wrong: She always is late., right: "She **is always** late.", rule: { en: frequency adverbs go after be } }
+          - { level: A1, wrong: I went yesterday to London., right: ["I went ", { target: to London yesterday }, "."], rule: { en: place before time } }
+          - { level: A1, wrong: I eat always breakfast., right: ["I ", { target: always eat }, " breakfast."], rule: { en: frequency adverbs go before the main verb } }
+          - { level: A1, wrong: She always is late., right: ["She ", { target: is always }, " late."], rule: { en: frequency adverbs go after be } }

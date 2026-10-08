@@ -9,147 +9,169 @@ status: { en: draft }
 
 title: { en: Plurals }
 summary:
-  en: "Most nouns add -s (books), nouns ending in s, sh, ch or x add -es, and consonant + y becomes -ies. Irregular plurals take no -s and people takes a plural verb: three **children**, The **people are** nice."
+  lead: { en: ["Most nouns add -s (books), nouns ending in s, sh, ch or x add -es, and ", { pattern: [{ slot: consonant }, "y"] }, " becomes -ies."] }
+  rule: { en: "Irregular plurals take no -s and people takes a plural verb:" }
+  ex: ["three ", { target: children }, ", The ", { target: people are }, " nice."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: point, label: { en: Point } }
         - { key: rule, label: { en: Rule } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A0, point: { en: most nouns }, rule: + s, example: "two **books**" }
-        - { level: A0, point: "-s, -ss, -sh, -ch, -x, -z", rule: + es, example: "bus → **buses** / box → **boxes**" }
-        - { level: A0, point: { en: consonant + y }, rule: y → ies, example: "city → **cities**" }
-        - { level: A0, point: { en: vowel + y }, rule: + s, example: "boy → **boys**" }
-        - { level: A0, point: { en: irregular }, rule: { en: "no -s: man, woman, child, person" }, example: "three **children**" }
-        - { level: A0, point: people, rule: { en: "plural, takes a plural verb" }, example: "The people **are** nice." }
-        - { level: A0, point: { en: adjectives }, rule: { en: stay the same }, example: "two **red** cars" }
-        - { level: A1, point: { en: "-o, -f / -fe" }, rule: { en: "some + es; -f / -fe → ves" }, example: "potato → **potatoes** / knife → **knives**" }
-        - { level: A1, point: { en: "foot, tooth, mouse" }, rule: { en: irregular }, example: "**feet** / **teeth** / **mice**" }
-        - { level: A1, point: { en: "sheep, fish" }, rule: { en: same form }, example: "two **sheep**" }
-        - { level: A1, point: "jeans, trousers, glasses", rule: { en: "plural only, plural verb" }, example: "My jeans **are** new." }
+        - { level: A0, point: { en: most nouns }, rule: { pattern: [{ ending: s }], follows: true }, ex: ["two ", { target: books }] }
+        - { level: A0, point: "-s, -ss, -sh, -ch, -x, -z", rule: { pattern: [{ ending: es }], follows: true }, ex: { examples: [{ mapping: [bus, { target: buses }] }, { mapping: [box, { target: boxes }] }] } }
+        - { level: A0, point: { en: { pattern: [{ slot: consonant }, "y"] } }, rule: { mapping: ["y", ies] }, ex: { mapping: [city, { target: cities }] } }
+        - { level: A0, point: { en: { pattern: [{ slot: vowel }, "y"] } }, rule: { pattern: [{ ending: s }], follows: true }, ex: { mapping: [boy, { target: boys }] } }
+        - { level: A0, point: { en: irregular }, rule: { en: "no -s: man, woman, child, person" }, ex: ["three ", { target: children }] }
+        - { level: A0, point: people, rule: { en: "plural, takes a plural verb" }, ex: ["The people ", { target: are }, " nice."] }
+        - { level: A0, point: { en: adjectives }, rule: { en: stay the same }, ex: ["two ", { target: red }, " cars"] }
+        - { level: A1, point: { en: { alternatives: ["-o, -f", "-fe"] } }, rule: { en: [{ pattern: [some, es] }, "; ", { mapping: [{ alternatives: ["-f", "-fe"] }, ves] }] }, ex: { examples: [{ mapping: [potato, { target: potatoes }] }, { mapping: [knife, { target: knives }] }] } }
+        - { level: A1, point: { en: "foot, tooth, mouse" }, rule: { en: irregular }, ex: { examples: [{ target: feet }, { target: teeth }, { target: mice }] } }
+        - { level: A1, point: { en: "sheep, fish" }, rule: { en: same form }, ex: ["two ", { target: sheep }] }
+        - { level: A1, point: "jeans, trousers, glasses", rule: { en: "plural only, plural verb" }, ex: ["My jeans ", { target: are }, " new."] }
 
 sections:
   - title: { en: "Form: regular plurals" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
-          - { key: singular, label: { en: Singular } }
-          - { key: plural, label: { en: Plural } }
-          - { key: example, label: { en: Example } }
+          - { key: singular, label: { en: Singular }, features: { number: sg } }
+          - { key: plural, label: { en: Plural }, features: { number: pl } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A0, singular: a book, plural: "two book**s**", example: "I have two **books**." }
-          - { level: A0, singular: a car, plural: "three car**s**", example: "There are three **cars** here." }
-          - { level: A0, singular: an apple, plural: "apple**s**", example: "I like **apples**." }
-      - type: bullets
+          - { level: A0, singular: a book, plural: [two book, { ending: s }], ex: ["I have two ", { target: books }, "."] }
+          - { level: A0, singular: a car, plural: [three car, { ending: s }], ex: ["There are three ", { target: cars }, " here."] }
+          - { level: A0, singular: an apple, plural: [apple, { ending: s }], ex: ["I like ", { target: apples }, "."] }
+      - type: list
         items:
-          - level: A0
+          - type: rule
+            level: A0
             text:
-              en: "Most nouns add **-s** in the plural."
-          - level: A0
+              en: ["Most nouns add ", { term: "-s" }, " in the plural."]
+          - type: rule
+            level: A0
             text:
-              en: "Adjectives stay the same: a **red** car → two **red** cars."
-          - level: A0
+              en: ["Adjectives stay the same: ", { mapping: [["a ", { term: red }, " car"], ["two ", { term: red }, " cars"]] }, "."]
+          - type: rule
+            level: A0
             text:
-              en: "A plural subject takes a plural verb: The books **are** new."
-          - level: A0
+              en: "A plural subject takes a plural verb:"
+            ex: ["The books ", { target: are }, " new."]
+          - type: note
+            level: A0
             text:
-              en: "Uncountable nouns have no plural: see [Countable and uncountable nouns](id:en.nouns-determiners.countable-uncountable)."
+              en: ["Uncountable nouns have no plural: see ", { link: Countable and uncountable nouns, to: en.nouns-determiners.countable-uncountable }, "."]
 
   - title: { en: "Spelling: -s and -es" }
+    role: spelling
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: ending, label: { en: Noun ending } }
           - { key: rule, label: { en: Rule } }
-          - { key: examples, label: { en: Examples } }
+          - { key: ex, label: { en: Examples } }
         rows:
-          - { level: A0, ending: { en: most nouns }, rule: + s, examples: book → books / day → days }
-          - { level: A0, ending: "-s, -ss, -sh, -ch, -x, -z", rule: + es, examples: bus → buses / glass → glasses / dish → dishes / watch → watches / box → boxes }
-          - { level: A0, ending: { en: consonant + y }, rule: y → ies, examples: city → cities / baby → babies }
-          - { level: A0, ending: { en: vowel + y }, rule: + s, examples: boy → boys / key → keys }
-          - { level: A1, ending: { en: "consonant + o: some nouns" }, rule: + es, examples: potato → potatoes / tomato → tomatoes }
-          - { level: A1, ending: "-f, -fe", rule: → ves, examples: leaf → leaves / knife → knives / wife → wives / half → halves }
-      - type: bullets
+          - { level: A0, ending: { en: most nouns }, rule: { pattern: [{ ending: s }], follows: true }, ex: { examples: [{ mapping: [book, books] }, { mapping: [day, days] }] } }
+          - { level: A0, ending: "-s, -ss, -sh, -ch, -x, -z", rule: { pattern: [{ ending: es }], follows: true }, ex: { examples: [{ mapping: [bus, buses] }, { mapping: [glass, glasses] }, { mapping: [dish, dishes] }, { mapping: [watch, watches] }, { mapping: [box, boxes] }] } }
+          - { level: A0, ending: { en: { pattern: [{ slot: consonant }, "y"] } }, rule: { mapping: ["y", ies] }, ex: { examples: [{ mapping: [city, cities] }, { mapping: [baby, babies] }] } }
+          - { level: A0, ending: { en: { pattern: [{ slot: vowel }, "y"] } }, rule: { pattern: [{ ending: s }], follows: true }, ex: { examples: [{ mapping: [boy, boys] }, { mapping: [key, keys] }] } }
+          - { level: A1, ending: { en: [{ pattern: [{ slot: consonant }, o] }, ": some nouns"] }, rule: { pattern: [{ ending: es }], follows: true }, ex: { examples: [{ mapping: [potato, potatoes] }, { mapping: [tomato, tomatoes] }] } }
+          - { level: A1, ending: "-f, -fe", rule: { mapping: [ves], follows: true }, ex: { examples: [{ mapping: [leaf, leaves] }, { mapping: [knife, knives] }, { mapping: [wife, wives] }, { mapping: [half, halves] }] } }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "Other nouns in -o add only -s: photo → photos, piano → pianos, kilo → kilos."
-          - level: A1
+              en: ["Other nouns in -o add only -s: ", { mapping: [photo, photos] }, ", ", { mapping: [piano, pianos] }, ", ", { mapping: [kilo, kilos] }, "."]
+          - type: rule
+            level: A1
             text:
-              en: "Some nouns in -f add only -s: roof → roofs, chef → chefs."
+              en: ["Some nouns in -f add only -s: ", { mapping: [roof, roofs] }, ", ", { mapping: [chef, chefs] }, "."]
 
   - title: { en: "Pronunciation: the -s ending" }
+    role: pronunciation
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: sound, label: { en: Sound } }
           - { key: after, label: { en: After } }
-          - { key: examples, label: { en: Examples } }
+          - { key: ex, label: { en: Examples } }
         rows:
-          - { level: A1, sound: /s/, after: { en: voiceless sounds /p t k f θ/ }, examples: cups /kʌps/ / books /bʊks/ / months /mʌnθs/ }
-          - { level: A1, sound: /z/, after: { en: voiced sounds and vowels }, examples: dogs /dɒɡz/ / pens /penz/ / days /deɪz/ }
-          - { level: A1, sound: /ɪz/, after: /s z ʃ tʃ dʒ/, examples: buses /ˈbʌsɪz/ / dishes /ˈdɪʃɪz/ / pages /ˈpeɪdʒɪz/ }
-      - type: bullets
+          - { level: A1, sound: { ipa: s }, after: { en: ["voiceless sounds ", { ipa: p t k f θ }] }, ex: { examples: [["cups ", { ipa: kʌps }], ["books ", { ipa: bʊks }], ["months ", { ipa: mʌnθs }]] } }
+          - { level: A1, sound: { ipa: z }, after: { en: voiced sounds and vowels }, ex: { examples: [["dogs ", { ipa: dɒɡz }], ["pens ", { ipa: penz }], ["days ", { ipa: deɪz }]] } }
+          - { level: A1, sound: { ipa: ɪz }, after: { ipa: s z ʃ tʃ dʒ }, ex: { examples: [["buses ", { ipa: ˈbʌsɪz }], ["dishes ", { ipa: ˈdɪʃɪz }], ["pages ", { ipa: ˈpeɪdʒɪz }]] } }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "In **houses** /ˈhaʊzɪz/, the s of house becomes /z/."
-          - level: A1
+              en: ["In ", { term: houses }, " ", { ipa: ˈhaʊzɪz }, ", the s of house becomes ", { ipa: z }, "."]
+          - type: note
+            level: A1
             text:
-              en: "The same rule gives the sound of the verb ending: see [Present simple](id:en.tenses.simple-tenses)."
+              en: ["The same rule gives the sound of the verb ending: see ", { link: Present simple, to: en.tenses.simple-tenses }, "."]
 
   - title: { en: Irregular plurals }
+    role: own
     content:
-      - type: table
+      - type: paradigm
         columns:
-          - { key: singular, label: { en: Singular } }
-          - { key: plural, label: { en: Plural } }
+          - { key: singular, label: { en: Singular }, features: { number: sg } }
+          - { key: plural, label: { en: Plural }, features: { number: pl } }
           - { key: ipa, label: { en: Pronunciation } }
         rows:
-          - { level: A0, singular: { ex: man }, plural: "**men**", ipa: /men/ }
-          - { level: A0, singular: { ex: woman }, plural: "**women**", ipa: /ˈwɪmɪn/ }
-          - { level: A0, singular: { ex: child }, plural: "**children**", ipa: /ˈtʃɪldrən/ }
-          - { level: A0, singular: { ex: person }, plural: "**people**", ipa: /ˈpiːpl/ }
-          - { level: A1, singular: { ex: foot }, plural: "**feet**", ipa: /fiːt/ }
-          - { level: A1, singular: { ex: tooth }, plural: "**teeth**", ipa: /tiːθ/ }
-          - { level: A1, singular: { ex: mouse }, plural: "**mice**", ipa: /maɪs/ }
-      - type: bullets
+          - { level: A0, singular: man, plural: { target: men }, ipa: { ipa: men } }
+          - { level: A0, singular: woman, plural: { target: women }, ipa: { ipa: ˈwɪmɪn } }
+          - { level: A0, singular: child, plural: { target: children }, ipa: { ipa: ˈtʃɪldrən } }
+          - { level: A0, singular: person, plural: { target: people }, ipa: { ipa: ˈpiːpl } }
+          - { level: A1, singular: foot, plural: { target: feet }, ipa: { ipa: fiːt } }
+          - { level: A1, singular: tooth, plural: { target: teeth }, ipa: { ipa: tiːθ } }
+          - { level: A1, singular: mouse, plural: { target: mice }, ipa: { ipa: maɪs } }
+      - type: list
         items:
-          - level: A0
+          - type: rule
+            level: A0
             text:
-              en: "Irregular plurals take no -s: two **children**, three **men**."
-          - level: A0
+              en: ["Irregular plurals take no -s: two ", { term: children }, ", three ", { term: men }, "."]
+          - type: rule
+            level: A0
             text:
-              en: "**people** is plural and takes a plural verb:"
-            ex: "The people here **are** friendly."
+              en: [{ term: people }, " is plural and takes a plural verb:"]
+            ex: ["The people here ", { target: are }, " friendly."]
 
   - title: { en: Same form and plural-only nouns }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: group, label: { en: Group } }
           - { key: nouns, label: { en: Nouns } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, group: { en: same singular and plural }, nouns: "sheep, fish", example: "one sheep, two **sheep**" }
-          - { level: A1, group: { en: "plural only: things with two parts" }, nouns: "trousers, jeans, glasses, scissors", example: "My jeans **are** new." }
-      - type: bullets
+          - { level: A1, group: { en: same singular and plural }, nouns: "sheep, fish", ex: ["one sheep, two ", { target: sheep }] }
+          - { level: A1, group: { en: "plural only: things with two parts" }, nouns: "trousers, jeans, glasses, scissors", ex: ["My jeans ", { target: are }, " new."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "Count plural-only nouns with **a pair of**: a pair of jeans, two pairs of glasses."
-          - level: A1
+              en: ["Count plural-only nouns with ", { term: a pair of }, ": a pair of jeans, two pairs of glasses."]
+          - type: note
+            level: A1
+            variety: en-US
             text:
-              en: "US: trousers are *pants*."
+              en: ["trousers are ", { term: pants }, "."]
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A0, wrong: three childs, right: "three **children**", rule: { en: irregular plural } }
-          - { level: A0, wrong: The people is nice., right: "The people **are** nice.", rule: { en: people + plural verb } }
-          - { level: A0, wrong: two babys · two boxs, right: "two **babies** · two **boxes**", rule: { en: "consonant + y → ies · -x → -es" } }
-          - { level: A1, wrong: two sheeps, right: "two **sheep**", rule: { en: sheep has the same form } }
+          - { level: A0, wrong: three childs, right: ["three ", { target: children }], rule: { en: irregular plural } }
+          - { level: A0, wrong: The people is nice., right: ["The people ", { target: are }, " nice."], rule: { en: { pattern: [people, plural verb] } } }
+          - { level: A0, wrong: { examples: [two babys, two boxs] }, right: { examples: [["two ", { target: babies }], ["two ", { target: boxes }]] }, rule: { en: { examples: [{ mapping: [{ pattern: [{ slot: consonant }, "y"] }, ies] }, { mapping: ["-x", "-es"] }] } } }
+          - { level: A1, wrong: two sheeps, right: ["two ", { target: sheep }], rule: { en: sheep has the same form } }

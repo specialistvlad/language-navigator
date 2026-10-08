@@ -2,11 +2,12 @@
 // level. A step links to its topic with its level, ?step=a1, so the page marks the step being read, and
 // to the place its level starts: the top at the topic's lowest level, else the first guide section
 // holding that level, under the anchor the topic page gives it.
-import { type CurriculumLanguage, type Explain, type Level, LEVELS, levelName, topicTitle, type TopicRef } from "../../scripts/lib.ts";
+import { topicTitle } from "../../scripts/content.ts";
+import { type CurriculumLanguage, type Explain, type Level, LEVELS, levelName, type TopicRef } from "../../scripts/lib.ts";
 import { leaves, topicLevels } from "../../scripts/levels.ts";
 import { guideParts } from "./guide.ts";
 import { anchorIds, levelAttrs, listBadge, single } from "./parts.ts";
-import { escapeHtml } from "./render.ts";
+import { escapeHtml } from "./html.ts";
 import { topicUrl } from "./urls.ts";
 
 export interface Step {

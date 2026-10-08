@@ -2,78 +2,86 @@
 id: en.prepositions.time-in-on-at
 lang: en
 kind: grammar
-tags: [prepositions, time, at, on, in]
+tags: [prepositions, time, at, "on", in]
 concepts: [prepositions-time]
 related: [en.foundations.telling-time, en.foundations.days-months-dates, en.prepositions.place-movement]
 status: { en: draft }
 
 title: { en: "Time: In, On, At" }
 summary:
-  en: "At goes with clock times, on with days and dates, and in with months, years and seasons. The period gets longer from at to on to in, and next, last, this and every take no preposition: **at** 7 o'clock, **on** Monday, **in** July, **next** Friday."
+  lead: { en: "At goes with clock times, on with days and dates, and in with months, years and seasons." }
+  rule: { en: "The period gets longer from at to on to in, and next, last, this and every take no preposition:" }
+  ex: [{ target: at }, " 7 o'clock, ", { target: "on" }, " ", { weekday: Monday, value: 1 }, ", ", { target: in }, " ", { date: July, value: "--07" }, ", ", { target: next }, " ", { weekday: Friday, value: 5 }, "."]
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: prep, label: { en: Preposition } }
         - { key: goes, label: { en: Goes with } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, prep: at, goes: { en: "clock times and points in time" }, example: "**at** 7 o'clock" }
-        - { level: A1, prep: on, goes: { en: "days and dates" }, example: "**on** Monday" }
-        - { level: A1, prep: in, goes: { en: "months, years, seasons and longer periods" }, example: "**in** July" }
+        - { level: A1, prep: at, goes: { en: clock times and points in time }, ex: [{ target: at }, " 7 o'clock"] }
+        - { level: A1, prep: "on", goes: { en: days and dates }, ex: [{ target: "on" }, " ", { weekday: Monday, value: 1 }] }
+        - { level: A1, prep: in, goes: { en: "months, years, seasons and longer periods" }, ex: [{ target: in }, " ", { date: July, value: "--07" }] }
 
 sections:
   - title: { en: Overview }
+    role: overview
     content:
-      - type: bullets
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
               en: "The period gets longer from at, to on, to in."
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, use: "at + clock time", example: "The class starts **at** 9:30." }
-          - { level: A1, use: "at + night, midday, midnight", example: "I sleep badly **at night**." }
-          - { level: A1, use: "at + the weekend", example: "We relax **at the weekend**. (US: **on the weekend**)" }
-          - { level: A1, use: "at + Christmas, Easter", example: "We visit my gran **at Christmas**." }
-          - { level: A1, use: "on + day", example: "I work **on Mondays**." }
-          - { level: A1, use: "on + day + part of the day", example: "See you **on Monday morning**." }
-          - { level: A1, use: "on + date", example: "My birthday is **on 5 May**." }
-          - { level: A1, use: "on + a special day", example: "We have a party **on New Year's Day**." }
-          - { level: A1, use: "in + morning, afternoon, evening", example: "I study **in the evening**." }
-          - { level: A1, use: "in + month", example: "It's cold **in January**." }
-          - { level: A1, use: "in + season", example: "We go to the beach **in summer**." }
-          - { level: A1, use: "in + year", example: "She was born **in 1998**." }
+          - { level: A1, use: { pattern: [at, { slot: { en: clock time } }] }, ex: ["The class starts ", { target: at }, " ", { time: "9:30", value: "09:30" }, "."] }
+          - { level: A1, use: { pattern: [at, "night, midday, midnight"] }, ex: ["I sleep badly ", { target: at night }, "."] }
+          - { level: A1, use: { pattern: [at, the weekend] }, ex: ["We relax ", { target: at the weekend }, ". ", { variant: { target: on the weekend }, variety: en-US }] }
+          - { level: A1, use: { pattern: [at, "Christmas, Easter"] }, ex: ["We visit my gran ", { target: at Christmas }, "."] }
+          - { level: A1, use: { pattern: ["on", { slot: day }] }, ex: ["I work ", { target: ["on ", { weekday: Mondays, value: 1 }] }, "."] }
+          - { level: A1, use: { pattern: ["on", { slot: day }, { slot: { en: part of the day } }] }, ex: ["See you ", { target: ["on ", { weekday: Monday, value: 1 }, " morning"] }, "."] }
+          - { level: A1, use: { pattern: ["on", { slot: date }] }, ex: ["My birthday is ", { target: ["on ", { date: "5 May", value: "--05-05" }] }, "."] }
+          - { level: A1, use: { pattern: ["on", { slot: { en: a special day } }] }, ex: ["We have a party ", { target: on New Year's Day }, "."] }
+          - { level: A1, use: { pattern: [in, "morning, afternoon, evening"] }, ex: ["I study ", { target: in the evening }, "."] }
+          - { level: A1, use: { pattern: [in, { slot: month }] }, ex: ["It's cold ", { target: ["in ", { date: January, value: "--01" }] }, "."] }
+          - { level: A1, use: { pattern: [in, { slot: { en: season } }] }, ex: ["We go to the beach ", { target: in summer }, "."] }
+          - { level: A1, use: { pattern: [in, { slot: year }] }, ex: ["She was born ", { target: ["in ", { date: "1998", value: "1998" }] }, "."] }
 
   - title: { en: No preposition }
+    role: own
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: word, label: { en: Word } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, word: "this + morning, week, year", example: "I'm busy **this week**." }
-          - { level: A1, word: "next / last + day, week, month", example: "We meet **next Monday**. / He called **last night**." }
-          - { level: A1, word: "every + day, week, year", example: "I walk **every morning**." }
-          - { level: A1, word: "today, tonight, tomorrow, yesterday", example: "Call me **tomorrow morning**." }
-      - type: bullets
+          - { level: A1, word: { pattern: [this, "morning, week, year"] }, ex: ["I'm busy ", { target: this week }, "."] }
+          - { level: A1, word: { pattern: [{ alternatives: [next, last] }, "day, week, month"] }, ex: { examples: [["We meet ", { target: ["next ", { weekday: Monday, value: 1 }] }, "."], ["He called ", { target: last night }, "."]] } }
+          - { level: A1, word: { pattern: [every, "day, week, year"] }, ex: ["I walk ", { target: every morning }, "."] }
+          - { level: A1, word: "today, tonight, tomorrow, yesterday", ex: ["Call me ", { target: tomorrow morning }, "."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
               en: "Before this, next, last, every, today and tomorrow, the time word stands alone."
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: The film starts on 8 o'clock., right: "The film starts **at** 8 o'clock.", rule: { en: clock times → at } }
-          - { level: A1, wrong: My birthday is in 5 May., right: "My birthday is **on** 5 May.", rule: { en: dates → on } }
-          - { level: A1, wrong: We relax in the weekend., right: "We relax **at** the weekend.", rule: { en: "at the weekend (US: on the weekend)" } }
-          - { level: A1, wrong: It's cold on January., right: "It's cold **in** January.", rule: { en: months → in } }
+          - { level: A1, wrong: The film starts on 8 o'clock., right: ["The film starts ", { target: at }, " 8 o'clock."], rule: { en: { takes: [clock times, at] } } }
+          - { level: A1, wrong: ["My birthday is in ", { date: "5 May", value: "--05-05" }, "."], right: ["My birthday is ", { target: "on" }, " ", { date: "5 May", value: "--05-05" }, "."], rule: { en: { mapping: [dates, "on"] } } }
+          - { level: A1, wrong: We relax in the weekend., right: ["We relax ", { target: at }, " the weekend."], rule: { en: [at the weekend (, { variant: on the weekend, variety: en-US }, ")"] } }
+          - { level: A1, wrong: ["It's cold on ", { date: January, value: "--01" }, "."], right: ["It's cold ", { target: in }, " ", { date: January, value: "--01" }, "."], rule: { en: { mapping: [months, in] } } }

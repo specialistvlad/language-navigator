@@ -4,22 +4,22 @@ import type { Block, Topic, TopicRef } from "./lib.ts";
 import { blockRange, contains, contentRange, inside, join, parseRange, refRange, sectionRange, span, topicRange, upTo } from "./levels.ts";
 
 const table: Block = {
-  type: "table",
+  type: "usage",
   columns: [{ key: "form", label: "Form" }],
   rows: [
     { level: "A1", form: "a" },
-    { level: "B1", form: "b", for: ["en"] },
+    { level: "B1", form: "b", readers: ["en"] },
     { level: "A2", form: "c" },
   ],
 };
-const bullets: Block = { type: "bullets", items: [{ level: "B2", text: "x" }] };
-const text: Block = { type: "text", level: "C1", text: { en: "only English" }, for: ["en"] };
+const list: Block = { type: "list", items: [{ type: "rule", level: "B2", text: { en: "x" } }] };
+const prose: Block = { type: "prose", level: "C1", text: { en: "only English" }, readers: ["en"] };
 
 const topic = {
   cheatsheet: { content: [table] },
   sections: [
-    { title: { en: "One" }, content: [table, bullets] },
-    { title: { en: "Two" }, content: [text] },
+    { title: { en: "One" }, role: "own", content: [table, list] },
+    { title: { en: "Two" }, role: "own", content: [prose] },
   ],
 } as unknown as Topic;
 
@@ -51,7 +51,7 @@ describe("leaves decide every range above them", () => {
   test("a block covers the leaves its reader sees", () => {
     expect(blockRange(table)).toEqual({ from: "A1", to: "B1" });
     expect(blockRange(table, "en")).toEqual({ from: "A1", to: "B1" });
-    expect(blockRange(text, "en")).toEqual({ from: "C1", to: "C1" });
+    expect(blockRange(prose, "en")).toEqual({ from: "C1", to: "C1" });
   });
   test("a section and a topic cover their blocks", () => {
     const [one, two] = topic.sections;
@@ -72,9 +72,40 @@ describe("leaves decide every range above them", () => {
 
 describe("upTo", () => {
   test("leaves above the level drop out, and so does a block left empty", () => {
-    const cut = upTo([table, bullets, text], "A2");
+    const cut = upTo([table, list, prose], "A2");
     expect(cut).toHaveLength(1);
-    expect(cut[0]?.type === "table" ? cut[0].rows.map((r) => r.level) : []).toEqual(["A1", "A2"]);
-    expect(upTo([bullets], "B1")).toEqual([]);
+    expect(cut[0]?.type === "usage" ? cut[0].rows.map((r) => r.level) : []).toEqual(["A1", "A2"]);
+    expect(upTo([list], "B1")).toEqual([]);
+  });
+});
+
+describe("every block type has leaves", () => {
+  const rows = [
+    { level: "A1" as const, a: "x" },
+    { level: "B1" as const, a: "y" },
+  ];
+  const columns = [{ key: "a", label: "a" }];
+  const blocks: Block[] = [
+    { type: "paradigm", columns: [{ key: "a", label: "a", features: { number: "sg" } }], rows },
+    { type: "comparison", columns, rows },
+    { type: "inventory", set: "letters", columns, rows: rows.map((r, n) => ({ ...r, value: n === 0 ? "a" : "b" })) },
+    {
+      type: "errors",
+      rows: [
+        { level: "A1", wrong: "a", right: "b" },
+        { level: "B1", wrong: "c", right: "d" },
+      ],
+    },
+  ];
+  test.each(blocks.map((b) => [b.type, b] as const))("%s: its rows", (_type, b) => {
+    expect(blockRange(b)).toEqual({ from: "A1", to: "B1" });
+    const [cut] = upTo([b], "A2");
+    expect(cut && "rows" in cut ? cut.rows.map((r) => r.level) : []).toEqual(["A1"]);
+    expect(upTo([b], "A0")).toEqual([]);
+  });
+  test("a block of no known type fails", () => {
+    const odd = { type: "table", rows: [] } as unknown as Block;
+    expect(() => blockRange(odd)).toThrow("Unknown block");
+    expect(() => upTo([odd], "A1")).toThrow("Unknown block");
   });
 });

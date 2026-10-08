@@ -9,146 +9,166 @@ status: { en: draft }
 
 title: { en: Future Forms }
 summary:
-  en: "Plans, arrangements, decisions, offers and predictions with going to, the present continuous, will and the present simple. A plan made before speaking takes going to, a decision made while speaking takes will: **I'm going to** visit Ana. **I'll** open the door."
+  lead: { en: "Plans, arrangements, decisions, offers and predictions with going to, the present continuous, will and the present simple." }
+  rule: { en: "A plan made before speaking takes going to, a decision made while speaking takes will:" }
+  ex: { examples: [[{ target: I'm going to }, " visit Ana."], [{ target: I'll }, " open the door."]] }
 
 cheatsheet:
   content:
-    - type: table
+    - type: usage
       columns:
         - { key: form, label: { en: Form } }
-        - { key: example, label: { en: Example } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, form: be going to + V, example: "I'**m going to** buy a car." }
-        - { level: A1, form: be + V-ing, example: "I'**m meeting** Ana at six." }
-        - { level: A2, form: will + V, example: "I'**ll** carry that bag." }
-        - { level: A2, form: V / V-s, example: "The film **starts** at nine." }
+        - { level: A1, form: { pattern: [be going to, { slot: V }] }, ex: [I', { target: m going to }, " buy a car."] }
+        - { level: A1, form: { pattern: [be, { slot: V-ing }] }, ex: [I', { target: m meeting }, " Ana at six."] }
+        - { level: A2, form: { pattern: [will, { slot: V }] }, ex: [I', { target: ll }, " carry that bag."] }
+        - { level: A2, form: { alternatives: [V, V-s] }, ex: ["The film ", { target: starts }, " at nine."] }
 
 sections:
   - title: { en: "Form: be going to" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: form, label: { en: Form } }
           - { key: structure, label: { en: Structure } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, form: { en: Affirmative }, structure: "am / is / are + going to + V", example: "She **is going to** study." }
-          - { level: A1, form: { en: Negative }, structure: "am / is / are + not + going to + V", example: "We **aren't going to** wait." }
-          - { level: A1, form: { en: Question }, structure: "Am / Is / Are + subject + going to + V?", example: "**Are** you **going to** cook?" }
-      - type: bullets
+          - { level: A1, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, structure: { pattern: [{ alternatives: [am, is, are] }, going to, { slot: V }] }, ex: ["She ", { target: is going to }, " study."] }
+          - { level: A1, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, structure: { pattern: [{ alternatives: [am, is, are] }, not, going to, { slot: V }] }, ex: ["We ", { target: aren't going to }, " wait."] }
+          - { level: A1, features: { polarity: pos, interrogativity: int }, form: { en: Question }, structure: { pattern: [{ alternatives: [Am, Is, Are] }, { slot: subject }, going to, [{ slot: V }, "?"]] }, ex: [{ target: Are }, " you ", { target: going to }, " cook?"] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "**going to** stays the same for every person; only **be** changes."
-          - level: A1
+              en: [{ term: going to }, " stays the same for every person; only ", { term: be }, " changes."]
+          - type: rule
+            level: A1
             text:
-              en: "After **to** the verb is in the base form: I'm going to **eat**."
+              en: ["After ", { term: to }, " the verb is in the base form:"]
+            ex: ["I'm going to ", { target: eat }, "."]
 
   - title: { en: "Form: will" }
+    role: form
     content:
-      - type: table
+      - type: paradigm
         columns:
           - { key: form, label: { en: Form } }
           - { key: structure, label: { en: Structure } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A2, form: { en: Affirmative }, structure: "will / 'll + V", example: "I'**ll help** you." }
-          - { level: A2, form: { en: Negative }, structure: "will not / won't + V", example: "He **won't come**." }
-          - { level: A2, form: { en: Question }, structure: "Will + subject + V?", example: "**Will** you **call** me?" }
-          - { level: A2, form: { en: Short answer }, structure: "Yes, I will. / No, I won't.", example: "**Will** she come? — Yes, she **will**." }
-      - type: bullets
+          - { level: A2, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, structure: { pattern: [{ alternatives: [will, "'ll"] }, { slot: V }] }, ex: [I', { target: ll help }, " you."] }
+          - { level: A2, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, structure: { pattern: [{ alternatives: [will not, won't] }, { slot: V }] }, ex: ["He ", { target: won't come }, "."] }
+          - { level: A2, features: { polarity: pos, interrogativity: int }, form: { en: Question }, structure: { pattern: [Will, { slot: subject }, [{ slot: V }, "?"]] }, ex: [{ target: Will }, " you ", { target: call }, " me?"] }
+          - { level: A2, features: { interrogativity: decl, polarity: [pos, neg] }, form: { en: Short answer }, structure: { alternatives: ["Yes, I will.", "No, I won't."] }, ex: { exchange: [[{ target: Will }, " she come?"], ["Yes, she ", { target: will }, "."]] } }
+      - type: list
         items:
-          - level: A2
+          - type: rule
+            level: A2
             text:
-              en: "**will** is the same for every person and takes the base verb: she **will go**."
-          - level: A2
+              en: [{ term: will }, " is the same for every person and takes the base verb: she ", { term: will go }, "."]
+          - type: rule
+            level: A2
             text:
-              en: "Speech uses **'ll** (I'll, she'll) and **won't**."
+              en: ["Speech uses ", { term: "'ll" }, " (I'll, she'll) and ", { term: won't }, "."]
 
   - title: { en: "Pronunciation: gonna and 'll" }
+    role: pronunciation
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: written, label: { en: Written } }
           - { key: sound, label: { en: Sound } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, written: going to, sound: "/ˈɡəʊɪŋ tə/ → informal /ˈɡɒnə/", example: { ex: "I'm **going to** call him." } }
-          - { level: A2, written: "'ll", sound: "/əl/ after a consonant, /l/ after a vowel", example: { ex: "She'**ll** call you." } }
-          - { level: A2, written: won't, sound: "/wəʊnt/", example: { ex: "It **won't** rain." } }
-      - type: bullets
+          - { level: A1, written: going to, sound: { mapping: [{ ipa: ˈɡəʊɪŋ tə }, ["informal ", { ipa: ˈɡɒnə }]] }, ex: ["I'm ", { target: going to }, " call him."] }
+          - { level: A2, written: "'ll", sound: [{ ipa: əl }, " after a consonant, ", { ipa: l }, " after a vowel"], ex: [She', { target: ll }, " call you."] }
+          - { level: A2, written: won't, sound: { ipa: wəʊnt }, ex: ["It ", { target: won't }, " rain."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "**gonna** is informal speech; writing and exams use **going to**."
+              en: [{ term: gonna }, " is informal speech; writing and exams use ", { term: going to }, "."]
 
   - title: { en: Use }
+    role: use
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: use, label: { en: Use } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, use: { en: "going to: plans and intentions" }, example: "We'**re going to** visit Granada." }
-          - { level: A1, use: { en: "going to: prediction with evidence" }, example: "Look at those clouds. It'**s going to** rain." }
-          - { level: A1, use: { en: "present continuous: fixed arrangements" }, example: "I'**m seeing** the dentist on Friday." }
-          - { level: A2, use: { en: "will: decision at the moment of speaking" }, example: "It's cold. I'**ll close** the window." }
-          - { level: A2, use: { en: "will: offers" }, example: "I'**ll carry** your bag." }
-          - { level: A2, use: { en: "will: promises" }, example: "I **won't tell** anyone." }
-          - { level: A2, use: { en: "will: opinions and predictions (I think)" }, example: "I think she'**ll** win." }
-          - { level: A2, use: { en: "present simple: timetables" }, example: "The train **leaves** at 6:15." }
-      - type: bullets
+          - { level: A1, use: { en: "going to: plans and intentions" }, ex: [We', { target: re going to }, " visit Granada."] }
+          - { level: A1, use: { en: "going to: prediction with evidence" }, ex: [Look at those clouds. It', { target: s going to }, " rain."] }
+          - { level: A1, use: { en: "present continuous: fixed arrangements" }, ex: [I', { target: m seeing }, " the dentist on ", { weekday: Friday, value: 5 }, "."] }
+          - { level: A2, use: { en: "will: decision at the moment of speaking" }, ex: [It's cold. I', { target: ll close }, " the window."] }
+          - { level: A2, use: { en: "will: offers" }, ex: [I', { target: ll carry }, " your bag."] }
+          - { level: A2, use: { en: "will: promises" }, ex: ["I ", { target: won't tell }, " anyone."] }
+          - { level: A2, use: { en: "will: opinions and predictions (I think)" }, ex: [I think she', { target: ll }, " win."] }
+          - { level: A2, use: { en: "present simple: timetables" }, ex: ["The train ", { target: leaves }, " at ", { time: "6:15", value: "06:15" }, "."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "The present continuous needs a future time and a plan with a fixed person or place."
-          - level: A1
+              en: The present continuous needs a future time and a plan with a fixed person or place.
+          - type: note
+            level: A1
             text:
-              en: "See [Present continuous](id:en.tenses.continuous-tenses) and [Present simple](id:en.tenses.simple-tenses)."
+              en: ["See ", { link: Present continuous, to: en.tenses.continuous-tenses }, " and ", { link: Present simple, to: en.tenses.simple-tenses }, "."]
 
   - title: { en: Signal words }
+    role: signals
     content:
-      - type: table
+      - type: usage
         columns:
           - { key: expression, label: { en: Expression } }
-          - { key: example, label: { en: Example } }
+          - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, expression: "tomorrow / tonight", example: "We're **going to** cook **tonight**." }
-          - { level: A1, expression: "next week / month / year", example: "I'm travelling **next week**." }
-          - { level: A1, expression: "on Friday / at the weekend", example: "She's leaving **on Friday**." }
-          - { level: A2, expression: "in two days / in a minute", example: "I'll call you **in a minute**." }
-          - { level: A2, expression: "soon / later", example: "He'll be here **soon**." }
-          - { level: A2, expression: "I think / probably", example: "It'll **probably** rain." }
-      - type: bullets
+          - { level: A1, expression: { alternatives: [tomorrow, tonight] }, ex: ["We're ", { target: going to }, " cook ", { signal: tonight }, "."] }
+          - { level: A1, expression: { alternatives: [next week, month, year] }, ex: ["I'm travelling ", { signal: next week }, "."] }
+          - { level: A1, expression: { alternatives: [["on ", { weekday: Friday, value: 5 }], at the weekend] }, ex: ["She's leaving ", { signal: ["on ", { weekday: Friday, value: 5 }] }, "."] }
+          - { level: A2, expression: { alternatives: [in two days, in a minute] }, ex: ["I'll call you ", { signal: in a minute }, "."] }
+          - { level: A2, expression: { alternatives: [soon, later] }, ex: ["He'll be here ", { signal: soon }, "."] }
+          - { level: A2, expression: { alternatives: [I think, probably] }, ex: ["It'll ", { signal: probably }, " rain."] }
+      - type: list
         items:
-          - level: A1
+          - type: rule
+            level: A1
             text:
-              en: "**probably** goes after **will** and before **won't**: It will **probably** rain. / It **probably** won't rain."
+              en: [{ term: probably }, " goes after ", { term: will }, " and before ", { term: won't }, ":"]
+            ex: { examples: [["It will ", { target: probably }, " rain."], ["It ", { target: probably }, " won't rain."]] }
 
   - title: { en: "Compare: will and going to" }
+    role: compare
     content:
-      - type: table
+      - type: comparison
         columns:
           - { key: will, label: will }
           - { key: going, label: going to }
         rows:
-          - { level: A2, will: { en: "decision made now" }, going: { en: "plan made before" } }
-          - { level: A2, will: { ex: "The phone is ringing. I'**ll answer** it." }, going: { ex: "I'**m going to call** Tom tonight. I decided yesterday." } }
-          - { level: B1, will: { en: "opinion or guess (I think)" }, going: { en: "evidence now" } }
-          - { level: B1, will: { ex: "I think it'**ll** be a good year." }, going: { ex: "Watch out! You'**re going to** fall." } }
-      - type: bullets
+          - { level: A2, will: { en: decision made now }, going: { en: plan made before } }
+          - { level: A2, will: [The phone is ringing. I', { target: ll answer }, " it."], going: [I', { target: m going to call }, " Tom tonight. I decided yesterday."] }
+          - { level: B1, will: { en: opinion or guess (I think) }, going: { en: evidence now } }
+          - { level: B1, will: [I think it', { target: ll }, " be a good year."], going: [Watch out! You', { target: re going to }, " fall."] }
+      - type: list
         items:
-          - level: B1
+          - type: rule
+            level: B1
             text:
-              en: "A fixed arrangement takes the present continuous; an intention takes **going to**:"
-            ex: "I'**m meeting** Sam at 8. / I'**m going to** learn Italian."
+              en: ["A fixed arrangement takes the present continuous; an intention takes ", { term: going to }, ":"]
+            ex: { examples: [[I', { target: m meeting }, " Sam at 8."], [I', { target: m going to }, " learn Italian."]] }
 
   - title: { en: Typical errors }
+    role: errors
     content:
       - type: errors
         rows:
-          - { level: A1, wrong: I buy a car tomorrow., right: "I'**m going to buy** a car tomorrow.", rule: { en: "plans take going to" } }
-          - { level: A1, wrong: I'm going to to travel., right: "I'm going to **travel**.", rule: { en: "going to + base verb" } }
-          - { level: A1, wrong: She is going to goes., right: "She is going to **go**.", rule: { en: "going to + base verb" } }
-          - { level: A2, wrong: He will goes., right: "He will **go**.", rule: { en: "will + base verb" } }
-          - { level: A2, wrong: Do you will come?, right: "**Will** you come?", rule: { en: "will makes questions by itself" } }
+          - { level: A1, wrong: I buy a car tomorrow., right: [I', { target: m going to buy }, " a car tomorrow."], rule: { en: plans take going to } }
+          - { level: A1, wrong: I'm going to to travel., right: ["I'm going to ", { target: travel }, "."], rule: { en: { pattern: [going to, { slot: base verb }] } } }
+          - { level: A1, wrong: She is going to goes., right: ["She is going to ", { target: go }, "."], rule: { en: { pattern: [going to, { slot: base verb }] } } }
+          - { level: A2, wrong: He will goes., right: ["He will ", { target: go }, "."], rule: { en: { pattern: [will, { slot: base verb }] } } }
+          - { level: A2, wrong: Do you will come?, right: [{ target: Will }, " you come?"], rule: { en: will makes questions by itself } }
