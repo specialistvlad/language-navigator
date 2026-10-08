@@ -6,7 +6,7 @@ scripts and for the web app. `npm run check` enforces them.
 **The data names meaning; the renderer decides how it looks.** Every field, block, mark and
 attribute says what a piece of content is: a paradigm cell, a helper verb, an ending, a typical
 error. The renderer lays it out for every view: wide and narrow screens, Cheatsheet and Extended,
-every level. §12 holds the vocabulary and the move to it.
+every level. §12 holds the vocabulary.
 
 ## 1. Languages and variants
 
@@ -86,8 +86,8 @@ and colours from it, and the schemas list exactly its codes (`npm run check` com
 | `C1` | Advanced |
 | `C2` | Proficiency |
 
-**Levels live on the leaves.** Every leaf carries its `level`: a table row, an errors row, a
-bullet, a text block. Everything above a leaf takes its range from the leaves under it, from the
+**Levels live on the leaves.** Every leaf carries its `level`: a table row, an errors row, a list
+item, a paragraph. Everything above a leaf takes its range from the leaves under it, from the
 lowest level to the highest: a block, a section, the cheatsheet, the topic, and a curriculum
 section in the menu.
 
@@ -123,21 +123,25 @@ section in the menu.
 
 ## 4. Text values
 
+Text names what each of its pieces is with the marks of §12. A string without marks stays a string;
+a string with marks is a list of its parts: plain text as strings, and each marked part as an object
+named after its mark.
+
 | Type | Form | Use |
 |---|---|---|
-| plain | `"I **live** in Madrid."` | same in every explanation language: examples, forms, symbols |
-| localized | `{ en: "…" }` | explanation text |
-| example | `{ ex: "I **live** here.", tr: { … } }` | an example with its translations (§6) |
-| item | `{ level, text, ex, tr, for }` | a bullet: explanation, example or both, with its level |
+| text | `"I live in Madrid."`, `["I ", { target: live }, " in Madrid."]`, `{ target: lives }` | text in the language being learned: examples, forms, words; the same in every explanation language |
+| localized | `{ en: … }` | explanation text, one text per explanation language |
+| example | `{ ex: …, tr: { en: … } }` | an example in a cell, with its translations (§6) |
 
-- Inline formatting inside strings: `**bold**` marks the target form, `*italic*` marks a gloss.
-  Bold also carries helpers, endings, stressed syllables, corrections and words under
-  discussion, and italic carries phrases in the reader's language and respellings; §12 gives
-  each meaning its own mark.
-- Links point to topic IDs: `[To be](id:en.verbs.to-be)`. The renderer turns them into page
-  links in the reader's explanation language.
-- `for: [en]` limits an element to the listed explanation languages. Use it for notes,
-  sections or error rows that serve one group of readers.
+- Marks name each piece the reader should notice: the form the topic teaches is a `target`, a helper
+  verb an `aux`, an ending an `ending`, a word an explanation discusses a `term`. The renderer
+  decides how each looks.
+- A link names another topic by ID: `{ link: To be, to: en.verbs.to-be }`. The renderer turns it
+  into a page link in the reader's explanation language.
+- Joined pieces are structures: `{ alternatives: [am, is, are] }`, `{ mapping: [work, works] }`,
+  `{ pattern: [be, { slot: V-ing }] }`. The renderer writes their joiners (§7).
+- `readers: [en]` limits an element to the listed explanation languages. Use it for notes,
+  sections, rows or columns that serve one group of readers.
 - A localized value carries every explanation language that renders it.
 
 ## 5. Topic structure
@@ -146,25 +150,27 @@ section in the menu.
 |---|---|
 | `id`, `lang`, `kind`, `tags`, `concepts`, `related` | identity and links |
 | `status` | `draft` or `approved`, per explanation language |
-| `title`, `summary` | localized; the summary follows the rules below |
+| `title` | localized |
+| `summary` | `lead` and `rule`, localized, and the rule's examples in `ex`; the rules below |
 | `cheatsheet` | `content`: the whole topic in one table, section 00 (§8) |
-| `sections` | the full guide, in order |
+| `sections` | the full guide, in order: each with its `title`, `role` and `content` |
 
 **The summary.** The page shows the summary above the guide; topic cards and the meta description
-show its first sentence. It is two sentences, at most 50 words:
+show its lead. The lead and the rule are one sentence each, and the summary holds at most 50 words
+with its examples:
 
-1. **The lead** names the forms and what they do, so it stands alone in a search result or on a
-   card: "Can for ability, permission and requests; could for past ability, polite requests and
-   possibility." It starts with a capital letter and has at most 160 characters.
-2. **The rule to get right**: the one rule a learner most needs, with an example that marks the
-   target form in bold: "Can and could never change and take the base verb without to: She **can**
-   swim. **Can** she swim?"
+1. **The lead** (`summary.lead`) names the forms and what they do, so it stands alone in a search
+   result or on a card: "Can for ability, permission and requests; could for past ability, polite
+   requests and possibility." It starts with a capital letter and has at most 160 characters.
+2. **The rule to get right** (`summary.rule`): the one rule a learner most needs, "Can and could
+   never change and take the base verb without to:", followed by its examples in `summary.ex` with
+   the target form marked: `{ examples: [["She ", { target: can }, " swim."], [{ target: Can }, " she swim?"]] }`.
 
 Both sentences talk about the language itself. The rail lists the sections and the badges show the
 levels, so each sentence opens with a form, a meaning or a rule. Each explanation language has its
 own summary, written for its readers.
-`npm run check` enforces the length, the capital letter, and sentences free of page tours, level
-codes and openers such as "You need it to…".
+`npm run check` enforces the length, the capital letters, the one-sentence lead, and sentences free
+of page tours, level codes and openers such as "You need it to…".
 
 **A language reference.** Every topic explains a part of the language system through its rules:
 sounds, writing, numbers, dates and time, grammar. Words appear as examples of a rule.
@@ -173,95 +179,104 @@ sounds, writing, numbers, dates and time, grammar. Words appear as examples of a
 another question belongs to its own topic in `curriculum.yaml`: capital letters and spelling aloud
 belong in topics of their own, outside "The Alphabet".
 
-**Sections are a menu.** The sections below are the ones a topic may use, in this order. A topic
-includes a section only when it has content of its own for it, Typical errors included; a short
-topic with one strong section is complete.
+**Sections are a menu.** The sections below are the ones a topic may use, in this order; each names
+its place in the menu with `role`. A topic includes a section only when it has content of its own for
+it, Typical errors included; a short topic with one strong section is complete.
 
 Grammar sections:
 
-| # | Title | Content |
-|---|---|---|
-| 1 | Overview | the rules that hold across the whole topic |
-| 2 | Form: … | one section per form: affirmative, negative, questions… |
-| 3 | Spelling: … | spelling rules for the forms |
-| 4 | Pronunciation: … | sound rules, with IPA |
-| 5 | Use | table: use, example, row levels |
-| 6 | Signal words | time words, frequency words, typical companions |
-| 7 | (topic-specific) | anything the topic needs (e.g. Stative verbs) |
-| 8 | Compare: … | the closest related topic, side by side |
-| 9 | Typical errors | an `errors` block, when the subject has characteristic errors |
+| # | Title | `role` | Content |
+|---|---|---|---|
+| 1 | Overview | `overview` | the rules that hold across the whole topic |
+| 2 | Form: … | `form` | one section per form: affirmative, negative, questions… |
+| 3 | Spelling: … | `spelling` | spelling rules for the forms |
+| 4 | Pronunciation: … | `pronunciation` | sound rules, with IPA |
+| 5 | Use | `use` | table: use, example, row levels |
+| 6 | Signal words | `signals` | time words, frequency words, typical companions |
+| 7 | (topic-specific) | `own` | anything the topic needs (e.g. Stative verbs) |
+| 8 | Compare: … | `compare` | the closest related topic, side by side |
+| 9 | Typical errors | `errors` | an `errors` block, when the subject has characteristic errors |
+
+A topic that holds several tenses gives each of its tense sections the tense as `features`:
+"Present simple: form" has role `form` and features `{ tense: prs }`.
+
+Foundations topics take one section per part of what they set out, with role `own`: the letters,
+the sounds, the numbers by range, the days, the months, the times; then Typical errors.
 
 `related` lists related topics by ID; guides carry no links section.
-
-The section set for foundations topics is fixed by its pilot topics and is recorded here at that
-point.
 
 Block types inside `content`:
 
 | Type | Fields | Renders as |
 |---|---|---|
-| `text` | `level`, `text`, `ex`, `tr` | a paragraph |
-| `bullets` | `items`, each an item with its `level` | a bullet list |
-| `table` | `columns` (`key`, `label`, `group`, `merge`, `center`, `for`), `rows` (cells by key, `level`, `tr`, `for`) | a table; `\n` in a cell starts a new line; a row without a key leaves that cell empty |
-| `errors` | `rows` (`level`, `wrong`, `right`, `rule`, `for`) | a ✗ / ✓ / rule table |
+| `prose` | `level`, `text`, `ex`, `tr` | a paragraph |
+| `list` | `items`, each with its `type` (`rule`, `note`, `example`), `level`, `text`, `ex`, `tr`, `variety` | a list |
+| `paradigm` | `columns`, `rows`; its rows or its columns carry `features` | a table of forms |
+| `usage` | `columns`, `rows` | a table of uses, rules or patterns with their examples |
+| `comparison` | `columns`, `rows` | a table of items side by side |
+| `inventory` | `set`, `columns`, `rows`, each row with its `value` | a table of the members of a closed set |
+| `errors` | `rows` (`level`, `wrong`, `right`, `rule`, `speakers`) | a ✗ / ✓ / rule table |
 
-§12 names the blocks the data moves to: each names its content, and the renderer picks its
-layout.
+A table's columns each have a `key` and a `label`; its rows hold their cells by key, beside their
+`level`, `features`, `value`, `variety`, `readers` and `tr`. A row leaves out the key of a cell with
+nothing in it.
 
 ## 6. Translations and readers
 
 - When the explanation language differs from the language being learned, every example carries
-  a translation into it: `tr` on a row adds a column named after the explanation language; `tr` on an item or an
-  example cell renders as *— translation* after the example.
+  a translation into it: `tr` on a row adds a column named after the explanation language; `tr` on
+  an item, a paragraph or an example cell renders as *— translation* after the example.
 - When the two languages are the same, examples stand alone.
-- A form grid or a slot table (§7) stands alone in every track: it shows the pattern, and the
-  examples below it carry the translations.
+- A paradigm stands alone in every track: it shows the pattern, and the examples below it carry the
+  translations.
 - Typical errors match the readers. When the explanation language differs from the language
-  being learned, rows list errors typical of speakers of the explanation language. Rows with
-  `for` serve one group; rows without serve all.
+  being learned, rows list errors typical of speakers of the explanation language and name them in
+  `speakers`. Rows without `speakers` serve all.
 
 ## 7. Tables and writing style
 
-- A rendered table has at most 4 columns, counting the generated translation column,
-  so it fits A4 portrait, a tablet and a phone screen. A slot table has at most 10.
+- A rendered table has at most 4 columns, counting the generated translation column, so it fits
+  A4 portrait, a tablet and a phone screen. A slot paradigm has at most 10.
 
-**Slot tables** lay a sentence out word by word, one column per slot, so a row reads across as
+**Slot paradigms** lay a sentence out word by word, one column per slot, so a row reads across as
 the sentence. The tense cheatsheets use one: Tense, then Question (Helper, Subject, Verb), Statement
 (Subject, Helper, Verb) and Negative (Subject, Helper, Verb), one row per person.
 
-- `group` titles neighbouring columns in a second header row: Question, Statement, Negative. An
-  empty column separates two groups.
-- `merge` joins a cell to the one above when both read the same and their rows share a level.
-  A merged first column splits the table into blocks with an empty row between them; merges stay
-  inside a block. A table with a `merge` column renders with compact rows.
-- `center` centres a column's cells and title both ways; slot columns use it, Subject stays left.
-- A slot with nothing in it, such as the helper of a present statement, is a key the row leaves out.
-- `group`, `merge` and `center` move to the renderer: §12 holds a slot table as a `paradigm`
-  whose sentences mark their slots, and the renderer builds the columns from the marks.
+- A slot column names its slot, `aux`, `subj`, `verb` or `rest`, and its sentence by `features`:
+  `{ interrogativity: int, polarity: pos }` is the question. Its row carries the tense and the
+  person as `features`.
+- The renderer writes the slot titles and the sentence titles above them, merges a cell into the one
+  above when both read the same and their rows share a level, and centres every column but the
+  subject. A merged first column splits the table into blocks with an empty row between them; merges
+  stay inside a block. A slot paradigm renders with compact rows.
+- A slot with nothing in it, such as the helper of a present statement, is a key the row leaves
+  out; any other table shows a dash where a row leaves a cell out.
 - Subjects are one per row, lowercase after a helper and capitalised at the start of a sentence.
 - The first column holds the key: person, form, use or rule.
 - Each fact appears once in the sections. A topic is a short path through its sections, not a
   set of overlapping views: regroupings, highlight lists and summaries of data shown in another
   section stay out of the guide. The summary of the whole topic is its cheatsheet (§8).
 - Tables first. Use text only for a rule that a table cannot hold.
-- One rule per bullet, at most 20 words.
+- One rule per list item, at most 20 words.
 - State the correct form. Incorrect forms appear only in `errors` blocks.
 - Examples use everyday vocabulary at or below the section's level.
-- Pronunciation is in IPA between slashes: /wɜːks/.
-- Form placeholders: `V` = base verb, `V-s`, `V-ing`, `V-ed`.
+- Pronunciation is IPA in an `ipa` mark, `{ ipa: wɜːks }`, which renders /wɜːks/.
+- Patterns name their slots from the slot list of §12: `V` = base verb, `V-s`, `V-ing`, `V-ed`,
+  `subject`, `noun`, `clause`…
 
-| Symbol | Meaning |
+The renderer writes the symbols from the structures and marks of §12:
+
+| Symbol | Written for |
 |---|---|
-| ✓ | correct |
-| ✗ | incorrect |
-| → | becomes / changes to |
-| / | alternative |
-| ( ) | optional part |
-| … | the list continues |
-| `US:` | variant note |
-
-Where →, / or — joins two examples or forms, §12 writes the pair as a field: `mapping`,
-`alternatives` or `exchange`.
+| ✓, ✗ | the errors table |
+| → | `mapping`, `takes` |
+| / | `alternatives`, `examples`; · when a piece shows a slash of its own |
+| — | `exchange` |
+| + | `pattern` |
+| ( ) | `optional`, `variant` and `gloss` in the language being learned |
+| … | `gap` |
+| US: | `variant`, and an item with `variety: en-US` |
+| ↗ ↘ | `intonation` |
 
 ## 8. Cheatsheets
 
@@ -270,7 +285,7 @@ Every topic has one `cheatsheet`: the whole topic in one table, on one screen. E
 
 - Every fact in it appears in the sections.
 - One table: forms and patterns, the key rules and the top traps. A topic built on a verb pattern
-  uses a slot table (§7).
+  uses a slot paradigm (§7).
 - On a topic page it is section **00 Cheatsheet**. The View switch shows it alone (**Cheatsheet**)
   or followed by sections 01 onwards (**Extended**).
 
@@ -334,65 +349,97 @@ Topics are written one at a time. The next topic starts only after the current o
 
 ## 12. Semantic data
 
-The data says what each piece of content is; the renderer decides how it looks. Topics move to the
-vocabulary below one at a time (ROADMAP phase 4), and `npm run check` enforces each name once it
-lands. A topic keeps the forms of §4–§8 until it moves.
+The data says what each piece of content is; the renderer decides how it looks. The schema lists
+exactly the names below, and `npm run check` rejects the inline notation they replace (§4, §7).
 
 **Rules**
 
 1. Fields name content. The renderer picks the layout and the views that show it: merged cells,
-   column groups, centring, line breaks, the Cheatsheet and Extended views, wide and narrow
-   screens.
+   column groups, centring, joiners, the Cheatsheet and Extended views, wide and narrow screens.
 2. One name, one meaning. Every field, block, mark and attribute comes from this section.
 3. A string holds one piece of text. Lists, alternatives, patterns, exchanges and mappings are
-   fields of their own.
+   structures of their own.
 4. Each fact lives in one place, and the build derives what follows from it: the translation
-   column, the cheatsheet sets.
+   column, the slot and sentence titles, the cheatsheet sets.
 5. Text in the language being learned keeps its written form: it is the lesson. A mark adds what
    the text means, such as the date "the third of July" names.
-6. Grammar carries features from one list, after the UniMorph schema:
+6. Grammar carries features from one list, after the UniMorph schema. A feature takes one value or
+   a list; forms that serve several bundles list them.
+
+**Features**
 
 | Feature | Values |
 |---|---|
 | `person` | `1`, `2`, `3` |
 | `number` | `sg`, `pl` |
+| `gender` | `masc`, `fem`, `neut` |
+| `case` | `nom`, `acc`, `gen` |
 | `tense` | `prs`, `pst`, `fut` |
-| `aspect` | `prog`, `prf` |
+| `aspect` | `prog`, `prf`, `hab` |
 | `mood` | `ind`, `imp`, `sbjv`, `cond` |
 | `polarity` | `pos`, `neg` |
 | `interrogativity` | `decl`, `int` |
 | `politeness` | `infm`, `form` |
+| `degree` | `pos`, `cmpr`, `sprl` |
+| `definiteness` | `def`, `indf` |
+| `deixis` | `prox`, `dist` |
+| `voice` | `act`, `pass` |
+| `verbform` | `inf`, `ptcp`, `ger` |
+| `contraction` | `full`, `short` |
+| `countability` | `count`, `mass` |
 
-A question, a statement and a negative differ in interrogativity and polarity. *We* is person
-`1`, number `pl`; *she* is person `3`, number `sg`.
+`contraction` and `countability` are the project's own; the others follow UniMorph. A question, a
+statement and a negative differ in interrogativity and polarity. *We* is person `1`, number `pl`;
+*you* is person `2` with either number; "I / you / we / they" lists four bundles.
 
 **Topic and sections**
 
-| Field | Holds | Replaces |
-|---|---|---|
-| `summary.lead`, `summary.rule` | the two sentences of the summary (§5), one field each | one string, the lead cut at its first full stop |
-| section `role` | the section's place in the §5 menu: `overview`, `form`, `spelling`, `pronunciation`, `use`, `signals`, `own`, `compare`, `errors` | the role read from the title |
+| Field | Holds |
+|---|---|
+| `summary.lead`, `summary.rule`, `summary.ex` | the lead, the rule and the rule's examples (§5) |
+| section `role` | the section's place in the §5 menu: `overview`, `form`, `spelling`, `pronunciation`, `use`, `signals`, `own`, `compare`, `errors` |
+| section `features` | the tense a section of a topic with several tenses is about |
 
 **Blocks**
 
-| Block | Holds | Replaces |
-|---|---|---|
-| `paradigm` | cells labelled with features, each a form or a sentence | slot tables, form grids, principal parts |
-| `usage` | uses or rules, each with its examples | `use · example`, `point · rule · example`, `pattern · example` tables |
-| `comparison` | items side by side under named columns | the other tables |
-| `list` | items typed `rule`, `note` or `example` | `bullets` |
-| `prose` | a paragraph | `text` |
-| `errors` | wrong, right, rule | `errors`, as it is |
+| Block | Holds |
+|---|---|
+| `paradigm` | forms or sentences in cells labelled by features; slot columns lay a sentence out word by word (§7) |
+| `usage` | uses, rules, patterns or words, each with its explanation and examples |
+| `comparison` | items side by side under named columns |
+| `inventory` | the members of a closed set, each row one member with its `value` |
+| `list` | items typed `rule`, `note` or `example` |
+| `prose` | a paragraph |
+| `errors` | wrong, right, rule |
 
-**Examples**
+An inventory names its `set`, and each member's `value` follows it:
 
-| Field | Holds | Replaces |
+| Set | Value |
+|---|---|
+| `letters` | the letter: `a` |
+| `sounds` | the IPA symbol: `ʃ` |
+| `numbers` | the number: `1500` |
+| `ordinals` | the number: `3` |
+| `days` | the ISO 8601 weekday, Monday `1` |
+| `months` | the ISO 8601 month: `--07` |
+| `years` | the year: `"1999"` |
+| `dates` | the ISO 8601 date without its year: `--07-03` |
+| `times` | the 24-hour time: `07:05` |
+
+**Structures**
+
+| Structure | Holds | Joined with |
 |---|---|---|
-| `ex`, `tr` | an example and its translations | `ex`, `tr`, as they are |
-| `alternatives` | forms or examples that each work | " / " between them |
-| `exchange` | a question and its answer | " — " between them |
-| `mapping` | a form and what it becomes | "→" between them |
-| `pattern` | the slots of a sentence pattern, in order | "wh-word + do / does + subject + verb" |
+| `alternatives` | forms or examples that each work | / |
+| `examples` | examples side by side | /, and a space in the summary |
+| `mapping` | a form and what it becomes, in order | → |
+| `takes` | a case and the form it calls for | → |
+| `exchange` | a question and its answer | — |
+| `pattern` | the slots of a sentence pattern, in order | + |
+
+`follows: true` opens a `mapping`, `takes` or `pattern` with its joiner, continuing the form under
+discussion: `{ pattern: [{ ending: es }], follows: true }` reads + es. Pieces that show a slash of
+their own, IPA included, are joined with · instead of /.
 
 **Inline marks**
 
@@ -403,25 +450,42 @@ A question, a statement and a negative differ in interrogativity and polarity. *
 | `subj`, `verb` | the subject and the main verb of a pattern sentence | Does she work? | she, work |
 | `ending` | an ending added to a stem | works | s |
 | `stress` | the stressed syllable | photograph | pho |
-| `term` | a word of the language being learned, discussed in an explanation | *yet* goes at the end | yet |
-| `gloss` | a meaning in the reader's language | fortnight: two weeks | two weeks |
+| `term` | a word or part of a word of the language being learned, discussed in an explanation | *yet* goes at the end | yet |
+| `letter` | the letters a rule is about: the spelling of a sound, a silent letter, a capital, a spelling change | the d in Wednesday is silent | d |
+| `signal` | a signal word inside an example | I saw her yesterday. | yesterday |
+| `gloss` | a meaning in the reader's language; localized inside text of the language being learned | What do you do? (= your job) | = your job |
 | `l1` | a phrase in the reader's first language | a note's phrase in the reader's language | the whole phrase |
 | `sound` | a pronunciation respelling | used to sounds like use-ta | use-ta |
-| `ipa` | an IPA transcription | /ˈjuːst tə/ | ˈjuːst tə |
-| `date` | a date, with its ISO 8601 value: `2026-07-03`, `--07-03`, `2026` | the third of July | the third of July = `--07-03` |
+| `ipa` | an IPA transcription, without its slashes | /ˈjuːst tə/ | ˈjuːst tə |
+| `date` | a date, with its ISO 8601 value: `2026-07-03`, `--07-03`, `--07`, `2026` | the third of July | the third of July = `--07-03` |
 | `weekday` | a day of the week, with its ISO 8601 number, Monday `1` | on Monday | Monday = `1` |
-| `time` | a clock time, with its 24-hour value | half past ten | half past ten = `10:30` |
-| `number` | a number, with its value in digits | two hundred | two hundred = `200` |
-| `link` | another topic, by ID | see To be | To be = `en.verbs.to-be` |
+| `time` | a clock time, with its 24-hour value | at 9:30 | 9:30 = `09:30` |
+| `numeral` | a number in words, with its value in digits | two hundred | two hundred = `200` |
+| `ordinal` | an ordinal, with its value | the third | third = `3` |
+| `link` | another topic, by ID in `to` | see To be | To be = `en.verbs.to-be` |
+| `slot` | a slot of a pattern: a code from the slot list, or a localized description of what fills it | be + V-ing | V-ing |
+| `optional` | an optional part | He said (that) he was tired. | that |
+| `gap` | an open slot, or the gap in a split form | Could you…? | … |
+| `intonation` | the voice rising or falling: `rise`, `fall` | Really? ↗ | ↗ |
+| `variant` | the form in another variety, with its `variety` | at the weekend (US: on the weekend) | on the weekend |
 
-The value of a `date`, `weekday`, `time` or `number` mark is the same in every language: the
-renderer can show it in the reader's language beside the lesson's written form. The syntax of
-every mark follows the source format the phase 4 spike settles.
+The slot list: `V`, `V-s`, `V-ing`, `V-ed`, `-ing`, `subject`, `verb`, `base verb`, `noun`,
+`plural noun`, `singular noun`, `uncountable noun`, `adjective`, `adverb`, `comparative`,
+`superlative`, `wh-word`, `person`, `clause`, `past participle`, `infinitive`, `present`, `past`,
+`past simple`, `number`, `unit`, `hyphen`, `result`, `agent`, `helper`, `consonant`, `vowel`,
+`the time`, `day`, `date`, `month`, `year`.
+
+Marks nest: `{ target: { ipa: θɜːˈtiːn } }` marks a transcription as the form taught. The value of
+a `date`, `weekday`, `time`, `numeral` or `ordinal` mark is the same in every language: the renderer
+can show it in the reader's language beside the lesson's written form.
 
 **Attributes**
 
-| Attribute | Holds | Replaces |
-|---|---|---|
-| `level` | the item's level (§3) | `level`, as it is |
-| `readers` | the explanation languages an element serves | `for` on notes, sections and columns |
-| `l1` | the speakers an error is typical for | `for` on error rows |
+| Attribute | Holds |
+|---|---|
+| `level` | the item's level (§3) |
+| `readers` | the explanation languages an element serves |
+| `speakers` | the first languages of the speakers an error row is typical for |
+| `variety` | the variety of the language being learned an element or a variant belongs to, as a BCP 47 tag: `en-US`; `en-GB` when absent |
+| `features` | the grammar features of a row, a column or a section |
+| `value` | the value of an inventory member or of a value mark |
