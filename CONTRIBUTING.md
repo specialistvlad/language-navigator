@@ -49,8 +49,7 @@ Your contribution stays yours and comes in under the licence of the part it chan
 | Code everywhere else | [MIT](LICENSE) |
 
 Both licences let anyone reuse the work, the project included, in free and paid products alike,
-with credit; [README → Licence](README.md#licence) describes how. The reference built from the
-data stays free on langs123.com.
+with credit; [README → Licence](README.md#licence) describes how.
 
 ## Review
 

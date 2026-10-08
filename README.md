@@ -85,6 +85,5 @@ Anyone may copy, adapt and sell the content, with this credit, naming any change
 
 > langs123 contributors, https://langs123.com — CC BY 4.0
 
-The site's [credits page](https://langs123.com/credits/) holds the same. The data stays open here,
-and the reference built from it stays free on langs123.com. The name langs123 and its logo stay with
-the project, outside both licences.
+The site's [credits page](https://langs123.com/credits/) holds the same. The name langs123 and its
+logo stay with the project, outside both licences.
