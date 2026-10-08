@@ -43,7 +43,7 @@ sections:
           - type: rule
             level: A2
             text:
-              en: ["Some two-syllable adjectives take both: ", { examples: [{ mapping: [clever, cleverer] }, more clever.] }]
+              en: ["Some two-syllable adjectives take both: ", { mapping: [clever, { alternatives: [cleverer, more clever] }] }, "."]
           - type: rule
             level: A2
             text:

@@ -10,7 +10,7 @@ status: { en: draft }
 title: { en: Tense map }
 summary:
   lead: { en: "Every tense on one page, placed by time and aspect, with form, main use, example and time words." }
-  rule: { en: ["Time words and meaning choose the tense: yesterday takes the past simple (I ", { term: played }, "), now takes the present continuous (I ", { term: am playing }, ")."] }
+  rule: { en: ["Time words and meaning choose the tense: yesterday takes the past simple (I ", { target: played }, "), now takes the present continuous (I ", { target: am playing }, ")."] }
 
 cheatsheet:
   content:
@@ -43,6 +43,7 @@ sections:
 
   - title: { en: Present }
     role: own
+    features: { tense: prs }
     content:
       - type: usage
         columns:
@@ -56,6 +57,7 @@ sections:
 
   - title: { en: Past }
     role: own
+    features: { tense: pst }
     content:
       - type: usage
         columns:
@@ -70,6 +72,7 @@ sections:
 
   - title: { en: Future }
     role: own
+    features: { tense: fut }
     content:
       - type: usage
         columns:
@@ -77,7 +80,7 @@ sections:
           - { key: form, label: { en: Form } }
           - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, tense: { en: [{ link: Future forms, to: en.tenses.future-forms }, ": going to: plans, predictions with evidence"] }, form: { pattern: [[{ alternatives: [am, is, are] }, "  going to"], { slot: V }] }, ex: [I', { target: m going to }, " buy a car."] }
+          - { level: A1, tense: { en: [{ link: Future forms, to: en.tenses.future-forms }, ": going to: plans, predictions with evidence"] }, form: { pattern: [[{ alternatives: [am, is, are] }, " going to"], { slot: V }] }, ex: [I', { target: m going to }, " buy a car."] }
           - { level: A1, tense: { en: [{ link: Present continuous, to: en.tenses.continuous-tenses }, ": arrangements"] }, form: { pattern: [{ alternatives: [am, is, are] }, { slot: V-ing }] }, ex: [I', { target: m meeting }, " Ana at six."] }
           - { level: A2, tense: { en: [{ link: Future forms, to: en.tenses.future-forms }, ": will: decisions, offers, promises, opinions"] }, form: { pattern: [will, { slot: V }] }, ex: [I', { target: ll help }, " you."] }
           - { level: A2, tense: { en: [{ link: Present simple, to: en.tenses.simple-tenses }, ": timetables"] }, form: { alternatives: [V, V-s] }, ex: ["The train ", { target: leaves }, " at six."] }

@@ -84,6 +84,8 @@ describe("every mark is an element that names it", () => {
                 takes: { takes: ["a", "b"] },
                 exchange: { exchange: ["a", "b"] },
                 pattern: { pattern: ["a", "b"] },
+                equivalence: { equivalence: ["a", "b"] },
+                contrast: { contrast: ["a", "b"] },
               };
               return samples[name] ?? ({ [name]: name } as unknown as Mark);
             }),

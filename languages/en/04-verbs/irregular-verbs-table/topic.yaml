@@ -15,23 +15,25 @@ summary:
 
 cheatsheet:
   content:
-    - type: usage
+    - type: paradigm
       columns:
         - { key: pattern, label: { en: Pattern } }
-        - { key: ex, label: { en: Base – past – participle } }
+        - { key: base, label: { en: Base form }, features: { verbform: inf } }
+        - { key: past, label: { en: Past simple }, features: { tense: pst } }
+        - { key: participle, label: { en: Past participle }, features: { verbform: ptcp } }
       rows:
-        - { level: A1, pattern: { en: all three forms are the same }, ex: put – put – put }
-        - { level: A1, pattern: { en: { alternatives: ["-ought", "-aught"] } }, ex: buy – bought – bought }
-        - { level: A1, pattern: { en: past and participle end in -d }, ex: make – made – made }
-        - { level: A1, pattern: { en: final -d becomes -t }, ex: send – sent – sent }
-        - { level: A1, pattern: { en: "long vowel shortens, -t added" }, ex: keep – kept – kept }
-        - { level: A1, pattern: { en: [{ ipa: iː }, " shortens to ", { ipa: e }] }, ex: meet – met – met }
-        - { level: A1, pattern: { en: "vowel changes, past = participle" }, ex: sit – sat – sat }
-        - { level: A1, pattern: { en: participle = base form }, ex: come – came – come }
-        - { level: A1, pattern: { en: i – a – u }, ex: drink – drank – drunk }
-        - { level: A1, pattern: { en: participle in -en }, ex: take – took – taken }
-        - { level: A1, pattern: { en: "past in -ew, participle in -n" }, ex: know – knew – known }
-        - { level: A1, pattern: { en: { alternatives: [participle in -n, "-ne"] } }, ex: go – went – gone }
+        - { level: A1, pattern: { en: all three forms are the same }, base: put, past: put, participle: put }
+        - { level: A1, pattern: { en: { alternatives: ["-ought", "-aught"] } }, base: buy, past: bought, participle: bought }
+        - { level: A1, pattern: { en: past and participle end in -d }, base: make, past: made, participle: made }
+        - { level: A1, pattern: { en: final -d becomes -t }, base: send, past: sent, participle: sent }
+        - { level: A1, pattern: { en: "long vowel shortens, -t added" }, base: keep, past: kept, participle: kept }
+        - { level: A1, pattern: { en: [{ ipa: iː }, " shortens to ", { ipa: e }] }, base: meet, past: met, participle: met }
+        - { level: A1, pattern: { en: "vowel changes, past = participle" }, base: sit, past: sat, participle: sat }
+        - { level: A1, pattern: { en: participle = base form }, base: come, past: came, participle: come }
+        - { level: A1, pattern: { en: { mapping: [{ letter: i }, { letter: a }, { letter: u }] } }, base: drink, past: drank, participle: drunk }
+        - { level: A1, pattern: { en: participle in -en }, base: take, past: took, participle: taken }
+        - { level: A1, pattern: { en: "past in -ew, participle in -n" }, base: know, past: knew, participle: known }
+        - { level: A1, pattern: { en: { alternatives: [participle in -n, "-ne"] } }, base: go, past: went, participle: gone }
 
 sections:
   - title: { en: Overview }
@@ -174,7 +176,7 @@ sections:
           - type: rule
             level: A1
             text:
-              en: [{ mapping: [{ term: leave }, ["left and ", { term: lose }], lost change the final consonant as well] }, ": ", { mapping: [{ ipa: liːv }, { ipa: left }] }, ", ", { mapping: [{ ipa: luːz }, { ipa: lɒst }] }, "."]
+              en: [{ mapping: [{ term: leave }, left] }, " and ", { mapping: [{ term: lose }, lost] }, " change the final consonant as well", ": ", { mapping: [{ ipa: liːv }, { ipa: left }] }, ", ", { mapping: [{ ipa: luːz }, { ipa: lɒst }] }, "."]
 
   - title: { en: ["Pattern: the vowel ", { ipa: iː }, " shortens to ", { ipa: e }] }
     role: own
@@ -247,7 +249,7 @@ sections:
             text:
               en: The participle equals the base verb. Only the past simple has its own form.
 
-  - title: { en: "Pattern: i – a – u" }
+  - title: { en: ["Pattern: ", { mapping: [{ letter: i }, { letter: a }, { letter: u }] }] }
     role: own
     content:
       - type: paradigm
@@ -326,7 +328,7 @@ sections:
             text:
               en: ["The past ends in ", { term: "-ew" }, " and the participle ends in ", { term: "-n" }, ": ", { mapping: [know, knew, known] }, "."]
 
-  - title: { en: ["Pattern: ", { examples: [participle in -n, "-ne, past has its own form"] }] }
+  - title: { en: ["Pattern: participle in ", { alternatives: ["-n", "-ne"] }, ", past has its own form"] }
     role: own
     content:
       - type: paradigm

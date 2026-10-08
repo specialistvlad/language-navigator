@@ -11,7 +11,7 @@ title: { en: Can and Could }
 summary:
   lead: { en: "Can for ability, permission and requests; could for past ability, polite requests and possibility." }
   rule: { en: "Can and could never change and take the base verb without to:" }
-  ex: { examples: [["She ", { target: can }, " swim."], [{ target: Can }, " she swim?"]] }
+  ex: ["She ", { target: can }, " swim. ", { target: Can }, " she swim?"]
 
 cheatsheet:
   content:
@@ -108,7 +108,7 @@ sections:
           - type: rule
             level: A2
             text:
-              en: ["A single success in the past takes ", { alternatives: [{ term: was }, { term: were }] }, "  ", { term: able to }, ":"]
+              en: ["A single success in the past takes ", { alternatives: [{ term: was }, { term: were }] }, " ", { term: able to }, ":"]
             ex: ["The fire was big, but we ", { target: were able to }, " escape."]
           - type: note
             level: A2

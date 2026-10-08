@@ -112,11 +112,11 @@ sections:
         rows:
           - { level: A1, full: is not, short: isn't, ex: ["It ", { target: isn't }, " cold."] }
           - { level: A1, full: are not, short: aren't, ex: ["They ", { target: aren't }, " here."] }
-          - { level: A1, full: [{ alternatives: [was, were] }, "  not"], short: { alternatives: [wasn't, weren't] }, ex: ["We ", { target: weren't }, " late."] }
-          - { level: A1, full: [{ alternatives: [do, does, did] }, "  not"], short: { alternatives: [don't, doesn't, didn't] }, ex: ["She ", { target: doesn't }, " know."] }
+          - { level: A1, full: [{ alternatives: [was, were] }, " not"], short: { alternatives: [wasn't, weren't] }, ex: ["We ", { target: weren't }, " late."] }
+          - { level: A1, full: [{ alternatives: [do, does, did] }, " not"], short: { alternatives: [don't, doesn't, didn't] }, ex: ["She ", { target: doesn't }, " know."] }
           - { level: A1, full: cannot, short: can't, ex: ["I ", { target: can't }, " see."] }
           - { level: A1, full: will not, short: won't, ex: ["It ", { target: won't }, " work."] }
-          - { level: A1, full: [{ alternatives: [should, must, could, would] }, "  not"], short: { alternatives: [shouldn't, mustn't, couldn't, wouldn't] }, ex: ["You ", { target: shouldn't }, " go."] }
+          - { level: A1, full: [{ alternatives: [should, must, could, would] }, " not"], short: { alternatives: [shouldn't, mustn't, couldn't, wouldn't] }, ex: ["You ", { target: shouldn't }, " go."] }
       - type: list
         items:
           - type: rule

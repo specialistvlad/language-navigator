@@ -1,7 +1,7 @@
-// Level ranges. Every leaf of a topic carries its level: a table row, an errors row, a bullet, a text
-// block. Blocks, sections, cheatsheets and topics take the range of the leaves under them, and a
+// Level ranges. Every leaf of a topic carries its level: a table row, an errors row, a list item, a
+// paragraph. Blocks, sections, cheatsheets and topics take the range of the leaves under them, and a
 // curriculum section the range of its topics; nothing above a leaf stores a level.
-import { shows } from "./content.ts";
+import { serves, shows } from "./content.ts";
 import { type Block, type Explain, isLevel, type Level, LEVELS, lv, type Section, type Topic, type TopicRef } from "./lib.ts";
 
 export interface Range {
@@ -45,8 +45,9 @@ export function leaves(block: Block, explain?: Explain): { level: Level }[] {
     case "usage":
     case "comparison":
     case "inventory":
+      return block.rows.filter((r) => visible(r, explain));
     case "errors":
-      return (block.rows as { level: Level; readers?: Explain[] }[]).filter((r) => visible(r, explain));
+      return block.rows.filter((r) => explain === undefined || serves(r, explain));
     default:
       return unknownBlock(block);
   }

@@ -11,7 +11,7 @@ title: { en: Indefinite Pronouns }
 summary:
   lead: { en: "Somebody, anything, nowhere and everyone name unknown or general people, things and places, in four families: some-, any-, no- and every-." }
   rule: { en: "English uses one negative word per clause:" }
-  ex: ["I don't know ", { target: anything }, ", or I know ", { target: nothing }, "."]
+  ex: { examples: [["I don't know ", { target: anything }], ["or I know ", { target: nothing }, "."]] }
 
 cheatsheet:
   content:
@@ -126,7 +126,7 @@ sections:
           - type: rule
             level: A2
             text:
-              en: ["One negative word only: ", { term: not … anybody }, " or ", { term: nobody }, "."]
+              en: ["One negative word only: ", { term: ["not ", { gap: true }, " anybody"] }, " or ", { term: nobody }, "."]
           - type: rule
             level: A2
             text:

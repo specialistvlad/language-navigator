@@ -19,8 +19,8 @@ cheatsheet:
       columns:
         - { key: subject, label: { en: Subject }, features: { case: nom } }
         - { key: object, label: { en: Object }, features: { case: acc } }
-        - { key: det, label: { en: { pattern: [Possessive, { slot: noun }] } }, features: { case: gen } }
-        - { key: alone, label: { en: Possessive alone }, features: { case: gen } }
+        - { key: det, label: { en: { pattern: [Possessive, { slot: noun }] } }, features: { case: gen, wordclass: det } }
+        - { key: alone, label: { en: Possessive alone }, features: { case: gen, wordclass: pro } }
       rows:
         - { level: A1, features: { person: 1, number: sg }, subject: I, object: me, det: my, alone: mine }
         - { level: A1, features: { person: 2 }, subject: you, object: you, det: your, alone: yours }
@@ -115,7 +115,7 @@ sections:
       - type: paradigm
         columns:
           - { key: subject, label: { en: Subject }, features: { case: nom } }
-          - { key: possessive, label: { en: Possessive }, features: { case: gen } }
+          - { key: possessive, label: { en: Possessive }, features: { case: gen, wordclass: det } }
           - { key: ex, label: { en: Example } }
         rows:
           - { level: A0, features: { person: 1, number: sg }, subject: I, possessive: my, ex: [{ target: My }, " name is Tom."] }
@@ -159,8 +159,8 @@ sections:
           en: "mine, yours, his… stand alone, without a noun."
       - type: paradigm
         columns:
-          - { key: possessive, label: { en: { pattern: [{ slot: noun }], follows: true } }, features: { case: gen } }
-          - { key: alone, label: { en: Alone }, features: { case: gen } }
+          - { key: possessive, label: { en: { pattern: [{ slot: noun }], follows: true } }, features: { case: gen, wordclass: det } }
+          - { key: alone, label: { en: Alone }, features: { case: gen, wordclass: pro } }
           - { key: ex, label: { en: Example } }
         rows:
           - { level: A1, features: { person: 1, number: sg }, possessive: my, alone: mine, ex: ["This bag is ", { target: mine }, "."] }

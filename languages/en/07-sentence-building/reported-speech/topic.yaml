@@ -21,15 +21,15 @@ cheatsheet:
         - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: B1, point: say, rule: { en: [{ pattern: [say, (that), { slot: clause }] }, "; no person, or ", { pattern: [to, { slot: person }] }] }, ex: ["She ", { target: said }, " ", { optional: that }, " she was tired."] }
-        - { level: B1, point: tell, rule: { en: { pattern: [tell, { slot: person }, (that), { slot: clause }] } }, ex: ["She ", { target: told me }, " ", { optional: that }, " she was tired."] }
+        - { level: B1, point: say, rule: { en: [{ pattern: [say, { optional: that }, { slot: clause }] }, "; no person, or ", { pattern: [to, { slot: person }] }] }, ex: ["She ", { target: said }, " ", { optional: that }, " she was tired."] }
+        - { level: B1, point: tell, rule: { en: { pattern: [tell, { slot: person }, { optional: that }, { slot: clause }] } }, ex: ["She ", { target: told me }, " ", { optional: that }, " she was tired."] }
         - { level: B1, point: present simple, rule: { mapping: [past simple], follows: true }, ex: ["He said he ", { target: worked }, " there."] }
         - { level: B1, point: present continuous, rule: { mapping: [past continuous], follows: true }, ex: ["She said she ", { target: was waiting }, "."] }
         - { level: B1, point: { alternatives: [past simple, present perfect] }, rule: { mapping: [past perfect], follows: true }, ex: ["He said he ", { target: had left }, "."] }
         - { level: B1, point: { alternatives: [will, can, must] }, rule: { mapping: [{ alternatives: [would, could, had to] }], follows: true }, ex: ["He said he ", { target: would call }, "."] }
         - { level: B1, point: { en: No change }, rule: { en: "would, could, should, might; a fact still true; after says (present)" }, ex: ["She says she ", { target: is }, " tired."] }
         - { level: B1, point: { en: Pronouns and time }, rule: { en: ["pronouns follow the speaker; ", { mapping: [today, that day] }, ", ", { mapping: [tomorrow, the next day] }, ", ", { mapping: [yesterday, the day before] }] }, ex: ["Anna said ", { target: she }, " was tired."] }
-        - { level: B1, point: { en: Questions }, rule: { en: [{ alternatives: [if, whether] }, " or a ", { pattern: [{ slot: wh-word }, statement] }, " order; no ", { alternatives: [do, does, did] }] }, ex: ["She asked ", { target: where }, " I ", { target: lived }, "."] }
+        - { level: B1, point: { en: Questions }, rule: { en: [{ alternatives: [if, whether] }, " or a ", { pattern: [{ slot: wh-word }, statement order] }, "; no ", { alternatives: [do, does, did] }] }, ex: ["She asked ", { target: where }, " I ", { target: lived }, "."] }
         - { level: B1, point: { en: Commands }, rule: { pattern: [{ alternatives: [told, asked] }, { slot: person }, [{ optional: not }, " to"], { slot: V }] }, ex: ["He ", { target: told us not to be }, " late."] }
 
 sections:
@@ -137,7 +137,7 @@ sections:
           - type: rule
             level: B1
             text:
-              en: ["A reported question has statement order: ", { pattern: [{ slot: subject }, { alternatives: ["verb, with no do", does, did] }] }, "."]
+              en: ["A reported question has statement order: ", { pattern: [{ slot: subject }, { slot: verb }] }, ", with no ", { alternatives: [do, does, did] }, "."]
           - type: rule
             level: B1
             text:
@@ -168,6 +168,6 @@ sections:
           - { level: B1, wrong: She said me that she was tired., right: { alternatives: [["She ", { target: told }, " me that she was tired."], ["She ", { target: said }, " that she was tired."]] }, rule: { en: say has no person; tell needs one } }
           - { level: B1, wrong: He told that he was late., right: ["He ", { target: said }, " that he was late."], rule: { en: tell needs a person } }
           - { level: B1, wrong: She asked me where did I live., right: ["She asked me where I ", { target: lived }, "."], rule: { en: reported questions use statement order } }
-          - { level: B1, wrong: He asked me do I like tea., right: ["He asked me ", { target: if }, " I liked tea."], rule: { en: { takes: [[{ alternatives: ["yes", "no"] }, "  questions"], { alternatives: [if, whether] }] } } }
+          - { level: B1, wrong: He asked me do I like tea., right: ["He asked me ", { target: if }, " I liked tea."], rule: { en: { takes: [[{ alternatives: ["yes", "no"] }, " questions"], { alternatives: [if, whether] }] } } }
           - { level: B1, wrong: He said me to sit down., right: ["He ", { target: told }, " me ", { target: to sit }, " down."], rule: { en: { pattern: [told, { slot: person }, to, { slot: V }] } } }
           - { level: B1, wrong: He said he will come., right: ["He said he ", { target: would }, " come."], rule: { en: { takes: [will, would after a past verb] } } }

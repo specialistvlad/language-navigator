@@ -21,7 +21,7 @@ cheatsheet:
         - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A0, point: { en: Asking }, rule: { en: { pattern: [ask What time is it? and answer with It's, { slot: the time }] } }, ex: [{ target: It's }, " seven thirty."] }
+        - { level: A0, point: { en: Asking }, rule: { en: ["ask What time is it? and answer with ", { pattern: [It's, { slot: the time }] }] }, ex: [{ target: It's }, " seven thirty."] }
         - { level: A0, point: { en: Numbers }, rule: { en: "say the hour, then the minutes; 1–9 minutes take oh" }, ex: { mapping: [{ time: "7:05", value: "07:05" }, ["seven ", { target: oh }, " five"]] } }
         - { level: A0, point: o'clock, rule: { en: o'clock goes only with full hours }, ex: ["seven ", { target: o'clock }] }
         - { level: A1, point: past, rule: { en: "minutes 1–30: past the hour" }, ex: [{ optional: a }, " ", { target: quarter past }, " three"] }

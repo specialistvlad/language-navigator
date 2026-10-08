@@ -148,7 +148,7 @@ sections:
           - type: note
             level: A1
             text:
-              en: ["Requests to strangers and in formal situations use ", { term: Could you…? }, " See ", { link: Can and Could, to: en.modals.can-could }, "."]
+              en: ["Requests to strangers and in formal situations use ", { term: [Could you, { gap: true }, "?"] }, " See ", { link: Can and Could, to: en.modals.can-could }, "."]
 
   - title: { en: Typical errors }
     role: errors

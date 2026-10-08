@@ -54,7 +54,7 @@ sections:
           - type: rule
             level: A2
             text:
-              en: ["Questions with ", { term: must }, " are formal and rare. Speech prefers ", { term: Do I have to…? }]
+              en: ["Questions with ", { term: must }, " are formal and rare. Speech prefers ", { term: [Do I have to, { gap: true }, "?"] }]
 
   - title: { en: "Form: have to" }
     role: form
@@ -67,7 +67,7 @@ sections:
         rows:
           - { level: A2, features: [{ polarity: pos, interrogativity: decl, person: 1, number: sg }, { polarity: pos, interrogativity: decl, person: 2 }, { polarity: pos, interrogativity: decl, person: 1, number: pl }, { polarity: pos, interrogativity: decl, person: 3, number: pl }], form: { en: [Affirmative (, { alternatives: [I, you, we, they] }, ")"] }, pattern: { pattern: [have to, { slot: V }] }, ex: ["We ", { target: have to }, " leave."] }
           - { level: A2, features: { polarity: pos, interrogativity: decl, person: 3, number: sg }, form: { en: [Affirmative (, { alternatives: [he, she, it] }, ")"] }, pattern: { pattern: [has to, { slot: V }] }, ex: ["He ", { target: has to }, " leave."] }
-          - { level: A2, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, pattern: { pattern: [[{ alternatives: [don't, doesn't] }, "  have to"], { slot: V }] }, ex: ["She ", { target: doesn't have to }, " leave."] }
+          - { level: A2, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, pattern: { pattern: [[{ alternatives: [don't, doesn't] }, " have to"], { slot: V }] }, ex: ["She ", { target: doesn't have to }, " leave."] }
           - { level: A2, features: { polarity: pos, interrogativity: int }, form: { en: Question }, pattern: { pattern: [{ alternatives: [Do, Does] }, { slot: subject }, have to, { slot: V }] }, ex: [{ target: Do }, " you ", { target: have to }, " leave?"] }
           - { level: A2, features: { tense: pst }, form: { en: Past }, pattern: { pattern: [had to, { slot: V }] }, ex: ["I ", { target: had to }, " leave."] }
           - { level: A2, features: [{ tense: pst, polarity: neg, interrogativity: decl }, { tense: pst, polarity: pos, interrogativity: int }], form: { en: Past negative and question }, pattern: { alternatives: [didn't have to, ["Did ", { gap: true }, " have to"]] }, ex: [{ target: Did }, " you ", { target: have to }, " pay?"] }

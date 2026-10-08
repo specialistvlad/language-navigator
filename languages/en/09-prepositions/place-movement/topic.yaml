@@ -11,7 +11,7 @@ title: { en: Place and Movement }
 summary:
   lead: { en: "In, on, at and under say where something is; to, into, out of and through say where it goes." }
   rule: { en: "In is inside a space, on touches a surface and at is a point:" }
-  ex: [{ target: in }, " the bag, ", { target: "on" }, " the table, ", { target: at }, " the door."]
+  ex: { examples: [[{ target: in }, " the bag"], [{ target: "on" }, " the table"], [{ target: at }, " the door."]] }
 
 cheatsheet:
   content:
@@ -31,7 +31,7 @@ cheatsheet:
         - { level: A1, point: home, rule: { en: "go home: no to" }, ex: ["I go ", { target: home }, "."] }
         - { level: A2, point: { examples: [{ mapping: [in, into] }, { mapping: ["on", onto] }, { mapping: [at, to] }] }, rule: { en: place becomes movement }, ex: ["She goes ", { target: into }, " the kitchen."] }
         - { level: A2, point: opposite, rule: { en: "facing, no of" }, ex: ["The hotel is ", { target: opposite }, " the station."] }
-        - { level: A2, point: arrive, rule: { en: { examples: [in a city or country, at a building] } }, ex: ["We arrive ", { target: in }, " Paris."] }
+        - { level: A2, point: arrive, rule: { en: { alternatives: [in a city or country, at a building] } }, ex: ["We arrive ", { target: in }, " Paris."] }
         - { level: A2, point: { en: transport }, rule: { en: { examples: [{ takes: ["bus, train, plane, bike", "on"] }, { takes: ["car, taxi", in] }] } }, ex: ["I get ", { target: "on" }, " the bus."] }
 
 sections:

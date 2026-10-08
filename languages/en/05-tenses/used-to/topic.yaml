@@ -42,7 +42,7 @@ sections:
             level: A2
             text:
               en: "The form is the same for every subject:"
-            ex: { examples: [I, he, ["they ", { target: used to }, " live here."]] }
+            ex: [{ alternatives: [I, he, they] }, " ", { target: used to }, " live here."]
           - type: rule
             level: A2
             text:

@@ -11,7 +11,7 @@ title: { en: Plurals }
 summary:
   lead: { en: ["Most nouns add -s (books), nouns ending in s, sh, ch or x add -es, and ", { pattern: [{ slot: consonant }, "y"] }, " becomes -ies."] }
   rule: { en: "Irregular plurals take no -s and people takes a plural verb:" }
-  ex: ["three ", { target: children }, ", The ", { target: people are }, " nice."]
+  ex: { examples: [["three ", { target: children }], ["The ", { target: people are }, " nice."]] }
 
 cheatsheet:
   content:

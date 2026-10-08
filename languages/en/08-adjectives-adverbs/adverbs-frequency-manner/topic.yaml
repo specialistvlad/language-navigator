@@ -169,5 +169,5 @@ sections:
       - type: errors
         rows:
           - { level: A2, wrong: She sings good., right: ["She sings ", { target: well }, "."], rule: { en: [{ pattern: [good, { slot: noun }] }, ", ", { pattern: [well, { slot: verb }] }] } }
-          - { level: A2, wrong: He walks careful., right: ["He walks ", { target: carefully }, "."], rule: { en: { pattern: [manner adverb = adjective, "-ly"] } } }
+          - { level: A2, wrong: He walks careful., right: ["He walks ", { target: carefully }, "."], rule: { en: ["manner adverb = ", { pattern: [{ slot: adjective }, "-ly"] }] } }
           - { level: A2, wrong: They work hardly., right: ["They work ", { target: hard }, "."], rule: { en: hard = hard; hardly = almost not } }

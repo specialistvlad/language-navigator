@@ -3,6 +3,8 @@
 import { describe, expect, test } from "bun:test";
 import { parseHTML } from "linkedom";
 import type { Block, TopicRef } from "../../scripts/lib.ts";
+import { SAMPLE } from "../../scripts/sample-topic.ts";
+import { guideParts } from "./guide.ts";
 import type { Ctx } from "./html.ts";
 import { blocksHtml } from "./render.ts";
 
@@ -157,5 +159,28 @@ describe("every block renders its leaves with their levels", () => {
     const d = doc([{ type: "prose", level: "B1", text: { en: "Later." } }]);
     expect(d.querySelector(".blk-level")).not.toBeNull();
     expect(blocksHtml([{ type: "prose", level: "A1", text: { en: "" } }], ctx(), "A1")).toBe("");
+  });
+});
+
+describe("readers and speakers", () => {
+  test("an error row shows to readers of the explanation languages its speakers name", () => {
+    const d = doc([
+      {
+        type: "errors",
+        rows: [
+          { level: "A1", wrong: "for all", right: "x" },
+          { level: "A1", wrong: "for English speakers", right: "x", speakers: ["en"] },
+          { level: "A1", wrong: "for others", right: "x", speakers: [] },
+        ],
+      },
+    ]);
+    expect([...d.querySelectorAll("tbody td:first-child")].map((td) => td.textContent)).toEqual(["for all", "for English speakers"]);
+  });
+  test("a section for other readers is left out, its title unread", () => {
+    const topic = structuredClone(SAMPLE);
+    const [section] = topic.sections;
+    if (!section) throw new Error("fixture");
+    Object.assign(section, { readers: [], title: {} });
+    expect(guideParts(topic, "en").map((p) => p.kind)).toEqual(["cheatsheet"]);
   });
 });

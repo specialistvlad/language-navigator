@@ -1,5 +1,6 @@
-# npm test covers every line and function of the modules that read, check and render topic data;
-# the rest of the app is tested through the pages it builds.
+# npm test covers every line and function of the modules outside this list: the text model, topic
+# reading, levels, the topic checks and the topic renderer. The listed files are tested through the
+# pages they build.
 [test]
 coverageThreshold = { lines = 1.0, functions = 1.0 }
 coveragePathIgnorePatterns = [

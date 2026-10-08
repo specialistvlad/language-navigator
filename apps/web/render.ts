@@ -1,6 +1,6 @@
 // Topic content (topic.yaml) → HTML: blocks with level badges, lists, and tables laid out from what their
 // columns hold (CONVENTIONS.md §12).
-import { shows, type TableBlock, tableShape } from "../../scripts/content.ts";
+import { serves, shows, type TableBlock, tableShape } from "../../scripts/content.ts";
 import { isLocalized, reading } from "../../scripts/text.ts";
 import { type Ctx, escapeHtml, explained, learned, translation } from "./html.ts";
 import { blockRange } from "../../scripts/levels.ts";
@@ -145,7 +145,7 @@ function tableHtml(block: TableBlock, ctx: Ctx, from: Level): string {
 }
 
 function errorsHtml(block: ErrorsBlock, ctx: Ctx, from: Level): string {
-  const rows = block.rows.filter((r) => shows(r, ctx.explain));
+  const rows = block.rows.filter((r) => serves(r, ctx.explain));
   const withRule = rows.some((r) => r.rule !== undefined);
   const titles = ["✗", "✓", ...(withRule ? [say("ruleColumn", ctx.explain)] : [])].map(escapeHtml);
   const body = rows.map((r) =>

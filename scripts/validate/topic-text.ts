@@ -1,30 +1,10 @@
 // The text of a topic: every localized value carries each explanation language that renders it, every
-// string holds text without the inline notation the marks replace, and every table holds what its type
-// names (CONVENTIONS.md §12).
-import { isTable, type TableBlock, tableShape, topicTexts } from "../content.ts";
-import { isLocalized, LIST_MARKS, markName, walkText } from "../text.ts";
-import { type Block, type Cell, EXPLAIN_CODES, type Explain, type Item, type Localized, type Mark, type Topic } from "../lib.ts";
+// table holds what its type names (CONVENTIONS.md §12), and every mark is whole (notation.ts).
+import { isTable, scope, serves, type TableBlock, tableShape } from "../content.ts";
+import { isLocalized } from "../text.ts";
+import { type Block, type Cell, EXPLAIN_CODES, type Explain, type FeatureBundle, type Item, type Localized, type Topic } from "../lib.ts";
+import { checkMarks, validDate } from "./notation.ts";
 import type { Report } from "./report.ts";
-
-// The inline notation the marks replace: none of it appears in a string.
-export const NOTATION: [string, RegExp, string][] = [
-  ["**", /\*\*/, "a mark names the bold part: target, aux, term…"],
-  ["*…*", /\*[^*\s][^*]*\*/, "a mark names the italic part: term, sound, gloss…"],
-  ["a link", /\]\(id:/, "a link mark names the topic"],
-  ["IPA between slashes", /(?<![\p{L}\p{N}])\/[^\s/0-9][^/]*\/(?![\p{L}\p{N}])/u, "an ipa mark holds the transcription"],
-  ["→", /→/, "a mapping or takes names the pair"],
-  ["US:", /\bUS:/, "a variant or the variety attribute names it"],
-  ["↗ or ↘", /[↗↘]/, "an intonation mark names it"],
-  ["a line break", /\n/, "the renderer breaks lines"],
-  [" / ", / \/ /, "alternatives or examples name the pieces"],
-  [" + ", /(^|\s)\+ /, "a pattern names the slots"],
-];
-// In the language being learned, these name structure too.
-export const LEARNED_NOTATION: [string, RegExp, string][] = [
-  [" — ", / — /, "an exchange names the question and the answer"],
-  ["…", /…/, "a gap mark names the open slot"],
-  ["(", /\(/, "an optional, gloss or variant mark names the part in parentheses"],
-];
 
 // The value each kind of inventory gives its members.
 const VALUES: Record<string, (v: unknown) => boolean> = {
@@ -35,67 +15,16 @@ const VALUES: Record<string, (v: unknown) => boolean> = {
   days: (v) => typeof v === "number" && Number.isInteger(v) && v >= 1 && v <= 7,
   months: (v) => typeof v === "string" && /^--(0[1-9]|1[0-2])$/.test(v),
   years: (v) => typeof v === "string" && /^\d{4}$/.test(v),
-  dates: (v) => typeof v === "string" && /^--(0[1-9]|1[0-2])-([0-2]\d|3[01])$/.test(v),
+  dates: (v) => typeof v === "string" && /^--\d\d-\d\d$/.test(v) && validDate(v),
   times: (v) => typeof v === "string" && /^([01]\d|2[0-3]):[0-5]\d$/.test(v),
 };
 
 const ROW_KEYS = new Set(["level", "features", "value", "variety", "readers", "tr"]);
 
-// The explanation languages an element renders in: all, or the ones its readers list.
-const scope = (el: { readers?: Explain[] | undefined }, langs: Explain[]): Explain[] => {
-  const only = el.readers;
-  return only ? langs.filter((l) => only.includes(l)) : langs;
-};
-
-// Notation and whole marks, in every text of a topic.
-export function checkMarks(topic: Topic, where: string, report: Report): void {
-  for (const l of EXPLAIN_CODES) {
-    for (const { text, path, plain } of topicTexts(topic, l)) {
-      walkText(
-        text,
-        {
-          string(s, learned) {
-            for (const [name, re, instead] of [...NOTATION, ...(learned ? LEARNED_NOTATION : [])]) {
-              if (re.test(s)) report(where, `${path} holds ${name} in "${s}": ${instead}`);
-            }
-          },
-          mark(m: Mark, learned) {
-            const name = markName(m);
-            const list = (m as unknown as Record<string, unknown[]>)[name];
-            if ((LIST_MARKS as readonly string[]).includes(name) && list?.length === 1 && (m as { follows?: true }).follows !== true) {
-              report(where, `${path} has a ${name} of one piece: it needs another, or follows: true`);
-            }
-            if (name === "gloss" && learned && !isLocalizedValue((m as { gloss: unknown }).gloss)) {
-              report(where, `${path} has a gloss in the language being learned: a gloss is localized, { en: … }`);
-            }
-          },
-        },
-        plain,
-        l,
-      );
-    }
-  }
-}
-
-// Every topic a topic links to.
-export function links(topic: Topic): string[] {
-  const out: string[] = [];
-  for (const l of EXPLAIN_CODES) {
-    for (const { text, plain } of topicTexts(topic, l)) {
-      walkText(
-        text,
-        {
-          mark(m) {
-            if (markName(m) === "link") out.push((m as { to: string }).to);
-          },
-        },
-        plain,
-        l,
-      );
-    }
-  }
-  return out;
-}
+// The sentences a slot column can belong to, by interrogativity and polarity: the renderer names each.
+const SENTENCES = new Set(["int pos", "decl pos", "decl neg"]);
+const sentenceOf = (f: FeatureBundle | FeatureBundle[] | undefined): string =>
+  f === undefined || Array.isArray(f) ? "" : `${String(f.interrogativity)} ${String(f.polarity)}`;
 
 // Every localized value carries each explanation language that renders it; every table holds what its
 // type names.
@@ -129,8 +58,11 @@ export function checkText(topic: Topic, where: string, report: Report): void {
       if (c.slot !== undefined && block.type !== "paradigm") {
         report(where, `${path}.columns.${c.key} holds a slot: only a paradigm has slot columns`);
       }
-      if (c.slot !== undefined && c.features === undefined) {
-        report(where, `${path}.columns.${c.key} holds a slot: its features name its sentence`);
+      if (c.slot !== undefined && !SENTENCES.has(sentenceOf(c.features))) {
+        report(
+          where,
+          `${path}.columns.${c.key} holds a slot: its features name one sentence, a question (int, pos), a statement (decl, pos) or a negative (decl, neg)`,
+        );
       }
     });
     block.rows.forEach((row, k) => {
@@ -140,6 +72,9 @@ export function checkText(topic: Topic, where: string, report: Report): void {
       }
       for (const c of block.columns) cell(row[c.key] as Cell | undefined, `${path}.rows[${k}].${c.key}`, scope(c, rowLangs));
       need(row.tr, `${path}.rows[${k}].tr`, rowLangs);
+      if (block.type === "paradigm" && row.tr !== undefined) {
+        report(where, `${path}.rows[${k}] translates a paradigm row: the examples carry the translations`);
+      }
     });
     if (
       block.type === "paradigm" &&
@@ -177,13 +112,17 @@ export function checkText(topic: Topic, where: string, report: Report): void {
       if (isTable(block)) table(block, p, inner);
       if (block.type === "errors") {
         block.rows.forEach((row, k) => {
-          need(row.rule, `${p}.rows[${k}].rule`, scope(row, inner));
+          need(
+            row.rule,
+            `${p}.rows[${k}].rule`,
+            inner.filter((l) => serves(row, l)),
+          );
         });
       }
     });
   };
 
-  const all = EXPLAIN_CODES;
+  const all = [...EXPLAIN_CODES];
   need(topic.title, "title", all);
   need(topic.summary.lead, "summary.lead", all);
   need(topic.summary.rule, "summary.rule", all);

@@ -3,7 +3,8 @@ import type { Concepts, Topic, TopicRef } from "../lib.ts";
 import type { Report } from "./report.ts";
 import { checkLevels } from "./topic-levels.ts";
 import { checkSummary } from "./topic-summary.ts";
-import { checkText, links } from "./topic-text.ts";
+import { links } from "./notation.ts";
+import { checkText } from "./topic-text.ts";
 
 export function checkTopic(ref: TopicRef, topic: Topic, ids: Set<string>, concepts: Concepts, report: Report): void {
   const where = ref.path;

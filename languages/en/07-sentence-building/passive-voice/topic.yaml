@@ -21,11 +21,11 @@ cheatsheet:
         - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: B1, point: { en: { mapping: [Active, passive] } }, rule: { en: ["the object becomes the subject; be in the tense of the active ", { pattern: [{ slot: verb }, { slot: past participle }] }] }, ex: { mapping: [Shakespeare wrote Hamlet., ["Hamlet ", { target: was written }, " by Shakespeare."]] } }
+        - { level: B1, point: { en: { mapping: [Active, passive] } }, rule: { en: ["the object becomes the subject; ", { pattern: [[{ term: be }, " in the tense of the active verb"], { slot: past participle }] }] }, ex: { mapping: [Shakespeare wrote Hamlet., ["Hamlet ", { target: was written }, " by Shakespeare."]] } }
         - { level: B1, point: Present simple, rule: { pattern: [{ alternatives: [am, is, are] }, { slot: V-ed }] }, ex: ["English ", { target: is spoken }, " here."] }
         - { level: B1, point: Past simple, rule: { pattern: [{ alternatives: [was, were] }, { slot: V-ed }] }, ex: ["The bridge ", { target: was built }, " in ", { date: "1990", value: "1990" }, "."] }
-        - { level: B1, point: Present perfect, rule: { pattern: [[{ alternatives: [has, have] }, "  been"], { slot: V-ed }] }, ex: ["The window ", { target: has been broken }, "."] }
-        - { level: B1, point: "will, can, must", rule: { pattern: [[{ alternatives: [will, can, must] }, "  be"], { slot: V-ed }] }, ex: ["The results ", { target: will be sent }, " tomorrow."] }
+        - { level: B1, point: Present perfect, rule: { pattern: [[{ alternatives: [has, have] }, " been"], { slot: V-ed }] }, ex: ["The window ", { target: has been broken }, "."] }
+        - { level: B1, point: "will, can, must", rule: { pattern: [[{ alternatives: [will, can, must] }, " be"], { slot: V-ed }] }, ex: ["The results ", { target: will be sent }, " tomorrow."] }
         - { level: B1, point: { en: Negative }, rule: { pattern: [be, not, { slot: V-ed }] }, ex: ["The room ", { target: wasn't cleaned }, "."] }
         - { level: B1, point: { en: Question }, rule: { pattern: [be, { slot: subject }, { slot: V-ed }] }, ex: [{ target: Was }, " the room ", { target: cleaned }, "?"] }
         - { level: B1, point: { alternatives: [by, with] }, rule: { en: "by = the doer, added only when it is new or important; with = a tool" }, ex: ["The song ", { target: was written by }, " Adele."] }
@@ -69,9 +69,9 @@ sections:
         rows:
           - { level: B1, tense: Present simple, form: { pattern: [{ alternatives: [am, is, are] }, { slot: V-ed }] }, ex: ["English ", { target: is spoken }, " here."] }
           - { level: B1, tense: Past simple, form: { pattern: [{ alternatives: [was, were] }, { slot: V-ed }] }, ex: ["The bridge ", { target: was built }, " in ", { date: "1990", value: "1990" }, "."] }
-          - { level: B1, tense: Present perfect, form: { pattern: [[{ alternatives: [has, have] }, "  been"], { slot: V-ed }] }, ex: ["The window ", { target: has been broken }, "."] }
+          - { level: B1, tense: Present perfect, form: { pattern: [[{ alternatives: [has, have] }, " been"], { slot: V-ed }] }, ex: ["The window ", { target: has been broken }, "."] }
           - { level: B1, tense: will, form: { pattern: [will be, { slot: V-ed }] }, ex: ["The results ", { target: will be sent }, " tomorrow."] }
-          - { level: B1, tense: { en: { alternatives: [can, must] } }, form: { pattern: [[{ alternatives: [can, must] }, "  be"], { slot: V-ed }] }, ex: ["The door ", { target: must be locked }, "."] }
+          - { level: B1, tense: { en: { alternatives: [can, must] } }, form: { pattern: [[{ alternatives: [can, must] }, " be"], { slot: V-ed }] }, ex: ["The door ", { target: must be locked }, "."] }
       - type: list
         items:
           - type: rule

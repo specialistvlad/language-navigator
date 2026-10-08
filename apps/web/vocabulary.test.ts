@@ -24,34 +24,37 @@ const prop = (d: Def, name: string): Def => d.properties?.[name] ?? {};
 const refs = (d: Def): Def[] => (d.oneOf ?? []).map((r) => def((r.$ref ?? "").replace("#/definitions/", "")));
 const css = await Bun.file(join(import.meta.dir, "styles", "document.css")).text();
 
-// The backticked names in the first column of the table under a bold heading of §12.
-function names(heading: string, column = 0): string[] {
+// The rows of the table under a bold heading of §12, header and rule left out.
+function rows(heading: string): string[] {
   const start = section12.indexOf(`**${heading}**`);
   if (start < 0) throw new Error(`§12 has no "${heading}"`);
-  const rows = section12.slice(start).split("\n").slice(2);
-  const table = rows.slice(rows.findIndex((r) => r.startsWith("|")));
-  const body = table
+  const lines = section12.slice(start).split("\n").slice(2);
+  const table = lines.slice(lines.findIndex((r) => r.startsWith("|")));
+  return table
     .slice(
       0,
       table.findIndex((r) => !r.startsWith("|")),
     )
     .slice(2);
-  return body.flatMap((r) => [...(r.split("|")[column + 1] ?? "").matchAll(/`([^`]+)`/g)].map((m) => m[1] ?? ""));
+}
+const ticked = (cell: string | undefined): string[] => [...(cell ?? "").matchAll(/`([^`\n]+)`/g)].map((m) => m[1] ?? "");
+// The backticked names in one column of the table under a bold heading of §12.
+const names = (heading: string, column = 0): string[] => rows(heading).flatMap((r) => ticked(r.split("|")[column + 1]));
+// The backticked names in the second column of the row whose first column starts with a cell.
+function namesOf(heading: string, first: string): string[] {
+  const row = rows(heading).find((r) => (r.split("|")[1] ?? "").trim().startsWith(first));
+  if (row === undefined) throw new Error(`§12 ${heading} has no row ${first}`);
+  return ticked(row.split("|")[2]);
 }
 const sorted = (list: Iterable<string | number>): string[] => [...list].map(String).sort();
 
 describe("CONVENTIONS.md §12, the topic schema and the renderer name the same things", () => {
   test("features and their values", () => {
     const documented: Record<string, string[]> = Object.fromEntries(
-      section12
-        .slice(section12.indexOf("**Features**"))
-        .split("\n")
-        .filter((l) => l.startsWith("| `"))
-        .slice(0, Object.keys(def("featureBundle").properties ?? {}).length)
-        .map((l): [string, string[]] => {
-          const [, name, values] = l.split("|");
-          return [(name ?? "").trim().replace(/`/g, ""), sorted([...(values ?? "").matchAll(/`([^`]+)`/g)].map((m) => m[1] ?? ""))];
-        }),
+      rows("Features").map((l): [string, string[]] => {
+        const [, name, values] = l.split("|");
+        return [(name ?? "").trim().replace(/`/g, ""), sorted(ticked(values))];
+      }),
     );
     const allowed = Object.fromEntries(
       Object.entries(def("featureBundle").properties ?? {}).map(([k, v]) => [k, sorted(v.oneOf?.[0]?.enum ?? [])]),
@@ -64,11 +67,11 @@ describe("CONVENTIONS.md §12, the topic schema and the renderer name the same t
   });
   test("inventory sets", () => {
     const start = section12.indexOf("| Set | Value |");
-    const rows = section12.slice(start).split("\n").slice(2);
-    const sets = rows
+    const lines = section12.slice(start).split("\n").slice(2);
+    const sets = lines
       .slice(
         0,
-        rows.findIndex((r) => !r.startsWith("|")),
+        lines.findIndex((r) => !r.startsWith("|")),
       )
       .map((r) => /`([^`]+)`/.exec(r)?.[1] ?? "");
     expect(sorted(sets)).toEqual(sorted(prop(def("inventoryBlock"), "set").enum ?? []));
@@ -91,9 +94,19 @@ describe("CONVENTIONS.md §12, the topic schema and the renderer name the same t
     const roles = [...(row.split("|")[2] ?? "").matchAll(/`([^`]+)`/g)].map((m) => m[1] ?? "");
     expect(sorted(roles)).toEqual(sorted(prop(def("section"), "role").enum ?? []));
   });
-  test("attributes are fields of the schema", () => {
+  test("attributes are fields of the schema, and every field of the schema is named in CONVENTIONS.md", () => {
     const fields = new Set(Object.values(schema.definitions).flatMap((d) => Object.keys(d.properties ?? {})));
     for (const attribute of names("Attributes")) expect(fields.has(attribute)).toBe(true);
+    const named = new Set(ticked(conventions.replace(/```[^]*?```/g, "")));
+    expect([...fields].filter((f) => !named.has(f))).toEqual([]);
+  });
+  test("list item types, slot columns, intonation and varieties", () => {
+    expect(sorted(namesOf("Fields", "`items`"))).toEqual(sorted(prop(def("item"), "type").enum ?? []));
+    expect(sorted(namesOf("Fields", "column").filter((n) => !["label", "slot"].includes(n)))).toEqual(
+      sorted(prop(def("column"), "slot").enum ?? []),
+    );
+    expect(sorted(namesOf("Inline marks", "`intonation`"))).toEqual(sorted(prop(def("intonationMark"), "intonation").enum ?? []));
+    expect(sorted(namesOf("Attributes", "`variety`"))).toEqual(sorted(def("variety").enum ?? []));
   });
 });
 

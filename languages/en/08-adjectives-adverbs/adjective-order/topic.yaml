@@ -11,7 +11,7 @@ title: { en: Adjectives and Adjective Order }
 summary:
   lead: { en: "Where adjectives go, their fixed order, and -ed and -ing adjectives." }
   rule: { en: "Adjectives go before a noun, take no plural -s, and put size before colour and age before material:" }
-  ex: ["a ", { target: big red }, " bag, an ", { target: old wooden }, " table."]
+  ex: { examples: [["a ", { target: big red }, " bag"], ["an ", { target: old wooden }, " table."]] }
 
 cheatsheet:
   content:
@@ -23,7 +23,7 @@ cheatsheet:
         - { level: A1, pattern: { pattern: [{ slot: adjective }, { slot: noun }] }, ex: ["a ", { target: red }, " car"] }
         - { level: A1, pattern: { pattern: [{ alternatives: [be, look, feel] }, { slot: adjective }] }, ex: ["The car is ", { target: red }, "."] }
         - { level: A1, pattern: { pattern: [{ slot: adjective }, { slot: plural noun }] }, ex: ["two ", { target: red }, " cars"] }
-        - { level: A2, pattern: { en: { pattern: ["opinion, size, age, shape, colour, origin, material", { slot: noun }] } }, ex: ["a ", { target: lovely small old }, " house"] }
+        - { level: A2, pattern: { en: ["opinion, size, age, shape, colour, origin, ", { pattern: [material, { slot: noun }] }] }, ex: ["a ", { target: lovely small old }, " house"] }
         - { level: A2, pattern: { alternatives: ["-ed", "-ing"] }, ex: { examples: [["I'm ", { target: bored }, "."], ["It's ", { target: boring }, "."]] } }
 
 sections:

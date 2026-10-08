@@ -146,7 +146,7 @@ sections:
             level: B1
             text:
               en: [{ term: for }, " takes a length of time; ", { term: since }, " takes a starting point:"]
-            ex: { examples: [["I've known her ", { target: for }, " ten years"], [{ target: since }, " ", { date: "2015", value: "2015" }, "."]] }
+            ex: ["I've known her ", { alternatives: [[{ target: for }, " ten years"], [{ target: since }, " ", { date: "2015", value: "2015" }]] }, "."]
 
   - title: { en: "Past perfect: form" }
     role: form

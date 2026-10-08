@@ -3,7 +3,8 @@
 import { describe, expect, test } from "bun:test";
 import type { ErrorsBlock, ListBlock, Localized, ProseBlock, Text, Topic } from "../lib.ts";
 import { problemsAfter, sampleBlocks } from "../sample-topic.ts";
-import { checkText, LEARNED_NOTATION, NOTATION } from "./topic-text.ts";
+import { LEARNED_NOTATION, NOTATION } from "./notation.ts";
+import { checkText } from "./topic-text.ts";
 
 const problems = (change: (t: Topic) => void): string[] => problemsAfter(change, checkText);
 const prose = (t: Topic): ProseBlock => sampleBlocks(t)[0] as ProseBlock;
@@ -40,6 +41,11 @@ describe("the inline notation the marks replace", () => {
     "a line break": "one\ntwo",
     " / ": "am / is",
     " + ": "be + V-ing",
+    " · ": "1,500 · 2.5",
+    " ≠ ": "th ≠ t",
+    " | ": "19 | 99",
+    "a run of spaces": "-tion  -sion",
+    " = ": "Ana's tired = Ana is tired.",
     " — ": "Are you? — Yes.",
     "…": "Could you…?",
     "(": "He said (that) he was tired.",
@@ -56,6 +62,18 @@ describe("the inline notation the marks replace", () => {
     expect(problems(learned(sample(name))).join("\n")).toContain(`holds ${name}`);
     expect(problems(explaining(sample(name)))).toEqual([]);
   });
+  test("+ at the start reads as a pattern, and the signs + − ? after a comma read as signs", () => {
+    expect(problems(explaining("+ es")).join("\n")).toContain("holds  + ");
+    expect(problems(explaining("singular countable, + and ?"))).toEqual([]);
+    expect(problems(explaining("plural, + − ?"))).toEqual([]);
+  });
+  test("↘ as well as ↗", () => {
+    expect(problems(explaining("Really? ↘")).join("\n")).toContain("holds ↗ or ↘");
+  });
+  test("inside a form an explanation discusses, the notation of the language being learned", () => {
+    expect(problems(explaining(["Use ", { term: "Could you…?" }, "."])).join("\n")).toContain("holds …");
+    expect(problems(explaining(["Use ", { term: ["Could you", { gap: true }, "?"] }, "."]))).toEqual([]);
+  });
   test("inside marks, structures, glosses and slots", () => {
     expect(problems(learned({ target: ["a **b**", "c"] })).join("\n")).toContain("holds **");
     expect(problems(learned({ alternatives: ["a / b", "c"] })).join("\n")).toContain("holds  / ");
@@ -65,9 +83,25 @@ describe("the inline notation the marks replace", () => {
 });
 
 describe("marks are whole", () => {
+  test("a list of parts holds a mark", () => {
+    expect(problems(learned(["a ", "b"])).join("\n")).toContain("a list of plain strings");
+  });
+  test("a date is one the calendar holds", () => {
+    expect(problems(learned({ date: "30 February", value: "--02-30" })).join("\n")).toContain("a date with no such day: --02-30");
+    expect(problems(learned({ date: "29 February 2023", value: "2023-02-29" })).join("\n")).toContain("no such day");
+    expect(problems(learned({ date: "29 February 2024", value: "2024-02-29" }))).toEqual([]);
+    expect(problems(learned({ date: "July", value: "--07" }))).toEqual([]);
+    expect(problems(learned({ date: "2026", value: "2026" }))).toEqual([]);
+    expect(problems(learned({ date: "?", value: "--13" })).join("\n")).toContain("no such day");
+    expect(problems(learned({ date: "?", value: "July" })).join("\n")).toContain("no such day");
+  });
   test("a list of one piece follows the form under discussion", () => {
     expect(problems(learned({ mapping: ["a"] })).join("\n")).toContain("a mapping of one piece");
     expect(problems(learned({ mapping: ["a"], follows: true }))).toEqual([]);
+  });
+  test("a localized gloss or slot carries each explanation language its text serves", () => {
+    expect(problems(learned(["x ", { gloss: {} }])).join("\n")).toContain('has a gloss with no "en" text');
+    expect(problems(learned({ pattern: ["x", { slot: {} }] })).join("\n")).toContain('has a slot with no "en" text');
   });
   test("a gloss in the language being learned is localized", () => {
     expect(problems(learned(["x ", { gloss: "meaning" }])).join("\n")).toContain("a gloss is localized");

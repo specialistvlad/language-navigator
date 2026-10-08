@@ -11,7 +11,7 @@ title: { en: "Days, Months and Dates" }
 summary:
   lead: { en: "The days of the week, the months, and how to say and write dates and years." }
   rule: { en: "Days and months always start with a capital letter, and dates are said with ordinals:" }
-  ex: ["on ", { target: { weekday: Monday, value: 1 } }, ", the ", { target: third }, " of ", { target: { date: July, value: "--07" } }, "."]
+  ex: { examples: [["on ", { target: { weekday: Monday, value: 1 } }], [{ date: ["the ", { target: third }, " of ", { target: July }], value: "--07-03" }, "."]] }
 
 cheatsheet:
   content:
@@ -24,11 +24,11 @@ cheatsheet:
         - { level: A0, point: { en: Capitals }, rule: { en: days and months start with a capital letter }, ex: [{ letter: M }, "onday, ", { letter: J }, une] }
         - { level: A0, point: { weekday: Wednesday, value: 3 }, rule: { en: ["the first d is silent: ", { ipa: ˈwenzdeɪ }] }, ex: { weekday: Wednesday, value: 3 } }
         - { level: A0, point: { en: Weekend }, rule: { en: Saturday and Sunday are the weekend; the other days are weekdays }, ex: { target: the weekend } }
-        - { level: A0, point: { en: Day of the month }, rule: { en: "say the day as an ordinal: 5 May" }, ex: ["the ", { target: fifth }, " of ", { date: May, value: "--05" }] }
+        - { level: A0, point: { en: Day of the month }, rule: { en: "say the day as an ordinal: 5 May" }, ex: { date: ["the ", { target: fifth }, " of ", May], value: "--05-05" } }
         - { level: A0, point: { en: Date order }, rule: { en: ["British: day, month, year, so 04/07/2026 is 4 July; ", { variant: "month, day, year, so April 7", variety: en-US }] }, ex: ["04/07/", { date: "2026", value: "2026" }] }
-        - { level: A0, point: { en: Asking the date }, rule: { en: ask What's the date today? and answer with the ordinal }, ex: ["It's the ", { target: tenth }, " of ", { date: October, value: "--10" }, "."] }
+        - { level: A0, point: { en: Asking the date }, rule: { en: ask What's the date today? and answer with the ordinal }, ex: ["It's ", { date: ["the ", { target: tenth }, " of ", October], value: "--10-10" }, "."] }
         - { level: A0, point: { en: Years }, rule: { en: "most years in two pairs of digits: 1999; 1900 and 1905 as shown" }, ex: { examples: [[{ target: nineteen }, " ninety-nine"], ["nineteen ", { target: hundred }], ["nineteen ", { target: oh }, " five"]] } }
-        - { level: A0, point: { en: After 2000 }, rule: { en: ["2000–2009: two thousand (and", { pattern: [")", { slot: unit }] }, ; from 2010 both forms are common] }, ex: { examples: [["two thousand ", { target: and }, " eight"], [{ target: twenty }, " twenty-six"]] } }
+        - { level: A0, point: { en: After 2000 }, rule: { en: ["2000–2009: two thousand ", { pattern: [{ optional: and }, { slot: unit }] }, ; from 2010 both forms are common] }, ex: { examples: [["two thousand ", { target: and }, " eight"], [{ target: twenty }, " twenty-six"]] } }
 
 sections:
   - title: { en: Days of the week }
@@ -118,7 +118,7 @@ sections:
             level: A0
             text:
               en: ["Ask the date with ", { term: What's the date today? }]
-            ex: ["It's the ", { target: tenth }, " of ", { date: October, value: "--10" }, "."]
+            ex: ["It's ", { date: ["the ", { target: tenth }, " of ", October], value: "--10-10" }, "."]
 
   - title: { en: Years }
     role: own
@@ -140,16 +140,16 @@ sections:
           - type: rule
             level: A0
             text:
-              en: ["Say most years in two pairs of digits: ", { mapping: ["19 | 99", nineteen ninety-nine] }, "."]
+              en: ["Say most years in two pairs of digits: ", { mapping: [{ date: { examples: ["19", "99"] }, value: "1999" }, nineteen ninety-nine] }, "."]
           - type: rule
             level: A0
             text:
-              en: ["2000–2009: two thousand (and", { pattern: [")", { slot: unit }] }, ". From 2010, both forms are common."]
+              en: ["2000–2009: two thousand ", { pattern: [{ optional: and }, { slot: unit }] }, ". From 2010, both forms are common."]
 
   - title: { en: Typical errors }
     role: errors
     content:
       - type: errors
         rows:
-          - { level: A0, wrong: [{ weekday: Wednesday, value: 3 }, " ", { ipa: ˈwednzdeɪ }], right: [{ weekday: Wednesday, value: 3 }, " ", { ipa: ˈwenzdeɪ }], rule: { en: the first d is silent } }
-          - { level: A0, wrong: ["the five of ", { date: May, value: "--05" }], right: ["the ", { target: fifth }, " of ", { date: May, value: "--05" }], rule: { en: days are ordinals } }
+          - { level: A0, wrong: [{ weekday: Wednesday, value: 3 }, " ", { ipa: ˈwednzdeɪ }], right: [{ weekday: Wednesday, value: 3 }, " ", { target: { ipa: ˈwenzdeɪ } }], rule: { en: the first d is silent } }
+          - { level: A0, wrong: ["the five of ", { date: May, value: "--05" }], right: { date: ["the ", { target: fifth }, " of ", May], value: "--05-05" }, rule: { en: days are ordinals } }

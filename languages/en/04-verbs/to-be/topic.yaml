@@ -151,7 +151,7 @@ sections:
           - type: rule
             level: A1
             text:
-              en: ["Birth takes ", { alternatives: [{ term: was }, { term: were }] }, "  ", { term: born }, ":"]
+              en: ["Birth takes ", { alternatives: [{ term: was }, { term: were }] }, " ", { term: born }, ":"]
             ex: ["I ", { target: was born }, " in ", { date: "1995", value: "1995" }, "."]
           - type: rule
             level: A1

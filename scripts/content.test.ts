@@ -1,7 +1,7 @@
 // Reading topic data: which readers an element serves, every text of a topic with where it sits, titles
 // and the shape of a table.
 import { describe, expect, test } from "bun:test";
-import { isTable, shows, tableShape, topicTexts, topicTitle } from "./content.ts";
+import { isTable, scope, serves, shows, tableShape, topicTexts, topicTitle } from "./content.ts";
 import type { Block, Topic, TopicRef } from "./lib.ts";
 import { SAMPLE } from "./sample-topic.ts";
 
@@ -14,7 +14,7 @@ describe("readers", () => {
 
 describe("every text of a topic", () => {
   test("each place, with its kind of text", () => {
-    const texts = [...topicTexts(SAMPLE, "en")].map((t) => `${t.path} ${t.plain ? "plain" : "explained"} ${JSON.stringify(t.text)}`);
+    const texts = [...topicTexts(SAMPLE, ["en"])].map((t) => `${t.path} ${t.plain ? "plain" : "explained"} ${JSON.stringify(t.text)}`);
     expect(texts).toEqual([
       'title explained "Sample"',
       'summary.lead explained "Lead."',
@@ -38,6 +38,40 @@ describe("every text of a topic", () => {
       'sections[0].content[3].rows[0].wrong plain "Wrong."',
       'sections[0].content[3].rows[0].right plain "Right."',
       'sections[0].content[3].rows[0].rule explained "Rule."',
+    ]);
+  });
+});
+
+describe("the languages a text serves", () => {
+  test("an element serves the languages around it that its readers list", () => {
+    expect(scope({}, ["en"])).toEqual(["en"]);
+    expect(scope({ readers: [] }, ["en"])).toEqual([]);
+  });
+  test("an error row serves the readers and the speakers it names", () => {
+    expect(serves({}, "en")).toBe(true);
+    expect(serves({ speakers: ["en"] }, "en")).toBe(true);
+    expect(serves({ speakers: [] }, "en")).toBe(false);
+    expect(serves({ readers: [] }, "en")).toBe(false);
+  });
+  test("each text carries the languages it serves; a localized value gives each language once", () => {
+    const topic = structuredClone(SAMPLE);
+    const [section] = topic.sections;
+    if (!section) throw new Error("fixture");
+    section.readers = [];
+    const langs = Object.fromEntries([...topicTexts(topic, ["en"])].map((t) => [t.path, t.langs]));
+    expect(langs["summary.ex"]).toEqual(["en"]);
+    expect(langs["sections[0].content[0].ex"]).toEqual([]);
+    expect(langs["sections[0].title"]).toBeUndefined();
+  });
+  test("an error row's text serves the speakers it names", () => {
+    const topic = structuredClone(SAMPLE);
+    const errors = topic.sections[0]?.content[3];
+    if (errors?.type !== "errors" || !errors.rows[0]) throw new Error("fixture");
+    errors.rows[0].speakers = [];
+    const paths = [...topicTexts(topic, ["en"])].filter((t) => t.path.includes("content[3]"));
+    expect(paths.map((t) => [t.path, t.langs])).toEqual([
+      ["sections[0].content[3].rows[0].wrong", []],
+      ["sections[0].content[3].rows[0].right", []],
     ]);
   });
 });

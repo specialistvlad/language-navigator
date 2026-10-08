@@ -33,7 +33,7 @@ sections:
           - type: rule
             level: A2
             text:
-              en: ["A phrasal verb is a ", { pattern: [{ slot: verb }, a] }, " particle: ", { pattern: [get, up] }, ", ", { pattern: [turn, "off"] }, ", ", { pattern: [look, for] }, "."]
+              en: ["A phrasal verb is a ", { pattern: [{ slot: verb }, a particle] }, ": ", { pattern: [get, up] }, ", ", { pattern: [turn, "off"] }, ", ", { pattern: [look, for] }, "."]
           - type: rule
             level: A2
             text:
@@ -72,7 +72,7 @@ sections:
           - type: rule
             level: A2
             text:
-              en: ["A noun goes before or after the particle: ", { examples: [pick up the bag, pick the bag up.] }]
+              en: ["A noun goes before or after the particle: pick up ", { alternatives: [the bag, pick] }, " the bag up."]
           - type: rule
             level: A2
             text:

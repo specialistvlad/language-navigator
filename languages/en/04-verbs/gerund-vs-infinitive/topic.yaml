@@ -11,7 +11,7 @@ title: { en: Gerund vs Infinitive }
 summary:
   lead: { en: ["Verbs followed by -ing, verbs followed by ", { pattern: [to, { slot: infinitive }] }, ", and verbs that take both with a change of meaning."] }
   rule: { en: "The verb before decides the form:" }
-  ex: ["I ", { target: enjoy cooking }, ", I ", { target: want to cook }, "."]
+  ex: { examples: [["I ", { target: enjoy cooking }], ["I ", { target: want to cook }, "."]] }
 
 cheatsheet:
   content:

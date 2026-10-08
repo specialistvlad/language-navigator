@@ -11,7 +11,7 @@ title: { en: Should }
 summary:
   lead: { en: Should and shouldn't for advice and opinions. }
   rule: { en: "Should takes the base verb with every subject and needs no do in questions:" }
-  ex: { examples: [["You ", { target: should }, " go."], [{ target: Should }, " I go?"]] }
+  ex: ["You ", { target: should }, " go. ", { target: Should }, " I go?"]
 
 cheatsheet:
   content:

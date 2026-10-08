@@ -11,7 +11,7 @@ title: { en: "Time: In, On, At" }
 summary:
   lead: { en: "At goes with clock times, on with days and dates, and in with months, years and seasons." }
   rule: { en: "The period gets longer from at to on to in, and next, last, this and every take no preposition:" }
-  ex: [{ target: at }, " 7 o'clock, ", { target: "on" }, " ", { weekday: Monday, value: 1 }, ", ", { target: in }, " ", { date: July, value: "--07" }, ", ", { target: next }, " ", { weekday: Friday, value: 5 }, "."]
+  ex: { examples: [[{ target: at }, " 7 o'clock"], [{ target: "on" }, " ", { weekday: Monday, value: 1 }], [{ target: in }, " ", { date: July, value: "--07" }], [{ target: next }, " ", { weekday: Friday, value: 5 }, "."]] }
 
 cheatsheet:
   content:

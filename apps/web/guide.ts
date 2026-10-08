@@ -41,9 +41,10 @@ export function guideParts(topic: Topic, explain: Explain): GuidePart[] {
   const sheet = contentRange(topic.cheatsheet.content, explain);
   if (sheet) out.push({ title: say("sheet", explain), heading: null, range: sheet, kind: "cheatsheet", content: topic.cheatsheet.content });
   for (const section of topic.sections) {
+    // A section without content for this reader is skipped before its title is read.
     const range = sectionRange(section, explain);
-    const heading = textIn(section.title, explain);
     if (range !== null) {
+      const heading = textIn(section.title, explain);
       out.push({ title: plainText(heading, reading(explain, false)), heading, range, kind: "body", content: section.content });
     }
   }

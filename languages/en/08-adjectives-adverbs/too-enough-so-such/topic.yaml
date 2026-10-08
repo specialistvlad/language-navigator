@@ -11,7 +11,7 @@ title: { en: "Too, Enough, So and Such" }
 summary:
   lead: { en: "Too, enough, so and such say how much of a quality: too hot, hot enough, so hot, such a hot day." }
   rule: { en: "Enough follows the adjective, so goes with an adjective and such with a noun:" }
-  ex: ["big ", { target: enough }, ", ", { target: so }, " nice, ", { target: such a }, " nice day."]
+  ex: { examples: [["big ", { target: enough }], [{ target: so }, " nice"], [{ target: such a }, " nice day."]] }
 
 cheatsheet:
   content:
@@ -64,7 +64,7 @@ sections:
           - { level: B1, pattern: { pattern: [so, { slot: adverb }] }, ex: ["He speaks ", { target: so }, " quickly."] }
           - { level: B1, pattern: { pattern: [{ alternatives: [so many, so much] }, { slot: noun }] }, ex: ["I have ", { target: so many }, " friends."] }
           - { level: B1, pattern: { pattern: [{ alternatives: [such a, an] }, { slot: adjective }, { slot: singular noun }] }, ex: ["It's ", { target: such a }, " good film."] }
-          - { level: B1, pattern: { pattern: [such, { slot: adjective }, [{ alternatives: [plural, uncountable] }, "  noun"]] }, ex: ["They are ", { target: such }, " nice people."] }
+          - { level: B1, pattern: { pattern: [such, { slot: adjective }, [{ alternatives: [plural, uncountable] }, " noun"]] }, ex: ["They are ", { target: such }, " nice people."] }
           - { level: B1, pattern: { pattern: [{ alternatives: [so, ["such ", { gap: true }, " that"]] }, { slot: result }] }, ex: ["I was ", { target: so }, " tired ", { target: that }, " I fell asleep."] }
       - type: list
         items:

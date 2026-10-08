@@ -11,7 +11,7 @@ title: { en: Question Tags }
 summary:
   lead: { en: Question tags are short questions added to a statement to check or confirm it. }
   rule: { en: "A positive statement takes a negative tag and a negative statement a positive tag, with the same auxiliary:" }
-  ex: ["It's cold, ", { target: isn't it }, "?"]
+  ex: { examples: [It's cold, [{ target: isn't it }, "?"]] }
 
 cheatsheet:
   content:
@@ -51,7 +51,7 @@ sections:
           - type: rule
             level: B1
             text:
-              en: ["The tag is an ", { pattern: [auxiliary, a] }, " pronoun: isn't ", { term: it }, ", doesn't ", { term: she }, "."]
+              en: ["The tag is an ", { pattern: [auxiliary, a pronoun] }, ": isn't ", { term: it }, ", doesn't ", { term: she }, "."]
           - type: rule
             level: B1
             text:
@@ -100,7 +100,7 @@ sections:
           - { level: B1, start: Let's, tag: shall we, ex: [{ target: Let's }, " go, ", { target: shall we }, "?"] }
           - { level: B1, start: { en: command }, tag: will you, ex: [{ target: Open }, " the door, ", { target: will you }, "?"] }
           - { level: B1, start: { en: negative command }, tag: will you, ex: [{ target: Don't }, " be late, ", { target: will you }, "?"] }
-          - { level: B1, start: { alternatives: [There is, are] }, tag: [{ alternatives: [isn't, aren't] }, "  there"], ex: [{ target: There's }, " a bus, ", { target: isn't there }, "?"] }
+          - { level: B1, start: { alternatives: [There is, are] }, tag: [{ alternatives: [isn't, aren't] }, " there"], ex: [{ target: There's }, " a bus, ", { target: isn't there }, "?"] }
           - { level: B1, start: "everybody, somebody, nobody", tag: they, ex: [{ target: Everybody }, " came, ", { target: didn't they }, "?"] }
           - { level: B1, start: "nobody, nothing, never", tag: { en: positive tag }, ex: [{ target: Nobody }, " called, ", { target: did they }, "?"] }
       - type: list

@@ -11,7 +11,7 @@ title: { en: Possessive 's }
 summary:
   lead: { en: [{ pattern: [Noun, "'s"] }, " shows who something belongs to, and ' alone follows a plural in -s."] }
   rule: { en: "The owner comes first and the thing after it takes no article:" }
-  ex: [{ target: Ana's }, " car, my ", { target: parents' }, " house, the ", { target: children's }, " room."]
+  ex: { examples: [[{ target: Ana's }, " car"], ["my ", { target: parents' }, " house"], ["the ", { target: children's }, " room."]] }
 
 cheatsheet:
   content:
@@ -28,7 +28,7 @@ cheatsheet:
         - { level: A1, point: { en: word order }, rule: { en: "owner first, thing after, no article" }, ex: [{ target: my sister's }, " phone"] }
         - { level: A1, point: { en: "'s or of" }, rule: { en: "'s for people and animals, of for things" }, ex: ["the end ", { target: of }, " the film"] }
         - { level: A1, point: Whose, rule: { en: asks about the owner }, ex: [{ target: Whose }, " bag is this?"] }
-        - { level: A1, point: Who's, rule: { en: "= who is, not the owner" }, ex: [{ target: Whose }, " bag? ≠ ", { target: Who's }, " there?"] }
+        - { level: A1, point: Who's, rule: { en: "= who is, not the owner" }, ex: { contrast: [[{ target: Whose }, " bag?"], [{ target: Who's }, " there?"]] } }
 
 sections:
   - title: { en: "Form: 's and '" }
@@ -60,7 +60,7 @@ sections:
             level: A1
             text:
               en: "'s also shortens is and has:"
-            ex: [{ target: Ana's }, " tired = Ana is tired."]
+            ex: { equivalence: [[{ target: Ana's }, " tired"], Ana is tired.] }
 
   - title: { en: "Pronunciation: 's" }
     role: pronunciation

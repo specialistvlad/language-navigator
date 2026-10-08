@@ -57,7 +57,7 @@ sections:
       - type: prose
         level: A1
         text:
-          en: ["Each simple tense has a helper verb: ", { examples: [[{ target: will }, " for the future, ", { target: do }], [{ target: does }, " for the present, ", { target: did }, " for the past."]] }]
+          en: ["Each simple tense has a helper verb: ", { term: will }, " for the future, ", { alternatives: [{ term: do }, { term: does }] }, " for the present, ", { term: did }, " for the past."]
       - type: list
         items:
           - type: rule

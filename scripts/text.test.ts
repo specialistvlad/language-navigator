@@ -2,16 +2,16 @@
 // writes, and a walk meets every string and every mark in the kind of text it sits in.
 import { describe, expect, test } from "bun:test";
 import type { Mark, Text } from "./lib.ts";
-import { foldText, isLocalized, markName, MARKS, plainText, reading, textIn, type TextOutput, varietyName, walkText } from "./text.ts";
+import { foldText, isLocalized, markName, MARKS, plainText, reading, textIn, type TextOutput, varietyName } from "./text.ts";
 
 const learned = reading("en", true);
 const explaining = reading("en", false);
 const read = (t: Text, plain = true): string => plainText(t, plain ? learned : explaining);
 
 describe("localized text", () => {
-  test("a localized value names explanation languages only", () => {
+  test("a localized value names explanation languages only, or none", () => {
     expect(isLocalized({ en: "x" })).toBe(true);
-    expect(isLocalized({})).toBe(false);
+    expect(isLocalized({})).toBe(true);
     expect(isLocalized({ target: "x" })).toBe(false);
   });
   test("textIn gives the text of a language, and fails without it", () => {
@@ -61,6 +61,8 @@ describe("every mark reads as its text", () => {
     [{ exchange: ["Are you tired?", "Yes, I am."] }, "Are you tired? — Yes, I am."],
     [{ pattern: ["be", { slot: "V-ing" }] }, "be + V-ing"],
     [{ pattern: [{ ending: "es" }], follows: true }, "+ es"],
+    [{ equivalence: ["Ana's tired.", "Ana is tired."] }, "Ana's tired. = Ana is tired."],
+    [{ contrast: ["short /ɪ/", "long /iː/"] }, "short /ɪ/ ≠ long /iː/"],
   ];
   test.each(cases.map(([m, plain, explained]) => [m, plain, explained ?? plain] as const))("%j", (m, plain, explained) => {
     expect(read(m)).toBe(plain);
@@ -96,10 +98,11 @@ describe("separators", () => {
       }),
     ).toBe("cups /kʌps/ · books /bʊks/");
   });
-  test("examples in a summary follow each other as sentences, and only at their own level", () => {
+  test("examples in a summary follow each other in the sentence, and only at their own level", () => {
     const summary = { ...learned, sentences: true };
     expect(plainText({ examples: ["Are you a student?", "It is cold."] }, summary)).toBe("Are you a student? It is cold.");
-    expect(plainText({ examples: [{ alternatives: ["a", "b"] }, "c"] }, summary)).toBe("a / b c");
+    expect(plainText({ examples: ["three children", "The people are nice."] }, summary)).toBe("three children, The people are nice.");
+    expect(plainText({ examples: [{ alternatives: ["a", "b"] }, "c"] }, summary)).toBe("a / b, c");
   });
 });
 
@@ -107,53 +110,5 @@ describe("output", () => {
   test("an output receives each mark with its name", () => {
     const tags: TextOutput<string> = { text: (s) => s, join: (p) => p.join(""), mark: (n, inner) => `<${n}>${inner}</${n}>` };
     expect(foldText(["a ", { target: ["b ", { ending: "s" }] }], tags, learned)).toBe("a <target>b <ending>s</ending></target>");
-  });
-});
-
-describe("walking text", () => {
-  const walk = (t: Text, plain = true): [string, boolean][] => {
-    const seen: [string, boolean][] = [];
-    walkText(
-      t,
-      {
-        string: (s, p) => seen.push([s, p]),
-        mark: (m, p) => seen.push([`<${markName(m)}>`, p]),
-      },
-      plain,
-      "en",
-    );
-    return seen;
-  };
-  test("strings and marks, depth first, in their kind of text", () => {
-    expect(walk(["a", { target: "b" }])).toEqual([
-      ["a", true],
-      ["<target>", true],
-      ["b", true],
-    ]);
-    expect(walk({ gloss: { en: "meaning" } })).toEqual([
-      ["<gloss>", true],
-      ["meaning", false],
-    ]);
-    expect(walk({ slot: { en: "clock time" } })).toEqual([
-      ["<slot>", true],
-      ["clock time", false],
-    ]);
-    expect(walk({ gloss: "meaning" }, false)).toEqual([
-      ["<gloss>", false],
-      ["meaning", false],
-    ]);
-  });
-  test("codes, transcriptions and values are data, not text", () => {
-    expect(walk({ slot: "V-ing" })).toEqual([["<slot>", true]]);
-    expect(walk({ ipa: "kʌp" })).toEqual([["<ipa>", true]]);
-    expect(walk({ intonation: "rise" })).toEqual([["<intonation>", true]]);
-    expect(walk({ gap: true })).toEqual([["<gap>", true]]);
-    expect(walk({ weekday: "Monday", value: 1 })).toEqual([
-      ["<weekday>", true],
-      ["Monday", true],
-    ]);
-  });
-  test("every piece of a list", () => {
-    expect(walk({ mapping: ["a", { target: "b" }] }).map(([s]) => s)).toEqual(["<mapping>", "a", "<target>", "b"]);
   });
 });

@@ -11,7 +11,7 @@ title: { en: Numbers }
 summary:
   lead: { en: "Numbers from 0 to a million, and the ordinals first, second, third." }
   rule: { en: "Numbers in -teen stress the end and numbers in -ty the start:" }
-  ex: [thir, { stress: teen }, " is 13, ", { stress: thir }, ty is 30.]
+  ex: { examples: [[thir, { stress: teen }, " is 13"], [{ stress: thir }, ty is 30.]] }
 
 cheatsheet:
   content:
@@ -26,7 +26,7 @@ cheatsheet:
         - { level: A0, point: { en: "21–99" }, rule: { en: { pattern: [ten, { slot: hyphen }, { slot: unit }] } }, ex: "twenty-one, forty-five" }
         - { level: A0, point: and, rule: { en: [and comes after hundred (, { variant: three hundred five, variety: en-US }, ")"] }, ex: ["two hundred ", { target: and }, " fifty"] }
         - { level: A0, point: "hundred, thousand, million", rule: { en: stay singular after a number }, ex: ["two ", { target: hundred }, ", five ", { target: million }] }
-        - { level: A0, point: { en: Comma and point }, rule: { en: a comma separates thousands; a point separates decimals }, ex: { examples: ["1,500", ["2.5 ", { gloss: { en: { numeral: ["two ", { target: point }, " five"], value: 2.5 } } }]] } }
+        - { level: A0, point: { en: Comma and point }, rule: { en: a comma separates thousands; a point separates decimals }, ex: { examples: ["1,500", { mapping: ["2.5", { numeral: ["two ", { target: point }, " five"], value: 2.5 }] }] } }
         - { level: A0, point: { en: Phone numbers }, rule: { en: say each digit; 0 is oh; two equal digits are double }, ex: { mapping: ["077", oh double seven] } }
         - { level: A0, point: { en: Ordinals }, rule: { en: "first, second, third; from 4 add -th" }, ex: [four, { ending: th }, ", six", { ending: th }] }
         - { level: A0, point: { en: Ordinal spelling }, rule: { en: "five, nine, twelve and twenty change their spelling" }, ex: [fi, { letter: f }, "th, nin", { ending: th }, ", twel", { letter: f }, "th, twent", { letter: ie }, th] }
@@ -86,7 +86,7 @@ sections:
           - type: rule
             level: A0
             text:
-              en: ["13–19 add ", { term: "-teen" }, "; 13, 15 and 18 change their first part: ", { stress: thir }, "teen, ", { stress: fif }, "teen, ", { stress: eigh }, teen.]
+              en: ["13–19 add ", { term: "-teen" }, "; 13, 15 and 18 change their first part: ", { letter: thir }, "teen, ", { letter: fif }, "teen, ", { letter: eigh }, teen.]
 
   - title: { en: "20 to 90" }
     role: own
@@ -115,7 +115,7 @@ sections:
           - type: rule
             level: A0
             text:
-              en: ["-teen is stressed; -ty is not: thir", { stress: teen }, " ", { ipa: θɜːˈtiːn }, " ≠ ", { stress: thir }, "ty ", { ipa: ˈθɜːti }, "."]
+              en: ["-teen is stressed; -ty is not: ", { contrast: [[thir, { stress: teen }, " ", { ipa: θɜːˈtiːn }], [{ stress: thir }, "ty ", { ipa: ˈθɜːti }]] }, "."]
 
   - title: { en: "Hundreds, thousands, millions" }
     role: own
@@ -126,13 +126,13 @@ sections:
           - { key: number, label: { en: Number } }
           - { key: words, label: { en: Words } }
         rows:
-          - { level: A0, value: 100, number: "100", words: [{ alternatives: [a, one] }, "  ", { target: hundred }] }
+          - { level: A0, value: 100, number: "100", words: [{ alternatives: [a, one] }, " ", { target: hundred }] }
           - { level: A0, value: 105, number: "105", words: ["a hundred ", { target: and }, " five"] }
           - { level: A0, value: 250, number: "250", words: ["two hundred ", { target: and }, " fifty"] }
-          - { level: A0, value: 1000, number: "1,000", words: [{ alternatives: [a, one] }, "  ", { target: thousand }] }
+          - { level: A0, value: 1000, number: "1,000", words: [{ alternatives: [a, one] }, " ", { target: thousand }] }
           - { level: A0, value: 1250, number: "1,250", words: ["one thousand two hundred ", { target: and }, " fifty"] }
           - { level: A0, value: 10000, number: "10,000", words: ten thousand }
-          - { level: A0, value: 1000000, number: "1,000,000", words: [{ alternatives: [a, one] }, "  ", { target: million }] }
+          - { level: A0, value: 1000000, number: "1,000,000", words: [{ alternatives: [a, one] }, " ", { target: million }] }
           - { level: A0, value: 2.5, number: "2.5", words: ["two ", { target: point }, " five"] }
       - type: list
         items:
@@ -147,7 +147,7 @@ sections:
           - type: rule
             level: A0
             text:
-              en: "A comma separates thousands; a point separates decimals: 1,500 · 2.5."
+              en: ["A comma separates thousands; a point separates decimals: ", { examples: ["1,500", "2.5"] }, "."]
 
   - title: { en: Ordinal numbers }
     role: own
@@ -185,7 +185,7 @@ sections:
           - type: rule
             level: A0
             text:
-              en: ["Written short: ", { pattern: [{ slot: number }, the last] }, " two letters of the word: 1", { ending: st }, ", 2", { ending: nd }, ", 3", { ending: rd }, ", 4", { ending: th }, "."]
+              en: ["Written short: ", { pattern: [{ slot: number }, the last two letters of the word] }, ": 1", { ending: st }, ", 2", { ending: nd }, ", 3", { ending: rd }, ", 4", { ending: th }, "."]
           - type: rule
             level: A0
             text:
@@ -201,7 +201,7 @@ sections:
     content:
       - type: errors
         rows:
-          - { level: A0, wrong: ["thirteen ", { ipa: ˈθɜːtiːn }], right: ["thirteen ", { ipa: θɜːˈtiːn }], rule: { en: "-teen is stressed" } }
+          - { level: A0, wrong: ["thirteen ", { ipa: ˈθɜːtiːn }], right: ["thirteen ", { target: { ipa: θɜːˈtiːn } }], rule: { en: "-teen is stressed" } }
           - { level: A0, wrong: fourty, right: { target: forty }, rule: { en: forty has no u } }
           - { level: A0, wrong: { examples: ["1th", "2th", "3th"] }, right: { examples: [["1", { ending: st }], ["2", { ending: nd }], ["3", { ending: rd }]] }, rule: { en: last two letters of the word } }
           - { level: A0, wrong: { examples: [nineth, twelveth] }, right: { examples: [{ target: ninth }, { target: twelfth }] }, rule: { en: the spelling changes } }

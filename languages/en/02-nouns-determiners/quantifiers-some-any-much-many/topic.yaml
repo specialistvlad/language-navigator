@@ -132,7 +132,7 @@ sections:
             level: A2
             text:
               en: [{ pattern: [{ term: "no" }, { slot: noun }] }, " = ", { pattern: [{ term: not any }, { slot: noun }] }, ":"]
-            ex: ["There's ", { target: "no" }, " milk = There isn't ", { target: any }, " milk."]
+            ex: { equivalence: [["There's ", { target: "no" }, " milk"], ["There isn't ", { target: any }, " milk."]] }
           - type: rule
             level: A2
             text:

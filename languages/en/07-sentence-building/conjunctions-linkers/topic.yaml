@@ -11,7 +11,7 @@ title: { en: Conjunctions and Linkers }
 summary:
   lead: { en: "Linkers join ideas: and adds, but contrasts, or offers a choice, because gives a reason and so gives a result." }
   rule: { en: "A comma comes before but and so between two clauses:" }
-  ex: ["I was tired, ", { target: so }, " I left."]
+  ex: { examples: [I was tired, [{ target: so }, " I left."]] }
 
 cheatsheet:
   content:
@@ -163,7 +163,7 @@ sections:
           - { key: ex, label: { en: Example } }
         rows:
           - { level: B1, linker: so that, pattern: { pattern: [so that, { slot: clause }] }, ex: ["I left early ", { target: so that }, " I could catch the bus."] }
-          - { level: B1, linker: unless, pattern: ["unless = if ", { gap: true }, " not"], ex: ["We stay in ", { target: unless }, " it stops raining."] }
+          - { level: B1, linker: unless, pattern: { equivalence: [unless, ["if ", { gap: true }, " not"]] }, ex: ["We stay in ", { target: unless }, " it stops raining."] }
       - type: list
         items:
           - type: note

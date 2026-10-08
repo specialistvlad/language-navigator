@@ -11,7 +11,7 @@ title: { en: "Conditionals: Zero, First and Second" }
 summary:
   lead: { en: "If-sentences for facts (zero), real possibilities (first) and imagined situations (second)." }
   rule: { en: "After if the verb is in the present simple, even for the future:" }
-  ex: ["If it ", { target: rains }, ", we'll stay in."]
+  ex: { examples: [["If it ", { target: rains }], we'll stay in.] }
 
 cheatsheet:
   content:
@@ -20,7 +20,7 @@ cheatsheet:
         - { key: type, label: { en: Type } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A2, type: ["Zero: ", { pattern: [if, { slot: present }] }, ", ", { slot: present }], ex: ["If you ", { target: heat }, " ice, it ", { target: melts }, "."] }
+        - { level: A2, type: ["Zero: ", { pattern: [if, { slot: present }] }, ", present"], ex: ["If you ", { target: heat }, " ice, it ", { target: melts }, "."] }
         - { level: A2, type: ["First: ", { pattern: [if, { slot: present }] }, ", ", { pattern: [will, { slot: V }] }], ex: ["If it ", { target: rains }, ", we'", { target: ll stay }, " in."] }
         - { level: B1, type: ["Second: ", { pattern: [if, { slot: past }] }, ", ", { pattern: [would, { slot: V }] }], ex: ["If I ", { target: had }, " more time, I'", { target: d learn }, " Spanish."] }
 
@@ -119,8 +119,8 @@ sections:
           - type: rule
             level: B1
             text:
-              en: [{ term: unless }, " means ", { term: if … not }, ". It takes an affirmative verb:"]
-            ex: [{ target: Unless }, " you hurry, you'll miss the bus. = If you ", { target: don't }, " hurry, you'll miss the bus."]
+              en: [{ term: unless }, " means ", { term: ["if ", { gap: true }, " not"] }, ". It takes an affirmative verb:"]
+            ex: { equivalence: [[{ target: Unless }, " you hurry, you'll miss the bus."], ["If you ", { target: don't }, " hurry, you'll miss the bus."]] }
           - type: note
             level: B1
             text:

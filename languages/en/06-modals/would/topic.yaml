@@ -68,8 +68,8 @@ sections:
         rows:
           - { level: A1, features: { person: 1, number: sg }, full: I would, short: I'd, ex: [I', { target: d }, " like a tea."] }
           - { level: B1, features: { person: 2 }, full: you would, short: you'd, ex: [You', { target: d }, " like her."] }
-          - { level: B1, features: { person: 3, number: sg }, full: [{ alternatives: [he, she, it] }, "  would"], short: { alternatives: [he'd, she'd, it'd] }, ex: [She', { target: d }, " love it."] }
-          - { level: B1, features: [{ person: 1, number: pl }, { person: 3, number: pl }], full: [{ alternatives: [we, they] }, "  would"], short: { alternatives: [we'd, they'd] }, ex: [We', { target: d }, " go."] }
+          - { level: B1, features: { person: 3, number: sg }, full: [{ alternatives: [he, she, it] }, " would"], short: { alternatives: [he'd, she'd, it'd] }, ex: [She', { target: d }, " love it."] }
+          - { level: B1, features: [{ person: 1, number: pl }, { person: 3, number: pl }], full: [{ alternatives: [we, they] }, " would"], short: { alternatives: [we'd, they'd] }, ex: [We', { target: d }, " go."] }
           - { level: B1, features: { polarity: neg }, full: would not, short: wouldn't, ex: ["They ", { target: wouldn't }, " mind."] }
       - type: list
         items:

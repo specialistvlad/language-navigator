@@ -156,10 +156,10 @@ sections:
           - { key: rule, label: { en: Rule } }
           - { key: ex, label: { en: Example } }
         rows:
-          - { level: A1, word: { alternatives: [a, an] }, rule: { en: { pattern: ["singular countable,", and ?] } }, ex: [There', { target: s a }, " bus stop."] }
+          - { level: A1, word: { alternatives: [a, an] }, rule: { en: "singular countable, + and ?" }, ex: [There', { target: s a }, " bus stop."] }
           - { level: A1, word: some, rule: { en: "plural or uncountable, +" }, ex: ["There are ", { target: some }, " apples."] }
           - { level: A1, word: any, rule: { en: "plural or uncountable, − and ?" }, ex: ["Are there ", { target: any }, " apples?"] }
-          - { level: A1, word: { en: number }, rule: { en: { pattern: ["plural,", "− ?"] } }, ex: ["There are ", { target: four }, " apples."] }
+          - { level: A1, word: { en: number }, rule: { en: "plural, + − ?" }, ex: ["There are ", { target: four }, " apples."] }
       - type: list
         items:
           - type: note

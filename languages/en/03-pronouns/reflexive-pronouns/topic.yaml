@@ -11,7 +11,7 @@ title: { en: Reflexive Pronouns }
 summary:
   lead: { en: "Reflexive pronouns (myself, yourself, themselves) show that the subject and the object are the same person." }
   rule: { en: "Routine verbs such as get up and get dressed take no reflexive:" }
-  ex: ["I ", { target: get up }, ", I ", { target: get dressed }, "."]
+  ex: { examples: [["I ", { target: get up }], ["I ", { target: get dressed }, "."]] }
 
 cheatsheet:
   content:

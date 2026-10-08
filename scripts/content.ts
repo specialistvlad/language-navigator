@@ -5,74 +5,94 @@ import { isLocalized, plainText, reading } from "./text.ts";
 // An element renders in every explanation language, or only in those its readers list.
 export const shows = (el: { readers?: Explain[] | undefined }, explain: Explain): boolean => !el.readers || el.readers.includes(explain);
 
-// Every text of a topic in an explanation language, with where it sits and whether it is in the
-// language being learned (plain): titles, the summary, every block, cell, label and item.
+// The explanation languages an element serves, within those around it: all, or the ones its readers list.
+export const scope = (el: { readers?: Explain[] | undefined }, langs: readonly Explain[]): Explain[] => {
+  const only = el.readers;
+  return only ? langs.filter((l) => only.includes(l)) : [...langs];
+};
+
+// An error row serves the readers it names, and the speakers of the explanation languages it names.
+export const serves = (row: { readers?: Explain[] | undefined; speakers?: Explain[] | undefined }, explain: Explain): boolean =>
+  shows(row, explain) && (!row.speakers || row.speakers.includes(explain));
+
+// Every text of a topic, once, with where it sits, whether it is in the language being learned (plain),
+// and the explanation languages it serves: titles, the summary, every block, cell, label and item. A
+// localized value gives its text in each language it serves, one at a time.
 export interface TopicText {
   text: Text;
   path: string;
   plain: boolean;
+  langs: Explain[];
 }
 
-export function* topicTexts(topic: Topic, explain: Explain): Generator<TopicText> {
-  function* loc(value: Localized | undefined, path: string): Generator<TopicText> {
-    const t = value?.[explain];
-    if (t !== undefined) yield { text: t, path, plain: false };
+export function* topicTexts(topic: Topic, all: readonly Explain[]): Generator<TopicText> {
+  function* loc(value: Localized | undefined, path: string, langs: Explain[]): Generator<TopicText> {
+    for (const l of langs) {
+      const t: Text | undefined = value?.[l];
+      if (t !== undefined) yield { text: t, path, plain: false, langs: [l] };
+    }
   }
-  function* plain(value: Text | undefined, path: string): Generator<TopicText> {
-    if (value !== undefined) yield { text: value, path, plain: true };
+  function* plain(value: Text | undefined, path: string, langs: Explain[]): Generator<TopicText> {
+    if (value !== undefined) yield { text: value, path, plain: true, langs };
   }
-  function* cell(value: unknown, path: string): Generator<TopicText> {
+  function* cell(value: unknown, path: string, langs: Explain[]): Generator<TopicText> {
     if (value === undefined) return;
     if (typeof value === "object" && value !== null && !Array.isArray(value) && "ex" in value && "tr" in value) {
       const ex = value as { ex: Text; tr: Localized };
-      yield* plain(ex.ex, path);
-      yield* loc(ex.tr, `${path}.tr`);
-    } else if (typeof value === "object" && value !== null && !Array.isArray(value) && isLocalized(value)) yield* loc(value, path);
-    else yield* plain(value as Text, path);
+      yield* plain(ex.ex, path, langs);
+      yield* loc(ex.tr, `${path}.tr`, langs);
+    } else if (typeof value === "object" && value !== null && !Array.isArray(value) && isLocalized(value)) yield* loc(value, path, langs);
+    else yield* plain(value as Text, path, langs);
   }
-  function* blocks(list: Block[], path: string): Generator<TopicText> {
+  function* blocks(list: Block[], path: string, around: Explain[]): Generator<TopicText> {
     for (const [i, b] of list.entries()) {
       const p = `${path}[${i}]`;
+      const langs = scope(b, around);
       switch (b.type) {
         case "prose":
-          yield* loc(b.text, `${p}.text`);
-          yield* plain(b.ex, `${p}.ex`);
-          yield* loc(b.tr, `${p}.tr`);
+          yield* loc(b.text, `${p}.text`, langs);
+          yield* plain(b.ex, `${p}.ex`, langs);
+          yield* loc(b.tr, `${p}.tr`, langs);
           break;
         case "list":
           for (const [k, it] of b.items.entries()) {
-            yield* loc(it.text, `${p}.items[${k}].text`);
-            yield* plain(it.ex, `${p}.items[${k}].ex`);
-            yield* loc(it.tr, `${p}.items[${k}].tr`);
+            const own = scope(it, langs);
+            yield* loc(it.text, `${p}.items[${k}].text`, own);
+            yield* plain(it.ex, `${p}.items[${k}].ex`, own);
+            yield* loc(it.tr, `${p}.items[${k}].tr`, own);
           }
           break;
         case "errors":
           for (const [k, r] of b.rows.entries()) {
-            yield* plain(r.wrong, `${p}.rows[${k}].wrong`);
-            yield* plain(r.right, `${p}.rows[${k}].right`);
-            yield* loc(r.rule, `${p}.rows[${k}].rule`);
+            const own = langs.filter((l) => serves(r, l));
+            yield* plain(r.wrong, `${p}.rows[${k}].wrong`, own);
+            yield* plain(r.right, `${p}.rows[${k}].right`, own);
+            yield* loc(r.rule, `${p}.rows[${k}].rule`, own);
           }
           break;
         case "paradigm":
         case "usage":
         case "comparison":
         case "inventory":
-          for (const c of b.columns) yield* cell(c.label, `${p}.columns.${c.key}`);
+          for (const c of b.columns) yield* cell(c.label, `${p}.columns.${c.key}`, scope(c, langs));
           for (const [k, r] of b.rows.entries()) {
-            for (const c of b.columns) yield* cell(r[c.key], `${p}.rows[${k}].${c.key}`);
-            yield* loc(r.tr, `${p}.rows[${k}].tr`);
+            const own = scope(r, langs);
+            for (const c of b.columns) yield* cell(r[c.key], `${p}.rows[${k}].${c.key}`, scope(c, own));
+            yield* loc(r.tr, `${p}.rows[${k}].tr`, own);
           }
       }
     }
   }
-  yield* loc(topic.title, "title");
-  yield* loc(topic.summary.lead, "summary.lead");
-  yield* loc(topic.summary.rule, "summary.rule");
-  yield* plain(topic.summary.ex, "summary.ex");
-  yield* blocks(topic.cheatsheet.content, "cheatsheet.content");
+  const langs = [...all];
+  yield* loc(topic.title, "title", langs);
+  yield* loc(topic.summary.lead, "summary.lead", langs);
+  yield* loc(topic.summary.rule, "summary.rule", langs);
+  yield* plain(topic.summary.ex, "summary.ex", langs);
+  yield* blocks(topic.cheatsheet.content, "cheatsheet.content", langs);
   for (const [i, s] of topic.sections.entries()) {
-    yield* loc(s.title, `sections[${i}].title`);
-    yield* blocks(s.content, `sections[${i}].content`);
+    const own = scope(s, langs);
+    yield* loc(s.title, `sections[${i}].title`, own);
+    yield* blocks(s.content, `sections[${i}].content`, own);
   }
 }
 

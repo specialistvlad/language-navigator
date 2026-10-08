@@ -165,6 +165,8 @@ with its examples:
 2. **The rule to get right** (`summary.rule`): the one rule a learner most needs, "Can and could
    never change and take the base verb without to:", followed by its examples in `summary.ex` with
    the target form marked: `{ examples: [["She ", { target: can }, " swim."], [{ target: Can }, " she swim?"]] }`.
+   The page joins them as they read: a comma after a phrase, a space after a sentence. A rule that
+   shows its examples inside its own sentence keeps them there, their forms marked `target`.
 
 Both sentences talk about the language itself. The rail lists the sections and the badges show the
 levels, so each sentence opens with a form, a meaning or a rule. Each explanation language has its
@@ -179,8 +181,8 @@ sounds, writing, numbers, dates and time, grammar. Words appear as examples of a
 another question belongs to its own topic in `curriculum.yaml`: capital letters and spelling aloud
 belong in topics of their own, outside "The Alphabet".
 
-**Sections are a menu.** The sections below are the ones a topic may use, in this order; each names
-its place in the menu with `role`. A topic includes a section only when it has content of its own for
+**Sections are a menu.** The sections below are the ones a topic may use, each naming its place in
+the menu with `role`; the table gives their usual order, and a topic orders them for its subject. A topic includes a section only when it has content of its own for
 it, Typical errors included; a short topic with one strong section is complete.
 
 Grammar sections:
@@ -197,8 +199,9 @@ Grammar sections:
 | 8 | Compare: … | `compare` | the closest related topic, side by side |
 | 9 | Typical errors | `errors` | an `errors` block, when the subject has characteristic errors |
 
-A topic that holds several tenses gives each of its tense sections the tense as `features`:
-"Present simple: form" has role `form` and features `{ tense: prs }`.
+A topic that holds several tenses gives each of its tense sections the tense, with its aspect, as
+`features`: "Present simple: form" has role `form` and features `{ tense: prs }`, "Present
+continuous: use" has `{ tense: prs, aspect: prog }`.
 
 Foundations topics take one section per part of what they set out, with role `own`: the letters,
 the sounds, the numbers by range, the days, the months, the times; then Typical errors.
@@ -217,9 +220,9 @@ Block types inside `content`:
 | `inventory` | `set`, `columns`, `rows`, each row with its `value` | a table of the members of a closed set |
 | `errors` | `rows` (`level`, `wrong`, `right`, `rule`, `speakers`) | a ✗ / ✓ / rule table |
 
-A table's columns each have a `key` and a `label`; its rows hold their cells by key, beside their
-`level`, `features`, `value`, `variety`, `readers` and `tr`. A row leaves out the key of a cell with
-nothing in it.
+A table's columns each have a `key`, and a `label` or the `slot` they hold (§7); its rows hold
+their cells by key, beside their `level`, `features`, `value`, `variety`, `readers` and `tr`. A row
+leaves out the key of a cell with nothing in it.
 
 ## 6. Translations and readers
 
@@ -231,7 +234,8 @@ nothing in it.
   translations.
 - Typical errors match the readers. When the explanation language differs from the language
   being learned, rows list errors typical of speakers of the explanation language and name them in
-  `speakers`. Rows without `speakers` serve all.
+  `speakers`: the page shows such a row to readers of the explanation languages it names. Rows
+  without `speakers` serve all.
 
 ## 7. Tables and writing style
 
@@ -243,7 +247,8 @@ the sentence. The tense cheatsheets use one: Tense, then Question (Helper, Subje
 (Subject, Helper, Verb) and Negative (Subject, Helper, Verb), one row per person.
 
 - A slot column names its slot, `aux`, `subj`, `verb` or `rest`, and its sentence by `features`:
-  `{ interrogativity: int, polarity: pos }` is the question. Its row carries the tense and the
+  `{ interrogativity: int, polarity: pos }` is the question, `{ interrogativity: decl, polarity: pos }`
+  the statement and `{ interrogativity: decl, polarity: neg }` the negative. Its row carries the tense and the
   person as `features`.
 - The renderer writes the slot titles and the sentence titles above them, merges a cell into the one
   above when both read the same and their rows share a level, the subject excepted, and centres
@@ -271,11 +276,14 @@ The renderer writes the symbols from the structures and marks of §12:
 | ✓, ✗ | the errors table |
 | → | `mapping`, `takes` |
 | / | `alternatives`, `examples`; · when a piece shows a slash of its own |
-| — | `exchange` |
+| — | `exchange`; before a translation; in a table cell a row leaves out |
 | + | `pattern` |
+| = | `equivalence` |
+| ≠ | `contrast` |
+| /…/ | `ipa` |
 | ( ) | `optional`, `variant` and `gloss` in the language being learned |
 | … | `gap` |
-| US: | `variant`, and an item with `variety: en-US` |
+| US:, British: | `variant`, and an item with its `variety` |
 | ↗ ↘ | `intonation` |
 
 ## 8. Cheatsheets
@@ -387,8 +395,13 @@ exactly the names below, and `npm run check` rejects the inline notation they re
 | `verbform` | `inf`, `ptcp`, `ger` |
 | `contraction` | `full`, `short` |
 | `countability` | `count`, `mass` |
+| `wordclass` | `det`, `pro` |
 
-`contraction` and `countability` are the project's own; the others follow UniMorph. A question, a
+`person`, `number`, `gender`, `case`, `tense`, `mood`, `polarity`, `interrogativity`, `politeness`,
+`definiteness` and `voice` take their names and values from UniMorph, and `aspect` adds `hab` to its
+UniMorph values. `degree` (UniMorph's comparison, with `pos` for the plain form), `deixis` (`dist` for
+UniMorph's remote), `verbform`, `contraction`, `countability` and `wordclass` (a determiner before a
+noun, `my`, or a pronoun on its own, `mine`) are the project's own. A question, a
 statement and a negative differ in interrogativity and polarity. *We* is person `1`, number `pl`;
 *you* is person `2` with either number; "I / you / we / they" lists four bundles.
 
@@ -436,10 +449,13 @@ An inventory names its `set`, and each member's `value` follows it:
 | `takes` | a case and the form it calls for | → |
 | `exchange` | a question and its answer | — |
 | `pattern` | the slots of a sentence pattern, in order | + |
+| `equivalence` | forms or sentences that mean the same | = |
+| `contrast` | forms that differ, side by side | ≠ |
 
 `follows: true` opens a `mapping`, `takes` or `pattern` with its joiner, continuing the form under
 discussion: `{ pattern: [{ ending: es }], follows: true }` reads + es. Pieces that show a slash of
-their own, IPA included, are joined with · instead of /.
+their own, IPA included, are joined with · instead of /. A list of parts holds at least one mark or
+structure; text without marks is one string.
 
 **Inline marks**
 
@@ -451,7 +467,7 @@ their own, IPA included, are joined with · instead of /.
 | `ending` | an ending added to a stem | works | s |
 | `stress` | the stressed syllable | photograph | pho |
 | `term` | a word or part of a word of the language being learned, discussed in an explanation | *yet* goes at the end | yet |
-| `letter` | the letters a rule is about: the spelling of a sound, a silent letter, a capital, a spelling change | the d in Wednesday is silent | d |
+| `letter` | the letters or symbols a rule is about: the spelling of a sound, a silent letter, a capital, a spelling change, an IPA symbol | the d in Wednesday is silent | d |
 | `signal` | a signal word inside an example | I saw her yesterday. | yesterday |
 | `gloss` | a meaning in the reader's language; localized inside text of the language being learned | What do you do? (= your job) | = your job |
 | `l1` | a phrase in the reader's first language | a note's phrase in the reader's language | the whole phrase |
@@ -475,9 +491,24 @@ The slot list: `V`, `V-s`, `V-ing`, `V-ed`, `-ing`, `subject`, `verb`, `base ver
 `past simple`, `number`, `unit`, `hyphen`, `result`, `agent`, `helper`, `consonant`, `vowel`,
 `the time`, `day`, `date`, `month`, `year`.
 
-Marks nest: `{ target: { ipa: θɜːˈtiːn } }` marks a transcription as the form taught. The value of
+Marks nest: `{ target: { ipa: θɜːˈtiːn } }` marks a transcription as the form taught. The text of
+`target`, `aux`, `subj`, `verb`, `ending`, `stress`, `term`, `letter`, `signal`, `sound`, `optional`,
+`variant` and the value marks is in the language being learned, wherever it stands; a `gloss` or a
+`slot` description inside it is localized and carries each language its text serves. The value of
 a `date`, `weekday`, `time`, `numeral` or `ordinal` mark is the same in every language: the renderer
 can show it in the reader's language beside the lesson's written form.
+
+**Fields**
+
+| Field | Holds |
+|---|---|
+| `title`, `content` | a section's title and its blocks |
+| `text`, `ex`, `tr` | explanation text, an example in the language being learned, its translations |
+| `columns`, `rows` | a table's columns, each with its `key`, and its rows with their cells by key |
+| column `label`, `slot` | a column's title, or the slot of a pattern sentence it holds: `aux`, `subj`, `verb`, `rest` |
+| `items` | a list's items, each typed `rule`, `note` or `example` |
+| `wrong`, `right`, `rule` | an error, its correction, and the rule it breaks |
+| `set` | the closed set an inventory holds |
 
 **Attributes**
 
@@ -489,3 +520,4 @@ can show it in the reader's language beside the lesson's written form.
 | `variety` | the variety of the language being learned an element or a variant belongs to, as a BCP 47 tag: `en-US`; `en-GB` when absent |
 | `features` | the grammar features of a row, a column or a section |
 | `value` | the value of an inventory member or of a value mark |
+| `follows` | a `mapping`, `takes` or `pattern` that continues the form under discussion: `true` |

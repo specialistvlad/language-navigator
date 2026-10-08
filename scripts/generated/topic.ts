@@ -25,6 +25,8 @@ export type Mark =
   | MappingMark
   | TakesMark
   | ExchangeMark
+  | EquivalenceMark
+  | ContrastMark
   | GlossMark
   | IpaMark
   | LinkMark
@@ -127,7 +129,7 @@ export interface Langs123Topic {
   sections: Section[];
 }
 /**
- * Explanation text, one value per explanation language; npm run check requires each enabled one.
+ * Explanation text, one value per explanation language; npm run check requires every explanation language of site.yaml, enabled or not.
  */
 export interface Localized {
   en?: Text;
@@ -250,6 +252,24 @@ export interface ExchangeMark {
    * @minItems 2
    */
   exchange: Text[];
+}
+/**
+ * Forms or sentences that mean the same.
+ */
+export interface EquivalenceMark {
+  /**
+   * @minItems 2
+   */
+  equivalence: Text[];
+}
+/**
+ * Forms that differ, side by side.
+ */
+export interface ContrastMark {
+  /**
+   * @minItems 2
+   */
+  contrast: Text[];
 }
 /**
  * A meaning in the reader's language: localized inside text of the language being learned.
@@ -454,6 +474,7 @@ export interface FeatureBundle {
   verbform?: ("inf" | "ptcp" | "ger") | ("inf" | "ptcp" | "ger")[];
   contraction?: ("full" | "short") | ("full" | "short")[];
   countability?: ("count" | "mass") | ("count" | "mass")[];
+  wordclass?: ("det" | "pro") | ("det" | "pro")[];
 }
 /**
  * Cells by column key, with the row's level, features, value, variety and readers.
