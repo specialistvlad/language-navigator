@@ -17,13 +17,18 @@ cheatsheet:
   content:
     - type: usage
       columns:
-        - { key: form, label: { en: Form } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, form: { pattern: [be going to, { slot: V }] }, ex: [I', { target: m going to }, " buy a car."] }
-        - { level: A1, form: { pattern: [be, { slot: V-ing }] }, ex: [I', { target: m meeting }, " Ana at six."] }
-        - { level: A2, form: { pattern: [will, { slot: V }] }, ex: [I', { target: ll }, " carry that bag."] }
-        - { level: A2, form: { alternatives: [V, V-s] }, ex: ["The film ", { target: starts }, " at nine."] }
+        - { level: A1, point: { pattern: [[{ alternatives: [am, is, are] }, " going to"], { slot: V }] }, rule: { en: "plans and intentions; predictions with evidence" }, ex: { examples: [[We', { target: re going to }, " visit Granada."], [Look at those clouds. It', { target: s going to }, " rain."]] } }
+        - { level: A1, point: { pattern: [{ alternatives: [am, is, are] }, { slot: V-ing }] }, rule: { en: "present continuous: a fixed arrangement, with a future time" }, ex: [I', { target: m seeing }, " the dentist on ", { weekday: Friday, value: 5 }, "."] }
+        - { level: A2, point: { pattern: [{ alternatives: [will, "'ll", "won't"] }, { slot: V }] }, rule: { en: "decisions now, offers, promises, opinions (I think)" }, ex: { examples: [[It's cold. I', { target: ll close }, " the window."], [I think she', { target: ll win }, "."]] } }
+        - { level: A2, point: { alternatives: [V, V-s] }, rule: { en: "present simple: timetables" }, ex: ["The train ", { target: leaves }, " at ", { time: "6:15", value: "06:15" }, "."] }
+        - { level: B1, point: { en: Prediction }, rule: { en: "opinion or guess (I think): will; evidence now: going to" }, ex: { examples: [[I think it', { target: ll }, " be a good year."], [Watch out! You', { target: re going to }, " fall."]] } }
+        - { level: B1, point: { en: Arrangement or intention }, rule: { en: "fixed arrangement: present continuous; intention: going to" }, ex: { examples: [[I', { target: m meeting }, " Sam at 8."], [I', { target: m going to }, " learn Italian."]] } }
+        - { level: A1, point: { en: Trap }, rule: { en: plans take going to }, ex: [I', { target: m going to buy }, " a car tomorrow."] }
+        - { level: A2, point: { en: Trap }, rule: { en: will makes questions by itself }, ex: [{ target: Will }, " you come?"] }
 
 sections:
   - title: { en: "Form: be going to" }

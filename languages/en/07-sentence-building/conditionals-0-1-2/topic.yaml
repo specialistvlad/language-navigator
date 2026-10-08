@@ -17,12 +17,17 @@ cheatsheet:
   content:
     - type: usage
       columns:
-        - { key: type, label: { en: Type } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A2, type: ["Zero: ", { pattern: [if, { slot: present }] }, ", present"], ex: ["If you ", { target: heat }, " ice, it ", { target: melts }, "."] }
-        - { level: A2, type: ["First: ", { pattern: [if, { slot: present }] }, ", ", { pattern: [will, { slot: V }] }], ex: ["If it ", { target: rains }, ", we'", { target: ll stay }, " in."] }
-        - { level: B1, type: ["Second: ", { pattern: [if, { slot: past }] }, ", ", { pattern: [would, { slot: V }] }], ex: ["If I ", { target: had }, " more time, I'", { target: d learn }, " Spanish."] }
+        - { level: A2, point: { en: "Zero: facts" }, rule: [{ pattern: [if, { slot: present }] }, ", ", { slot: present }], ex: ["If you ", { target: mix }, " blue and yellow, you ", { target: get }, " green."] }
+        - { level: A2, point: { en: "First: real possibilities" }, rule: [{ pattern: [if, { slot: present }] }, ", ", { pattern: [will, { slot: V }] }], ex: ["If you ", { target: study }, ", you'", { target: ll pass }, "."] }
+        - { level: B1, point: { en: "Second: unreal situations" }, rule: [{ pattern: [if, { slot: past simple }] }, ", ", { pattern: [would, { slot: V }] }], ex: ["If I ", { target: won }, " the lottery, I'", { target: d buy }, " a house."] }
+        - { level: A2, point: { en: The if-clause }, rule: { en: "present simple, also for the future" }, ex: ["If it ", { target: rains }, ", we'll stay in."] }
+        - { level: A2, point: { en: Order }, rule: { en: "if-clause first: comma; if-clause second: no comma" }, ex: { examples: [[{ target: If it rains }, ", we'll stay in."], ["We'll stay in ", { target: if it rains }, "."]] } }
+        - { level: B1, point: { en: Trap }, rule: { en: [{ term: were }, " for every person, also in advice"] }, ex: ["If I ", { target: were }, " you, I'", { target: d take }, " the train."] }
+        - { level: B1, point: { en: Trap }, rule: { en: [{ term: unless }, " means ", { term: ["if ", { gap: true }, " not"] }, "; the verb is affirmative"] }, ex: [{ target: Unless }, " you hurry, you'll miss the bus."] }
 
 sections:
   - title: { en: Overview }

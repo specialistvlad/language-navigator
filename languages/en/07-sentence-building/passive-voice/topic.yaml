@@ -21,16 +21,16 @@ cheatsheet:
         - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: B1, point: { en: { mapping: [Active, passive] } }, rule: { en: ["the object becomes the subject; ", { pattern: [[{ term: be }, " in the tense of the active verb"], { slot: past participle }] }] }, ex: { mapping: [Shakespeare wrote Hamlet., ["Hamlet ", { target: was written }, " by Shakespeare."]] } }
-        - { level: B1, point: Present simple, rule: { pattern: [{ alternatives: [am, is, are] }, { slot: V-ed }] }, ex: ["English ", { target: is spoken }, " here."] }
-        - { level: B1, point: Past simple, rule: { pattern: [{ alternatives: [was, were] }, { slot: V-ed }] }, ex: ["The bridge ", { target: was built }, " in ", { date: "1990", value: "1990" }, "."] }
-        - { level: B1, point: Present perfect, rule: { pattern: [[{ alternatives: [has, have] }, " been"], { slot: V-ed }] }, ex: ["The window ", { target: has been broken }, "."] }
+        - { level: B1, point: { en: Form }, rule: { en: ["the object becomes the subject; ", { pattern: [be, { slot: past participle }] }] }, ex: { mapping: [Shakespeare wrote Hamlet., ["Hamlet ", { target: was written }, " by Shakespeare."]] } }
+        - { level: B1, point: { en: Present simple }, rule: { pattern: [{ alternatives: [am, is, are] }, { slot: V-ed }] }, ex: ["English ", { target: is spoken }, " here."] }
+        - { level: B1, point: { en: Past simple }, rule: { pattern: [{ alternatives: [was, were] }, { slot: V-ed }] }, ex: ["The bridge ", { target: was built }, " in ", { date: "1990", value: "1990" }, "."] }
+        - { level: B1, point: { en: Present perfect }, rule: { pattern: [[{ alternatives: [has, have] }, " been"], { slot: V-ed }] }, ex: ["The window ", { target: has been broken }, "."] }
         - { level: B1, point: "will, can, must", rule: { pattern: [[{ alternatives: [will, can, must] }, " be"], { slot: V-ed }] }, ex: ["The results ", { target: will be sent }, " tomorrow."] }
-        - { level: B1, point: { en: Negative }, rule: { pattern: [be, not, { slot: V-ed }] }, ex: ["The room ", { target: wasn't cleaned }, "."] }
-        - { level: B1, point: { en: Question }, rule: { pattern: [be, { slot: subject }, { slot: V-ed }] }, ex: [{ target: Was }, " the room ", { target: cleaned }, "?"] }
-        - { level: B1, point: { alternatives: [by, with] }, rule: { en: "by = the doer, added only when it is new or important; with = a tool" }, ex: ["The song ", { target: was written by }, " Adele."] }
-        - { level: B1, point: { en: Use }, rule: { en: "unknown or unimportant doer, processes, news and formal writing" }, ex: ["Wine ", { target: is made }, " from grapes."] }
-        - { level: B1, point: { en: Trap }, rule: { en: "only verbs with an object have a passive: happen, arrive and die have none" }, ex: ["The accident ", { target: happened }, " yesterday."] }
+        - { level: B1, point: { en: "Negative, question" }, rule: { en: ["negative: ", { pattern: [be, not, { slot: V-ed }] }, "; question: ", { pattern: [be, { slot: subject }, { slot: V-ed }] }] }, ex: { examples: [["The room ", { target: wasn't cleaned }, "."], [{ target: Was }, " the room ", { target: cleaned }, "?"]] } }
+        - { level: B1, point: { en: Use }, rule: { en: "unknown or unimportant doer, processes, news, formal writing" }, ex: { examples: [["My phone ", { target: was stolen }, " on the train."], ["Wine ", { target: is made }, " from grapes."]] } }
+        - { level: B1, point: { alternatives: [by, with] }, rule: { en: [{ term: by }, " names a new or important doer; ", { term: with }, " names a tool"] }, ex: ["The song ", { target: was written by }, " Adele."] }
+        - { level: B1, point: { en: Trap }, rule: { en: ["verbs without an object stay active: ", { alternatives: [happen, arrive, die] }] }, ex: ["The accident ", { target: happened }, " yesterday."] }
+        - { level: B1, point: { en: Trap }, rule: { en: "use the past participle: made, written, sold, taken" }, ex: ["The window was ", { target: broken }, "."] }
 
 sections:
   - title: { en: "Form: active to passive" }

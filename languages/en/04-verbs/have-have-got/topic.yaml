@@ -21,10 +21,15 @@ cheatsheet:
         - { key: have, label: have }
         - { key: got, label: have got }
       rows:
-        - { level: A1, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, have: ["I ", { target: have }, " a car."], got: [I', { target: ve got }, " a car."] }
-        - { level: A1, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, have: ["I ", { target: don't have }, " a car."], got: ["I ", { target: haven't got }, " a car."] }
-        - { level: A1, features: { polarity: pos, interrogativity: int }, form: { en: Question }, have: [{ target: Do }, " you ", { target: have }, " a car?"], got: [{ target: Have }, " you ", { target: got }, " a car?"] }
+        - { level: A1, features: { polarity: pos, interrogativity: decl }, form: { en: ["Affirmative: ", { alternatives: [I, you, we, they] }] }, have: ["I ", { target: have }, " a car."], got: [I', { target: ve got }, " a car."] }
+        - { level: A1, features: { polarity: pos, interrogativity: decl, person: 3, number: sg }, form: { en: ["Affirmative: ", { alternatives: [he, she, it] }] }, have: ["She ", { target: has }, " a car."], got: [She', { target: s got }, " a car."] }
+        - { level: A1, features: { polarity: neg, interrogativity: decl }, form: { en: ["Negative: ", { alternatives: [I, you, we, they] }] }, have: ["I ", { target: don't have }, " a car."], got: ["I ", { target: haven't got }, " a car."] }
+        - { level: A1, features: { polarity: neg, interrogativity: decl, person: 3, number: sg }, form: { en: ["Negative: ", { alternatives: [he, she, it] }] }, have: ["He ", { target: doesn't have }, " a car."], got: ["He ", { target: hasn't got }, " a car."] }
+        - { level: A1, features: { polarity: pos, interrogativity: int }, form: { en: ["Question: ", { alternatives: [I, you, we, they] }] }, have: [{ target: Do }, " you ", { target: have }, " a car?"], got: [{ target: Have }, " you ", { target: got }, " a car?"] }
+        - { level: A1, features: { polarity: pos, interrogativity: int, person: 3, number: sg }, form: { en: ["Question: ", { alternatives: [he, she, it] }] }, have: [{ target: Does }, " she ", { target: have }, " a car?"], got: [{ target: Has }, " she ", { target: got }, " a car?"] }
         - { level: A1, features: { interrogativity: decl, polarity: [pos, neg] }, form: { en: Short answer }, have: { alternatives: [["Yes, I ", { target: do }, "."], ["No, I ", { target: don't }, "."]] }, got: { alternatives: [["Yes, I ", { target: have }, "."], ["No, I ", { target: haven't }, "."]] } }
+        - { level: A1, features: { interrogativity: decl, polarity: pos }, form: { en: "Actions: only have" }, have: ["I ", { target: have }, " breakfast at 8."] }
+        - { level: A1, features: { interrogativity: decl, polarity: pos }, form: { en: Style }, have: { en: "neutral, also in writing" }, got: { en: "informal, mostly speech" } }
 
 sections:
   - title: { en: Overview }
@@ -51,7 +56,7 @@ sections:
           - { key: got, label: have got }
         rows:
           - { level: A1, features: [{ person: 1, number: sg }, { person: 2 }, { person: 1, number: pl }, { person: 3, number: pl }], subject: { alternatives: [I, you, we, they] }, have: ["They ", { target: have }, " two children."], got: [They', { target: ve got }, " two children."] }
-          - { level: A1, features: { person: 3, number: sg }, subject: { alternatives: [he, she, it] }, have: ["She ", { target: has }, " a brother."], got: [She', { target: s got }, " a brother."] }
+          - { level: A1, features: { person: 3, number: sg }, subject: { alternatives: [he, she, it] }, have: ["She ", { target: has }, " a car."], got: [She', { target: s got }, " a car."] }
       - type: list
         items:
           - type: rule
@@ -96,8 +101,8 @@ sections:
           - { key: have, label: have }
           - { key: got, label: have got }
         rows:
-          - { level: A1, features: [{ person: 1, number: sg }, { person: 2 }, { person: 1, number: pl }, { person: 3, number: pl }], subject: { alternatives: [I, you, we, they] }, have: [{ target: Do }, " you ", { target: have }, " a pen?"], got: [{ target: Have }, " you ", { target: got }, " a pen?"] }
-          - { level: A1, features: { person: 3, number: sg }, subject: { alternatives: [he, she, it] }, have: [{ target: Does }, " she ", { target: have }, " a pen?"], got: [{ target: Has }, " she ", { target: got }, " a pen?"] }
+          - { level: A1, features: [{ person: 1, number: sg }, { person: 2 }, { person: 1, number: pl }, { person: 3, number: pl }], subject: { alternatives: [I, you, we, they] }, have: [{ target: Do }, " you ", { target: have }, " a car?"], got: [{ target: Have }, " you ", { target: got }, " a car?"] }
+          - { level: A1, features: { person: 3, number: sg }, subject: { alternatives: [he, she, it] }, have: [{ target: Does }, " she ", { target: have }, " a car?"], got: [{ target: Has }, " she ", { target: got }, " a car?"] }
       - type: list
         items:
           - type: rule

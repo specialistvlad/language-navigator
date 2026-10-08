@@ -17,13 +17,17 @@ cheatsheet:
   content:
     - type: usage
       columns:
-        - { key: prep, label: { en: Preposition } }
-        - { key: goes, label: { en: Goes with } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, prep: at, goes: { en: clock times and points in time }, ex: [{ target: at }, " 7 o'clock"] }
-        - { level: A1, prep: "on", goes: { en: days and dates }, ex: [{ target: "on" }, " ", { weekday: Monday, value: 1 }] }
-        - { level: A1, prep: in, goes: { en: "months, years, seasons and longer periods" }, ex: [{ target: in }, " ", { date: July, value: "--07" }] }
+        - { level: A1, point: at, rule: { en: "clock times, night, midday, Christmas, Easter" }, ex: { examples: [[{ target: at }, " ", { time: "9:30", value: "09:30" }], { target: at night }] } }
+        - { level: A1, point: "on", rule: { en: "days, dates and a day with its part of the day" }, ex: { examples: [{ target: ["on ", { weekday: Monday, value: 1 }, " morning"] }, { target: ["on ", { date: "5 May", value: "--05-05" }] }] } }
+        - { level: A1, point: in, rule: { en: "months, seasons, years, morning, afternoon, evening" }, ex: { examples: [[{ target: in }, " ", { date: January, value: "--01" }], { target: in summer }] } }
+        - { level: A1, point: { en: Length }, rule: { en: "the period gets longer from at to on to in" }, ex: { examples: [[{ target: at }, " 7 o'clock"], [{ target: "on" }, " ", { weekday: Monday, value: 1 }], [{ target: in }, " ", { date: July, value: "--07" }]] } }
+        - { level: A1, point: { en: No preposition }, rule: { en: "before this, next, last, every, today, tomorrow" }, ex: { examples: [["I'm busy ", { target: this week }, "."], ["I walk ", { target: every morning }, "."]] } }
+        - { level: A1, point: { en: Trap }, rule: { en: "dates take on, months take in" }, ex: { examples: [["My birthday is ", { target: "on" }, " ", { date: "5 May", value: "--05-05" }, "."], ["It's cold ", { target: in }, " ", { date: January, value: "--01" }, "."]] } }
+        - { level: A1, point: { en: Trap }, rule: { en: "the weekend takes at" }, ex: ["We relax ", { target: at the weekend }, ". ", { variant: { target: on the weekend }, variety: en-US }] }
 
 sections:
   - title: { en: Overview }

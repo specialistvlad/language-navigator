@@ -17,11 +17,18 @@ cheatsheet:
   content:
     - type: usage
       columns:
-        - { key: type, label: { en: Type } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, type: { en: "frequency: how often" }, ex: ["I ", { target: always }, " walk to work."] }
-        - { level: A2, type: { en: "manner: how" }, ex: ["She drives ", { target: carefully }, "."] }
+        - { level: A1, point: { en: Frequency }, rule: { en: "how often: always (100%), usually, often, sometimes, never (0%)" }, ex: ["I ", { target: always }, " walk to work."] }
+        - { level: A2, point: { en: Manner }, rule: { en: ["how it happens: ", { pattern: [{ slot: adjective }, { ending: ly }] }, "; ", { mapping: ["y", ily] }] }, ex: { examples: [["He walks ", { target: slowly }, "."], ["They sing ", { target: happily }, "."]] } }
+        - { level: A2, point: { en: "Manner: irregular" }, rule: { en: "fast, hard, late and early keep the adjective's form" }, ex: ["He runs ", { target: fast }, "."] }
+        - { level: A1, point: "How often?", rule: { en: frequency expressions go at the end }, ex: { exchange: [How often do you swim?, ["I swim ", { target: every day }, "."]] } }
+        - { level: A1, point: { en: "Frequency: position" }, rule: { en: "before the main verb, after be" }, ex: { examples: [["I ", { target: often }, " walk."], ["She is ", { target: always }, " late."]] } }
+        - { level: A2, point: { en: "Frequency: with an auxiliary" }, rule: { en: between the auxiliary and the main verb }, ex: ["I can ", { target: never }, " find my keys."] }
+        - { level: A2, point: { en: "Manner: position" }, rule: { en: "after the verb, or after the object" }, ex: ["He opened the door ", { target: slowly }, "."] }
+        - { level: A2, point: { en: Trap }, rule: { en: good describes a noun; well describes a verb }, ex: ["She sings ", { target: well }, "."] }
 
 sections:
   - title: { en: "Form: frequency adverbs" }

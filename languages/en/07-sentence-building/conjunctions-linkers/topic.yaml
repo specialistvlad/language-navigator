@@ -17,19 +17,20 @@ cheatsheet:
   content:
     - type: usage
       columns:
-        - { key: function, label: { en: Function } }
-        - { key: a1, label: A1 }
-        - { key: a2, label: A2 }
-        - { key: b1, label: B1 }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, function: { en: Addition }, a1: and, a2: "also, too", b1: "as well as, in addition" }
-        - { level: A1, function: { en: Contrast }, a1: but, b1: "although, however, while" }
-        - { level: A1, function: { en: Reason }, a1: because, a2: because of }
-        - { level: A1, function: { en: Result }, a1: so }
-        - { level: A1, function: { en: Choice }, a1: or }
-        - { level: A2, function: { en: Time }, a2: "when, before, after, then" }
-        - { level: B1, function: { en: Purpose }, b1: so that }
-        - { level: B1, function: { en: Condition }, b1: unless }
+        - { level: A1, point: "and, or", rule: { en: [{ term: and }, " adds an idea, ", { term: or }, " gives a choice; usually no comma before them"] }, ex: { examples: [["I like tea ", { target: and }, " coffee."], ["Do you want tea ", { target: or }, " coffee?"]] } }
+        - { level: A1, point: "but, so", rule: { en: [{ term: but }, " contrasts, ", { term: so }, " gives a result; usually a comma before them"] }, ex: { examples: [["I like tea, ", { target: but }, " I don't like coffee."], ["I'm tired, ", { target: so }, " I go to bed."]] } }
+        - { level: A1, point: because, rule: { en: gives the reason; a clause follows }, ex: ["I'm tired ", { target: because }, " I work late."] }
+        - { level: A2, point: "when, before, after", rule: { en: a time clause; the present simple talks about the future }, ex: [{ target: When }, " I arrive, I'll call you."] }
+        - { level: A2, point: "also, too", rule: { en: [{ term: also }, " goes before the main verb and after be; ", { term: too }, " goes at the end"] }, ex: { examples: [["I ", { target: also }, " speak French."], ["I speak French ", { target: too }, "."]] } }
+        - { level: B1, point: however, rule: { en: starts a new sentence; a comma follows }, ex: ["It was raining. ", { target: However }, ", we went out."] }
+        - { level: B1, point: so that, rule: { en: gives a purpose; a clause follows }, ex: ["I left early ", { target: so that }, " I could catch the bus."] }
+        - { level: B1, point: unless, rule: { en: [{ term: unless }, " means ", { term: ["if ", { gap: true }, " not"] }] }, ex: ["We stay in ", { target: unless }, " it stops raining."] }
+        - { level: A2, point: { en: Trap }, rule: { en: [{ term: because of }, " is followed by a noun"] }, ex: ["We stayed in ", { target: because of }, " the rain."] }
+        - { level: B1, point: { en: Trap }, rule: { en: [{ term: although }, " joins two clauses and replaces ", { term: but }] }, ex: [{ target: Although }, " it was raining, we went out."] }
 
 sections:
   - title: { en: "Basic linkers: and, but, or, because, so" }

@@ -17,13 +17,18 @@ cheatsheet:
   content:
     - type: usage
       columns:
-        - { key: pattern, label: { en: Pattern } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A2, pattern: { pattern: [{ slot: comparative }, than] }, ex: ["My bag is ", { target: heavier than }, " yours."] }
-        - { level: A2, pattern: { pattern: [the, { slot: superlative }, { alternatives: [in, of] }] }, ex: ["She is ", { target: the tallest }, " in the class."] }
-        - { level: A2, pattern: { pattern: [as, { slot: adjective }, as] }, ex: ["He is ", { target: as tall as }, " me."] }
-        - { level: A2, pattern: { pattern: [not as, { slot: adjective }, as] }, ex: ["I'm ", { target: not as tall as }, " him."] }
+        - { level: A2, point: { en: "One syllable, or two ending in -y" }, rule: { alternatives: [{ pattern: [{ ending: er }], follows: true }, { pattern: [{ ending: est }], follows: true }] }, ex: { examples: [["Trains are ", { target: faster }, " than buses."], ["It's ", { target: the cheapest }, "."]] } }
+        - { level: A2, point: { en: Spelling }, rule: { en: "add r after -e; y becomes i; double one final consonant" }, ex: { examples: [{ mapping: [nice, { target: nicer }] }, { mapping: [happy, { target: happier }] }, { mapping: [big, { target: bigger }] }] } }
+        - { level: A2, point: { en: Other adjectives of two or more syllables }, rule: { alternatives: [{ pattern: [more, { slot: adjective }] }, { pattern: [the most, { slot: adjective }] }] }, ex: ["This bag is ", { target: more expensive }, "."] }
+        - { level: A2, point: { en: Irregular }, rule: { examples: [{ mapping: [good, better, the best] }, { mapping: [bad, worse, the worst] }] }, ex: ["It's ", { target: the best }, " film of the year."] }
+        - { level: A2, point: { pattern: [{ slot: comparative }, than] }, rule: { en: "compares two things; speech has an object pronoun after than" }, ex: ["She is ", { target: taller than }, " me."] }
+        - { level: A2, point: { pattern: [the, { slot: superlative }, { alternatives: [in, of] }] }, rule: { en: "top of three or more; in a place or group, of a number" }, ex: ["She is ", { target: the tallest }, " in the class."] }
+        - { level: A2, point: { alternatives: [{ pattern: [as, { slot: adjective }, as] }, { pattern: [not as, { slot: adjective }, as] }] }, rule: { en: "equal; not equal" }, ex: { examples: [["My flat is ", { target: as big as }, " yours."], ["Tea is ", { target: not as strong as }, " coffee."]] } }
+        - { level: A2, point: { en: Trap }, rule: { en: "better and worse are already comparatives" }, ex: ["This is ", { target: better }, "."] }
 
 sections:
   - title: { en: "Form: comparative and superlative" }

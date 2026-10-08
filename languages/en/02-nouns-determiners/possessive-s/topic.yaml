@@ -21,14 +21,14 @@ cheatsheet:
         - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, point: { en: singular noun }, rule: { pattern: [{ ending: "'s" }], follows: true }, ex: [{ target: Ana's }, " car"] }
-        - { level: A1, point: { en: plural in -s }, rule: { pattern: [{ ending: "'" }], follows: true }, ex: ["my ", { target: parents }, "' house"] }
-        - { level: A1, point: { en: irregular plural }, rule: { pattern: [{ ending: "'s" }], follows: true }, ex: ["the ", { target: children's }, " room"] }
-        - { level: A1, point: { en: two owners }, rule: { en: "'s on the last name" }, ex: ["Tom and ", { target: Ana's }, " flat"] }
-        - { level: A1, point: { en: word order }, rule: { en: "owner first, thing after, no article" }, ex: [{ target: my sister's }, " phone"] }
+        - { level: A1, point: { en: Singular noun }, rule: { pattern: [{ ending: "'s" }], follows: true }, ex: [{ target: Ana's }, " car"] }
+        - { level: A1, point: { en: Plural in -s }, rule: { pattern: [{ ending: "'" }], follows: true }, ex: ["my ", { target: parents }, "' house"] }
+        - { level: A1, point: { en: Irregular plural }, rule: { pattern: [{ ending: "'s" }], follows: true }, ex: ["the ", { target: children's }, " room"] }
+        - { level: A1, point: { en: Two owners }, rule: { en: "'s on the last name" }, ex: ["Tom and ", { target: Ana's }, " flat"] }
         - { level: A1, point: { en: "'s or of" }, rule: { en: "'s for people and animals, of for things" }, ex: ["the end ", { target: of }, " the film"] }
-        - { level: A1, point: Whose, rule: { en: asks about the owner }, ex: [{ target: Whose }, " bag is this?"] }
-        - { level: A1, point: Who's, rule: { en: "= who is, not the owner" }, ex: { contrast: [[{ target: Whose }, " bag?"], [{ target: Who's }, " there?"]] } }
+        - { level: A1, point: { en: Without the noun }, rule: { en: "someone's home or shop" }, ex: ["at the ", { target: doctor's }] }
+        - { level: A1, point: { en: Word order }, rule: { en: "owner first, thing after, no article" }, ex: [{ target: my sister's }, " phone"] }
+        - { level: A1, point: { en: Trap }, rule: { en: [{ term: Whose }, " asks about the owner; ", { term: "Who's" }, " means who is"] }, ex: { contrast: [[{ target: Whose }, " bag?"], [{ target: Who's }, " there?"]] } }
 
 sections:
   - title: { en: "Form: 's and '" }

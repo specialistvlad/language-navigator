@@ -20,12 +20,16 @@ cheatsheet:
         - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A0, point: { en: Letters }, rule: { en: "26 letters; vowels a, e, i, o, u; the other 21 are consonants; y works as both" }, ex: { examples: [[{ letter: "y" }, es], [m, { letter: "y" }]] } }
-        - { level: A0, point: { en: Vowel names }, rule: { en: ["A ", { ipa: eɪ }, ", E ", { ipa: iː }, ", I ", { ipa: aɪ }, ", O ", { ipa: əʊ }, ", U ", { ipa: juː }] }, ex: { examples: [[{ letter: e }, gg], [{ letter: i }, ce]] } }
-        - { level: A0, point: { en: G and J }, rule: { en: ["G ", { ipa: dʒiː }, ", J ", { ipa: dʒeɪ }] }, ex: { examples: [[{ letter: g }, irl], [{ letter: j }, ob]] } }
-        - { level: A0, point: { en: W and Z }, rule: { en: ["W is ", { term: double U }, " ", { ipa: ˈdʌbəljuː }, "; Z is ", { ipa: zed }] }, ex: { examples: [[{ letter: w }, ater], [{ letter: z }, oo]] } }
-        - { level: A0, point: { en: Name and sound }, rule: { en: ["a letter's name and its sound in a word can differ: A is ", { ipa: eɪ }] }, ex: [{ letter: a }, "pple ", { ipa: æ }] }
-        - { level: A0, point: US, rule: { en: ["Z is ", { ipa: ziː }, " and R is ", { ipa: ɑːr }] }, ex: ["Z ", { ipa: ziː }], variety: en-US }
+        - { level: A0, point: { en: 26 letters }, rule: { en: ["vowels ", { letter: "a, e, i, o, u" }, "; 21 consonants; ", { letter: "y" }, " works as both"] }, ex: { examples: [[{ target: { letter: "y" } }, es], [m, { target: { letter: "y" } }]] } }
+        - { level: A0, point: { letter: A H J K }, rule: { en: ["names have the sound ", { ipa: eɪ }] }, ex: { examples: [[{ letter: H }, " ", { target: { ipa: eɪtʃ } }], [{ letter: J }, " ", { target: { ipa: dʒeɪ } }], [{ letter: K }, " ", { target: { ipa: keɪ } }]] } }
+        - { level: A0, point: { letter: B C D E G P T V }, rule: { en: ["names end in ", { ipa: iː }] }, ex: { examples: [[{ letter: B }, " ", { target: { ipa: biː } }], [{ letter: C }, " ", { target: { ipa: siː } }], [{ letter: T }, " ", { target: { ipa: tiː } }]] } }
+        - { level: A0, point: { letter: F L M N S X }, rule: { en: ["names start with ", { ipa: e }] }, ex: { examples: [[{ letter: F }, " ", { target: { ipa: ef } }], [{ letter: M }, " ", { target: { ipa: em } }], [{ letter: X }, " ", { target: { ipa: eks } }]] } }
+        - { level: A0, point: { letter: I Y }, rule: { en: ["names end in ", { ipa: aɪ }] }, ex: { examples: [[{ letter: I }, " ", { target: { ipa: aɪ } }], [{ letter: Y }, " ", { target: { ipa: waɪ } }]] } }
+        - { level: A0, point: { letter: O R Z }, rule: { en: each name is its own }, ex: { examples: [[{ letter: O }, " ", { target: { ipa: əʊ } }], [{ letter: R }, " ", { target: { ipa: ɑː } }], [{ letter: Z }, " ", { target: { ipa: zed } }]] } }
+        - { level: A0, point: { letter: Q U W }, rule: { en: ["names end in ", { ipa: juː }, "; W is ", { term: double U }] }, ex: { examples: [[{ letter: Q }, " ", { target: { ipa: kjuː } }], [{ letter: U }, " ", { target: { ipa: juː } }], [{ letter: W }, " ", { target: { ipa: ˈdʌbəljuː } }]] } }
+        - { level: A0, point: { en: Name and sound }, rule: { en: a letter's name can differ from its sound in a word }, ex: { contrast: [[{ letter: A }, " ", { ipa: eɪ }], [{ letter: a }, "pple ", { target: { ipa: æ } }]] } }
+        - { level: A0, point: US, rule: { en: ["Z is ", { ipa: ziː }, " and R is ", { ipa: ɑːr }] }, ex: { examples: [[{ letter: Z }, " ", { target: { ipa: ziː } }], [{ letter: R }, " ", { target: { ipa: ɑːr } }]] }, variety: en-US }
+        - { level: A0, point: { en: Trap }, rule: { en: the name's vowel tells G from J and E from I }, ex: { examples: [[{ letter: G }, " ", { target: { ipa: dʒiː } }], [{ letter: J }, " ", { target: { ipa: dʒeɪ } }], [{ letter: E }, " ", { target: { ipa: iː } }], [{ letter: I }, " ", { target: { ipa: aɪ } }]] } }
 
 sections:
   - title: { en: The alphabet }

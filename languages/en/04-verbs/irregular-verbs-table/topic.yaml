@@ -22,18 +22,18 @@ cheatsheet:
         - { key: past, label: { en: Past simple }, features: { tense: pst } }
         - { key: participle, label: { en: Past participle }, features: { verbform: ptcp } }
       rows:
-        - { level: A1, pattern: { en: all three forms are the same }, base: put, past: put, participle: put }
+        - { level: A1, pattern: { en: All three forms are the same }, base: put, past: put, participle: put }
         - { level: A1, pattern: { en: { alternatives: ["-ought", "-aught"] } }, base: buy, past: bought, participle: bought }
-        - { level: A1, pattern: { en: past and participle end in -d }, base: make, past: made, participle: made }
-        - { level: A1, pattern: { en: final -d becomes -t }, base: send, past: sent, participle: sent }
-        - { level: A1, pattern: { en: "long vowel shortens, -t added" }, base: keep, past: kept, participle: kept }
+        - { level: A1, pattern: { en: Past and participle end in -d }, base: make, past: made, participle: made }
+        - { level: B1, pattern: { en: Final -d becomes -t }, base: build, past: built, participle: built }
+        - { level: A2, pattern: { en: "Long vowel shortens, -t added" }, base: keep, past: kept, participle: kept }
         - { level: A1, pattern: { en: [{ ipa: iː }, " shortens to ", { ipa: e }] }, base: meet, past: met, participle: met }
-        - { level: A1, pattern: { en: "vowel changes, past = participle" }, base: sit, past: sat, participle: sat }
-        - { level: A1, pattern: { en: participle = base form }, base: come, past: came, participle: come }
+        - { level: A1, pattern: { en: "Vowel changes, past = participle" }, base: sit, past: sat, participle: sat }
+        - { level: A1, pattern: { en: Participle = base form }, base: come, past: came, participle: come }
         - { level: A1, pattern: { en: { mapping: [{ letter: i }, { letter: a }, { letter: u }] } }, base: drink, past: drank, participle: drunk }
-        - { level: A1, pattern: { en: participle in -en }, base: take, past: took, participle: taken }
-        - { level: A1, pattern: { en: "past in -ew, participle in -n" }, base: know, past: knew, participle: known }
+        - { level: A1, pattern: { en: Participle in -en }, base: take, past: took, participle: taken }
         - { level: A1, pattern: { en: { alternatives: [participle in -n, "-ne"] } }, base: go, past: went, participle: gone }
+        - { level: A1, pattern: { en: Use }, past: ["finished actions: I ", { target: went }, " to Madrid."], participle: ["after have: I have ", { target: gone }, " there."] }
 
 sections:
   - title: { en: Overview }

@@ -15,14 +15,21 @@ summary:
 
 cheatsheet:
   content:
-    - type: comparison
+    - type: usage
       columns:
-        - { key: verb, label: { en: Verb alone } }
-        - { key: phrasal, label: { en: Phrasal verb } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A2, verb: ["I ", { target: look }, " at the map."], phrasal: ["I ", { target: look for }, " my keys."] }
-        - { level: A2, verb: ["She ", { target: gives }, " me a book."], phrasal: ["He never ", { target: gives up }, "."] }
-        - { level: A2, verb: ["I ", { target: turn }, " left here."], phrasal: [{ target: Turn off }, " the light."] }
+        - { level: A2, point: { en: Phrasal verb }, rule: { en: [{ pattern: [{ slot: verb }, a particle] }, "; the particle gives the verb a new meaning"] }, ex: ["I'm ", { target: looking for }, " my keys."] }
+        - { level: A2, point: { en: Separable }, rule: { en: a noun goes before or after the particle }, ex: { alternatives: [["Turn ", { target: "off" }, " the light."], ["Turn the light ", { target: "off" }, "."]] } }
+        - { level: A2, point: { en: Inseparable }, rule: { en: the object always follows the particle }, ex: ["Look ", { target: after }, " the baby."] }
+        - { level: A2, point: { en: Daily routine }, rule: { en: "wake up, get up, put on, take off, turn on" }, ex: ["She ", { target: puts on }, " her coat."] }
+        - { level: A2, point: { en: Going and coming }, rule: { en: "go out, come in, come back, pick up" }, ex: ["I ", { target: pick up }, " the children at three."] }
+        - { level: A2, point: { en: Looking and finding out }, rule: { en: "look for, look after, look up, find out, fill in" }, ex: [{ target: Look up }, " the word."] }
+        - { level: B1, point: { en: Continuing and stopping }, rule: { en: "carry on, run out of, get on with, look forward to" }, ex: ["We ", { target: ran out of }, " milk."] }
+        - { level: A2, point: { en: Trap }, rule: { en: "a separable verb takes a pronoun in the middle" }, ex: { target: Turn it off. } }
+        - { level: B1, point: { en: Trap }, rule: { en: [{ term: look forward to }, " takes a noun or the -ing form"] }, ex: ["I look forward to ", { target: seeing }, " you."] }
 
 sections:
   - title: { en: Overview }

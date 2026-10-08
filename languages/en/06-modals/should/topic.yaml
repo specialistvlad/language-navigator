@@ -15,17 +15,19 @@ summary:
 
 cheatsheet:
   content:
-    - type: paradigm
+    - type: usage
       columns:
-        - { key: form, label: { en: Form } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A2, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, ex: ["You ", { target: should }, " see a doctor."] }
-        - { level: A2, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, ex: ["You ", { target: shouldn't }, " work so late."] }
-        - { level: A2, features: { polarity: pos, interrogativity: int }, form: { en: Question }, ex: [{ target: Should }, " I take the bus?"] }
-        - { level: A2, features: { interrogativity: decl, polarity: [pos, neg] }, form: { en: Short answer }, ex: { examples: [["Yes, you ", { target: should }, "."], ["No, you ", { target: shouldn't }, "."]] } }
-        - { level: A2, features: { polarity: pos, interrogativity: decl }, form: { en: Opinion }, ex: ["I ", { target: think }, " you ", { target: should }, " call her."] }
-        - { level: A2, features: { polarity: neg, interrogativity: decl }, form: { en: Negative opinion }, ex: ["I ", { target: don't think }, " you ", { target: should }, " go."] }
+        - { level: A2, point: { en: Form }, rule: { en: [{ pattern: [{ slot: subject }, should, { slot: base verb }] }, "; one form for every subject"] }, ex: ["You ", { target: should }, " see a doctor."] }
+        - { level: A2, point: { en: Negative }, rule: { en: [{ term: shouldn't }, "; no ", { term: do }] }, ex: ["You ", { target: shouldn't }, " work so late."] }
+        - { level: A2, point: { en: Question }, rule: { en: [{ pattern: [Should, { slot: subject }, { slot: base verb }] }, "; no ", { term: do }] }, ex: { examples: [[{ target: Should }, " I take the bus?"], ["What ", { target: should }, " I do?"]] } }
+        - { level: A2, point: { en: Advice }, rule: { en: [{ term: should }, " for a good idea, ", { term: shouldn't }, " for a bad one"] }, ex: { examples: [["You ", { target: should }, " drink more water."], ["You ", { target: shouldn't }, " eat so much sugar."]] } }
+        - { level: A2, point: { en: Opinion }, rule: { en: "what you think is right or good" }, ex: ["I ", { target: think }, " the government ", { target: should }, " build more parks."] }
+        - { level: A2, point: { en: Should or must }, rule: { en: [{ term: should }, ": advice or a mild duty; ", { term: must }, ": a strong obligation or a rule"] }, ex: { examples: [["You ", { target: should }, " wear a coat."], ["You ", { target: must }, " wear a seat belt."]] } }
+        - { level: A2, point: { en: Trap }, rule: { en: ["a negative opinion puts ", { term: don't }, " on ", { term: think }] }, ex: ["I ", { target: don't think }, " you should go."] }
 
 sections:
   - title: { en: Overview }

@@ -1,7 +1,7 @@
 // Level ranges come from the leaves: blocks, sections, cheatsheets, topics and curriculum entries.
 import { describe, expect, test } from "bun:test";
 import type { Block, Topic, TopicRef } from "./lib.ts";
-import { blockRange, contains, contentRange, inside, join, parseRange, refRange, sectionRange, span, topicRange, upTo } from "./levels.ts";
+import { blockRange, contains, contentRange, join, parseRange, refRange, sectionRange, span, topicRange, upTo } from "./levels.ts";
 
 const table: Block = {
   type: "usage",
@@ -39,11 +39,9 @@ describe("ranges", () => {
     expect(parseRange("D1")).toBeNull();
     expect(parseRange(undefined)).toBeNull();
   });
-  test("contains and inside compare along the scale", () => {
+  test("contains compares along the scale", () => {
     expect(contains({ from: "A1", to: "B1" }, "A2")).toBe(true);
     expect(contains({ from: "A1", to: "B1" }, "B2")).toBe(false);
-    expect(inside({ from: "A2", to: "B1" }, { from: "A1", to: "C1" })).toBe(true);
-    expect(inside({ from: "A0", to: "B1" }, { from: "A1", to: "C1" })).toBe(false);
   });
 });
 

@@ -23,14 +23,14 @@ cheatsheet:
       rows:
         - { level: B1, point: say, rule: { en: [{ pattern: [say, { optional: that }, { slot: clause }] }, "; no person, or ", { pattern: [to, { slot: person }] }] }, ex: ["She ", { target: said }, " ", { optional: that }, " she was tired."] }
         - { level: B1, point: tell, rule: { en: { pattern: [tell, { slot: person }, { optional: that }, { slot: clause }] } }, ex: ["She ", { target: told me }, " ", { optional: that }, " she was tired."] }
-        - { level: B1, point: present simple, rule: { mapping: [past simple], follows: true }, ex: ["He said he ", { target: worked }, " there."] }
-        - { level: B1, point: present continuous, rule: { mapping: [past continuous], follows: true }, ex: ["She said she ", { target: was waiting }, "."] }
-        - { level: B1, point: { alternatives: [past simple, present perfect] }, rule: { mapping: [past perfect], follows: true }, ex: ["He said he ", { target: had left }, "."] }
-        - { level: B1, point: { alternatives: [will, can, must] }, rule: { mapping: [{ alternatives: [would, could, had to] }], follows: true }, ex: ["He said he ", { target: would call }, "."] }
-        - { level: B1, point: { en: No change }, rule: { en: "would, could, should, might; a fact still true; after says (present)" }, ex: ["She says she ", { target: is }, " tired."] }
-        - { level: B1, point: { en: Pronouns and time }, rule: { en: ["pronouns follow the speaker; ", { mapping: [today, that day] }, ", ", { mapping: [tomorrow, the next day] }, ", ", { mapping: [yesterday, the day before] }] }, ex: ["Anna said ", { target: she }, " was tired."] }
-        - { level: B1, point: { en: Questions }, rule: { en: [{ alternatives: [if, whether] }, " or a ", { pattern: [{ slot: wh-word }, statement order] }, "; no ", { alternatives: [do, does, did] }] }, ex: ["She asked ", { target: where }, " I ", { target: lived }, "."] }
+        - { level: B1, point: { en: { alternatives: [present simple, present continuous] } }, rule: { en: { mapping: [{ alternatives: [past simple, past continuous] }], follows: true } }, ex: { examples: [["He said he ", { target: worked }, " there."], ["She said she ", { target: was waiting }, "."]] } }
+        - { level: B1, point: { en: { alternatives: [past simple, present perfect] } }, rule: { en: { mapping: [past perfect], follows: true } }, ex: { examples: [["He said he ", { target: had left }, "."], ["She said she ", { target: had finished }, "."]] } }
+        - { level: B1, point: { alternatives: [will, can, must] }, rule: { mapping: [{ alternatives: [would, could, had to] }], follows: true }, ex: { examples: [["He said he ", { target: would call }, "."], ["She said she ", { target: could }, " swim."]] } }
+        - { level: B1, point: { en: No change }, rule: { en: "would, could, should, might; a fact still true; after says (present)" }, ex: { examples: [["She said she ", { target: lives }, " in Paris."], ["She says she ", { target: is }, " tired."]] } }
+        - { level: B1, point: { en: Pronouns and time }, rule: { en: ["pronouns follow the speaker; ", { mapping: [today, that day] }, ", ", { mapping: [tomorrow, the next day] }] }, ex: ["Anna said ", { target: she }, " was tired."] }
+        - { level: B1, point: { en: Questions }, rule: { en: ["yes/no questions take ", { term: if }, " or ", { term: whether }, "; wh-questions keep the wh-word"] }, ex: ["She asked ", { target: if }, " I ", { target: liked }, " tea."] }
         - { level: B1, point: { en: Commands }, rule: { pattern: [{ alternatives: [told, asked] }, { slot: person }, [{ optional: not }, " to"], { slot: V }] }, ex: ["He ", { target: told us not to be }, " late."] }
+        - { level: B1, point: { en: Trap }, rule: { en: ["a reported question has statement order, with no ", { alternatives: [do, does, did] }] }, ex: ["She asked me where I ", { target: lived }, "."] }
 
 sections:
   - title: { en: "Form: say and tell" }

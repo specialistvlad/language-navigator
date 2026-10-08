@@ -21,14 +21,15 @@ cheatsheet:
         - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A0, point: { en: Capitals }, rule: { en: days and months start with a capital letter }, ex: [{ letter: M }, "onday, ", { letter: J }, une] }
-        - { level: A0, point: { weekday: Wednesday, value: 3 }, rule: { en: ["the first d is silent: ", { ipa: ˈwenzdeɪ }] }, ex: { weekday: Wednesday, value: 3 } }
-        - { level: A0, point: { en: Weekend }, rule: { en: Saturday and Sunday are the weekend; the other days are weekdays }, ex: { target: the weekend } }
-        - { level: A0, point: { en: Day of the month }, rule: { en: "say the day as an ordinal: 5 May" }, ex: { date: ["the ", { target: fifth }, " of ", May], value: "--05-05" } }
-        - { level: A0, point: { en: Date order }, rule: { en: ["British: day, month, year, so 04/07/2026 is 4 July; ", { variant: "month, day, year, so April 7", variety: en-US }] }, ex: ["04/07/", { date: "2026", value: "2026" }] }
-        - { level: A0, point: { en: Asking the date }, rule: { en: ask What's the date today? and answer with the ordinal }, ex: ["It's ", { date: ["the ", { target: tenth }, " of ", October], value: "--10-10" }, "."] }
-        - { level: A0, point: { en: Years }, rule: { en: "most years in two pairs of digits: 1999; 1900 and 1905 as shown" }, ex: { examples: [[{ target: nineteen }, " ninety-nine"], ["nineteen ", { target: hundred }], ["nineteen ", { target: oh }, " five"]] } }
-        - { level: A0, point: { en: After 2000 }, rule: { en: ["2000–2009: two thousand ", { pattern: [{ optional: and }, { slot: unit }] }, ; from 2010 both forms are common] }, ex: { examples: [["two thousand ", { target: and }, " eight"], [{ target: twenty }, " twenty-six"]] } }
+        - { level: A0, point: { en: Days }, rule: { en: ["Monday to Friday are ", { term: weekdays }, "; Saturday and Sunday are ", { term: the weekend }] }, ex: { examples: [{ target: { weekday: Monday, value: 1 } }, { target: { weekday: Friday, value: 5 } }, { target: the weekend }] } }
+        - { level: A0, point: { en: Months }, rule: { en: "twelve months, from January to December" }, ex: { examples: [{ target: { date: January, value: "--01" } }, { target: { date: June, value: "--06" } }, { target: { date: December, value: "--12" } }] } }
+        - { level: A0, point: { en: Day of the month }, rule: { en: "say the day as an ordinal, then of and the month" }, ex: { mapping: ["5 May", { date: ["the ", { target: fifth }, " of May"], value: "--05-05" }] } }
+        - { level: A0, point: { en: Date order }, rule: { en: ["day, month, year (", { variant: "month, day, year", variety: en-US }, ")"] }, ex: { equivalence: ["04/07/2026", { target: { date: 4 July, value: "--07-04" } }] } }
+        - { level: A0, point: { en: Years }, rule: { en: ["two pairs of digits; 00 is ", { term: hundred }, ", 01–09 take ", { term: oh }] }, ex: { examples: [[{ target: nineteen }, " ninety-nine"], ["nineteen ", { target: hundred }], ["nineteen ", { target: oh }, " five"]] } }
+        - { level: A0, point: { en: After 2000 }, rule: { en: ["2000–2009: two thousand ", { pattern: [{ optional: and }, { slot: unit }] }, "; from 2010 both forms are common"] }, ex: { examples: [["two thousand ", { target: and }, " eight"], [{ target: twenty }, " twenty-six"]] } }
+        - { level: A0, point: { en: Asking the date }, rule: { en: ["ask ", { term: What's the date today? }, " and answer with an ordinal"] }, ex: ["It's ", { date: ["the ", { target: tenth }, " of ", October], value: "--10-10" }, "."] }
+        - { level: A0, point: { en: Capitals }, rule: { en: days and months start with a capital letter }, ex: { examples: [{ target: [{ letter: M }, onday] }, { target: [{ letter: J }, une] }] } }
+        - { level: A0, point: { en: Trap }, rule: { en: ["the first ", { letter: d }, " in Wednesday is silent"] }, ex: [{ weekday: Wednesday, value: 3 }, " ", { target: { ipa: ˈwenzdeɪ } }] }
 
 sections:
   - title: { en: Days of the week }
@@ -141,6 +142,10 @@ sections:
             level: A0
             text:
               en: ["Say most years in two pairs of digits: ", { mapping: [{ date: { examples: ["19", "99"] }, value: "1999" }, nineteen ninety-nine] }, "."]
+          - type: rule
+            level: A0
+            text:
+              en: ["Say 00 as ", { term: hundred }, " and 01 to 09 with ", { term: oh }, ": nineteen hundred, nineteen oh five."]
           - type: rule
             level: A0
             text:

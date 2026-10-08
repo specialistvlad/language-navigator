@@ -17,14 +17,16 @@ cheatsheet:
   content:
     - type: usage
       columns:
-        - { key: pattern, label: { en: Pattern } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, pattern: { pattern: [{ slot: adjective }, { slot: noun }] }, ex: ["a ", { target: red }, " car"] }
-        - { level: A1, pattern: { pattern: [{ alternatives: [be, look, feel] }, { slot: adjective }] }, ex: ["The car is ", { target: red }, "."] }
-        - { level: A1, pattern: { pattern: [{ slot: adjective }, { slot: plural noun }] }, ex: ["two ", { target: red }, " cars"] }
-        - { level: A2, pattern: { en: ["opinion, size, age, shape, colour, origin, ", { pattern: [material, { slot: noun }] }] }, ex: ["a ", { target: lovely small old }, " house"] }
-        - { level: A2, pattern: { alternatives: ["-ed", "-ing"] }, ex: { examples: [["I'm ", { target: bored }, "."], ["It's ", { target: boring }, "."]] } }
+        - { level: A1, point: { pattern: [{ slot: adjective }, { slot: noun }] }, rule: { en: the adjective goes before the noun }, ex: ["She has a ", { target: new }, " phone."] }
+        - { level: A1, point: { pattern: [{ slot: verb }, { slot: adjective }] }, rule: { en: "the verb is be, look, feel, sound, taste or smell" }, ex: ["You ", { target: look tired }, "."] }
+        - { level: A2, point: { en: Several adjectives }, rule: { en: "opinion, size, age, shape, colour, origin, material, purpose" }, ex: ["a ", { target: nice old wooden }, " chair"] }
+        - { level: A2, point: { alternatives: ["-ed", "-ing"] }, rule: { en: "-ed: how a person feels; -ing: what causes it" }, ex: { examples: [["I'm ", { target: bored }, "."], ["The film is ", { target: boring }, "."]] } }
+        - { level: A1, point: { en: Trap }, rule: { en: one form for singular and plural }, ex: ["two ", { target: red }, " cars"] }
+        - { level: A2, point: { en: Trap }, rule: { en: "size before colour, age before material" }, ex: { examples: [["a ", { target: big red }, " bag"], ["an ", { target: old wooden }, " table"]] } }
 
 sections:
   - title: { en: "Form: position and agreement" }

@@ -17,19 +17,20 @@ cheatsheet:
   content:
     - type: usage
       columns:
-        - { key: point, label: { en: { alternatives: [Word, point] } } }
+        - { key: point, label: { en: Point } }
         - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: B1, point: who, rule: { en: people }, ex: ["The woman ", { target: who }, " lives next door is a nurse."] }
-        - { level: B1, point: which, rule: { en: things }, ex: ["The book ", { target: which }, " I bought was cheap."] }
-        - { level: B1, point: that, rule: { en: "people or things, defining clauses only" }, ex: ["The film ", { target: that }, " we saw was long."] }
-        - { level: B1, point: whose, rule: { en: "possession, followed by a noun" }, ex: ["The man ", { target: whose }, " car was stolen called the police."] }
-        - { level: B1, point: where, rule: { en: places; includes the preposition }, ex: ["The café ", { target: where }, " we met has closed."] }
+        - { level: B1, point: { en: Form }, rule: { en: [{ pattern: [{ slot: noun }, { alternatives: [who, which, that] }, { slot: clause }] }, "; right after the noun"] }, ex: ["The woman ", { target: who lives next door }, " is a nurse."] }
+        - { level: B1, point: "who, which", rule: { en: [{ term: who }, " for people, ", { term: which }, " for things"] }, ex: { examples: [["The woman ", { target: who }, " lives next door is a nurse."], ["The book ", { target: which }, " I bought was cheap."]] } }
+        - { level: B1, point: that, rule: { en: "people or things, in defining clauses only" }, ex: ["The film ", { target: that }, " we saw was long."] }
+        - { level: B1, point: whose, rule: { en: possession; a noun follows }, ex: ["The man ", { target: whose }, " car was stolen called the police."] }
+        - { level: B1, point: where, rule: { en: places }, ex: ["The café ", { target: where }, " we met has closed."] }
         - { level: B1, point: { en: Subject pronoun }, rule: { en: "stays: a verb follows" }, ex: ["The girl ", { target: who speaks }, " French is my cousin."] }
-        - { level: B1, point: { en: Object pronoun }, rule: { en: can be left out in a defining clause }, ex: ["The film ", { target: I saw }, " was long."] }
+        - { level: B1, point: { en: Object pronoun }, rule: { en: can be left out in a defining clause only }, ex: ["The film ", { target: I saw }, " was long."] }
         - { level: B1, point: { en: Defining }, rule: { en: says which one; no commas }, ex: ["The man ", { target: who called }, " is my uncle."] }
-        - { level: B1, point: { en: Non-defining }, rule: { en: ["extra information; commas; ", { alternatives: [who, which, whose, where] }, ; never leave out the object pronoun] }, ex: ["Paris, ", { target: which }, " I visited in ", { date: May, value: "--05" }, ", is beautiful."] }
+        - { level: B1, point: { en: Non-defining }, rule: { en: ["extra information in commas; ", { alternatives: [who, which, whose, where] }] }, ex: ["Paris, ", { target: which }, " I visited in ", { date: May, value: "--05" }, ", is beautiful."] }
+        - { level: B1, point: { en: Trap }, rule: { en: [{ term: where }, " already includes the preposition"] }, ex: ["The house ", { target: where I live }, " is old."] }
 
 sections:
   - title: { en: "Form: relative pronouns" }

@@ -15,16 +15,20 @@ summary:
 
 cheatsheet:
   content:
-    - type: paradigm
+    - type: usage
       columns:
-        - { key: form, label: { en: Form } }
-        - { key: pattern, label: { en: Pattern } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, features: { mood: imp, polarity: pos }, form: { en: Affirmative }, pattern: V, ex: [{ target: Open }, " the door."] }
-        - { level: A1, features: { mood: imp, polarity: neg }, form: { en: Negative }, pattern: { pattern: [Don't, { slot: V }] }, ex: [{ target: Don't open }, " the door."] }
-        - { level: A1, features: { mood: imp, person: 1, number: pl, polarity: pos }, form: { en: Suggestion }, pattern: { pattern: [Let's, { slot: V }] }, ex: [{ target: Let's open }, " the door."] }
-        - { level: A1, features: { mood: imp, person: 1, number: pl, polarity: neg }, form: { en: Negative suggestion }, pattern: { pattern: [Let's not, { slot: V }] }, ex: [{ target: Let's not open }, " the door."] }
+        - { level: A1, point: { en: Affirmative }, rule: { en: "the base verb for every person, with no subject and no -s" }, ex: [{ target: Open }, " the door."] }
+        - { level: A1, point: { en: Negative }, rule: { en: [{ pattern: [Don't, { slot: V }] }, ", also before ", { term: be }] }, ex: [{ target: Don't be }, " late."] }
+        - { level: A1, point: { en: Suggestion }, rule: { en: [{ pattern: [Let's, { slot: V }] }, ": includes the speaker, invites others to join"] }, ex: [{ target: Let's go }, " to the beach."] }
+        - { level: A1, point: { en: Negative suggestion }, rule: { en: { pattern: [Let's not, { slot: V }] } }, ex: { target: Let's not wait. } }
+        - { level: A1, point: { en: Use }, rule: { en: "instructions, directions, orders" }, ex: [{ target: Turn }, " left and ", { target: go straight on }, "."] }
+        - { level: A1, point: { en: Use }, rule: { en: "invitations, offers, warnings" }, ex: { examples: [[{ target: Come }, " in."], { target: Look out! }] } }
+        - { level: A1, point: { en: Politeness }, rule: { en: [{ term: please }, " at the start or the end makes a request friendly"] }, ex: [{ target: Please }, " sit down."] }
+        - { level: A1, point: { en: Trap }, rule: { en: ["after ", { term: Don't }, " and ", { term: Let's }, ": the base verb, no ", { term: to }] }, ex: { examples: [["Don't ", { target: open }, " it."], ["Let's ", { target: go }, "."]] } }
 
 sections:
   - title: { en: Overview }

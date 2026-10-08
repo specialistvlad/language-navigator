@@ -17,15 +17,18 @@ cheatsheet:
   content:
     - type: usage
       columns:
-        - { key: meaning, label: { en: Meaning } }
-        - { key: form, label: { en: Form } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A2, meaning: { en: "strong personal obligation, rules" }, form: { pattern: [must, { slot: V }] }, ex: ["I ", { target: must }, " call my mum."] }
-        - { level: A2, meaning: { en: obligation from outside }, form: { pattern: [have to, { slot: V }] }, ex: ["I ", { target: have to }, " wear a uniform."] }
-        - { level: A2, meaning: { en: prohibition }, form: { pattern: [mustn't, { slot: V }] }, ex: ["You ", { target: mustn't }, " park here."] }
-        - { level: A2, meaning: { en: no obligation }, form: { pattern: [don't have to, { slot: V }] }, ex: ["You ", { target: don't have to }, " pay."] }
-        - { level: A2, meaning: { en: past obligation }, form: { pattern: [had to, { slot: V }] }, ex: ["I ", { target: had to }, " work late."] }
+        - { level: A2, point: { en: "Form: must" }, rule: { en: [{ pattern: [{ slot: subject }, must, { slot: V }] }, "; one form for every subject"] }, ex: ["She ", { target: must }, " study."] }
+        - { level: A2, point: { en: "Form: have to" }, rule: { en: [{ term: have to }, ", but ", { term: has to }, " with he, she, it"] }, ex: { examples: [["We ", { target: have to }, " leave."], ["He ", { target: has to }, " leave."]] } }
+        - { level: A2, point: { en: "Question, negative" }, rule: { en: [{ term: have to }, " takes ", { alternatives: [{ term: do }, { term: does }, { term: did }] }, " and then the base form"] }, ex: { examples: [[{ target: Do }, " you ", { target: have to }, " leave?"], ["She ", { target: doesn't have to }, " leave."]] } }
+        - { level: A2, point: must, rule: { en: "the speaker's own view or a written rule" }, ex: { examples: [["I ", { target: must }, " save more money."], ["Visitors ", { target: must }, " sign in."]] } }
+        - { level: A2, point: have to, rule: { en: "the situation or another person decides; common in speech" }, ex: ["I ", { target: have to }, " get up at six for work."] }
+        - { level: A2, point: mustn't, rule: { en: forbidden }, ex: ["You ", { target: mustn't }, " use your phone here."] }
+        - { level: A2, point: don't have to, rule: { en: "not necessary: you can choose" }, ex: ["You ", { target: don't have to }, " come."] }
+        - { level: A2, point: { en: Trap }, rule: { en: [{ term: had to }, " is the past of ", { term: must }] }, ex: ["I ", { target: had to }, " work on ", { weekday: Saturday, value: 6 }, "."] }
 
 sections:
   - title: { en: "Form: must" }

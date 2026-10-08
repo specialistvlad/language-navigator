@@ -15,16 +15,21 @@ summary:
 
 cheatsheet:
   content:
-    - type: paradigm
+    - type: usage
       columns:
-        - { key: form, label: { en: Form } }
-        - { key: be, label: { en: be and modals } }
-        - { key: other, label: { en: Other verbs } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, be: { examples: [["She ", { target: is }, " here."], ["She ", { target: can }, " swim."]] }, other: ["She ", { target: likes }, " tea."] }
-        - { level: A1, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, be: { examples: [["She ", { target: isn't }, " here."], ["She ", { target: can't }, " swim."]] }, other: ["She ", { target: doesn't like }, " tea."] }
-        - { level: A1, features: { polarity: pos, interrogativity: int }, form: { en: Question }, be: { examples: [[{ target: Is }, " she here?"], [{ target: Can }, " she swim?"]] }, other: [{ target: Does }, " she ", { target: like }, " tea?"] }
-        - { level: A1, features: { interrogativity: decl, polarity: [pos, neg] }, form: { en: Short answer }, be: { examples: [["Yes, she ", { target: is }, "."], ["No, she ", { target: can't }, "."]] }, other: { examples: [["Yes, she ", { target: does }, "."], ["No, she ", { target: doesn't }, "."]] } }
+        - { level: A1, point: { en: "Negative: be, modals" }, rule: { pattern: [{ slot: subject }, { alternatives: [be, modal] }, not] }, ex: { examples: [["They ", { target: are not }, " at home."], ["He ", { target: can't }, " drive."]] } }
+        - { level: A1, point: { en: "Question: be, modals" }, rule: { pattern: [{ alternatives: [be, modal] }, { slot: subject }] }, ex: { examples: [[{ target: Are }, " they at home?"], [{ target: Can }, " he drive?"]] } }
+        - { level: A1, point: { en: "Negative: other verbs" }, rule: { pattern: [{ slot: subject }, { alternatives: [don't, doesn't, didn't] }, { slot: base verb }] }, ex: ["He ", { target: doesn't like }, " jazz."] }
+        - { level: A1, point: { en: "Question: other verbs" }, rule: { pattern: [{ alternatives: [do, does, did] }, { slot: subject }, { slot: base verb }] }, ex: [{ target: Did }, " you ", { target: call }, " her?"] }
+        - { level: A1, point: "do, does, did", rule: { en: [{ takes: [{ alternatives: [I, you, we, they] }, do] }, ", ", { takes: [{ alternatives: [he, she, it] }, does] }, ", ", { takes: [past, did] }] }, ex: [{ target: Do }, " you ", { target: like }, " jazz?"] }
+        - { level: A1, point: { en: Wh-question }, rule: { pattern: [{ slot: wh-word }, auxiliary, { slot: subject }, { slot: base verb }] }, ex: { examples: [[{ target: Where do }, " you ", { target: live }, "?"], [{ target: Where are }, " you from?"]] } }
+        - { level: A1, point: { en: Subject question }, rule: { en: ["no ", { alternatives: [do, does, did] }, "; the verb takes the tense"] }, ex: [{ target: Who called }, " you?"] }
+        - { level: A1, point: { en: Short answer }, rule: { en: "repeat the be, modal or auxiliary verb" }, ex: { examples: [["Yes, she ", { target: can }, "."], ["No, she ", { target: can't }, "."]] } }
+        - { level: A1, point: { en: Trap }, rule: { en: ["after ", { alternatives: [do, does, did] }, " the verb is the base form"] }, ex: ["Did you ", { target: go }, "?"] }
 
 sections:
   - title: { en: Overview }
@@ -82,6 +87,16 @@ sections:
           - { level: A1, aux: { alternatives: [did, didn't] }, use: { en: "every subject, past" }, ex: [{ target: Did }, " you ", { target: call }, " her?"] }
       - type: list
         items:
+          - type: rule
+            level: A1
+            text:
+              en: ["The negative order is ", { pattern: [{ slot: subject }, { alternatives: [don't, doesn't, didn't] }, { slot: base verb }] }, ":"]
+            ex: ["We ", { target: didn't see }, " him."]
+          - type: rule
+            level: A1
+            text:
+              en: ["The question order is ", { pattern: [{ alternatives: [do, does, did] }, { slot: subject }, { slot: base verb }] }, ":"]
+            ex: [{ target: Does }, " she ", { target: work }, " here?"]
           - type: rule
             level: A1
             text:

@@ -17,14 +17,16 @@ cheatsheet:
   content:
     - type: usage
       columns:
-        - { key: word, label: { en: Word } }
-        - { key: pattern, label: { en: Pattern } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: B1, word: too, pattern: [{ pattern: [too, { alternatives: [adjective, adverb] }] }, " ", { optional: { pattern: [to, { slot: V }], follows: true } }], ex: ["It's ", { target: too }, " hot to walk."] }
-        - { level: B1, word: enough, pattern: { alternatives: [{ pattern: [{ slot: adjective }, enough] }, { pattern: [enough, { slot: noun }] }] }, ex: { examples: [["It's warm ", { target: enough }, "."], ["We have ", { target: enough }, " time."]] } }
-        - { level: B1, word: so, pattern: [{ pattern: [so, { alternatives: [adjective, adverb] }] }, " ", { optional: { pattern: [that], follows: true } }], ex: ["It's ", { target: so }, " hot that I can't sleep."] }
-        - { level: B1, word: such, pattern: [{ pattern: [["such ", { optional: a }], { slot: adjective }, { slot: noun }] }, " ", { optional: { pattern: [that], follows: true } }], ex: ["It's ", { target: such }, " a hot day."] }
+        - { level: B1, point: { pattern: [too, { alternatives: [adjective, adverb] }] }, rule: { en: ["more than is good; the result follows with ", { pattern: [to, { slot: V }] }] }, ex: ["The box is ", { target: too }, " heavy ", { target: for me to }, " lift."] }
+        - { level: B1, point: { alternatives: [{ pattern: [{ slot: adjective }, enough] }, { pattern: [enough, { slot: noun }] }] }, rule: { en: enough follows an adjective and comes before a noun }, ex: { examples: [["She is old ", { target: enough }, " to drive."], ["We have ", { target: enough }, " chairs."]] } }
+        - { level: B1, point: { pattern: [so, { alternatives: [adjective, adverb] }] }, rule: { en: ["the result follows with ", { term: that }] }, ex: ["I was ", { target: so }, " tired ", { target: that }, " I fell asleep."] }
+        - { level: B1, point: { alternatives: [{ pattern: [such a, { slot: adjective }, { slot: singular noun }] }, { pattern: [such, { slot: adjective }, { slot: plural noun }] }] }, rule: { en: "such goes with a noun, so with an adjective or adverb" }, ex: { examples: [["It's ", { target: such a }, " good film."], ["They are ", { target: such }, " nice people."]] } }
+        - { level: B1, point: { en: Trap }, rule: { en: { pattern: [not, { slot: adjective }, enough] } }, ex: ["The room is ", { target: not big enough }, "."] }
+        - { level: B1, point: { en: Trap }, rule: { en: { pattern: [so many, { slot: plural noun }] } }, ex: ["I have ", { target: so many }, " friends."] }
 
 sections:
   - title: { en: "Form: too and enough" }

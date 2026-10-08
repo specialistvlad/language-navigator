@@ -1,5 +1,6 @@
 // npm run check catches every level problem: a leaf without a level, a stored range, a curriculum
-// entry that disagrees with the data, a cheatsheet above its sections, and a scale out of step.
+// entry that disagrees with the data, a cheatsheet whose levels differ from its sections', and a
+// scale out of step.
 import { describe, expect, test } from "bun:test";
 import { loadConcepts, loadTopics, type Topic, type TopicRef } from "../lib.ts";
 import { checkRef, type Problem, validate } from "./index.ts";
@@ -77,6 +78,9 @@ describe("every leaf carries its level", () => {
     const problems = await problemsOf((t) => {
       const levels = ["B2", "C1", "C2"];
       for (const [n, row] of rows(t).slice(0, 3).entries()) row["level"] = levels[n];
+      // The cheatsheet sums them up too.
+      const sheet = (t["cheatsheet"] as { content: { rows: Record<string, unknown>[] }[] }).content[0]?.rows ?? [];
+      for (const [n, row] of sheet.slice(0, 3).entries()) row["level"] = levels[n];
     });
     expect(problems).toEqual([]);
   });
@@ -110,12 +114,21 @@ describe("nothing above a leaf stores a level", () => {
 });
 
 describe("ranges agree", () => {
-  test("a cheatsheet leaf above every section", async () => {
+  // The rows of the cheatsheet's table.
+  const sheetRows = (t: Record<string, unknown>): Record<string, unknown>[] =>
+    (t["cheatsheet"] as { content: { rows: Record<string, unknown>[] }[] }).content[0]?.rows ?? [];
+  test("a cheatsheet row at a level no section holds", async () => {
     const problems = await problemsOf((t) => {
-      const sheet = (t["cheatsheet"] as { content: { rows: Record<string, unknown>[] }[] }).content[0];
-      if (sheet?.rows[0]) sheet.rows[0]["level"] = "C2";
+      const [row] = sheetRows(t);
+      if (row) row["level"] = "C2";
     });
-    expect(messages(problems)).toContain("reaches outside the sections");
+    expect(messages(problems)).toContain("the cheatsheet has a row at C2, which no section holds");
+  });
+  test("a cheatsheet without a row at a level the sections hold", async () => {
+    const problems = await problemsOf((t) => {
+      for (const row of sheetRows(t)) row["level"] = "A1";
+    });
+    expect(messages(problems)).toContain("the cheatsheet has no row at A2, which the sections hold");
   });
   test("a planned topic names its levels", async () => {
     const missing = await problemsOf((_t, ref) => {

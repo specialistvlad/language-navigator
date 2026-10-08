@@ -21,15 +21,17 @@ cheatsheet:
         - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A0, point: { en: Asking }, rule: { en: ["ask What time is it? and answer with ", { pattern: [It's, { slot: the time }] }] }, ex: [{ target: It's }, " seven thirty."] }
-        - { level: A0, point: { en: Numbers }, rule: { en: "say the hour, then the minutes; 1–9 minutes take oh" }, ex: { mapping: [{ time: "7:05", value: "07:05" }, ["seven ", { target: oh }, " five"]] } }
-        - { level: A0, point: o'clock, rule: { en: o'clock goes only with full hours }, ex: ["seven ", { target: o'clock }] }
-        - { level: A1, point: past, rule: { en: "minutes 1–30: past the hour" }, ex: [{ optional: a }, " ", { target: quarter past }, " three"] }
-        - { level: A1, point: to, rule: { en: "minutes 31–59: to the next hour; say the minutes first" }, ex: ["twenty ", { target: to }, " four"] }
-        - { level: A1, point: minutes, rule: { en: "minutes that are not 5, 10, 15… add minutes" }, ex: ["three ", { target: minutes }, " past six"] }
-        - { level: A1, point: { alternatives: [a.m., p.m.] }, rule: { en: a.m. is midnight to midday; p.m. is midday to midnight }, ex: { examples: [["seven ", { target: a.m. }], ["three ", { target: p.m. }]] } }
-        - { level: A1, point: { en: "24 hours" }, rule: { en: timetables use the 24-hour clock }, ex: { mapping: [{ time: "19:30", value: "19:30" }, nineteen thirty] } }
-        - { level: A1, point: US, rule: { en: "after for past, of for to" }, ex: ["a quarter ", { target: after }, " three"], variety: en-US }
+        - { level: A0, point: { en: Asking }, rule: { en: ["answer with ", { pattern: [It's, { slot: the time }] }] }, ex: { exchange: [What time is it?, { target: It's seven thirty. }] } }
+        - { level: A0, point: { en: Numbers }, rule: { en: ["say the hour, then the minutes; 1–9 minutes take ", { term: oh }] }, ex: { mapping: [{ time: "7:05", value: "07:05" }, ["seven ", { target: oh }, " five"]] } }
+        - { level: A0, point: o'clock, rule: { en: ["a full hour takes ", { term: o'clock }] }, ex: ["seven ", { target: o'clock }] }
+        - { level: A1, point: past, rule: { en: "minutes 1–30: past the hour" }, ex: { examples: [["five ", { target: past }, " three"], [{ optional: a }, " ", { target: quarter past }, " three"], [{ target: half past }, " three"]] } }
+        - { level: A1, point: to, rule: { en: "minutes 31–59: to the next hour; say the minutes first" }, ex: { examples: [["twenty ", { target: to }, " four"], [{ optional: a }, " ", { target: quarter to }, " four"]] } }
+        - { level: A1, point: minutes, rule: { en: ["minutes that are not 5, 10, 15… add ", { term: minutes }] }, ex: ["three ", { target: minutes }, " past six"] }
+        - { level: A1, point: { alternatives: [a.m., p.m.] }, rule: { en: [{ term: a.m. }, " is midnight to midday; ", { term: p.m. }, " is midday to midnight"] }, ex: { examples: [["seven ", { target: a.m. }], ["three ", { target: p.m. }]] } }
+        - { level: A1, point: { en: Parts of the day }, rule: { en: add the part of the day after the time }, ex: { examples: [["seven in the ", { target: morning }], ["three in the ", { target: afternoon }], ["eight in the ", { target: evening }], ["eleven at ", { target: night }]] } }
+        - { level: A1, point: { en: "24 hours" }, rule: { en: "speech uses 12 hours; timetables use the 24-hour clock" }, ex: { mapping: [{ time: "19:30", value: "19:30" }, { target: nineteen thirty }] } }
+        - { level: A1, point: US, rule: { en: ["use ", { term: after }, " for ", { term: past }, " and ", { term: of }, " for ", { term: to }] }, ex: { examples: [["a quarter ", { target: after }, " three"], ["ten ", { target: of }, " four"]] }, variety: en-US }
+        - { level: A0, point: { en: Trap }, rule: { en: ["minutes replace ", { term: o'clock }] }, ex: ["seven ", { target: fifteen }] }
 
 sections:
   - title: { en: The time in numbers }

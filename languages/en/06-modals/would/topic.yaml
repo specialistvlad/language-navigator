@@ -17,14 +17,17 @@ cheatsheet:
   content:
     - type: usage
       columns:
-        - { key: use, label: { en: Use } }
-        - { key: pattern, label: { en: Pattern } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, use: { en: wants and offers }, pattern: would like, ex: [I', { target: d like }, " a coffee."] }
-        - { level: B1, use: { en: polite requests }, pattern: { pattern: [Would you, [V, { gap: true }, "?"]] }, ex: [{ target: Would }, " you ", { target: help }, " me?"] }
-        - { level: B1, use: { en: imagined situations }, pattern: { pattern: [would, { slot: V }] }, ex: ["I ", { target: would }, " travel more."] }
-        - { level: B1, use: { en: past habits }, pattern: { pattern: [would, { slot: V }] }, ex: ["We ", { target: would }, " swim every summer."] }
+        - { level: A1, point: { en: Want }, rule: { en: [{ pattern: [would like, { alternatives: [{ slot: noun }, ["to ", { slot: base verb }]] }] }, "; short form ", { term: "'d" }] }, ex: { examples: [[I', { target: d like }, " a coffee, please."], [I', { target: d like to }, " book a table."]] } }
+        - { level: A1, point: { en: Question and offer }, rule: { en: [{ pattern: [Would, { slot: subject }, { slot: V }] }, "; no ", { term: do }] }, ex: [{ target: Would }, " you ", { target: like }, " some cake?"] }
+        - { level: B1, point: { en: Form }, rule: { en: [{ pattern: [{ slot: subject }, { alternatives: [would, "'d"] }, { slot: V }] }, "; negative ", { term: wouldn't }] }, ex: { examples: [["She ", { target: would }, " help."], ["I ", { target: wouldn't }, " go."]] } }
+        - { level: B1, point: { en: Polite request }, rule: { en: [{ term: [Would you, { gap: true }, "?"] }, " asks politely for help"] }, ex: [{ target: Would }, " you pass the salt, please?"] }
+        - { level: B1, point: { en: Imagined situation }, rule: { en: ["with ", { term: if }, ": ", { pattern: [if, { slot: past simple }] }, ", ", { pattern: [would, { slot: base verb }] }] }, ex: { examples: [["I ", { target: would }, " buy a boat."], ["If I had more time, I ", { target: would }, " learn Italian."]] } }
+        - { level: B1, point: { en: Past habit }, rule: { en: "repeated actions; the sentence needs a past time frame" }, ex: ["When I was a child, we ", { target: would }, " play outside every day."] }
+        - { level: B1, point: { en: Trap }, rule: { en: [{ term: used to }, " for a past state: live, be, have, know"] }, ex: ["When I was young, I ", { target: used to }, " live in Paris."] }
 
 sections:
   - title: { en: "Form: would" }

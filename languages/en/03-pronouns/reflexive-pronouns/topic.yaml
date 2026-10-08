@@ -15,19 +15,20 @@ summary:
 
 cheatsheet:
   content:
-    - type: paradigm
+    - type: usage
       columns:
-        - { key: subject, label: { en: Subject } }
-        - { key: reflexive, label: { en: Reflexive } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A2, features: { person: 1, number: sg }, subject: I, reflexive: myself, ex: ["I cut ", { target: myself }, "."] }
-        - { level: A2, features: { person: 2 }, subject: you, reflexive: { alternatives: [yourself, yourselves] }, ex: { examples: [["Help ", { target: yourself }, "."], ["Help ", { target: yourselves }, "."]] } }
-        - { level: A2, features: { person: 3, number: sg, gender: masc }, subject: he, reflexive: himself, ex: ["He hurt ", { target: himself }, "."] }
-        - { level: A2, features: { person: 3, number: sg, gender: fem }, subject: she, reflexive: herself, ex: ["She taught ", { target: herself }, " French."] }
-        - { level: A2, features: { person: 3, number: sg, gender: neut }, subject: it, reflexive: itself, ex: ["The door closes by ", { target: itself }, "."] }
-        - { level: A2, features: { person: 1, number: pl }, subject: we, reflexive: ourselves, ex: ["We enjoyed ", { target: ourselves }, "."] }
-        - { level: A2, features: { person: 3, number: pl }, subject: they, reflexive: themselves, ex: ["They looked at ", { target: themselves }, " in the mirror."] }
+        - { level: A2, point: { alternatives: [myself, yourself, himself, herself, itself] }, rule: { en: ["singular forms end in ", { term: "-self" }] }, ex: ["She talks to ", { target: herself }, "."] }
+        - { level: A2, point: { alternatives: [ourselves, yourselves, themselves] }, rule: { en: ["plural forms end in ", { term: "-selves" }, "; yourselves = several people"] }, ex: ["They looked at ", { target: themselves }, " in the mirror."] }
+        - { level: A2, point: { en: Same person }, rule: { en: the object is the same person as the subject }, ex: ["I burnt ", { target: myself }, " in the kitchen."] }
+        - { level: A2, point: { en: Emphasis }, rule: { en: that person and nobody else }, ex: ["I made the cake ", { target: myself }, "."] }
+        - { level: A2, point: { pattern: [by, { slot: { en: reflexive } }] }, rule: { en: "alone, without help" }, ex: ["He lives ", { target: by himself }, "."] }
+        - { level: A2, point: { en: Routine verbs }, rule: { en: "everyday verbs stand alone: get dressed, relax, sit down" }, ex: ["I ", { target: get dressed }, " quickly."] }
+        - { level: A2, point: each other, rule: { en: { takes: [each person, the other person] } }, ex: ["They looked at ", { target: each other }, "."] }
+        - { level: A2, point: { en: Trap }, rule: { alternatives: [{ pattern: [him, self] }, { pattern: [them, selves] }] }, ex: { examples: [["He hurt ", { target: himself }, "."], ["They enjoyed ", { target: themselves }, "."]] } }
 
 sections:
   - title: { en: Overview }

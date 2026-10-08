@@ -21,15 +21,16 @@ cheatsheet:
         - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A0, point: IPA, rule: { en: "one symbol for each sound, written between slashes" }, ex: ["book ", { ipa: bʊk }] }
-        - { level: A0, point: { en: Spelling and sound }, rule: { en: spelling and sound often differ }, ex: [{ term: photo }, " ", { ipa: ˈfəʊtəʊ }] }
-        - { level: A0, point: { alternatives: [{ letter: ː }, { letter: ˈ }] }, rule: { en: ː makes a vowel long; ˈ comes before the stressed syllable }, ex: [f, { letter: oo }, "d ", { ipa: fuːd }, ", teacher ", { ipa: ˈtiːtʃə }] }
-        - { level: A1, point: { en: Short and long }, rule: { en: ["short ", { ipa: ɪ }, " is not long ", { ipa: iː }] }, ex: { examples: [[{ target: ship }, " ", { ipa: ʃɪp }], [{ target: sheep }, " ", { ipa: ʃiːp }]] } }
-        - { level: A1, point: th, rule: { en: ["th is ", { ipa: θ }, " or ", { ipa: ð }] }, ex: { examples: [[{ letter: th }, "ink ", { ipa: θɪŋk }], [{ letter: th }, "is ", { ipa: ðɪs }]] } }
-        - { level: A1, point: US, rule: { en: [{ ipa: ɒ }, " becomes ", { ipa: ɑː }, ", ", { ipa: əʊ }, " becomes ", { ipa: oʊ }, ", and ", { ipa: r }, " is pronounced after vowels"] }, ex: ["hot ", { ipa: hɑːt }, ", car ", { ipa: kɑːr }], variety: en-US }
-        - { level: A1, point: { en: Stress in two syllables }, rule: { en: "most nouns and adjectives: first syllable; many verbs: second" }, ex: { examples: [[{ stress: ˈtea }, cher], [be, { stress: ˈgin }]] } }
-        - { level: A1, point: { alternatives: ["-tion", "-sion", "-ic"] }, rule: { en: stress the syllable before the ending }, ex: { examples: [[infor, { stress: ˈma }, tion], [fan, { stress: ˈtas }, tic]] } }
-        - { level: A1, point: { en: Weak vowel }, rule: { en: ["unstressed vowels are often the weak ", { ipa: ə }] }, ex: ["about ", { ipa: əˈbaʊt }] }
+        - { level: A0, point: IPA, rule: { en: "one symbol for each sound, written between slashes" }, ex: ["book ", { target: { ipa: bʊk } }] }
+        - { level: A0, point: { en: Spelling and sound }, rule: { en: ["spelling and sound often differ: ", { term: photo }, " has no ", { ipa: p }, " and no ", { ipa: h }] }, ex: ["photo ", { target: { ipa: ˈfəʊtəʊ } }] }
+        - { level: A0, point: { alternatives: [{ letter: ː }, { letter: ˈ }] }, rule: { en: [{ letter: ː }, " makes a vowel long; ", { letter: ˈ }, " comes before the stressed syllable"] }, ex: { examples: [["food ", { target: { ipa: fuːd } }], ["teacher ", { target: { ipa: ˈtiːtʃə } }]] } }
+        - { level: A0, point: { en: Consonant symbols }, rule: { en: ["some symbols differ from the spelling: ", { mapping: [{ letter: ch }, { ipa: tʃ }] }, ", ", { mapping: [{ letter: j }, { ipa: dʒ }] }, ", ", { mapping: [{ letter: "y" }, { ipa: j }] }] }, ex: { examples: [[{ target: { letter: ch } }, air], [{ target: { letter: j } }, ob], [{ target: { letter: "y" } }, es]] } }
+        - { level: A1, point: { en: Stress in two syllables }, rule: { en: "most nouns and adjectives: first syllable; many verbs: second" }, ex: { examples: [{ target: [{ stress: ˈtea }, cher] }, { target: [be, { stress: ˈgin }] }] } }
+        - { level: A1, point: { alternatives: ["-tion", "-sion", "-ic"] }, rule: { en: stress the syllable before the ending }, ex: { examples: [{ target: [infor, { stress: ˈma }, tion] }, { target: [fan, { stress: ˈtas }, tic] }] } }
+        - { level: A1, point: { en: Weak vowel }, rule: { en: ["unstressed vowels are often the weak ", { ipa: ə }] }, ex: ["about ", { target: { ipa: əˈbaʊt } }] }
+        - { level: A1, point: US, rule: { en: [{ ipa: ɒ }, " becomes ", { ipa: ɑː }, ", ", { ipa: əʊ }, " becomes ", { ipa: oʊ }, ", and ", { ipa: r }, " is pronounced after vowels"] }, ex: { examples: [["hot ", { target: { ipa: hɑːt } }], ["car ", { target: { ipa: kɑːr } }]] }, variety: en-US }
+        - { level: A1, point: { en: Trap }, rule: { en: ["short ", { ipa: ɪ }, " and long ", { ipa: iː }, " make different words"] }, ex: { examples: [["ship ", { target: { ipa: ʃɪp } }], ["sheep ", { target: { ipa: ʃiːp } }]] } }
+        - { level: A1, point: { en: Trap }, rule: { en: ["th is ", { ipa: θ }, " or ", { ipa: ð }] }, ex: { examples: [[{ letter: th }, "ink ", { target: { ipa: θɪŋk } }], [{ letter: th }, "is ", { target: { ipa: ðɪs } }]] } }
 
 sections:
   - title: { en: How IPA works }

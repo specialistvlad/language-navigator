@@ -17,18 +17,18 @@ cheatsheet:
   content:
     - type: paradigm
       columns:
-        - { key: subject, label: { en: Subject }, features: { case: nom } }
-        - { key: object, label: { en: Object }, features: { case: acc } }
-        - { key: det, label: { en: { pattern: [Possessive, { slot: noun }] } }, features: { case: gen, wordclass: det } }
-        - { key: alone, label: { en: Possessive alone }, features: { case: gen, wordclass: pro } }
+        - { key: point, label: { en: Point } }
+        - { key: forms, label: { en: Pronouns } }
+        - { key: rule, label: { en: Rule } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, features: { person: 1, number: sg }, subject: I, object: me, det: my, alone: mine }
-        - { level: A1, features: { person: 2 }, subject: you, object: you, det: your, alone: yours }
-        - { level: A1, features: { person: 3, number: sg, gender: masc }, subject: he, object: him, det: his, alone: his }
-        - { level: A1, features: { person: 3, number: sg, gender: fem }, subject: she, object: her, det: her, alone: hers }
-        - { level: A1, features: { person: 3, number: sg, gender: neut }, subject: it, object: it, det: its }
-        - { level: A1, features: { person: 1, number: pl }, subject: we, object: us, det: our, alone: ours }
-        - { level: A1, features: { person: 3, number: pl }, subject: they, object: them, det: their, alone: theirs }
+        - { level: A0, features: { case: nom }, point: { en: Subject }, forms: { alternatives: [I, you, he, she, it, we, they] }, rule: { en: goes before the verb }, ex: [{ target: She }, "'s a teacher."] }
+        - { level: A1, features: { case: acc }, point: { en: Object }, forms: { alternatives: [me, you, him, her, it, us, them] }, rule: { en: goes after a verb or a preposition }, ex: ["Can you help ", { target: me }, "?"] }
+        - { level: A0, features: { case: gen, wordclass: det }, point: { en: { pattern: [Possessive, { slot: noun }] } }, forms: { alternatives: [my, your, his, her, its, our, their] }, rule: { en: "goes before a noun, with no article" }, ex: [{ target: My }, " name is Tom."] }
+        - { level: A1, features: { case: gen, wordclass: pro }, point: { en: Possessive alone }, forms: { alternatives: [mine, yours, his, hers, ours, theirs] }, rule: { en: "stands alone, without a noun" }, ex: ["This bag is ", { target: mine }, "."] }
+        - { level: A0, features: { person: 3, number: sg, gender: neut, case: nom }, point: { en: "Weather, time" }, forms: it, rule: { en: "no real subject: it fills the place" }, ex: [{ target: It }, "'s cold today."] }
+        - { level: A0, features: { person: 3, number: sg, gender: neut, case: gen, wordclass: det }, point: { en: Trap }, forms: its, rule: { en: "its has no apostrophe; it's = it is" }, ex: ["The dog wants ", { target: its }, " food."] }
+        - { level: A1, features: { case: gen, wordclass: pro }, point: { en: Trap }, forms: { alternatives: [yours, hers, ours, theirs] }, rule: { en: no apostrophe }, ex: ["Is this ", { target: yours }, "?"] }
 
 sections:
   - title: { en: Overview }

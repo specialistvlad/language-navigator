@@ -17,12 +17,19 @@ cheatsheet:
   content:
     - type: paradigm
       columns:
-        - { key: where, label: { en: Distance } }
-        - { key: singular, label: { en: Singular }, features: { number: sg } }
-        - { key: plural, label: { en: Plural }, features: { number: pl } }
+        - { key: use, label: { en: Use } }
+        - { key: near, label: { en: Near }, features: { deixis: prox } }
+        - { key: far, label: { en: Far }, features: { deixis: dist } }
       rows:
-        - { level: A0, features: { deixis: prox }, where: { en: "near: here" }, singular: [{ target: this }, " book"], plural: [{ target: these }, " books"] }
-        - { level: A0, features: { deixis: dist }, where: { en: "far: there" }, singular: [{ target: that }, " book"], plural: [{ target: those }, " books"] }
+        - { level: A0, features: { number: sg }, use: { en: Before a singular noun }, near: [{ target: this }, " bag"], far: [{ target: that }, " bag"] }
+        - { level: A0, features: { number: pl }, use: { en: Before a plural noun }, near: [{ target: these }, " shoes"], far: [{ target: those }, " shoes"] }
+        - { level: A0, features: { number: sg }, use: { en: "Alone, with is" }, near: [{ target: This is }, " my bag."], far: [{ target: That is }, " my bag."] }
+        - { level: A0, features: { number: pl }, use: { en: "Alone, with are" }, near: [{ target: These are }, " my keys."], far: [{ target: Those are }, " my shoes."] }
+        - { level: A0, use: { en: Introducing people }, near: [{ target: This is }, " Ana."] }
+        - { level: A0, use: { en: On the phone }, near: ["Hi, ", { target: this is }, " Tom."], far: ["Is ", { target: that }, " Ana? ", { variant: ["Is ", { target: this }, " Ana?"], variety: en-US }] }
+        - { level: A1, features: { number: sg }, use: { en: Instead of a known noun }, near: ["I like ", { target: this one }, "."], far: ["I like ", { target: that one }, "."] }
+        - { level: A1, features: { number: sg }, use: { en: ["Time: ", { alternatives: [now, then] }] }, near: [{ target: this }, " morning"], far: [{ target: that }, " day"] }
+        - { level: A1, use: { en: Something just said or done }, far: [{ target: That's }, " great!"] }
 
 sections:
   - title: { en: Overview }

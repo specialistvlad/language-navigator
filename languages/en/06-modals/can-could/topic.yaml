@@ -15,17 +15,23 @@ summary:
 
 cheatsheet:
   content:
-    - type: paradigm
+    - type: usage
       columns:
-        - { key: form, label: { en: Form } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, ex: ["She ", { target: can }, " swim."] }
-        - { level: A1, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, ex: ["She ", { target: can't }, " swim."] }
-        - { level: A1, features: { polarity: pos, interrogativity: int }, form: { en: Question }, ex: [{ target: Can }, " she swim?"] }
-        - { level: A1, features: { interrogativity: decl, polarity: [pos, neg] }, form: { en: Short answer }, ex: { examples: [["Yes, she ", { target: can }, "."], ["No, she ", { target: can't }, "."]] } }
-        - { level: A2, features: { tense: pst }, form: { en: Past }, ex: { examples: [["I ", { target: could }, " swim at five."], ["I ", { target: couldn't }, " swim at four."]] } }
-        - { level: A2, features: { tense: pst, polarity: pos, interrogativity: int }, form: { en: Past question }, ex: [{ target: Could }, " you swim at five?"] }
+        - { level: A1, point: { en: Form }, rule: { en: [{ pattern: [{ slot: subject }, can, { slot: base verb }] }, "; one form for every subject"] }, ex: ["She ", { target: can }, " swim."] }
+        - { level: A1, point: { en: Negative }, rule: { en: [{ term: can't }, "; the full form is ", { term: cannot }, ", one word"] }, ex: ["I ", { target: can't }, " swim."] }
+        - { level: A1, point: { en: Question }, rule: { en: [{ pattern: [Can, { slot: subject }, { slot: base verb }] }, "; no ", { term: do }] }, ex: [{ target: Can }, " you swim?"] }
+        - { level: A1, point: { en: Ability }, rule: { en: [{ term: can }, " for skills"] }, ex: ["I ", { target: can }, " cook pasta."] }
+        - { level: A1, point: { en: Permission }, rule: { en: [{ term: can }, " allows, ", { term: can't }, " forbids; ask with ", { term: [Can I, { gap: true }, "?"] }] }, ex: { examples: [["You ", { target: can }, " park here."], [{ target: Can }, " I open the window?"]] } }
+        - { level: A1, point: { en: Request }, rule: { en: [{ term: [Can you, { gap: true }, "?"] }, " asks for help"] }, ex: [{ target: Can }, " you help me, please?"] }
+        - { level: A2, point: { en: Past ability }, rule: { en: [{ term: could }, " for general ability in the past"] }, ex: ["I ", { target: could }, " run fast when I was young."] }
+        - { level: A2, point: { en: Polite request }, rule: { en: [{ term: Could }, " is more polite than ", { term: can }] }, ex: [{ target: Could }, " you open the door, please?"] }
+        - { level: A2, point: { en: Possibility }, rule: { en: [{ term: could }, " says what may happen"] }, ex: ["It ", { target: could }, " rain later."] }
+        - { level: A2, point: { en: Other tenses }, rule: { en: [{ term: be able to }, " takes the place of ", { term: can }] }, ex: ["I'll ", { target: be able to }, " help you tomorrow."] }
+        - { level: A2, point: { en: Trap }, rule: { en: ["a single success in the past takes ", { alternatives: [{ term: was }, { term: were }] }, " ", { term: able to }] }, ex: ["The fire was big, but we ", { target: were able to }, " escape."] }
 
 sections:
   - title: { en: Overview }

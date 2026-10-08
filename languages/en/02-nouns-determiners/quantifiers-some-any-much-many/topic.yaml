@@ -17,14 +17,19 @@ cheatsheet:
   content:
     - type: paradigm
       columns:
-        - { key: form, label: { en: Sentence } }
+        - { key: use, label: { en: Use } }
         - { key: countable, label: { en: Plural countable noun }, features: { countability: count, number: pl } }
         - { key: uncountable, label: { en: Uncountable noun }, features: { countability: mass } }
       rows:
-        - { level: A1, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, countable: { alternatives: [[{ target: some }, " apples"], [{ target: a lot of }, " apples"]] }, uncountable: { alternatives: [[{ target: some }, " milk"], [{ target: a lot of }, " milk"]] } }
-        - { level: A1, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, countable: { alternatives: [["not ", { target: any }, " apples"], ["not ", { target: many }, " apples"]] }, uncountable: { alternatives: [["not ", { target: any }, " milk"], ["not ", { target: much }, " milk"]] } }
-        - { level: A1, features: { polarity: pos, interrogativity: int }, form: { en: Question }, countable: { alternatives: [[{ target: any }, " apples?"], [{ target: many }, " apples?"]] }, uncountable: { alternatives: [[{ target: any }, " milk?"], [{ target: much }, " milk?"]] } }
-        - { level: A1, features: { interrogativity: int }, form: [How, { gap: true }, "?"], countable: [{ target: How many }, " apples?"], uncountable: [{ target: How much }, " milk?"] }
+        - { level: A1, features: { polarity: pos, interrogativity: decl }, use: { en: Affirmative }, countable: { alternatives: [[{ target: some }, " apples"], [{ target: a lot of }, " apples"]] }, uncountable: { alternatives: [[{ target: some }, " milk"], [{ target: a lot of }, " milk"]] } }
+        - { level: A1, features: { polarity: neg, interrogativity: decl }, use: { en: Negative }, countable: { alternatives: [["not ", { target: any }, " apples"], ["not ", { target: many }, " apples"]] }, uncountable: { alternatives: [["not ", { target: any }, " milk"], ["not ", { target: much }, " milk"]] } }
+        - { level: A1, features: { polarity: pos, interrogativity: int }, use: { en: Question }, countable: { alternatives: [[{ target: any }, " apples?"], [{ target: many }, " apples?"]] }, uncountable: { alternatives: [[{ target: any }, " milk?"], [{ target: much }, " milk?"]] } }
+        - { level: A1, features: { interrogativity: int }, use: [How, { gap: true }, "?"], countable: [{ target: How many }, " apples?"], uncountable: [{ target: How much }, " milk?"] }
+        - { level: A2, features: { polarity: pos, interrogativity: int }, use: { en: "Offer, request" }, countable: ["Would you like ", { target: some }, " apples?"], uncountable: ["Can I have ", { target: some }, " milk?"] }
+        - { level: A2, use: { en: A small number or amount }, countable: [{ target: a few }, " apples"], uncountable: [{ target: a little }, " milk"] }
+        - { level: A2, use: { en: ["None: ", { pattern: ["no", { slot: noun }] }] }, countable: [{ target: "no" }, " apples"], uncountable: [{ target: "no" }, " milk"] }
+        - { level: B1, use: { en: Not enough }, countable: [{ target: few }, " apples"], uncountable: [{ target: little }, " milk"] }
+        - { level: B1, use: { en: ["None: ", { pattern: [none of, { slot: noun }] }] }, countable: [{ target: None of }, " the apples"], uncountable: [{ target: None of }, " the milk"] }
 
 sections:
   - title: { en: Overview }

@@ -15,17 +15,19 @@ summary:
 
 cheatsheet:
   content:
-    - type: comparison
+    - type: paradigm
       columns:
-        - { key: start, label: { en: Start } }
-        - { key: people, label: { en: People } }
-        - { key: things, label: { en: Things } }
-        - { key: places, label: { en: Places } }
+        - { key: point, label: { en: Point } }
+        - { key: words, label: { en: Words }, features: { wordclass: pro, definiteness: indf } }
+        - { key: rule, label: { en: Rule } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A2, start: some-, people: { examples: [[{ target: some }, body], [{ target: some }, one]] }, things: [{ target: some }, thing], places: [{ target: some }, where] }
-        - { level: A2, start: any-, people: { examples: [[{ target: any }, body], [{ target: any }, one]] }, things: [{ target: any }, thing], places: [{ target: any }, where] }
-        - { level: A2, start: no-, people: { examples: [[{ target: "no" }, body], [{ target: "no" }, " one"]] }, things: [{ target: "no" }, thing], places: [{ target: "no" }, where] }
-        - { level: A2, start: every-, people: { examples: [[{ target: every }, body], [{ target: every }, one]] }, things: [{ target: every }, thing], places: [{ target: every }, where] }
+        - { level: A2, point: some-, words: { alternatives: [somebody, someone, something, somewhere] }, rule: { en: "affirmative sentences, offers and requests" }, ex: ["I saw ", { target: somebody }, " in the garden."] }
+        - { level: A2, point: any-, words: { alternatives: [anybody, anyone, anything, anywhere] }, rule: { en: ["after ", { term: not }, " and in questions"] }, ex: { examples: [["I didn't see ", { target: anybody }, "."], ["Did ", { target: anyone }, " call?"]] } }
+        - { level: A2, point: "no-", words: { alternatives: [nobody, no one, nothing, nowhere] }, rule: { en: "the verb stays affirmative: one negative word" }, ex: ["I saw ", { target: nothing }, "."] }
+        - { level: A2, point: every-, words: { alternatives: [everybody, everyone, everything, everywhere] }, rule: { en: means all }, ex: [{ target: Everything }, " is ready."] }
+        - { level: A2, point: { en: Verb }, words: everybody, rule: { en: indefinite pronouns take a singular verb }, ex: [{ target: Everybody is }, " here."] }
+        - { level: A2, point: { en: Trap }, words: nobody, rule: { en: { takes: [negative subject, nobody] } }, ex: [{ target: Nobody }, " came."] }
 
 sections:
   - title: { en: Overview }

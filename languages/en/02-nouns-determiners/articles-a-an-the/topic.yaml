@@ -17,13 +17,22 @@ cheatsheet:
   content:
     - type: usage
       columns:
-        - { key: article, label: { en: Article } }
-        - { key: meaning, label: { en: Meaning } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, article: { alternatives: [a, an] }, meaning: { en: "one, any one" }, ex: ["I need ", { target: a }, " pen."] }
-        - { level: A1, article: the, meaning: { en: the one we both know }, ex: ["Pass me ", { target: the }, " pen."] }
-        - { level: A1, meaning: { en: things in general }, ex: [{ target: Pens }, " are cheap."] }
+        - { level: A1, point: { en: Form }, rule: { en: [{ term: a }, " before a consonant sound, ", { term: an }, " before a vowel sound"] }, ex: { examples: [[{ target: a }, " book"], [{ target: an }, " apple"]] } }
+        - { level: A1, point: { alternatives: [a, an] }, rule: { en: "one thing, a job, or a first mention" }, ex: ["She's ", { target: a }, " doctor."] }
+        - { level: A1, point: the, rule: { en: "a thing we both know, or already mentioned" }, ex: ["There's a cat. ", { target: The }, " cat is black."] }
+        - { level: A1, point: the, rule: { en: "the only one; superlatives and ordinals" }, ex: { examples: [[{ target: the }, " sun"], [{ target: the }, " best"], [{ target: the }, " first time"]] } }
+        - { level: A2, point: the, rule: { en: "rivers, seas, oceans, mountain ranges" }, ex: { examples: [[{ target: the }, " Thames"], [{ target: the }, " Atlantic"], [{ target: the }, " Alps"]] } }
+        - { level: A2, point: the, rule: { en: "countries with a plural name, Kingdom or States" }, ex: { examples: [[{ target: the }, " UK"], [{ target: the }, " USA"], [{ target: the }, " Netherlands"]] } }
+        - { level: B1, point: the, rule: { en: [{ pattern: [the, { slot: adjective }] }, " means a group of people"] }, ex: { examples: [[{ target: the }, " rich"], [{ target: the }, " young"]] } }
+        - { level: A1, point: { en: No article }, rule: { en: "plural and uncountable nouns in general; meals; names" }, ex: { examples: [["I like ", { target: dogs }, "."], ["We have ", { target: lunch }, " at two."]] } }
+        - { level: A2, point: { en: No article }, rule: { en: "home, work, school, bed; transport after by" }, ex: { examples: [["go ", { target: home }], ["at ", { target: work }], ["by ", { target: bus }]] } }
+        - { level: B1, point: { en: No article }, rule: { en: ["hospital, prison, church for their purpose; ", { term: the }, " for the building"] }, ex: ["He's in ", { target: hospital }, "."] }
+        - { level: A1, point: { en: Trap }, rule: { en: "the first sound decides, not the letter" }, ex: { examples: [[{ target: a }, " university"], [{ target: an }, " hour"]] } }
+        - { level: A1, point: { en: Trap }, rule: { en: "most countries take no article" }, ex: ["I live in ", { target: Spain }, "."] }
 
 sections:
   - title: { en: Overview }

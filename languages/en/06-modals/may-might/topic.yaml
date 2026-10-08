@@ -15,14 +15,20 @@ summary:
 
 cheatsheet:
   content:
-    - type: paradigm
+    - type: usage
       columns:
-        - { key: form, label: { en: Form } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A2, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, ex: { examples: [["It ", { target: might }, " rain."], ["It ", { target: may }, " rain."]] } }
-        - { level: A2, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, ex: { examples: [["It ", { target: might not }, " rain."], ["It ", { target: may not }, " rain."]] } }
-        - { level: B1, features: { polarity: pos, interrogativity: int }, form: { en: Question (permission) }, ex: [{ target: May }, " I come in?"] }
+        - { level: A2, point: { en: Form }, rule: { en: [{ pattern: [{ slot: subject }, { alternatives: [might, may] }, { slot: base verb }] }, "; one form for every subject"] }, ex: ["She ", { target: might }, " come."] }
+        - { level: A2, point: { en: Negative }, rule: { alternatives: [might not, may not] }, ex: ["He ", { target: might not }, " come."] }
+        - { level: A2, point: { en: Possibility }, rule: { en: "something possible, now or in the future" }, ex: { examples: [["She ", { target: might }, " be at home."], ["We ", { target: might }, " go to the beach."]] } }
+        - { level: A2, point: { en: Might or may }, rule: { en: [{ term: might }, " sounds a little less sure"] }, ex: { examples: [["It ", { target: might }, " rain."], ["It ", { target: may }, " rain."]] } }
+        - { level: A2, point: { en: Possibility question }, rule: { en: ["ask with ", { pattern: [{ term: think }, { term: will }] }] }, ex: ["Do you think it ", { target: will }, " rain?"] }
+        - { level: B1, point: { en: Permission }, rule: { en: [{ pattern: [May, { slot: subject }, { slot: base verb }] }, " asks; ", { term: may }, " allows in formal rules"] }, ex: { examples: [[{ target: May }, " I use your phone?"], ["Guests ", { target: may }, " use the pool until 10."]] } }
+        - { level: B1, point: { en: Certainty }, rule: { en: [{ term: will }, " is sure, ", { term: probably }, " very likely, ", { alternatives: [{ term: may }, { term: might }] }, " possible"] }, ex: { examples: [["She ", { target: will }, " come."], ["She'll ", { target: probably }, " come."], ["She ", { target: may }, " come."]] } }
+        - { level: A2, point: { en: Trap }, rule: { en: [{ term: may be }, " follows the subject; ", { term: maybe }, " starts a clause"] }, ex: { examples: [["He ", { target: may be }, " late."], [{ target: Maybe }, " he is late."]] } }
 
 sections:
   - title: { en: Overview }

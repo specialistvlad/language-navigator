@@ -21,17 +21,18 @@ cheatsheet:
         - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A0, point: "-teen", rule: { en: "13–19 add -teen and stress it; 13, 15 and 18 change their first part" }, ex: [thir, { stress: teen }, " ", { ipa: θɜːˈtiːn }, ", ", { letter: fif }, "teen, ", { letter: eigh }, teen] }
-        - { level: A0, point: "-ty", rule: { en: tens end in -ty and the stress is on the first part; forty has no u }, ex: [{ stress: thir }, "ty ", { ipa: ˈθɜːti }, ", ", { stress: for }, ty] }
-        - { level: A0, point: { en: "21–99" }, rule: { en: { pattern: [ten, { slot: hyphen }, { slot: unit }] } }, ex: "twenty-one, forty-five" }
-        - { level: A0, point: and, rule: { en: [and comes after hundred (, { variant: three hundred five, variety: en-US }, ")"] }, ex: ["two hundred ", { target: and }, " fifty"] }
-        - { level: A0, point: "hundred, thousand, million", rule: { en: stay singular after a number }, ex: ["two ", { target: hundred }, ", five ", { target: million }] }
-        - { level: A0, point: { en: Comma and point }, rule: { en: a comma separates thousands; a point separates decimals }, ex: { examples: ["1,500", { mapping: ["2.5", { numeral: ["two ", { target: point }, " five"], value: 2.5 }] }] } }
-        - { level: A0, point: { en: Phone numbers }, rule: { en: say each digit; 0 is oh; two equal digits are double }, ex: { mapping: ["077", oh double seven] } }
-        - { level: A0, point: { en: Ordinals }, rule: { en: "first, second, third; from 4 add -th" }, ex: [four, { ending: th }, ", six", { ending: th }] }
-        - { level: A0, point: { en: Ordinal spelling }, rule: { en: "five, nine, twelve and twenty change their spelling" }, ex: [fi, { letter: f }, "th, nin", { ending: th }, ", twel", { letter: f }, "th, twent", { letter: ie }, th] }
-        - { level: A0, point: { en: Short ordinals }, rule: { en: { pattern: [{ slot: number }, the last two letters of the word] } }, ex: ["1", { ending: st }, ", 2", { ending: nd }, ", 3", { ending: rd }, ", 4", { ending: th }] }
-        - { level: A0, point: { en: Compound ordinals }, rule: { en: only the last word changes }, ex: [twenty-, { target: first }, ", a hundred and ", { target: second }] }
+        - { level: A0, point: "0–12", rule: { en: ["each has its own word; ", { term: "-teen" }, " starts at 13"] }, ex: { examples: [{ target: zero }, { target: eleven }, { target: twelve }] } }
+        - { level: A0, point: "-teen", rule: { en: ["13–19 add stressed ", { term: "-teen" }, "; 13, 15 and 18 change their first part"] }, ex: { examples: [[{ target: [{ letter: thir }, { stress: teen }] }, " ", { ipa: θɜːˈtiːn }], { target: [{ letter: fif }, teen] }, { target: [{ letter: eigh }, teen] }] } }
+        - { level: A0, point: "-ty", rule: { en: ["tens end in ", { term: "-ty" }, " and the stress is on the first part"] }, ex: { examples: [[{ target: [{ stress: thir }, ty] }, " ", { ipa: ˈθɜːti }], { target: [{ stress: for }, ty] }] } }
+        - { level: A0, point: "21–99", rule: { en: { pattern: [ten, { slot: hyphen }, { slot: unit }] } }, ex: { examples: [{ target: twenty-one }, { target: forty-five }] } }
+        - { level: A0, point: "hundred, thousand, million", rule: { en: ["they stay singular after a number; ", { term: and }, " comes after ", { term: hundred }] }, ex: { examples: [["two ", { target: hundred }, " ", { target: and }, " fifty"], ["five ", { target: million }]] } }
+        - { level: A0, point: { en: Ordinals }, rule: { en: ["the order of things: first, second, third; from 4 add ", { term: "-th" }] }, ex: { examples: [["My flat is on the ", { target: second }, " floor."], ["the ", { target: [four, { ending: th }] }, " of July"]] } }
+        - { level: A0, point: { en: Short ordinals }, rule: { en: { pattern: [{ slot: number }, the last two letters of the word] } }, ex: { examples: [{ target: ["1", { ending: st }] }, { target: ["2", { ending: nd }] }, { target: ["3", { ending: rd }] }, { target: ["4", { ending: th }] }] } }
+        - { level: A0, point: { en: Compound ordinals }, rule: { en: only the last word changes }, ex: { examples: [["twenty-", { target: first }], ["a hundred and ", { target: second }]] } }
+        - { level: A0, point: { en: Phone numbers }, rule: { en: ["say each digit; 0 is ", { term: oh }, "; two equal digits are ", { term: double }] }, ex: { mapping: ["077", { numeral: [{ target: oh }, " ", { target: double }, " seven"], value: "077" }] } }
+        - { level: A0, point: { en: Comma and point }, rule: { en: a comma separates thousands; a point separates decimals }, ex: { examples: [{ target: "1,500" }, { mapping: ["2.5", { numeral: ["two ", { target: point }, " five"], value: 2.5 }] }] } }
+        - { level: A0, point: { en: Trap }, rule: { en: "five, nine, twelve and twenty change their spelling in ordinals" }, ex: { examples: [{ target: [fi, { letter: f }, th] }, { target: [nin, { ending: th }] }, { target: [twel, { letter: f }, th] }, { target: [twent, { letter: ie }, th] }] } }
+        - { level: A0, point: { en: Trap }, rule: { en: forty drops the u that fourteen keeps }, ex: { contrast: [fourteen, { target: forty }] } }
 
 sections:
   - title: { en: "0 to 12" }

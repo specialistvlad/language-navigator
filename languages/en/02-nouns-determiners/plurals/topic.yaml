@@ -21,17 +21,17 @@ cheatsheet:
         - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A0, point: { en: most nouns }, rule: { pattern: [{ ending: s }], follows: true }, ex: ["two ", { target: books }] }
+        - { level: A0, point: { en: Most nouns }, rule: { pattern: [{ ending: s }], follows: true }, ex: ["two ", { target: books }] }
         - { level: A0, point: "-s, -ss, -sh, -ch, -x, -z", rule: { pattern: [{ ending: es }], follows: true }, ex: { examples: [{ mapping: [bus, { target: buses }] }, { mapping: [box, { target: boxes }] }] } }
         - { level: A0, point: { en: { pattern: [{ slot: consonant }, "y"] } }, rule: { mapping: ["y", ies] }, ex: { mapping: [city, { target: cities }] } }
         - { level: A0, point: { en: { pattern: [{ slot: vowel }, "y"] } }, rule: { pattern: [{ ending: s }], follows: true }, ex: { mapping: [boy, { target: boys }] } }
-        - { level: A0, point: { en: irregular }, rule: { en: "no -s: man, woman, child, person" }, ex: ["three ", { target: children }] }
-        - { level: A0, point: people, rule: { en: "plural, takes a plural verb" }, ex: ["The people ", { target: are }, " nice."] }
-        - { level: A0, point: { en: adjectives }, rule: { en: stay the same }, ex: ["two ", { target: red }, " cars"] }
-        - { level: A1, point: { en: { alternatives: ["-o, -f", "-fe"] } }, rule: { en: [{ pattern: [some, es] }, "; ", { mapping: [{ alternatives: ["-f", "-fe"] }, ves] }] }, ex: { examples: [{ mapping: [potato, { target: potatoes }] }, { mapping: [knife, { target: knives }] }] } }
+        - { level: A1, point: { en: { alternatives: ["-o", "-f", "-fe"] } }, rule: { en: [{ pattern: [some, es] }, "; ", { mapping: [{ alternatives: ["-f", "-fe"] }, ves] }] }, ex: { examples: [{ mapping: [potato, { target: potatoes }] }, { mapping: [knife, { target: knives }] }] } }
+        - { level: A0, point: { en: Irregular }, rule: { en: "no -s: man, woman, child, person" }, ex: ["three ", { target: children }] }
         - { level: A1, point: { en: "foot, tooth, mouse" }, rule: { en: irregular }, ex: { examples: [{ target: feet }, { target: teeth }, { target: mice }] } }
-        - { level: A1, point: { en: "sheep, fish" }, rule: { en: same form }, ex: ["two ", { target: sheep }] }
         - { level: A1, point: "jeans, trousers, glasses", rule: { en: "plural only, plural verb" }, ex: ["My jeans ", { target: are }, " new."] }
+        - { level: A1, point: { en: Sound of -s }, rule: { en: [{ ipa: s }, " after voiceless sounds, ", { ipa: z }, " after voiced sounds, ", { ipa: ɪz }, " after ", { ipa: s z ʃ tʃ dʒ }] }, ex: { examples: [["cups ", { target: { ipa: kʌps } }], ["dogs ", { target: { ipa: dɒɡz } }], ["buses ", { target: { ipa: ˈbʌsɪz } }]] } }
+        - { level: A0, point: { en: Trap }, rule: { en: "people takes a plural verb" }, ex: ["The people ", { target: are }, " nice."] }
+        - { level: A1, point: { en: Trap }, rule: { en: "sheep and fish keep one form" }, ex: ["two ", { target: sheep }] }
 
 sections:
   - title: { en: "Form: regular plurals" }

@@ -15,15 +15,21 @@ summary:
 
 cheatsheet:
   content:
-    - type: paradigm
+    - type: usage
       columns:
-        - { key: form, label: { en: Form } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A2, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, ex: ["I ", { target: used to play }, " football."] }
-        - { level: A2, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, ex: ["I ", { target: didn't use to play }, " football."] }
-        - { level: A2, features: { polarity: pos, interrogativity: int }, form: { en: Question }, ex: [{ target: Did }, " you ", { target: use to play }, " football?"] }
-        - { level: A2, features: { interrogativity: decl, polarity: [pos, neg] }, form: { en: Short answer }, ex: { examples: [["Yes, I ", { target: did }, "."], ["No, I ", { target: didn't }, "."]] } }
+        - { level: A2, point: { en: Affirmative }, rule: { en: [{ pattern: [used to, { slot: V }] }, ": the same for every subject"] }, ex: ["She ", { target: used to live }, " in Rome."] }
+        - { level: A2, point: { en: Negative }, rule: { pattern: [didn't use to, { slot: V }] }, ex: ["We ", { target: didn't use to have }, " a car."] }
+        - { level: A2, point: { en: Question }, rule: { pattern: [Did, { slot: subject }, use to, { slot: V }] }, ex: { exchange: [[{ target: Did }, " you ", { target: use to }, " walk to school?"], ["Yes, I ", { target: did }, "."]] } }
+        - { level: A2, point: { en: Use }, rule: { en: past habits and states that are over now }, ex: { examples: [["I ", { target: used to walk }, " to school."], ["We ", { target: used to have }, " a dog."]] } }
+        - { level: A2, point: { en: Past simple }, rule: { en: "a single event, or a stated time or number" }, ex: ["I ", { target: lived }, " in Paris for two years."] }
+        - { level: A2, point: { en: Position }, rule: { en: [{ term: always }, ", ", { term: often }, " and ", { term: never }, " go before ", { term: used to }] }, ex: ["He ", { target: always used to }, " be late."] }
+        - { level: A2, point: { en: Sound }, rule: { en: ["the d is silent: ", { term: used to }, " sounds like ", { sound: use-ta }] }, ex: ["I ", { target: used to }, " swim."] }
+        - { level: A2, point: { en: Trap }, rule: { en: "the affirmative keeps the d: used to" }, ex: ["I ", { target: used to }, " play football."] }
+        - { level: A2, point: { en: Trap }, rule: { en: "after did and didn't the d goes: use to" }, ex: ["I didn't ", { target: use to }, " like it."] }
 
 sections:
   - title: { en: "Form: affirmative" }

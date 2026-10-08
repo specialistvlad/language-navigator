@@ -17,14 +17,16 @@ cheatsheet:
   content:
     - type: usage
       columns:
-        - { key: part, label: { en: Part } }
+        - { key: point, label: { en: Point } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A0, part: { en: "1. Subject" }, ex: [{ target: My sister }, " buys bread in the shop every day."] }
-        - { level: A0, part: { en: "2. Verb" }, ex: ["My sister ", { target: buys }, " bread in the shop every day."] }
-        - { level: A0, part: { en: "3. Object" }, ex: ["My sister buys ", { target: bread }, " in the shop every day."] }
-        - { level: A1, part: { en: "4. Place" }, ex: ["My sister buys bread ", { target: in the shop }, " every day."] }
-        - { level: A1, part: { en: "5. Time" }, ex: ["My sister buys bread in the shop ", { target: every day }, "."] }
+        - { level: A0, point: { en: Order }, rule: { pattern: [{ slot: subject }, { slot: verb }, { slot: { en: object } }, { slot: { en: place } }, { slot: { en: time } }] }, ex: [{ target: My sister buys bread in the shop every day }, "."] }
+        - { level: A0, point: { en: Subject }, rule: { en: the subject is always present }, ex: [{ target: It }, " is cold."] }
+        - { level: A0, point: { en: Adjective }, rule: { en: comes before the noun }, ex: ["I have a ", { target: red car }, "."] }
+        - { level: A1, point: { en: Time first }, rule: { en: "a time phrase can start the sentence, often with a comma" }, ex: [{ target: Last summer }, ", we went to Italy."] }
+        - { level: A1, point: { en: Frequency adverb }, rule: { en: "before the main verb, after be" }, ex: { examples: [["I ", { target: always }, " eat breakfast."], ["She is ", { target: always }, " late."]] } }
+        - { level: A1, point: { en: Trap }, rule: { en: place comes before time }, ex: ["I went ", { target: to London yesterday }, "."] }
 
 sections:
   - title: { en: Overview }

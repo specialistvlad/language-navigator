@@ -21,18 +21,17 @@ cheatsheet:
         - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, point: in, rule: { en: "inside a space, town, country" }, ex: { examples: [[{ target: in }, " the bag"], [{ target: in }, " Madrid"]] } }
+        - { level: A1, point: in, rule: { en: "inside a space, in a town or country" }, ex: { examples: [[{ target: in }, " the bag"], [{ target: in }, " Madrid"]] } }
         - { level: A1, point: "on", rule: { en: touching a surface }, ex: { examples: [[{ target: "on" }, " the table"], [{ target: "on" }, " the wall"]] } }
         - { level: A1, point: at, rule: { en: a point or a place for its purpose }, ex: { examples: [[{ target: at }, " the door"], [{ target: at }, " home"]] } }
-        - { level: A1, point: { en: fixed phrases }, rule: { en: "at home, at work, at school, in bed: no the" }, ex: ["She's ", { target: at }, " work."] }
-        - { level: A1, point: "behind, near", rule: { en: no of }, ex: ["I live ", { target: near }, " the park."] }
-        - { level: A1, point: "next to, in front of", rule: { en: keep to and of }, ex: { examples: [[{ target: next to }, " the café"], [{ target: in front of }, " the school"]] } }
-        - { level: A1, point: { alternatives: [to, from] }, rule: { en: movement to and from a place }, ex: ["We go ", { target: to }, " the beach."] }
-        - { level: A1, point: home, rule: { en: "go home: no to" }, ex: ["I go ", { target: home }, "."] }
-        - { level: A2, point: { examples: [{ mapping: [in, into] }, { mapping: ["on", onto] }, { mapping: [at, to] }] }, rule: { en: place becomes movement }, ex: ["She goes ", { target: into }, " the kitchen."] }
-        - { level: A2, point: opposite, rule: { en: "facing, no of" }, ex: ["The hotel is ", { target: opposite }, " the station."] }
-        - { level: A2, point: arrive, rule: { en: { alternatives: [in a city or country, at a building] } }, ex: ["We arrive ", { target: in }, " Paris."] }
-        - { level: A2, point: { en: transport }, rule: { en: { examples: [{ takes: ["bus, train, plane, bike", "on"] }, { takes: ["car, taxi", in] }] } }, ex: ["I get ", { target: "on" }, " the bus."] }
+        - { level: A1, point: { en: Fixed phrases }, rule: { en: ["without ", { term: the }, ": at home, at work, in bed, to school"] }, ex: { examples: [["She's ", { target: at work }, "."], ["I go ", { target: to work }, "."]] } }
+        - { level: A1, point: "behind, near", rule: { en: go straight before the noun }, ex: ["I live ", { target: near }, " the park."] }
+        - { level: A1, point: { alternatives: [to, from] }, rule: { en: movement to and from a place; home follows go directly }, ex: { examples: [["We go ", { target: to }, " the beach."], ["I go ", { target: home }, "."]] } }
+        - { level: A2, point: { examples: [{ mapping: [in, into] }, { mapping: ["on", onto] }, { mapping: [at, to] }] }, rule: { en: place becomes movement }, ex: { examples: [["She goes ", { target: into }, " the kitchen."], ["The cat jumps ", { target: onto }, " the sofa."]] } }
+        - { level: A2, point: "along, across, through", rule: { en: the path of the movement }, ex: { examples: [["We walk ", { target: across }, " the bridge."], ["The train goes ", { target: through }, " a tunnel."]] } }
+        - { level: A2, point: arrive, rule: { en: [{ term: arrive in }, " a city or country; ", { term: arrive at }, " a building"] }, ex: { examples: [["We arrive ", { target: in }, " Paris."], ["I arrive ", { target: at }, " the office."]] } }
+        - { level: A2, point: { en: Transport }, rule: { en: [{ term: get on }, " a bus, train, plane, bike; ", { term: get in }, " a car, taxi"] }, ex: { examples: [["I get ", { target: "on" }, " the bus."], ["She gets ", { target: in }, " the taxi."]] } }
+        - { level: A1, point: { en: Trap }, rule: { en: [{ term: next to }, " and ", { term: in front of }, " keep ", { term: to }, " and ", { term: of }] }, ex: { examples: [[{ target: next to }, " the café"], [{ target: in front of }, " the school"]] } }
 
 sections:
   - title: { en: "Place: where something is" }

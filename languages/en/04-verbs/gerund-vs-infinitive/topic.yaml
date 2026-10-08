@@ -17,20 +17,20 @@ cheatsheet:
   content:
     - type: usage
       columns:
-        - { key: pattern, label: { en: Pattern } }
-        - { key: verbs, label: { en: Verbs } }
+        - { key: form, label: { en: Form } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: B1, pattern: { pattern: [{ slot: verb }, { slot: "-ing" }] }, verbs: "enjoy, finish, mind, avoid, suggest, keep", ex: ["I ", { target: enjoy cooking }, "."] }
-        - { level: B1, pattern: { pattern: [{ slot: verb }, to, { slot: V }] }, verbs: "want, decide, hope, plan, need, would like", ex: ["They ", { target: decided to move }, "."] }
-        - { level: B1, pattern: { pattern: [{ alternatives: [want, need, would like] }, { slot: person }, to, { slot: V }] }, verbs: "want, need, would like", ex: ["I ", { target: want you to come }, "."] }
-        - { level: B1, pattern: { pattern: [{ slot: { en: preposition } }, { slot: "-ing" }] }, verbs: "interested in, before, without", ex: ["Wash your hands ", { target: before eating }, "."] }
-        - { level: B1, pattern: "-ing as subject", ex: [{ target: Swimming }, " is good for you."] }
-        - { level: B1, pattern: { pattern: [look forward to, { slot: "-ing" }] }, verbs: to is a preposition, ex: ["I look forward to ", { target: seeing }, " you."] }
-        - { level: B1, pattern: { pattern: [stop, { alternatives: [{ slot: "-ing" }, { pattern: [to, { slot: V }] }] }] }, verbs: stop, ex: { examples: [["He ", { target: stopped smoking }, "."], ["He ", { target: stopped to smoke }, "."]] } }
-        - { level: B1, pattern: { pattern: [remember, { alternatives: [{ slot: "-ing" }, { pattern: [to, { slot: V }] }] }] }, verbs: remember, ex: { examples: [["I ", { target: remember locking }, " it."], [{ target: Remember to lock }, " it."]] } }
-        - { level: B1, pattern: { pattern: [try, { alternatives: [{ slot: "-ing" }, { pattern: [to, { slot: V }] }] }] }, verbs: try, ex: { examples: [[{ target: Try adding }, " salt."], ["I ", { target: tried to open }, " it."]] } }
-        - { level: B1, pattern: either form, verbs: "like, love, hate, prefer", ex: { examples: [["I ", { target: like }, " swimming."], ["I ", { target: like }, " to swim."]] } }
+        - { level: B1, form: { pattern: [{ slot: verb }, { slot: "-ing" }] }, rule: { en: "after enjoy, finish, mind, avoid, suggest" }, ex: ["I ", { target: enjoy cooking }, "."] }
+        - { level: B1, form: { pattern: [{ slot: verb }, to, { slot: V }] }, rule: { en: "after want, decide, hope, plan, need" }, ex: ["They ", { target: decided to move }, "."] }
+        - { level: B1, form: { pattern: [{ alternatives: [want, need, would like] }, { slot: person }, to, { slot: V }] }, rule: { en: a person can come before to }, ex: ["I ", { target: want you to come }, "."] }
+        - { level: B1, form: { pattern: [{ slot: { en: preposition } }, { slot: "-ing" }] }, rule: { en: "after a preposition: interested in, before, without" }, ex: ["Wash your hands ", { target: before eating }, "."] }
+        - { level: B1, form: { en: [{ term: "-ing" }, " as the subject"] }, rule: { en: the -ing form works as a noun }, ex: [{ target: Swimming }, " is good for you."] }
+        - { level: B1, form: { pattern: [look forward to, { slot: "-ing" }] }, rule: { en: [{ term: to }, " is a preposition here"] }, ex: ["I look forward to ", { target: seeing }, " you."] }
+        - { level: B1, form: { pattern: [stop, { alternatives: [{ slot: "-ing" }, { pattern: [to, { slot: V }] }] }] }, rule: { en: [{ term: "-ing" }, " means he quit; ", { term: to }, " means he paused in order to smoke"] }, ex: { examples: [["He ", { target: stopped smoking }, "."], ["He ", { target: stopped to smoke }, "."]] } }
+        - { level: B1, form: { pattern: [remember, { alternatives: [{ slot: "-ing" }, { pattern: [to, { slot: V }] }] }] }, rule: { en: [{ term: "-ing" }, " recalls the action; ", { term: to }, " means do not forget"] }, ex: { examples: [["I ", { target: remember locking }, " it."], [{ target: Remember to lock }, " it."]] } }
+        - { level: B1, form: { pattern: [try, { alternatives: [{ slot: "-ing" }, { pattern: [to, { slot: V }] }] }] }, rule: { en: [{ term: "-ing" }, " tests it; ", { term: to }, " makes an effort"] }, ex: { examples: [[{ target: Try adding }, " salt."], ["I ", { target: tried to open }, " it."]] } }
+        - { level: B1, form: { en: Either form }, rule: { en: "like, love, hate, prefer: almost the same meaning" }, ex: { examples: [["I ", { target: like }, " swimming."], ["I ", { target: like }, " to swim."]] } }
 
 sections:
   - title: { en: ["Form: ", { pattern: [{ slot: verb }, { slot: "-ing" }] }] }

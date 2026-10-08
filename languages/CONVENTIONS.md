@@ -100,7 +100,7 @@ section in the menu.
 
 - A written topic's range comes from its data. A planned topic's entry in `curriculum.yaml`
   gives `levels`, one level or a range such as `A1-B1`, until its topic file exists.
-- The cheatsheet's range lies within the range of the sections.
+- The cheatsheet holds a row at every level its sections hold, and at no other.
 - `npm run check` enforces these rules; `npm test` and `npm run e2e` test the pages built from them.
 
 **Levels on the page.**
@@ -295,12 +295,19 @@ The renderer writes the symbols from the structures and marks of §12:
 
 ## 8. Cheatsheets
 
-Every topic has one `cheatsheet`: the whole topic in one table, on one screen. Each row carries its
-`level`, and the cheatsheet's range runs from its lowest row to its highest (§3).
+Every topic has one `cheatsheet`: the whole topic in one table, on one screen, so a learner who
+reads only the cheatsheet builds the forms and uses them right. Each row carries its `level`, the
+level of the facts it sums up, and the cheatsheet holds a row at every level its sections hold (§3).
 
 - Every fact in it appears in the sections.
-- One table: forms and patterns, the key rules and the top traps. A topic built on a verb pattern
-  uses a slot paradigm (§7).
+- Its rows run in this order: the form, as a paradigm or patterns; the use of each form; the one to
+  three rules that matter most; and at most two rows keyed **Trap**, each the most common mistake
+  written as the correct form, with its example.
+- 4 to 12 rows, a rule cell of about 12 words at most; a slot paradigm keeps a row per person.
+- Its shape follows the topic. A topic built on a verb pattern uses a slot paradigm (§7), a closed
+  set of forms a `paradigm` of them, and every other topic a `usage` table of three columns: the
+  key, **Form** when every row is a form, **Use** when every row is a use, **Point** when they mix;
+  **Rule**, or **Meaning** for what a form means; and **Example**, its form marked `target`.
 - On a topic page it is section **00 Cheatsheet**. The View switch shows it alone (**Cheatsheet**)
   or followed by sections 01 onwards (**Extended**).
 

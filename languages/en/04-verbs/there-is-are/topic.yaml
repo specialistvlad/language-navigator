@@ -18,13 +18,16 @@ cheatsheet:
     - type: paradigm
       columns:
         - { key: form, label: { en: Form } }
-        - { key: singular, label: { en: Singular }, features: { number: sg } }
+        - { key: singular, label: { en: Singular }, features: { number: sg, countability: count } }
         - { key: plural, label: { en: Plural }, features: { number: pl } }
+        - { key: uncountable, label: { en: Uncountable }, features: { countability: mass } }
       rows:
-        - { level: A1, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, singular: ["There ", { target: is }, " a park."], plural: ["There ", { target: are }, " two parks."] }
-        - { level: A1, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, singular: ["There ", { target: isn't }, " a park."], plural: ["There ", { target: aren't }, " any parks."] }
-        - { level: A1, features: { polarity: pos, interrogativity: int }, form: { en: Question }, singular: [{ target: Is there }, " a park?"], plural: [{ target: Are there }, " any parks?"] }
-        - { level: A1, features: { interrogativity: decl, polarity: [pos, neg] }, form: { en: Short answer }, singular: { alternatives: [["Yes, there ", { target: is }, "."], ["No, there ", { target: isn't }, "."]] }, plural: { alternatives: [["Yes, there ", { target: are }, "."], ["No, there ", { target: aren't }, "."]] } }
+        - { level: A1, features: { polarity: pos, interrogativity: decl }, form: { en: Affirmative }, singular: ["There ", { target: is }, " a park."], plural: ["There ", { target: are }, " two parks."], uncountable: ["There ", { target: is }, " some milk."] }
+        - { level: A1, features: { polarity: pos, interrogativity: decl, contraction: short }, form: { en: Short form }, singular: [There', { target: s }, " a park."], uncountable: [There', { target: s }, " some milk."] }
+        - { level: A1, features: { polarity: neg, interrogativity: decl }, form: { en: Negative }, singular: ["There ", { target: isn't }, " a park."], plural: ["There ", { target: aren't }, " any parks."], uncountable: ["There ", { target: isn't }, " any milk."] }
+        - { level: A1, features: { polarity: pos, interrogativity: int }, form: { en: Question }, singular: [{ target: Is there }, " a park?"], plural: [{ target: Are there }, " any parks?"], uncountable: [{ target: Is there }, " any milk?"] }
+        - { level: A1, features: { polarity: pos, interrogativity: int }, form: { en: "How many, how much" }, plural: ["How many parks ", { target: are there }, "?"], uncountable: ["How much milk ", { target: is there }, "?"] }
+        - { level: A1, features: { interrogativity: decl, polarity: [pos, neg] }, form: { en: Short answer }, singular: { alternatives: [["Yes, there ", { target: is }, "."], ["No, there ", { target: isn't }, "."]] }, plural: { alternatives: [["Yes, there ", { target: are }, "."], ["No, there ", { target: aren't }, "."]] }, uncountable: { alternatives: [["Yes, there ", { target: is }, "."], ["No, there ", { target: isn't }, "."]] } }
 
 sections:
   - title: { en: Overview }

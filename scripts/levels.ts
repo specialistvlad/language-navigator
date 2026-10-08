@@ -29,7 +29,6 @@ export function parseRange(text: string | undefined): Range | null {
 }
 
 export const contains = (range: Range, level: string): boolean => lv(level) >= lv(range.from) && lv(level) <= lv(range.to);
-export const inside = (inner: Range, outer: Range): boolean => contains(outer, inner.from) && contains(outer, inner.to);
 
 // The leaves of a block that render in an explanation language, or in any when none is given: a
 // paragraph, a list item, a table row, an errors row.

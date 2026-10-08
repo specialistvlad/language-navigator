@@ -18,21 +18,19 @@ cheatsheet:
     - type: usage
       columns:
         - { key: point, label: { en: Point } }
-        - { key: rule, label: { en: Tag } }
+        - { key: rule, label: { en: Rule } }
         - { key: ex, label: { en: Example } }
       rows:
-        - { level: B1, point: { en: Positive statement }, rule: { en: negative tag }, ex: ["It's cold, ", { target: isn't it }, "?"] }
-        - { level: B1, point: { en: Negative statement }, rule: { en: positive tag }, ex: ["It isn't cold, ", { target: is it }, "?"] }
+        - { level: B1, point: { en: Form }, rule: { en: "positive statement, negative tag; negative statement, positive tag" }, ex: { examples: [["It's cold, ", { target: isn't it }, "?"], ["It isn't cold, ", { target: is it }, "?"]] } }
+        - { level: B1, point: { en: Pronoun }, rule: { en: [{ pattern: [auxiliary, pronoun] }, "; the pronoun replaces the subject"] }, ex: ["Tom is late, isn't ", { target: he }, "?"] }
         - { level: B1, point: be, rule: { alternatives: [isn't, aren't, wasn't, weren't] }, ex: ["They ", { target: were }, " late, ", { target: weren't they }, "?"] }
-        - { level: B1, point: Present simple, rule: { alternatives: [don't, doesn't] }, ex: ["She ", { target: works }, " here, ", { target: doesn't she }, "?"] }
-        - { level: B1, point: Past simple, rule: didn't, ex: ["He ", { target: left }, " early, ", { target: didn't he }, "?"] }
-        - { level: B1, point: { en: "have, modals" }, rule: { en: repeat the auxiliary or modal }, ex: ["You ", { target: can }, " swim, ", { target: can't you }, "?"] }
-        - { level: B1, point: { en: Pronoun }, rule: { en: the tag ends with a pronoun that replaces the subject }, ex: ["Tom is late, ", { target: isn't he }, "?"] }
+        - { level: B1, point: { en: Other verbs }, rule: { en: ["present: ", { alternatives: [don't, doesn't] }, "; past: ", didn't] }, ex: { examples: [["She ", { target: works }, " here, ", { target: doesn't she }, "?"], ["He ", { target: left }, " early, ", { target: didn't he }, "?"]] } }
+        - { level: B1, point: "have, modals", rule: { en: repeat the auxiliary or modal }, ex: { examples: [["You've ", { target: finished }, ", ", { target: haven't you }, "?"], ["You ", { target: can }, " swim, ", { target: can't you }, "?"]] } }
         - { level: B1, point: I am, rule: aren't I, ex: [I', { target: m }, " right, ", { target: aren't I }, "?"] }
-        - { level: B1, point: Let's, rule: shall we, ex: [{ target: Let's }, " go, ", { target: shall we }, "?"] }
-        - { level: B1, point: { en: Command }, rule: will you, ex: [{ target: Open }, " the door, ", { target: will you }, "?"] }
-        - { level: B1, point: "nobody, nothing, never", rule: { en: "the statement is negative, so the tag is positive" }, ex: [{ target: Nobody }, " called, ", { target: did they }, "?"] }
-        - { level: B1, point: { en: Intonation }, rule: { en: ["falling ", { intonation: fall }, " = you are sure; rising ", { intonation: rise }, " = a real question"] }, ex: ["You haven't seen my keys, ", { target: have you }, "? ", { intonation: rise }] }
+        - { level: B1, point: { en: "Let's, command" }, rule: { en: [{ takes: [Let's, shall we] }, "; ", { takes: [command, will you] }] }, ex: { examples: [[{ target: Let's }, " go, ", { target: shall we }, "?"], [{ target: Open }, " the door, ", { target: will you }, "?"]] } }
+        - { level: B1, point: { en: Use }, rule: { en: "check something, make conversation or ask politely" }, ex: ["You're from Madrid, ", { target: aren't you }, "?"] }
+        - { level: B1, point: { en: Intonation }, rule: { en: ["falling ", { intonation: fall }, ": you are sure; rising ", { intonation: rise }, ": a real question"] }, ex: { examples: [["It's a lovely day, ", { target: isn't it }, "? ", { intonation: fall }], ["You haven't seen my keys, ", { target: have you }, "? ", { intonation: rise }]] } }
+        - { level: B1, point: { en: Trap }, rule: { en: [{ alternatives: [{ term: nobody }, { term: nothing }, { term: never }] }, " make the statement negative: positive tag"] }, ex: [{ target: Nobody }, " called, ", { target: did they }, "?"] }
 
 sections:
   - title: { en: "Form: auxiliary and pronoun" }

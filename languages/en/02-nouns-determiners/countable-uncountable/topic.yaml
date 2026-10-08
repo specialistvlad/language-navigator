@@ -15,16 +15,20 @@ summary:
 
 cheatsheet:
   content:
-    - type: comparison
+    - type: usage
       columns:
         - { key: point, label: { en: Point } }
-        - { key: countable, label: { en: Countable }, features: { countability: count } }
-        - { key: uncountable, label: { en: Uncountable }, features: { countability: mass } }
+        - { key: rule, label: { en: Rule } }
+        - { key: ex, label: { en: Example } }
       rows:
-        - { level: A1, point: { en: Meaning }, countable: { en: things you count one by one }, uncountable: { en: "masses, materials, ideas" } }
-        - { level: A1, point: { alternatives: [a, an] }, countable: [{ target: a }, " book"], uncountable: { en: ["no ", { alternatives: [a, an] }, ": water"] } }
-        - { level: A1, point: Plural, countable: [book, { ending: s }], uncountable: { en: no plural } }
-        - { level: A1, point: { en: Verb }, countable: { alternatives: [["The book ", { target: is }, " new."], ["The books ", { target: are }, " new."]] }, uncountable: ["The water ", { target: is }, " cold."] }
+        - { level: A1, point: { en: Countable }, rule: { en: [{ alternatives: [a, an] }, " in the singular, -s in the plural"] }, ex: { examples: [{ target: a book }, ["two ", { target: books }]] } }
+        - { level: A1, point: { en: Uncountable }, rule: { en: ["masses, materials, ideas: no ", { alternatives: [a, an] }, ", no plural"] }, ex: ["I like ", { target: music }, "."] }
+        - { level: A1, point: { en: Verb }, rule: { en: "a singular verb, also for news" }, ex: { examples: [["The water ", { target: is }, " cold."], ["The news ", { target: is }, " good."]] } }
+        - { level: A1, point: { en: Unit }, rule: { en: "count it with a unit; the unit takes the plural" }, ex: { examples: [["a ", { target: glass of }, " water"], ["a ", { target: piece of }, " advice"], ["two ", { target: cups of }, " coffee"]] } }
+        - { level: A2, point: { en: Groups of things }, rule: { en: "groups of things are uncountable too" }, ex: { examples: [{ target: furniture }, { target: luggage }, { target: homework }] } }
+        - { level: A2, point: { en: Both }, rule: { en: "some nouns are both; the meaning changes" }, ex: { contrast: [["I like ", { target: coffee }, "."], ["Two ", { target: coffees }, ", please."]] } }
+        - { level: A1, point: { en: Trap }, rule: { en: "advice and information: some, or a piece of" }, ex: { alternatives: [{ target: a piece of advice }, { target: some advice }] } }
+        - { level: A1, point: { en: Trap }, rule: { en: [{ term: work }, " is uncountable; a ", { term: job }, " is countable"] }, ex: ["She has a good ", { target: job }, "."] }
 
 sections:
   - title: { en: Overview }
