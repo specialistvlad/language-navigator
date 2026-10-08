@@ -1,29 +1,16 @@
 // Topic pages: the cheatsheet as section 00, the guide in numbered sections, and the rail beside them.
-import { type Explain, say, topicTitle, type TopicRef } from "../../../scripts/lib.ts";
-import { join, refRange } from "../../../scripts/levels.ts";
+import { type Explain, say } from "../../../scripts/lib.ts";
+import { join } from "../../../scripts/levels.ts";
 import { alternates, readChoices, type Track } from "../context.ts";
-import { type GuideSection, guideSections } from "../guide.ts";
+import { guideSections } from "../guide.ts";
 import { GITHUB_ICON, PRINT_ICON } from "../icons.ts";
 import { controls, page } from "../layout.ts";
 import { trackNav } from "../nav.ts";
+import { pagers, upNext } from "../sequence.ts";
 import { lead } from "../../../scripts/content.ts";
-import { badge, editUrl, levelAttrs, listBadge, slugify } from "../parts.ts";
+import { anchorIds, badge, editUrl, levelAttrs, listBadge } from "../parts.ts";
 import { escapeHtml, inline } from "../render.ts";
 import { topicUrl } from "../urls.ts";
-
-// Anchor ids for the guide sections, unique within the page.
-function anchors(parts: GuideSection[]): Map<GuideSection, string> {
-  const ids = new Set<string>();
-  return new Map(
-    parts.map((s) => {
-      let id = slugify(s.title);
-      if (id === "") id = "section";
-      while (ids.has(id)) id += "-";
-      ids.add(id);
-      return [s, id];
-    }),
-  );
-}
 
 // What a view shows when the level filter sits below everything in it: a note and a button that
 // sets the level where the view starts. views.css shows it for its view below that level.
@@ -36,7 +23,7 @@ function filterEmpty(view: "cheatsheet" | "extended", level: string, explain: Ex
 export function topicPages(track: Track): void {
   const { ctx, lang, explain, t, title: trackTitle, written } = track;
   const { o } = ctx;
-  for (const [index, ref] of written.entries()) {
+  for (const ref of written) {
     const topic = ref.topic;
     if (topic === null) continue;
     const rctx = { ref, explain, refs: ctx.refs, link: ctx.link };
@@ -45,7 +32,8 @@ export function topicPages(track: Track): void {
     if (range === null) continue;
     const sheetFrom = all.find((s) => s.kind === "cheatsheet")?.range.from ?? range.from;
     const empty = filterEmpty("cheatsheet", sheetFrom, explain) + filterEmpty("extended", range.from, explain);
-    const idOf = anchors(all);
+    const ids = anchorIds(all.map((s) => s.title));
+    const idOf = new Map(all.map((s, i) => [s, ids[i] ?? ""]));
     const sections = all
       .map((s) => {
         const cls = s.kind === "cheatsheet" ? "part cheatsheet" : "part";
@@ -61,7 +49,7 @@ export function topicPages(track: Track): void {
       const guide = s.kind === "cheatsheet" ? "" : ' class="guide"';
       return `<li${guide}${levelAttrs(s.range)}><a href="#${idOf.get(s) ?? ""}"><span class="name">${escapeHtml(s.title)}</span>${listBadge(s.range)}</a></li>`;
     });
-    const rail = `<h4>${escapeHtml(t.onThisPage)}</h4><ol class="toc">${tocItems.join("")}</ol>${upNext(track, written.slice(index + 1), ref)}`;
+    const rail = `<h4>${escapeHtml(t.onThisPage)}</h4><ol class="toc">${tocItems.join("")}</ol>${upNext(track, ref)}`;
     const actions = [
       `<a class="tool edit" href="${editUrl(ref.path)}" rel="noopener" title="${escapeHtml(t.editTitle)}">${escapeHtml(t.editOn)}${GITHUB_ICON}<span class="sr-only">GitHub</span></a>`,
       `<button class="tool" id="print" type="button" title="${escapeHtml(t.print)}" aria-label="${escapeHtml(t.print)}">${PRINT_ICON}</button>`,
@@ -84,24 +72,12 @@ export function topicPages(track: Track): void {
           level: true,
           view: true,
         }),
-        nav: trackNav(ctx.refs, explain, lang, ref),
+        nav: trackNav(track, ref),
         rail,
-        main: `<article class="doc${range.from === range.to ? " one-level" : ""}">${head}${intro}${empty}<div class="sections lanes">${sections}</div></article>`,
+        main: `<article class="doc${range.from === range.to ? " one-level" : ""}">${pagers(track, ref, "top")}${head}${intro}${empty}<div class="sections lanes">${sections}</div>${pagers(track, ref, "bottom")}</article>`,
         dev: o.dev,
         siteUrl: o.siteUrl,
       }),
     );
   }
-}
-
-// Up next: the following written topic of the same language, with its first sentence and range.
-function upNext(track: Track, after: TopicRef[], ref: TopicRef): string {
-  const { lang, explain, t } = track;
-  const next = after.find((r) => r.lang === ref.lang);
-  const nextTopic = next?.topic;
-  const nextRange = next ? refRange(next, explain) : null;
-  return next && nextTopic
-    ? `<h4>${escapeHtml(t.upNext)}</h4><a class="next" href="${topicUrl(explain, lang, next)}"><strong>${escapeHtml(topicTitle(next, explain))}</strong>` +
-        `<span class="summary">${escapeHtml(lead(nextTopic.summary[explain] ?? ""))}</span>${listBadge(nextRange)}</a>`
-    : "";
 }

@@ -1,6 +1,6 @@
 # Roadmap
 
-Project phases. The topic plan, in study order, lives in
+Project phases. The topic plan, by category and along the study path, lives in
 [languages/curriculum.yaml](languages/curriculum.yaml); each topic's status lives in its
 `topic.yaml` and shows in the web app.
 

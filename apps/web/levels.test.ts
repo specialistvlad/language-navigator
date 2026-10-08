@@ -103,7 +103,7 @@ describe.each(topicPages)("%s", (path) => {
       expect(li.querySelector(".lvl")?.textContent).toBe(label(from(li), to(li)));
       expect(li.querySelector(".lvl.pair")).not.toBeNull();
     }
-    const current = doc.querySelector(".sidebar a.on");
+    const current = doc.querySelector('.nav-list[data-order="categories"] a.on');
     expect(current === null ? "" : label(from(current), to(current))).toBe(rangeOf(sections));
     // A menu section covers the topics listed under it.
     let heading: Element | null = null;
@@ -111,7 +111,8 @@ describe.each(topicPages)("%s", (path) => {
     const close = (): void => {
       if (heading) expect(label(from(heading), to(heading))).toBe(rangeOf(under));
     };
-    for (const el of doc.querySelectorAll(".sidebar h4, .sidebar a[data-level], .sidebar .todo")) {
+    const menu = '.nav-list[data-order="categories"]';
+    for (const el of doc.querySelectorAll(`${menu} h4, ${menu} a[data-level], ${menu} .todo`)) {
       if (el.tagName === "H4") {
         close();
         [heading, under] = [el, []];

@@ -120,3 +120,51 @@
   padding: 1px 5px;
   border-radius: 4px;
 }
+
+/* Previous and next topic, above the title and below the guide */
+.pagers.top {
+  margin-bottom: 20px;
+}
+.pagers.bottom {
+  margin-top: 40px;
+}
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.pager[hidden] {
+  display: none;
+}
+.pager a,
+.pager .off {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 48%;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  text-decoration: none;
+}
+.pager a:hover {
+  background: var(--surface-2);
+}
+/* Nowhere to go: the side stays in place, inactive */
+.pager .off {
+  border-style: dashed;
+  color: var(--muted);
+  opacity: 0.55;
+}
+.pager .pager-next {
+  margin-left: auto;
+  text-align: right;
+}
+.pager .dir {
+  font-size: 12px;
+  color: var(--muted);
+}
+.pager .title {
+  font-weight: 600;
+}

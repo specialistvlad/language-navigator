@@ -1,5 +1,6 @@
 # yaml-language-server: $schema=schema/curriculum.schema.json
-# Every planned topic of every language being learned, in study order.
+# Every planned topic of every language being learned: sections group the topics by category,
+# and the path orders them for study, level by level.
 
 languages:
   - code: en
@@ -80,3 +81,89 @@ languages:
         topics:
           - { slug: time-in-on-at }
           - { slug: place-movement }
+    # The study path: per level, the topics to study at that level, in order. A topic has a step at
+    # every level it holds; the menu's By level grouping and Up next follow it.
+    path:
+      A0:
+        - en.foundations.alphabet-spelling
+        - en.foundations.pronunciation-ipa
+        - en.foundations.numbers
+        - en.pronouns.personal-pronouns
+        - en.verbs.to-be
+        - en.sentence-building.word-order
+        - en.nouns-determiners.demonstratives-this-that
+        - en.nouns-determiners.plurals
+        - en.foundations.days-months-dates
+        - en.foundations.telling-time
+      A1:
+        - en.foundations.pronunciation-ipa
+        - en.pronouns.personal-pronouns
+        - en.nouns-determiners.articles-a-an-the
+        - en.nouns-determiners.plurals
+        - en.nouns-determiners.demonstratives-this-that
+        - en.verbs.imperative
+        - en.adjectives-adverbs.adjective-order
+        - en.verbs.have-have-got
+        - en.nouns-determiners.possessive-s
+        - en.verbs.there-is-are
+        - en.prepositions.place-movement
+        - en.modals.can-could
+        - en.verbs.to-be
+        - en.tenses.simple-tenses
+        - en.adjectives-adverbs.adverbs-frequency-manner
+        - en.sentence-building.word-order
+        - en.sentence-building.questions-negatives
+        - en.prepositions.time-in-on-at
+        - en.foundations.telling-time
+        - en.nouns-determiners.countable-uncountable
+        - en.nouns-determiners.quantifiers-some-any-much-many
+        - en.verbs.irregular-verbs-table
+        - en.tenses.continuous-tenses
+        - en.modals.would
+        - en.tenses.future-forms
+        - en.sentence-building.conjunctions-linkers
+        - en.tenses.tense-map
+      A2:
+        - en.verbs.irregular-verbs-table
+        - en.tenses.continuous-tenses
+        - en.sentence-building.conjunctions-linkers
+        - en.tenses.used-to
+        - en.adjectives-adverbs.comparatives-superlatives
+        - en.adjectives-adverbs.adjective-order
+        - en.adjectives-adverbs.adverbs-frequency-manner
+        - en.prepositions.place-movement
+        - en.nouns-determiners.countable-uncountable
+        - en.nouns-determiners.quantifiers-some-any-much-many
+        - en.nouns-determiners.articles-a-an-the
+        - en.modals.can-could
+        - en.modals.must-have-to
+        - en.modals.should
+        - en.tenses.future-forms
+        - en.tenses.simple-tenses
+        - en.verbs.to-be
+        - en.tenses.perfect-tenses
+        - en.modals.may-might
+        - en.sentence-building.conditionals-0-1-2
+        - en.pronouns.indefinite-pronouns
+        - en.pronouns.reflexive-pronouns
+        - en.verbs.phrasal-verbs-core
+        - en.tenses.tense-map
+      B1:
+        - en.tenses.perfect-tenses
+        - en.tenses.continuous-tenses
+        - en.tenses.future-forms
+        - en.tenses.tense-map
+        - en.verbs.irregular-verbs-table
+        - en.verbs.phrasal-verbs-core
+        - en.verbs.gerund-vs-infinitive
+        - en.modals.would
+        - en.sentence-building.conditionals-0-1-2
+        - en.modals.may-might
+        - en.sentence-building.relative-clauses
+        - en.sentence-building.conjunctions-linkers
+        - en.adjectives-adverbs.too-enough-so-such
+        - en.nouns-determiners.quantifiers-some-any-much-many
+        - en.nouns-determiners.articles-a-an-the
+        - en.sentence-building.passive-voice
+        - en.sentence-building.reported-speech
+        - en.sentence-building.question-tags

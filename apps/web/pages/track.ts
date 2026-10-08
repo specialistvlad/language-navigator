@@ -1,8 +1,9 @@
-// A track's index: one card per section, topics in study order.
+// A track's index in both orders: one card per section, or one card per level of the study path.
 import { localize, SITE, topicTitle } from "../../../scripts/lib.ts";
 import { alternates, readChoices, type Track } from "../context.ts";
 import { controls, page } from "../layout.ts";
-import { trackNav } from "../nav.ts";
+import { orderSwitch, trackNav } from "../nav.ts";
+import { pathCards } from "../path.ts";
 import { refRange } from "../../../scripts/levels.ts";
 import { levelAttrs, listBadge, refsRange } from "../parts.ts";
 import { escapeHtml } from "../render.ts";
@@ -30,7 +31,8 @@ export function trackIndex(track: Track): void {
     .join("");
   const indexHead =
     `<header class="index-head"><p class="eyebrow">${escapeHtml(localize(lang.name, explain))} · ${escapeHtml(t.explained)}</p>` +
-    `<h1>${escapeHtml(t.index)}</h1><p class="lead">${escapeHtml(t.trackIntro)}</p></header>`;
+    `<h1>${escapeHtml(t.index)}</h1><p class="lead" data-order="categories">${escapeHtml(t.trackIntro)}</p>` +
+    `<p class="lead" data-order="path">${escapeHtml(t.pathIntro)}</p><div class="index-order">${orderSwitch(explain)}</div></header>`;
   ctx.add(
     trackUrl(explain, lang),
     page({
@@ -45,8 +47,8 @@ export function trackIndex(track: Track): void {
         read: readChoices(explain, (e) => trackUrl(e, lang)),
         level: true,
       }),
-      nav: trackNav(ctx.refs, explain, lang),
-      main: `<article class="doc index">${indexHead}<div class="index-grid lanes">${sectionsHtml}</div></article>`,
+      nav: trackNav(track),
+      main: `<article class="doc index">${indexHead}<div class="index-grid lanes" data-order="categories">${sectionsHtml}</div><div class="index-grid lanes" data-order="path">${pathCards(track.path, explain)}</div></article>`,
       dev: o.dev,
       siteUrl: o.siteUrl,
     }),

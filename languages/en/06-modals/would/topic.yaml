@@ -19,7 +19,7 @@ cheatsheet:
         - { key: pattern, label: { en: Pattern } }
         - { key: example, label: { en: Example } }
       rows:
-        - { level: B1, use: { en: "wants and offers" }, pattern: would like, example: "I'**d like** a coffee." }
+        - { level: A1, use: { en: "wants and offers" }, pattern: would like, example: "I'**d like** a coffee." }
         - { level: B1, use: { en: "polite requests" }, pattern: Would you + V…?, example: "**Would** you **help** me?" }
         - { level: B1, use: { en: "imagined situations" }, pattern: would + V, example: "I **would** travel more." }
         - { level: B1, use: { en: "past habits" }, pattern: would + V, example: "We **would** swim every summer." }
@@ -35,7 +35,7 @@ sections:
         rows:
           - { level: B1, form: { en: Affirmative }, pattern: subject + would / 'd + V, example: "She **would** help." }
           - { level: B1, form: { en: Negative }, pattern: subject + wouldn't + V, example: "I **wouldn't** go." }
-          - { level: B1, form: { en: Question }, pattern: Would + subject + V, example: "**Would** you like tea?" }
+          - { level: A1, form: { en: Question }, pattern: Would + subject + V, example: "**Would** you like tea?" }
           - { level: B1, form: { en: Short answer }, pattern: "Yes, … would. / No, … wouldn't.", example: "Yes, I **would**. / No, I **wouldn't**." }
       - type: bullets
         items:
@@ -57,7 +57,7 @@ sections:
           - { key: short, label: { en: Short form } }
           - { key: example, label: { en: Example } }
         rows:
-          - { level: B1, full: I would, short: I'd, example: "I'**d** like a tea." }
+          - { level: A1, full: I would, short: I'd, example: "I'**d** like a tea." }
           - { level: B1, full: you would, short: you'd, example: "You'**d** like her." }
           - { level: B1, full: he / she / it would, short: he'd / she'd / it'd, example: "She'**d** love it." }
           - { level: B1, full: we / they would, short: we'd / they'd, example: "We'**d** go." }
@@ -82,7 +82,7 @@ sections:
         rows:
           - { level: B1, form: { en: "would (weak, in a sentence)" }, sound: /wəd/, example: "**Would** you help? /wəd juː ˈhelp/" }
           - { level: B1, form: { en: "would (strong, at the end)" }, sound: /wʊd/, example: "Yes, I **would**. /jes aɪ ˈwʊd/" }
-          - { level: B1, form: I'd, sound: /aɪd/, example: "I'**d** like tea. /aɪd ˈlaɪk tiː/" }
+          - { level: A1, form: I'd, sound: /aɪd/, example: "I'**d** like tea. /aɪd ˈlaɪk tiː/" }
           - { level: B1, form: wouldn't, sound: /ˈwʊdnt/, example: "I **wouldn't** go. /aɪ ˈwʊdnt ɡəʊ/" }
       - type: bullets
         items:
@@ -97,9 +97,9 @@ sections:
           - { key: use, label: { en: Use } }
           - { key: example, label: { en: Example } }
         rows:
-          - { level: B1, use: { en: "A polite want: would like + noun" }, example: "I'**d like** a coffee, please." }
-          - { level: B1, use: { en: "A polite want: would like + to V" }, example: "I'**d like to** book a table." }
-          - { level: B1, use: { en: "Offers and invitations" }, example: "**Would** you **like** some cake?" }
+          - { level: A1, use: { en: "A polite want: would like + noun" }, example: "I'**d like** a coffee, please." }
+          - { level: A1, use: { en: "A polite want: would like + to V" }, example: "I'**d like to** book a table." }
+          - { level: A1, use: { en: "Offers and invitations" }, example: "**Would** you **like** some cake?" }
           - { level: B1, use: { en: "Offering to do something (would like me to)" }, example: "**Would** you **like me to** carry that?" }
           - { level: B1, use: { en: "Polite requests" }, example: "**Would** you pass the salt, please?" }
           - { level: B1, use: { en: "Imagined situations" }, example: "I **would** buy a boat." }
@@ -107,10 +107,10 @@ sections:
           - { level: B1, use: { en: "Past habits: repeated actions" }, example: "When I was a child, we **would** play outside every day." }
       - type: bullets
         items:
-          - level: B1
+          - level: A1
             text:
               en: "**would like** is a polite form of **want**: I'd like tea."
-          - level: B1
+          - level: A1
             text:
               en: "**would like** takes **to** + base verb: I'd like **to go**."
           - level: B1
@@ -150,7 +150,7 @@ sections:
     content:
       - type: errors
         rows:
-          - { level: B1, wrong: "Do you would like a coffee?", right: "**Would** you like a coffee?", rule: { en: "questions with would need no do" } }
-          - { level: B1, wrong: "I would like going.", right: "I'd like **to go**.", rule: { en: "would like + to + base verb" } }
+          - { level: A1, wrong: "Do you would like a coffee?", right: "**Would** you like a coffee?", rule: { en: "questions with would need no do" } }
+          - { level: A1, wrong: "I would like going.", right: "I'd like **to go**.", rule: { en: "would like + to + base verb" } }
           - { level: B1, wrong: "She would likes tea.", right: "She would **like** tea.", rule: { en: "would + base verb" } }
           - { level: B1, wrong: "When I was young, I would live in Paris.", right: "When I was young, I **used to** live in Paris.", rule: { en: "past states take used to" } }

@@ -1,7 +1,7 @@
 // Generated from languages/schema/curriculum.schema.json by npm run types. Edit the schema, then regenerate.
 
 /**
- * Every planned topic of every language being learned, in study order.
+ * Every planned topic of every language being learned: sections by category, and the study path by level.
  */
 export interface Langs123Curriculum {
   /**
@@ -19,6 +19,8 @@ export interface Langs123Curriculum {
     slug: string;
     name: Localized;
     /**
+     * Topics by category; the menu's Categories order.
+     *
      * @minItems 1
      */
     sections: {
@@ -36,6 +38,17 @@ export interface Langs123Curriculum {
         title?: Localized;
       }[];
     }[];
+    /**
+     * The study path: per level, lowest first, the topics to study at that level, in order. A topic comes back at each level where it grows.
+     */
+    path: {
+      /**
+       * @minItems 1
+       *
+       * Items: Topic ID: {lang}.{section}.{topic}
+       */
+      [k: string]: string[];
+    };
   }[];
 }
 export interface Localized {

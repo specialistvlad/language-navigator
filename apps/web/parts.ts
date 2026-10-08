@@ -14,6 +14,18 @@ export const slugify = (text: string): string =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 
+// Anchor ids for headings, in page order: each slugified, unique within the page.
+export function anchorIds(titles: string[]): string[] {
+  const ids = new Set<string>();
+  return titles.map((title) => {
+    let id = slugify(title);
+    if (id === "") id = "section";
+    while (ids.has(id)) id += "-";
+    ids.add(id);
+    return id;
+  });
+}
+
 export const single = (level: Level): Range => ({ from: level, to: level });
 
 // A level badge: one level reads (A1); a range joins two halves, (A1][B1), the lowest on the left and

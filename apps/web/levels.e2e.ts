@@ -13,6 +13,7 @@ const pages = (await testSite()).filter(
   (p) => /^en\/\w+\/(index\.html|[\w-]+\/[\w-]+\/index\.html)$/.test(p) && !p.includes("cheatsheets"),
 );
 const server = Bun.serve({
+  hostname: "127.0.0.1",
   port: 0,
   fetch: (req) => {
     const path = decodeURIComponent(new URL(req.url).pathname);
@@ -46,8 +47,12 @@ async function look(levels: readonly string[]): Promise<Seen> {
     // The Cheatsheet view shows section 00 alone.
     const viewed = (el: Element): boolean =>
       document.documentElement.dataset["view"] !== "cheatsheet" || el.closest("section.part:not(.cheatsheet)") === null;
+    // The order switch shows the lists of one order: by category or along the study path.
+    const ordered = (el: Element): boolean =>
+      (el.closest("body [data-order]")?.getAttribute("data-order") ?? "categories") ===
+      (document.documentElement.dataset["order"] ?? "categories");
     const fits = (el: Element): boolean => {
-      if (!viewed(el)) return false;
+      if (!viewed(el) || !ordered(el)) return false;
       for (let e: Element | null = el; e && e !== document.documentElement; e = e.parentElement) if (rank(e) > at) return false;
       return true;
     };

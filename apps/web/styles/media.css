@@ -1,6 +1,28 @@
 /* Below 860 px */
 
+.sidebar .nav-brand {
+  display: none;
+}
+
 @media (max-width: 860px) {
+  /* The menu carries the logo; a tap on the dimmed page beside it closes it (client-bar.ts) */
+  .sidebar .nav-brand {
+    display: block;
+    padding: 2px 8px 14px;
+    font-size: 18px;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+  .sidebar .nav-brand:hover {
+    background: none;
+  }
+  body.nav-open::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 25;
+    background: rgba(0, 0, 0, 0.25);
+  }
   .menu {
     display: inline-block;
   }
@@ -9,7 +31,11 @@
     padding: 10px 16px;
     gap: 10px;
   }
-  .controls {
+  /* The switches take the logo's place; an open switch moves them to a row of their own */
+  .topbar:has(.controls .control) .brand {
+    display: none;
+  }
+  .controls:has(.seg.open) {
     order: 3;
     flex-basis: 100%;
   }
@@ -36,6 +62,34 @@
   .content {
     padding: 20px 16px 60px;
   }
+  /* A switch shows its current choice alone; tapping it opens every choice (client-seg.ts) */
+  .seg:not(.open) > :not(.on) {
+    display: none;
+  }
+  .seg:not(.open) > .on::after {
+    content: "▾";
+    margin-left: 6px;
+    font-size: 0.85em;
+    opacity: 0.6;
+  }
+  /* The top bar slides away while the reader scrolls down and returns on a scroll up (client-bar.ts) */
+  .topbar {
+    transition: transform 0.25s ease;
+  }
+  html.bar-hidden .topbar {
+    transform: translateY(-100%);
+  }
+  /* An open switch takes the whole row, its label beside its choices */
+  .control:has(.seg.open) {
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 860px) and (prefers-reduced-motion: reduce) {
+  .topbar {
+    transition: none;
+  }
 }
 
 /* Print */
@@ -48,7 +102,8 @@
   .topbar,
   .sidebar,
   .rail,
-  .doc-head .actions {
+  .doc-head .actions,
+  .pagers {
     display: none;
   }
   .layout {

@@ -22,9 +22,9 @@ cheatsheet:
         - { level: A0, point: IPA, rule: { en: "one symbol for each sound, written between slashes" }, example: "book /bʊk/" }
         - { level: A0, point: { en: Spelling and sound }, rule: { en: "spelling and sound often differ" }, example: "*photo* /ˈfəʊtəʊ/" }
         - { level: A0, point: "ː  ˈ", rule: { en: "ː makes a vowel long; ˈ comes before the stressed syllable" }, example: "f**oo**d /fuːd/, teacher /ˈtiːtʃə/" }
-        - { level: A0, point: { en: Short and long }, rule: { en: "short /ɪ/ is not long /iː/" }, example: "**ship** /ʃɪp/ · **sheep** /ʃiːp/" }
-        - { level: A0, point: th, rule: { en: "th is /θ/ or /ð/" }, example: "**th**ink /θɪŋk/ · **th**is /ðɪs/" }
-        - { level: A0, point: US, rule: { en: "/ɒ/ becomes /ɑː/, /əʊ/ becomes /oʊ/, and /r/ is pronounced after vowels" }, example: "hot /hɑːt/, car /kɑːr/" }
+        - { level: A1, point: { en: Short and long }, rule: { en: "short /ɪ/ is not long /iː/" }, example: "**ship** /ʃɪp/ · **sheep** /ʃiːp/" }
+        - { level: A1, point: th, rule: { en: "th is /θ/ or /ð/" }, example: "**th**ink /θɪŋk/ · **th**is /ðɪs/" }
+        - { level: A1, point: US, rule: { en: "/ɒ/ becomes /ɑː/, /əʊ/ becomes /oʊ/, and /r/ is pronounced after vowels" }, example: "hot /hɑːt/, car /kɑːr/" }
         - { level: A1, point: { en: Stress in two syllables }, rule: { en: "most nouns and adjectives: first syllable; many verbs: second" }, example: "**ˈtea**cher / be**ˈgin**" }
         - { level: A1, point: -tion  -sion  -ic, rule: { en: "stress the syllable before the ending" }, example: "infor**ˈma**tion / fan**ˈtas**tic" }
         - { level: A1, point: { en: Weak vowel }, rule: { en: "unstressed vowels are often the weak /ə/" }, example: "about /əˈbaʊt/" }
@@ -60,23 +60,23 @@ sections:
           - { level: A0, sound: /t/, spelling: t, example: { ex: "**t**en" } }
           - { level: A0, sound: /d/, spelling: d, example: { ex: "**d**og" } }
           - { level: A0, sound: /k/, spelling: "c / k / ck", example: { ex: "**c**at / ba**ck**" } }
-          - { level: A0, sound: /g/, spelling: g, example: { ex: "**g**o" } }
+          - { level: A1, sound: /g/, spelling: g, example: { ex: "**g**o" } }
           - { level: A0, sound: /f/, spelling: "f / ph", example: { ex: "**f**ish / **ph**one" } }
           - { level: A0, sound: /v/, spelling: v, example: { ex: "**v**an" } }
-          - { level: A0, sound: /θ/, spelling: th, example: { ex: "**th**ink" } }
-          - { level: A0, sound: /ð/, spelling: th, example: { ex: "**th**is" } }
+          - { level: A1, sound: /θ/, spelling: th, example: { ex: "**th**ink" } }
+          - { level: A1, sound: /ð/, spelling: th, example: { ex: "**th**is" } }
           - { level: A0, sound: /s/, spelling: "s / c", example: { ex: "**s**un / **c**ity" } }
           - { level: A0, sound: /z/, spelling: "z / s", example: { ex: "**z**oo / i**s**" } }
-          - { level: A0, sound: /ʃ/, spelling: sh, example: { ex: "**sh**op" } }
-          - { level: A0, sound: /ʒ/, spelling: s, example: { ex: "televi**s**ion" } }
-          - { level: A0, sound: /h/, spelling: h, example: { ex: "**h**at" } }
+          - { level: A1, sound: /ʃ/, spelling: sh, example: { ex: "**sh**op" } }
+          - { level: A1, sound: /ʒ/, spelling: s, example: { ex: "televi**s**ion" } }
+          - { level: A1, sound: /h/, spelling: h, example: { ex: "**h**at" } }
           - { level: A0, sound: /tʃ/, spelling: ch, example: { ex: "**ch**air" } }
           - { level: A0, sound: /dʒ/, spelling: "j / g", example: { ex: "**j**ob / a**g**e" } }
           - { level: A0, sound: /m/, spelling: m, example: { ex: "**m**an" } }
           - { level: A0, sound: /n/, spelling: n, example: { ex: "**n**o" } }
-          - { level: A0, sound: /ŋ/, spelling: ng, example: { ex: "si**ng**" } }
+          - { level: A1, sound: /ŋ/, spelling: ng, example: { ex: "si**ng**" } }
           - { level: A0, sound: /l/, spelling: l, example: { ex: "**l**eg" } }
-          - { level: A0, sound: /r/, spelling: r, example: { ex: "**r**ed" } }
+          - { level: A1, sound: /r/, spelling: r, example: { ex: "**r**ed" } }
           - { level: A0, sound: /w/, spelling: w, example: { ex: "**w**ater" } }
           - { level: A0, sound: /j/, spelling: y, example: { ex: "**y**es" } }
 
@@ -88,29 +88,29 @@ sections:
           - { key: type, label: { en: Type } }
           - { key: example, label: { en: Example } }
         rows:
-          - { level: A0, sound: /ɪ/, type: { en: short }, example: { ex: "sh**i**p" } }
+          - { level: A1, sound: /ɪ/, type: { en: short }, example: { ex: "sh**i**p" } }
           - { level: A0, sound: /iː/, type: { en: long }, example: { ex: "sh**ee**p" } }
           - { level: A0, sound: /e/, type: { en: short }, example: { ex: "b**e**d" } }
           - { level: A0, sound: /æ/, type: { en: short }, example: { ex: "c**a**t" } }
           - { level: A0, sound: /ʌ/, type: { en: short }, example: { ex: "c**u**p" } }
           - { level: A0, sound: /ɑː/, type: { en: long }, example: { ex: "c**ar**" } }
-          - { level: A0, sound: /ɒ/, type: { en: short }, example: { ex: "h**o**t" } }
-          - { level: A0, sound: /ɔː/, type: { en: long }, example: { ex: "d**oor**" } }
-          - { level: A0, sound: /ʊ/, type: { en: short }, example: { ex: "b**oo**k" } }
+          - { level: A1, sound: /ɒ/, type: { en: short }, example: { ex: "h**o**t" } }
+          - { level: A1, sound: /ɔː/, type: { en: long }, example: { ex: "d**oor**" } }
+          - { level: A1, sound: /ʊ/, type: { en: short }, example: { ex: "b**oo**k" } }
           - { level: A0, sound: /uː/, type: { en: long }, example: { ex: "f**oo**d" } }
-          - { level: A0, sound: /ɜː/, type: { en: long }, example: { ex: "b**ir**d" } }
+          - { level: A1, sound: /ɜː/, type: { en: long }, example: { ex: "b**ir**d" } }
           - { level: A0, sound: /ə/, type: { en: "short, weak" }, example: { ex: "**a**bout" } }
           - { level: A0, sound: /eɪ/, type: { en: diphthong }, example: { ex: "d**ay**" } }
           - { level: A0, sound: /aɪ/, type: { en: diphthong }, example: { ex: "m**y**" } }
-          - { level: A0, sound: /ɔɪ/, type: { en: diphthong }, example: { ex: "b**oy**" } }
+          - { level: A1, sound: /ɔɪ/, type: { en: diphthong }, example: { ex: "b**oy**" } }
           - { level: A0, sound: /əʊ/, type: { en: diphthong }, example: { ex: "g**o**" } }
-          - { level: A0, sound: /aʊ/, type: { en: diphthong }, example: { ex: "n**ow**" } }
-          - { level: A0, sound: /ɪə/, type: { en: diphthong }, example: { ex: "h**ere**" } }
-          - { level: A0, sound: /eə/, type: { en: diphthong }, example: { ex: "h**air**" } }
-          - { level: A0, sound: /ʊə/, type: { en: diphthong }, example: { ex: "t**our**" } }
+          - { level: A1, sound: /aʊ/, type: { en: diphthong }, example: { ex: "n**ow**" } }
+          - { level: A1, sound: /ɪə/, type: { en: diphthong }, example: { ex: "h**ere**" } }
+          - { level: A1, sound: /eə/, type: { en: diphthong }, example: { ex: "h**air**" } }
+          - { level: A1, sound: /ʊə/, type: { en: diphthong }, example: { ex: "t**our**" } }
       - type: bullets
         items:
-          - level: A0
+          - level: A1
             text:
               en: "US: /ɒ/ becomes /ɑː/ (*hot* /hɑːt/), /əʊ/ becomes /oʊ/, and /r/ is pronounced after vowels (*car* /kɑːr/)."
 
@@ -138,6 +138,6 @@ sections:
     content:
       - type: errors
         rows:
-          - { level: A0, wrong: ship /ʃiːp/, right: "ship **/ʃɪp/** · sheep /ʃiːp/", rule: { en: "short /ɪ/ ≠ long /iː/" } }
-          - { level: A0, wrong: think /sɪŋk/ · this /dɪs/, right: "think **/θɪŋk/** · this **/ðɪs/**", rule: { en: "th = /θ/ or /ð/" } }
+          - { level: A1, wrong: ship /ʃiːp/, right: "ship **/ʃɪp/** · sheep /ʃiːp/", rule: { en: "short /ɪ/ ≠ long /iː/" } }
+          - { level: A1, wrong: think /sɪŋk/ · this /dɪs/, right: "think **/θɪŋk/** · this **/ðɪs/**", rule: { en: "th = /θ/ or /ð/" } }
           - { level: A1, wrong: comˈfortable, right: "**ˈcom**fortable /ˈkʌmftəbl/", rule: { en: "stress on the first syllable" } }

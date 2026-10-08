@@ -56,6 +56,13 @@ export const sectionRange = (section: Section, explain?: Explain): Range | null 
 export const topicRange = (topic: Topic, explain?: Explain): Range | null =>
   join([contentRange(topic.cheatsheet.content, explain), ...topic.sections.map((s) => sectionRange(s, explain))]);
 
+// The levels a topic holds, lowest first: the levels of the leaves of its cheatsheet and sections.
+export function topicLevels(topic: Topic, explain?: Explain): Level[] {
+  const blocks = [...topic.cheatsheet.content, ...topic.sections.filter((s) => visible(s, explain)).flatMap((s) => s.content)];
+  const held = new Set(blocks.flatMap((b) => leaves(b, explain).map((l) => l.level)));
+  return LEVELS.filter((l) => held.has(l));
+}
+
 // A curriculum topic: its data when written, its planned range otherwise.
 export const refRange = (ref: TopicRef, explain?: Explain): Range | null =>
   ref.topic ? topicRange(ref.topic, explain) : parseRange(ref.entry.levels);

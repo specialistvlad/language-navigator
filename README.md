@@ -17,9 +17,9 @@ whole topic, then rules, examples and typical errors, each marked with its CEFR 
   (`languages/levels.yaml`); the level filter shows what starts at or below the chosen level, and
   badges show each range in its levels' colours (CONVENTIONS.md §3).
 - **The site is static HTML.** Each topic page offers a Cheatsheet and an Extended view; cheatsheet
-  pages gather the cheatsheets per topic, section and level. The menu and the index list the topics
-  by section, in study order. Every page has a clean, stable URL (CONVENTIONS.md §10) and reads on
-  screens of every width.
+  pages gather the cheatsheets per topic, section and level. The menu groups the topics **by level**,
+  following the study path, or by **category** (CONVENTIONS.md §2). Every page has a clean, stable
+  URL (CONVENTIONS.md §10) and reads on screens of every width.
 
 ## Quick start
 
@@ -40,7 +40,7 @@ language-navigator/
 │   ├── site.yaml              product name, URLs, credit and licences, explanation languages
 │   ├── levels.yaml            level scale: names, descriptions, colours
 │   ├── interface.yaml         interface wording
-│   ├── curriculum.yaml        every planned topic, in study order
+│   ├── curriculum.yaml        every planned topic: sections by category, and the study path
 │   ├── concepts.yaml          concept keys that pair topics across languages
 │   ├── schema/                JSON Schemas
 │   ├── templates/topic.yaml   skeleton for a new topic

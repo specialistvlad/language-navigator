@@ -1,19 +1,33 @@
-// The sidebar menu: back to the home page, the track index, and every topic of the track. Sections
-// and topics show their level range; the level filter hides those that start above it.
-import { type CurriculumLanguage, type Explain, localize, topicTitle, type TopicRef } from "../../scripts/lib.ts";
+// The sidebar menu: back to the home page, the track index, the order switch, and every topic of the
+// track in both orders: by category (sections, each topic with its range) and the study path (levels,
+// each with its steps). The switch shows one; the level filter hides what starts above it.
+import { type Explain, localize, SITE, topicTitle, type TopicRef } from "../../scripts/lib.ts";
 import { refRange } from "../../scripts/levels.ts";
-import { ui } from "./layout.ts";
+import type { Track } from "./context.ts";
+import { seg, ui } from "./layout.ts";
+import { pathMenu } from "./path.ts";
 import { levelAttrs, listBadge, refsRange } from "./parts.ts";
 import { escapeHtml } from "./render.ts";
 import { homeUrl, topicUrl, trackUrl } from "./urls.ts";
 
-// Sidebar head: back to the home page, where the language is chosen.
+// Grouping of the topic lists: by level, along the study path, or by category. The choice lives in the browser,
+// like the theme (client.ts); views.css shows the lists of the chosen order.
+export function orderSwitch(explain: Explain): string {
+  const t = ui(explain);
+  const buttons = `<button type="button" data-set-order="path">${escapeHtml(t.byLevel)}</button><button type="button" data-set-order="categories">${escapeHtml(t.categories)}</button>`;
+  return seg(t.grouping, buttons);
+}
+
+// Sidebar head: the logo, which small screens show here in place of the top bar's (media.css), and
+// back to the home page, where the language is chosen.
 export const navHome = (explain: Explain): string =>
+  `<a class="nav-brand" href="${homeUrl()}">${escapeHtml(SITE.name)}</a>` +
   `<a class="nav-home" href="${homeUrl()}">${escapeHtml(ui(explain).chooseLanguage)}</a>`;
 
-export function trackNav(refs: TopicRef[], explain: Explain, lang: CurriculumLanguage, current?: TopicRef): string {
-  const t = ui(explain);
-  const out = [navHome(explain), `<a class="nav-track" href="${trackUrl(explain, lang)}">${escapeHtml(t.index)}</a>`];
+export function trackNav(track: Track, current?: TopicRef): string {
+  const { ctx, explain, lang } = track;
+  const refs = ctx.refs;
+  const out: string[] = [];
   for (const section of lang.sections) {
     const inSection = refs.filter((r) => r.lang === lang.code && r.section === section);
     const range = refsRange(inSection, explain);
@@ -29,5 +43,11 @@ export function trackNav(refs: TopicRef[], explain: Explain, lang: CurriculumLan
       }
     }
   }
-  return out.join("\n");
+  return [
+    navHome(explain),
+    `<a class="nav-track" href="${trackUrl(explain, lang)}">${escapeHtml(ui(explain).index)}</a>`,
+    `<div class="nav-order">${orderSwitch(explain)}</div>`,
+    `<div class="nav-list" data-order="categories">${out.join("\n")}</div>`,
+    `<div class="nav-list" data-order="path">${pathMenu(track.path, explain, current)}</div>`,
+  ].join("\n");
 }

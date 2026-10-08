@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "curriculum.schema.json",
   "title": "langs123 curriculum",
-  "description": "Every planned topic of every language being learned, in study order.",
+  "description": "Every planned topic of every language being learned: sections by category, and the study path by level.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -20,7 +20,8 @@
           "enabled",
           "slug",
           "name",
-          "sections"
+          "sections",
+          "path"
         ],
         "properties": {
           "code": {
@@ -85,6 +86,25 @@
                   }
                 }
               }
+            },
+            "description": "Topics by category; the menu's Categories order."
+          },
+          "path": {
+            "type": "object",
+            "description": "The study path: per level, lowest first, the topics to study at that level, in order. A topic comes back at each level where it grows.",
+            "propertyNames": {
+              "$ref": "#/definitions/level"
+            },
+            "minProperties": 1,
+            "additionalProperties": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z]+\\.[a-z0-9-]+\\.[a-z0-9-]+$",
+                "description": "Topic ID: {lang}.{section}.{topic}"
+              }
             }
           }
         }
@@ -92,6 +112,17 @@
     }
   },
   "definitions": {
+    "level": {
+      "enum": [
+        "A0",
+        "A1",
+        "A2",
+        "B1",
+        "B2",
+        "C1",
+        "C2"
+      ]
+    },
     "localized": {
       "type": "object",
       "additionalProperties": false,

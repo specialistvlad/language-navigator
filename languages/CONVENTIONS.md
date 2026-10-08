@@ -27,7 +27,7 @@ languages/
 ├── site.yaml                       product name, URLs, credit and licences, explanation languages
 ├── levels.yaml                     level scale: names, descriptions, colours
 ├── interface.yaml                  interface wording of the site
-├── curriculum.yaml                 every planned topic, in study order
+├── curriculum.yaml                 every planned topic: sections by category, and the study path
 ├── concepts.yaml                   concept keys that pair topics across languages
 ├── schema/                         JSON Schemas for every file type
 ├── templates/topic.yaml            skeleton for a new topic
@@ -39,21 +39,37 @@ languages/
 | `site.yaml` | `schema/site.schema.json` | product name, URLs, the credit and licences every page shows, explanation languages with their names and `enabled` switch |
 | `levels.yaml` | `schema/levels.schema.json` | the level scale: code, name, description, hue per level |
 | `interface.yaml` | `schema/interface.schema.json` | interface wording by key, per explanation language; block headings and column titles the generator writes |
-| `curriculum.yaml` | `schema/curriculum.schema.json` | languages (with an `enabled` switch) → sections → topics (slug, optional title, levels of a planned topic) |
+| `curriculum.yaml` | `schema/curriculum.schema.json` | languages (with an `enabled` switch) → sections → topics (slug, optional title, levels of a planned topic); the study path: levels → topic IDs |
 | `concepts.yaml` | `schema/concepts.schema.json` | concept key → title, description |
 | `{lang}/{NN-section}/{topic}/topic.yaml` | `schema/topic.schema.json` | one topic, all explanation languages |
 
 `enabled: false` on a language being learned (`curriculum.yaml`) or an explanation language
 (`site.yaml`) keeps it from readers; its data stays and `npm run check` still validates it.
 
-- Each language has its own sections, following that language's learning path. The hardest
-  foundation of a language gets its own early section.
-- `NN-section`: a two-digit number plus a slug. The number sets the study order of sections
-  within the language; the order of `topics` in `curriculum.yaml` sets the order inside a section.
+- Each language has its own sections, which group its topics by category: the menu's
+  **Categories** order. The hardest foundation of a language gets its own early section.
+- `NN-section`: a two-digit number plus a slug. The number sets the order of sections within the
+  language; the order of `topics` in `curriculum.yaml` sets the order inside a section.
 - `topic`: kebab-case ASCII, meaning lowercase letters, digits and hyphens.
 - **ID**: `{lang}.{section slug without number}.{topic}`, for example `en.tenses.simple-tenses`.
 - A topic file starts with `# yaml-language-server: $schema=../../../schema/topic.schema.json`,
   which gives editors validation and completion.
+
+**The study path.** `path` in `curriculum.yaml` orders a language's topics for study, level by
+level: under each level, the IDs of the topics to study at that level. A step is a topic at a
+level, so a topic comes back at each level it holds. The order follows what a learner needs at each
+level: the sentence frame before the parts of speech, a topic after the topics it builds on, the
+most frequent forms first, and an overview after its parts.
+
+- A written topic has a step at every level its leaves hold, and at no other.
+- A step opens its topic where its level starts: at the top for the topic's lowest level, else at
+  the first section that holds the level. Its link names the step, `?step=a1`, and the menu marks
+  that step as the one being read; a page opened without it marks the highest step the level filter
+  shows.
+- The menu, the track index and Up next follow the grouping the reader picks: **By level**, the
+  study path, or **Categories**. By level, the menu groups the steps under their levels, and the level
+  filter hides the levels above the chosen one.
+- `npm run check` enforces the steps; `npm test` and `npm run e2e` test the pages built from them.
 
 ## 3. Levels
 
@@ -102,6 +118,8 @@ section in the menu.
 - The level filter hides every element that starts above the chosen level, so a block hides with
   its last leaf and a menu entry with its topic. A badge keeps its range at every level; the half above
   the chosen level fades to an outline: at A2, (A1][B1) keeps its B1 half faded. The rail keeps every entry and greys out the ones the filter hides.
+- Previous, Next and Up next lead to the pages the filter shows, in the chosen grouping. The first
+  shown page has an inactive Previous; the last one's Next becomes Start over, back to the first.
 
 ## 4. Text values
 
@@ -296,7 +314,9 @@ Every page has a clean, stable, named URL.
 - A page carries the choice of each switch it has in query parameters, so a shared link opens the
   same state: `?level=a0`…`?level=c2` on topic and track pages, `?view=cheatsheet` or
   `?view=extended` on topic pages. A page opened without them takes the reader's last choice, and
-  the highest level and Extended the first time. The theme lives in the browser.
+  the highest level and Extended the first time. The theme and the grouping (By level or
+  Categories) live in the browser.
+- A study-path link carries its step, `?step=a0`…`?step=c2`, on topic pages (§2).
 - Page state never travels in percent-encoded text or fragments.
 - Section slugs are unique within a language; topic slugs are unique within a section.
 
@@ -310,7 +330,7 @@ Topics are written one at a time. The next topic starts only after the current o
 3. Hand the topic to the owner for review in the web app (`npm start`).
 4. Apply the requested changes; repeat until the owner approves.
 5. Set `status` to `approved` for every explanation language.
-6. Move to the next topic in `curriculum.yaml` order.
+6. Move to the next topic on the study path.
 
 ## 12. Semantic data
 

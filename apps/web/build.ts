@@ -3,6 +3,7 @@
 import { join } from "node:path";
 import { type CurriculumLanguage, filled, loadCurriculum, loadTopics, localize, ROOT, type TopicRef } from "../../scripts/lib.ts";
 import { type BuildOptions, type Context, EXPLAINS, type Page } from "./context.ts";
+import { studyPath } from "./path.ts";
 import { ui } from "./layout.ts";
 import { writeSite } from "./output.ts";
 import { creditsPage } from "./pages/credits.ts";
@@ -44,7 +45,8 @@ export async function build(o: BuildOptions): Promise<number> {
     const written = langRefs.filter((r) => r.topic);
     for (const explain of EXPLAINS) {
       const t = ui(explain);
-      const track = { ctx, lang, explain, t, title: t.track(localize(lang.name, explain)), langRefs, written };
+      const path = studyPath(lang, explain, langRefs);
+      const track = { ctx, lang, explain, t, title: t.track(localize(lang.name, explain)), langRefs, written, path };
       trackIndex(track);
       topicPages(track);
       sheetPages(track);

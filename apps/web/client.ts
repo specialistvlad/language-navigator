@@ -1,5 +1,10 @@
-// Progressive enhancement for the static pages: level filter, view, theme, menu, sidebar scroll, on-this-page highlight, lanes, live reload.
+// Progressive enhancement for the static pages: level filter, view, order, compact switches, hiding top bar, study-path step, theme, menu, sidebar scroll, on-this-page highlight, lanes, live reload.
 // The build bundles it with its modules into client.js for the browser.
+import { closingMenu, hidingBar } from "./client-bar.ts";
+import { liveReload } from "./client-dev.ts";
+import { studyStep } from "./client-path.ts";
+import { collapsibleSwitches } from "./client-seg.ts";
+
 (() => {
   "use strict";
   const root = document.documentElement;
@@ -28,7 +33,15 @@
     document.querySelectorAll<HTMLElement>("[data-set-view]").forEach((b) => {
       b.classList.toggle("on", b.dataset["setView"] === root.dataset["view"]);
     });
+    document.querySelectorAll<HTMLElement>("[data-set-order]").forEach((b) => {
+      b.classList.toggle("on", b.dataset["setOrder"] === root.dataset["order"]);
+    });
   }
+
+  const step = studyStep(root);
+  collapsibleSwitches();
+  hidingBar();
+  closingMenu();
 
   const THEMES = ["auto", "light", "dark"];
   function applyTheme(name: string): void {
@@ -45,14 +58,11 @@
     const target = event.target;
     if (!(target instanceof Element)) return;
     const level = target.closest<HTMLElement>("[data-set-level]")?.dataset["setLevel"];
-    if (level !== undefined) {
-      root.dataset["level"] = level;
-      store.set("ln-level", level);
-      showState();
-      refresh();
-    }
+    if (level !== undefined) choose("level", level);
     const view = target.closest<HTMLElement>("[data-set-view]")?.dataset["setView"];
-    if (view !== undefined) setView(view);
+    if (view !== undefined) choose("view", view);
+    const order = target.closest<HTMLElement>("[data-set-order]")?.dataset["setOrder"];
+    if (order !== undefined) choose("order", order);
     if (target.closest("#print")) window.print();
     if (target.closest("#menu")) document.body.classList.toggle("nav-open");
     if (target.closest("#theme")) {
@@ -73,15 +83,17 @@
   }
   const filled = (value: string | undefined): value is string => value !== undefined && value !== "";
 
-  function setView(view: string): void {
-    root.dataset["view"] = view;
-    store.set("ln-view", view);
+  // A switch's choice: the page shows it, the browser keeps it for the next page, the address carries it.
+  function choose(name: "level" | "view" | "order", value: string): void {
+    root.dataset[name] = value;
+    store.set(`ln-${name}`, value);
     showState();
     refresh();
   }
 
   function refresh(): void {
     mark();
+    step();
     lanes();
     spy();
   }
@@ -96,8 +108,10 @@
   if (!filled(root.dataset["level"])) {
     root.dataset["level"] = document.querySelector<HTMLElement>("[data-set-level]:last-child")?.dataset["setLevel"] ?? "";
   }
+  if (root.dataset["order"] !== "path") root.dataset["order"] = "categories";
   showState();
   mark();
+  step();
 
   // On this page: highlights the section being read, the lowest section top above 30% of the window
   // (or the first section on screen before any reaches that line).
@@ -180,18 +194,5 @@
   });
   if (fallback.length > 0) void document.fonts.ready.then(lanes);
 
-  // Live reload while `npm start` runs: reload on rebuild and after a server restart.
-  if (root.dataset["dev"] === "1") {
-    let lost = false;
-    const source = new EventSource("/events");
-    source.onopen = () => {
-      if (lost) location.reload();
-    };
-    source.onerror = () => {
-      lost = true;
-    };
-    source.onmessage = (event: MessageEvent<unknown>) => {
-      if (event.data === "reload") location.reload();
-    };
-  }
+  if (root.dataset["dev"] === "1") liveReload();
 })();

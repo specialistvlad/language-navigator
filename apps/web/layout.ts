@@ -14,8 +14,15 @@ const TEXT_KEYS = [
   "index",
   "chooseLanguage",
   "trackIntro",
+  "pathIntro",
+  "grouping",
+  "byLevel",
+  "categories",
   "onThisPage",
   "upNext",
+  "previous",
+  "next",
+  "startOver",
   "sheets",
   "sheet",
   "sheetsIntro",
@@ -71,7 +78,7 @@ export interface Choice {
   on: boolean;
 }
 
-const seg = (label: string, inner: string): string =>
+export const seg = (label: string, inner: string): string =>
   `<div class="control"><span>${escapeHtml(label)}</span><div class="seg">${inner}</div></div>`;
 const linkSeg = (label: string, choices: Choice[]): string =>
   seg(label, choices.map((c) => `<a href="${c.href}"${c.on ? ' class="on" aria-current="page"' : ""}>${escapeHtml(c.label)}</a>`).join(""));
@@ -117,11 +124,12 @@ export interface PageOptions {
 }
 
 // Applies saved viewer preferences before first paint.
-const PREFS = `try{var d=document.documentElement,p=new URLSearchParams(location.search),s=localStorage,l=(p.get("level")||"").toUpperCase(),v=p.get("view");if(${JSON.stringify(LEVELS)}.indexOf(l)>=0)s.setItem("ln-level",l);if(v==="cheatsheet"||v==="extended")s.setItem("ln-view",v);d.dataset.level=s.getItem("ln-level")||"${LEVELS.at(-1) ?? ""}";d.dataset.view=s.getItem("ln-view")==="cheatsheet"?"cheatsheet":"extended";var t=s.getItem("ln-theme");if(t&&t!=="auto")d.dataset.theme=t}catch(e){}`;
+const PREFS = `try{var d=document.documentElement,p=new URLSearchParams(location.search),s=localStorage,l=(p.get("level")||"").toUpperCase(),v=p.get("view");if(${JSON.stringify(LEVELS)}.indexOf(l)>=0)s.setItem("ln-level",l);if(v==="cheatsheet"||v==="extended")s.setItem("ln-view",v);d.dataset.level=s.getItem("ln-level")||"${LEVELS.at(-1) ?? ""}";d.dataset.view=s.getItem("ln-view")==="cheatsheet"?"cheatsheet":"extended";d.dataset.order=s.getItem("ln-order")==="path"?"path":"categories";var t=s.getItem("ln-theme");if(t&&t!=="auto")d.dataset.theme=t}catch(e){}`;
 
 // Runs right after the sidebar, before first paint: restores the scroll position the same menu had on
-// the previous page (client.ts saves it on leaving), then brings the current page's entry into view.
-const NAV_SCROLL = `(function(){var n=document.getElementById("sidebar"),k=n.querySelector(".nav-track").getAttribute("href")+"#"+n.childElementCount;n.dataset.key=k;try{var v=JSON.parse(sessionStorage.getItem("ln-nav"));if(v&&v.k===k)n.scrollTop=v.t}catch(e){}var c=n.querySelector("[aria-current=page]");if(c){var r=c.getBoundingClientRect(),b=n.getBoundingClientRect();if(r.top<b.top||r.bottom>b.bottom)n.scrollTop+=r.top-b.top-(b.height-r.height)/2}})()`;
+// the previous page (client.ts saves it on leaving), then brings the current page's entry into view:
+// by level, the step its address names (?step=a1), else the highest step the level filter shows.
+const NAV_SCROLL = `(function(){var n=document.getElementById("sidebar"),o=document.documentElement.dataset.order||"categories",k=n.querySelector(".nav-track").getAttribute("href")+"#"+o+n.childElementCount;n.dataset.key=k;try{var v=JSON.parse(sessionStorage.getItem("ln-nav"));if(v&&v.k===k)n.scrollTop=v.t}catch(e){}var w=(new URLSearchParams(location.search).get("step")||"").toUpperCase(),s=[].filter.call(n.querySelectorAll('[data-order="path"] a.on'),function(a){return a.offsetHeight>0}),c=o==="path"?s.filter(function(a){return a.dataset.level===w})[0]||s.pop():n.querySelector("[aria-current=page]");if(c){var r=c.getBoundingClientRect(),b=n.getBoundingClientRect();if(r.top<b.top||r.bottom>b.bottom)n.scrollTop+=r.top-b.top-(b.height-r.height)/2}})()`;
 
 // The top bar's link to the credits page, marked current on that page.
 function credits(o: PageOptions): string {

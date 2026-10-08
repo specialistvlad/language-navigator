@@ -17,9 +17,14 @@ text:
   index: { en: Index }
   chooseLanguage: { en: Choose language }
   trackIntro:
-    en: Topics in study order. Choose your level to hide what comes later.
+    en: Topics by category. Choose your level to hide what comes later.
+  pathIntro:
+    en: Topics in study order, level by level; a topic comes back at each level where it grows. Choose your level to hide what comes later.
 
   # Controls
+  grouping: { en: Grouping }
+  byLevel: { en: By level }
+  categories: { en: Categories }
   read: { en: Read in }
   level: { en: Level }
   view: { en: View }
@@ -32,6 +37,9 @@ text:
     en: "No information at the current level. This view starts at {level}: choose {level} or a higher level."
   showLevel: { en: "Show {level}" }
   upNext: { en: Up next }
+  previous: { en: Previous }
+  next: { en: Next }
+  startOver: { en: Start over }
   ruleColumn: { en: Rule }
 
   # Cheatsheets

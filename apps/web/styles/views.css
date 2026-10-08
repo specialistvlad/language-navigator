@@ -38,6 +38,28 @@ html:not([data-view="cheatsheet"]) .filter-empty.cheatsheet {
   display: none;
 }
 
+/* Order: by category or along the study path (client.ts); the lists of the other order hide */
+html:not([data-order="path"]) [data-order="path"],
+html[data-order="path"] [data-order="categories"] {
+  display: none;
+}
+.nav-order {
+  margin: 12px 8px 18px;
+}
+/* On the study path the menu highlights the step being read alone (client.ts) */
+.nav-list[data-order="path"] a.on:not([aria-current="step"]) {
+  background: none;
+  color: var(--text);
+  font-weight: inherit;
+}
+.nav-order .seg button {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+.index-order {
+  margin-top: 14px;
+}
+
 /* Sidebar level badges */
 
 .sidebar h4 {

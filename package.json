@@ -11,7 +11,7 @@
     "build": "bun run apps/web/build.ts",
     "check": "bun run scripts/check.ts",
     "test": "bun test",
-    "e2e": "bun test ./apps/web/levels.e2e.ts ./apps/web/colours.e2e.ts",
+    "e2e": "bun test ./apps/web/levels.e2e.ts && bun test ./apps/web/colours.e2e.ts && bun test ./apps/web/path.e2e.ts && bun test ./apps/web/controls.e2e.ts",
     "typecheck": "tsc -p .",
     "lint": "eslint . && bun run scripts/lint-css.ts",
     "format": "prettier --write .",
