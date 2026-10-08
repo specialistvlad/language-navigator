@@ -276,6 +276,7 @@ Every page has a clean, stable, named URL.
 
 ```
 /                                              home
+/credits/                                      credits: authors, licences, how to credit
 /{explain}/{language}/                         track home
 /{explain}/{language}/{section}/{topic}/       topic
 /{explain}/{language}/cheatsheets/             cheatsheet index

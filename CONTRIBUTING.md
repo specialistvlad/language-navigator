@@ -5,8 +5,8 @@ are two ways in: report a mistake, or change a topic yourself.
 
 ## Report a mistake
 
-*Report a mistake* at the foot of every page opens a short GitHub form, filled in with the page.
-Quote what is wrong and, when you know it, give the correct version.
+*Report a mistake* on the [credits page](https://langs123.com/credits/) opens a short GitHub form. Give
+the page's address, quote what is wrong and, when you know it, the correct version.
 
 ## Change a topic
 

@@ -47,3 +47,19 @@ text:
   # Missing page
   notFound: { en: Page not found }
   backHome: { en: Go to the home page }
+
+  # Credits: one page, linked from every page's top bar
+  credits: { en: Credits }
+  creditsDescription: { en: "Who writes {site}, the licences of its content and code, and how to credit it." }
+  creditsAuthors: { en: "The content of {site} is written by {credit}." }
+  licences: { en: Licences }
+  contentLicence: { en: "The content (topics, cheatsheets, curriculum and wording)" }
+  codeLicence: { en: The code }
+  howToCredit: { en: How to credit }
+  creditIntro: { en: "Anyone may copy, adapt and sell the content, in print, on the web and in apps, with this credit:" }
+  creditChanges: { en: "A changed version names its changes, for example “adapted from {site}”." }
+  contribute: { en: Contribute }
+  sourceLink: { en: The content and code on GitHub }
+  reportMistake: { en: Report a mistake }
+  contributing: { en: How to contribute }
+  nameNote: { en: "The name {site} and its logo stay with the project, outside both licences." }

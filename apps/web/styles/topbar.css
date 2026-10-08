@@ -93,3 +93,15 @@
 .menu {
   display: none;
 }
+
+/* A link in the top bar (the credits page) looks like its buttons. */
+.tools a.tool {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+}
+.tools a.tool[aria-current="page"] {
+  color: var(--accent);
+  border-color: var(--accent);
+}

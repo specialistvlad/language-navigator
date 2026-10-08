@@ -1,4 +1,4 @@
-// Inline SVG icons for the topic header actions.
+// Inline SVG icons for the top bar and the topic header actions.
 
 // GitHub mark (Octicons mark-github, MIT).
 export const GITHUB_ICON =
@@ -7,3 +7,7 @@ export const GITHUB_ICON =
 // Printer (Feather printer, MIT).
 export const PRINT_ICON =
   '<svg class="icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>';
+
+// Info (Feather info, MIT): the top bar's link to the credits page.
+export const INFO_ICON =
+  '<svg class="icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>';

@@ -25,10 +25,6 @@ ${pages
 `;
   const robots = `User-agent: *\nAllow: /\nSitemap: ${o.siteUrl}/sitemap.xml\n`;
 
-  // A site served below the domain root (a GitHub Pages project site) prefixes every root-relative link.
-  const base = new URL(o.siteUrl).pathname.replace(/\/$/, "");
-  const rebase = (html: string): string => (base !== "" ? html.replace(/\b(href|src)="\/(?!\/)/g, `$1="${base}/`) : html);
-
   // Write into a fresh folder, then swap it in place.
   const tmp = `${o.outDir}.tmp`;
   const old = `${o.outDir}.old`;
@@ -36,7 +32,7 @@ ${pages
   await mkdir(tmp, { recursive: true });
   for (const p of pages) {
     const file = p.path.endsWith("/") ? join(tmp, p.path, "index.html") : join(tmp, p.path);
-    await Bun.write(file, rebase(withAnalytics(p.html, o)));
+    await Bun.write(file, withAnalytics(p.html, o));
   }
   await Bun.write(join(tmp, "sitemap.xml"), sitemap);
   await Bun.write(join(tmp, "robots.txt"), robots);

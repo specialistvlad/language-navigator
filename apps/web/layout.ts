@@ -1,6 +1,8 @@
 // Page shell, controls and interface text for the static site.
 import { EXPLAIN_CODES, type Explain, explainName, filled, LEVELS, SITE, say } from "../../scripts/lib.ts";
+import { INFO_ICON } from "./icons.ts";
 import { escapeHtml } from "./render.ts";
+import { creditsUrl } from "./urls.ts";
 
 // Interface wording keys this app shows, all from languages/interface.yaml.
 const TEXT_KEYS = [
@@ -25,26 +27,14 @@ const TEXT_KEYS = [
   "backHome",
 ] as const;
 
-// Web-only wording: actions this app offers and its footer.
+// Web-only wording: actions this app offers.
 interface WebText {
   print: string;
   editOn: string;
   editTitle: string;
-  content: string;
-  code: string;
-  howToCredit: string;
-  reportMistake: string;
 }
 const WEB: Partial<Record<Explain, WebText>> = {
-  en: {
-    print: "Print",
-    editOn: "Edit on",
-    editTitle: "Edit this topic on GitHub",
-    content: "Content",
-    code: "Code",
-    howToCredit: "How to credit",
-    reportMistake: "Report a mistake",
-  },
+  en: { print: "Print", editOn: "Edit on", editTitle: "Edit this topic on GitHub" },
 };
 
 export type Ui = Record<(typeof TEXT_KEYS)[number], string> &
@@ -112,7 +102,7 @@ export function controls(o: ControlsOptions): string {
 }
 
 export interface PageOptions {
-  kind: "home" | "track" | "topic" | "sheets" | "sheet" | "404";
+  kind: "home" | "track" | "topic" | "sheets" | "sheet" | "credits" | "404";
   lang: Explain;
   title: string;
   description: string;
@@ -133,18 +123,11 @@ const PREFS = `try{var d=document.documentElement,p=new URLSearchParams(location
 // the previous page (client.ts saves it on leaving), then brings the current page's entry into view.
 const NAV_SCROLL = `(function(){var n=document.getElementById("sidebar"),k=n.querySelector(".nav-track").getAttribute("href")+"#"+n.childElementCount;n.dataset.key=k;try{var v=JSON.parse(sessionStorage.getItem("ln-nav"));if(v&&v.k===k)n.scrollTop=v.t}catch(e){}var c=n.querySelector("[aria-current=page]");if(c){var r=c.getBoundingClientRect(),b=n.getBoundingClientRect();if(r.top<b.top||r.bottom>b.bottom)n.scrollTop+=r.top-b.top-(b.height-r.height)/2}})()`;
 
-// The footer of every page: the credit and both licences, which make a printed page a complete credit
-// with its address (media.css prints it), then how to credit and a mistake report filled in with the page.
-function footer(o: PageOptions, pageUrl: string): string {
-  const t = ui(o.lang);
-  const { content, code } = SITE.licences;
-  const link = (href: string, text: string, attrs = ""): string => `<a href="${escapeHtml(href)}"${attrs}>${escapeHtml(text)}</a>`;
-  const report = `${SITE.repository}/issues/new?${new URLSearchParams({ template: "report-a-mistake.yml", title: `Mistake: ${o.title}`, page: pageUrl })}`;
-  const credit = link(`${SITE.repository}/graphs/contributors`, SITE.credit);
-  const source = `<span class="source"> · ${escapeHtml(pageUrl)}</span>`;
-  const licences = ` · ${escapeHtml(t.content)} ${link(content.url, content.name, ' rel="license"')} · ${escapeHtml(t.code)} ${link(code.url, code.name)}`;
-  const actions = `<span class="action"> · ${link(`${SITE.repository}#licence`, t.howToCredit)} · ${link(report, t.reportMistake)}</span>`;
-  return `<footer class="site-foot"><p>${credit}${source}${licences}${actions}</p></footer>`;
+// The top bar's link to the credits page, marked current on that page.
+function credits(o: PageOptions): string {
+  const label = escapeHtml(say("credits", o.lang));
+  const current = o.kind === "credits" ? ' aria-current="page"' : "";
+  return `<a class="tool" href="${creditsUrl()}" title="${label}" aria-label="${label}"${current}>${INFO_ICON}</a>`;
 }
 
 export function page(o: PageOptions): string {
@@ -173,12 +156,13 @@ export function page(o: PageOptions): string {
     <a class="brand" href="/">${escapeHtml(SITE.name)}</a>
     <div class="controls">${o.controls ?? ""}</div>
     <div class="tools">
+      ${credits(o)}
       <button class="tool" id="theme" type="button" title="Theme">◐</button>
     </div>
   </header>
   <div class="layout${filled(o.nav) ? "" : " no-nav"}${filled(o.rail) ? " has-rail" : ""}">
     ${filled(o.nav) ? `<nav class="sidebar" id="sidebar">${o.nav}</nav><script>${NAV_SCROLL}</script>` : ""}
-    <main class="content">${o.main}${footer(o, url(o.path))}</main>
+    <main class="content">${o.main}</main>
     ${filled(o.rail) ? `<aside class="rail">${o.rail}</aside>` : ""}
   </div>
   <script src="/client.js" defer></script>

@@ -1,4 +1,4 @@
-# The form behind "Report a mistake" in every page's footer; the link fills in the page.
+# The form behind "Report a mistake" on the credits page.
 name: Report a mistake
 description: A wrong form, rule, example, translation or level on a page.
 title: "Mistake: "

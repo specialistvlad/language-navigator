@@ -6,6 +6,7 @@ interface LangSlug {
 }
 
 export const homeUrl = (): string => "/";
+export const creditsUrl = (): string => "/credits/";
 export const trackUrl = (explain: Explain, lang: LangSlug): string => `/${explain}/${lang.slug}/`;
 export const topicUrl = (explain: Explain, lang: LangSlug, ref: TopicRef): string =>
   `${trackUrl(explain, lang)}${sectionSlug(ref.section.dir)}/${ref.entry.slug}/`;

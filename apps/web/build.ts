@@ -1,10 +1,11 @@
 // Static site build: every page of every track rendered to HTML, plus sitemap and robots.txt.
-// Run: npm run build   (SITE_URL sets the public URL for canonical links, the sitemap and, by its path, the base of every link)
+// Run: npm run build   (SITE_URL sets the public URL for canonical links and the sitemap; the site is served from the domain root)
 import { join } from "node:path";
 import { type CurriculumLanguage, filled, loadCurriculum, loadTopics, localize, ROOT, type TopicRef } from "../../scripts/lib.ts";
 import { type BuildOptions, type Context, EXPLAINS, type Page } from "./context.ts";
 import { ui } from "./layout.ts";
 import { writeSite } from "./output.ts";
+import { creditsPage } from "./pages/credits.ts";
 import { homePage, notFoundPage } from "./pages/home.ts";
 import { sheetPages } from "./pages/sheets.ts";
 import { topicPages } from "./pages/topic.ts";
@@ -37,6 +38,7 @@ export async function build(o: BuildOptions): Promise<number> {
   };
 
   homePage(ctx);
+  creditsPage(ctx);
   for (const lang of ctx.languages) {
     const langRefs = refs.filter((r) => r.lang === lang.code);
     const written = langRefs.filter((r) => r.topic);
